@@ -1,0 +1,155 @@
+{%- for single_file in files -%}
+{%- for key, value in single_file.items() -%}
+{%- if (key == 'description') -%}
+---
+description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{value}} {% endif %}
+---
+{%- endif %}
+
+{%- if (key == 'package') %}
+# {{ file_info.title }}
+{% endif -%}
+
+{%- if (key == 'package') %}
+>  **Package : {{value}}**
+{% endif -%}
+
+{%- if (key == 'services') -%}
+{%- for service in value %}
+## {{service.name}}
+
+{% raw %}{% hint style="info" %}{% endraw %}
+**{{ service.name }} Methods:**
+{%- if (service.description.desc is defined) %}
+{{service.description.desc}}
+{%- else %}
+{{ service.description }}
+{%- endif %}
+{% raw %}{%  endhint %}{% endraw %}
+
+{% if service.methods is defined %}
+| NO |  Method | Request Type | Response Type | Description |
+| :--- | :--- | :--- | :--- | :--- |
+{%- for method in service.methods %}
+| {{ loop.index }} | [{{ method.name }}]({{file_info.full_name}}#{{method.name}})| [{{ method.requestType }}]{%- if (method.req_link is defined) %}({{method.req_link}}){%- endif %}|{% if method.res_link is defined %} [{{ method.responseLongType }}]({{method.res_link}}) {% elif method.responseFullType_link is defined %}[{{ method.responseFullType }}]({{method.responseFullType_link}}){% else %}{{ method.responseLongType }}{% endif %}| {{ method.Description }} |
+{%- endfor %}
+
+{% for method in service.methods -%}
+### {{ method.name }}
+
+{%- if method.restAPI is defined -%}
+{% for rest_api in method.restAPI %}
+> **{{rest_api.method}}** {{rest_api.pattern}}
+{% if( loop.index  == 1) -%}
+>
+{%- endif -%}
+{%- endfor -%}
+{%- endif %}
+
+{% if method.description.desc is defined -%}
+> {{ method.description.desc }}
+{% else -%}
+{% if method.description|length -%}
+> {{ method.description }}
+{% endif -%}
+{% endif %}
+
+| Type | Message |
+| :--- | :--- |
+| Request | [{{ method.requestType }}]{%- if (method.req_link is defined) %}({{method.req_link}}){%- endif %} |
+| Response | {% if method.res_link is defined %} [{{ method.responseLongType }}]({{method.res_link}}) {% elif method.responseFullType_link is defined %}[{{ method.responseFullType }}]({{method.responseFullType_link}}){% else %}{{ method.responseLongType }}{% endif %} |
+
+{% if ((method.description.request_example is defined) or (method.description.response_example is defined)) %}
+{% raw %}{% tabs %}{% endraw -%}
+{%- if (method.description.request_example is defined) %}
+{% raw %}{% tab title="Request Example" %}{% endraw %}
+```text
+{{ method.description.request_example }}
+```
+{% raw %}{% endtab %}{% endraw %}
+{% endif -%}
+{% if (method.description.response_example is defined) %}
+{% raw %}{% tab title="Response Example" %}{% endraw %}
+```text
+{{ method.description.response_example }}
+```
+{% raw %}{% endtab %}{% endraw %}
+{% endif -%}
+{% raw %}{% endtabs %}{% endraw %}
+{% endif %}
+
+{% endfor -%}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{%- endfor -%}
+{%- endfor -%}
+
+{%- for single_file in files -%}
+{%- for key, value in single_file.items() -%}
+
+{%- if (key == 'messages' and single_file.messages|length) -%}
+## Message
+{% for message in value %}
+### {{message.name}}
+{%- if message.is_table is defined %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+{%- for field in message.fields %}
+    <tr>
+      <td style="text-align:left">{{ loop.index }}</td>
+      <td style="text-align:left">{{field.name}}</td>
+      <td style="text-align:left">
+{% if field.enum_links|length -%}
+		<p>{{field.longType}}</p>
+        <ul>
+        {%- for enum in field.enum_links %}
+          	<li>{{enum.name}}</li>
+		{%- endfor %}
+        </ul>
+{%- elif (field.fullType_link is defined) -%}<a href="{{field.fullType_link}}">{{field.longType}}</a>{%- else %}
+{{field.longType}}
+{% endif %}
+</td>
+{%- if (field.description.is_required is defined) -%}
+        <td style="text-align:left">{{field.description.is_required}}</td>
+{% endif %}
+{%- if (field.description.desc is defined) -%}
+        <td style="text-align:left">{{field.description.desc}}</td>
+{%- else %}
+        <td style="text-align:left">{{field.description}}</td>
+{% endif -%}
+{%- if (field.description.desc is defined) %}
+        <td style="text-align:left">{{field.description.desc}}</td>
+{% else -%}
+        <td style="text-align:left">{{field.description}}</td>
+{%- endif %}
+    </tr>
+{%- endfor %}
+  </tbody>
+</table>
+
+{% else %}
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+{%- for field in message.fields %}
+| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{{field.longType}}]{%- else %}{{field.longType}}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %} | {%- if (field.description.is_required is defined) -%}{{field.description.is_required}}{% endif %} | {%- if (field.description.desc is defined) -%}{{field.description.desc}}{%- else %}{{field.description}}{% endif %}|
+
+{%- endfor %}
+{% endif -%}
+
+{% endfor -%}
+{% endif %}
+
+{%- endfor -%}
+{%- endfor -%}

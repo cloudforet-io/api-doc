@@ -1,0 +1,6 @@
+*.swp
+*.bak
+.idea
+dist/python
+__pycache__
+venv

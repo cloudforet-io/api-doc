@@ -1,0 +1,19 @@
+{
+  "refer_link": {
+    "google.protobuf.Struct" : "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto",
+    "google.protobuf.Timestamp" : "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto",
+    "google.protobuf.Empty": "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto",
+    "spaceone.api.core.v1.Query": "https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query",
+    "spaceone.api.core.v1.StatisticsQuery": "https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query",
+    "google.protobuf.ListValue":"https://developers.google.com/protocol-buffers/docs/reference/overview",
+    "google.protobuf.Value": "https://developers.google.com/protocol-buffers/docs/reference/overview",
+    "int32": "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto",
+    "uint32": "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto",
+    "spaceone.api.core.v1.PluginAction": "../../core/v1/Plugin.md##pluginaction"
+  },
+  "human_doc_links": {
+    "Search_Query": "https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query",
+    "Statistic_Query": "https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query",
+    "Stat_API": "https://spaceone-dev.gitbook.io/api-reference/statistics-v1"
+  }
+}
