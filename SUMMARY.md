@@ -73,9 +73,9 @@
 
 ## Reference Link
 
-* [Search_Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)
-* [Statistic_Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)
-* [Stat_API](https://spaceone-dev.gitbook.io/api-reference/statistics-v1)
+* [Search Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)
+* [Statistic Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)
+* [Stat API](https://spaceone-dev.gitbook.io/api-reference/statistics-v1)
 
 ## Previous Versions
 
@@ -141,7 +141,7 @@
         * [Plugin](previous_version/v0.9.0/repository/v1/Plugin.md)
         * [Repository](previous_version/v0.9.0/repository/v1/Repository.md)
         * [Schema](previous_version/v0.9.0/repository/v1/Schema.md)
-    * [Secret](previous_version/v0.9.0/secret//README.md)        
+    * [secret](previous_version/v0.9.0/secret//README.md)        
       * [v1](previous_version/v0.9.0/secret/v1/README.md)
         * [Secret](previous_version/v0.9.0/secret/v1/Secret.md)
         * [Secret group](previous_version/v0.9.0/secret/v1/Secret-group.md)
