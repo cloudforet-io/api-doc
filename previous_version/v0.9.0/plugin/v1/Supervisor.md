@@ -279,17 +279,6 @@ bool
         <td style="text-align:left"></td>
 <td style="text-align:left"></td>
     </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">endpoints</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
-    </tr>
   </tbody>
 </table>
 
