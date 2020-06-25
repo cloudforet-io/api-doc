@@ -321,7 +321,7 @@ def _transfer_previous_doc(folders, pwd):
         if not os.path.exists(tar_f):
             shutil.move(src_f, pwd)
 
-def _get_original_history():
+def _get_original_history(is_updated):
     filepath = os.path.join(BASE_DIR, 'SUMMARY.md')
     all_previous_ref = []
     with open(filepath) as fp:
@@ -339,8 +339,9 @@ def _get_original_history():
                 if os.path.isfile(check_path):
                     all_previous_ref.append(line)
 
-        # if(len(all_previous_ref) > 0):
-        #     all_previous_ref.pop(0)
+    if not(is_updated):
+        all_previous_ref.insert(0, '* [Previous Versions](previous_version/README.md)')
+
     return all_previous_ref
 
 def _get_summary_info(version_info):
@@ -428,20 +429,20 @@ def main():
         version_info = _diff_version(file_reference[0])
         ref_info = {}
         pre_v = 'previous_version'
-        if(version_info['is_updated']):
+        is_updated = version_info['is_updated']
+        if(is_updated):
             _update_summary_infos(version_info, ref_info)
 
         json2 = create_modified_json(file_reference)
         man_managed = _get_human_doc_links()
         _generate_single_pb_mds(json2)
-        origin_history = _get_original_history()
+        origin_history = _get_original_history(is_updated)
 
         if os.path.exists(os.path.join(BASE_DIR, pre_v)):
             version_records = _get_version_records()
             if (len(version_records) > 0):
                 ref_info['version_record'] = version_records
             if (len(origin_history) > 0):
-                print(origin_history)
                 ref_info['origin_history'] = origin_history
 
         _generate_summary_mds(file_reference, man_managed, ref_info)
