@@ -270,10 +270,13 @@ def _generate_summary_mds(context_input, managed_link, history):
 
     if ('version_record' in history and len(history['version_record']) > 0):
         vtable_of_contents = []
+        config = _get_json_data(os.path.join(BASE_DIR, 'config.json'))
+        gitbook_space = _.get(config, 'refer_link.git_book_space')
         previous_version_md = os.path.join(BASE_DIR, 'previous_version', 'README.md')
 
         for version in history['version_record']:
-            line = f'* [{version}](previous_version/{version}/)'
+
+            line = f'* [{version}]({gitbook_space}previous-versions/previous_version/{version}/)'
             vtable_of_contents.append(line)
 
         _generate_md_file(previous_version_md, TEMPLATE_NAMES[3], {'list': vtable_of_contents})

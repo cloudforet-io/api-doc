@@ -1,5 +1,6 @@
 {
   "refer_link": {
+    "git_book_space": "https://spaceone-dev.gitbook.io/spaceone-apis/",
     "google.protobuf.Struct" : "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto",
     "google.protobuf.Timestamp" : "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto",
     "google.protobuf.Empty": "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto",
