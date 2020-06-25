@@ -1,3 +1,3 @@
 # api-doc
 
-Description: Create a Protobuffs into new generated md for gitbook
+Description: Create a Proto buffs into new generated md for gitbook
