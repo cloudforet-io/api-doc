@@ -404,17 +404,17 @@ string
 ### UserQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
-| 2 | user_id |string | |optional|
-| 3 | name |string | |optional|
-| 4 | state |string | |optional|
-| 5 | email |string | |optional|
-| 6 | mobile |string | |optional|
-| 7 | group |string | |optional|
-| 8 | role_id |string | |optional|
-| 9 | project_id |string | |optional|
-| 10 | project_group_id |string | |optional|
-| 11 | domain_id |string | |optional|
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
+| 2 | user_id |string |❌ ||
+| 3 | name |string |❌ ||
+| 4 | state |string |❌ ||
+| 5 | email |string |❌ ||
+| 6 | mobile |string |❌ ||
+| 7 | group |string |❌ ||
+| 8 | role_id |string |❌ ||
+| 9 | project_id |string |❌ ||
+| 10 | project_group_id |string |❌ ||
+| 11 | domain_id |string |❌ ||
 
 ### UserRequest
 | No | Field | Type | Required | Description |
