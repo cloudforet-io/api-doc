@@ -25,7 +25,7 @@ def _error(msg):
     print()
     sys.exit(1)
 
-def generate_md_file(output_file, template, context_input):
+def _generate_md_file(output_file, template, context_input):
     with open(output_file, 'w') as f:
          markdown = render_template(template, context_input)
          f.write(markdown)
@@ -210,11 +210,11 @@ def create_modified_json(reference_files):
 def render_template(template_filename, context):
     return TEMPLATE_ENVIRONMENT.get_template(template_filename).render(context)
 
-def create_subdirectories(input_path):
+def _create_subdirectories(input_path):
     if not os.path.exists(input_path):
         os.makedirs(input_path)
 
-def generate_single_pb_mds(context_input):
+def _generate_single_pb_mds(context_input):
     for key, value in context_input.items():
         ff_name = key.replace(".json", ".md")
         dic_name = ff_name[ff_name.find('api')+4:len(ff_name)].split('/')
@@ -227,24 +227,22 @@ def generate_single_pb_mds(context_input):
                 continue
             else:
                 path_to_create = path_to_create + '/' + dic_name[i]
-                create_subdirectories(path_to_create)
+                _create_subdirectories(path_to_create)
 
         context_output = os.path.join(path_to_create, f_name)
         context_input = value
-        generate_md_file(context_output, TEMPLATE_NAMES[0], context_input)
+        _generate_md_file(context_output, TEMPLATE_NAMES[0], context_input)
 
 def _generate_summary_mds(context_input, managed_link, history):
     table_of_contents = {}
     title_index = []
     for path in context_input:
-        file_info = get_file_syntax(path)
 
+        file_info = get_file_syntax(path)
         full_path = path[path.find('api/') + 4:len(path)].replace('.json', '.md')
         parsed_path = full_path.split('/')
         parsed_path[len(parsed_path) - 1] = parsed_path[len(parsed_path) - 1].replace('_', '-')
         full_file_name = '/'.join(parsed_path)
-
-
         parsed_path[len(parsed_path)-1] = file_info['title']
         base_bullet = '* '
         check_key = ""
@@ -260,33 +258,42 @@ def _generate_summary_mds(context_input, managed_link, history):
             if(_.get(table_of_contents, check_key, None) == None ):
                 if(i == (len(parsed_path)-1)):
                     _.set(table_of_contents, check_key, {})
-                    title_index.append({'title': updated_header, 'url': full_file_name})
+                    title_index.append({'title': updated_header.title(), 'url': full_file_name})
                 else:
                     mk_path = check_key.replace('.', '/')
                     readme_url = mk_path + '/'+ 'README.md'
                     readme_path = os.path.join(BASE_DIR, mk_path, 'README.md')
 
                     if not os.path.exists(readme_path):
-                        generate_md_file(readme_path, TEMPLATE_NAMES[2], '')
+                        _generate_md_file(readme_path, TEMPLATE_NAMES[2], '')
 
                     _.set(table_of_contents, check_key, {})
-                    title_index.append({'title': updated_header, 'url': readme_url})
+                    title_index.append({'title': updated_header.title(), 'url': readme_url})
 
     if ('version_record' in history and len(history['version_record']) > 0):
         vtable_of_contents = []
         previous_version_md = os.path.join(BASE_DIR, 'previous_version', 'README.md')
+
         for version in history['version_record']:
             line = f'* [{version}](previous_version/{version}/)'
             vtable_of_contents.append(line)
 
-        generate_md_file(previous_version_md, TEMPLATE_NAMES[3], {'list': vtable_of_contents})
+        _generate_md_file(previous_version_md, TEMPLATE_NAMES[3], {'list': vtable_of_contents})
 
     output_to_create = os.path.join(BASE_DIR, 'SUMMARY.md')
     context_input = {'toc': title_index}
-
-    context_input['managed_link'] = managed_link
+    context_input['managed_link'] = _normalize_managed_link(managed_link)
     context_input['history'] = history
-    generate_md_file(output_to_create, TEMPLATE_NAMES[1], context_input)
+    _generate_md_file(output_to_create, TEMPLATE_NAMES[1], context_input)
+
+
+def _normalize_managed_link(managed_link):
+    n_normalized = {}
+    for key, value in managed_link.items():
+        n_key = key.replace('_',' ').title()
+        n_value = value
+        n_normalized[n_key] = n_value
+    return n_normalized
 
 def _delete_json1(json_path):
     if os.path.exists(json_path):
@@ -306,7 +313,7 @@ def _get_artifact_version(f_path):
 def _transfer_previous_doc(folders, pwd):
     version_readme = os.path.join(pwd, 'README.md')
     if not os.path.isfile(version_readme):
-        generate_md_file(version_readme, TEMPLATE_NAMES[2], '')
+        _generate_md_file(version_readme, TEMPLATE_NAMES[2], '')
 
     for fd in folders:
         src_f = os.path.join(BASE_DIR, fd)
@@ -336,7 +343,7 @@ def _get_original_history():
         #     all_previous_ref.pop(0)
     return all_previous_ref
 
-def get_summary_info(version_info):
+def _get_summary_info(version_info):
     filepath = os.path.join(BASE_DIR, 'SUMMARY.md')
     vinfo = version_info['current_version']
     previous_summary = {}
@@ -357,7 +364,7 @@ def get_summary_info(version_info):
                 line_checker = line[0: line.find('](')]
                 if(line_checker.startswith('*')):
                     mfolder_name.append(line[line.find('[')+1:line.find('](')])
-                if(line.find('*') > 0):
+                if(line.find('*') > -1):
                     pre = 'previous_version'
                     head = line[0:line.find('](')]
                     body = line[line.find('](') + 2: line.find('/')]
@@ -387,10 +394,8 @@ def _diff_version(f_path):
 
 def _get_version_records():
     path_to_check = os.path.join(BASE_DIR, 'previous_version')
-
     root, dirs, files = next(os.walk(path_to_check))
     return dirs
-
 
 def _get_human_doc_links():
     config = _get_json_data(os.path.join(BASE_DIR, 'config.json'))
@@ -399,44 +404,49 @@ def _get_human_doc_links():
 
 def _update_current_version(file_path, version_info):
     with open(file_path, "r+") as f:
-        f.seek(0)  # rewind
+        f.seek(0)
         f.write(version_info)
         f.close()
 
-def main():
+def _update_summary_infos(version_info, ref_info):
+    pre_v = 'previous_version'
+    previous_summary = _get_summary_info(version_info)
+    ref_info['added_history'] = previous_summary['title_lines']
+    p_base_folder = os.path.join(BASE_DIR, pre_v)
+    p_folder = os.path.join(BASE_DIR, pre_v, 'v' + version_info['current_version'])
 
+    _create_subdirectories(p_base_folder)
+    _create_subdirectories(p_folder)
+    _transfer_previous_doc(previous_summary['movable_fd'], p_folder)
+
+
+def main():
     file_reference = create_reference_json()
     if len(file_reference) == 0:
         _error("No artifact JSON")
     else:
         version_info = _diff_version(file_reference[0])
         ref_info = {}
+        pre_v = 'previous_version'
         if(version_info['is_updated']):
-            previous_summary = get_summary_info(version_info)
-            ref_info['added_history'] = previous_summary['title_lines']
-            p_base_folder = os.path.join(BASE_DIR, 'previous_version')
-            p_folder = os.path.join(BASE_DIR, 'previous_version', 'v'+version_info['current_version'])
-
-            create_subdirectories(p_base_folder)
-            create_subdirectories(p_folder)
-            _transfer_previous_doc(previous_summary['movable_fd'], p_folder)
+            _update_summary_infos(version_info, ref_info)
 
         json2 = create_modified_json(file_reference)
         man_managed = _get_human_doc_links()
-        generate_single_pb_mds(json2)
+        _generate_single_pb_mds(json2)
         origin_history = _get_original_history()
 
-        if os.path.exists(os.path.join(BASE_DIR, 'previous_version')):
+        if os.path.exists(os.path.join(BASE_DIR, pre_v)):
             version_records = _get_version_records()
             if (len(version_records) > 0):
                 ref_info['version_record'] = version_records
             if (len(origin_history) > 0):
+                print(origin_history)
                 ref_info['origin_history'] = origin_history
 
         _generate_summary_mds(file_reference, man_managed, ref_info)
         _update_current_version(VERSION, version_info['artifact_version'])
         _delete_json1(TARGET_DIR)
-
 
 if __name__ == '__main__':
     main()

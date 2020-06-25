@@ -91,6 +91,7 @@ description:
 | 4 | sort |[StatisticsSort](Query.md#statisticssort) | ||
 | 5 | page |[Page](Query.md#page) | ||
 | 6 | limit |[uint32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 7 | distinct |string | ||
 
 ### StatisticsSort
 | No | Field | Type | Required | Description |

@@ -55,7 +55,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
-| 3 | resource |string | |required|
+| 3 | resource |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview) | |required|
 | 4 | metric |string | |required|
 | 5 | start |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |required|
 | 6 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |required|
@@ -76,7 +76,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
-| 3 | resource |string | |required|
+| 3 | resource |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview) | |required|
 
 ### MetricsInfo
 | No | Field | Type | Required | Description |
