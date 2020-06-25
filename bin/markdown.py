@@ -363,7 +363,7 @@ def _get_summary_info(version_info):
                 common_indent = '    '
                 line_checker = line[0: line.find('](')]
                 if(line_checker.startswith('*')):
-                    mfolder_name.append(line[line.find('[')+1:line.find('](')])
+                    mfolder_name.append(line[line.find('](')+2:line.find('/')])
                 if(line.find('*') > -1):
                     pre = 'previous_version'
                     head = line[0:line.find('](')]

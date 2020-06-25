@@ -79,7 +79,7 @@
 
 ## Previous Versions
 
-* [Previous Versions](previous_version/README.md)
+
   * [v0.9.0](previous_version/v0.9.0/README.md)
     * [Config](previous_version/v0.9.0/config/README.md)
       * [V1](previous_version/v0.9.0/config/v1/README.md)
