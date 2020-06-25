@@ -1,116 +1,154 @@
 ---
-description: null
+description:  
 ---
+# Data source
 
-# Data Source
-
-> **Package : spaceone.api.monitoring.v1**
+>  **Package : spaceone.api.monitoring.v1**
 
 ## DataSource
 
 {% hint style="info" %}
 **DataSource Methods:**
-{% endhint %}
 
-| NO | Method | Request Type | Response Type | Description |
+{%  endhint %}
+
+
+| NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [register](data-source.md#register) | [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 2 | [update](data-source.md#update) | [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 3 | [enable](data-source.md#enable) | [DataSourceRequest](data-source.md#datasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 4 | [disable](data-source.md#disable) | [DataSourceRequest](data-source.md#datasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 5 | [deregister](data-source.md#deregister) | [DataSourceRequest](data-source.md#datasourcerequest) | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |  |
-| 6 | [verify\_plugin](data-source.md#verify_plugin) | [DataSourceRequest](data-source.md#datasourcerequest) | [VerifyInfo](data-source.md#verifyinfo) |  |
-| 7 | [get](data-source.md#get) | [GetDataSourceRequest](data-source.md#getdatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 8 | [list](data-source.md#list) | [DataSourceQuery](data-source.md#datasourcequery) | [DataSourcesInfo](data-source.md#datasourcesinfo) |  |
-| 9 | [stat](data-source.md#stat) | [DataSourceStatQuery](data-source.md#datasourcestatquery) | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  |
+| 1 | [register](Data-source.md#register)| [RegisterDataSourceRequest](Data-source.md#registerdatasourcerequest)| [DataSourceInfo](Data-source.md#datasourceinfo) |  |
+| 2 | [update](Data-source.md#update)| [UpdateDataSourceRequest](Data-source.md#updatedatasourcerequest)| [DataSourceInfo](Data-source.md#datasourceinfo) |  |
+| 3 | [enable](Data-source.md#enable)| [DataSourceRequest](Data-source.md#datasourcerequest)| [DataSourceInfo](Data-source.md#datasourceinfo) |  |
+| 4 | [disable](Data-source.md#disable)| [DataSourceRequest](Data-source.md#datasourcerequest)| [DataSourceInfo](Data-source.md#datasourceinfo) |  |
+| 5 | [deregister](Data-source.md#deregister)| [DataSourceRequest](Data-source.md#datasourcerequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [verify_plugin](Data-source.md#verify_plugin)| [DataSourceRequest](Data-source.md#datasourcerequest)| [VerifyInfo](Data-source.md#verifyinfo) |  |
+| 7 | [get](Data-source.md#get)| [GetDataSourceRequest](Data-source.md#getdatasourcerequest)| [DataSourceInfo](Data-source.md#datasourceinfo) |  |
+| 8 | [list](Data-source.md#list)| [DataSourceQuery](Data-source.md#datasourcequery)| [DataSourcesInfo](Data-source.md#datasourcesinfo) |  |
+| 9 | [stat](Data-source.md#stat)| [DataSourceStatQuery](Data-source.md#datasourcestatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### register
-
 > **POST** /monitoring/v1/data-sources
+>
+
+
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) |
-| Response | [DataSourceInfo](data-source.md#datasourceinfo) |
+| Request | [RegisterDataSourceRequest](Data-source.md#registerdatasourcerequest) |
+| Response |  [DataSourceInfo](Data-source.md#datasourceinfo)  |
+
+
 
 ### update
+> **PUT** /monitoring/v1/data-source/{data_source_id}
+>
 
-> **PUT** /monitoring/v1/data-source/{data\_source\_id}
+
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) |
-| Response | [DataSourceInfo](data-source.md#datasourceinfo) |
+| Request | [UpdateDataSourceRequest](Data-source.md#updatedatasourcerequest) |
+| Response |  [DataSourceInfo](Data-source.md#datasourceinfo)  |
+
+
 
 ### enable
+> **PUT** /monitoring/v1/data-source/{data_source_id}/enable
+>
 
-> **PUT** /monitoring/v1/data-source/{data\_source\_id}/enable
+
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DataSourceRequest](data-source.md#datasourcerequest) |
-| Response | [DataSourceInfo](data-source.md#datasourceinfo) |
+| Request | [DataSourceRequest](Data-source.md#datasourcerequest) |
+| Response |  [DataSourceInfo](Data-source.md#datasourceinfo)  |
+
+
 
 ### disable
+> **PUT** /monitoring/v1/data-source/{data_source_id}/disable
+>
 
-> **PUT** /monitoring/v1/data-source/{data\_source\_id}/disable
+
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DataSourceRequest](data-source.md#datasourcerequest) |
-| Response | [DataSourceInfo](data-source.md#datasourceinfo) |
+| Request | [DataSourceRequest](Data-source.md#datasourcerequest) |
+| Response |  [DataSourceInfo](Data-source.md#datasourceinfo)  |
+
+
 
 ### deregister
+> **DELETE** /monitoring/v1/data-source/{data_source_id}
+>
 
-> **DELETE** /monitoring/v1/data-source/{data\_source\_id}
+
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DataSourceRequest](data-source.md#datasourcerequest) |
+| Request | [DataSourceRequest](Data-source.md#datasourcerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
 
-### verify\_plugin
 
-> **PUT** /monitoring/v1/data-source/{data\_source\_id}/plugin/verify
+
+### verify_plugin
+> **PUT** /monitoring/v1/data-source/{data_source_id}/plugin/verify
+>
+
+
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DataSourceRequest](data-source.md#datasourcerequest) |
-| Response | [VerifyInfo](data-source.md#verifyinfo) |
+| Request | [DataSourceRequest](Data-source.md#datasourcerequest) |
+| Response |  [VerifyInfo](Data-source.md#verifyinfo)  |
+
+
 
 ### get
+> **GET** /monitoring/v1/data-source/{data_source_id}
+>
 
-> **GET** /monitoring/v1/data-source/{data\_source\_id}
+
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetDataSourceRequest](data-source.md#getdatasourcerequest) |
-| Response | [DataSourceInfo](data-source.md#datasourceinfo) |
+| Request | [GetDataSourceRequest](Data-source.md#getdatasourcerequest) |
+| Response |  [DataSourceInfo](Data-source.md#datasourceinfo)  |
+
+
 
 ### list
-
 > **GET** /monitoring/v1/data-sources
 >
 > **POST** /monitoring/v1/data-sources/search
 
+
+
+
 | Type | Message |
 | :--- | :--- |
-| Request | [DataSourceQuery](data-source.md#datasourcequery) |
-| Response | [DataSourcesInfo](data-source.md#datasourcesinfo) |
+| Request | [DataSourceQuery](Data-source.md#datasourcequery) |
+| Response |  [DataSourcesInfo](Data-source.md#datasourcesinfo)  |
+
+
 
 ### stat
-
 > **POST** /monitoring/v1/data-sources/stat
+>
+
+
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DataSourceStatQuery](data-source.md#datasourcestatquery) |
+| Request | [DataSourceStatQuery](Data-source.md#datasourcestatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
+
+
+
+
 
 ## Message
 
 ### DataSourceInfo
-
 <table>
   <thead>
     <tr>
@@ -125,96 +163,116 @@ description: null
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">data_source_id</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left">
-        <p>DataSourceInfo.State</p>
+<p>DataSourceInfo.State</p>
         <ul>
-          <li>NONE</li>
-          <li>ENABLED</li>
-          <li>DISABLED</li>
+          	<li>NONE</li>
+          	<li>ENABLED</li>
+          	<li>DISABLED</li>
         </ul>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">monitoring_type</td>
       <td style="text-align:left">
-        <p>MonitoringType</p>
+<p>MonitoringType</p>
         <ul>
-          <li>NONE</li>
-          <li>METRIC</li>
-          <li>LOG</li>
+          	<li>NONE</li>
+          	<li>METRIC</li>
+          	<li>LOG</li>
         </ul>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">provider</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">capability</td>
-      <td style="text-align:left"> <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">plugin_info</td>
-      <td style="text-align:left"> <a href="data-source.md#plugininfo">PluginInfo</a>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+<a href="Data-source.md#plugininfo">PluginInfo</a>
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"> <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left"> <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>
 
-### DataSourceQuery
 
+### DataSourceQuery
 <table>
   <thead>
     <tr>
@@ -229,124 +287,144 @@ description: null
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
-      <td style="text-align:left"> <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-      </td>
-      <td style="text-align:left">optional</td>
-      <td style="text-align:left">optional</td>
+      <td style="text-align:left">
+<a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">data_source_id</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">optional</td>
-      <td style="text-align:left">optional</td>
+      <td style="text-align:left">
+
+string
+
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">optional</td>
-      <td style="text-align:left">optional</td>
+      <td style="text-align:left">
+
+string
+
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">optional</td>
-      <td style="text-align:left">optional</td>
+      <td style="text-align:left">
+
+string
+
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">monitoring_type</td>
       <td style="text-align:left">
-        <p>MonitoringType</p>
+<p>MonitoringType</p>
         <ul>
-          <li>NONE</li>
-          <li>METRIC</li>
-          <li>LOG</li>
+          	<li>NONE</li>
+          	<li>METRIC</li>
+          	<li>LOG</li>
         </ul>
-      </td>
-      <td style="text-align:left">optional</td>
-      <td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">provider</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">optional</td>
-      <td style="text-align:left">optional</td>
+      <td style="text-align:left">
+
+string
+
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">required</td>
-      <td style="text-align:left">required</td>
+      <td style="text-align:left">
+
+string
+
+</td><td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
   </tbody>
 </table>
 
-### DataSourceRequest
 
+### DataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data\_source\_id | string |  | required |
-| 2 | domain\_id | string |  | required |
+| 1 | data_source_id |string |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### DataSourceStatQuery
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query | [spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |  | required |
-| 2 | domain\_id | string |  | required |
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### DataSourcesInfo
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results | [DataSourceInfo](data-source.md#datasourceinfo) |  |  |
-| 2 | total\_count | [int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |  |  |
+| 1 | results |[DataSourceInfo](Data-source.md#datasourceinfo) | ||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
 
 ### GetDataSourceRequest
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data\_source\_id | string |  | required |
-| 2 | domain\_id | string |  | required |
-| 3 | only | string |  | optional |
+| 1 | data_source_id |string |✅ ||
+| 2 | domain_id |string |✅ ||
+| 3 | only |string |❌ ||
 
 ### PluginInfo
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin\_id | string |  |  |
-| 2 | version | string |  |  |
-| 3 | options | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  |  |
-| 4 | secret\_id | string |  |  |
-| 5 | provider | string |  |  |
+| 1 | plugin_id |string | ||
+| 2 | version |string | ||
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 4 | secret_id |string | ||
+| 5 | provider |string | ||
 
 ### RegisterDataSourceRequest
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name | string |  | required |
-| 2 | plugin\_info | [PluginInfo](data-source.md#plugininfo) |  | required |
-| 3 | tags | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  | optional |
-| 4 | domain\_id | string |  | required |
+| 1 | name |string |✅ ||
+| 2 | plugin_info |[PluginInfo](Data-source.md#plugininfo) |✅ ||
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 4 | domain_id |string |✅ ||
 
 ### UpdateDataSourceRequest
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data\_source\_id | string |  | required |
-| 2 | name | string |  | optional |
-| 3 | plugin\_info | [PluginInfo](data-source.md#plugininfo) |  | optional |
-| 4 | tags | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  | optional |
-| 5 | domain\_id | string |  | required |
+| 1 | data_source_id |string |✅ ||
+| 2 | name |string |❌ ||
+| 3 | plugin_info |[PluginInfo](Data-source.md#plugininfo) |❌ ||
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 5 | domain_id |string |✅ ||
 
 ### VerifyInfo
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | status | bool |  |  |
-
+| 1 | status |bool | ||

@@ -1,48 +1,51 @@
 ---
-description: null
+description:  
 ---
+# Data source
 
-# Data Source
-
-> **Package : spaceone.api.monitoring.plugin**
+>  **Package : spaceone.api.monitoring.plugin**
 
 ## DataSource
 
 {% hint style="info" %}
 **DataSource Methods:**
-{% endhint %}
 
-| NO | Method | Request Type | Response Type | Description |
+{%  endhint %}
+
+
+| NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [verify](data-source.md#verify) | [PluginVerifyRequest](data-source.md#pluginverifyrequest) | [PluginVerifyResponse](data-source.md#pluginverifyresponse) |  |
+| 1 | [verify](Data-source.md#verify)| [PluginVerifyRequest](Data-source.md#pluginverifyrequest)| [PluginVerifyResponse](Data-source.md#pluginverifyresponse) |  |
 
 ### verify
 
+
+
 | Type | Message |
 | :--- | :--- |
-| Request | [PluginVerifyRequest](data-source.md#pluginverifyrequest) |
-| Response | [PluginVerifyResponse](data-source.md#pluginverifyresponse) |
+| Request | [PluginVerifyRequest](Data-source.md#pluginverifyrequest) |
+| Response |  [PluginVerifyResponse](Data-source.md#pluginverifyresponse)  |
+
+
+
+
 
 ## Message
 
 ### PluginVerifyInfo
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  |  |
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
 
 ### PluginVerifyRequest
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  | required |
-| 2 | secret\_data | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  | required |
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |✅ ||
+| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |✅ ||
 
 ### PluginVerifyResponse
-
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | resource\_type | string |  | required |
-| 2 | actions | [spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction) |  | optional |
-| 3 | result | [PluginVerifyInfo](data-source.md#pluginverifyinfo) |  | required |
-
+| 1 | resource_type |string |✅ ||
+| 2 | actions |[spaceone.api.core.v1.PluginAction](../../core/v1/Plugin.md##pluginaction) |❌ ||
+| 3 | result |[PluginVerifyInfo](Data-source.md#pluginverifyinfo) |✅ ||
