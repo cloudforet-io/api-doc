@@ -137,16 +137,16 @@ description:
 ### CreateSecretGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 3 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 3 | domain_id |string | |required|
 
 ### GetSecretGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | secret_group_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### SecretGroupInfo
 | No | Field | Type | Required | Description |
@@ -160,17 +160,17 @@ description:
 ### SecretGroupQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | secret_group_id |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | secret_id |string |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | secret_group_id |string | |optional|
+| 3 | name |string | |optional|
+| 4 | secret_id |string | |optional|
+| 5 | domain_id |string | |required|
 
 ### SecretGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | secret_group_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### SecretGroupSecretInfo
 | No | Field | Type | Required | Description |
@@ -182,15 +182,15 @@ description:
 ### SecretGroupSecretRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string |✅ ||
-| 2 | secret_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | secret_group_id |string | |required|
+| 2 | secret_id |string | |required|
+| 3 | domain_id |string | |required|
 
 ### SecretGroupStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### SecretGroupsInfo
 | No | Field | Type | Required | Description |
@@ -201,7 +201,7 @@ description:
 ### UpdateSecretGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | secret_group_id |string | |required|
+| 2 | name |string | |optional|
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | domain_id |string | |required|

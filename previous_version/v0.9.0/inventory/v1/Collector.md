@@ -467,14 +467,14 @@ string
 ### CollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | collector_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### CollectorStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### CollectorsInfo
 | No | Field | Type | Required | Description |
@@ -485,11 +485,11 @@ string
 ### CreateCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | plugin_info |[PluginInfo](Collector.md#plugininfo) |✅ ||
-| 3 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | plugin_info |[PluginInfo](Collector.md#plugininfo) | |required|
+| 3 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |optional|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | domain_id |string | |required|
 
 ### CreateScheduleRequest
 | No | Field | Type | Required | Description |
@@ -511,9 +511,9 @@ string
 ### GetCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | collector_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### JobInfo
 <table>
@@ -702,12 +702,12 @@ string
 ### UpdateCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string |✅ ||
-| 2 | name |string |✅ ||
-| 3 | plugin_info |[PluginInfo](Collector.md#plugininfo) |✅ ||
-| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ ||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 6 | domain_id |string |✅ ||
+| 1 | collector_id |string | |required|
+| 2 | name |string | |required|
+| 3 | plugin_info |[PluginInfo](Collector.md#plugininfo) | |required|
+| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |optional|
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 6 | domain_id |string | |required|
 
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |
@@ -728,6 +728,6 @@ string
 ### VerifyPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string |✅ ||
-| 2 | secret_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | collector_id |string | |required|
+| 2 | secret_id |string | |required|
+| 3 | domain_id |string | ||

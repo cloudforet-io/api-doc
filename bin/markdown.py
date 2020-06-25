@@ -65,8 +65,6 @@ def description_splitter(desc_json):
                         value = json.loads(json_str)
 
                 new_formatted_json[key] = value
-
-        print(new_formatted_json)
         returnable_value = new_formatted_json
     except Exception as ex:
         returnable_value = ""

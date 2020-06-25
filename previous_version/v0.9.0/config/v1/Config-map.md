@@ -1,5 +1,5 @@
 ---
-description:  
+description: Config Map is a APIs for public config setting that store any configuration values for accounts, companies, etc.
 ---
 # Config map
 
@@ -9,7 +9,8 @@ description:
 
 {% hint style="info" %}
 **ConfigMap Methods:**
-
+desc: Config Map service Methods
+note: (if there's anything that you want to point out
 {%  endhint %}
 
 
@@ -26,6 +27,7 @@ description:
 > **POST** /config/v1/config-maps
 >
 
+> Create a new config map
 
 
 | Type | Message |
@@ -33,6 +35,78 @@ description:
 | Request | [CreateConfigMapRequest](Config-map.md#createconfigmaprequest) |
 | Response |  [ConfigMapInfo](Config-map.md#configmapinfo)  |
 
+
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {
+        "aggregate": {
+            "group": {
+                "keys": [
+                    {
+                        "key": "group",
+                        "name": "group Name"
+                    }
+                ],
+                "fields": [
+                    {
+                        "operator": "count",
+                        "name": "ppl count in group"
+                    },
+                    {
+                        "key": "name",
+                        "operator": "add_to_set",
+                        "name": "names in  group"
+                    }
+                ]
+            }
+        },
+        "sort": {
+            "name": "created_at",
+            "desc": true
+        },
+        "limit": 5
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "query": {
+        "aggregate": {
+            "group": {
+                "keys": [
+                    {
+                        "key": "group",
+                        "name": "group Name"
+                    }
+                ],
+                "fields": [
+                    {
+                        "operator": "count",
+                        "name": "ppl count in group"
+                    },
+                    {
+                        "key": "name",
+                        "operator": "add_to_set",
+                        "name": "names in  group"
+                    }
+                ]
+            }
+        },
+        "sort": {
+            "name": "created_at",
+            "desc": true
+        },
+        "limit": 5
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 
 
 ### update
@@ -118,21 +192,21 @@ description:
 ### ConfigMapQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | name |string |❌ ||
-| 3 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | name |string | |optional|
+| 3 | domain_id |string | |required|
 
 ### ConfigMapRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | domain_id |string | |required|
 
 ### ConfigMapStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### ConfigMapsInfo
 | No | Field | Type | Required | Description |
@@ -143,7 +217,7 @@ description:
 ### CreateConfigMapRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
+| 1 | name |string |✅ |any info that you want to put on descriptions|
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |✅ ||
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
 | 4 | domain_id |string |✅ ||
@@ -151,14 +225,14 @@ description:
 ### GetConfigMapRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | name |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### UpdateConfigMapRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string |✅ ||
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
 | 4 | domain_id |string |✅ ||

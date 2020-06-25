@@ -123,22 +123,22 @@ description:
 ### CreateNetworkPolicyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | routing_tables |[RoutingTable](Network-policy.md#routingtable) |❌ ||
-| 3 | dns |string |❌ ||
-| 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 6 | reference |[NetworkPolicyReference](Network-policy.md#networkpolicyreference) |❌ ||
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 8 | zone_id |string |✅ ||
-| 9 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | routing_tables |[RoutingTable](Network-policy.md#routingtable) | |optional|
+| 3 | dns |string | |optional|
+| 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 6 | reference |[NetworkPolicyReference](Network-policy.md#networkpolicyreference) | |optional|
+| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 8 | zone_id |string | |required|
+| 9 | domain_id |string | |required|
 
 ### GetNetworkPolicyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | network_policy_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | network_policy_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### NetworkPoliciesInfo
 | No | Field | Type | Required | Description |
@@ -166,12 +166,12 @@ description:
 ### NetworkPolicyQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | network_policy_id |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | zone_id |string |❌ ||
-| 5 | region_id |string |❌ ||
-| 6 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | network_policy_id |string | |optional|
+| 3 | name |string | |optional|
+| 4 | zone_id |string | |optional|
+| 5 | region_id |string | |optional|
+| 6 | domain_id |string | |required|
 
 ### NetworkPolicyReference
 | No | Field | Type | Required | Description |
@@ -182,21 +182,21 @@ description:
 ### NetworkPolicyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | network_policy_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | network_policy_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### NetworkPolicyStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### PinNetworkPolicyDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | network_policy_id |string |✅ ||
-| 2 | keys |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | network_policy_id |string | |required|
+| 2 | keys |string | |required|
+| 3 | domain_id |string | |required|
 
 ### RoutingTable
 | No | Field | Type | Required | Description |
@@ -208,12 +208,12 @@ description:
 ### UpdateNetworkPolicyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | network_policy_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | routing_tables |[RoutingTable](Network-policy.md#routingtable) |❌ ||
-| 4 | dns |string |❌ ||
-| 5 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 6 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 7 | reference |[NetworkPolicyReference](Network-policy.md#networkpolicyreference) |❌ ||
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 9 | domain_id |string |✅ ||
+| 1 | network_policy_id |string | |required|
+| 2 | name |string | |optional|
+| 3 | routing_tables |[RoutingTable](Network-policy.md#routingtable) | |optional|
+| 4 | dns |string | |optional|
+| 5 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 6 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 7 | reference |[NetworkPolicyReference](Network-policy.md#networkpolicyreference) | |optional|
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 9 | domain_id |string | |required|

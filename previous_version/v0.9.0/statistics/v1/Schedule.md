@@ -137,33 +137,33 @@ description:
 ### AddScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | topic |string |✅ ||
-| 2 | options |[QueryOption](Schedule.md#queryoption) |✅ ||
-| 3 | schedule |[Scheduled](Schedule.md#scheduled) |✅ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | topic |string | |required|
+| 2 | options |[QueryOption](Schedule.md#queryoption) | |required|
+| 3 | schedule |[Scheduled](Schedule.md#scheduled) | |required|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | domain_id |string | |required|
 
 ### GetScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | schedule_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | schedule_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### QueryOption
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |❌ ||
-| 2 | resource_type |string |✅ ||
-| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 4 | join |[ScheduleJoinQuery](Schedule.md#schedulejoinquery) |❌ ||
-| 5 | formulas |[ScheduleFormula](Schedule.md#scheduleformula) |❌ ||
+| 1 | data_source_id |string | |optional|
+| 2 | resource_type |string | |required|
+| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 4 | join |[ScheduleJoinQuery](Schedule.md#schedulejoinquery) | |optional|
+| 5 | formulas |[ScheduleFormula](Schedule.md#scheduleformula) | |optional|
 
 ### ScheduleFormula
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | formula |string |✅ ||
+| 1 | name |string | |required|
+| 2 | formula |string | |required|
 
 ### ScheduleInfo
 <table>
@@ -292,10 +292,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -308,10 +307,9 @@ string
           	<li>OUTER</li>
           	<li>INNER</li>
         </ul>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -320,10 +318,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -332,20 +329,18 @@ string
 
 string
 
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a>
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
   </tbody>
 </table>
@@ -354,25 +349,25 @@ string
 ### ScheduleQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | schedule_id |string |❌ ||
-| 3 | topic |string |❌ ||
-| 4 | state |string |❌ ||
-| 5 | data_source_id |string |❌ ||
-| 6 | resource_type |string |❌ ||
-| 7 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | schedule_id |string | |optional|
+| 3 | topic |string | |optional|
+| 4 | state |string | |optional|
+| 5 | data_source_id |string | |optional|
+| 6 | resource_type |string | |optional|
+| 7 | domain_id |string | |required|
 
 ### ScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | schedule_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | schedule_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### ScheduleStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### Scheduled
 | No | Field | Type | Required | Description |
@@ -391,7 +386,7 @@ string
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | schedule_id |string |✅ ||
-| 2 | schedule |[Scheduled](Schedule.md#scheduled) |❌ ||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | schedule_id |string | |required|
+| 2 | schedule |[Scheduled](Schedule.md#scheduled) | |optional|
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | domain_id |string | |required|

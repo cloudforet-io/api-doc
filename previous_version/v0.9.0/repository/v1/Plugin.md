@@ -151,24 +151,24 @@ description:
 ### CreatePluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | service_type |string |✅ ||
-| 3 | image |string |✅ ||
-| 4 | provider |string |❌ ||
-| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 6 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 7 | labels |string |❌ ||
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 9 | project_id |string |❌ ||
-| 10 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | service_type |string | |required|
+| 3 | image |string | |required|
+| 4 | provider |string | |optional|
+| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 6 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 7 | labels |string | |optional|
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 9 | project_id |string | |optional|
+| 10 | domain_id |string | |required|
 
 ### GetRepositoryPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | repository_id |string |❌ ||
-| 4 | only |string |❌ ||
+| 1 | plugin_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | repository_id |string | |optional|
+| 4 | only |string | |optional|
 
 ### PluginInfo
 <table>
@@ -361,10 +361,9 @@ string
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -373,10 +372,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -385,10 +383,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -400,10 +397,9 @@ string
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -412,10 +408,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -424,10 +419,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -436,10 +430,9 @@ string
 
 string
 
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
     <tr>
       <td style="text-align:left">8</td>
@@ -448,10 +441,9 @@ string
 
 string
 
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
   </tbody>
 </table>
@@ -460,15 +452,15 @@ string
 ### PluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | plugin_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### PluginStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | repository_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | repository_id |string | |required|
+| 3 | domain_id |string | |required|
 
 ### PluginsInfo
 | No | Field | Type | Required | Description |
@@ -479,20 +471,20 @@ string
 ### RepositoryPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | repository_id |string |❌ ||
+| 1 | plugin_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | repository_id |string | |optional|
 
 ### UpdatePluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | labels |string |❌ ||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 7 | domain_id |string |✅ ||
+| 1 | plugin_id |string | |required|
+| 2 | name |string | |optional|
+| 3 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | labels |string | |optional|
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 7 | domain_id |string | |required|
 
 ### VersionsInfo
 | No | Field | Type | Required | Description |

@@ -167,32 +167,32 @@ description:
 ### CreateZoneRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | region_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 1 | name |string | |required|
+| 2 | region_id |string | |required|
+| 3 | domain_id |string | |required|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
 
 ### GetZoneRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | zone_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | zone_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### RemoveZoneMemberRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | zone_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | zone_id |string | |required|
+| 2 | user_id |string | |required|
+| 3 | domain_id |string | |required|
 
 ### UpdateZoneRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | zone_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | zone_id |string | |required|
+| 2 | name |string | |optional|
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | domain_id |string | |required|
 
 ### ZoneInfo
 <table>
@@ -303,18 +303,18 @@ string
 ### ZoneMemberQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | zone_id |string |❌ ||
-| 3 | user_id |string |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | zone_id |string | |optional|
+| 3 | user_id |string | |optional|
+| 4 | domain_id |string | |required|
 
 ### ZoneMemberRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | zone_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | labels |string |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | zone_id |string | |required|
+| 2 | user_id |string | |required|
+| 3 | labels |string | |optional|
+| 4 | domain_id |string | |required|
 
 ### ZoneMembersInfo
 | No | Field | Type | Required | Description |
@@ -325,23 +325,23 @@ string
 ### ZoneQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | zone_id |string |❌ ||
-| 2 | region_id |string |❌ ||
-| 3 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 4 | name |string |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | zone_id |string | |optional|
+| 2 | region_id |string | |optional|
+| 3 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 4 | name |string | |optional|
+| 5 | domain_id |string | |required|
 
 ### ZoneRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | zone_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | zone_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### ZoneStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### ZonesInfo
 | No | Field | Type | Required | Description |

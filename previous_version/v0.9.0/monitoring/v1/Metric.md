@@ -58,15 +58,15 @@ description:
 ### MetricDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |✅ ||
-| 2 | resource_type |string |✅ ||
-| 3 | resources |string |✅ ||
-| 4 | metric |string |✅ ||
-| 5 | start |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) |✅ ||
-| 6 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) |✅ ||
-| 7 | period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ ||
-| 8 | stat |string |❌ ||
-| 9 | domain_id |string |✅ ||
+| 1 | data_source_id |string | |required|
+| 2 | resource_type |string | |required|
+| 3 | resources |string | |required|
+| 4 | metric |string | |required|
+| 5 | start |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |required|
+| 6 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |required|
+| 7 | period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |optional|
+| 8 | stat |string | |optional|
+| 9 | domain_id |string | |required|
 
 ### MetricInfo
 | No | Field | Type | Required | Description |
@@ -80,10 +80,10 @@ description:
 ### MetricRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |✅ ||
-| 2 | resource_type |string |✅ ||
-| 3 | resources |string |✅ ||
-| 4 | domain_id |string |✅ ||
+| 1 | data_source_id |string | |required|
+| 2 | resource_type |string | |required|
+| 3 | resources |string | |required|
+| 4 | domain_id |string | |required|
 
 ### MetricsInfo
 | No | Field | Type | Required | Description |

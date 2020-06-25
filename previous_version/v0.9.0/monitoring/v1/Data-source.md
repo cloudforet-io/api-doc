@@ -289,10 +289,9 @@ string
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -301,10 +300,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -313,10 +311,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -325,10 +322,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -340,10 +336,9 @@ string
           	<li>METRIC</li>
           	<li>LOG</li>
         </ul>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -352,10 +347,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -364,10 +358,9 @@ string
 
 string
 
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
   </tbody>
 </table>
@@ -376,14 +369,14 @@ string
 ### DataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | data_source_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### DataSourceStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### DataSourcesInfo
 | No | Field | Type | Required | Description |
@@ -394,9 +387,9 @@ string
 ### GetDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | data_source_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### PluginInfo
 | No | Field | Type | Required | Description |
@@ -410,19 +403,19 @@ string
 ### RegisterDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | plugin_info |[PluginInfo](Data-source.md#plugininfo) |✅ ||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | plugin_info |[PluginInfo](Data-source.md#plugininfo) | |required|
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | domain_id |string | |required|
 
 ### UpdateDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | plugin_info |[PluginInfo](Data-source.md#plugininfo) |❌ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | data_source_id |string | |required|
+| 2 | name |string | |optional|
+| 3 | plugin_info |[PluginInfo](Data-source.md#plugininfo) | |optional|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | domain_id |string | |required|
 
 ### VerifyInfo
 | No | Field | Type | Required | Description |

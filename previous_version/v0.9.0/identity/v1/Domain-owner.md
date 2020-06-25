@@ -79,14 +79,14 @@ description:
 ### CreateDomainOwner
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | owner_id |string |✅ ||
-| 2 | password |string |✅ ||
-| 3 | name |string |❌ ||
-| 4 | email |string |❌ ||
-| 5 | mobile |string |❌ ||
-| 6 | language |string |❌ ||
-| 7 | timezone |string |❌ ||
-| 8 | domain_id |string |✅ ||
+| 1 | owner_id |string | |required|
+| 2 | password |string | |required|
+| 3 | name |string | |optional|
+| 4 | email |string | |optional|
+| 5 | mobile |string | |optional|
+| 6 | language |string | |optional|
+| 7 | timezone |string | |optional|
+| 8 | domain_id |string | |required|
 
 ### DomainOwnerInfo
 | No | Field | Type | Required | Description |
@@ -104,8 +104,8 @@ description:
 ### DomainOwnerRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string |✅ ||
-| 2 | owner_id |string |✅ ||
+| 1 | domain_id |string | |required|
+| 2 | owner_id |string | |required|
 
 ### GetDomainOwnerRequest
 | No | Field | Type | Required | Description |
@@ -117,11 +117,11 @@ description:
 ### UpdateDomainOwner
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | owner_id |string |✅ ||
-| 2 | password |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | email |string |❌ ||
-| 5 | mobile |string |❌ ||
-| 6 | language |string |❌ ||
-| 7 | timezone |string |❌ ||
-| 8 | domain_id |string |✅ ||
+| 1 | owner_id |string | |required|
+| 2 | password |string | |optional|
+| 3 | name |string | |optional|
+| 4 | email |string | |optional|
+| 5 | mobile |string | |optional|
+| 6 | language |string | |optional|
+| 7 | timezone |string | |optional|
+| 8 | domain_id |string | |required|

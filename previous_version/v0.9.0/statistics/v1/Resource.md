@@ -37,8 +37,8 @@ description:
 ### Formula
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | formula |string |✅ ||
+| 1 | name |string | |required|
+| 2 | formula |string | |required|
 
 ### JoinQuery
 <table>
@@ -59,10 +59,9 @@ description:
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -75,10 +74,9 @@ string
           	<li>OUTER</li>
           	<li>INNER</li>
         </ul>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -87,10 +85,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -99,20 +96,18 @@ string
 
 string
 
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a>
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
   </tbody>
 </table>
@@ -121,9 +116,9 @@ string
 ### ResourceStatRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |❌ ||
-| 2 | resource_type |string |✅ ||
-| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 4 | join |[JoinQuery](Resource.md#joinquery) |❌ ||
-| 5 | formulas |[Formula](Resource.md#formula) |❌ ||
-| 6 | domain_id |string |✅ ||
+| 1 | data_source_id |string | |optional|
+| 2 | resource_type |string | |required|
+| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 4 | join |[JoinQuery](Resource.md#joinquery) | |optional|
+| 5 | formulas |[Formula](Resource.md#formula) | |optional|
+| 6 | domain_id |string | |required|

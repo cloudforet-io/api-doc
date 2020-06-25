@@ -109,21 +109,21 @@ description:
 ### CreateSchemaRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | service_type |string |✅ ||
-| 3 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |✅ ||
-| 4 | labels |string |❌ ||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 6 | project_id |string |❌ ||
-| 7 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | service_type |string | |required|
+| 3 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
+| 4 | labels |string | |optional|
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 6 | project_id |string | |optional|
+| 7 | domain_id |string | |required|
 
 ### GetRepositorySchemaRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | repository_id |string |❌ ||
-| 4 | only |string |❌ ||
+| 1 | name |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | repository_id |string | |optional|
+| 4 | only |string | |optional|
 
 ### SchemaInfo
 | No | Field | Type | Required | Description |
@@ -141,25 +141,25 @@ description:
 ### SchemaQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | name |string |❌ ||
-| 3 | service_type |string |❌ ||
-| 4 | project_id |string |✅ ||
-| 5 | repository_id |string |✅ ||
-| 6 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | name |string | |optional|
+| 3 | service_type |string | |optional|
+| 4 | project_id |string | |required|
+| 5 | repository_id |string | |required|
+| 6 | domain_id |string | |required|
 
 ### SchemaRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | domain_id |string | |required|
 
 ### SchemaStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | repository_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | repository_id |string | |required|
+| 3 | domain_id |string | |required|
 
 ### SchemasInfo
 | No | Field | Type | Required | Description |
@@ -170,8 +170,8 @@ description:
 ### UpdateSchemaRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 3 | labels |string |❌ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 3 | labels |string | |optional|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | domain_id |string | |required|

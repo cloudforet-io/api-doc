@@ -279,17 +279,6 @@ bool
         <td style="text-align:left"></td>
 <td style="text-align:left"></td>
     </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">endpoints</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
-    </tr>
   </tbody>
 </table>
 
@@ -311,10 +300,9 @@ string
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -323,10 +311,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -335,10 +322,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -347,10 +333,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -359,10 +344,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -376,10 +360,9 @@ string
           	<li>RE_PROVISIONING</li>
           	<li>ERROR</li>
         </ul>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -388,10 +371,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">8</td>
@@ -400,10 +382,9 @@ string
 
 string
 
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
   </tbody>
 </table>
@@ -571,11 +552,11 @@ string
 ### SupervisorQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | supervisor_id |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | is_public |bool |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | supervisor_id |string | |optional|
+| 3 | name |string | |optional|
+| 4 | is_public |bool | |optional|
+| 5 | domain_id |string | |required|
 
 ### SupervisorRequest
 | No | Field | Type | Required | Description |
@@ -586,8 +567,8 @@ string
 ### SupervisorStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### SupervisorsInfo
 | No | Field | Type | Required | Description |

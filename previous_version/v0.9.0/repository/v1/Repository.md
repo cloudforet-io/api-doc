@@ -109,17 +109,17 @@ description:
 ### CreateRepositoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | repository_type |string |✅ ||
-| 3 | endpoint |string |❌ ||
-| 4 | version |string |❌ ||
-| 5 | secret_id |string |❌ ||
+| 1 | name |string | |required|
+| 2 | repository_type |string | |required|
+| 3 | endpoint |string | |optional|
+| 4 | version |string | |optional|
+| 5 | secret_id |string | |optional|
 
 ### GetRepositoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | repository_id |string |✅ ||
-| 2 | only |string |❌ ||
+| 1 | repository_id |string | |required|
+| 2 | only |string | |optional|
 
 ### RepositoriesInfo
 | No | Field | Type | Required | Description |
@@ -141,24 +141,24 @@ description:
 ### RepositoryQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | repository_id |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | repository_type |string |❌ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | repository_id |string | |optional|
+| 3 | name |string | |optional|
+| 4 | repository_type |string | |optional|
 
 ### RepositoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | repository_id |string |✅ ||
+| 1 | repository_id |string | |required|
 
 ### RepositoryStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### UpdateRepositoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | repository_id |string |✅ ||
-| 2 | name |string |✅ ||
+| 1 | repository_id |string | |required|
+| 2 | name |string | |required|
