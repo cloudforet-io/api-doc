@@ -57,15 +57,15 @@ description:
 ### PluginEndpointRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string | |required|
-| 2 | version |string | |required|
-| 3 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 4 | domain_id |string | |required|
+| 1 | plugin_id |string |✅ ||
+| 2 | version |string |✅ ||
+| 3 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 4 | domain_id |string |✅ ||
 
 ### PluginFailureRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string | |required|
-| 2 | plugin_id |string | |required|
-| 3 | version |string | |required|
-| 4 | domain_id |string | |required|
+| 1 | supervisor_id |string |✅ ||
+| 2 | plugin_id |string |✅ ||
+| 3 | version |string |✅ ||
+| 4 | domain_id |string |✅ ||

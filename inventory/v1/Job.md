@@ -53,8 +53,8 @@ description:
 ### JobStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
-| 2 | domain_id |string | |required|
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### JobsInfo
 | No | Field | Type | Required | Description |
@@ -79,9 +79,10 @@ description:
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">2</td>

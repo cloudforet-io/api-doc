@@ -81,20 +81,20 @@ description:
 ### CreateHistoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | schedule_id |string | |required|
-| 2 | domain_id |string | |required|
+| 1 | schedule_id |string |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### DiffHistoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | topic |string | |required|
-| 2 | filter |spaceone.api.core.v1.Filter | |optional|
-| 3 | filter_or |spaceone.api.core.v1.Filter | |optional|
-| 4 | from |string | |required|
-| 5 | to |string | |optional|
-| 6 | default_fields |string | |required|
-| 7 | diff_fields |string | |required|
-| 8 | domain_id |string | |required|
+| 1 | topic |string |✅ ||
+| 2 | filter |spaceone.api.core.v1.Filter |❌ ||
+| 3 | filter_or |spaceone.api.core.v1.Filter |❌ ||
+| 4 | from |string |✅ ||
+| 5 | to |string |❌ ||
+| 6 | default_fields |string |✅ ||
+| 7 | diff_fields |string |✅ ||
+| 8 | domain_id |string |✅ ||
 
 ### HistoryInfo
 | No | Field | Type | Required | Description |
@@ -105,9 +105,9 @@ description:
 ### HistoryStatRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
-| 2 | topic |string | |required|
-| 3 | domain_id |string | |required|
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
+| 2 | topic |string |✅ ||
+| 3 | domain_id |string |✅ ||
 
 ### HistoryValueInfo
 | No | Field | Type | Required | Description |
@@ -120,6 +120,6 @@ description:
 ### QueryHistoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
-| 2 | topic |string | |required|
-| 3 | domain_id |string | |required|
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
+| 2 | topic |string |✅ ||
+| 3 | domain_id |string |✅ ||

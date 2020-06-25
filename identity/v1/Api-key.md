@@ -346,8 +346,8 @@ string
 ### APIKeyStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
-| 2 | domain_id |string | |required|
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### APIKeysInfo
 | No | Field | Type | Required | Description |

@@ -123,27 +123,27 @@ description:
 ### CreateSubnetRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | cidr |string | |required|
-| 2 | name |string | |optional|
-| 3 | ip_ranges |[IPRange](Subnet.md#iprange) | |optional|
-| 4 | gateway |string | |optional|
-| 5 | vlan |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |optional|
-| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 8 | reference |[SubnetReference](Subnet.md#subnetreference) | |optional|
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 10 | network_id |string | |required|
-| 11 | network_type_id |string | |required|
-| 12 | network_policy_id |string | |optional|
-| 13 | project_id |string | |required|
-| 14 | domain_id |string | |required|
+| 1 | cidr |string |✅ ||
+| 2 | name |string |❌ ||
+| 3 | ip_ranges |[IPRange](Subnet.md#iprange) |❌ ||
+| 4 | gateway |string |❌ ||
+| 5 | vlan |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ ||
+| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 8 | reference |[SubnetReference](Subnet.md#subnetreference) |❌ ||
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 10 | network_id |string |✅ ||
+| 11 | network_type_id |string |✅ ||
+| 12 | network_policy_id |string |❌ ||
+| 13 | project_id |string |✅ ||
+| 14 | domain_id |string |✅ ||
 
 ### GetSubnetRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | subnet_id |string | |required|
-| 2 | domain_id |string | |required|
-| 3 | only |string | |optional|
+| 1 | subnet_id |string |✅ ||
+| 2 | domain_id |string |✅ ||
+| 3 | only |string |❌ ||
 
 ### IPRange
 | No | Field | Type | Required | Description |
@@ -154,9 +154,9 @@ description:
 ### PinSubnetDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | subnet_id |string | |required|
-| 2 | keys |string | |required|
-| 3 | domain_id |string | |required|
+| 1 | subnet_id |string |✅ ||
+| 2 | keys |string |✅ ||
+| 3 | domain_id |string |✅ ||
 
 ### SubnetInfo
 | No | Field | Type | Required | Description |
@@ -184,19 +184,19 @@ description:
 ### SubnetQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
-| 2 | subnet_id |string | |optional|
-| 3 | name |string | |optional|
-| 4 | cidr |string | |optional|
-| 5 | gateway |string | |optional|
-| 6 | vlan |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |optional|
-| 7 | network_id |string | |optional|
-| 8 | network_type_id |string | |optional|
-| 9 | network_policy_id |string | |optional|
-| 10 | zone_id |string | |optional|
-| 11 | region_id |string | |optional|
-| 12 | project_id |string | |optional|
-| 13 | domain_id |string | |required|
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
+| 2 | subnet_id |string |❌ ||
+| 3 | name |string |❌ ||
+| 4 | cidr |string |❌ ||
+| 5 | gateway |string |❌ ||
+| 6 | vlan |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ ||
+| 7 | network_id |string |❌ ||
+| 8 | network_type_id |string |❌ ||
+| 9 | network_policy_id |string |❌ ||
+| 10 | zone_id |string |❌ ||
+| 11 | region_id |string |❌ ||
+| 12 | project_id |string |❌ ||
+| 13 | domain_id |string |✅ ||
 
 ### SubnetReference
 | No | Field | Type | Required | Description |
@@ -207,14 +207,14 @@ description:
 ### SubnetRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | subnet_id |string | |required|
-| 2 | domain_id |string | |required|
+| 1 | subnet_id |string |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### SubnetStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
-| 2 | domain_id |string | |required|
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### SubnetsInfo
 | No | Field | Type | Required | Description |
@@ -225,17 +225,17 @@ description:
 ### UpdateSubnetRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | subnet_id |string | |required|
-| 2 | name |string | |optional|
-| 3 | ip_ranges |[IPRange](Subnet.md#iprange) | |optional|
-| 4 | gateway |string | |optional|
-| 5 | vlan |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |optional|
-| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 8 | reference |[SubnetReference](Subnet.md#subnetreference) | |optional|
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 10 | network_type_id |string | |optional|
-| 11 | network_policy_id |string | |optional|
-| 12 | project_id |string | |optional|
-| 13 | domain_id |string | |required|
-| 14 | release_project |bool | |optional|
+| 1 | subnet_id |string |✅ ||
+| 2 | name |string |❌ ||
+| 3 | ip_ranges |[IPRange](Subnet.md#iprange) |❌ ||
+| 4 | gateway |string |❌ ||
+| 5 | vlan |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ ||
+| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 8 | reference |[SubnetReference](Subnet.md#subnetreference) |❌ ||
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 10 | network_type_id |string |❌ ||
+| 11 | network_policy_id |string |❌ ||
+| 12 | project_id |string |❌ ||
+| 13 | domain_id |string |✅ ||
+| 14 | release_project |bool |❌ ||

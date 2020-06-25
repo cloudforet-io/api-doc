@@ -139,18 +139,20 @@ description:
 
 string
 
-</td>
-        <td style="text-align:left">required</td>
-<td style="text-align:left">required</td>
+</td><td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left">
 <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left">required</td>
-<td style="text-align:left">required</td>
+</td><td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -161,18 +163,20 @@ string
           	<li>NONE</li>
           	<li>CREDENTIALS</li>
         </ul>
-</td>
-        <td style="text-align:left">required</td>
-<td style="text-align:left">required</td>
+</td><td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left">
 <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -181,9 +185,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -192,9 +197,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -203,9 +209,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">8</td>
@@ -214,9 +221,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">required</td>
-<td style="text-align:left">required</td>
+</td><td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
   </tbody>
 </table>
@@ -225,9 +233,9 @@ string
 ### GetSecretRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_id |string | |required|
-| 2 | domain_id |string | |required|
-| 3 | only |string | |optional|
+| 1 | secret_id |string |✅ ||
+| 2 | domain_id |string |✅ ||
+| 3 | only |string |❌ ||
 
 ### SecretDataInfo
 | No | Field | Type | Required | Description |
@@ -384,9 +392,10 @@ string
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -395,9 +404,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -406,9 +416,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -419,9 +430,10 @@ string
           	<li>NONE</li>
           	<li>CREDENTIALS</li>
         </ul>
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -430,9 +442,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -441,9 +454,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -452,9 +466,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">8</td>
@@ -463,9 +478,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">9</td>
@@ -474,9 +490,10 @@ string
 
 bool
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">10</td>
@@ -485,9 +502,10 @@ bool
 
 string
 
-</td>
-        <td style="text-align:left">required</td>
-<td style="text-align:left">required</td>
+</td><td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
   </tbody>
 </table>
@@ -496,14 +514,14 @@ string
 ### SecretRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_id |string | |required|
-| 2 | domain_id |string | |required|
+| 1 | secret_id |string |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### SecretStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
-| 2 | domain_id |string | |required|
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
+| 2 | domain_id |string |✅ ||
 
 ### SecretsInfo
 | No | Field | Type | Required | Description |
@@ -514,9 +532,9 @@ string
 ### UpdateSecretRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_id |string | |required|
-| 2 | name |string | |optional|
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 4 | project_id |string | |required|
-| 5 | domain_id |string | |required|
-| 6 | release_project |bool | |optional|
+| 1 | secret_id |string |✅ ||
+| 2 | name |string |❌ ||
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 4 | project_id |string |✅ ||
+| 5 | domain_id |string |✅ ||
+| 6 | release_project |bool |❌ ||

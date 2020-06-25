@@ -161,10 +161,10 @@ description:
 ### CreateDomainRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string | |required|
-| 2 | plugin_info |[PluginInfo](Domain.md#plugininfo) | |optional|
-| 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 1 | name |string |✅ ||
+| 2 | plugin_info |[PluginInfo](Domain.md#plugininfo) |❌ ||
+| 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
 
 ### DomainInfo
 <table>
@@ -286,9 +286,10 @@ string
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -297,9 +298,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -308,9 +310,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -322,9 +325,10 @@ string
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul>
-</td>
-        <td style="text-align:left">optional</td>
-<td style="text-align:left">optional</td>
+</td><td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+        <td style="text-align:left"></td>
+
     </tr>
   </tbody>
 </table>
@@ -333,12 +337,12 @@ string
 ### DomainRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | |required|
+| 1 | domain_id |string |✅ ||
 
 ### DomainStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
 
 ### DomainsInfo
 | No | Field | Type | Required | Description |
@@ -349,8 +353,8 @@ string
 ### GetDomainRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | |required|
-| 2 | only |string | |optional|
+| 1 | domain_id |string |✅ ||
+| 2 | only |string |❌ ||
 
 ### PluginInfo
 | No | Field | Type | Required | Description |
@@ -363,7 +367,7 @@ string
 ### UpdateDomainRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | |required|
-| 2 | plugin_info |[PluginInfo](Domain.md#plugininfo) | |optional|
-| 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 1 | domain_id |string |✅ ||
+| 2 | plugin_info |[PluginInfo](Domain.md#plugininfo) |❌ ||
+| 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
