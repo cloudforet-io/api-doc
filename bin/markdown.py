@@ -275,7 +275,7 @@ def _generate_summary_mds(context_input, managed_link, history):
         previous_version_md = os.path.join(BASE_DIR, 'previous_version', 'README.md')
 
         for version in history['version_record']:
-            line = f'* [{version}](previous_version/{version}/)'
+            line = f'* [{version}](previous_versions/previous_version/{version}/)'
             vtable_of_contents.append(line)
 
         _generate_md_file(previous_version_md, TEMPLATE_NAMES[3], {'list': vtable_of_contents})
