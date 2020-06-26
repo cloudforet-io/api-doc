@@ -234,6 +234,7 @@ def _generate_single_pb_mds(context_input):
 def _generate_summary_mds(context_input, managed_link, history):
     table_of_contents = {}
     title_index = []
+    config = _get_json_data(os.path.join(BASE_DIR, 'config.json'))
     for path in context_input:
 
         file_info = get_file_syntax(path)
@@ -270,12 +271,10 @@ def _generate_summary_mds(context_input, managed_link, history):
 
     if ('version_record' in history and len(history['version_record']) > 0):
         vtable_of_contents = []
-        config = _get_json_data(os.path.join(BASE_DIR, 'config.json'))
         gitbook_space = _.get(config, 'refer_link.git_book_space')
         previous_version_md = os.path.join(BASE_DIR, 'previous_version', 'README.md')
 
         for version in history['version_record']:
-
             line = f'* [{version}]({gitbook_space}previous-versions/previous_version/{version}/)'
             vtable_of_contents.append(line)
 
@@ -285,8 +284,15 @@ def _generate_summary_mds(context_input, managed_link, history):
     context_input = {'toc': title_index}
     context_input['managed_link'] = _normalize_managed_link(managed_link)
     context_input['history'] = history
+
+    # Updating All SUMMARY.md
     _generate_md_file(output_to_create, TEMPLATE_NAMES[1], context_input)
 
+    # Updating All README.md
+    output_to_create = os.path.join(BASE_DIR, 'README.md')
+    README_OUTPUT = _.get(config, 'intro_comment')
+    _.set(README_OUTPUT, 'version', history['cur_version'])
+    _generate_md_file(output_to_create, TEMPLATE_NAMES[2], README_OUTPUT)
 
 def _normalize_managed_link(managed_link):
     n_normalized = {}
@@ -421,15 +427,24 @@ def _update_summary_infos(version_info, ref_info):
     _create_subdirectories(p_folder)
     _transfer_previous_doc(previous_summary['movable_fd'], p_folder)
 
+def _build_a_reference(version_info):
+    ref = {}
+    is_updated = version_info['is_updated']
+    if(is_updated):
+        ref['cur_version'] = version_info['artifact_version']
+    else:
+        ref['cur_version'] = version_info['current_version']
+    return ref
+
 
 def main():
     file_reference = create_reference_json()
     if len(file_reference) == 0:
         _error("No artifact JSON")
     else:
-        version_info = _diff_version(file_reference[0])
-        ref_info = {}
         pre_v = 'previous_version'
+        version_info = _diff_version(file_reference[0])
+        ref_info = _build_a_reference(version_info)
         is_updated = version_info['is_updated']
         if(is_updated):
             _update_summary_infos(version_info, ref_info)

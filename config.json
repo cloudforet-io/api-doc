@@ -1,4 +1,7 @@
 {
+  "intro_comment": {
+    "desc": "SpaceONE's API which auto-generated from API's Protobuffs"
+  },
   "refer_link": {
     "git_book_space": "https://spaceone-dev.gitbook.io/spaceone-apis/",
     "google.protobuf.Struct" : "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto",
