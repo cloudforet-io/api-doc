@@ -497,5 +497,6 @@ string
 ### VersionsInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |string | ||
+| 1 | version |string | |Deprecated|
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 3 | results |string | ||
