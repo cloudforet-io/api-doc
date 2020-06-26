@@ -1,12 +1,13 @@
 {%- if desc is defined -%}
 # Introduction
 
-{% if desc|length -%}
-Description: {{desc}}
-{% endif -%}
 {% if version -%}
-Latest Version: {{version}}
+**Latest Version**: v{{version}}
 {% endif %}
+
+{% if desc|length -%}
+**Description**: {{desc}}
+{% endif -%}
 {% endif %}
 
 
