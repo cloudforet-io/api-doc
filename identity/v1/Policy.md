@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Policy.md#create)| [CreatePolicyRequest](Policy.md#createpolicyrequest)| [PolicyInfo](Policy.md#policyinfo) |  |
-| 2 | [update](Policy.md#update)| [UpdatePolicyRequest](Policy.md#updatepolicyrequest)| [PolicyInfo](Policy.md#policyinfo) |  |
-| 3 | [delete](Policy.md#delete)| [PolicyRequest](Policy.md#policyrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Policy.md#get)| [GetPolicyRequest](Policy.md#getpolicyrequest)| [PolicyInfo](Policy.md#policyinfo) |  |
-| 5 | [list](Policy.md#list)| [PolicyQuery](Policy.md#policyquery)| [PoliciesInfo](Policy.md#policiesinfo) |  |
-| 6 | [stat](Policy.md#stat)| [PolicyStatQuery](Policy.md#policystatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Policy.md#create)| [CreatePolicyRequest](Policy.md#createpolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
+| 2 | [update](Policy.md#update)| [UpdatePolicyRequest](Policy.md#updatepolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
+| 3 | [delete](Policy.md#delete)| [PolicyRequest](Policy.md#policyrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Policy.md#get)| [GetPolicyRequest](Policy.md#getpolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
+| 5 | [list](Policy.md#list)| [PolicyQuery](Policy.md#policyquery) | [PoliciesInfo](Policy.md#policiesinfo) |  |
+| 6 | [stat](Policy.md#stat)| [PolicyStatQuery](Policy.md#policystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /identity/v1/policies

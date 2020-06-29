@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Network.md#create)| [CreateNetworkRequest](Network.md#createnetworkrequest)| [NetworkInfo](Network.md#networkinfo) |  |
-| 2 | [update](Network.md#update)| [UpdateNetworkRequest](Network.md#updatenetworkrequest)| [NetworkInfo](Network.md#networkinfo) |  |
-| 3 | [pin_data](Network.md#pin_data)| [PinNetworkDataRequest](Network.md#pinnetworkdatarequest)| [NetworkInfo](Network.md#networkinfo) |  |
-| 4 | [delete](Network.md#delete)| [NetworkRequest](Network.md#networkrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](Network.md#get)| [GetNetworkRequest](Network.md#getnetworkrequest)| [NetworkInfo](Network.md#networkinfo) |  |
-| 6 | [list](Network.md#list)| [NetworkQuery](Network.md#networkquery)| [NetworksInfo](Network.md#networksinfo) |  |
-| 7 | [stat](Network.md#stat)| [NetworkStatQuery](Network.md#networkstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Network.md#create)| [CreateNetworkRequest](Network.md#createnetworkrequest) | [NetworkInfo](Network.md#networkinfo) |  |
+| 2 | [update](Network.md#update)| [UpdateNetworkRequest](Network.md#updatenetworkrequest) | [NetworkInfo](Network.md#networkinfo) |  |
+| 3 | [pin_data](Network.md#pin_data)| [PinNetworkDataRequest](Network.md#pinnetworkdatarequest) | [NetworkInfo](Network.md#networkinfo) |  |
+| 4 | [delete](Network.md#delete)| [NetworkRequest](Network.md#networkrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [get](Network.md#get)| [GetNetworkRequest](Network.md#getnetworkrequest) | [NetworkInfo](Network.md#networkinfo) |  |
+| 6 | [list](Network.md#list)| [NetworkQuery](Network.md#networkquery) | [NetworksInfo](Network.md#networksinfo) |  |
+| 7 | [stat](Network.md#stat)| [NetworkStatQuery](Network.md#networkstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/networks

@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Provider.md#create)| [CreateProviderRequest](Provider.md#createproviderrequest)| [ProviderInfo](Provider.md#providerinfo) |  |
-| 2 | [update](Provider.md#update)| [UpdateProviderRequest](Provider.md#updateproviderrequest)| [ProviderInfo](Provider.md#providerinfo) |  |
-| 3 | [delete](Provider.md#delete)| [ProviderRequest](Provider.md#providerrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Provider.md#get)| [GetProviderRequest](Provider.md#getproviderrequest)| [ProviderInfo](Provider.md#providerinfo) |  |
-| 5 | [list](Provider.md#list)| [ProviderQuery](Provider.md#providerquery)| [ProvidersInfo](Provider.md#providersinfo) |  |
-| 6 | [stat](Provider.md#stat)| [ProviderStatQuery](Provider.md#providerstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Provider.md#create)| [CreateProviderRequest](Provider.md#createproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
+| 2 | [update](Provider.md#update)| [UpdateProviderRequest](Provider.md#updateproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
+| 3 | [delete](Provider.md#delete)| [ProviderRequest](Provider.md#providerrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Provider.md#get)| [GetProviderRequest](Provider.md#getproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
+| 5 | [list](Provider.md#list)| [ProviderQuery](Provider.md#providerquery) | [ProvidersInfo](Provider.md#providersinfo) |  |
+| 6 | [stat](Provider.md#stat)| [ProviderStatQuery](Provider.md#providerstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /identity/v1/providers

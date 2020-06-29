@@ -15,16 +15,16 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Pool.md#create)| [CreatePoolRequest](Pool.md#createpoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
-| 2 | [update](Pool.md#update)| [UpdatePoolRequest](Pool.md#updatepoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
-| 3 | [delete](Pool.md#delete)| [PoolRequest](Pool.md#poolrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Pool.md#get)| [GetPoolRequest](Pool.md#getpoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
-| 5 | [add_member](Pool.md#add_member)| [PoolMemberRequest](Pool.md#poolmemberrequest)| [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
-| 6 | [modify_member](Pool.md#modify_member)| [PoolMemberRequest](Pool.md#poolmemberrequest)| [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
-| 7 | [remove_member](Pool.md#remove_member)| [RemovePoolMemberRequest](Pool.md#removepoolmemberrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 8 | [list_members](Pool.md#list_members)| [PoolMemberQuery](Pool.md#poolmemberquery)| [PoolMembersInfo](Pool.md#poolmembersinfo) |  |
-| 9 | [list](Pool.md#list)| [PoolQuery](Pool.md#poolquery)| [PoolsInfo](Pool.md#poolsinfo) |  |
-| 10 | [stat](Pool.md#stat)| [PoolStatQuery](Pool.md#poolstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Pool.md#create)| [CreatePoolRequest](Pool.md#createpoolrequest) | [PoolInfo](Pool.md#poolinfo) |  |
+| 2 | [update](Pool.md#update)| [UpdatePoolRequest](Pool.md#updatepoolrequest) | [PoolInfo](Pool.md#poolinfo) |  |
+| 3 | [delete](Pool.md#delete)| [PoolRequest](Pool.md#poolrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Pool.md#get)| [GetPoolRequest](Pool.md#getpoolrequest) | [PoolInfo](Pool.md#poolinfo) |  |
+| 5 | [add_member](Pool.md#add_member)| [PoolMemberRequest](Pool.md#poolmemberrequest) | [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
+| 6 | [modify_member](Pool.md#modify_member)| [PoolMemberRequest](Pool.md#poolmemberrequest) | [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
+| 7 | [remove_member](Pool.md#remove_member)| [RemovePoolMemberRequest](Pool.md#removepoolmemberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 8 | [list_members](Pool.md#list_members)| [PoolMemberQuery](Pool.md#poolmemberquery) | [PoolMembersInfo](Pool.md#poolmembersinfo) |  |
+| 9 | [list](Pool.md#list)| [PoolQuery](Pool.md#poolquery) | [PoolsInfo](Pool.md#poolsinfo) |  |
+| 10 | [stat](Pool.md#stat)| [PoolStatQuery](Pool.md#poolstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/pools

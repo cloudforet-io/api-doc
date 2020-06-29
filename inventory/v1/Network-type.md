@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Network-type.md#create)| [CreateNetworkTypeRequest](Network-type.md#createnetworktyperequest)| [NetworkTypeInfo](Network-type.md#networktypeinfo) |  |
-| 2 | [update](Network-type.md#update)| [UpdateNetworkTypeRequest](Network-type.md#updatenetworktyperequest)| [NetworkTypeInfo](Network-type.md#networktypeinfo) |  |
-| 3 | [delete](Network-type.md#delete)| [NetworkTypeRequest](Network-type.md#networktyperequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Network-type.md#get)| [GetNetworkTypeRequest](Network-type.md#getnetworktyperequest)| [NetworkTypeInfo](Network-type.md#networktypeinfo) |  |
-| 5 | [list](Network-type.md#list)| [NetworkTypeQuery](Network-type.md#networktypequery)| [NetworkTypesInfo](Network-type.md#networktypesinfo) |  |
-| 6 | [stat](Network-type.md#stat)| [NetworkTypeStatQuery](Network-type.md#networktypestatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Network-type.md#create)| [CreateNetworkTypeRequest](Network-type.md#createnetworktyperequest) | [NetworkTypeInfo](Network-type.md#networktypeinfo) |  |
+| 2 | [update](Network-type.md#update)| [UpdateNetworkTypeRequest](Network-type.md#updatenetworktyperequest) | [NetworkTypeInfo](Network-type.md#networktypeinfo) |  |
+| 3 | [delete](Network-type.md#delete)| [NetworkTypeRequest](Network-type.md#networktyperequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Network-type.md#get)| [GetNetworkTypeRequest](Network-type.md#getnetworktyperequest) | [NetworkTypeInfo](Network-type.md#networktypeinfo) |  |
+| 5 | [list](Network-type.md#list)| [NetworkTypeQuery](Network-type.md#networktypequery) | [NetworkTypesInfo](Network-type.md#networktypesinfo) |  |
+| 6 | [stat](Network-type.md#stat)| [NetworkTypeStatQuery](Network-type.md#networktypestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/network-types

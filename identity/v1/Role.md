@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Role.md#create)| [CreateRoleRequest](Role.md#createrolerequest)| [RoleInfo](Role.md#roleinfo) |  |
-| 2 | [update](Role.md#update)| [UpdateRoleRequest](Role.md#updaterolerequest)| [RoleInfo](Role.md#roleinfo) |  |
-| 3 | [delete](Role.md#delete)| [RoleRequest](Role.md#rolerequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Role.md#get)| [GetRoleRequest](Role.md#getrolerequest)| [RoleInfo](Role.md#roleinfo) |  |
-| 5 | [list](Role.md#list)| [RoleQuery](Role.md#rolequery)| [RolesInfo](Role.md#rolesinfo) |  |
-| 6 | [stat](Role.md#stat)| [RoleStatQuery](Role.md#rolestatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Role.md#create)| [CreateRoleRequest](Role.md#createrolerequest) | [RoleInfo](Role.md#roleinfo) |  |
+| 2 | [update](Role.md#update)| [UpdateRoleRequest](Role.md#updaterolerequest) | [RoleInfo](Role.md#roleinfo) |  |
+| 3 | [delete](Role.md#delete)| [RoleRequest](Role.md#rolerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Role.md#get)| [GetRoleRequest](Role.md#getrolerequest) | [RoleInfo](Role.md#roleinfo) |  |
+| 5 | [list](Role.md#list)| [RoleQuery](Role.md#rolequery) | [RolesInfo](Role.md#rolesinfo) |  |
+| 6 | [stat](Role.md#stat)| [RoleStatQuery](Role.md#rolestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /identity/v1/roles

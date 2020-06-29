@@ -15,17 +15,17 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [publish](Supervisor.md#publish)| [PublishSupervisorRequest](Supervisor.md#publishsupervisorrequest)| [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 2 | [register](Supervisor.md#register)| [RegisterSupervisorRequest](Supervisor.md#registersupervisorrequest)| [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 3 | [update](Supervisor.md#update)| [RegisterSupervisorRequest](Supervisor.md#registersupervisorrequest)| [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 4 | [deregister](Supervisor.md#deregister)| [SupervisorRequest](Supervisor.md#supervisorrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [enable](Supervisor.md#enable)| [SupervisorRequest](Supervisor.md#supervisorrequest)| [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 6 | [disable](Supervisor.md#disable)| [SupervisorRequest](Supervisor.md#supervisorrequest)| [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 7 | [recover_plugin](Supervisor.md#recover_plugin)| [RecoverPluginRequest](Supervisor.md#recoverpluginrequest)| [PluginInfo](Supervisor.md#plugininfo) |  |
-| 8 | [get](Supervisor.md#get)| [GetSupervisorRequest](Supervisor.md#getsupervisorrequest)| [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 9 | [list](Supervisor.md#list)| [SupervisorQuery](Supervisor.md#supervisorquery)| [SupervisorsInfo](Supervisor.md#supervisorsinfo) |  |
-| 10 | [stat](Supervisor.md#stat)| [SupervisorStatQuery](Supervisor.md#supervisorstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 11 | [list_plugins](Supervisor.md#list_plugins)| [PluginQuery](Supervisor.md#pluginquery)| [PluginsInfo](Supervisor.md#pluginsinfo) |  |
+| 1 | [publish](Supervisor.md#publish)| [PublishSupervisorRequest](Supervisor.md#publishsupervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
+| 2 | [register](Supervisor.md#register)| [RegisterSupervisorRequest](Supervisor.md#registersupervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
+| 3 | [update](Supervisor.md#update)| [RegisterSupervisorRequest](Supervisor.md#registersupervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
+| 4 | [deregister](Supervisor.md#deregister)| [SupervisorRequest](Supervisor.md#supervisorrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [enable](Supervisor.md#enable)| [SupervisorRequest](Supervisor.md#supervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
+| 6 | [disable](Supervisor.md#disable)| [SupervisorRequest](Supervisor.md#supervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
+| 7 | [recover_plugin](Supervisor.md#recover_plugin)| [RecoverPluginRequest](Supervisor.md#recoverpluginrequest) | [PluginInfo](Supervisor.md#plugininfo) |  |
+| 8 | [get](Supervisor.md#get)| [GetSupervisorRequest](Supervisor.md#getsupervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
+| 9 | [list](Supervisor.md#list)| [SupervisorQuery](Supervisor.md#supervisorquery) | [SupervisorsInfo](Supervisor.md#supervisorsinfo) |  |
+| 10 | [stat](Supervisor.md#stat)| [SupervisorStatQuery](Supervisor.md#supervisorstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 11 | [list_plugins](Supervisor.md#list_plugins)| [PluginQuery](Supervisor.md#pluginquery) | [PluginsInfo](Supervisor.md#pluginsinfo) |  |
 
 ### publish
 > **POST** /plugin/v1/supervisors

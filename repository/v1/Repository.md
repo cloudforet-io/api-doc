@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [register](Repository.md#register)| [CreateRepositoryRequest](Repository.md#createrepositoryrequest)| [RepositoryInfo](Repository.md#repositoryinfo) |  |
-| 2 | [update](Repository.md#update)| [UpdateRepositoryRequest](Repository.md#updaterepositoryrequest)| [RepositoryInfo](Repository.md#repositoryinfo) |  |
-| 3 | [deregister](Repository.md#deregister)| [RepositoryRequest](Repository.md#repositoryrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Repository.md#get)| [GetRepositoryRequest](Repository.md#getrepositoryrequest)| [RepositoryInfo](Repository.md#repositoryinfo) |  |
-| 5 | [list](Repository.md#list)| [RepositoryQuery](Repository.md#repositoryquery)| [RepositoriesInfo](Repository.md#repositoriesinfo) |  |
-| 6 | [stat](Repository.md#stat)| [RepositoryStatQuery](Repository.md#repositorystatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [register](Repository.md#register)| [CreateRepositoryRequest](Repository.md#createrepositoryrequest) | [RepositoryInfo](Repository.md#repositoryinfo) |  |
+| 2 | [update](Repository.md#update)| [UpdateRepositoryRequest](Repository.md#updaterepositoryrequest) | [RepositoryInfo](Repository.md#repositoryinfo) |  |
+| 3 | [deregister](Repository.md#deregister)| [RepositoryRequest](Repository.md#repositoryrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Repository.md#get)| [GetRepositoryRequest](Repository.md#getrepositoryrequest) | [RepositoryInfo](Repository.md#repositoryinfo) |  |
+| 5 | [list](Repository.md#list)| [RepositoryQuery](Repository.md#repositoryquery) | [RepositoriesInfo](Repository.md#repositoriesinfo) |  |
+| 6 | [stat](Repository.md#stat)| [RepositoryStatQuery](Repository.md#repositorystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### register
 > **POST** /repository/v1/repositories

@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [list](Job.md#list)| [JobsQuery](Job.md#jobsquery)| [JobsInfo](Job.md#jobsinfo) |  |
-| 2 | [stat](Job.md#stat)| [JobStatQuery](Job.md#jobstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [list](Job.md#list)| [JobsQuery](Job.md#jobsquery) | [JobsInfo](Job.md#jobsinfo) |  |
+| 2 | [stat](Job.md#stat)| [JobStatQuery](Job.md#jobstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### list
 > **GET** /inventory/v1/jobs

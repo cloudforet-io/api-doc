@@ -15,14 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [allocate](Ip-address.md#allocate)| [AllocateIPRequest](Ip-address.md#allocateiprequest)| [IPInfo](Ip-address.md#ipinfo) |  |
-| 2 | [reserve](Ip-address.md#reserve)| [ReserveIPRequest](Ip-address.md#reserveiprequest)| [IPInfo](Ip-address.md#ipinfo) |  |
-| 3 | [release](Ip-address.md#release)| [IPRequest](Ip-address.md#iprequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [update](Ip-address.md#update)| [UpdateIPRequest](Ip-address.md#updateiprequest)| [IPInfo](Ip-address.md#ipinfo) |  |
-| 5 | [pin_data](Ip-address.md#pin_data)| [PinIPDataRequest](Ip-address.md#pinipdatarequest)| [IPInfo](Ip-address.md#ipinfo) |  |
-| 6 | [get](Ip-address.md#get)| [GetIPRequest](Ip-address.md#getiprequest)| [IPInfo](Ip-address.md#ipinfo) |  |
-| 7 | [list](Ip-address.md#list)| [IPQuery](Ip-address.md#ipquery)| [IPsInfo](Ip-address.md#ipsinfo) |  |
-| 8 | [stat](Ip-address.md#stat)| [IPStatQuery](Ip-address.md#ipstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [allocate](Ip-address.md#allocate)| [AllocateIPRequest](Ip-address.md#allocateiprequest) | [IPInfo](Ip-address.md#ipinfo) |  |
+| 2 | [reserve](Ip-address.md#reserve)| [ReserveIPRequest](Ip-address.md#reserveiprequest) | [IPInfo](Ip-address.md#ipinfo) |  |
+| 3 | [release](Ip-address.md#release)| [IPRequest](Ip-address.md#iprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [update](Ip-address.md#update)| [UpdateIPRequest](Ip-address.md#updateiprequest) | [IPInfo](Ip-address.md#ipinfo) |  |
+| 5 | [pin_data](Ip-address.md#pin_data)| [PinIPDataRequest](Ip-address.md#pinipdatarequest) | [IPInfo](Ip-address.md#ipinfo) |  |
+| 6 | [get](Ip-address.md#get)| [GetIPRequest](Ip-address.md#getiprequest) | [IPInfo](Ip-address.md#ipinfo) |  |
+| 7 | [list](Ip-address.md#list)| [IPQuery](Ip-address.md#ipquery) | [IPsInfo](Ip-address.md#ipsinfo) |  |
+| 8 | [stat](Ip-address.md#stat)| [IPStatQuery](Ip-address.md#ipstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### allocate
 > **POST** /inventory/v1/ip-addresses/allocate

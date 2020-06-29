@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [issue](Token.md#issue)| [IssueTokenRequest](Token.md#issuetokenrequest)| [TokenInfo](Token.md#tokeninfo) |  |
-| 2 | [refresh](Token.md#refresh)| [Empty]| [TokenInfo](Token.md#tokeninfo) |  |
+| 1 | [issue](Token.md#issue)| [IssueTokenRequest](Token.md#issuetokenrequest) | [TokenInfo](Token.md#tokeninfo) |  |
+| 2 | [refresh](Token.md#refresh)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| [TokenInfo](Token.md#tokeninfo) |  |
 
 ### issue
 > **POST** /identity/v1/token/issue

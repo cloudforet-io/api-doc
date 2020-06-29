@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Schema.md#create)| [CreateSchemaRequest](Schema.md#createschemarequest)| [SchemaInfo](Schema.md#schemainfo) |  |
-| 2 | [update](Schema.md#update)| [UpdateSchemaRequest](Schema.md#updateschemarequest)| [SchemaInfo](Schema.md#schemainfo) |  |
-| 3 | [delete](Schema.md#delete)| [SchemaRequest](Schema.md#schemarequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Schema.md#get)| [GetRepositorySchemaRequest](Schema.md#getrepositoryschemarequest)| [SchemaInfo](Schema.md#schemainfo) |  |
-| 5 | [list](Schema.md#list)| [SchemaQuery](Schema.md#schemaquery)| [SchemasInfo](Schema.md#schemasinfo) |  |
-| 6 | [stat](Schema.md#stat)| [SchemaStatQuery](Schema.md#schemastatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Schema.md#create)| [CreateSchemaRequest](Schema.md#createschemarequest) | [SchemaInfo](Schema.md#schemainfo) |  |
+| 2 | [update](Schema.md#update)| [UpdateSchemaRequest](Schema.md#updateschemarequest) | [SchemaInfo](Schema.md#schemainfo) |  |
+| 3 | [delete](Schema.md#delete)| [SchemaRequest](Schema.md#schemarequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Schema.md#get)| [GetRepositorySchemaRequest](Schema.md#getrepositoryschemarequest) | [SchemaInfo](Schema.md#schemainfo) |  |
+| 5 | [list](Schema.md#list)| [SchemaQuery](Schema.md#schemaquery) | [SchemasInfo](Schema.md#schemasinfo) |  |
+| 6 | [stat](Schema.md#stat)| [SchemaStatQuery](Schema.md#schemastatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /repository/v1/schemas

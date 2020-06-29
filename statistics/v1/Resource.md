@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [stat](Resource.md#stat)| [ResourceStatRequest](Resource.md#resourcestatrequest)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [stat](Resource.md#stat)| [ResourceStatRequest](Resource.md#resourcestatrequest) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### stat
 > **POST** /statistics/v1/resources/stat

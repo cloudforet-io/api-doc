@@ -15,16 +15,16 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Zone.md#create)| [CreateZoneRequest](Zone.md#createzonerequest)| [ZoneInfo](Zone.md#zoneinfo) |  |
-| 2 | [update](Zone.md#update)| [UpdateZoneRequest](Zone.md#updatezonerequest)| [ZoneInfo](Zone.md#zoneinfo) |  |
-| 3 | [delete](Zone.md#delete)| [ZoneRequest](Zone.md#zonerequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Zone.md#get)| [GetZoneRequest](Zone.md#getzonerequest)| [ZoneInfo](Zone.md#zoneinfo) |  |
-| 5 | [add_member](Zone.md#add_member)| [ZoneMemberRequest](Zone.md#zonememberrequest)| [ZoneMemberInfo](Zone.md#zonememberinfo) |  |
-| 6 | [modify_member](Zone.md#modify_member)| [ZoneMemberRequest](Zone.md#zonememberrequest)| [ZoneMemberInfo](Zone.md#zonememberinfo) |  |
-| 7 | [remove_member](Zone.md#remove_member)| [RemoveZoneMemberRequest](Zone.md#removezonememberrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 8 | [list_members](Zone.md#list_members)| [ZoneMemberQuery](Zone.md#zonememberquery)| [ZoneMembersInfo](Zone.md#zonemembersinfo) |  |
-| 9 | [list](Zone.md#list)| [ZoneQuery](Zone.md#zonequery)| [ZonesInfo](Zone.md#zonesinfo) |  |
-| 10 | [stat](Zone.md#stat)| [ZoneStatQuery](Zone.md#zonestatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Zone.md#create)| [CreateZoneRequest](Zone.md#createzonerequest) | [ZoneInfo](Zone.md#zoneinfo) |  |
+| 2 | [update](Zone.md#update)| [UpdateZoneRequest](Zone.md#updatezonerequest) | [ZoneInfo](Zone.md#zoneinfo) |  |
+| 3 | [delete](Zone.md#delete)| [ZoneRequest](Zone.md#zonerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Zone.md#get)| [GetZoneRequest](Zone.md#getzonerequest) | [ZoneInfo](Zone.md#zoneinfo) |  |
+| 5 | [add_member](Zone.md#add_member)| [ZoneMemberRequest](Zone.md#zonememberrequest) | [ZoneMemberInfo](Zone.md#zonememberinfo) |  |
+| 6 | [modify_member](Zone.md#modify_member)| [ZoneMemberRequest](Zone.md#zonememberrequest) | [ZoneMemberInfo](Zone.md#zonememberinfo) |  |
+| 7 | [remove_member](Zone.md#remove_member)| [RemoveZoneMemberRequest](Zone.md#removezonememberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 8 | [list_members](Zone.md#list_members)| [ZoneMemberQuery](Zone.md#zonememberquery) | [ZoneMembersInfo](Zone.md#zonemembersinfo) |  |
+| 9 | [list](Zone.md#list)| [ZoneQuery](Zone.md#zonequery) | [ZonesInfo](Zone.md#zonesinfo) |  |
+| 10 | [stat](Zone.md#stat)| [ZoneStatQuery](Zone.md#zonestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/zones

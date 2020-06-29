@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [list](Log.md#list)| [LogRequest](Log.md#logrequest)| [LogDataInfo](Log.md#logdatainfo) |  |
+| 1 | [list](Log.md#list)| [LogRequest](Log.md#logrequest) | [LogDataInfo](Log.md#logdatainfo) |  |
 
 ### list
 > **GET** /monitoring/v1/data-source/{data_source_id}/logs

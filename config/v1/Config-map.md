@@ -1,5 +1,5 @@
 ---
-description:  
+description: Config Map API which configure environments for account
 ---
 # Config map
 
@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Config-map.md#create)| [CreateConfigMapRequest](Config-map.md#createconfigmaprequest)| [ConfigMapInfo](Config-map.md#configmapinfo) |  |
-| 2 | [update](Config-map.md#update)| [UpdateConfigMapRequest](Config-map.md#updateconfigmaprequest)| [ConfigMapInfo](Config-map.md#configmapinfo) |  |
-| 3 | [delete](Config-map.md#delete)| [ConfigMapRequest](Config-map.md#configmaprequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Config-map.md#get)| [GetConfigMapRequest](Config-map.md#getconfigmaprequest)| [ConfigMapInfo](Config-map.md#configmapinfo) |  |
-| 5 | [list](Config-map.md#list)| [ConfigMapQuery](Config-map.md#configmapquery)| [ConfigMapsInfo](Config-map.md#configmapsinfo) |  |
-| 6 | [stat](Config-map.md#stat)| [ConfigMapStatQuery](Config-map.md#configmapstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Config-map.md#create)| [CreateConfigMapRequest](Config-map.md#createconfigmaprequest) | [ConfigMapInfo](Config-map.md#configmapinfo) |  |
+| 2 | [update](Config-map.md#update)| [UpdateConfigMapRequest](Config-map.md#updateconfigmaprequest) | [ConfigMapInfo](Config-map.md#configmapinfo) |  |
+| 3 | [delete](Config-map.md#delete)| [ConfigMapRequest](Config-map.md#configmaprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Config-map.md#get)| [GetConfigMapRequest](Config-map.md#getconfigmaprequest) | [ConfigMapInfo](Config-map.md#configmapinfo) |  |
+| 5 | [list](Config-map.md#list)| [ConfigMapQuery](Config-map.md#configmapquery) | [ConfigMapsInfo](Config-map.md#configmapsinfo) |  |
+| 6 | [stat](Config-map.md#stat)| [ConfigMapStatQuery](Config-map.md#configmapstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /config/v1/config-maps

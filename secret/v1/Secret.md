@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Secret.md#create)| [CreateSecretRequest](Secret.md#createsecretrequest)| [SecretInfo](Secret.md#secretinfo) |  |
-| 2 | [update](Secret.md#update)| [UpdateSecretRequest](Secret.md#updatesecretrequest)| [SecretInfo](Secret.md#secretinfo) |  |
-| 3 | [delete](Secret.md#delete)| [SecretRequest](Secret.md#secretrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get_data](Secret.md#get_data)| [SecretRequest](Secret.md#secretrequest)| [SecretDataInfo](Secret.md#secretdatainfo) |  |
-| 5 | [get](Secret.md#get)| [GetSecretRequest](Secret.md#getsecretrequest)| [SecretInfo](Secret.md#secretinfo) |  |
-| 6 | [list](Secret.md#list)| [SecretQuery](Secret.md#secretquery)| [SecretsInfo](Secret.md#secretsinfo) |  |
-| 7 | [stat](Secret.md#stat)| [SecretStatQuery](Secret.md#secretstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Secret.md#create)| [CreateSecretRequest](Secret.md#createsecretrequest) | [SecretInfo](Secret.md#secretinfo) |  |
+| 2 | [update](Secret.md#update)| [UpdateSecretRequest](Secret.md#updatesecretrequest) | [SecretInfo](Secret.md#secretinfo) |  |
+| 3 | [delete](Secret.md#delete)| [SecretRequest](Secret.md#secretrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get_data](Secret.md#get_data)| [SecretRequest](Secret.md#secretrequest) | [SecretDataInfo](Secret.md#secretdatainfo) |  |
+| 5 | [get](Secret.md#get)| [GetSecretRequest](Secret.md#getsecretrequest) | [SecretInfo](Secret.md#secretinfo) |  |
+| 6 | [list](Secret.md#list)| [SecretQuery](Secret.md#secretquery) | [SecretsInfo](Secret.md#secretsinfo) |  |
+| 7 | [stat](Secret.md#stat)| [SecretStatQuery](Secret.md#secretstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /secret/v1/secrets

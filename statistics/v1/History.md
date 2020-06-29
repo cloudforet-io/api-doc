@@ -15,10 +15,10 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](History.md#create)| [CreateHistoryRequest](History.md#createhistoryrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 2 | [list](History.md#list)| [QueryHistoryRequest](History.md#queryhistoryrequest)| [HistoryInfo](History.md#historyinfo) |  |
-| 3 | [stat](History.md#stat)| [HistoryStatRequest](History.md#historystatrequest)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 4 | [diff](History.md#diff)| [DiffHistoryRequest](History.md#diffhistoryrequest)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](History.md#create)| [CreateHistoryRequest](History.md#createhistoryrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 2 | [list](History.md#list)| [QueryHistoryRequest](History.md#queryhistoryrequest) | [HistoryInfo](History.md#historyinfo) |  |
+| 3 | [stat](History.md#stat)| [HistoryStatRequest](History.md#historystatrequest) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 4 | [diff](History.md#diff)| [DiffHistoryRequest](History.md#diffhistoryrequest) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /statistics/v1/history

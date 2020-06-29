@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Subnet.md#create)| [CreateSubnetRequest](Subnet.md#createsubnetrequest)| [SubnetInfo](Subnet.md#subnetinfo) |  |
-| 2 | [update](Subnet.md#update)| [UpdateSubnetRequest](Subnet.md#updatesubnetrequest)| [SubnetInfo](Subnet.md#subnetinfo) |  |
-| 3 | [pin_data](Subnet.md#pin_data)| [PinSubnetDataRequest](Subnet.md#pinsubnetdatarequest)| [SubnetInfo](Subnet.md#subnetinfo) |  |
-| 4 | [delete](Subnet.md#delete)| [SubnetRequest](Subnet.md#subnetrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](Subnet.md#get)| [GetSubnetRequest](Subnet.md#getsubnetrequest)| [SubnetInfo](Subnet.md#subnetinfo) |  |
-| 6 | [list](Subnet.md#list)| [SubnetQuery](Subnet.md#subnetquery)| [SubnetsInfo](Subnet.md#subnetsinfo) |  |
-| 7 | [stat](Subnet.md#stat)| [SubnetStatQuery](Subnet.md#subnetstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Subnet.md#create)| [CreateSubnetRequest](Subnet.md#createsubnetrequest) | [SubnetInfo](Subnet.md#subnetinfo) |  |
+| 2 | [update](Subnet.md#update)| [UpdateSubnetRequest](Subnet.md#updatesubnetrequest) | [SubnetInfo](Subnet.md#subnetinfo) |  |
+| 3 | [pin_data](Subnet.md#pin_data)| [PinSubnetDataRequest](Subnet.md#pinsubnetdatarequest) | [SubnetInfo](Subnet.md#subnetinfo) |  |
+| 4 | [delete](Subnet.md#delete)| [SubnetRequest](Subnet.md#subnetrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [get](Subnet.md#get)| [GetSubnetRequest](Subnet.md#getsubnetrequest) | [SubnetInfo](Subnet.md#subnetinfo) |  |
+| 6 | [list](Subnet.md#list)| [SubnetQuery](Subnet.md#subnetquery) | [SubnetsInfo](Subnet.md#subnetsinfo) |  |
+| 7 | [stat](Subnet.md#stat)| [SubnetStatQuery](Subnet.md#subnetstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/subnets

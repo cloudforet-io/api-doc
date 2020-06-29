@@ -15,17 +15,17 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](User.md#create)| [CreateUserRequest](User.md#createuserrequest)| [UserInfo](User.md#userinfo) |  |
-| 2 | [update](User.md#update)| [UpdateUserRequest](User.md#updateuserrequest)| [UserInfo](User.md#userinfo) |  |
-| 3 | [enable](User.md#enable)| [UserRequest](User.md#userrequest)| [UserInfo](User.md#userinfo) |  |
-| 4 | [disable](User.md#disable)| [UserRequest](User.md#userrequest)| [UserInfo](User.md#userinfo) |  |
-| 5 | [update_role](User.md#update_role)| [UpdateUserRoleRequest](User.md#updateuserrolerequest)| [UserInfo](User.md#userinfo) |  |
-| 6 | [delete](User.md#delete)| [UserRequest](User.md#userrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [get](User.md#get)| [GetUserRequest](User.md#getuserrequest)| [UserInfo](User.md#userinfo) |  |
-| 8 | [list](User.md#list)| [UserQuery](User.md#userquery)| [UsersInfo](User.md#usersinfo) |  |
-| 9 | [stat](User.md#stat)| [UserStatQuery](User.md#userstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 10 | [find](User.md#find)| [FindUserQuery](User.md#finduserquery)| [FindUsersInfo](User.md#findusersinfo) |  |
-| 11 | [sync](User.md#sync)| [UserRequest](User.md#userrequest)| [UserInfo](User.md#userinfo) |  |
+| 1 | [create](User.md#create)| [CreateUserRequest](User.md#createuserrequest) | [UserInfo](User.md#userinfo) |  |
+| 2 | [update](User.md#update)| [UpdateUserRequest](User.md#updateuserrequest) | [UserInfo](User.md#userinfo) |  |
+| 3 | [enable](User.md#enable)| [UserRequest](User.md#userrequest) | [UserInfo](User.md#userinfo) |  |
+| 4 | [disable](User.md#disable)| [UserRequest](User.md#userrequest) | [UserInfo](User.md#userinfo) |  |
+| 5 | [update_role](User.md#update_role)| [UpdateUserRoleRequest](User.md#updateuserrolerequest) | [UserInfo](User.md#userinfo) |  |
+| 6 | [delete](User.md#delete)| [UserRequest](User.md#userrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [get](User.md#get)| [GetUserRequest](User.md#getuserrequest) | [UserInfo](User.md#userinfo) |  |
+| 8 | [list](User.md#list)| [UserQuery](User.md#userquery) | [UsersInfo](User.md#usersinfo) |  |
+| 9 | [stat](User.md#stat)| [UserStatQuery](User.md#userstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 10 | [find](User.md#find)| [FindUserQuery](User.md#finduserquery) | [FindUsersInfo](User.md#findusersinfo) |  |
+| 11 | [sync](User.md#sync)| [UserRequest](User.md#userrequest) | [UserInfo](User.md#userinfo) |  |
 
 ### create
 > **POST** /identity/v1/users
@@ -44,6 +44,7 @@ description:
 > **PUT** /identity/v1/users
 >
 
+> Update user info by given user_id
 
 
 | Type | Message |
@@ -51,6 +52,50 @@ description:
 | Request | [UpdateUserRequest](User.md#updateuserrequest) |
 | Response |  [UserInfo](User.md#userinfo)  |
 
+
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "user_id": "dkang@mz.co.kr",
+    "tags": {
+        "user1": "Reuters",
+        "user2": "Bloomberg"
+    },
+    "domain_id": "{{DOMAIN_ID}}"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "roles": [],
+    "user_id": "dkang@mz.co.kr",
+    "name": "Dong Yoo kang",
+    "state": "ENABLED",
+    "email": "dkang@mz.co.kr",
+    "mobile": "",
+    "group": "",
+    "language": "en",
+    "timezone": "UTC",
+    "tags": {
+        "user1": "Reuters",
+        "user2": "Bloomberg"
+    },
+    "last_accessed_at": {
+        "seconds": "1593161630",
+        "nanos": 79000000
+    },
+    "created_at": {
+        "seconds": "1593161630",
+        "nanos": 79000000
+    },
+    "domain_id": "domain-fd6e23a5ae36"
+}
+```
+{% endtab %}
+{% endtabs %}
 
 
 ### enable

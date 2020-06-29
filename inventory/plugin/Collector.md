@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [verify](Collector.md#verify)| [VerifyRequest](Collector.md#verifyrequest)| [CollectorVerifyInfo](Collector.md#collectorverifyinfo) |  |
-| 2 | [collect](Collector.md#collect)| [CollectRequest](Collector.md#collectrequest)| [ResourceInfo](Collector.md#resourceinfo) |  |
+| 1 | [verify](Collector.md#verify)| [VerifyRequest](Collector.md#verifyrequest) | [CollectorVerifyInfo](Collector.md#collectorverifyinfo) |  |
+| 2 | [collect](Collector.md#collect)| [CollectRequest](Collector.md#collectrequest) | [ResourceInfo](Collector.md#resourceinfo) |  |
 
 ### verify
 

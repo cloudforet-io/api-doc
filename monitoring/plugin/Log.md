@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [list](Log.md#list)| [LogRequest](Log.md#logrequest)| [PluginLogsResponse](Log.md#pluginlogsresponse) |  |
+| 1 | [list](Log.md#list)| [LogRequest](Log.md#logrequest) | [PluginLogsResponse](Log.md#pluginlogsresponse) |  |
 
 ### list
 

@@ -15,17 +15,17 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Project-group.md#create)| [CreateProjectGroupRequest](Project-group.md#createprojectgrouprequest)| [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
-| 2 | [update](Project-group.md#update)| [UpdateProjectGroupRequest](Project-group.md#updateprojectgrouprequest)| [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
-| 3 | [delete](Project-group.md#delete)| [ProjectGroupRequest](Project-group.md#projectgrouprequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [add_member](Project-group.md#add_member)| [ProjectGroupMemberRequest](Project-group.md#projectgroupmemberrequest)| [ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo) |  |
-| 5 | [modify_member](Project-group.md#modify_member)| [ProjectGroupMemberRequest](Project-group.md#projectgroupmemberrequest)| [ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo) |  |
-| 6 | [remove_member](Project-group.md#remove_member)| [RemoveProjectGroupMemberRequest](Project-group.md#removeprojectgroupmemberrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [get](Project-group.md#get)| [GetProjectGroupRequest](Project-group.md#getprojectgrouprequest)| [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
-| 8 | [list](Project-group.md#list)| [ProjectGroupQuery](Project-group.md#projectgroupquery)| [ProjectGroupsInfo](Project-group.md#projectgroupsinfo) |  |
-| 9 | [stat](Project-group.md#stat)| [ProjectGroupStatQuery](Project-group.md#projectgroupstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 10 | [list_members](Project-group.md#list_members)| [ProjectGroupMemberQuery](Project-group.md#projectgroupmemberquery)| [ProjectGroupMembersInfo](Project-group.md#projectgroupmembersinfo) |  |
-| 11 | [list_projects](Project-group.md#list_projects)| [ProjectGroupProjectQuery](Project-group.md#projectgroupprojectquery)| [ProjectGroupProjectsInfo](Project-group.md#projectgroupprojectsinfo) |  |
+| 1 | [create](Project-group.md#create)| [CreateProjectGroupRequest](Project-group.md#createprojectgrouprequest) | [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
+| 2 | [update](Project-group.md#update)| [UpdateProjectGroupRequest](Project-group.md#updateprojectgrouprequest) | [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
+| 3 | [delete](Project-group.md#delete)| [ProjectGroupRequest](Project-group.md#projectgrouprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [add_member](Project-group.md#add_member)| [ProjectGroupMemberRequest](Project-group.md#projectgroupmemberrequest) | [ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo) |  |
+| 5 | [modify_member](Project-group.md#modify_member)| [ProjectGroupMemberRequest](Project-group.md#projectgroupmemberrequest) | [ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo) |  |
+| 6 | [remove_member](Project-group.md#remove_member)| [RemoveProjectGroupMemberRequest](Project-group.md#removeprojectgroupmemberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [get](Project-group.md#get)| [GetProjectGroupRequest](Project-group.md#getprojectgrouprequest) | [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
+| 8 | [list](Project-group.md#list)| [ProjectGroupQuery](Project-group.md#projectgroupquery) | [ProjectGroupsInfo](Project-group.md#projectgroupsinfo) |  |
+| 9 | [stat](Project-group.md#stat)| [ProjectGroupStatQuery](Project-group.md#projectgroupstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 10 | [list_members](Project-group.md#list_members)| [ProjectGroupMemberQuery](Project-group.md#projectgroupmemberquery) | [ProjectGroupMembersInfo](Project-group.md#projectgroupmembersinfo) |  |
+| 11 | [list_projects](Project-group.md#list_projects)| [ProjectGroupProjectQuery](Project-group.md#projectgroupprojectquery) | [ProjectGroupProjectsInfo](Project-group.md#projectgroupprojectsinfo) |  |
 
 ### create
 > **POST** /identity/v1/project-groups

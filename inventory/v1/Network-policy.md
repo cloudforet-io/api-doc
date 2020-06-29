@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Network-policy.md#create)| [CreateNetworkPolicyRequest](Network-policy.md#createnetworkpolicyrequest)| [NetworkPolicyInfo](Network-policy.md#networkpolicyinfo) |  |
-| 2 | [update](Network-policy.md#update)| [UpdateNetworkPolicyRequest](Network-policy.md#updatenetworkpolicyrequest)| [NetworkPolicyInfo](Network-policy.md#networkpolicyinfo) |  |
-| 3 | [pin_data](Network-policy.md#pin_data)| [PinNetworkPolicyDataRequest](Network-policy.md#pinnetworkpolicydatarequest)| [NetworkPolicyInfo](Network-policy.md#networkpolicyinfo) |  |
-| 4 | [delete](Network-policy.md#delete)| [NetworkPolicyRequest](Network-policy.md#networkpolicyrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](Network-policy.md#get)| [GetNetworkPolicyRequest](Network-policy.md#getnetworkpolicyrequest)| [NetworkPolicyInfo](Network-policy.md#networkpolicyinfo) |  |
-| 6 | [list](Network-policy.md#list)| [NetworkPolicyQuery](Network-policy.md#networkpolicyquery)| [NetworkPoliciesInfo](Network-policy.md#networkpoliciesinfo) |  |
-| 7 | [stat](Network-policy.md#stat)| [NetworkPolicyStatQuery](Network-policy.md#networkpolicystatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Network-policy.md#create)| [CreateNetworkPolicyRequest](Network-policy.md#createnetworkpolicyrequest) | [NetworkPolicyInfo](Network-policy.md#networkpolicyinfo) |  |
+| 2 | [update](Network-policy.md#update)| [UpdateNetworkPolicyRequest](Network-policy.md#updatenetworkpolicyrequest) | [NetworkPolicyInfo](Network-policy.md#networkpolicyinfo) |  |
+| 3 | [pin_data](Network-policy.md#pin_data)| [PinNetworkPolicyDataRequest](Network-policy.md#pinnetworkpolicydatarequest) | [NetworkPolicyInfo](Network-policy.md#networkpolicyinfo) |  |
+| 4 | [delete](Network-policy.md#delete)| [NetworkPolicyRequest](Network-policy.md#networkpolicyrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [get](Network-policy.md#get)| [GetNetworkPolicyRequest](Network-policy.md#getnetworkpolicyrequest) | [NetworkPolicyInfo](Network-policy.md#networkpolicyinfo) |  |
+| 6 | [list](Network-policy.md#list)| [NetworkPolicyQuery](Network-policy.md#networkpolicyquery) | [NetworkPoliciesInfo](Network-policy.md#networkpoliciesinfo) |  |
+| 7 | [stat](Network-policy.md#stat)| [NetworkPolicyStatQuery](Network-policy.md#networkpolicystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/network-policies

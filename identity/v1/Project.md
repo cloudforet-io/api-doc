@@ -15,16 +15,16 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Project.md#create)| [CreateProjectRequest](Project.md#createprojectrequest)| [ProjectInfo](Project.md#projectinfo) |  |
-| 2 | [update](Project.md#update)| [UpdateProjectRequest](Project.md#updateprojectrequest)| [ProjectInfo](Project.md#projectinfo) |  |
-| 3 | [delete](Project.md#delete)| [ProjectRequest](Project.md#projectrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [add_member](Project.md#add_member)| [ProjectMemberRequest](Project.md#projectmemberrequest)| [ProjectMemberInfo](Project.md#projectmemberinfo) |  |
-| 5 | [modify_member](Project.md#modify_member)| [ProjectMemberRequest](Project.md#projectmemberrequest)| [ProjectMemberInfo](Project.md#projectmemberinfo) |  |
-| 6 | [remove_member](Project.md#remove_member)| [RemoveProjectMemberRequest](Project.md#removeprojectmemberrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [get](Project.md#get)| [GetProjectRequest](Project.md#getprojectrequest)| [ProjectInfo](Project.md#projectinfo) |  |
-| 8 | [list](Project.md#list)| [ProjectQuery](Project.md#projectquery)| [ProjectsInfo](Project.md#projectsinfo) |  |
-| 9 | [stat](Project.md#stat)| [ProjectStatQuery](Project.md#projectstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 10 | [list_members](Project.md#list_members)| [ProjectMemberQuery](Project.md#projectmemberquery)| [ProjectMembersInfo](Project.md#projectmembersinfo) |  |
+| 1 | [create](Project.md#create)| [CreateProjectRequest](Project.md#createprojectrequest) | [ProjectInfo](Project.md#projectinfo) |  |
+| 2 | [update](Project.md#update)| [UpdateProjectRequest](Project.md#updateprojectrequest) | [ProjectInfo](Project.md#projectinfo) |  |
+| 3 | [delete](Project.md#delete)| [ProjectRequest](Project.md#projectrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [add_member](Project.md#add_member)| [ProjectMemberRequest](Project.md#projectmemberrequest) | [ProjectMemberInfo](Project.md#projectmemberinfo) |  |
+| 5 | [modify_member](Project.md#modify_member)| [ProjectMemberRequest](Project.md#projectmemberrequest) | [ProjectMemberInfo](Project.md#projectmemberinfo) |  |
+| 6 | [remove_member](Project.md#remove_member)| [RemoveProjectMemberRequest](Project.md#removeprojectmemberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [get](Project.md#get)| [GetProjectRequest](Project.md#getprojectrequest) | [ProjectInfo](Project.md#projectinfo) |  |
+| 8 | [list](Project.md#list)| [ProjectQuery](Project.md#projectquery) | [ProjectsInfo](Project.md#projectsinfo) |  |
+| 9 | [stat](Project.md#stat)| [ProjectStatQuery](Project.md#projectstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 10 | [list_members](Project.md#list_members)| [ProjectMemberQuery](Project.md#projectmemberquery) | [ProjectMembersInfo](Project.md#projectmembersinfo) |  |
 
 ### create
 > **POST** /identity/v1/projects

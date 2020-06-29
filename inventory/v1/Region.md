@@ -15,16 +15,16 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Region.md#create)| [CreateRegionRequest](Region.md#createregionrequest)| [RegionInfo](Region.md#regioninfo) |  |
-| 2 | [update](Region.md#update)| [UpdateRegionRequest](Region.md#updateregionrequest)| [RegionInfo](Region.md#regioninfo) |  |
-| 3 | [delete](Region.md#delete)| [RegionRequest](Region.md#regionrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Region.md#get)| [GetRegionRequest](Region.md#getregionrequest)| [RegionInfo](Region.md#regioninfo) |  |
-| 5 | [add_member](Region.md#add_member)| [RegionMemberRequest](Region.md#regionmemberrequest)| [RegionMemberInfo](Region.md#regionmemberinfo) |  |
-| 6 | [modify_member](Region.md#modify_member)| [RegionMemberRequest](Region.md#regionmemberrequest)| [RegionMemberInfo](Region.md#regionmemberinfo) |  |
-| 7 | [remove_member](Region.md#remove_member)| [RemoveRegionMemberRequest](Region.md#removeregionmemberrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 8 | [list_members](Region.md#list_members)| [RegionMemberQuery](Region.md#regionmemberquery)| [RegionMembersInfo](Region.md#regionmembersinfo) |  |
-| 9 | [list](Region.md#list)| [RegionQuery](Region.md#regionquery)| [RegionsInfo](Region.md#regionsinfo) |  |
-| 10 | [stat](Region.md#stat)| [RegionStatQuery](Region.md#regionstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Region.md#create)| [CreateRegionRequest](Region.md#createregionrequest) | [RegionInfo](Region.md#regioninfo) |  |
+| 2 | [update](Region.md#update)| [UpdateRegionRequest](Region.md#updateregionrequest) | [RegionInfo](Region.md#regioninfo) |  |
+| 3 | [delete](Region.md#delete)| [RegionRequest](Region.md#regionrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Region.md#get)| [GetRegionRequest](Region.md#getregionrequest) | [RegionInfo](Region.md#regioninfo) |  |
+| 5 | [add_member](Region.md#add_member)| [RegionMemberRequest](Region.md#regionmemberrequest) | [RegionMemberInfo](Region.md#regionmemberinfo) |  |
+| 6 | [modify_member](Region.md#modify_member)| [RegionMemberRequest](Region.md#regionmemberrequest) | [RegionMemberInfo](Region.md#regionmemberinfo) |  |
+| 7 | [remove_member](Region.md#remove_member)| [RemoveRegionMemberRequest](Region.md#removeregionmemberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 8 | [list_members](Region.md#list_members)| [RegionMemberQuery](Region.md#regionmemberquery) | [RegionMembersInfo](Region.md#regionmembersinfo) |  |
+| 9 | [list](Region.md#list)| [RegionQuery](Region.md#regionquery) | [RegionsInfo](Region.md#regionsinfo) |  |
+| 10 | [stat](Region.md#stat)| [RegionStatQuery](Region.md#regionstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/regions

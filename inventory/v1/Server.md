@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Server.md#create)| [CreateServerRequest](Server.md#createserverrequest)| [ServerInfo](Server.md#serverinfo) |  |
-| 2 | [update](Server.md#update)| [UpdateServerRequest](Server.md#updateserverrequest)| [ServerInfo](Server.md#serverinfo) |  |
-| 3 | [pin_data](Server.md#pin_data)| [PinServerDataRequest](Server.md#pinserverdatarequest)| [ServerInfo](Server.md#serverinfo) |  |
-| 4 | [delete](Server.md#delete)| [ServerRequest](Server.md#serverrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](Server.md#get)| [GetServerRequest](Server.md#getserverrequest)| [ServerInfo](Server.md#serverinfo) |  |
-| 6 | [list](Server.md#list)| [ServerQuery](Server.md#serverquery)| [ServersInfo](Server.md#serversinfo) |  |
-| 7 | [stat](Server.md#stat)| [ServerStatQuery](Server.md#serverstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Server.md#create)| [CreateServerRequest](Server.md#createserverrequest) | [ServerInfo](Server.md#serverinfo) |  |
+| 2 | [update](Server.md#update)| [UpdateServerRequest](Server.md#updateserverrequest) | [ServerInfo](Server.md#serverinfo) |  |
+| 3 | [pin_data](Server.md#pin_data)| [PinServerDataRequest](Server.md#pinserverdatarequest) | [ServerInfo](Server.md#serverinfo) |  |
+| 4 | [delete](Server.md#delete)| [ServerRequest](Server.md#serverrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [get](Server.md#get)| [GetServerRequest](Server.md#getserverrequest) | [ServerInfo](Server.md#serverinfo) |  |
+| 6 | [list](Server.md#list)| [ServerQuery](Server.md#serverquery) | [ServersInfo](Server.md#serversinfo) |  |
+| 7 | [stat](Server.md#stat)| [ServerStatQuery](Server.md#serverstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/servers
