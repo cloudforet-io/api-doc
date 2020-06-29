@@ -23,7 +23,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+| Request | [Empty] |
 | Response |  [VersionInfo](Server-info.md#versioninfo)  |
 
 

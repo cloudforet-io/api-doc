@@ -114,12 +114,14 @@ description:
 | 3 | endpoint |string |❌ ||
 | 4 | version |string |❌ ||
 | 5 | secret_id |string |❌ ||
+| 6 | domain_id |string |❌ ||
 
 ### GetRepositoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | repository_id |string |✅ ||
 | 2 | only |string |❌ ||
+| 3 | domain_id |string |❌ ||
 
 ### RepositoriesInfo
 | No | Field | Type | Required | Description |
@@ -145,11 +147,13 @@ description:
 | 2 | repository_id |string |❌ ||
 | 3 | name |string |❌ ||
 | 4 | repository_type |string |❌ ||
+| 5 | domain_id |string |❌ ||
 
 ### RepositoryRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | repository_id |string |✅ ||
+| 2 | domain_id |string |❌ ||
 
 ### RepositoryStatQuery
 | No | Field | Type | Required | Description |
@@ -162,3 +166,4 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | repository_id |string |✅ ||
 | 2 | name |string |✅ ||
+| 3 | domain_id |string |❌ ||
