@@ -127,16 +127,18 @@ description:
 | 2 | cloud_service_type |string | ||
 | 3 | provider |string | ||
 | 4 | cloud_service_group |string | ||
-| 5 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 6 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 7 | reference |[CloudServiceReference](Cloud-service.md#cloudservicereference) | ||
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 9 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 10 | region_info |[RegionInfo](Cloud-service.md#regioninfo) | ||
-| 11 | project_id |string | ||
-| 12 | domain_id |string | ||
-| 13 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
-| 14 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
+| 5 | state |string | ||
+| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 8 | reference |[CloudServiceReference](Cloud-service.md#cloudservicereference) | ||
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 10 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 11 | region_info |[RegionInfo](Cloud-service.md#regioninfo) | ||
+| 12 | project_id |string | ||
+| 13 | domain_id |string | ||
+| 14 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
+| 15 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
+| 16 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
 
 ### CloudServiceQuery
 | No | Field | Type | Required | Description |
