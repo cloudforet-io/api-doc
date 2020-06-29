@@ -144,10 +144,17 @@ def field_long_type_wrapper(message, field, long_dict):
 def is_exists_in_same_file(reference_context, method, fname):
     req = method['requestType']
     res = method['responseType']
-    if (req in reference_context):
+    req_status = req in reference_context
+    res_status = res in reference_context
+    if (req_status):
         method['req_link'] = fname['full_name']+'#'+method['requestLongType'].lower()
-    if (res in reference_context):
+    if (res_status):
         method['res_link'] = fname['full_name']+'#'+method['responseLongType'].lower()
+
+    return {
+        'req_status': req_status,
+        'res_status': res_status,
+    }
 
 # Get Enum values into dick forms
 def get_enums_dict(enums):
@@ -182,7 +189,7 @@ def create_modified_json(reference_files):
 
                 for service in services:
                      for method in service['methods']:
-                         is_exists_in_same_file(message_names, method, fname)
+                         method_status = is_exists_in_same_file(message_names, method, fname)
 
                          svc_desc = _modify_yaml_to_json(method['description'])
                          method['description'] = svc_desc
@@ -192,7 +199,10 @@ def create_modified_json(reference_files):
                             rest_apis = google_api['google.api.http']['rules']
                             method['restAPI'] = rest_apis
 
-                         if method['responseFullType'] in [*refer_link]:
+                         if (method['requestFullType'] in [*refer_link] and not method_status['req_status']):
+                             method['requestFullType_link'] = refer_link[method['requestFullType']]
+
+                         if (method['responseFullType'] in [*refer_link] and not method_status['res_status']):
                              method['responseFullType_link'] = refer_link[method['responseFullType']]
 
                 for message in messages:
