@@ -545,24 +545,6 @@ string
     </tr>
     <tr>
       <td style="text-align:left">16</td>
-      <td style="text-align:left">pool_info</td>
-      <td style="text-align:left">
-<a href="Server.md#poolinfo">PoolInfo</a>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">17</td>
-      <td style="text-align:left">zone_info</td>
-      <td style="text-align:left">
-<a href="Server.md#zoneinfo">ZoneInfo</a>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">18</td>
       <td style="text-align:left">region_info</td>
       <td style="text-align:left">
 <a href="Server.md#regioninfo">RegionInfo</a>
@@ -571,7 +553,7 @@ string
 <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">19</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">
 
@@ -582,7 +564,7 @@ string
 <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">20</td>
+      <td style="text-align:left">18</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">
 
@@ -593,7 +575,7 @@ string
 <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">21</td>
+      <td style="text-align:left">19</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">
 <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
@@ -602,7 +584,7 @@ string
 <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">22</td>
+      <td style="text-align:left">20</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left">
 <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
@@ -611,7 +593,7 @@ string
 <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left">23</td>
+      <td style="text-align:left">21</td>
       <td style="text-align:left">deleted_at</td>
       <td style="text-align:left">
 <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>

@@ -18,6 +18,8 @@ description:
 | 1 | [verify](Authorization.md#verify)|.spaceone.api.core.v1.AuthorizationRequest|.spaceone.api.core.v1.AuthorizationResponse|  |
 
 ### verify
+> **POST** /identity/v1/authorization/verify
+>
 
 
 
