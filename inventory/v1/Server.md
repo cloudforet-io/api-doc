@@ -208,14 +208,14 @@ description:
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+      <td style="text-align:left"><a href="Server.md#servernic">ServerNIC</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+      <td style="text-align:left"><a href="Server.md#serverdisk">ServerDisk</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -271,6 +271,15 @@ description:
 | 1 | server_id |string|✅||
 | 2 | keys |string|✅||
 | 3 | domain_id |string|✅||
+
+### ServerDisk
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅||
+| 2 | device |string|❌||
+| 3 | disk_type |string|❌||
+| 4 | size |float|❌||
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 
 ### ServerInfo
 <table>
@@ -374,14 +383,14 @@ description:
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+      <td style="text-align:left"><a href="Server.md#servernic">ServerNIC</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+      <td style="text-align:left"><a href="Server.md#serverdisk">ServerDisk</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -451,6 +460,18 @@ description:
   </tbody>
 </table>
 
+
+### ServerNIC
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅||
+| 2 | device |string|❌||
+| 3 | nic_type |string|❌||
+| 4 | ip_addresses |string|✅||
+| 5 | cidr |string|❌||
+| 6 | mac_address |string|❌||
+| 7 | public_ip_address |string|❌||
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 
 ### ServerQuery
 <table>
@@ -681,14 +702,14 @@ description:
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+      <td style="text-align:left"><a href="Server.md#servernic">ServerNIC</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+      <td style="text-align:left"><a href="Server.md#serverdisk">ServerDisk</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
