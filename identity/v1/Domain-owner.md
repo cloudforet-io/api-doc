@@ -79,49 +79,49 @@ description:
 ### CreateDomainOwner
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | owner_id |string |✅ ||
-| 2 | password |string |✅ ||
-| 3 | name |string |❌ ||
-| 4 | email |string |❌ ||
-| 5 | mobile |string |❌ ||
-| 6 | language |string |❌ ||
-| 7 | timezone |string |❌ ||
-| 8 | domain_id |string |✅ ||
+| 1 | owner_id |string|✅||
+| 2 | password |string|✅||
+| 3 | name |string|❌||
+| 4 | email |string|❌||
+| 5 | mobile |string|❌||
+| 6 | language |string|❌||
+| 7 | timezone |string|❌||
+| 8 | domain_id |string|✅||
 
 ### DomainOwnerInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | owner_id |string | ||
-| 2 | name |string | ||
-| 3 | email |string | ||
-| 4 | mobile |string | ||
-| 5 | language |string | ||
-| 6 | timezone |string | ||
-| 7 | last_accessed_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
-| 9 | domain_id |string | ||
+| 1 | owner_id |string|||
+| 2 | name |string|||
+| 3 | email |string|||
+| 4 | mobile |string|||
+| 5 | language |string|||
+| 6 | timezone |string|||
+| 7 | last_accessed_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
+| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
+| 9 | domain_id |string|||
 
 ### DomainOwnerRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string |✅ ||
-| 2 | owner_id |string |✅ ||
+| 1 | domain_id |string|✅||
+| 2 | owner_id |string|✅||
 
 ### GetDomainOwnerRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | |required|
-| 2 | owner_id |string | |required|
-| 3 | only |string | |optional|
+| 1 | domain_id |string||required|
+| 2 | owner_id |string||required|
+| 3 | only |string||optional|
 
 ### UpdateDomainOwner
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | owner_id |string |✅ ||
-| 2 | password |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | email |string |❌ ||
-| 5 | mobile |string |❌ ||
-| 6 | language |string |❌ ||
-| 7 | timezone |string |❌ ||
-| 8 | domain_id |string |✅ ||
+| 1 | owner_id |string|✅||
+| 2 | password |string|❌||
+| 3 | name |string|❌||
+| 4 | email |string|❌||
+| 5 | mobile |string|❌||
+| 6 | language |string|❌||
+| 7 | timezone |string|❌||
+| 8 | domain_id |string|✅||

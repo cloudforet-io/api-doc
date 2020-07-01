@@ -35,4 +35,4 @@ description:
 ### VersionInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | version |string | ||
+| 1 | version |string|||

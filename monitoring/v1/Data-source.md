@@ -163,111 +163,81 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">data_source_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">
-<p>DataSourceInfo.State</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">monitoring_type</td>
-      <td style="text-align:left">
-<p>MonitoringType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>METRIC</li>
           	<li>LOG</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">provider</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">capability</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">plugin_info</td>
-      <td style="text-align:left">
-<a href="Data-source.md#plugininfo">PluginInfo</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="Data-source.md#plugininfo">PluginInfo</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -287,88 +257,56 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
-      <td style="text-align:left">
-<a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">data_source_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">monitoring_type</td>
-      <td style="text-align:left">
-<p>MonitoringType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>METRIC</li>
           	<li>LOG</li>
-        </ul>
-</td><td style="text-align:left">❌</td>
+        </ul></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">provider</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
   </tbody>
 </table>
 
@@ -376,55 +314,55 @@ string
 ### DataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | data_source_id |string|✅||
+| 2 | domain_id |string|✅||
 
 ### DataSourceStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### DataSourcesInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[DataSourceInfo](Data-source.md#datasourceinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[DataSourceInfo](Data-source.md#datasourceinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### GetDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | data_source_id |string|✅||
+| 2 | domain_id |string|✅||
+| 3 | only |string|❌||
 
 ### PluginInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string | ||
-| 2 | version |string | ||
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 4 | secret_id |string | ||
-| 5 | provider |string | ||
+| 1 | plugin_id |string|||
+| 2 | version |string|||
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
+| 4 | secret_id |string|||
+| 5 | provider |string|||
 
 ### RegisterDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | plugin_info |[PluginInfo](Data-source.md#plugininfo) |✅ ||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | name |string|✅||
+| 2 | plugin_info |[PluginInfo](Data-source.md#plugininfo)|✅||
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 4 | domain_id |string|✅||
 
 ### UpdateDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | plugin_info |[PluginInfo](Data-source.md#plugininfo) |❌ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | data_source_id |string|✅||
+| 2 | name |string|❌||
+| 3 | plugin_info |[PluginInfo](Data-source.md#plugininfo)|❌||
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 5 | domain_id |string|✅||
 
 ### VerifyInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | status |bool | ||
+| 1 | status |bool|||

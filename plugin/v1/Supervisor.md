@@ -181,9 +181,9 @@ description:
 ### GetSupervisorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string | |required|
-| 2 | domain_id |string | |required|
-| 3 | only |string | |optional|
+| 1 | supervisor_id |string||required|
+| 2 | domain_id |string||required|
+| 3 | only |string||optional|
 
 ### PluginInfo
 <table>
@@ -200,96 +200,65 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">plugin_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">version</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">
-<p>PluginInfo.State</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>PROVISIONING</li>
           	<li>ACTIVE</li>
           	<li>RE_PROVISIONING</li>
           	<li>ERROR</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">endpoint</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">supervisor_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">supervisor_name</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">managed</td>
-      <td style="text-align:left">
-
-bool
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">endpoints</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -309,102 +278,65 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
-      <td style="text-align:left">
-<a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">supervisor_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">hostname</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">plugin_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">version</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">
-<p>PluginQuery.State</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>PROVISIONING</li>
           	<li>ACTIVE</li>
           	<li>RE_PROVISIONING</li>
           	<li>ERROR</li>
-        </ul>
-</td><td style="text-align:left">❌</td>
+        </ul></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">endpoint</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
   </tbody>
 </table>
 
@@ -412,38 +344,38 @@ string
 ### PluginsInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[PluginInfo](Supervisor.md#plugininfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[PluginInfo](Supervisor.md#plugininfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### PublishSupervisorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string | |required|
-| 2 | hostname |string | |required|
-| 3 | secret_key |string | |optional|
-| 4 | plugin_info |[PluginInfo](Supervisor.md#plugininfo) | |optional|
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 6 | is_public |bool | |optional|
-| 7 | domain_id |string | |required|
+| 1 | name |string||required|
+| 2 | hostname |string||required|
+| 3 | secret_key |string||optional|
+| 4 | plugin_info |[PluginInfo](Supervisor.md#plugininfo)||optional|
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||optional|
+| 6 | is_public |bool||optional|
+| 7 | domain_id |string||required|
 
 ### RecoverPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string | |required|
-| 2 | plugin_id |string | |required|
-| 3 | version |string | |required|
-| 4 | domain_id |string | |required|
+| 1 | supervisor_id |string||required|
+| 2 | plugin_id |string||required|
+| 3 | version |string||required|
+| 4 | domain_id |string||required|
 
 ### RegisterSupervisorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string | |required|
-| 2 | name |string | |required|
-| 3 | is_public |bool | |optional|
-| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |optional|
-| 5 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 7 | domain_id |string | |required|
+| 1 | supervisor_id |string||required|
+| 2 | name |string||required|
+| 3 | is_public |bool||optional|
+| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||optional|
+| 5 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||optional|
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||optional|
+| 7 | domain_id |string||required|
 
 ### SupervisorInfo
 <table>
@@ -460,110 +392,79 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">supervisor_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">hostname</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">
-<p>SupervisorInfo.State</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
           	<li>PENDING</li>
           	<li>DISCONNECTED</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">is_public</td>
-      <td style="text-align:left">
-
-bool
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">labels</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">updated_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -571,26 +472,26 @@ string
 ### SupervisorQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | supervisor_id |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | is_public |bool |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
+| 2 | supervisor_id |string|❌||
+| 3 | name |string|❌||
+| 4 | is_public |bool|❌||
+| 5 | domain_id |string|✅||
 
 ### SupervisorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string | |required|
-| 2 | domain_id |string | |required|
+| 1 | supervisor_id |string||required|
+| 2 | domain_id |string||required|
 
 ### SupervisorStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### SupervisorsInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[SupervisorInfo](Supervisor.md#supervisorinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[SupervisorInfo](Supervisor.md#supervisorinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||

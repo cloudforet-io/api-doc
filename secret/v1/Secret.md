@@ -135,97 +135,62 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">data</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">secret_type</td>
-      <td style="text-align:left">
-<p>SecretType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>CREDENTIALS</li>
-        </ul>
-</td><td style="text-align:left">✅</td>
+        </ul></td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">schema</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">service_account_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">project_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
   </tbody>
 </table>
 
@@ -233,14 +198,14 @@ string
 ### GetSecretRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | secret_id |string|✅||
+| 2 | domain_id |string|✅||
+| 3 | only |string|❌||
 
 ### SecretDataInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 1 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
 
 ### SecretInfo
 <table>
@@ -257,120 +222,83 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">secret_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">secret_type</td>
-      <td style="text-align:left">
-<p>SecretType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>CREDENTIALS</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">secret_groups</td>
-      <td style="text-align:left">
-<a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">schema</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">provider</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">service_account_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">project_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -390,123 +318,76 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
-      <td style="text-align:left">
-<a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">secret_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">secret_type</td>
-      <td style="text-align:left">
-<p>SecretType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>CREDENTIALS</li>
-        </ul>
-</td><td style="text-align:left">❌</td>
+        </ul></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">secret_group_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">schema</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">provider</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">service_account_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">include_secret_group</td>
-      <td style="text-align:left">
-
-bool
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
   </tbody>
 </table>
 
@@ -514,27 +395,27 @@ string
 ### SecretRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | secret_id |string|✅||
+| 2 | domain_id |string|✅||
 
 ### SecretStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### SecretsInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[SecretInfo](Secret.md#secretinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[SecretInfo](Secret.md#secretinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### UpdateSecretRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | project_id |string |✅ ||
-| 5 | domain_id |string |✅ ||
-| 6 | release_project |bool |❌ ||
+| 1 | secret_id |string|✅||
+| 2 | name |string|❌||
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 4 | project_id |string|✅||
+| 5 | domain_id |string|✅||
+| 6 | release_project |bool|❌||

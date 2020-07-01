@@ -183,131 +183,131 @@ description:
 ### CreateProjectGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | parent_project_group_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
-| 4 | template_id |string |❌ ||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 1 | name |string|✅||
+| 2 | parent_project_group_id |string|✅||
+| 3 | domain_id |string|✅||
+| 4 | template_id |string|❌||
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 
 ### GetProjectGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | project_group_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | project_group_id |string|✅||
+| 2 | domain_id |string|✅||
+| 3 | only |string|❌||
 
 ### ProjectGroupInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | project_group_id |string | ||
-| 2 | name |string | ||
-| 3 | parent_project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo) | |{'repeated Template fields = 3;                 // TODO': 'Not be implemented TEMPLATE yet', 'string template_id = 4;                       // TODO': 'Not be implemented TEMPLATE yet'}|
-| 4 | domain_id |string | ||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 6 | created_by |string | ||
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
-| 8 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
+| 1 | project_group_id |string|||
+| 2 | name |string|||
+| 3 | parent_project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo)||{'repeated Template fields = 3;                 // TODO': 'Not be implemented TEMPLATE yet', 'string template_id = 4;                       // TODO': 'Not be implemented TEMPLATE yet'}|
+| 4 | domain_id |string|||
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
+| 6 | created_by |string|||
+| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
+| 8 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
 
 ### ProjectGroupMemberInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo) | ||
-| 2 | user_info |[UserInfo](Project-group.md#userinfo) | ||
-| 3 | roles |[RoleInfo](Project-group.md#roleinfo) | ||
-| 4 | labels |string | ||
+| 1 | project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo)|||
+| 2 | user_info |[UserInfo](Project-group.md#userinfo)|||
+| 3 | roles |[RoleInfo](Project-group.md#roleinfo)|||
+| 4 | labels |string|||
 
 ### ProjectGroupMemberQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | project_group_id |string |✅ ||
-| 3 | user_id |string |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
+| 2 | project_group_id |string|✅||
+| 3 | user_id |string|❌||
+| 4 | domain_id |string|✅||
 
 ### ProjectGroupMemberRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | project_group_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
-| 4 | roles |string |✅ ||
-| 5 | labels |string |✅ ||
+| 1 | project_group_id |string|✅||
+| 2 | user_id |string|✅||
+| 3 | domain_id |string|✅||
+| 4 | roles |string|✅||
+| 5 | labels |string|✅||
 
 ### ProjectGroupMembersInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### ProjectGroupProjectInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | project_id |string | ||
-| 2 | name |string | ||
-| 3 | state |string | ||
-| 4 | project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo) | |{'google.protobuf.Struct template_data = 4; // TODO': 'Not be implemented template service yet'}|
-| 5 | domain_id |string | ||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 7 | created_by |string | ||
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
-| 9 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
+| 1 | project_id |string|||
+| 2 | name |string|||
+| 3 | state |string|||
+| 4 | project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo)||{'google.protobuf.Struct template_data = 4; // TODO': 'Not be implemented template service yet'}|
+| 5 | domain_id |string|||
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
+| 7 | created_by |string|||
+| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
+| 9 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
 
 ### ProjectGroupProjectQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | project_group_id |string |✅ ||
-| 3 | recursive |bool |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
+| 2 | project_group_id |string|✅||
+| 3 | recursive |bool|❌||
+| 4 | domain_id |string|✅||
 
 ### ProjectGroupProjectsInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupProjectInfo](Project-group.md#projectgroupprojectinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[ProjectGroupProjectInfo](Project-group.md#projectgroupprojectinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### ProjectGroupQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | project_group_id |string |❌ ||
-| 3 | parent_project_group_id |string |❌ ||
-| 4 | name |string |❌ ||
-| 5 | template_id |string |❌ ||
-| 6 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
+| 2 | project_group_id |string|❌||
+| 3 | parent_project_group_id |string|❌||
+| 4 | name |string|❌||
+| 5 | template_id |string|❌||
+| 6 | domain_id |string|✅||
 
 ### ProjectGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | project_group_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | project_group_id |string|✅||
+| 2 | domain_id |string|✅||
 
 ### ProjectGroupStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### ProjectGroupsInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupInfo](Project-group.md#projectgroupinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[ProjectGroupInfo](Project-group.md#projectgroupinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### RemoveProjectGroupMemberRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | project_group_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | project_group_id |string|✅||
+| 2 | user_id |string|✅||
+| 3 | domain_id |string|✅||
 
 ### UpdateProjectGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | project_group_id |string |✅ ||
-| 2 | parent_project_group_id |string |✅ ||
-| 3 | name |string |❌ ||
-| 4 | release_parent_project_group |bool |❌ ||
-| 5 | domain_id |string |✅ ||
-| 6 | template_id |string |❌ ||
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 1 | project_group_id |string|✅||
+| 2 | parent_project_group_id |string|✅||
+| 3 | name |string|❌||
+| 4 | release_parent_project_group |bool|❌||
+| 5 | domain_id |string|✅||
+| 6 | template_id |string|❌||
+| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||

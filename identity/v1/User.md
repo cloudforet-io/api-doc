@@ -224,72 +224,72 @@ description:
 ### CreateUserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string | |required|
-| 2 | password |string | |optional|
-| 3 | name |string | |optional|
-| 4 | email |string | |optional|
-| 5 | mobile |string | |optional|
-| 6 | group |string | |optional|
-| 7 | language |string | |optional|
-| 8 | timezone |string | |optional|
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
-| 10 | domain_id |string | |optional|
+| 1 | user_id |string||required|
+| 2 | password |string||optional|
+| 3 | name |string||optional|
+| 4 | email |string||optional|
+| 5 | mobile |string||optional|
+| 6 | group |string||optional|
+| 7 | language |string||optional|
+| 8 | timezone |string||optional|
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||optional|
+| 10 | domain_id |string||optional|
 
 ### FindUserInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string | ||
-| 2 | name |string | ||
-| 3 | email |string | ||
-| 4 | mobile |string | ||
-| 5 | group |string | ||
-| 6 | state |string | ||
+| 1 | user_id |string|||
+| 2 | name |string|||
+| 3 | email |string|||
+| 4 | mobile |string|||
+| 5 | group |string|||
+| 6 | state |string|||
 
 ### FindUserQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | search |[FindUserSearch](User.md#findusersearch) | ||
-| 2 | domain_id |string | ||
+| 1 | search |[FindUserSearch](User.md#findusersearch)|||
+| 2 | domain_id |string|||
 
 ### FindUserSearch
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string | ||
-| 2 | keyword |string | ||
+| 1 | user_id |string|||
+| 2 | keyword |string|||
 
 ### FindUsersInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[FindUserInfo](User.md#finduserinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[FindUserInfo](User.md#finduserinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### GetUserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | user_id |string|✅||
+| 2 | domain_id |string|✅||
+| 3 | only |string|❌||
 
 ### UpdateUserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string | ||
-| 2 | password |string | ||
-| 3 | name |string | ||
-| 4 | email |string | ||
-| 5 | mobile |string | ||
-| 6 | group |string | ||
-| 7 | language |string | ||
-| 8 | timezone |string | ||
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 10 | domain_id |string | ||
+| 1 | user_id |string|||
+| 2 | password |string|||
+| 3 | name |string|||
+| 4 | email |string|||
+| 5 | mobile |string|||
+| 6 | group |string|||
+| 7 | language |string|||
+| 8 | timezone |string|||
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
+| 10 | domain_id |string|||
 
 ### UpdateUserRoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string | ||
-| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | ||
-| 3 | domain_id |string | ||
+| 1 | user_id |string|||
+| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|||
+| 3 | domain_id |string|||
 
 ### UserInfo
 <table>
@@ -306,142 +306,99 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">user_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">
-<p>UserInfo.State</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
           	<li>UNIDENTIFIED</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">email</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">mobile</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">group</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">language</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">timezone</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">roles</td>
-      <td style="text-align:left">
-<a href="User.md#roleinfo">RoleInfo</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="User.md#roleinfo">RoleInfo</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">last_accessed_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">13</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -449,32 +406,32 @@ string
 ### UserQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | user_id |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | state |string |❌ ||
-| 5 | email |string |❌ ||
-| 6 | mobile |string |❌ ||
-| 7 | group |string |❌ ||
-| 8 | role_id |string |❌ ||
-| 9 | project_id |string |❌ ||
-| 10 | project_group_id |string |❌ ||
-| 11 | domain_id |string |❌ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
+| 2 | user_id |string|❌||
+| 3 | name |string|❌||
+| 4 | state |string|❌||
+| 5 | email |string|❌||
+| 6 | mobile |string|❌||
+| 7 | group |string|❌||
+| 8 | role_id |string|❌||
+| 9 | project_id |string|❌||
+| 10 | project_group_id |string|❌||
+| 11 | domain_id |string|❌||
 
 ### UserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | user_id |string|✅||
+| 2 | domain_id |string|✅||
 
 ### UserStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### UsersInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](User.md#userinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[UserInfo](User.md#userinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||

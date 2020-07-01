@@ -163,88 +163,63 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">api_key_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">api_key</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">
-<p>APIKeyInfo.State</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE_STATE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">user_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left">APIKeyType api_key_type = 4;</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left">APIKeyType api_key_type = 4;</td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">allowed_hosts</td>
-      <td style="text-align:left">
-<a href="Api-key.md#acls">Acls</a>
-</td>
-        <td style="text-align:left">repeated spaceone.api.identity.v1.RoleInfo roles = 7;</td>
+      <td style="text-align:left"><a href="Api-key.md#acls">Acls</a></td>
 <td style="text-align:left">repeated spaceone.api.identity.v1.RoleInfo roles = 7;</td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">last_accessed_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -264,75 +239,55 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">api_key_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left">
-<p>APIKeyQuery.State</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE_STATE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">api_key_type</td>
-      <td style="text-align:left">
-<p>APIKeyQuery.APIKeyType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE_TYPE</li>
           	<li>USER</li>
           	<li>SYSTEM</li>
           	<li>DELEGATION</li>
           	<li>DOMAIN</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">user_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">query</td>
-      <td style="text-align:left">
-<a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -340,26 +295,26 @@ string
 ### APIKeyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string | |required|
-| 2 | domain_id |string | |required|
+| 1 | api_key_id |string||required|
+| 2 | domain_id |string||required|
 
 ### APIKeyStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### APIKeysInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[APIKeyInfo](Api-key.md#apikeyinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[APIKeyInfo](Api-key.md#apikeyinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### Acls
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string | |optional|
-| 2 | cidr |string | |required|
+| 1 | name |string||optional|
+| 2 | cidr |string||required|
 
 ### CreateAPIKeyRequest
 <table>
@@ -376,41 +331,30 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">api_key_type</td>
-      <td style="text-align:left">
-<p>CreateAPIKeyRequest.APIKeyType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>USER</li>
           	<li>SYSTEM</li>
           	<li>DELEGATION</li>
           	<li>DOMAIN</li>
-        </ul>
-</td>
-        <td style="text-align:left">required</td>
+        </ul></td>
 <td style="text-align:left">required</td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">user_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left">required</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left">required</td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left">required</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left">required</td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -418,20 +362,20 @@ string
 ### GetAPIKeyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string | |required|
-| 2 | domain_id |string | |required|
-| 3 | only |string | |optional|
+| 1 | api_key_id |string||required|
+| 2 | domain_id |string||required|
+| 3 | only |string||optional|
 
 ### UpdateAPIKeyHostsRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string | ||
-| 2 | allowed_hosts |[Acls](Api-key.md#acls) | ||
-| 3 | domain_id |string | ||
+| 1 | api_key_id |string|||
+| 2 | allowed_hosts |[Acls](Api-key.md#acls)|||
+| 3 | domain_id |string|||
 
 ### UpdateAPIKeyRoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string | ||
-| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | ||
-| 3 | domain_id |string | ||
+| 1 | api_key_id |string|||
+| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|||
+| 3 | domain_id |string|||

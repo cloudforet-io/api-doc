@@ -51,11 +51,11 @@ description:
 ### IssueTokenRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
+| 2 | domain_id |string|✅||
 
 ### TokenInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | access_token |string | ||
-| 2 | refresh_token |string | ||
+| 1 | access_token |string|||
+| 2 | refresh_token |string|||

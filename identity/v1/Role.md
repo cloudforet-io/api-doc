@@ -121,63 +121,43 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">role_type</td>
-      <td style="text-align:left">
-<p>RoleType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>SYSTEM</li>
           	<li>DOMAIN</li>
           	<li>PROJECT</li>
-        </ul>
-</td><td style="text-align:left">✅</td>
+        </ul></td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">policies</td>
-      <td style="text-align:left">
-<a href="Role.md#rolepolicy">RolePolicy</a>
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left"><a href="Role.md#rolepolicy">RolePolicy</a></td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
   </tbody>
 </table>
 
@@ -185,9 +165,9 @@ string
 ### GetRoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | role_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | role_id |string|✅||
+| 2 | domain_id |string|✅||
+| 3 | only |string|❌||
 
 ### RoleInfo
 <table>
@@ -204,87 +184,64 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">role_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">role_type</td>
-      <td style="text-align:left">
-<p>RoleType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>SYSTEM</li>
           	<li>DOMAIN</li>
           	<li>PROJECT</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">policies</td>
-      <td style="text-align:left">
-<a href="Role.md#rolepolicy">RolePolicy</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="Role.md#rolepolicy">RolePolicy</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">deleted_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -304,39 +261,28 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">policy_type</td>
-      <td style="text-align:left">
-<p>RolePolicy.PolicyType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>MANAGED</li>
           	<li>CUSTOM</li>
-        </ul>
-</td>
-        <td style="text-align:left"></td>
+        </ul></td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">url</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">policy_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
-    </tr>
+
+   </tr>
   </tbody>
 </table>
 
@@ -356,65 +302,43 @@ string
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
-      <td style="text-align:left">
-<a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">role_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">❌</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">role_type</td>
-      <td style="text-align:left">
-<p>RoleType</p>
-        <ul>
+      <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>SYSTEM</li>
           	<li>DOMAIN</li>
           	<li>PROJECT</li>
-        </ul>
-</td><td style="text-align:left">❌</td>
+        </ul></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td><td style="text-align:left">✅</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
-    </tr>
+   </tr>
   </tbody>
 </table>
 
@@ -422,26 +346,26 @@ string
 ### RoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | role_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | role_id |string|✅||
+| 2 | domain_id |string|✅||
 
 ### RoleStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### RolesInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[RoleInfo](Role.md#roleinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results |[RoleInfo](Role.md#roleinfo)|||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### UpdateRoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | role_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | domain_id |string |✅ ||
-| 4 | policies |[RolePolicy](Role.md#rolepolicy) |✅ ||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 1 | role_id |string|✅||
+| 2 | name |string|❌||
+| 3 | domain_id |string|✅||
+| 4 | policies |[RolePolicy](Role.md#rolepolicy)|✅||
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
