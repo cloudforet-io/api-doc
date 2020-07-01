@@ -19,12 +19,8 @@ description:
 | 2 | [update](Region.md#update)| [UpdateRegionRequest](Region.md#updateregionrequest) | [RegionInfo](Region.md#regioninfo) |  |
 | 3 | [delete](Region.md#delete)| [RegionRequest](Region.md#regionrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 4 | [get](Region.md#get)| [GetRegionRequest](Region.md#getregionrequest) | [RegionInfo](Region.md#regioninfo) |  |
-| 5 | [add_member](Region.md#add_member)| [RegionMemberRequest](Region.md#regionmemberrequest) | [RegionMemberInfo](Region.md#regionmemberinfo) |  |
-| 6 | [modify_member](Region.md#modify_member)| [RegionMemberRequest](Region.md#regionmemberrequest) | [RegionMemberInfo](Region.md#regionmemberinfo) |  |
-| 7 | [remove_member](Region.md#remove_member)| [RemoveRegionMemberRequest](Region.md#removeregionmemberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 8 | [list_members](Region.md#list_members)| [RegionMemberQuery](Region.md#regionmemberquery) | [RegionMembersInfo](Region.md#regionmembersinfo) |  |
-| 9 | [list](Region.md#list)| [RegionQuery](Region.md#regionquery) | [RegionsInfo](Region.md#regionsinfo) |  |
-| 10 | [stat](Region.md#stat)| [RegionStatQuery](Region.md#regionstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 5 | [list](Region.md#list)| [RegionQuery](Region.md#regionquery) | [RegionsInfo](Region.md#regionsinfo) |  |
+| 6 | [stat](Region.md#stat)| [RegionStatQuery](Region.md#regionstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/regions
@@ -75,60 +71,6 @@ description:
 | :--- | :--- |
 | Request | [GetRegionRequest](Region.md#getregionrequest) |
 | Response |  [RegionInfo](Region.md#regioninfo)  |
-
-
-
-### add_member
-> **GET** /inventory/v1/region/{region_id}/members
->
-
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [RegionMemberRequest](Region.md#regionmemberrequest) |
-| Response |  [RegionMemberInfo](Region.md#regionmemberinfo)  |
-
-
-
-### modify_member
-> **GET** /inventory/v1/region/{region_id}/member/{user_id}
->
-
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [RegionMemberRequest](Region.md#regionmemberrequest) |
-| Response |  [RegionMemberInfo](Region.md#regionmemberinfo)  |
-
-
-
-### remove_member
-> **GET** /inventory/v1/region/{region_id}/member/{user_id}
->
-
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [RemoveRegionMemberRequest](Region.md#removeregionmemberrequest) |
-| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
-
-
-
-### list_members
-> **GET** /inventory/v1/region/{region_id}/members
->
-> **POST** /inventory/v1/region/{region_id}/members/search
-
-
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [RegionMemberQuery](Region.md#regionmemberquery) |
-| Response |  [RegionMembersInfo](Region.md#regionmembersinfo)  |
 
 
 
@@ -268,35 +210,6 @@ string
 </table>
 
 
-### RegionMemberInfo
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | region_info |[RegionInfo](Region.md#regioninfo) | ||
-| 2 | user_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 3 | labels |string | ||
-
-### RegionMemberQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | region_id |string |❌ ||
-| 3 | user_id |string |❌ ||
-| 4 | domain_id |string |✅ ||
-
-### RegionMemberRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | region_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | labels |string |❌ ||
-| 4 | domain_id |string |✅ ||
-
-### RegionMembersInfo
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[RegionMemberInfo](Region.md#regionmemberinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
-
 ### RegionQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -322,13 +235,6 @@ string
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | results |[RegionInfo](Region.md#regioninfo) | ||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
-
-### RemoveRegionMemberRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | region_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
 
 ### UpdateRegionRequest
 | No | Field | Type | Required | Description |

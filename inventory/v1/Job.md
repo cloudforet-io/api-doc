@@ -53,8 +53,8 @@ description:
 ### JobStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ |{'is_required': '✅'}|
+| 2 | domain_id |string |✅ |{'is_required': '✅'}|
 
 ### JobsInfo
 | No | Field | Type | Required | Description |
@@ -80,9 +80,9 @@ description:
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
 </td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
 
+        <td style="text-align:left">{'is_required': '❌'}</td>
+<td style="text-align:left">{'is_required': '❌'}</td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -91,9 +91,10 @@ description:
 
 string
 
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+</td><td style="text-align:left">❌</td>
+
+        <td style="text-align:left">{'is_required': '❌'}</td>
+<td style="text-align:left">{'is_required': '❌'}</td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -109,9 +110,10 @@ string
           	<li>FAILURE</li>
           	<li>TIMEOUT</li>
         </ul>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+</td><td style="text-align:left">❌</td>
+
+        <td style="text-align:left">{'is_required': '❌'}</td>
+<td style="text-align:left">{'is_required': '❌'}</td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -120,9 +122,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+</td><td style="text-align:left">❌</td>
+
+        <td style="text-align:left">{'is_required': '❌'}</td>
+<td style="text-align:left">{'is_required': '❌'}</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -131,9 +134,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+</td><td style="text-align:left">❌</td>
+
+        <td style="text-align:left">{'is_required': '❌'}</td>
+<td style="text-align:left">{'is_required': '❌'}</td>
     </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -142,9 +146,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+</td><td style="text-align:left">❌</td>
+
+        <td style="text-align:left">{'is_required': '❌'}</td>
+<td style="text-align:left">{'is_required': '❌'}</td>
     </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -153,9 +158,10 @@ string
 
 string
 
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+</td><td style="text-align:left">✅</td>
+
+        <td style="text-align:left">{'is_required': '✅'}</td>
+<td style="text-align:left">{'is_required': '✅'}</td>
     </tr>
   </tbody>
 </table>

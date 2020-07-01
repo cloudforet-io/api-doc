@@ -237,12 +237,12 @@ description:
 ### CollectRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string | ||
-| 2 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 3 | secret_id |string | ||
-| 4 | collect_mode |string | ||
-| 5 | domain_id |string | ||
-| 6 | use_cache |bool | |optional|
+| 1 | collector_id |string |✅ |{'is_required': '✅'}|
+| 2 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ |{'is_required': '❌'}|
+| 3 | secret_id |string |❌ |{'is_required': '❌'}|
+| 4 | collect_mode |string |❌ |{'is_required': '❌'}|
+| 5 | domain_id |string |✅ |{'is_required': '✅'}|
+| 6 | use_cache |bool |❌ |{'is_required': '❌'}|
 
 ### CollectorInfo
 <table>
@@ -467,14 +467,14 @@ string
 ### CollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | collector_id |string |✅ |{'is_required': '✅'}|
+| 2 | domain_id |string |✅ |{'is_required': '✅'}|
 
 ### CollectorStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ |{'is_required': '✅'}|
+| 2 | domain_id |string |✅ |{'is_required': '✅'}|
 
 ### CollectorsInfo
 | No | Field | Type | Required | Description |
@@ -485,35 +485,35 @@ string
 ### CreateCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | plugin_info |[PluginInfo](Collector.md#plugininfo) |✅ ||
-| 3 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | domain_id |string |✅ ||
+| 1 | name |string |✅ |{'is_required': '✅'}|
+| 2 | plugin_info |[PluginInfo](Collector.md#plugininfo) |✅ |{'is_required': '✅'}|
+| 3 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ |{'is_required': '❌'}|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ |{'is_required': '❌'}|
+| 5 | domain_id |string |✅ |{'is_required': '✅'}|
 
 ### CreateScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | ||
-| 2 | collector_id |string | ||
-| 3 | name |string | ||
-| 4 | collect_mode |string | ||
-| 5 | schedule |[Scheduled](Collector.md#scheduled) | ||
-| 6 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 1 | domain_id |string |✅ |{'is_required': '✅'}|
+| 2 | collector_id |string |✅ |{'is_required': '✅'}|
+| 3 | name |string |❌ |{'is_required': '❌'}|
+| 4 | collect_mode |string |❌ |{'is_required': '❌'}|
+| 5 | schedule |[Scheduled](Collector.md#scheduled) |✅ |{'is_required': '✅'}|
+| 6 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ |{'is_required': '❌'}|
 
 ### DeleteScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | ||
-| 2 | schedule_id |string | ||
-| 3 | collector_id |string | ||
+| 1 | domain_id |string |✅ |{'is_required': '✅'}|
+| 2 | schedule_id |string |✅ |{'is_required': '✅'}|
+| 3 | collector_id |string |✅ |{'is_required': '✅'}|
 
 ### GetCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | collector_id |string |✅ |{'is_required': '✅'}|
+| 2 | domain_id |string |✅ |{'is_required': '✅'}|
+| 3 | only |string |❌ |{'is_required': '❌'}|
 
 ### JobInfo
 <table>
@@ -673,17 +673,17 @@ string
 ### ScheduleQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | ||
-| 2 | collector_id |string | ||
-| 3 | schedule_id |string | ||
-| 4 | domain_id |string | ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ |{'is_required': '❌'}|
+| 2 | collector_id |string |✅ |{'is_required': '✅'}|
+| 3 | schedule_id |string |❌ |{'is_required': '❌'}|
+| 4 | domain_id |string |✅ |{'is_required': '✅'}|
 
 ### ScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | ||
-| 2 | schedule_id |string | ||
-| 3 | collector_id |string | ||
+| 1 | domain_id |string |✅ |{'is_required': '✅'}|
+| 2 | schedule_id |string |✅ |{'is_required': '✅'}|
+| 3 | collector_id |string |✅ |{'is_required': '✅'}|
 
 ### Scheduled
 | No | Field | Type | Required | Description |
@@ -702,23 +702,23 @@ string
 ### UpdateCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string |✅ ||
-| 2 | name |string |✅ ||
-| 3 | plugin_info |[PluginInfo](Collector.md#plugininfo) |✅ ||
-| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ ||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 6 | domain_id |string |✅ ||
+| 1 | collector_id |string |✅ |{'is_required': '✅'}|
+| 2 | name |string |❌ |{'is_required': '❌'}|
+| 3 | plugin_info |[PluginInfo](Collector.md#plugininfo) |❌ |{'is_required': '❌'}|
+| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |❌ |{'is_required': '❌'}|
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ |{'is_required': '❌'}|
+| 6 | domain_id |string |✅ |{'is_required': '✅'}|
 
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | ||
-| 2 | schedule_id |string | ||
-| 3 | collector_id |string | ||
-| 4 | name |string | ||
-| 5 | collect_mode |string | ||
-| 6 | schedule |[Scheduled](Collector.md#scheduled) | ||
-| 7 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 1 | domain_id |string |✅ |{'is_required': '✅'}|
+| 2 | schedule_id |string |✅ |{'is_required': '✅'}|
+| 3 | collector_id |string |✅ |{'is_required': '✅'}|
+| 4 | name |string |❌ |{'is_required': '❌'}|
+| 5 | collect_mode |string |❌ |{'is_required': '❌'}|
+| 6 | schedule |[Scheduled](Collector.md#scheduled) |❌ |{'is_required': '❌'}|
+| 7 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ |{'is_required': '❌'}|
 
 ### VerifyInfo
 | No | Field | Type | Required | Description |
@@ -728,6 +728,6 @@ string
 ### VerifyPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | collector_id |string |✅ ||
-| 2 | secret_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | collector_id |string |✅ |{'is_required': '✅'}|
+| 2 | secret_id |string |❌ |{'is_required': '❌'}|
+| 3 | domain_id |string |✅ |{'is_required': '✅'}|
