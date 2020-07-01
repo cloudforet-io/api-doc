@@ -134,7 +134,8 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
 {% else %}
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-{%- for field in message.fields %}| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{{field.longType}}]{%- else %}{{field.longType}}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %}| {%- if (field.description.is_required is defined) -%}{{field.description.is_required}}{% endif %}| {%- if (field.description.desc is defined) -%}{{field.description.desc}}{%- elif ((field.description.is_required is defined) and not (field.description.desc is defined)) %}{%- else %}{{field.description}}{% endif %}|
+{%- for field in message.fields %}
+| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{{field.longType}}]{%- else %}{{field.longType}}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %}| {%- if (field.description.is_required is defined) -%}{{field.description.is_required}}{% endif %}| {%- if (field.description.desc is defined) -%}{{field.description.desc}}{%- elif ((field.description.is_required is defined) and not (field.description.desc is defined)) -%}{%- else %}{{field.description}}{% endif %}|
 
 {%- endfor %}
 {% endif -%}
