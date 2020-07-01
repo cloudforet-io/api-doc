@@ -109,32 +109,24 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
     <tr>
       <td style="text-align:left">{{ loop.index }}</td>
       <td style="text-align:left">{{field.name}}</td>
-      <td style="text-align:left">
-{% if field.enum_links|length -%}
-		<p>{{field.longType}}</p>
+      <td style="text-align:left">{% if field.enum_links|length -%}
         <ul>
         {%- for enum in field.enum_links %}
           	<li>{{enum.name}}</li>
 		{%- endfor %}
         </ul>
-{%- elif (field.fullType_link is defined) -%}<a href="{{field.fullType_link}}">{{field.longType}}</a>{%- else %}
-{{field.longType}}
-{% endif %}
-</td>
-{%- if (field.description.is_required is defined) -%}
+{%- elif (field.fullType_link is defined) -%}<a href="{{field.fullType_link}}">{{field.longType}}</a>{%- else %}{{field.longType}}{% endif %}</td>
+{% if (field.description.is_required is defined) -%}
         <td style="text-align:left">{{field.description.is_required}}</td>
-{% endif %}
+{% endif -%}
 {%- if (field.description.desc is defined) -%}
         <td style="text-align:left">{{field.description.desc}}</td>
-{%- else %}
+{%- elif ((field.description.is_required is defined) and not (field.description.desc is defined)) -%}
+        <td style="text-align:left"></td>
+{%- else -%}
         <td style="text-align:left">{{field.description}}</td>
-{% endif -%}
-{%- if (field.description.desc is defined) %}
-        <td style="text-align:left">{{field.description.desc}}</td>
-{% else -%}
-        <td style="text-align:left">{{field.description}}</td>
-{%- endif %}
-    </tr>
+{% endif %}
+   </tr>
 {%- endfor %}
   </tbody>
 </table>
@@ -142,8 +134,7 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
 {% else %}
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-{%- for field in message.fields %}
-| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{{field.longType}}]{%- else %}{{field.longType}}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %} | {%- if (field.description.is_required is defined) -%}{{field.description.is_required}}{% endif %} | {%- if (field.description.desc is defined) -%}{{field.description.desc}}{%- else %}{{field.description}}{% endif %}|
+{%- for field in message.fields %}| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{{field.longType}}]{%- else %}{{field.longType}}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %}| {%- if (field.description.is_required is defined) -%}{{field.description.is_required}}{% endif %}| {%- if (field.description.desc is defined) -%}{{field.description.desc}}{%- elif ((field.description.is_required is defined) and not (field.description.desc is defined)) %}{%- else %}{{field.description}}{% endif %}|
 
 {%- endfor %}
 {% endif -%}
