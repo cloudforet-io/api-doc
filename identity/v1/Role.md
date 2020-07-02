@@ -127,13 +127,6 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">role_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -145,17 +138,24 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
+      <td style="text-align:left">3</td>
       <td style="text-align:left">policies</td>
       <td style="text-align:left"><a href="Role.md#rolepolicy">RolePolicy</a></td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
+      <td style="text-align:left">4</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -271,14 +271,14 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">url</td>
+      <td style="text-align:left">policy_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">policy_id</td>
+      <td style="text-align:left">repository_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -366,6 +366,6 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | role_id |string|✅||
 | 2 | name |string|❌||
-| 3 | domain_id |string|✅||
-| 4 | policies |[RolePolicy](Role.md#rolepolicy)|✅||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 3 | policies |[RolePolicy](Role.md#rolepolicy)|❌||
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 5 | domain_id |string|✅||
