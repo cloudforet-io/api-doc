@@ -19,6 +19,7 @@ jobs:
         # LOCATION points the parent directory
         LOCATION_SETUP_PY: dist/python # optional. for pypi upload
         LOCATION_VERSION: . # the location for VERSION file (ex- . means the location of VERSION is ./VERSION)
+        ARTIFACT_VERSION: ./artifact/json
         IS_SUDO: true
       run: |
         echo "::set-env name=SERVICE::$SERVICE"
@@ -26,11 +27,14 @@ jobs:
         echo "::set-env name=LOCATION_SETUP_PY::$LOCATION_SETUP_PY"
         echo "::set-env name=LOCATION_VERSION::$LOCATION_VERSION"
         echo "::set-env name=IS_SUDO::$IS_SUDO"
+        echo "::set-env name=ARTIFACT_VERSION::$ARTIFACT_VERSION"
+
     - name: Clone master branch
       uses: actions/checkout@v2
       with:
         ref: master
         path: master_branch
+
     - name: Compare version
       run: |
         echo "MASTER BRANCH VERSION"
@@ -43,7 +47,28 @@ jobs:
         cmp --silent master_branch/$LOCATION_VERSION/VERSION $LOCATION_VERSION/VERSION || \
         echo "::set-env name=IS_NEW_VERSION::true"
         echo "::set-env name=API_DOC_VERSION::$(cat $LOCATION_VERSION/VERSION)"
+        echo "::set-env name=API_VERSION_NAME::v$(cat $LOCATION_VERSION/VERSION)"
         echo "$(cat $LOCATION_VERSION/VERSION)-${{ github.run_id }}">$LOCATION_VERSION/VERSION
+
+    - name: Versioning with baranches
+      id: check_files
+      uses: andstor/file-existence-action@v1
+      with:
+        files: "artifact/json/VERSION"
+
+    - name: File exists
+      if: steps.check_files.outputs.files_exists == 'true'
+      run: |
+        echo "::set-env name=ARTIFACT_VERSION::$(cat $ARTIFACT_VERSION/VERSION)"
+
+    - name: Check version updates
+      if: env.ARTIFACT_VERSION > env.API_DOC_VERSION
+      uses: peterjgrainger/action-create-branch@v1.0.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: ${{ env.API_VERSION_NAME }}
+
     - name: Update API doc Version
       run: |
           echo "$API_DOC_VERSION">$LOCATION_VERSION/VERSION
