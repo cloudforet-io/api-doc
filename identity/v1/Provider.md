@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Provider.md#create)| [CreateProviderRequest](Provider.md#createproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
-| 2 | [update](Provider.md#update)| [UpdateProviderRequest](Provider.md#updateproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
-| 3 | [delete](Provider.md#delete)| [ProviderRequest](Provider.md#providerrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Provider.md#get)| [GetProviderRequest](Provider.md#getproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
-| 5 | [list](Provider.md#list)| [ProviderQuery](Provider.md#providerquery) | [ProvidersInfo](Provider.md#providersinfo) |  |
-| 6 | [stat](Provider.md#stat)| [ProviderStatQuery](Provider.md#providerstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Provider.md#create)| [CreateProviderRequest](Provider.md#createproviderrequest)| [ProviderInfo](Provider.md#providerinfo) |  |
+| 2 | [update](Provider.md#update)| [UpdateProviderRequest](Provider.md#updateproviderrequest)| [ProviderInfo](Provider.md#providerinfo) |  |
+| 3 | [delete](Provider.md#delete)| [ProviderRequest](Provider.md#providerrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Provider.md#get)| [GetProviderRequest](Provider.md#getproviderrequest)| [ProviderInfo](Provider.md#providerinfo) |  |
+| 5 | [list](Provider.md#list)| [ProviderQuery](Provider.md#providerquery)| [ProvidersInfo](Provider.md#providersinfo) |  |
+| 6 | [stat](Provider.md#stat)| [ProviderStatQuery](Provider.md#providerstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /identity/v1/providers
@@ -109,64 +109,59 @@ description:
 ### CreateProviderRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | provider |string|✅||
-| 2 | name |string|✅||
-| 3 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 7 | domain_id |string|❌||
+| 1 | provider |string | |required|
+| 2 | name |string | |required|
+| 3 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
 
 ### GetProviderRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | provider |string|✅||
-| 2 | only |string|❌||
-| 3 | domain_id |string|❌||
+| 1 | provider |string | |required|
+| 2 | only |string | |optional|
 
 ### ProviderInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | provider |string|||
-| 2 | name |string|||
-| 3 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
-| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
+| 1 | provider |string | ||
+| 2 | name |string | ||
+| 3 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
 
 ### ProviderQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
-| 2 | provider |string|❌||
-| 3 | name |string|❌||
-| 4 | domain_id |string|❌||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | provider |string | |optional|
+| 3 | name |string | |optional|
 
 ### ProviderRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | provider |string|✅||
-| 2 | domain_id |string|❌||
+| 1 | provider |string | |required|
 
 ### ProviderStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
 
 ### ProvidersInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[ProviderInfo](Provider.md#providerinfo)|||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
+| 1 | results |[ProviderInfo](Provider.md#providerinfo) | ||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
 
 ### UpdateProviderRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | provider |string|✅||
-| 2 | name |string|❌||
-| 3 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 7 | domain_id |string|❌||
+| 1 | provider |string | |required|
+| 2 | name |string | |optional|
+| 3 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|

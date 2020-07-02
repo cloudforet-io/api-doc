@@ -15,14 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [allocate](Ip-address.md#allocate)| [AllocateIPRequest](Ip-address.md#allocateiprequest) | [IPInfo](Ip-address.md#ipinfo) |  |
-| 2 | [reserve](Ip-address.md#reserve)| [ReserveIPRequest](Ip-address.md#reserveiprequest) | [IPInfo](Ip-address.md#ipinfo) |  |
-| 3 | [release](Ip-address.md#release)| [IPRequest](Ip-address.md#iprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [update](Ip-address.md#update)| [UpdateIPRequest](Ip-address.md#updateiprequest) | [IPInfo](Ip-address.md#ipinfo) |  |
-| 5 | [pin_data](Ip-address.md#pin_data)| [PinIPDataRequest](Ip-address.md#pinipdatarequest) | [IPInfo](Ip-address.md#ipinfo) |  |
-| 6 | [get](Ip-address.md#get)| [GetIPRequest](Ip-address.md#getiprequest) | [IPInfo](Ip-address.md#ipinfo) |  |
-| 7 | [list](Ip-address.md#list)| [IPQuery](Ip-address.md#ipquery) | [IPsInfo](Ip-address.md#ipsinfo) |  |
-| 8 | [stat](Ip-address.md#stat)| [IPStatQuery](Ip-address.md#ipstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [allocate](Ip-address.md#allocate)| [AllocateIPRequest](Ip-address.md#allocateiprequest)| [IPInfo](Ip-address.md#ipinfo) |  |
+| 2 | [reserve](Ip-address.md#reserve)| [ReserveIPRequest](Ip-address.md#reserveiprequest)| [IPInfo](Ip-address.md#ipinfo) |  |
+| 3 | [release](Ip-address.md#release)| [IPRequest](Ip-address.md#iprequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [update](Ip-address.md#update)| [UpdateIPRequest](Ip-address.md#updateiprequest)| [IPInfo](Ip-address.md#ipinfo) |  |
+| 5 | [pin_data](Ip-address.md#pin_data)| [PinIPDataRequest](Ip-address.md#pinipdatarequest)| [IPInfo](Ip-address.md#ipinfo) |  |
+| 6 | [get](Ip-address.md#get)| [GetIPRequest](Ip-address.md#getiprequest)| [IPInfo](Ip-address.md#ipinfo) |  |
+| 7 | [list](Ip-address.md#list)| [IPQuery](Ip-address.md#ipquery)| [IPsInfo](Ip-address.md#ipsinfo) |  |
+| 8 | [stat](Ip-address.md#stat)| [IPStatQuery](Ip-address.md#ipstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### allocate
 > **POST** /inventory/v1/ip-addresses/allocate
@@ -139,22 +139,22 @@ description:
 ### AllocateIPRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | ip_address |string |❌ ||
-| 2 | resource |[Resource](Ip-address.md#resource) |❌ ||
-| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | reference |[IPReference](Ip-address.md#ipreference) |❌ ||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 7 | subnet_id |string |✅ ||
-| 8 | domain_id |string |✅ ||
+| 1 | ip_address |string | |optional|
+| 2 | resource |[Resource](Ip-address.md#resource) | |optional|
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | reference |[IPReference](Ip-address.md#ipreference) | |optional|
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 7 | subnet_id |string | |required|
+| 8 | domain_id |string | |required|
 
 ### GetIPRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | ip_address |string |✅ ||
-| 2 | subnet_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
-| 4 | only |string |❌ ||
+| 1 | ip_address |string | |required|
+| 2 | subnet_id |string | |required|
+| 3 | domain_id |string | |required|
+| 4 | only |string | |optional|
 
 ### IPInfo
 <table>
@@ -315,10 +315,9 @@ string
       <td style="text-align:left">query</td>
       <td style="text-align:left">
 <a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a>
-</td><td style="text-align:left"></td>
-<td style="text-align:left">optional</td>
+</td>
         <td style="text-align:left">optional</td>
-
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -327,10 +326,9 @@ string
 
 string
 
-</td><td style="text-align:left"></td>
-<td style="text-align:left">optional</td>
+</td>
         <td style="text-align:left">optional</td>
-
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -342,10 +340,9 @@ string
           	<li>ALLOCATED</li>
           	<li>RESERVED</li>
         </ul>
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -354,10 +351,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -366,10 +362,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -378,10 +373,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -390,10 +384,9 @@ string
 
 string
 
-</td><td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
     </tr>
     <tr>
       <td style="text-align:left">8</td>
@@ -402,10 +395,9 @@ string
 
 string
 
-</td><td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-        <td style="text-align:left"></td>
-
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
     </tr>
   </tbody>
 </table>
@@ -420,15 +412,15 @@ string
 ### IPRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | ip_address |string |✅ ||
-| 2 | subnet_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | ip_address |string | |required|
+| 2 | subnet_id |string | |required|
+| 3 | domain_id |string | |required|
 
 ### IPStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### IPsInfo
 | No | Field | Type | Required | Description |
@@ -439,18 +431,18 @@ string
 ### PinIPDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | ip_address |string |✅ ||
-| 2 | keys |string |✅ ||
-| 3 | subnet_id |string |✅ ||
-| 4 | domain_id |string |✅ ||
+| 1 | ip_address |string | |required|
+| 2 | keys |string | |required|
+| 3 | subnet_id |string | |required|
+| 4 | domain_id |string | |required|
 
 ### ReserveIPRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | ip_address |string |✅ ||
-| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 3 | subnet_id |string |✅ ||
-| 4 | domain_id |string |✅ ||
+| 1 | ip_address |string | |required|
+| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 3 | subnet_id |string | |required|
+| 4 | domain_id |string | |required|
 
 ### Resource
 | No | Field | Type | Required | Description |
@@ -461,11 +453,11 @@ string
 ### UpdateIPRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | ip_address |string |❌ ||
-| 2 | resource |[Resource](Ip-address.md#resource) |❌ ||
-| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | reference |[IPReference](Ip-address.md#ipreference) |❌ ||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 7 | subnet_id |string |✅ ||
-| 8 | domain_id |string |✅ ||
+| 1 | ip_address |string | |optional|
+| 2 | resource |[Resource](Ip-address.md#resource) | |optional|
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | reference |[IPReference](Ip-address.md#ipreference) | |optional|
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 7 | subnet_id |string | |required|
+| 8 | domain_id |string | |required|

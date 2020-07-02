@@ -15,9 +15,9 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [verify](Auth.md#verify)| [VerifyRequest](Auth.md#verifyrequest) | [AuthVerifyInfo](Auth.md#authverifyinfo) |  |
-| 2 | [find](Auth.md#find)| [FindRequest](Auth.md#findrequest) | [UsersInfo](Auth.md#usersinfo) |  |
-| 3 | [login](Auth.md#login)| [LoginRequest](Auth.md#loginrequest) | [UserInfo](Auth.md#userinfo) |  |
+| 1 | [verify](Auth.md#verify)| [VerifyRequest](Auth.md#verifyrequest)| [AuthVerifyInfo](Auth.md#authverifyinfo) |  |
+| 2 | [find](Auth.md#find)| [FindRequest](Auth.md#findrequest)| [UsersInfo](Auth.md#usersinfo) |  |
+| 3 | [login](Auth.md#login)| [LoginRequest](Auth.md#loginrequest)| [UserInfo](Auth.md#userinfo) |  |
 
 ### verify
 
@@ -59,22 +59,22 @@ description:
 ### AuthVerifyInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
 
 ### FindRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 3 | user_id |string|❌||
-| 4 | keyword |string|❌||
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
+| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
+| 3 | user_id |string | |optional|
+| 4 | keyword |string | |optional|
 
 ### LoginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 3 | user_credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
+| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
+| 3 | user_credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
 
 ### UserInfo
 <table>
@@ -91,50 +91,73 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">user_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">
 
-   </tr>
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">
 
-   </tr>
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">email</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">
 
-   </tr>
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">mobile</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">
 
-   </tr>
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+    </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">group</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">
 
-   </tr>
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
+      <td style="text-align:left">
+<p>UserInfo.State</p>
+        <ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
           	<li>UNIDENTIFIED</li>
-        </ul></td>
+        </ul>
+</td>
+        <td style="text-align:left"></td>
 <td style="text-align:left"></td>
-
-   </tr>
+    </tr>
   </tbody>
 </table>
 
@@ -142,11 +165,11 @@ description:
 ### UsersInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](Auth.md#userinfo)|||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
+| 1 | results |[UserInfo](Auth.md#userinfo) | ||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
 
 ### VerifyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
+| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|

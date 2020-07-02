@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Policy.md#create)| [CreatePolicyRequest](Policy.md#createpolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
-| 2 | [update](Policy.md#update)| [UpdatePolicyRequest](Policy.md#updatepolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
-| 3 | [delete](Policy.md#delete)| [PolicyRequest](Policy.md#policyrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Policy.md#get)| [GetPolicyRequest](Policy.md#getpolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
-| 5 | [list](Policy.md#list)| [PolicyQuery](Policy.md#policyquery) | [PoliciesInfo](Policy.md#policiesinfo) |  |
-| 6 | [stat](Policy.md#stat)| [PolicyStatQuery](Policy.md#policystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Policy.md#create)| [CreatePolicyRequest](Policy.md#createpolicyrequest)| [PolicyInfo](Policy.md#policyinfo) |  |
+| 2 | [update](Policy.md#update)| [UpdatePolicyRequest](Policy.md#updatepolicyrequest)| [PolicyInfo](Policy.md#policyinfo) |  |
+| 3 | [delete](Policy.md#delete)| [PolicyRequest](Policy.md#policyrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Policy.md#get)| [GetPolicyRequest](Policy.md#getpolicyrequest)| [PolicyInfo](Policy.md#policyinfo) |  |
+| 5 | [list](Policy.md#list)| [PolicyQuery](Policy.md#policyquery)| [PoliciesInfo](Policy.md#policiesinfo) |  |
+| 6 | [stat](Policy.md#stat)| [PolicyStatQuery](Policy.md#policystatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /identity/v1/policies
@@ -109,59 +109,59 @@ description:
 ### CreatePolicyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | permissions |string|✅||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | domain_id |string|✅||
+| 1 | name |string | |required|
+| 2 | permissions |string | |required|
+| 3 | domain_id |string | |required|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
 
 ### GetPolicyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | policy_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | policy_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### PoliciesInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[PolicyInfo](Policy.md#policyinfo)|||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
+| 1 | results |[PolicyInfo](Policy.md#policyinfo) | ||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
 
 ### PolicyInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | policy_id |string|||
-| 2 | name |string|||
-| 3 | permissions |string|||
-| 4 | domain_id |string|||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
-| 6 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
+| 1 | policy_id |string | ||
+| 2 | name |string | ||
+| 3 | permissions |string | ||
+| 4 | domain_id |string | ||
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 6 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
 
 ### PolicyQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
-| 2 | policy_id |string|❌||
-| 3 | name |string|❌||
-| 4 | domain_id |string|❌||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | policy_id |string | |optional|
+| 3 | name |string | |optional|
+| 4 | domain_id |string | |required|
 
 ### PolicyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | policy_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | policy_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### PolicyStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### UpdatePolicyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | policy_id |string|✅||
-| 2 | name |string|❌||
-| 3 | permissions |string|❌||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | domain_id |string|✅||
+| 1 | policy_id |string | |required|
+| 2 | name |string | |optional|
+| 3 | permissions |string | |optional|
+| 4 | domain_id |string | |required|
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|

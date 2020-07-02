@@ -15,16 +15,16 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Pool.md#create)| [CreatePoolRequest](Pool.md#createpoolrequest) | [PoolInfo](Pool.md#poolinfo) |  |
-| 2 | [update](Pool.md#update)| [UpdatePoolRequest](Pool.md#updatepoolrequest) | [PoolInfo](Pool.md#poolinfo) |  |
-| 3 | [delete](Pool.md#delete)| [PoolRequest](Pool.md#poolrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Pool.md#get)| [GetPoolRequest](Pool.md#getpoolrequest) | [PoolInfo](Pool.md#poolinfo) |  |
-| 5 | [add_member](Pool.md#add_member)| [PoolMemberRequest](Pool.md#poolmemberrequest) | [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
-| 6 | [modify_member](Pool.md#modify_member)| [PoolMemberRequest](Pool.md#poolmemberrequest) | [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
-| 7 | [remove_member](Pool.md#remove_member)| [RemovePoolMemberRequest](Pool.md#removepoolmemberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 8 | [list_members](Pool.md#list_members)| [PoolMemberQuery](Pool.md#poolmemberquery) | [PoolMembersInfo](Pool.md#poolmembersinfo) |  |
-| 9 | [list](Pool.md#list)| [PoolQuery](Pool.md#poolquery) | [PoolsInfo](Pool.md#poolsinfo) |  |
-| 10 | [stat](Pool.md#stat)| [PoolStatQuery](Pool.md#poolstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Pool.md#create)| [CreatePoolRequest](Pool.md#createpoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
+| 2 | [update](Pool.md#update)| [UpdatePoolRequest](Pool.md#updatepoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
+| 3 | [delete](Pool.md#delete)| [PoolRequest](Pool.md#poolrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](Pool.md#get)| [GetPoolRequest](Pool.md#getpoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
+| 5 | [add_member](Pool.md#add_member)| [PoolMemberRequest](Pool.md#poolmemberrequest)| [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
+| 6 | [modify_member](Pool.md#modify_member)| [PoolMemberRequest](Pool.md#poolmemberrequest)| [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
+| 7 | [remove_member](Pool.md#remove_member)| [RemovePoolMemberRequest](Pool.md#removepoolmemberrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 8 | [list_members](Pool.md#list_members)| [PoolMemberQuery](Pool.md#poolmemberquery)| [PoolMembersInfo](Pool.md#poolmembersinfo) |  |
+| 9 | [list](Pool.md#list)| [PoolQuery](Pool.md#poolquery)| [PoolsInfo](Pool.md#poolsinfo) |  |
+| 10 | [stat](Pool.md#stat)| [PoolStatQuery](Pool.md#poolstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/pools
@@ -167,17 +167,17 @@ description:
 ### CreatePoolRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | zone_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 1 | name |string | |required|
+| 2 | zone_id |string | |required|
+| 3 | domain_id |string | |required|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
 
 ### GetPoolRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | pool_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### PoolInfo
 <table>
@@ -297,18 +297,18 @@ string
 ### PoolMemberQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | pool_id |string |❌ ||
-| 3 | user_id |string |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | pool_id |string | |optional|
+| 3 | user_id |string | |optional|
+| 4 | domain_id |string | |required|
 
 ### PoolMemberRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | labels |string |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | pool_id |string | |required|
+| 2 | user_id |string | |required|
+| 3 | labels |string | |optional|
+| 4 | domain_id |string | |required|
 
 ### PoolMembersInfo
 | No | Field | Type | Required | Description |
@@ -319,24 +319,24 @@ string
 ### PoolQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | pool_id |string |❌ ||
-| 3 | region_id |string |❌ ||
-| 4 | zone_id |string |❌ ||
-| 5 | domain_id |string |✅ ||
-| 6 | name |string |❌ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | pool_id |string | |optional|
+| 3 | region_id |string | |optional|
+| 4 | zone_id |string | |optional|
+| 5 | domain_id |string | |required|
+| 6 | name |string | |optional|
 
 ### PoolRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | pool_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### PoolStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### PoolsInfo
 | No | Field | Type | Required | Description |
@@ -347,14 +347,14 @@ string
 ### RemovePoolMemberRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | pool_id |string | |required|
+| 2 | user_id |string | |required|
+| 3 | domain_id |string | |required|
 
 ### UpdatePoolRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | name |string |❌ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 1 | pool_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | name |string | |optional|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|

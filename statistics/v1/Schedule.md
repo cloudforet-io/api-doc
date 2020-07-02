@@ -15,14 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [add](Schedule.md#add)| [AddScheduleRequest](Schedule.md#addschedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 2 | [update](Schedule.md#update)| [UpdateScheduleRequest](Schedule.md#updateschedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 3 | [enable](Schedule.md#enable)| [ScheduleRequest](Schedule.md#schedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 4 | [disable](Schedule.md#disable)| [ScheduleRequest](Schedule.md#schedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 5 | [delete](Schedule.md#delete)| [ScheduleRequest](Schedule.md#schedulerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [get](Schedule.md#get)| [GetScheduleRequest](Schedule.md#getschedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 7 | [list](Schedule.md#list)| [ScheduleQuery](Schedule.md#schedulequery) | [SchedulesInfo](Schedule.md#schedulesinfo) |  |
-| 8 | [stat](Schedule.md#stat)| [ScheduleStatQuery](Schedule.md#schedulestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [add](Schedule.md#add)| [AddScheduleRequest](Schedule.md#addschedulerequest)| [ScheduleInfo](Schedule.md#scheduleinfo) |  |
+| 2 | [update](Schedule.md#update)| [UpdateScheduleRequest](Schedule.md#updateschedulerequest)| [ScheduleInfo](Schedule.md#scheduleinfo) |  |
+| 3 | [enable](Schedule.md#enable)| [ScheduleRequest](Schedule.md#schedulerequest)| [ScheduleInfo](Schedule.md#scheduleinfo) |  |
+| 4 | [disable](Schedule.md#disable)| [ScheduleRequest](Schedule.md#schedulerequest)| [ScheduleInfo](Schedule.md#scheduleinfo) |  |
+| 5 | [delete](Schedule.md#delete)| [ScheduleRequest](Schedule.md#schedulerequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [get](Schedule.md#get)| [GetScheduleRequest](Schedule.md#getschedulerequest)| [ScheduleInfo](Schedule.md#scheduleinfo) |  |
+| 7 | [list](Schedule.md#list)| [ScheduleQuery](Schedule.md#schedulequery)| [SchedulesInfo](Schedule.md#schedulesinfo) |  |
+| 8 | [stat](Schedule.md#stat)| [ScheduleStatQuery](Schedule.md#schedulestatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### add
 > **POST** /statistics/v1/schedules
@@ -137,33 +137,33 @@ description:
 ### AddScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | topic |string|✅||
-| 2 | options |[QueryOption](Schedule.md#queryoption)|✅||
-| 3 | schedule |[Scheduled](Schedule.md#scheduled)|✅||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | domain_id |string|✅||
+| 1 | topic |string | |required|
+| 2 | options |[QueryOption](Schedule.md#queryoption) | |required|
+| 3 | schedule |[Scheduled](Schedule.md#scheduled) | |required|
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | domain_id |string | |required|
 
 ### GetScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | schedule_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | schedule_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### QueryOption
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string|❌||
-| 2 | resource_type |string|✅||
-| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 4 | join |[ScheduleJoinQuery](Schedule.md#schedulejoinquery)|❌||
-| 5 | formulas |[ScheduleFormula](Schedule.md#scheduleformula)|❌||
+| 1 | data_source_id |string | |optional|
+| 2 | resource_type |string | |required|
+| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 4 | join |[ScheduleJoinQuery](Schedule.md#schedulejoinquery) | |optional|
+| 5 | formulas |[ScheduleFormula](Schedule.md#scheduleformula) | |optional|
 
 ### ScheduleFormula
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | formula |string|✅||
+| 1 | name |string | |required|
+| 2 | formula |string | |required|
 
 ### ScheduleInfo
 <table>
@@ -180,70 +180,95 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">schedule_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">
 
-   </tr>
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">topic</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">
 
-   </tr>
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
+      <td style="text-align:left">
+<p>ScheduleInfo.State</p>
+        <ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
-        </ul></td>
+        </ul>
+</td>
+        <td style="text-align:left"></td>
 <td style="text-align:left"></td>
-
-   </tr>
+    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">options</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">
+<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
+</td>
+        <td style="text-align:left"></td>
 <td style="text-align:left"></td>
-
-   </tr>
+    </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">schedule</td>
-      <td style="text-align:left"><a href="Schedule.md#scheduled">Scheduled</a></td>
+      <td style="text-align:left">
+<a href="Schedule.md#scheduled">Scheduled</a>
+</td>
+        <td style="text-align:left"></td>
 <td style="text-align:left"></td>
-
-   </tr>
+    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">
+<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
+</td>
+        <td style="text-align:left"></td>
 <td style="text-align:left"></td>
-
-   </tr>
+    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">
 
-   </tr>
+string
+
+</td>
+        <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+    </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+      <td style="text-align:left">
+<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
+</td>
+        <td style="text-align:left"></td>
 <td style="text-align:left"></td>
-
-   </tr>
+    </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">last_scheduled_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+      <td style="text-align:left">
+<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
+</td>
+        <td style="text-align:left"></td>
 <td style="text-align:left"></td>
-
-   </tr>
+    </tr>
   </tbody>
 </table>
 
@@ -263,43 +288,60 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">keys</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
+    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">type</td>
-      <td style="text-align:left"><ul>
+      <td style="text-align:left">
+<p>ScheduleJoinQuery.JoinType</p>
+        <ul>
           	<li>LEFT</li>
           	<li>RIGHT</li>
           	<li>OUTER</li>
           	<li>INNER</li>
-        </ul></td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
+        </ul>
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
+    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">data_source_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
+    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">resource_type</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
+    </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">query</td>
-      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a></td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
+      <td style="text-align:left">
+<a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a>
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
+    </tr>
   </tbody>
 </table>
 
@@ -307,44 +349,44 @@ description:
 ### ScheduleQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
-| 2 | schedule_id |string|❌||
-| 3 | topic |string|❌||
-| 4 | state |string|❌||
-| 5 | data_source_id |string|❌||
-| 6 | resource_type |string|❌||
-| 7 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | schedule_id |string | |optional|
+| 3 | topic |string | |optional|
+| 4 | state |string | |optional|
+| 5 | data_source_id |string | |optional|
+| 6 | resource_type |string | |optional|
+| 7 | domain_id |string | |required|
 
 ### ScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | schedule_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | schedule_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### ScheduleStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### Scheduled
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | cron |string|||
-| 2 | interval |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
-| 3 | minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
-| 4 | hours |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
+| 1 | cron |string | ||
+| 2 | interval |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 3 | minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 4 | hours |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
 
 ### SchedulesInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](Schedule.md#scheduleinfo)|||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
+| 1 | results |[ScheduleInfo](Schedule.md#scheduleinfo) | ||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
 
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | schedule_id |string|✅||
-| 2 | schedule |[Scheduled](Schedule.md#scheduled)|❌||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | domain_id |string|✅||
+| 1 | schedule_id |string | |required|
+| 2 | schedule |[Scheduled](Schedule.md#scheduled) | |optional|
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | domain_id |string | |required|

@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [stat](Resource.md#stat)| [ResourceStatRequest](Resource.md#resourcestatrequest) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [stat](Resource.md#stat)| [ResourceStatRequest](Resource.md#resourcestatrequest)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### stat
 > **POST** /statistics/v1/resources/stat
@@ -37,8 +37,8 @@ description:
 ### Formula
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | formula |string|✅||
+| 1 | name |string | |required|
+| 2 | formula |string | |required|
 
 ### JoinQuery
 <table>
@@ -55,43 +55,60 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">keys</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
+    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">type</td>
-      <td style="text-align:left"><ul>
+      <td style="text-align:left">
+<p>JoinQuery.JoinType</p>
+        <ul>
           	<li>LEFT</li>
           	<li>RIGHT</li>
           	<li>OUTER</li>
           	<li>INNER</li>
-        </ul></td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
+        </ul>
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
+    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">data_source_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left">optional</td>
+<td style="text-align:left">optional</td>
+    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">resource_type</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
+      <td style="text-align:left">
+
+string
+
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
+    </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">query</td>
-      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a></td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
+      <td style="text-align:left">
+<a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a>
+</td>
+        <td style="text-align:left">required</td>
+<td style="text-align:left">required</td>
+    </tr>
   </tbody>
 </table>
 
@@ -99,9 +116,9 @@ description:
 ### ResourceStatRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string|❌||
-| 2 | resource_type |string|✅||
-| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 4 | join |[JoinQuery](Resource.md#joinquery)|❌||
-| 5 | formulas |[Formula](Resource.md#formula)|❌||
-| 6 | domain_id |string|✅||
+| 1 | data_source_id |string | |optional|
+| 2 | resource_type |string | |required|
+| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 4 | join |[JoinQuery](Resource.md#joinquery) | |optional|
+| 5 | formulas |[Formula](Resource.md#formula) | |optional|
+| 6 | domain_id |string | |required|

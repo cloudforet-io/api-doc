@@ -15,14 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Secret-group.md#create)| [CreateSecretGroupRequest](Secret-group.md#createsecretgrouprequest) | [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
-| 2 | [update](Secret-group.md#update)| [UpdateSecretGroupRequest](Secret-group.md#updatesecretgrouprequest) | [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
-| 3 | [add_secret](Secret-group.md#add_secret)| [SecretGroupSecretRequest](Secret-group.md#secretgroupsecretrequest) | [SecretGroupSecretInfo](Secret-group.md#secretgroupsecretinfo) |  |
-| 4 | [remove_secret](Secret-group.md#remove_secret)| [SecretGroupSecretRequest](Secret-group.md#secretgroupsecretrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [delete](Secret-group.md#delete)| [SecretGroupRequest](Secret-group.md#secretgrouprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [get](Secret-group.md#get)| [GetSecretGroupRequest](Secret-group.md#getsecretgrouprequest) | [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
-| 7 | [list](Secret-group.md#list)| [SecretGroupQuery](Secret-group.md#secretgroupquery) | [SecretGroupsInfo](Secret-group.md#secretgroupsinfo) |  |
-| 8 | [stat](Secret-group.md#stat)| [SecretGroupStatQuery](Secret-group.md#secretgroupstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Secret-group.md#create)| [CreateSecretGroupRequest](Secret-group.md#createsecretgrouprequest)| [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
+| 2 | [update](Secret-group.md#update)| [UpdateSecretGroupRequest](Secret-group.md#updatesecretgrouprequest)| [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
+| 3 | [add_secret](Secret-group.md#add_secret)| [SecretGroupSecretRequest](Secret-group.md#secretgroupsecretrequest)| [SecretGroupSecretInfo](Secret-group.md#secretgroupsecretinfo) |  |
+| 4 | [remove_secret](Secret-group.md#remove_secret)| [SecretGroupSecretRequest](Secret-group.md#secretgroupsecretrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [delete](Secret-group.md#delete)| [SecretGroupRequest](Secret-group.md#secretgrouprequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [get](Secret-group.md#get)| [GetSecretGroupRequest](Secret-group.md#getsecretgrouprequest)| [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
+| 7 | [list](Secret-group.md#list)| [SecretGroupQuery](Secret-group.md#secretgroupquery)| [SecretGroupsInfo](Secret-group.md#secretgroupsinfo) |  |
+| 8 | [stat](Secret-group.md#stat)| [SecretGroupStatQuery](Secret-group.md#secretgroupstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /secret/v1/secret-groups
@@ -137,71 +137,71 @@ description:
 ### CreateSecretGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 3 | domain_id |string|✅||
+| 1 | name |string | |required|
+| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 3 | domain_id |string | |required|
 
 ### GetSecretGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | secret_group_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### SecretGroupInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string|||
-| 2 | name |string|||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|||
-| 4 | domain_id |string|||
-| 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|||
+| 1 | secret_group_id |string | ||
+| 2 | name |string | ||
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
+| 4 | domain_id |string | ||
+| 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | ||
 
 ### SecretGroupQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
-| 2 | secret_group_id |string|❌||
-| 3 | name |string|❌||
-| 4 | secret_id |string|❌||
-| 5 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | secret_group_id |string | |optional|
+| 3 | name |string | |optional|
+| 4 | secret_id |string | |optional|
+| 5 | domain_id |string | |required|
 
 ### SecretGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | secret_group_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### SecretGroupSecretInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_info |[SecretGroupInfo](Secret-group.md#secretgroupinfo)|||
-| 2 | secret_info |[SecretInfo](Secret-group.md#secretinfo)|||
-| 3 | domain_id |string|||
+| 1 | secret_group_info |[SecretGroupInfo](Secret-group.md#secretgroupinfo) | ||
+| 2 | secret_info |[SecretInfo](Secret-group.md#secretinfo) | ||
+| 3 | domain_id |string | ||
 
 ### SecretGroupSecretRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string|✅||
-| 2 | secret_id |string|✅||
-| 3 | domain_id |string|✅||
+| 1 | secret_group_id |string | |required|
+| 2 | secret_id |string | |required|
+| 3 | domain_id |string | |required|
 
 ### SecretGroupStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### SecretGroupsInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[SecretGroupInfo](Secret-group.md#secretgroupinfo)|||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
+| 1 | results |[SecretGroupInfo](Secret-group.md#secretgroupinfo) | ||
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
 
 ### UpdateSecretGroupRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string|✅||
-| 2 | name |string|❌||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | domain_id |string|✅||
+| 1 | secret_group_id |string | |required|
+| 2 | name |string | |optional|
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | domain_id |string | |required|

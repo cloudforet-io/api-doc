@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Network.md#create)| [CreateNetworkRequest](Network.md#createnetworkrequest) | [NetworkInfo](Network.md#networkinfo) |  |
-| 2 | [update](Network.md#update)| [UpdateNetworkRequest](Network.md#updatenetworkrequest) | [NetworkInfo](Network.md#networkinfo) |  |
-| 3 | [pin_data](Network.md#pin_data)| [PinNetworkDataRequest](Network.md#pinnetworkdatarequest) | [NetworkInfo](Network.md#networkinfo) |  |
-| 4 | [delete](Network.md#delete)| [NetworkRequest](Network.md#networkrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](Network.md#get)| [GetNetworkRequest](Network.md#getnetworkrequest) | [NetworkInfo](Network.md#networkinfo) |  |
-| 6 | [list](Network.md#list)| [NetworkQuery](Network.md#networkquery) | [NetworksInfo](Network.md#networksinfo) |  |
-| 7 | [stat](Network.md#stat)| [NetworkStatQuery](Network.md#networkstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](Network.md#create)| [CreateNetworkRequest](Network.md#createnetworkrequest)| [NetworkInfo](Network.md#networkinfo) |  |
+| 2 | [update](Network.md#update)| [UpdateNetworkRequest](Network.md#updatenetworkrequest)| [NetworkInfo](Network.md#networkinfo) |  |
+| 3 | [pin_data](Network.md#pin_data)| [PinNetworkDataRequest](Network.md#pinnetworkdatarequest)| [NetworkInfo](Network.md#networkinfo) |  |
+| 4 | [delete](Network.md#delete)| [NetworkRequest](Network.md#networkrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [get](Network.md#get)| [GetNetworkRequest](Network.md#getnetworkrequest)| [NetworkInfo](Network.md#networkinfo) |  |
+| 6 | [list](Network.md#list)| [NetworkQuery](Network.md#networkquery)| [NetworksInfo](Network.md#networksinfo) |  |
+| 7 | [stat](Network.md#stat)| [NetworkStatQuery](Network.md#networkstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ### create
 > **POST** /inventory/v1/networks
@@ -123,21 +123,21 @@ description:
 ### CreateNetworkRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | cidr |string |✅ ||
-| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | reference |[NetworkReference](Network.md#networkreference) |❌ ||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 7 | zone_id |string |✅ ||
-| 8 | domain_id |string |✅ ||
+| 1 | name |string | |required|
+| 2 | cidr |string | |required|
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | reference |[NetworkReference](Network.md#networkreference) | |optional|
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 7 | zone_id |string | |required|
+| 8 | domain_id |string | |required|
 
 ### GetNetworkRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | network_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | network_id |string | |required|
+| 2 | domain_id |string | |required|
+| 3 | only |string | |optional|
 
 ### NetworkInfo
 | No | Field | Type | Required | Description |
@@ -158,13 +158,13 @@ description:
 ### NetworkQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | network_id |string |❌ ||
-| 3 | name |string |❌ ||
-| 4 | cidr |string |❌ ||
-| 5 | zone_id |string |❌ ||
-| 6 | region_id |string |❌ ||
-| 7 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | |optional|
+| 2 | network_id |string | |optional|
+| 3 | name |string | |optional|
+| 4 | cidr |string | |optional|
+| 5 | zone_id |string | |optional|
+| 6 | region_id |string | |optional|
+| 7 | domain_id |string | |required|
 
 ### NetworkReference
 | No | Field | Type | Required | Description |
@@ -175,14 +175,14 @@ description:
 ### NetworkRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | network_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | network_id |string | |required|
+| 2 | domain_id |string | |required|
 
 ### NetworkStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | |required|
+| 2 | domain_id |string | |required|
 
 ### NetworksInfo
 | No | Field | Type | Required | Description |
@@ -193,17 +193,17 @@ description:
 ### PinNetworkDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | network_id |string |✅ ||
-| 2 | keys |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | network_id |string | |required|
+| 2 | keys |string | |required|
+| 3 | domain_id |string | |required|
 
 ### UpdateNetworkRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | network_id |string |✅ ||
-| 2 | name |string |❌ ||
-| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 5 | reference |[NetworkReference](Network.md#networkreference) |❌ ||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
-| 7 | domain_id |string |✅ ||
+| 1 | network_id |string | |required|
+| 2 | name |string | |optional|
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 5 | reference |[NetworkReference](Network.md#networkreference) | |optional|
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |optional|
+| 7 | domain_id |string | |required|

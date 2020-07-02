@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [issue](Token.md#issue)| [IssueTokenRequest](Token.md#issuetokenrequest) | [TokenInfo](Token.md#tokeninfo) |  |
-| 2 | [refresh](Token.md#refresh)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| [TokenInfo](Token.md#tokeninfo) |  |
+| 1 | [issue](Token.md#issue)| [IssueTokenRequest](Token.md#issuetokenrequest)| [TokenInfo](Token.md#tokeninfo) |  |
+| 2 | [refresh](Token.md#refresh)| [Empty]| [TokenInfo](Token.md#tokeninfo) |  |
 
 ### issue
 > **POST** /identity/v1/token/issue
@@ -51,11 +51,11 @@ description:
 ### IssueTokenRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 2 | domain_id |string|✅||
+| 1 | credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |required|
+| 2 | domain_id |string | |required|
 
 ### TokenInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | access_token |string|||
-| 2 | refresh_token |string|||
+| 1 | access_token |string | ||
+| 2 | refresh_token |string | ||
