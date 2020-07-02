@@ -456,20 +456,22 @@ def main():
         version_info = _diff_version(file_reference[0])
         ref_info = _build_a_reference(version_info)
         is_updated = version_info['is_updated']
-        if(is_updated):
-            _update_summary_infos(version_info, ref_info)
+
+        # if(is_updated):
+        #     _update_summary_infos(version_info, ref_info)
 
         json2 = create_modified_json(file_reference)
         man_managed = _get_human_doc_links()
         _generate_single_pb_mds(json2)
-        origin_history = _get_original_history(is_updated)
 
-        if os.path.exists(os.path.join(BASE_DIR, pre_v)):
-            version_records = _get_version_records()
-            if (len(version_records) > 0):
-                ref_info['version_record'] = version_records
-            if (len(origin_history) > 0):
-                ref_info['origin_history'] = origin_history
+        # origin_history = _get_original_history(is_updated)
+        #
+        # if os.path.exists(os.path.join(BASE_DIR, pre_v)):
+        #     version_records = _get_version_records()
+        #     if (len(version_records) > 0):
+        #         ref_info['version_record'] = version_records
+        #     if (len(origin_history) > 0):
+        #         ref_info['origin_history'] = origin_history
 
         _generate_summary_mds(file_reference, man_managed, ref_info)
         _update_current_version(VERSION, version_info['artifact_version'])
