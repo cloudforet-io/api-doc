@@ -89,6 +89,8 @@ description: Config Map API which configure environments for account
 | Request | [ConfigMapStatQuery](https://github.com/spaceone-dev/api-doc/tree/709a9f739008ac01f9038b4950fc11b1f3d05742/config/v1/Config-map.md#configmapstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
+## 
+
 ## Message
 
 ### ConfigMapInfo
