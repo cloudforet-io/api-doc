@@ -23,7 +23,10 @@ description: Config Map API which configure environments for account
 | 6 | [stat](Config-map.md#stat)| [ConfigMapStatQuery](Config-map.md#configmapstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
 ###
+
+
 ###
+
 
 ### create
 > **POST** /config/v1/config-maps
@@ -37,11 +40,11 @@ description: Config Map API which configure environments for account
 | Response |  [ConfigMapInfo](Config-map.md#configmapinfo)  |
 
 
+###
 
 
 ###
 
-###
 
 ### update
 > **PUT** /config/v1/config-map/{name}
