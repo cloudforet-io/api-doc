@@ -52,7 +52,7 @@ description: Config Map API which configure environments for account
 
 
 
-### 
+###.  
 
 ### delete
 > **DELETE** /config/v1/config-map/{name}
