@@ -52,7 +52,7 @@ description: Config Map API which configure environments for account
 
 
 
-###.  
+### 
 
 ### delete
 > **DELETE** /config/v1/config-map/{name}
@@ -69,7 +69,7 @@ description: Config Map API which configure environments for account
 &nbsp;
 
 
-### 
+### 0
 
 ### get
 > **GET** /config/v1/config-map/{name}
@@ -84,7 +84,8 @@ description: Config Map API which configure environments for account
 
 
 
-### 4
+### &nbsp;
+=====
 
 ### list
 > **GET** /config/v1/config-maps
@@ -100,8 +101,6 @@ description: Config Map API which configure environments for account
 | Response |  [ConfigMapsInfo](config-map.md#configmapsinfo)  |
 
 
-
-## &nbsp;
 
 
 ### stat
