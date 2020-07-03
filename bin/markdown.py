@@ -121,9 +121,14 @@ def field_desc_wrapper(desc):
             fd_desc['is_required'] = '❌'
         else:
             fd_desc['is_required'] = ''
+
     if ('desc' in fd_desc):
         if (fd_desc['desc']) is None:
             fd_desc['desc'] = ''
+
+    if ('desc' not in fd_desc and 'is_required' in fd_desc):
+            fd_desc['desc'] = ''
+
     return fd_desc
 
 
@@ -206,10 +211,16 @@ def create_modified_json(reference_files):
                              method['responseFullType_link'] = refer_link[method['responseFullType']]
 
                 for message in messages:
-                    for field in message["fields"]:
+                    is_require_exits = False
+                    for idx, field in enumerate(message["fields"]):
                         field_long_type_wrapper(message, field, enums)
                         field['description'] = field_desc_wrapper(field['description'])
                         field_full_type_wrapper(fname, field, refer_link, package)
+                        if(not is_require_exits and 'is_required' in field['description']):
+                            is_require_exits = True
+
+                    if(not is_require_exits):
+                        message['no_requires'] = 'true'
 
             full_single_json['file_info'] = fname
         return total_dictionary
@@ -230,6 +241,7 @@ def _generate_single_pb_mds(context_input):
 
         path_to_create = BASE_DIR
         print(value)
+        value['title_space'] = ' '
         for i in range(len(dic_name)):
             if(i == len(dic_name)-1):
                 continue
@@ -475,7 +487,7 @@ def main():
 
         _generate_summary_mds(file_reference, man_managed, ref_info)
         _update_current_version(VERSION, version_info['artifact_version'])
-        _delete_json1(TARGET_DIR)
+        #_delete_json1(TARGET_DIR)
 
 if __name__ == '__main__':
     main()
