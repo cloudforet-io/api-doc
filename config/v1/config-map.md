@@ -101,6 +101,7 @@ description: Config Map API which configure environments for account
 
 ### 
 
+
 ### stat
 > **POST** /config/v1/config-maps/stat
 >
