@@ -1,5 +1,5 @@
 ---
-description: null
+description: 'User API which allows member management within project, company, and domain'
 ---
 
 # User

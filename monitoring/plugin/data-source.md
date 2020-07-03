@@ -43,6 +43,6 @@ description: null
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource\_type | string | ✅ |  |
-| 2 | actions | [spaceone.api.core.v1.PluginAction](https://github.com/spaceone-dev/api-doc/tree/e98bb78952ea11f0e5b45ad4c708991d5e95f549/core/v1/Plugin.md##pluginaction) | ❌ |  |
+| 2 | actions | [spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction) | ❌ |  |
 | 3 | result | [PluginVerifyInfo](data-source.md#pluginverifyinfo) | ✅ |  |
 
