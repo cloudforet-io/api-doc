@@ -82,7 +82,7 @@ description: Config Map API which configure environments for account
 
 
 
-### 2
+### 3
 
 ### list
 > **GET** /config/v1/config-maps
