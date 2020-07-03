@@ -23,9 +23,9 @@ description: >-
 | 5 | [list](config-map.md#list) | [ConfigMapQuery](config-map.md#configmapquery) | [ConfigMapsInfo](config-map.md#configmapsinfo) |  |
 | 6 | [stat](config-map.md#stat) | [ConfigMapStatQuery](config-map.md#configmapstatquery) | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  |
 
+###
 
-
-
+###
 
 ### create
 
