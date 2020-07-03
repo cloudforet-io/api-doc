@@ -132,6 +132,10 @@ description: >-
 | Request | [ConfigMapRequest](config-map.md#configmaprequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
 
+
+
+
+
 ### get
 
 > **GET** /config/v1/config-map/{name}
