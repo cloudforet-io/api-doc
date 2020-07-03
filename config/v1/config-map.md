@@ -43,6 +43,8 @@ description: Config Map API which configure environments for account
 | Request | [UpdateConfigMapRequest](https://github.com/spaceone-dev/api-doc/tree/709a9f739008ac01f9038b4950fc11b1f3d05742/config/v1/Config-map.md#updateconfigmaprequest) |
 | Response | [ConfigMapInfo](https://github.com/spaceone-dev/api-doc/tree/709a9f739008ac01f9038b4950fc11b1f3d05742/config/v1/Config-map.md#configmapinfo) |
 
+### 
+
 ### delete
 
 > **DELETE** /config/v1/config-map/{name}
