@@ -5,7 +5,7 @@ description: Config Map API which configure environments for account
 
 >  **Package : spaceone.api.config.v1**
 
-<h2 style="color:#0080FB">ConfigMap</h2>
+## ConfigMap
 
 {% hint style="info" %}
 **ConfigMap Methods:**
@@ -15,14 +15,14 @@ description: Config Map API which configure environments for account
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Config-map.md#create)| [CreateConfigMapRequest](Config-map.md#createconfigmaprequest) | [ConfigMapInfo](Config-map.md#configmapinfo) |  |
-| 2 | [update](Config-map.md#update)| [UpdateConfigMapRequest](Config-map.md#updateconfigmaprequest) | [ConfigMapInfo](Config-map.md#configmapinfo) |  |
-| 3 | [delete](Config-map.md#delete)| [ConfigMapRequest](Config-map.md#configmaprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Config-map.md#get)| [GetConfigMapRequest](Config-map.md#getconfigmaprequest) | [ConfigMapInfo](Config-map.md#configmapinfo) |  |
-| 5 | [list](Config-map.md#list)| [ConfigMapQuery](Config-map.md#configmapquery) | [ConfigMapsInfo](Config-map.md#configmapsinfo) |  |
-| 6 | [stat](Config-map.md#stat)| [ConfigMapStatQuery](Config-map.md#configmapstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](config-map.md#create)| [CreateConfigMapRequest](config-map.md#createconfigmaprequest) | [ConfigMapInfo](config-map.md#configmapinfo) |  |
+| 2 | [update](config-map.md#update)| [UpdateConfigMapRequest](config-map.md#updateconfigmaprequest) | [ConfigMapInfo](config-map.md#configmapinfo) |  |
+| 3 | [delete](config-map.md#delete)| [ConfigMapRequest](config-map.md#configmaprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](config-map.md#get)| [GetConfigMapRequest](config-map.md#getconfigmaprequest) | [ConfigMapInfo](config-map.md#configmapinfo) |  |
+| 5 | [list](config-map.md#list)| [ConfigMapQuery](config-map.md#configmapquery) | [ConfigMapsInfo](config-map.md#configmapsinfo) |  |
+| 6 | [stat](config-map.md#stat)| [ConfigMapStatQuery](config-map.md#configmapstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 
-### 
+###  
 
 ### create
 > **POST** /config/v1/config-maps
@@ -32,12 +32,12 @@ description: Config Map API which configure environments for account
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateConfigMapRequest](Config-map.md#createconfigmaprequest) |
-| Response |  [ConfigMapInfo](Config-map.md#configmapinfo)  |
+| Request | [CreateConfigMapRequest](config-map.md#createconfigmaprequest) |
+| Response |  [ConfigMapInfo](config-map.md#configmapinfo)  |
 
 
 
-### 
+###  
 
 ### update
 > **PUT** /config/v1/config-map/{name}
@@ -47,8 +47,8 @@ description: Config Map API which configure environments for account
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateConfigMapRequest](Config-map.md#updateconfigmaprequest) |
-| Response |  [ConfigMapInfo](Config-map.md#configmapinfo)  |
+| Request | [UpdateConfigMapRequest](config-map.md#updateconfigmaprequest) |
+| Response |  [ConfigMapInfo](config-map.md#configmapinfo)  |
 
 
 
@@ -62,7 +62,7 @@ description: Config Map API which configure environments for account
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ConfigMapRequest](Config-map.md#configmaprequest) |
+| Request | [ConfigMapRequest](config-map.md#configmaprequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
 
 
@@ -77,8 +77,8 @@ description: Config Map API which configure environments for account
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetConfigMapRequest](Config-map.md#getconfigmaprequest) |
-| Response |  [ConfigMapInfo](Config-map.md#configmapinfo)  |
+| Request | [GetConfigMapRequest](config-map.md#getconfigmaprequest) |
+| Response |  [ConfigMapInfo](config-map.md#configmapinfo)  |
 
 
 
@@ -94,8 +94,8 @@ description: Config Map API which configure environments for account
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ConfigMapQuery](Config-map.md#configmapquery) |
-| Response |  [ConfigMapsInfo](Config-map.md#configmapsinfo)  |
+| Request | [ConfigMapQuery](config-map.md#configmapquery) |
+| Response |  [ConfigMapsInfo](config-map.md#configmapsinfo)  |
 
 
 
@@ -109,7 +109,7 @@ description: Config Map API which configure environments for account
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ConfigMapStatQuery](Config-map.md#configmapstatquery) |
+| Request | [ConfigMapStatQuery](config-map.md#configmapstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -151,7 +151,7 @@ description: Config Map API which configure environments for account
 ### ConfigMapsInfo
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[ConfigMapInfo](Config-map.md#configmapinfo)|||
+| 1 | results |[ConfigMapInfo](config-map.md#configmapinfo)|||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|||
 
 ### CreateConfigMapRequest
