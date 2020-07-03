@@ -487,7 +487,7 @@ def main():
 
         _generate_summary_mds(file_reference, man_managed, ref_info)
         _update_current_version(VERSION, version_info['artifact_version'])
-        #_delete_json1(TARGET_DIR)
+        _delete_json1(TARGET_DIR)
 
 if __name__ == '__main__':
     main()
