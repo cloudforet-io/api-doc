@@ -13,7 +13,7 @@
     "google.protobuf.Value": "https://developers.google.com/protocol-buffers/docs/reference/overview",
     "int32": "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto",
     "uint32": "https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto",
-    "spaceone.api.core.v1.PluginAction": "../../core/v1/Plugin.md##pluginaction"
+    "spaceone.api.core.v1.PluginAction": "../../core/v1/plugin.md##pluginaction"
   },
   "human_doc_links": {
     "Search_Query": "https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query",

@@ -238,10 +238,11 @@ def _generate_single_pb_mds(context_input):
         ff_name = key.replace(".json", ".md")
         dic_name = ff_name[ff_name.find('api')+4:len(ff_name)].split('/')
         f_name = dic_name[len(dic_name)-1].replace('_','-')
-
+        f_lower = f_name.lower()
         path_to_create = BASE_DIR
-        print(value)
+
         value['title_space'] = ' '
+
         for i in range(len(dic_name)):
             if(i == len(dic_name)-1):
                 continue
@@ -249,7 +250,7 @@ def _generate_single_pb_mds(context_input):
                 path_to_create = path_to_create + '/' + dic_name[i]
                 _create_subdirectories(path_to_create)
 
-        context_output = os.path.join(path_to_create, f_name)
+        context_output = os.path.join(path_to_create, f_lower)
         context_input = value
         _generate_md_file(context_output, TEMPLATE_NAMES[0], context_input)
 
@@ -279,7 +280,7 @@ def _generate_summary_mds(context_input, managed_link, history):
             if(_.get(table_of_contents, check_key, None) == None ):
                 if(i == (len(parsed_path)-1)):
                     _.set(table_of_contents, check_key, {})
-                    title_index.append({'title': updated_header.title(), 'url': full_file_name})
+                    title_index.append({'title': updated_header.title(), 'url': full_file_name.lower()})
                 else:
                     mk_path = check_key.replace('.', '/')
                     readme_url = mk_path + '/'+ 'README.md'
@@ -291,16 +292,16 @@ def _generate_summary_mds(context_input, managed_link, history):
                     _.set(table_of_contents, check_key, {})
                     title_index.append({'title': updated_header.title(), 'url': readme_url})
 
-    if ('version_record' in history and len(history['version_record']) > 0):
-        vtable_of_contents = []
-        gitbook_space = _.get(config, 'refer_link.git_book_space')
-        previous_version_md = os.path.join(BASE_DIR, 'previous_version', 'README.md')
-
-        for version in history['version_record']:
-            line = f'* [{version}]({gitbook_space}previous-versions/previous_version/{version}/)'
-            vtable_of_contents.append(line)
-
-        _generate_md_file(previous_version_md, TEMPLATE_NAMES[3], {'list': vtable_of_contents})
+    # if ('version_record' in history and len(history['version_record']) > 0):
+    #     vtable_of_contents = []
+    #     gitbook_space = _.get(config, 'refer_link.git_book_space')
+    #     previous_version_md = os.path.join(BASE_DIR, 'previous_version', 'README.md')
+    #
+    #     for version in history['version_record']:
+    #         line = f'* [{version}]({gitbook_space}previous-versions/previous_version/{version}/)'
+    #         vtable_of_contents.append(line)
+    #
+    #     _generate_md_file(previous_version_md, TEMPLATE_NAMES[3], {'list': vtable_of_contents})
 
     output_to_create = os.path.join(BASE_DIR, 'SUMMARY.md')
     context_input = {'toc': title_index}
@@ -400,9 +401,11 @@ def _get_summary_info(version_info):
                     body = line[line.find('](') + 2: line.find('/')]
                     tail = line[line.find('/'): len(line)]
                     m_line = f'{common_indent}{head}]({pre}/v{vinfo}/{body}{tail}'
+
                     # check_path = os.path.join(BASE_DIR, m_line[m_line.find('](') + 2: m_line.rfind(')')])
                     # print(check_path)
                     # if os.path.isfile(check_path):
+
                     line_contents.append(m_line)
 
         previous_summary['title_lines'] = line_contents
@@ -459,6 +462,7 @@ def _build_a_reference(version_info):
     return ref
 
 
+
 def main():
     file_reference = create_reference_json()
     if len(file_reference) == 0:
@@ -487,7 +491,7 @@ def main():
 
         _generate_summary_mds(file_reference, man_managed, ref_info)
         _update_current_version(VERSION, version_info['artifact_version'])
-        _delete_json1(TARGET_DIR)
+        #_delete_json1(TARGET_DIR)
 
 if __name__ == '__main__':
     main()
