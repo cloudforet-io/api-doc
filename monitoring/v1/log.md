@@ -45,8 +45,8 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | data_source_id |string|✅||
-| 2 | resource_type |string|❌||
-| 3 | resource_id |string|❌||
+| 2 | resource_type |string|✅||
+| 3 | resource_id |string|✅||
 | 4 | start |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|❌||
 | 5 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|❌||
 | 6 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||

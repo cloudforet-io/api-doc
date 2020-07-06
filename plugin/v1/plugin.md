@@ -61,7 +61,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | plugin_id |string|✅||
 | 2 | version |string|✅||
-| 3 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 3 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
 | 4 | domain_id |string|✅||
 
 ### PluginFailureRequest

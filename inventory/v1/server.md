@@ -496,7 +496,7 @@ description:
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:left">❌</td>
-<td style="text-align:left">core query</td>
+<td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>

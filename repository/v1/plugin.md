@@ -419,6 +419,6 @@ description:
 ### VersionsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | version |string|Deprecated|
+| 1 | version |string|deprecated field|
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 | 3 | results |string||

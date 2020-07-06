@@ -195,7 +195,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅||
-| 2 | parent_project_group_id |string|✅||
+| 2 | parent_project_group_id |string|❌||
 | 3 | domain_id |string|✅||
 | 4 | template_id |string|❌||
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
@@ -241,8 +241,8 @@ description:
 | 1 | project_group_id |string|✅||
 | 2 | user_id |string|✅||
 | 3 | domain_id |string|✅||
-| 4 | roles |string|✅||
-| 5 | labels |string|✅||
+| 4 | roles |string|❌||
+| 5 | labels |string|❌||
 
 ### ProjectGroupMembersInfo
 | No | Field | Type |  Description |
@@ -316,7 +316,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | project_group_id |string|✅||
-| 2 | parent_project_group_id |string|✅||
+| 2 | parent_project_group_id |string|❌||
 | 3 | name |string|❌||
 | 4 | release_parent_project_group |bool|❌||
 | 5 | domain_id |string|✅||

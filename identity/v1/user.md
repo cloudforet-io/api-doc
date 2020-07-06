@@ -232,18 +232,18 @@ description: User API which allows member management within project, company, an
 ## Message
 
 ### CreateUserRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | user_id |string|required|
-| 2 | password |string|optional|
-| 3 | name |string|optional|
-| 4 | email |string|optional|
-| 5 | mobile |string|optional|
-| 6 | group |string|optional|
-| 7 | language |string|optional|
-| 8 | timezone |string|optional|
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|optional|
-| 10 | domain_id |string|optional|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | user_id |string|✅||
+| 2 | password |string|❌||
+| 3 | name |string|❌||
+| 4 | email |string|❌||
+| 5 | mobile |string|❌||
+| 6 | group |string|❌||
+| 7 | language |string|❌||
+| 8 | timezone |string|❌||
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 10 | domain_id |string|✅||
 
 ### FindUserInfo
 | No | Field | Type |  Description |
@@ -256,10 +256,10 @@ description: User API which allows member management within project, company, an
 | 6 | state |string||
 
 ### FindUserQuery
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | search |[FindUserSearch](User.md#findusersearch)||
-| 2 | domain_id |string||
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | search |[FindUserSearch](User.md#findusersearch)|✅||
+| 2 | domain_id |string|✅||
 
 ### FindUserSearch
 | No | Field | Type |  Description |
@@ -281,25 +281,25 @@ description: User API which allows member management within project, company, an
 | 3 | only |string|❌||
 
 ### UpdateUserRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | user_id |string||
-| 2 | password |string||
-| 3 | name |string||
-| 4 | email |string||
-| 5 | mobile |string||
-| 6 | group |string||
-| 7 | language |string||
-| 8 | timezone |string||
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
-| 10 | domain_id |string||
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | user_id |string|✅||
+| 2 | password |string|❌||
+| 3 | name |string|❌||
+| 4 | email |string|❌||
+| 5 | mobile |string|❌||
+| 6 | group |string|❌||
+| 7 | language |string|❌||
+| 8 | timezone |string|❌||
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 10 | domain_id |string|✅||
 
 ### UpdateUserRoleRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | user_id |string||
-| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)||
-| 3 | domain_id |string||
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | user_id |string|✅||
+| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅||
+| 3 | domain_id |string|✅||
 
 ### UserInfo
 <table>
@@ -423,9 +423,7 @@ description: User API which allows member management within project, company, an
 | 6 | mobile |string|❌||
 | 7 | group |string|❌||
 | 8 | role_id |string|❌||
-| 9 | project_id |string|❌||
-| 10 | project_group_id |string|❌||
-| 11 | domain_id |string|❌||
+| 9 | domain_id |string|❌||
 
 ### UserRequest
 | No | Field | Type | Required | Description |

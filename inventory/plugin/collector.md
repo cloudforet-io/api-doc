@@ -51,9 +51,9 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 3 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | zone_id |string|❌||
-| 5 | pool_id |string|❌||
+| 3 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
+| 4 | zone_id |string|✅||
+| 5 | pool_id |string|✅||
 
 ### CollectorVerifyInfo
 | No | Field | Type |  Description |

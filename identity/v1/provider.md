@@ -121,14 +121,14 @@ description:
 | 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 7 | domain_id |string|❌||
+| 7 | domain_id |string|✅||
 
 ### GetProviderRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | provider |string|✅||
 | 2 | only |string|❌||
-| 3 | domain_id |string|❌||
+| 3 | domain_id |string|✅||
 
 ### ProviderInfo
 | No | Field | Type |  Description |
@@ -147,18 +147,19 @@ description:
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
 | 2 | provider |string|❌||
 | 3 | name |string|❌||
-| 4 | domain_id |string|❌||
+| 4 | domain_id |string|✅||
 
 ### ProviderRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | provider |string|✅||
-| 2 | domain_id |string|❌||
+| 2 | domain_id |string|✅||
 
 ### ProviderStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### ProvidersInfo
 | No | Field | Type |  Description |
@@ -175,4 +176,4 @@ description:
 | 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 7 | domain_id |string|❌||
+| 7 | domain_id |string|✅||

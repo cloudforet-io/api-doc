@@ -83,7 +83,7 @@ description:
 ### CreateDomainOwner
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | owner_id |string|✅||
+| 1 | owner_id |string|❌||
 | 2 | password |string|✅||
 | 3 | name |string|❌||
 | 4 | email |string|❌||
@@ -114,9 +114,9 @@ description:
 ### GetDomainOwnerRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string||required|
-| 2 | owner_id |string||required|
-| 3 | only |string||optional|
+| 1 | domain_id |string|✅||
+| 2 | owner_id |string|✅||
+| 3 | only |string|❌||
 
 ### UpdateDomainOwner
 | No | Field | Type | Required | Description |

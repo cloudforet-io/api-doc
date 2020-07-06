@@ -175,20 +175,20 @@ description:
 ## Message
 
 ### CreateProjectRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | name |string|required|
-| 2 | project_group_id |string|required|
-| 3 | domain_id |string|required|
-| 4 | template_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|optional|
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|optional|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | name |string|✅||
+| 2 | project_group_id |string|✅||
+| 3 | domain_id |string|✅||
+| 4 | template_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 
 ### GetProjectRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | project_id |string|required|
-| 2 | domain_id |string|required|
-| 3 | only |string|optional|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | project_id |string|✅||
+| 2 | domain_id |string|✅||
+| 3 | only |string|❌||
 
 ### ProjectInfo
 | No | Field | Type |  Description |
@@ -212,21 +212,21 @@ description:
 | 4 | labels |string||
 
 ### ProjectMemberQuery
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|optional|
-| 2 | project_id |string|required|
-| 3 | domain_id |string|required|
-| 4 | user_id |string|optional|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
+| 2 | project_id |string|✅||
+| 3 | domain_id |string|✅||
+| 4 | user_id |string|❌||
 
 ### ProjectMemberRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | project_id |string|required|
-| 2 | user_id |string|required|
-| 3 | domain_id |string|required|
-| 4 | roles |string|required|
-| 5 | labels |string|required|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | project_id |string|✅||
+| 2 | user_id |string|✅||
+| 3 | domain_id |string|✅||
+| 4 | roles |string|❌||
+| 5 | labels |string|❌||
 
 ### ProjectMembersInfo
 | No | Field | Type |  Description |
@@ -235,25 +235,25 @@ description:
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### ProjectQuery
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|optional|
-| 2 | project_id |string|optional|
-| 3 | project_group_id |string|optional|
-| 4 | domain_id |string|required|
-| 5 | name |string|optional|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
+| 2 | project_id |string|❌||
+| 3 | project_group_id |string|||
+| 4 | domain_id |string|✅||
+| 5 | name |string|❌||
 
 ### ProjectRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | project_id |string|required|
-| 2 | domain_id |string|required|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | project_id |string|✅||
+| 2 | domain_id |string|✅||
 
 ### ProjectStatQuery
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|required|
-| 2 | domain_id |string|required|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
+| 2 | domain_id |string|✅||
 
 ### ProjectsInfo
 | No | Field | Type |  Description |
@@ -262,18 +262,18 @@ description:
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### RemoveProjectMemberRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | project_id |string|required|
-| 2 | user_id |string|required|
-| 3 | domain_id |string|required|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | project_id |string|✅||
+| 2 | user_id |string|✅||
+| 3 | domain_id |string|✅||
 
 ### UpdateProjectRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | project_id |string|required|
-| 2 | project_group_id |string|optional|
-| 3 | name |string|optional|
-| 4 | domain_id |string|required|
-| 5 | template_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|optional|
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|optional|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | project_id |string|✅||
+| 2 | project_group_id |string|❌||
+| 3 | name |string|❌||
+| 4 | domain_id |string|✅||
+| 5 | template_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||

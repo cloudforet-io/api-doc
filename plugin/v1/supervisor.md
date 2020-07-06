@@ -190,11 +190,11 @@ description:
 ## Message
 
 ### GetSupervisorRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|required|
-| 2 | domain_id |string|required|
-| 3 | only |string|optional|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | supervisor_id |string|✅||
+| 2 | domain_id |string|✅||
+| 3 | only |string|❌||
 
 ### PluginInfo
 <table>
@@ -358,34 +358,34 @@ description:
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### PublishSupervisorRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | name |string|required|
-| 2 | hostname |string|required|
-| 3 | secret_key |string|optional|
-| 4 | plugin_info |[PluginInfo](Supervisor.md#plugininfo)|optional|
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|optional|
-| 6 | is_public |bool|optional|
-| 7 | domain_id |string|required|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | name |string|✅||
+| 2 | hostname |string|✅||
+| 3 | secret_key |string|❌||
+| 4 | plugin_info |[PluginInfo](Supervisor.md#plugininfo)|❌||
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 6 | is_public |bool|❌||
+| 7 | domain_id |string|✅||
 
 ### RecoverPluginRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|required|
-| 2 | plugin_id |string|required|
-| 3 | version |string|required|
-| 4 | domain_id |string|required|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | supervisor_id |string|✅||
+| 2 | plugin_id |string|✅||
+| 3 | version |string|✅||
+| 4 | domain_id |string|✅||
 
 ### RegisterSupervisorRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|required|
-| 2 | name |string|required|
-| 3 | is_public |bool|optional|
-| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|optional|
-| 5 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|optional|
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|optional|
-| 7 | domain_id |string|required|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | supervisor_id |string|✅||
+| 2 | name |string|❌||
+| 3 | is_public |bool|❌||
+| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌||
+| 5 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 7 | domain_id |string|✅||
 
 ### SupervisorInfo
 <table>
@@ -488,10 +488,10 @@ description:
 | 5 | domain_id |string|✅||
 
 ### SupervisorRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|required|
-| 2 | domain_id |string|required|
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | supervisor_id |string|✅||
+| 2 | domain_id |string|✅||
 
 ### SupervisorStatQuery
 | No | Field | Type | Required | Description |
