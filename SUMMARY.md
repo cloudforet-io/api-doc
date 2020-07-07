@@ -51,6 +51,7 @@
 * [Repository](repository/README.md)
   * [V1](repository/v1/README.md)
     * [Plugin](repository/v1/plugin.md)
+    * [Policy](repository/v1/policy.md)
     * [Repository](repository/v1/repository.md)
     * [Schema](repository/v1/schema.md)
 * [Secret](secret/README.md)
