@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**get_plugin_endpoint**](plugin.md#get_plugin_endpoint)|   [PluginEndpointRequest](plugin.md#pluginendpointrequest) |   [PluginEndpoint](plugin.md#pluginendpoint) |  |
-| 2 | [**notify_failure**](plugin.md#notify_failure)|   [PluginFailureRequest](plugin.md#pluginfailurerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
+| 1 | [**get_plugin_endpoint**](plugin.md#get_plugin_endpoint)|   [PluginEndpointRequest](plugin.md#pluginendpointrequest) |   [PluginEndpoint](plugin.md#pluginendpoint) | Retrieve plugins end points. |
+| 2 | [**notify_failure**](plugin.md#notify_failure)|   [PluginFailureRequest](plugin.md#pluginfailurerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| send a notification if it has failed. | 
  
 
  
@@ -24,6 +24,7 @@ description:
 > **POST** /plugin/v1/plugin/{plugin_id}/get-endpoint
 >
 
+> Retrieve plugins end points.
 
 | Type | Message |
 | :--- | :--- |
@@ -37,6 +38,7 @@ description:
 > **PUT** /plugin/v1/plugin/{plugin_id}/notify-failure
 >
 
+> send a notification if it has failed.
 
 | Type | Message |
 | :--- | :--- |

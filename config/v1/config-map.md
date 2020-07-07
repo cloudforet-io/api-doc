@@ -15,7 +15,7 @@ description: Config Map API which configure environments for account
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](config-map.md#create)|   [CreateConfigMapRequest](config-map.md#createconfigmaprequest) |   [ConfigMapInfo](config-map.md#configmapinfo) | this is a test |
+| 1 | [**create**](config-map.md#create)|   [CreateConfigMapRequest](config-map.md#createconfigmaprequest) |   [ConfigMapInfo](config-map.md#configmapinfo) |  |
 | 2 | [**update**](config-map.md#update)|   [UpdateConfigMapRequest](config-map.md#updateconfigmaprequest) |   [ConfigMapInfo](config-map.md#configmapinfo) |  |
 | 3 | [**delete**](config-map.md#delete)|   [ConfigMapRequest](config-map.md#configmaprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 4 | [**get**](config-map.md#get)|   [GetConfigMapRequest](config-map.md#getconfigmaprequest) |   [ConfigMapInfo](config-map.md#configmapinfo) |  |
@@ -28,7 +28,6 @@ description: Config Map API which configure environments for account
 > **POST** /config/v1/config-maps
 >
 
-> this is a test
 
 | Type | Message |
 | :--- | :--- |
@@ -132,7 +131,7 @@ description: Config Map API which configure environments for account
 ### ConfigMapStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| None|
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
 ### ConfigMapsInfo

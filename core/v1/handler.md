@@ -12,13 +12,13 @@ description:
 ### AuthenticationRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string||
+| 1 | domain_id |string| |
 
 ### AuthenticationResponse
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string||
-| 2 | public_key |string||
+| 1 | domain_id |string| |
+| 2 | public_key |string| |
 
 ### AuthorizationRequest
 <table>
@@ -73,16 +73,17 @@ description:
 </table>
 
 
+
 ### AuthorizationResponse
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | role_type |string||
+| 1 | role_type |string| |
 
 ### EventRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | service |string||
-| 2 | resource |string||
-| 3 | verb |string||
-| 4 | state |string||
-| 5 | message |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
+| 1 | service |string| |
+| 2 | resource |string| |
+| 3 | verb |string| |
+| 4 | state |string| |
+| 5 | message |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
