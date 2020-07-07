@@ -1,6 +1,5 @@
 # Table of contents
 
-* [Introduction](README.md)
 * [Config](config/README.md)
   * [V1](config/v1/README.md)
     * [Config Map](config/v1/config-map.md)
@@ -52,6 +51,7 @@
 * [Repository](repository/README.md)
   * [V1](repository/v1/README.md)
     * [Plugin](repository/v1/plugin.md)
+    * [Policy](repository/v1/policy.md)
     * [Repository](repository/v1/repository.md)
     * [Schema](repository/v1/schema.md)
 * [Secret](secret/README.md)
@@ -63,6 +63,7 @@
     * [History](statistics/v1/history.md)
     * [Resource](statistics/v1/resource.md)
     * [Schedule](statistics/v1/schedule.md)
+
 
 ## Reference Link
 
