@@ -1,39 +1,33 @@
 ---
-description:  
+description: null
 ---
-# Server info
 
->  **Package : spaceone.api.core.v1**
+# Server Info
+
+> **Package : spaceone.api.core.v1**
 
 ## ServerInfo
 
 {% hint style="info" %}
 **ServerInfo Methods:**
+{% endhint %}
 
-{%  endhint %}
-
-
-| NO |  Method | Request Type | Response Type | Description |
+| NO | Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**get_version**](server-info.md#get_version)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| [VersionInfo](server-info.md#versioninfo) |  | 
- 
- 
- 
- 
-### get_version
+| 1 | [**get\_version**](server-info.md#get_version) | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) | [VersionInfo](server-info.md#versioninfo) |  |
 
+### get\_version
 
 | Type | Message |
 | :--- | :--- |
-| Request | [Empty] |
-| Response |  [VersionInfo](server-info.md#versioninfo)  |
-
-
-## 
+| Request | \[Empty\] |
+| Response | [VersionInfo](server-info.md#versioninfo) |
 
 ## Message
 
 ### VersionInfo
-| No | Field | Type |  Description |
+
+| No | Field | Type | Description |
 | :--- | :--- | :--- | :--- |
-| 1 | version |string||
+| 1 | version | string |  |
+

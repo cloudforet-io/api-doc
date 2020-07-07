@@ -1,5 +1,6 @@
 # Table of contents
 
+* [Introduction](README.md)
 * [Config](config/README.md)
   * [V1](config/v1/README.md)
     * [Config Map](config/v1/config-map.md)
@@ -62,7 +63,6 @@
     * [History](statistics/v1/history.md)
     * [Resource](statistics/v1/resource.md)
     * [Schedule](statistics/v1/schedule.md)
-
 
 ## Reference Link
 
