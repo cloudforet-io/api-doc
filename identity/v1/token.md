@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [issue](Token.md#issue)| [IssueTokenRequest](Token.md#issuetokenrequest) | [TokenInfo](Token.md#tokeninfo) |  |
-| 2 | [refresh](Token.md#refresh)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| [TokenInfo](Token.md#tokeninfo) |  | 
+| 1 | [issue](token.md#issue)| [IssueTokenRequest](token.md#issuetokenrequest) | [TokenInfo](token.md#tokeninfo) |  |
+| 2 | [refresh](token.md#refresh)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| [TokenInfo](token.md#tokeninfo) |  | 
  
  
  
@@ -28,8 +28,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [IssueTokenRequest](Token.md#issuetokenrequest) |
-| Response |  [TokenInfo](Token.md#tokeninfo)  |
+| Request | [IssueTokenRequest](token.md#issuetokenrequest) |
+| Response |  [TokenInfo](token.md#tokeninfo)  |
  
  
  
@@ -43,7 +43,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [Empty] |
-| Response |  [TokenInfo](Token.md#tokeninfo)  |
+| Response |  [TokenInfo](token.md#tokeninfo)  |
 
 
 ## 

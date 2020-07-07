@@ -99,6 +99,7 @@ def get_file_syntax(file_path):
     file_syntax['title'] = file[0].replace('_', ' ')
     file_syntax['header'] = file[0].replace('_', '-')
     file_syntax['full_name'] = file[0].replace('_', '-')+'.md'
+    file_syntax['full_name_lower'] = file[0].replace('_', '-').lower() + '.md'
     return file_syntax
 
 def key_path_creator(path):
@@ -139,7 +140,7 @@ def field_full_type_wrapper(fname, field, refer_link, package):
     elif field["fullType"].startswith(package, 0, len(package)):
         type_name_index = field["fullType"].rfind('.') + 1
         length = len(field["fullType"])
-        field["fullType_link"] = fname['full_name']+'#'+field["fullType"][type_name_index:length].lower()
+        field["fullType_link"] = fname['full_name'].lower()+'#'+field["fullType"][type_name_index:length].lower()
 
 def field_long_type_wrapper(message, field, long_dict):
      if field['longType'] in long_dict:
@@ -152,9 +153,9 @@ def is_exists_in_same_file(reference_context, method, fname):
     req_status = req in reference_context
     res_status = res in reference_context
     if (req_status):
-        method['req_link'] = fname['full_name']+'#'+method['requestLongType'].lower()
+        method['req_link'] = fname['full_name'].lower()+'#'+method['requestLongType'].lower()
     if (res_status):
-        method['res_link'] = fname['full_name']+'#'+method['responseLongType'].lower()
+        method['res_link'] = fname['full_name'].lower()+'#'+method['responseLongType'].lower()
 
     return {
         'req_status': req_status,
@@ -292,17 +293,6 @@ def _generate_summary_mds(context_input, managed_link, history):
                     _.set(table_of_contents, check_key, {})
                     title_index.append({'title': updated_header.title(), 'url': readme_url})
 
-    # if ('version_record' in history and len(history['version_record']) > 0):
-    #     vtable_of_contents = []
-    #     gitbook_space = _.get(config, 'refer_link.git_book_space')
-    #     previous_version_md = os.path.join(BASE_DIR, 'previous_version', 'README.md')
-    #
-    #     for version in history['version_record']:
-    #         line = f'* [{version}]({gitbook_space}previous-versions/previous_version/{version}/)'
-    #         vtable_of_contents.append(line)
-    #
-    #     _generate_md_file(previous_version_md, TEMPLATE_NAMES[3], {'list': vtable_of_contents})
-
     output_to_create = os.path.join(BASE_DIR, 'SUMMARY.md')
     context_input = {'toc': title_index}
     context_input['managed_link'] = _normalize_managed_link(managed_link)
@@ -351,68 +341,6 @@ def _transfer_previous_doc(folders, pwd):
         if not os.path.exists(tar_f):
             shutil.move(src_f, pwd)
 
-def _get_original_history(is_updated):
-    filepath = os.path.join(BASE_DIR, 'SUMMARY.md')
-    all_previous_ref = []
-    with open(filepath) as fp:
-        is_previous_v = False
-        for line in fp:
-            if(line.find('Previous Versions') > 0):
-                 is_previous_v = True
-
-            if(is_previous_v):
-                if (line.find('[Previous Versions]') > 0):
-                    continue
-
-                line = line.replace('\n', '')
-                check_path = os.path.join(BASE_DIR, line[line.find('](') + 2: line.rfind(')')])
-                if os.path.isfile(check_path):
-                    all_previous_ref.append(line)
-
-    if not(is_updated):
-        all_previous_ref.insert(0, '* [Previous Versions](previous_version/README.md)')
-
-    return all_previous_ref
-
-def _get_summary_info(version_info):
-    filepath = os.path.join(BASE_DIR, 'SUMMARY.md')
-    vinfo = version_info['current_version']
-    previous_summary = {}
-    mfolder_name = []
-    line_contents = [f'* [Previous Versions](previous_version/README.md)', f'  * [v{vinfo}](previous_version/v{vinfo}/README.md)']
-
-    with open(filepath) as fp:
-        is_summary = False
-        for line in fp:
-            if(line.find('Table of contents') > 0):
-                is_summary = True
-            elif(line.find('Reference Link') > 0):
-                is_summary = False
-
-            if(is_summary):
-                line = line.replace('\n', '')
-                common_indent = '    '
-                line_checker = line[0: line.find('](')]
-                if(line_checker.startswith('*')):
-                    mfolder_name.append(line[line.find('](')+2:line.find('/')])
-                if(line.find('*') > -1):
-                    pre = 'previous_version'
-                    head = line[0:line.find('](')]
-                    body = line[line.find('](') + 2: line.find('/')]
-                    tail = line[line.find('/'): len(line)]
-                    m_line = f'{common_indent}{head}]({pre}/v{vinfo}/{body}{tail}'
-
-                    # check_path = os.path.join(BASE_DIR, m_line[m_line.find('](') + 2: m_line.rfind(')')])
-                    # print(check_path)
-                    # if os.path.isfile(check_path):
-
-                    line_contents.append(m_line)
-
-        previous_summary['title_lines'] = line_contents
-        previous_summary['movable_fd'] = mfolder_name
-
-    return previous_summary
-
 def _diff_version(f_path):
     current_version = _get_current_api_version()
     artifact_version = _get_artifact_version(f_path)
@@ -425,11 +353,6 @@ def _diff_version(f_path):
         version['is_updated'] = False
     return version
 
-def _get_version_records():
-    path_to_check = os.path.join(BASE_DIR, 'previous_version')
-    root, dirs, files = next(os.walk(path_to_check))
-    return dirs
-
 def _get_human_doc_links():
     config = _get_json_data(os.path.join(BASE_DIR, 'config.json'))
     human_doc_links = _.get(config, 'human_doc_links')
@@ -440,17 +363,6 @@ def _update_current_version(file_path, version_info):
         f.seek(0)
         f.write(version_info)
         f.close()
-
-def _update_summary_infos(version_info, ref_info):
-    pre_v = 'previous_version'
-    previous_summary = _get_summary_info(version_info)
-    ref_info['added_history'] = previous_summary['title_lines']
-    p_base_folder = os.path.join(BASE_DIR, pre_v)
-    p_folder = os.path.join(BASE_DIR, pre_v, 'v' + version_info['current_version'])
-
-    _create_subdirectories(p_base_folder)
-    _create_subdirectories(p_folder)
-    _transfer_previous_doc(previous_summary['movable_fd'], p_folder)
 
 def _build_a_reference(version_info):
     ref = {}
@@ -468,30 +380,17 @@ def main():
     if len(file_reference) == 0:
         _error("No artifact JSON")
     else:
-        pre_v = 'previous_version'
         version_info = _diff_version(file_reference[0])
         ref_info = _build_a_reference(version_info)
-        is_updated = version_info['is_updated']
-
-        # if(is_updated):
-        #     _update_summary_infos(version_info, ref_info)
 
         json2 = create_modified_json(file_reference)
         man_managed = _get_human_doc_links()
         _generate_single_pb_mds(json2)
 
-        # origin_history = _get_original_history(is_updated)
-        #
-        # if os.path.exists(os.path.join(BASE_DIR, pre_v)):
-        #     version_records = _get_version_records()
-        #     if (len(version_records) > 0):
-        #         ref_info['version_record'] = version_records
-        #     if (len(origin_history) > 0):
-        #         ref_info['origin_history'] = origin_history
 
         _generate_summary_mds(file_reference, man_managed, ref_info)
         _update_current_version(VERSION, version_info['artifact_version'])
-        #_delete_json1(TARGET_DIR)
+        _delete_json1(TARGET_DIR)
 
 if __name__ == '__main__':
     main()

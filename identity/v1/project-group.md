@@ -15,17 +15,17 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Project-group.md#create)| [CreateProjectGroupRequest](Project-group.md#createprojectgrouprequest) | [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
-| 2 | [update](Project-group.md#update)| [UpdateProjectGroupRequest](Project-group.md#updateprojectgrouprequest) | [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
-| 3 | [delete](Project-group.md#delete)| [ProjectGroupRequest](Project-group.md#projectgrouprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [add_member](Project-group.md#add_member)| [ProjectGroupMemberRequest](Project-group.md#projectgroupmemberrequest) | [ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo) |  |
-| 5 | [modify_member](Project-group.md#modify_member)| [ProjectGroupMemberRequest](Project-group.md#projectgroupmemberrequest) | [ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo) |  |
-| 6 | [remove_member](Project-group.md#remove_member)| [RemoveProjectGroupMemberRequest](Project-group.md#removeprojectgroupmemberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [get](Project-group.md#get)| [GetProjectGroupRequest](Project-group.md#getprojectgrouprequest) | [ProjectGroupInfo](Project-group.md#projectgroupinfo) |  |
-| 8 | [list](Project-group.md#list)| [ProjectGroupQuery](Project-group.md#projectgroupquery) | [ProjectGroupsInfo](Project-group.md#projectgroupsinfo) |  |
-| 9 | [stat](Project-group.md#stat)| [ProjectGroupStatQuery](Project-group.md#projectgroupstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 10 | [list_members](Project-group.md#list_members)| [ProjectGroupMemberQuery](Project-group.md#projectgroupmemberquery) | [ProjectGroupMembersInfo](Project-group.md#projectgroupmembersinfo) |  |
-| 11 | [list_projects](Project-group.md#list_projects)| [ProjectGroupProjectQuery](Project-group.md#projectgroupprojectquery) | [ProjectGroupProjectsInfo](Project-group.md#projectgroupprojectsinfo) |  | 
+| 1 | [create](project-group.md#create)| [CreateProjectGroupRequest](project-group.md#createprojectgrouprequest) | [ProjectGroupInfo](project-group.md#projectgroupinfo) |  |
+| 2 | [update](project-group.md#update)| [UpdateProjectGroupRequest](project-group.md#updateprojectgrouprequest) | [ProjectGroupInfo](project-group.md#projectgroupinfo) |  |
+| 3 | [delete](project-group.md#delete)| [ProjectGroupRequest](project-group.md#projectgrouprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [add_member](project-group.md#add_member)| [ProjectGroupMemberRequest](project-group.md#projectgroupmemberrequest) | [ProjectGroupMemberInfo](project-group.md#projectgroupmemberinfo) |  |
+| 5 | [modify_member](project-group.md#modify_member)| [ProjectGroupMemberRequest](project-group.md#projectgroupmemberrequest) | [ProjectGroupMemberInfo](project-group.md#projectgroupmemberinfo) |  |
+| 6 | [remove_member](project-group.md#remove_member)| [RemoveProjectGroupMemberRequest](project-group.md#removeprojectgroupmemberrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [get](project-group.md#get)| [GetProjectGroupRequest](project-group.md#getprojectgrouprequest) | [ProjectGroupInfo](project-group.md#projectgroupinfo) |  |
+| 8 | [list](project-group.md#list)| [ProjectGroupQuery](project-group.md#projectgroupquery) | [ProjectGroupsInfo](project-group.md#projectgroupsinfo) |  |
+| 9 | [stat](project-group.md#stat)| [ProjectGroupStatQuery](project-group.md#projectgroupstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 10 | [list_members](project-group.md#list_members)| [ProjectGroupMemberQuery](project-group.md#projectgroupmemberquery) | [ProjectGroupMembersInfo](project-group.md#projectgroupmembersinfo) |  |
+| 11 | [list_projects](project-group.md#list_projects)| [ProjectGroupProjectQuery](project-group.md#projectgroupprojectquery) | [ProjectGroupProjectsInfo](project-group.md#projectgroupprojectsinfo) |  | 
  
  
  
@@ -37,8 +37,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateProjectGroupRequest](Project-group.md#createprojectgrouprequest) |
-| Response |  [ProjectGroupInfo](Project-group.md#projectgroupinfo)  |
+| Request | [CreateProjectGroupRequest](project-group.md#createprojectgrouprequest) |
+| Response |  [ProjectGroupInfo](project-group.md#projectgroupinfo)  |
  
  
  
@@ -51,8 +51,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateProjectGroupRequest](Project-group.md#updateprojectgrouprequest) |
-| Response |  [ProjectGroupInfo](Project-group.md#projectgroupinfo)  |
+| Request | [UpdateProjectGroupRequest](project-group.md#updateprojectgrouprequest) |
+| Response |  [ProjectGroupInfo](project-group.md#projectgroupinfo)  |
  
  
  
@@ -65,7 +65,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProjectGroupRequest](Project-group.md#projectgrouprequest) |
+| Request | [ProjectGroupRequest](project-group.md#projectgrouprequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -79,8 +79,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProjectGroupMemberRequest](Project-group.md#projectgroupmemberrequest) |
-| Response |  [ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo)  |
+| Request | [ProjectGroupMemberRequest](project-group.md#projectgroupmemberrequest) |
+| Response |  [ProjectGroupMemberInfo](project-group.md#projectgroupmemberinfo)  |
  
  
  
@@ -93,8 +93,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProjectGroupMemberRequest](Project-group.md#projectgroupmemberrequest) |
-| Response |  [ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo)  |
+| Request | [ProjectGroupMemberRequest](project-group.md#projectgroupmemberrequest) |
+| Response |  [ProjectGroupMemberInfo](project-group.md#projectgroupmemberinfo)  |
  
  
  
@@ -107,7 +107,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RemoveProjectGroupMemberRequest](Project-group.md#removeprojectgroupmemberrequest) |
+| Request | [RemoveProjectGroupMemberRequest](project-group.md#removeprojectgroupmemberrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -121,8 +121,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetProjectGroupRequest](Project-group.md#getprojectgrouprequest) |
-| Response |  [ProjectGroupInfo](Project-group.md#projectgroupinfo)  |
+| Request | [GetProjectGroupRequest](project-group.md#getprojectgrouprequest) |
+| Response |  [ProjectGroupInfo](project-group.md#projectgroupinfo)  |
  
  
  
@@ -137,8 +137,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProjectGroupQuery](Project-group.md#projectgroupquery) |
-| Response |  [ProjectGroupsInfo](Project-group.md#projectgroupsinfo)  |
+| Request | [ProjectGroupQuery](project-group.md#projectgroupquery) |
+| Response |  [ProjectGroupsInfo](project-group.md#projectgroupsinfo)  |
  
  
  
@@ -151,7 +151,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProjectGroupStatQuery](Project-group.md#projectgroupstatquery) |
+| Request | [ProjectGroupStatQuery](project-group.md#projectgroupstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
  
  
@@ -167,8 +167,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProjectGroupMemberQuery](Project-group.md#projectgroupmemberquery) |
-| Response |  [ProjectGroupMembersInfo](Project-group.md#projectgroupmembersinfo)  |
+| Request | [ProjectGroupMemberQuery](project-group.md#projectgroupmemberquery) |
+| Response |  [ProjectGroupMembersInfo](project-group.md#projectgroupmembersinfo)  |
  
  
  
@@ -183,8 +183,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProjectGroupProjectQuery](Project-group.md#projectgroupprojectquery) |
-| Response |  [ProjectGroupProjectsInfo](Project-group.md#projectgroupprojectsinfo)  |
+| Request | [ProjectGroupProjectQuery](project-group.md#projectgroupprojectquery) |
+| Response |  [ProjectGroupProjectsInfo](project-group.md#projectgroupprojectsinfo)  |
 
 
 ## 
@@ -212,7 +212,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | project_group_id |string||
 | 2 | name |string||
-| 3 | parent_project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo)|{'repeated Template fields = 3;                 // TODO': 'Not be implemented TEMPLATE yet', 'string template_id = 4;                       // TODO': 'Not be implemented TEMPLATE yet'}|
+| 3 | parent_project_group_info |[ProjectGroupInfo](project-group.md#projectgroupinfo)|{'repeated Template fields = 3;                 // TODO': 'Not be implemented TEMPLATE yet', 'string template_id = 4;                       // TODO': 'Not be implemented TEMPLATE yet'}|
 | 4 | domain_id |string||
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
 | 6 | created_by |string||
@@ -222,9 +222,9 @@ description:
 ### ProjectGroupMemberInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo)||
-| 2 | user_info |[UserInfo](Project-group.md#userinfo)||
-| 3 | roles |[RoleInfo](Project-group.md#roleinfo)||
+| 1 | project_group_info |[ProjectGroupInfo](project-group.md#projectgroupinfo)||
+| 2 | user_info |[UserInfo](project-group.md#userinfo)||
+| 3 | roles |[RoleInfo](project-group.md#roleinfo)||
 | 4 | labels |string||
 
 ### ProjectGroupMemberQuery
@@ -247,7 +247,7 @@ description:
 ### ProjectGroupMembersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupMemberInfo](Project-group.md#projectgroupmemberinfo)||
+| 1 | results |[ProjectGroupMemberInfo](project-group.md#projectgroupmemberinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### ProjectGroupProjectInfo
@@ -256,7 +256,7 @@ description:
 | 1 | project_id |string||
 | 2 | name |string||
 | 3 | state |string||
-| 4 | project_group_info |[ProjectGroupInfo](Project-group.md#projectgroupinfo)|{'google.protobuf.Struct template_data = 4; // TODO': 'Not be implemented template service yet'}|
+| 4 | project_group_info |[ProjectGroupInfo](project-group.md#projectgroupinfo)|{'google.protobuf.Struct template_data = 4; // TODO': 'Not be implemented template service yet'}|
 | 5 | domain_id |string||
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
 | 7 | created_by |string||
@@ -274,7 +274,7 @@ description:
 ### ProjectGroupProjectsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupProjectInfo](Project-group.md#projectgroupprojectinfo)||
+| 1 | results |[ProjectGroupProjectInfo](project-group.md#projectgroupprojectinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### ProjectGroupQuery
@@ -302,7 +302,7 @@ description:
 ### ProjectGroupsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupInfo](Project-group.md#projectgroupinfo)||
+| 1 | results |[ProjectGroupInfo](project-group.md#projectgroupinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### RemoveProjectGroupMemberRequest

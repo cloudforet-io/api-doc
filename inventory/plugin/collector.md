@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [verify](Collector.md#verify)| [VerifyRequest](Collector.md#verifyrequest) | [CollectorVerifyInfo](Collector.md#collectorverifyinfo) |  |
-| 2 | [collect](Collector.md#collect)| [CollectRequest](Collector.md#collectrequest) | [ResourceInfo](Collector.md#resourceinfo) |  | 
+| 1 | [verify](collector.md#verify)| [VerifyRequest](collector.md#verifyrequest) | [CollectorVerifyInfo](collector.md#collectorverifyinfo) |  |
+| 2 | [collect](collector.md#collect)| [CollectRequest](collector.md#collectrequest) | [ResourceInfo](collector.md#resourceinfo) |  | 
  
  
  
@@ -26,8 +26,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [VerifyRequest](Collector.md#verifyrequest) |
-| Response |  [CollectorVerifyInfo](Collector.md#collectorverifyinfo)  |
+| Request | [VerifyRequest](collector.md#verifyrequest) |
+| Response |  [CollectorVerifyInfo](collector.md#collectorverifyinfo)  |
  
  
  
@@ -38,8 +38,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CollectRequest](Collector.md#collectrequest) |
-| Response |  [ResourceInfo](Collector.md#resourceinfo)  |
+| Request | [CollectRequest](collector.md#collectrequest) |
+| Response |  [ResourceInfo](collector.md#resourceinfo)  |
 
 
 ## 

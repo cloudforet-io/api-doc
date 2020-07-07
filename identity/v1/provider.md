@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Provider.md#create)| [CreateProviderRequest](Provider.md#createproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
-| 2 | [update](Provider.md#update)| [UpdateProviderRequest](Provider.md#updateproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
-| 3 | [delete](Provider.md#delete)| [ProviderRequest](Provider.md#providerrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Provider.md#get)| [GetProviderRequest](Provider.md#getproviderrequest) | [ProviderInfo](Provider.md#providerinfo) |  |
-| 5 | [list](Provider.md#list)| [ProviderQuery](Provider.md#providerquery) | [ProvidersInfo](Provider.md#providersinfo) |  |
-| 6 | [stat](Provider.md#stat)| [ProviderStatQuery](Provider.md#providerstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [create](provider.md#create)| [CreateProviderRequest](provider.md#createproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
+| 2 | [update](provider.md#update)| [UpdateProviderRequest](provider.md#updateproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
+| 3 | [delete](provider.md#delete)| [ProviderRequest](provider.md#providerrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](provider.md#get)| [GetProviderRequest](provider.md#getproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
+| 5 | [list](provider.md#list)| [ProviderQuery](provider.md#providerquery) | [ProvidersInfo](provider.md#providersinfo) |  |
+| 6 | [stat](provider.md#stat)| [ProviderStatQuery](provider.md#providerstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -32,8 +32,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateProviderRequest](Provider.md#createproviderrequest) |
-| Response |  [ProviderInfo](Provider.md#providerinfo)  |
+| Request | [CreateProviderRequest](provider.md#createproviderrequest) |
+| Response |  [ProviderInfo](provider.md#providerinfo)  |
  
  
  
@@ -46,8 +46,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateProviderRequest](Provider.md#updateproviderrequest) |
-| Response |  [ProviderInfo](Provider.md#providerinfo)  |
+| Request | [UpdateProviderRequest](provider.md#updateproviderrequest) |
+| Response |  [ProviderInfo](provider.md#providerinfo)  |
  
  
  
@@ -60,7 +60,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProviderRequest](Provider.md#providerrequest) |
+| Request | [ProviderRequest](provider.md#providerrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -74,8 +74,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetProviderRequest](Provider.md#getproviderrequest) |
-| Response |  [ProviderInfo](Provider.md#providerinfo)  |
+| Request | [GetProviderRequest](provider.md#getproviderrequest) |
+| Response |  [ProviderInfo](provider.md#providerinfo)  |
  
  
  
@@ -90,8 +90,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProviderQuery](Provider.md#providerquery) |
-| Response |  [ProvidersInfo](Provider.md#providersinfo)  |
+| Request | [ProviderQuery](provider.md#providerquery) |
+| Response |  [ProvidersInfo](provider.md#providersinfo)  |
  
  
  
@@ -104,7 +104,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ProviderStatQuery](Provider.md#providerstatquery) |
+| Request | [ProviderStatQuery](provider.md#providerstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -164,7 +164,7 @@ description:
 ### ProvidersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProviderInfo](Provider.md#providerinfo)||
+| 1 | results |[ProviderInfo](provider.md#providerinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### UpdateProviderRequest

@@ -15,14 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [add](Schedule.md#add)| [AddScheduleRequest](Schedule.md#addschedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 2 | [update](Schedule.md#update)| [UpdateScheduleRequest](Schedule.md#updateschedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 3 | [enable](Schedule.md#enable)| [ScheduleRequest](Schedule.md#schedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 4 | [disable](Schedule.md#disable)| [ScheduleRequest](Schedule.md#schedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 5 | [delete](Schedule.md#delete)| [ScheduleRequest](Schedule.md#schedulerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [get](Schedule.md#get)| [GetScheduleRequest](Schedule.md#getschedulerequest) | [ScheduleInfo](Schedule.md#scheduleinfo) |  |
-| 7 | [list](Schedule.md#list)| [ScheduleQuery](Schedule.md#schedulequery) | [SchedulesInfo](Schedule.md#schedulesinfo) |  |
-| 8 | [stat](Schedule.md#stat)| [ScheduleStatQuery](Schedule.md#schedulestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [add](schedule.md#add)| [AddScheduleRequest](schedule.md#addschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 2 | [update](schedule.md#update)| [UpdateScheduleRequest](schedule.md#updateschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 3 | [enable](schedule.md#enable)| [ScheduleRequest](schedule.md#schedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 4 | [disable](schedule.md#disable)| [ScheduleRequest](schedule.md#schedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 5 | [delete](schedule.md#delete)| [ScheduleRequest](schedule.md#schedulerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [get](schedule.md#get)| [GetScheduleRequest](schedule.md#getschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 7 | [list](schedule.md#list)| [ScheduleQuery](schedule.md#schedulequery) | [SchedulesInfo](schedule.md#schedulesinfo) |  |
+| 8 | [stat](schedule.md#stat)| [ScheduleStatQuery](schedule.md#schedulestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -34,8 +34,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [AddScheduleRequest](Schedule.md#addschedulerequest) |
-| Response |  [ScheduleInfo](Schedule.md#scheduleinfo)  |
+| Request | [AddScheduleRequest](schedule.md#addschedulerequest) |
+| Response |  [ScheduleInfo](schedule.md#scheduleinfo)  |
  
  
  
@@ -48,8 +48,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateScheduleRequest](Schedule.md#updateschedulerequest) |
-| Response |  [ScheduleInfo](Schedule.md#scheduleinfo)  |
+| Request | [UpdateScheduleRequest](schedule.md#updateschedulerequest) |
+| Response |  [ScheduleInfo](schedule.md#scheduleinfo)  |
  
  
  
@@ -62,8 +62,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ScheduleRequest](Schedule.md#schedulerequest) |
-| Response |  [ScheduleInfo](Schedule.md#scheduleinfo)  |
+| Request | [ScheduleRequest](schedule.md#schedulerequest) |
+| Response |  [ScheduleInfo](schedule.md#scheduleinfo)  |
  
  
  
@@ -76,8 +76,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ScheduleRequest](Schedule.md#schedulerequest) |
-| Response |  [ScheduleInfo](Schedule.md#scheduleinfo)  |
+| Request | [ScheduleRequest](schedule.md#schedulerequest) |
+| Response |  [ScheduleInfo](schedule.md#scheduleinfo)  |
  
  
  
@@ -90,7 +90,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ScheduleRequest](Schedule.md#schedulerequest) |
+| Request | [ScheduleRequest](schedule.md#schedulerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -104,8 +104,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetScheduleRequest](Schedule.md#getschedulerequest) |
-| Response |  [ScheduleInfo](Schedule.md#scheduleinfo)  |
+| Request | [GetScheduleRequest](schedule.md#getschedulerequest) |
+| Response |  [ScheduleInfo](schedule.md#scheduleinfo)  |
  
  
  
@@ -120,8 +120,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ScheduleQuery](Schedule.md#schedulequery) |
-| Response |  [SchedulesInfo](Schedule.md#schedulesinfo)  |
+| Request | [ScheduleQuery](schedule.md#schedulequery) |
+| Response |  [SchedulesInfo](schedule.md#schedulesinfo)  |
  
  
  
@@ -134,7 +134,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ScheduleStatQuery](Schedule.md#schedulestatquery) |
+| Request | [ScheduleStatQuery](schedule.md#schedulestatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -146,8 +146,8 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | topic |string|✅||
-| 2 | options |[QueryOption](Schedule.md#queryoption)|✅||
-| 3 | schedule |[Scheduled](Schedule.md#scheduled)|✅||
+| 2 | options |[QueryOption](schedule.md#queryoption)|✅||
+| 3 | schedule |[Scheduled](schedule.md#scheduled)|✅||
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 5 | domain_id |string|✅||
 
@@ -164,8 +164,8 @@ description:
 | 1 | data_source_id |string|❌||
 | 2 | resource_type |string|✅||
 | 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 4 | join |[ScheduleJoinQuery](Schedule.md#schedulejoinquery)|❌||
-| 5 | formulas |[ScheduleFormula](Schedule.md#scheduleformula)|❌||
+| 4 | join |[ScheduleJoinQuery](schedule.md#schedulejoinquery)|❌||
+| 5 | formulas |[ScheduleFormula](schedule.md#scheduleformula)|❌||
 
 ### ScheduleFormula
 | No | Field | Type | Required | Description |
@@ -219,7 +219,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">schedule</td>
-      <td style="text-align:left"><a href="Schedule.md#scheduled">Scheduled</a></td>
+      <td style="text-align:left"><a href="schedule.md#scheduled">Scheduled</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -345,13 +345,13 @@ description:
 ### SchedulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](Schedule.md#scheduleinfo)||
+| 1 | results |[ScheduleInfo](schedule.md#scheduleinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | schedule_id |string|✅||
-| 2 | schedule |[Scheduled](Schedule.md#scheduled)|❌||
+| 2 | schedule |[Scheduled](schedule.md#scheduled)|❌||
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 4 | domain_id |string|✅||

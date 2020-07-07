@@ -15,14 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Secret-group.md#create)| [CreateSecretGroupRequest](Secret-group.md#createsecretgrouprequest) | [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
-| 2 | [update](Secret-group.md#update)| [UpdateSecretGroupRequest](Secret-group.md#updatesecretgrouprequest) | [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
-| 3 | [add_secret](Secret-group.md#add_secret)| [SecretGroupSecretRequest](Secret-group.md#secretgroupsecretrequest) | [SecretGroupSecretInfo](Secret-group.md#secretgroupsecretinfo) |  |
-| 4 | [remove_secret](Secret-group.md#remove_secret)| [SecretGroupSecretRequest](Secret-group.md#secretgroupsecretrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [delete](Secret-group.md#delete)| [SecretGroupRequest](Secret-group.md#secretgrouprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [get](Secret-group.md#get)| [GetSecretGroupRequest](Secret-group.md#getsecretgrouprequest) | [SecretGroupInfo](Secret-group.md#secretgroupinfo) |  |
-| 7 | [list](Secret-group.md#list)| [SecretGroupQuery](Secret-group.md#secretgroupquery) | [SecretGroupsInfo](Secret-group.md#secretgroupsinfo) |  |
-| 8 | [stat](Secret-group.md#stat)| [SecretGroupStatQuery](Secret-group.md#secretgroupstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [create](secret-group.md#create)| [CreateSecretGroupRequest](secret-group.md#createsecretgrouprequest) | [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
+| 2 | [update](secret-group.md#update)| [UpdateSecretGroupRequest](secret-group.md#updatesecretgrouprequest) | [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
+| 3 | [add_secret](secret-group.md#add_secret)| [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) | [SecretGroupSecretInfo](secret-group.md#secretgroupsecretinfo) |  |
+| 4 | [remove_secret](secret-group.md#remove_secret)| [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [delete](secret-group.md#delete)| [SecretGroupRequest](secret-group.md#secretgrouprequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [get](secret-group.md#get)| [GetSecretGroupRequest](secret-group.md#getsecretgrouprequest) | [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
+| 7 | [list](secret-group.md#list)| [SecretGroupQuery](secret-group.md#secretgroupquery) | [SecretGroupsInfo](secret-group.md#secretgroupsinfo) |  |
+| 8 | [stat](secret-group.md#stat)| [SecretGroupStatQuery](secret-group.md#secretgroupstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -34,8 +34,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateSecretGroupRequest](Secret-group.md#createsecretgrouprequest) |
-| Response |  [SecretGroupInfo](Secret-group.md#secretgroupinfo)  |
+| Request | [CreateSecretGroupRequest](secret-group.md#createsecretgrouprequest) |
+| Response |  [SecretGroupInfo](secret-group.md#secretgroupinfo)  |
  
  
  
@@ -48,8 +48,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateSecretGroupRequest](Secret-group.md#updatesecretgrouprequest) |
-| Response |  [SecretGroupInfo](Secret-group.md#secretgroupinfo)  |
+| Request | [UpdateSecretGroupRequest](secret-group.md#updatesecretgrouprequest) |
+| Response |  [SecretGroupInfo](secret-group.md#secretgroupinfo)  |
  
  
  
@@ -62,8 +62,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretGroupSecretRequest](Secret-group.md#secretgroupsecretrequest) |
-| Response |  [SecretGroupSecretInfo](Secret-group.md#secretgroupsecretinfo)  |
+| Request | [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |
+| Response |  [SecretGroupSecretInfo](secret-group.md#secretgroupsecretinfo)  |
  
  
  
@@ -76,7 +76,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretGroupSecretRequest](Secret-group.md#secretgroupsecretrequest) |
+| Request | [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -90,7 +90,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretGroupRequest](Secret-group.md#secretgrouprequest) |
+| Request | [SecretGroupRequest](secret-group.md#secretgrouprequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -104,8 +104,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetSecretGroupRequest](Secret-group.md#getsecretgrouprequest) |
-| Response |  [SecretGroupInfo](Secret-group.md#secretgroupinfo)  |
+| Request | [GetSecretGroupRequest](secret-group.md#getsecretgrouprequest) |
+| Response |  [SecretGroupInfo](secret-group.md#secretgroupinfo)  |
  
  
  
@@ -120,8 +120,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretGroupQuery](Secret-group.md#secretgroupquery) |
-| Response |  [SecretGroupsInfo](Secret-group.md#secretgroupsinfo)  |
+| Request | [SecretGroupQuery](secret-group.md#secretgroupquery) |
+| Response |  [SecretGroupsInfo](secret-group.md#secretgroupsinfo)  |
  
  
  
@@ -134,7 +134,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretGroupStatQuery](Secret-group.md#secretgroupstatquery) |
+| Request | [SecretGroupStatQuery](secret-group.md#secretgroupstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -183,8 +183,8 @@ description:
 ### SecretGroupSecretInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | secret_group_info |[SecretGroupInfo](Secret-group.md#secretgroupinfo)||
-| 2 | secret_info |[SecretInfo](Secret-group.md#secretinfo)||
+| 1 | secret_group_info |[SecretGroupInfo](secret-group.md#secretgroupinfo)||
+| 2 | secret_info |[SecretInfo](secret-group.md#secretinfo)||
 | 3 | domain_id |string||
 
 ### SecretGroupSecretRequest
@@ -203,7 +203,7 @@ description:
 ### SecretGroupsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SecretGroupInfo](Secret-group.md#secretgroupinfo)||
+| 1 | results |[SecretGroupInfo](secret-group.md#secretgroupinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### UpdateSecretGroupRequest

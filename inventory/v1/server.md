@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Server.md#create)| [CreateServerRequest](Server.md#createserverrequest) | [ServerInfo](Server.md#serverinfo) |  |
-| 2 | [update](Server.md#update)| [UpdateServerRequest](Server.md#updateserverrequest) | [ServerInfo](Server.md#serverinfo) |  |
-| 3 | [pin_data](Server.md#pin_data)| [PinServerDataRequest](Server.md#pinserverdatarequest) | [ServerInfo](Server.md#serverinfo) |  |
-| 4 | [delete](Server.md#delete)| [ServerRequest](Server.md#serverrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](Server.md#get)| [GetServerRequest](Server.md#getserverrequest) | [ServerInfo](Server.md#serverinfo) |  |
-| 6 | [list](Server.md#list)| [ServerQuery](Server.md#serverquery) | [ServersInfo](Server.md#serversinfo) |  |
-| 7 | [stat](Server.md#stat)| [ServerStatQuery](Server.md#serverstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [create](server.md#create)| [CreateServerRequest](server.md#createserverrequest) | [ServerInfo](server.md#serverinfo) |  |
+| 2 | [update](server.md#update)| [UpdateServerRequest](server.md#updateserverrequest) | [ServerInfo](server.md#serverinfo) |  |
+| 3 | [pin_data](server.md#pin_data)| [PinServerDataRequest](server.md#pinserverdatarequest) | [ServerInfo](server.md#serverinfo) |  |
+| 4 | [delete](server.md#delete)| [ServerRequest](server.md#serverrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [get](server.md#get)| [GetServerRequest](server.md#getserverrequest) | [ServerInfo](server.md#serverinfo) |  |
+| 6 | [list](server.md#list)| [ServerQuery](server.md#serverquery) | [ServersInfo](server.md#serversinfo) |  |
+| 7 | [stat](server.md#stat)| [ServerStatQuery](server.md#serverstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -33,8 +33,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateServerRequest](Server.md#createserverrequest) |
-| Response |  [ServerInfo](Server.md#serverinfo)  |
+| Request | [CreateServerRequest](server.md#createserverrequest) |
+| Response |  [ServerInfo](server.md#serverinfo)  |
  
  
  
@@ -47,8 +47,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateServerRequest](Server.md#updateserverrequest) |
-| Response |  [ServerInfo](Server.md#serverinfo)  |
+| Request | [UpdateServerRequest](server.md#updateserverrequest) |
+| Response |  [ServerInfo](server.md#serverinfo)  |
  
  
  
@@ -61,8 +61,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PinServerDataRequest](Server.md#pinserverdatarequest) |
-| Response |  [ServerInfo](Server.md#serverinfo)  |
+| Request | [PinServerDataRequest](server.md#pinserverdatarequest) |
+| Response |  [ServerInfo](server.md#serverinfo)  |
  
  
  
@@ -75,7 +75,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ServerRequest](Server.md#serverrequest) |
+| Request | [ServerRequest](server.md#serverrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -89,8 +89,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetServerRequest](Server.md#getserverrequest) |
-| Response |  [ServerInfo](Server.md#serverinfo)  |
+| Request | [GetServerRequest](server.md#getserverrequest) |
+| Response |  [ServerInfo](server.md#serverinfo)  |
  
  
  
@@ -105,8 +105,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ServerQuery](Server.md#serverquery) |
-| Response |  [ServersInfo](Server.md#serversinfo)  |
+| Request | [ServerQuery](server.md#serverquery) |
+| Response |  [ServersInfo](server.md#serversinfo)  |
  
  
  
@@ -119,7 +119,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ServerStatQuery](Server.md#serverstatquery) |
+| Request | [ServerStatQuery](server.md#serverstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -215,21 +215,21 @@ description:
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="Server.md#servernic">ServerNIC</a></td>
+      <td style="text-align:left"><a href="server.md#servernic">ServerNIC</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="Server.md#serverdisk">ServerDisk</a></td>
+      <td style="text-align:left"><a href="server.md#serverdisk">ServerDisk</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">reference</td>
-      <td style="text-align:left"><a href="Server.md#serverreference">ServerReference</a></td>
+      <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -389,21 +389,21 @@ description:
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="Server.md#servernic">ServerNIC</a></td>
+      <td style="text-align:left"><a href="server.md#servernic">ServerNIC</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="Server.md#serverdisk">ServerDisk</a></td>
+      <td style="text-align:left"><a href="server.md#serverdisk">ServerDisk</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">13</td>
       <td style="text-align:left">reference</td>
-      <td style="text-align:left"><a href="Server.md#serverreference">ServerReference</a></td>
+      <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -424,7 +424,7 @@ description:
     <tr>
       <td style="text-align:left">16</td>
       <td style="text-align:left">region_info</td>
-      <td style="text-align:left"><a href="Server.md#regioninfo">RegionInfo</a></td>
+      <td style="text-align:left"><a href="server.md#regioninfo">RegionInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -610,7 +610,7 @@ description:
 ### ServersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ServerInfo](Server.md#serverinfo)||
+| 1 | results |[ServerInfo](server.md#serverinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### UpdateServerRequest
@@ -708,21 +708,21 @@ description:
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="Server.md#servernic">ServerNIC</a></td>
+      <td style="text-align:left"><a href="server.md#servernic">ServerNIC</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="Server.md#serverdisk">ServerDisk</a></td>
+      <td style="text-align:left"><a href="server.md#serverdisk">ServerDisk</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">reference</td>
-      <td style="text-align:left"><a href="Server.md#serverreference">ServerReference</a></td>
+      <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>

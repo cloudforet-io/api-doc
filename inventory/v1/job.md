@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [list](Job.md#list)| [JobsQuery](Job.md#jobsquery) | [JobsInfo](Job.md#jobsinfo) |  |
-| 2 | [stat](Job.md#stat)| [JobStatQuery](Job.md#jobstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [list](job.md#list)| [JobsQuery](job.md#jobsquery) | [JobsInfo](job.md#jobsinfo) |  |
+| 2 | [stat](job.md#stat)| [JobStatQuery](job.md#jobstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -30,8 +30,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [JobsQuery](Job.md#jobsquery) |
-| Response |  [JobsInfo](Job.md#jobsinfo)  |
+| Request | [JobsQuery](job.md#jobsquery) |
+| Response |  [JobsInfo](job.md#jobsinfo)  |
  
  
  
@@ -44,7 +44,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [JobStatQuery](Job.md#jobstatquery) |
+| Request | [JobStatQuery](job.md#jobstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -61,7 +61,7 @@ description:
 ### JobsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[JobInfo](Job.md#jobinfo)||
+| 1 | results |[JobInfo](job.md#jobinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### JobsQuery

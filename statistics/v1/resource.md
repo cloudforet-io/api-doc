@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [stat](Resource.md#stat)| [ResourceStatRequest](Resource.md#resourcestatrequest) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [stat](resource.md#stat)| [ResourceStatRequest](resource.md#resourcestatrequest) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -27,7 +27,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ResourceStatRequest](Resource.md#resourcestatrequest) |
+| Request | [ResourceStatRequest](resource.md#resourcestatrequest) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -103,6 +103,6 @@ description:
 | 1 | data_source_id |string|❌||
 | 2 | resource_type |string|✅||
 | 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 4 | join |[JoinQuery](Resource.md#joinquery)|❌||
-| 5 | formulas |[Formula](Resource.md#formula)|❌||
+| 4 | join |[JoinQuery](resource.md#joinquery)|❌||
+| 5 | formulas |[Formula](resource.md#formula)|❌||
 | 6 | domain_id |string|✅||

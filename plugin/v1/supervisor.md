@@ -15,17 +15,17 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [publish](Supervisor.md#publish)| [PublishSupervisorRequest](Supervisor.md#publishsupervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 2 | [register](Supervisor.md#register)| [RegisterSupervisorRequest](Supervisor.md#registersupervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 3 | [update](Supervisor.md#update)| [RegisterSupervisorRequest](Supervisor.md#registersupervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 4 | [deregister](Supervisor.md#deregister)| [SupervisorRequest](Supervisor.md#supervisorrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [enable](Supervisor.md#enable)| [SupervisorRequest](Supervisor.md#supervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 6 | [disable](Supervisor.md#disable)| [SupervisorRequest](Supervisor.md#supervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 7 | [recover_plugin](Supervisor.md#recover_plugin)| [RecoverPluginRequest](Supervisor.md#recoverpluginrequest) | [PluginInfo](Supervisor.md#plugininfo) |  |
-| 8 | [get](Supervisor.md#get)| [GetSupervisorRequest](Supervisor.md#getsupervisorrequest) | [SupervisorInfo](Supervisor.md#supervisorinfo) |  |
-| 9 | [list](Supervisor.md#list)| [SupervisorQuery](Supervisor.md#supervisorquery) | [SupervisorsInfo](Supervisor.md#supervisorsinfo) |  |
-| 10 | [stat](Supervisor.md#stat)| [SupervisorStatQuery](Supervisor.md#supervisorstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 11 | [list_plugins](Supervisor.md#list_plugins)| [PluginQuery](Supervisor.md#pluginquery) | [PluginsInfo](Supervisor.md#pluginsinfo) |  | 
+| 1 | [publish](supervisor.md#publish)| [PublishSupervisorRequest](supervisor.md#publishsupervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 2 | [register](supervisor.md#register)| [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 3 | [update](supervisor.md#update)| [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 4 | [deregister](supervisor.md#deregister)| [SupervisorRequest](supervisor.md#supervisorrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [enable](supervisor.md#enable)| [SupervisorRequest](supervisor.md#supervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 6 | [disable](supervisor.md#disable)| [SupervisorRequest](supervisor.md#supervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 7 | [recover_plugin](supervisor.md#recover_plugin)| [RecoverPluginRequest](supervisor.md#recoverpluginrequest) | [PluginInfo](supervisor.md#plugininfo) |  |
+| 8 | [get](supervisor.md#get)| [GetSupervisorRequest](supervisor.md#getsupervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 9 | [list](supervisor.md#list)| [SupervisorQuery](supervisor.md#supervisorquery) | [SupervisorsInfo](supervisor.md#supervisorsinfo) |  |
+| 10 | [stat](supervisor.md#stat)| [SupervisorStatQuery](supervisor.md#supervisorstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 11 | [list_plugins](supervisor.md#list_plugins)| [PluginQuery](supervisor.md#pluginquery) | [PluginsInfo](supervisor.md#pluginsinfo) |  | 
  
  
  
@@ -37,8 +37,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PublishSupervisorRequest](Supervisor.md#publishsupervisorrequest) |
-| Response |  [SupervisorInfo](Supervisor.md#supervisorinfo)  |
+| Request | [PublishSupervisorRequest](supervisor.md#publishsupervisorrequest) |
+| Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
  
@@ -51,8 +51,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RegisterSupervisorRequest](Supervisor.md#registersupervisorrequest) |
-| Response |  [SupervisorInfo](Supervisor.md#supervisorinfo)  |
+| Request | [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |
+| Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
  
@@ -65,8 +65,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RegisterSupervisorRequest](Supervisor.md#registersupervisorrequest) |
-| Response |  [SupervisorInfo](Supervisor.md#supervisorinfo)  |
+| Request | [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |
+| Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
  
@@ -79,7 +79,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SupervisorRequest](Supervisor.md#supervisorrequest) |
+| Request | [SupervisorRequest](supervisor.md#supervisorrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -93,8 +93,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SupervisorRequest](Supervisor.md#supervisorrequest) |
-| Response |  [SupervisorInfo](Supervisor.md#supervisorinfo)  |
+| Request | [SupervisorRequest](supervisor.md#supervisorrequest) |
+| Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
  
@@ -107,8 +107,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SupervisorRequest](Supervisor.md#supervisorrequest) |
-| Response |  [SupervisorInfo](Supervisor.md#supervisorinfo)  |
+| Request | [SupervisorRequest](supervisor.md#supervisorrequest) |
+| Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
  
@@ -121,8 +121,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RecoverPluginRequest](Supervisor.md#recoverpluginrequest) |
-| Response |  [PluginInfo](Supervisor.md#plugininfo)  |
+| Request | [RecoverPluginRequest](supervisor.md#recoverpluginrequest) |
+| Response |  [PluginInfo](supervisor.md#plugininfo)  |
  
  
  
@@ -135,8 +135,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetSupervisorRequest](Supervisor.md#getsupervisorrequest) |
-| Response |  [SupervisorInfo](Supervisor.md#supervisorinfo)  |
+| Request | [GetSupervisorRequest](supervisor.md#getsupervisorrequest) |
+| Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
  
@@ -151,8 +151,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SupervisorQuery](Supervisor.md#supervisorquery) |
-| Response |  [SupervisorsInfo](Supervisor.md#supervisorsinfo)  |
+| Request | [SupervisorQuery](supervisor.md#supervisorquery) |
+| Response |  [SupervisorsInfo](supervisor.md#supervisorsinfo)  |
  
  
  
@@ -165,7 +165,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SupervisorStatQuery](Supervisor.md#supervisorstatquery) |
+| Request | [SupervisorStatQuery](supervisor.md#supervisorstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
  
  
@@ -181,8 +181,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PluginQuery](Supervisor.md#pluginquery) |
-| Response |  [PluginsInfo](Supervisor.md#pluginsinfo)  |
+| Request | [PluginQuery](supervisor.md#pluginquery) |
+| Response |  [PluginsInfo](supervisor.md#pluginsinfo)  |
 
 
 ## 
@@ -354,7 +354,7 @@ description:
 ### PluginsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PluginInfo](Supervisor.md#plugininfo)||
+| 1 | results |[PluginInfo](supervisor.md#plugininfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### PublishSupervisorRequest
@@ -363,7 +363,7 @@ description:
 | 1 | name |string|✅||
 | 2 | hostname |string|✅||
 | 3 | secret_key |string|❌||
-| 4 | plugin_info |[PluginInfo](Supervisor.md#plugininfo)|❌||
+| 4 | plugin_info |[PluginInfo](supervisor.md#plugininfo)|❌||
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 6 | is_public |bool|❌||
 | 7 | domain_id |string|✅||
@@ -502,5 +502,5 @@ description:
 ### SupervisorsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SupervisorInfo](Supervisor.md#supervisorinfo)||
+| 1 | results |[SupervisorInfo](supervisor.md#supervisorinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||

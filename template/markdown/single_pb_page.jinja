@@ -31,7 +31,7 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
 {%- for method in service.methods %}
-| {{ loop.index }} | [{{ method.name }}]({{file_info.full_name}}#{{method.name}})|{% if method.req_link is defined %} [{{ method.requestLongType }}]({{method.req_link}}) {% elif method.requestFullType_link is defined %}[{{ method.requestFullType }}]({{method.requestFullType_link}}){% else %}{{ method.requestLongType }}{% endif %}|{% if method.res_link is defined %} [{{ method.responseLongType }}]({{method.res_link}}) {% elif method.responseFullType_link is defined %}[{{ method.responseFullType }}]({{method.responseFullType_link}}){% else %}{{ method.responseLongType }}{% endif %}| {{ method.Description }} |
+| {{ loop.index }} | [{{ method.name }}]({{file_info.full_name_lower}}#{{method.name}})|{% if method.req_link is defined %} [{{ method.requestLongType }}]({{method.req_link}}) {% elif method.requestFullType_link is defined %}[{{ method.requestFullType }}]({{method.requestFullType_link}}){% else %}{{ method.requestLongType }}{% endif %}|{% if method.res_link is defined %} [{{ method.responseLongType }}]({{method.res_link}}) {% elif method.responseFullType_link is defined %}[{{ method.responseFullType }}]({{method.responseFullType_link}}){% else %}{{ method.responseLongType }}{% endif %}| {{ method.Description }} |
 {%- endfor -%}
 {%- for method in service.methods -%}
 {{title_space}}

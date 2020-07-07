@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Cloud-service.md#create)| [CreateServiceRequest](Cloud-service.md#createservicerequest) | [CloudServiceInfo](Cloud-service.md#cloudserviceinfo) |  |
-| 2 | [update](Cloud-service.md#update)| [UpdateCloudServiceRequest](Cloud-service.md#updatecloudservicerequest) | [CloudServiceInfo](Cloud-service.md#cloudserviceinfo) |  |
-| 3 | [pin_data](Cloud-service.md#pin_data)| [PinCloudServiceDataRequest](Cloud-service.md#pincloudservicedatarequest) | [CloudServiceInfo](Cloud-service.md#cloudserviceinfo) |  |
-| 4 | [delete](Cloud-service.md#delete)| [CloudServiceRequest](Cloud-service.md#cloudservicerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](Cloud-service.md#get)| [GetCloudServiceRequest](Cloud-service.md#getcloudservicerequest) | [CloudServiceInfo](Cloud-service.md#cloudserviceinfo) |  |
-| 6 | [list](Cloud-service.md#list)| [CloudServiceQuery](Cloud-service.md#cloudservicequery) | [CloudServicesInfo](Cloud-service.md#cloudservicesinfo) |  |
-| 7 | [stat](Cloud-service.md#stat)| [CloudServiceStatQuery](Cloud-service.md#cloudservicestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [create](cloud-service.md#create)| [CreateServiceRequest](cloud-service.md#createservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
+| 2 | [update](cloud-service.md#update)| [UpdateCloudServiceRequest](cloud-service.md#updatecloudservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
+| 3 | [pin_data](cloud-service.md#pin_data)| [PinCloudServiceDataRequest](cloud-service.md#pincloudservicedatarequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
+| 4 | [delete](cloud-service.md#delete)| [CloudServiceRequest](cloud-service.md#cloudservicerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [get](cloud-service.md#get)| [GetCloudServiceRequest](cloud-service.md#getcloudservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
+| 6 | [list](cloud-service.md#list)| [CloudServiceQuery](cloud-service.md#cloudservicequery) | [CloudServicesInfo](cloud-service.md#cloudservicesinfo) |  |
+| 7 | [stat](cloud-service.md#stat)| [CloudServiceStatQuery](cloud-service.md#cloudservicestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -33,8 +33,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateServiceRequest](Cloud-service.md#createservicerequest) |
-| Response |  [CloudServiceInfo](Cloud-service.md#cloudserviceinfo)  |
+| Request | [CreateServiceRequest](cloud-service.md#createservicerequest) |
+| Response |  [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  |
  
  
  
@@ -47,8 +47,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateCloudServiceRequest](Cloud-service.md#updatecloudservicerequest) |
-| Response |  [CloudServiceInfo](Cloud-service.md#cloudserviceinfo)  |
+| Request | [UpdateCloudServiceRequest](cloud-service.md#updatecloudservicerequest) |
+| Response |  [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  |
  
  
  
@@ -61,8 +61,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PinCloudServiceDataRequest](Cloud-service.md#pincloudservicedatarequest) |
-| Response |  [CloudServiceInfo](Cloud-service.md#cloudserviceinfo)  |
+| Request | [PinCloudServiceDataRequest](cloud-service.md#pincloudservicedatarequest) |
+| Response |  [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  |
  
  
  
@@ -75,7 +75,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CloudServiceRequest](Cloud-service.md#cloudservicerequest) |
+| Request | [CloudServiceRequest](cloud-service.md#cloudservicerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -89,8 +89,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetCloudServiceRequest](Cloud-service.md#getcloudservicerequest) |
-| Response |  [CloudServiceInfo](Cloud-service.md#cloudserviceinfo)  |
+| Request | [GetCloudServiceRequest](cloud-service.md#getcloudservicerequest) |
+| Response |  [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  |
  
  
  
@@ -105,8 +105,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CloudServiceQuery](Cloud-service.md#cloudservicequery) |
-| Response |  [CloudServicesInfo](Cloud-service.md#cloudservicesinfo)  |
+| Request | [CloudServiceQuery](cloud-service.md#cloudservicequery) |
+| Response |  [CloudServicesInfo](cloud-service.md#cloudservicesinfo)  |
  
  
  
@@ -119,7 +119,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CloudServiceStatQuery](Cloud-service.md#cloudservicestatquery) |
+| Request | [CloudServiceStatQuery](cloud-service.md#cloudservicestatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -137,10 +137,10 @@ description:
 | 5 | state |string||
 | 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
 | 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
-| 8 | reference |[CloudServiceReference](Cloud-service.md#cloudservicereference)||
+| 8 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)||
 | 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
 | 10 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
-| 11 | region_info |[RegionInfo](Cloud-service.md#regioninfo)||
+| 11 | region_info |[RegionInfo](cloud-service.md#regioninfo)||
 | 12 | project_id |string||
 | 13 | domain_id |string||
 | 14 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)||
@@ -181,7 +181,7 @@ description:
 ### CloudServicesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CloudServiceInfo](Cloud-service.md#cloudserviceinfo)||
+| 1 | results |[CloudServiceInfo](cloud-service.md#cloudserviceinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### CreateServiceRequest
@@ -192,7 +192,7 @@ description:
 | 3 | cloud_service_group |string|✅||
 | 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
 | 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 6 | reference |[CloudServiceReference](Cloud-service.md#cloudservicereference)|❌||
+| 6 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌||
 | 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 8 | region_id |string|❌||
 | 9 | project_id |string|❌||
@@ -218,7 +218,7 @@ description:
 | 1 | cloud_service_id |string|✅||
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 3 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | reference |[CloudServiceReference](Cloud-service.md#cloudservicereference)|❌||
+| 4 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌||
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 6 | region_id |string|❌||
 | 7 | project_id |string|❌||

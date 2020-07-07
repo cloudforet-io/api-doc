@@ -17,8 +17,8 @@ description:
 ### AggregateGroup
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | keys |[AggregateGroupKey](Query.md#aggregategroupkey)||
-| 2 | fields |[AggregateGroupField](Query.md#aggregategroupfield)||
+| 1 | keys |[AggregateGroupKey](query.md#aggregategroupkey)||
+| 2 | fields |[AggregateGroupField](query.md#aggregategroupfield)||
 
 ### AggregateGroupField
 | No | Field | Type |  Description |
@@ -62,10 +62,10 @@ description:
 ### Query
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | filter |[Filter](Query.md#filter)||
-| 2 | filter_or |[Filter](Query.md#filter)||
-| 3 | sort |[Sort](Query.md#sort)||
-| 4 | page |[Page](Query.md#page)||
+| 1 | filter |[Filter](query.md#filter)||
+| 2 | filter_or |[Filter](query.md#filter)||
+| 3 | sort |[Sort](query.md#sort)||
+| 4 | page |[Page](query.md#page)||
 | 5 | minimal |bool||
 | 6 | count_only |bool||
 | 7 | only |string||
@@ -80,18 +80,18 @@ description:
 ### StatisticsAggregate
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | unwind |[AggregateUnwind](Query.md#aggregateunwind)||
-| 2 | group |[AggregateGroup](Query.md#aggregategroup)||
-| 3 | count |[AggregateCount](Query.md#aggregatecount)||
+| 1 | unwind |[AggregateUnwind](query.md#aggregateunwind)||
+| 2 | group |[AggregateGroup](query.md#aggregategroup)||
+| 3 | count |[AggregateCount](query.md#aggregatecount)||
 
 ### StatisticsQuery
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | filter |[Filter](Query.md#filter)||
-| 2 | filter_or |[Filter](Query.md#filter)||
-| 3 | aggregate |[StatisticsAggregate](Query.md#statisticsaggregate)||
-| 4 | sort |[StatisticsSort](Query.md#statisticssort)||
-| 5 | page |[Page](Query.md#page)||
+| 1 | filter |[Filter](query.md#filter)||
+| 2 | filter_or |[Filter](query.md#filter)||
+| 3 | aggregate |[StatisticsAggregate](query.md#statisticsaggregate)||
+| 4 | sort |[StatisticsSort](query.md#statisticssort)||
+| 5 | page |[Page](query.md#page)||
 | 6 | limit |[uint32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 | 7 | distinct |string||
 

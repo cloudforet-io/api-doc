@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [list](Metric.md#list)| [MetricRequest](Metric.md#metricrequest) | [PluginMetricsResponse](Metric.md#pluginmetricsresponse) |  |
-| 2 | [get_data](Metric.md#get_data)| [MetricDataRequest](Metric.md#metricdatarequest) | [PluginMetricDataResponse](Metric.md#pluginmetricdataresponse) |  | 
+| 1 | [list](metric.md#list)| [MetricRequest](metric.md#metricrequest) | [PluginMetricsResponse](metric.md#pluginmetricsresponse) |  |
+| 2 | [get_data](metric.md#get_data)| [MetricDataRequest](metric.md#metricdatarequest) | [PluginMetricDataResponse](metric.md#pluginmetricdataresponse) |  | 
  
  
  
@@ -26,8 +26,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [MetricRequest](Metric.md#metricrequest) |
-| Response |  [PluginMetricsResponse](Metric.md#pluginmetricsresponse)  |
+| Request | [MetricRequest](metric.md#metricrequest) |
+| Response |  [PluginMetricsResponse](metric.md#pluginmetricsresponse)  |
  
  
  
@@ -38,8 +38,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [MetricDataRequest](Metric.md#metricdatarequest) |
-| Response |  [PluginMetricDataResponse](Metric.md#pluginmetricdataresponse)  |
+| Request | [MetricDataRequest](metric.md#metricdatarequest) |
+| Response |  [PluginMetricDataResponse](metric.md#pluginmetricdataresponse)  |
 
 
 ## 
@@ -83,18 +83,18 @@ description:
 ### MetricsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | metrics |[MetricInfo](Metric.md#metricinfo)||
+| 1 | metrics |[MetricInfo](metric.md#metricinfo)||
 
 ### PluginMetricDataResponse
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string|✅||
 | 2 | actions |[spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌||
-| 3 | result |[MetricDataInfo](Metric.md#metricdatainfo)|✅||
+| 3 | result |[MetricDataInfo](metric.md#metricdatainfo)|✅||
 
 ### PluginMetricsResponse
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string|✅||
 | 2 | actions |[spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌||
-| 3 | result |[MetricsInfo](Metric.md#metricsinfo)|✅||
+| 3 | result |[MetricsInfo](metric.md#metricsinfo)|✅||

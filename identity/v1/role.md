@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Role.md#create)| [CreateRoleRequest](Role.md#createrolerequest) | [RoleInfo](Role.md#roleinfo) |  |
-| 2 | [update](Role.md#update)| [UpdateRoleRequest](Role.md#updaterolerequest) | [RoleInfo](Role.md#roleinfo) |  |
-| 3 | [delete](Role.md#delete)| [RoleRequest](Role.md#rolerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Role.md#get)| [GetRoleRequest](Role.md#getrolerequest) | [RoleInfo](Role.md#roleinfo) |  |
-| 5 | [list](Role.md#list)| [RoleQuery](Role.md#rolequery) | [RolesInfo](Role.md#rolesinfo) |  |
-| 6 | [stat](Role.md#stat)| [RoleStatQuery](Role.md#rolestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [create](role.md#create)| [CreateRoleRequest](role.md#createrolerequest) | [RoleInfo](role.md#roleinfo) |  |
+| 2 | [update](role.md#update)| [UpdateRoleRequest](role.md#updaterolerequest) | [RoleInfo](role.md#roleinfo) |  |
+| 3 | [delete](role.md#delete)| [RoleRequest](role.md#rolerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](role.md#get)| [GetRoleRequest](role.md#getrolerequest) | [RoleInfo](role.md#roleinfo) |  |
+| 5 | [list](role.md#list)| [RoleQuery](role.md#rolequery) | [RolesInfo](role.md#rolesinfo) |  |
+| 6 | [stat](role.md#stat)| [RoleStatQuery](role.md#rolestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -32,8 +32,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateRoleRequest](Role.md#createrolerequest) |
-| Response |  [RoleInfo](Role.md#roleinfo)  |
+| Request | [CreateRoleRequest](role.md#createrolerequest) |
+| Response |  [RoleInfo](role.md#roleinfo)  |
  
  
  
@@ -46,8 +46,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateRoleRequest](Role.md#updaterolerequest) |
-| Response |  [RoleInfo](Role.md#roleinfo)  |
+| Request | [UpdateRoleRequest](role.md#updaterolerequest) |
+| Response |  [RoleInfo](role.md#roleinfo)  |
  
  
  
@@ -60,7 +60,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RoleRequest](Role.md#rolerequest) |
+| Request | [RoleRequest](role.md#rolerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -74,8 +74,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetRoleRequest](Role.md#getrolerequest) |
-| Response |  [RoleInfo](Role.md#roleinfo)  |
+| Request | [GetRoleRequest](role.md#getrolerequest) |
+| Response |  [RoleInfo](role.md#roleinfo)  |
  
  
  
@@ -90,8 +90,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RoleQuery](Role.md#rolequery) |
-| Response |  [RolesInfo](Role.md#rolesinfo)  |
+| Request | [RoleQuery](role.md#rolequery) |
+| Response |  [RolesInfo](role.md#rolesinfo)  |
  
  
  
@@ -104,7 +104,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RoleStatQuery](Role.md#rolestatquery) |
+| Request | [RoleStatQuery](role.md#rolestatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -146,7 +146,7 @@ description:
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">policies</td>
-      <td style="text-align:left"><a href="Role.md#rolepolicy">RolePolicy</a></td>
+      <td style="text-align:left"><a href="role.md#rolepolicy">RolePolicy</a></td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
@@ -215,7 +215,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">policies</td>
-      <td style="text-align:left"><a href="Role.md#rolepolicy">RolePolicy</a></td>
+      <td style="text-align:left"><a href="role.md#rolepolicy">RolePolicy</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -362,7 +362,7 @@ description:
 ### RolesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RoleInfo](Role.md#roleinfo)||
+| 1 | results |[RoleInfo](role.md#roleinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### UpdateRoleRequest
@@ -370,6 +370,6 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | role_id |string|✅||
 | 2 | name |string|❌||
-| 3 | policies |[RolePolicy](Role.md#rolepolicy)|❌||
+| 3 | policies |[RolePolicy](role.md#rolepolicy)|❌||
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 5 | domain_id |string|✅||

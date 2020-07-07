@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [register](Repository.md#register)| [CreateRepositoryRequest](Repository.md#createrepositoryrequest) | [RepositoryInfo](Repository.md#repositoryinfo) |  |
-| 2 | [update](Repository.md#update)| [UpdateRepositoryRequest](Repository.md#updaterepositoryrequest) | [RepositoryInfo](Repository.md#repositoryinfo) |  |
-| 3 | [deregister](Repository.md#deregister)| [RepositoryRequest](Repository.md#repositoryrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Repository.md#get)| [GetRepositoryRequest](Repository.md#getrepositoryrequest) | [RepositoryInfo](Repository.md#repositoryinfo) |  |
-| 5 | [list](Repository.md#list)| [RepositoryQuery](Repository.md#repositoryquery) | [RepositoriesInfo](Repository.md#repositoriesinfo) |  |
-| 6 | [stat](Repository.md#stat)| [RepositoryStatQuery](Repository.md#repositorystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [register](repository.md#register)| [CreateRepositoryRequest](repository.md#createrepositoryrequest) | [RepositoryInfo](repository.md#repositoryinfo) |  |
+| 2 | [update](repository.md#update)| [UpdateRepositoryRequest](repository.md#updaterepositoryrequest) | [RepositoryInfo](repository.md#repositoryinfo) |  |
+| 3 | [deregister](repository.md#deregister)| [RepositoryRequest](repository.md#repositoryrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](repository.md#get)| [GetRepositoryRequest](repository.md#getrepositoryrequest) | [RepositoryInfo](repository.md#repositoryinfo) |  |
+| 5 | [list](repository.md#list)| [RepositoryQuery](repository.md#repositoryquery) | [RepositoriesInfo](repository.md#repositoriesinfo) |  |
+| 6 | [stat](repository.md#stat)| [RepositoryStatQuery](repository.md#repositorystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -32,8 +32,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateRepositoryRequest](Repository.md#createrepositoryrequest) |
-| Response |  [RepositoryInfo](Repository.md#repositoryinfo)  |
+| Request | [CreateRepositoryRequest](repository.md#createrepositoryrequest) |
+| Response |  [RepositoryInfo](repository.md#repositoryinfo)  |
  
  
  
@@ -46,8 +46,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateRepositoryRequest](Repository.md#updaterepositoryrequest) |
-| Response |  [RepositoryInfo](Repository.md#repositoryinfo)  |
+| Request | [UpdateRepositoryRequest](repository.md#updaterepositoryrequest) |
+| Response |  [RepositoryInfo](repository.md#repositoryinfo)  |
  
  
  
@@ -60,7 +60,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RepositoryRequest](Repository.md#repositoryrequest) |
+| Request | [RepositoryRequest](repository.md#repositoryrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -74,8 +74,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetRepositoryRequest](Repository.md#getrepositoryrequest) |
-| Response |  [RepositoryInfo](Repository.md#repositoryinfo)  |
+| Request | [GetRepositoryRequest](repository.md#getrepositoryrequest) |
+| Response |  [RepositoryInfo](repository.md#repositoryinfo)  |
  
  
  
@@ -90,8 +90,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RepositoryQuery](Repository.md#repositoryquery) |
-| Response |  [RepositoriesInfo](Repository.md#repositoriesinfo)  |
+| Request | [RepositoryQuery](repository.md#repositoryquery) |
+| Response |  [RepositoriesInfo](repository.md#repositoriesinfo)  |
  
  
  
@@ -104,7 +104,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RepositoryStatQuery](Repository.md#repositorystatquery) |
+| Request | [RepositoryStatQuery](repository.md#repositorystatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -132,7 +132,7 @@ description:
 ### RepositoriesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RepositoryInfo](Repository.md#repositoryinfo)||
+| 1 | results |[RepositoryInfo](repository.md#repositoryinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### RepositoryInfo

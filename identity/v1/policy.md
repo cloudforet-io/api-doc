@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Policy.md#create)| [CreatePolicyRequest](Policy.md#createpolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
-| 2 | [update](Policy.md#update)| [UpdatePolicyRequest](Policy.md#updatepolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
-| 3 | [delete](Policy.md#delete)| [PolicyRequest](Policy.md#policyrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Policy.md#get)| [GetPolicyRequest](Policy.md#getpolicyrequest) | [PolicyInfo](Policy.md#policyinfo) |  |
-| 5 | [list](Policy.md#list)| [PolicyQuery](Policy.md#policyquery) | [PoliciesInfo](Policy.md#policiesinfo) |  |
-| 6 | [stat](Policy.md#stat)| [PolicyStatQuery](Policy.md#policystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [create](policy.md#create)| [CreatePolicyRequest](policy.md#createpolicyrequest) | [PolicyInfo](policy.md#policyinfo) |  |
+| 2 | [update](policy.md#update)| [UpdatePolicyRequest](policy.md#updatepolicyrequest) | [PolicyInfo](policy.md#policyinfo) |  |
+| 3 | [delete](policy.md#delete)| [PolicyRequest](policy.md#policyrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](policy.md#get)| [GetPolicyRequest](policy.md#getpolicyrequest) | [PolicyInfo](policy.md#policyinfo) |  |
+| 5 | [list](policy.md#list)| [PolicyQuery](policy.md#policyquery) | [PoliciesInfo](policy.md#policiesinfo) |  |
+| 6 | [stat](policy.md#stat)| [PolicyStatQuery](policy.md#policystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -32,8 +32,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreatePolicyRequest](Policy.md#createpolicyrequest) |
-| Response |  [PolicyInfo](Policy.md#policyinfo)  |
+| Request | [CreatePolicyRequest](policy.md#createpolicyrequest) |
+| Response |  [PolicyInfo](policy.md#policyinfo)  |
  
  
  
@@ -46,8 +46,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdatePolicyRequest](Policy.md#updatepolicyrequest) |
-| Response |  [PolicyInfo](Policy.md#policyinfo)  |
+| Request | [UpdatePolicyRequest](policy.md#updatepolicyrequest) |
+| Response |  [PolicyInfo](policy.md#policyinfo)  |
  
  
  
@@ -60,7 +60,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PolicyRequest](Policy.md#policyrequest) |
+| Request | [PolicyRequest](policy.md#policyrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -74,8 +74,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetPolicyRequest](Policy.md#getpolicyrequest) |
-| Response |  [PolicyInfo](Policy.md#policyinfo)  |
+| Request | [GetPolicyRequest](policy.md#getpolicyrequest) |
+| Response |  [PolicyInfo](policy.md#policyinfo)  |
  
  
  
@@ -90,8 +90,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PolicyQuery](Policy.md#policyquery) |
-| Response |  [PoliciesInfo](Policy.md#policiesinfo)  |
+| Request | [PolicyQuery](policy.md#policyquery) |
+| Response |  [PoliciesInfo](policy.md#policiesinfo)  |
  
  
  
@@ -104,7 +104,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PolicyStatQuery](Policy.md#policystatquery) |
+| Request | [PolicyStatQuery](policy.md#policystatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -130,7 +130,7 @@ description:
 ### PoliciesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PolicyInfo](Policy.md#policyinfo)||
+| 1 | results |[PolicyInfo](policy.md#policyinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### PolicyInfo

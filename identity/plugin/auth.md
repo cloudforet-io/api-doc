@@ -15,9 +15,9 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [verify](Auth.md#verify)| [VerifyRequest](Auth.md#verifyrequest) | [AuthVerifyInfo](Auth.md#authverifyinfo) |  |
-| 2 | [find](Auth.md#find)| [FindRequest](Auth.md#findrequest) | [UsersInfo](Auth.md#usersinfo) |  |
-| 3 | [login](Auth.md#login)| [LoginRequest](Auth.md#loginrequest) | [UserInfo](Auth.md#userinfo) |  | 
+| 1 | [verify](auth.md#verify)| [VerifyRequest](auth.md#verifyrequest) | [AuthVerifyInfo](auth.md#authverifyinfo) |  |
+| 2 | [find](auth.md#find)| [FindRequest](auth.md#findrequest) | [UsersInfo](auth.md#usersinfo) |  |
+| 3 | [login](auth.md#login)| [LoginRequest](auth.md#loginrequest) | [UserInfo](auth.md#userinfo) |  | 
  
  
  
@@ -27,8 +27,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [VerifyRequest](Auth.md#verifyrequest) |
-| Response |  [AuthVerifyInfo](Auth.md#authverifyinfo)  |
+| Request | [VerifyRequest](auth.md#verifyrequest) |
+| Response |  [AuthVerifyInfo](auth.md#authverifyinfo)  |
  
  
  
@@ -39,8 +39,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [FindRequest](Auth.md#findrequest) |
-| Response |  [UsersInfo](Auth.md#usersinfo)  |
+| Request | [FindRequest](auth.md#findrequest) |
+| Response |  [UsersInfo](auth.md#usersinfo)  |
  
  
  
@@ -51,8 +51,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [LoginRequest](Auth.md#loginrequest) |
-| Response |  [UserInfo](Auth.md#userinfo)  |
+| Request | [LoginRequest](auth.md#loginrequest) |
+| Response |  [UserInfo](auth.md#userinfo)  |
 
 
 ## 
@@ -144,7 +144,7 @@ description:
 ### UsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](Auth.md#userinfo)||
+| 1 | results |[UserInfo](auth.md#userinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### VerifyRequest

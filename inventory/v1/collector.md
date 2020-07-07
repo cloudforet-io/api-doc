@@ -15,21 +15,21 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Collector.md#create)| [CreateCollectorRequest](Collector.md#createcollectorrequest) | [CollectorInfo](Collector.md#collectorinfo) |  |
-| 2 | [update](Collector.md#update)| [UpdateCollectorRequest](Collector.md#updatecollectorrequest) | [CollectorInfo](Collector.md#collectorinfo) |  |
-| 3 | [delete](Collector.md#delete)| [CollectorRequest](Collector.md#collectorrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Collector.md#get)| [GetCollectorRequest](Collector.md#getcollectorrequest) | [CollectorInfo](Collector.md#collectorinfo) |  |
-| 5 | [enable](Collector.md#enable)| [CollectorRequest](Collector.md#collectorrequest) | [CollectorInfo](Collector.md#collectorinfo) |  |
-| 6 | [disable](Collector.md#disable)| [CollectorRequest](Collector.md#collectorrequest) | [CollectorInfo](Collector.md#collectorinfo) |  |
-| 7 | [list](Collector.md#list)| [CollectorQuery](Collector.md#collectorquery) | [CollectorsInfo](Collector.md#collectorsinfo) |  |
-| 8 | [stat](Collector.md#stat)| [CollectorStatQuery](Collector.md#collectorstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 9 | [collect](Collector.md#collect)| [CollectRequest](Collector.md#collectrequest) | [JobInfo](Collector.md#jobinfo) |  |
-| 10 | [verify_plugin](Collector.md#verify_plugin)| [VerifyPluginRequest](Collector.md#verifypluginrequest) | [VerifyInfo](Collector.md#verifyinfo) |  |
-| 11 | [add_schedule](Collector.md#add_schedule)| [CreateScheduleRequest](Collector.md#createschedulerequest) | [ScheduleInfo](Collector.md#scheduleinfo) |  |
-| 12 | [get_schedule](Collector.md#get_schedule)| [ScheduleRequest](Collector.md#schedulerequest) | [ScheduleInfo](Collector.md#scheduleinfo) |  |
-| 13 | [update_schedule](Collector.md#update_schedule)| [UpdateScheduleRequest](Collector.md#updateschedulerequest) | [ScheduleInfo](Collector.md#scheduleinfo) |  |
-| 14 | [delete_schedule](Collector.md#delete_schedule)| [DeleteScheduleRequest](Collector.md#deleteschedulerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 15 | [list_schedules](Collector.md#list_schedules)| [ScheduleQuery](Collector.md#schedulequery) | [SchedulesInfo](Collector.md#schedulesinfo) |  | 
+| 1 | [create](collector.md#create)| [CreateCollectorRequest](collector.md#createcollectorrequest) | [CollectorInfo](collector.md#collectorinfo) |  |
+| 2 | [update](collector.md#update)| [UpdateCollectorRequest](collector.md#updatecollectorrequest) | [CollectorInfo](collector.md#collectorinfo) |  |
+| 3 | [delete](collector.md#delete)| [CollectorRequest](collector.md#collectorrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](collector.md#get)| [GetCollectorRequest](collector.md#getcollectorrequest) | [CollectorInfo](collector.md#collectorinfo) |  |
+| 5 | [enable](collector.md#enable)| [CollectorRequest](collector.md#collectorrequest) | [CollectorInfo](collector.md#collectorinfo) |  |
+| 6 | [disable](collector.md#disable)| [CollectorRequest](collector.md#collectorrequest) | [CollectorInfo](collector.md#collectorinfo) |  |
+| 7 | [list](collector.md#list)| [CollectorQuery](collector.md#collectorquery) | [CollectorsInfo](collector.md#collectorsinfo) |  |
+| 8 | [stat](collector.md#stat)| [CollectorStatQuery](collector.md#collectorstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 9 | [collect](collector.md#collect)| [CollectRequest](collector.md#collectrequest) | [JobInfo](collector.md#jobinfo) |  |
+| 10 | [verify_plugin](collector.md#verify_plugin)| [VerifyPluginRequest](collector.md#verifypluginrequest) | [VerifyInfo](collector.md#verifyinfo) |  |
+| 11 | [add_schedule](collector.md#add_schedule)| [CreateScheduleRequest](collector.md#createschedulerequest) | [ScheduleInfo](collector.md#scheduleinfo) |  |
+| 12 | [get_schedule](collector.md#get_schedule)| [ScheduleRequest](collector.md#schedulerequest) | [ScheduleInfo](collector.md#scheduleinfo) |  |
+| 13 | [update_schedule](collector.md#update_schedule)| [UpdateScheduleRequest](collector.md#updateschedulerequest) | [ScheduleInfo](collector.md#scheduleinfo) |  |
+| 14 | [delete_schedule](collector.md#delete_schedule)| [DeleteScheduleRequest](collector.md#deleteschedulerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 15 | [list_schedules](collector.md#list_schedules)| [ScheduleQuery](collector.md#schedulequery) | [SchedulesInfo](collector.md#schedulesinfo) |  | 
  
  
  
@@ -41,8 +41,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateCollectorRequest](Collector.md#createcollectorrequest) |
-| Response |  [CollectorInfo](Collector.md#collectorinfo)  |
+| Request | [CreateCollectorRequest](collector.md#createcollectorrequest) |
+| Response |  [CollectorInfo](collector.md#collectorinfo)  |
  
  
  
@@ -55,8 +55,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateCollectorRequest](Collector.md#updatecollectorrequest) |
-| Response |  [CollectorInfo](Collector.md#collectorinfo)  |
+| Request | [UpdateCollectorRequest](collector.md#updatecollectorrequest) |
+| Response |  [CollectorInfo](collector.md#collectorinfo)  |
  
  
  
@@ -69,7 +69,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CollectorRequest](Collector.md#collectorrequest) |
+| Request | [CollectorRequest](collector.md#collectorrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -83,8 +83,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetCollectorRequest](Collector.md#getcollectorrequest) |
-| Response |  [CollectorInfo](Collector.md#collectorinfo)  |
+| Request | [GetCollectorRequest](collector.md#getcollectorrequest) |
+| Response |  [CollectorInfo](collector.md#collectorinfo)  |
  
  
  
@@ -97,8 +97,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CollectorRequest](Collector.md#collectorrequest) |
-| Response |  [CollectorInfo](Collector.md#collectorinfo)  |
+| Request | [CollectorRequest](collector.md#collectorrequest) |
+| Response |  [CollectorInfo](collector.md#collectorinfo)  |
  
  
  
@@ -111,8 +111,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CollectorRequest](Collector.md#collectorrequest) |
-| Response |  [CollectorInfo](Collector.md#collectorinfo)  |
+| Request | [CollectorRequest](collector.md#collectorrequest) |
+| Response |  [CollectorInfo](collector.md#collectorinfo)  |
  
  
  
@@ -127,8 +127,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CollectorQuery](Collector.md#collectorquery) |
-| Response |  [CollectorsInfo](Collector.md#collectorsinfo)  |
+| Request | [CollectorQuery](collector.md#collectorquery) |
+| Response |  [CollectorsInfo](collector.md#collectorsinfo)  |
  
  
  
@@ -141,7 +141,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CollectorStatQuery](Collector.md#collectorstatquery) |
+| Request | [CollectorStatQuery](collector.md#collectorstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
  
  
@@ -155,8 +155,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CollectRequest](Collector.md#collectrequest) |
-| Response |  [JobInfo](Collector.md#jobinfo)  |
+| Request | [CollectRequest](collector.md#collectrequest) |
+| Response |  [JobInfo](collector.md#jobinfo)  |
  
  
  
@@ -169,8 +169,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [VerifyPluginRequest](Collector.md#verifypluginrequest) |
-| Response |  [VerifyInfo](Collector.md#verifyinfo)  |
+| Request | [VerifyPluginRequest](collector.md#verifypluginrequest) |
+| Response |  [VerifyInfo](collector.md#verifyinfo)  |
  
  
  
@@ -183,8 +183,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateScheduleRequest](Collector.md#createschedulerequest) |
-| Response |  [ScheduleInfo](Collector.md#scheduleinfo)  |
+| Request | [CreateScheduleRequest](collector.md#createschedulerequest) |
+| Response |  [ScheduleInfo](collector.md#scheduleinfo)  |
  
  
  
@@ -197,8 +197,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ScheduleRequest](Collector.md#schedulerequest) |
-| Response |  [ScheduleInfo](Collector.md#scheduleinfo)  |
+| Request | [ScheduleRequest](collector.md#schedulerequest) |
+| Response |  [ScheduleInfo](collector.md#scheduleinfo)  |
  
  
  
@@ -211,8 +211,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateScheduleRequest](Collector.md#updateschedulerequest) |
-| Response |  [ScheduleInfo](Collector.md#scheduleinfo)  |
+| Request | [UpdateScheduleRequest](collector.md#updateschedulerequest) |
+| Response |  [ScheduleInfo](collector.md#scheduleinfo)  |
  
  
  
@@ -225,7 +225,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DeleteScheduleRequest](Collector.md#deleteschedulerequest) |
+| Request | [DeleteScheduleRequest](collector.md#deleteschedulerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -241,8 +241,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ScheduleQuery](Collector.md#schedulequery) |
-| Response |  [SchedulesInfo](Collector.md#schedulesinfo)  |
+| Request | [ScheduleQuery](collector.md#schedulequery) |
+| Response |  [SchedulesInfo](collector.md#schedulesinfo)  |
 
 
 ## 
@@ -298,7 +298,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">plugin_info</td>
-      <td style="text-align:left"><a href="Collector.md#plugininfo">PluginInfo</a></td>
+      <td style="text-align:left"><a href="collector.md#plugininfo">PluginInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -438,14 +438,14 @@ description:
 ### CollectorsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CollectorInfo](Collector.md#collectorinfo)||
+| 1 | results |[CollectorInfo](collector.md#collectorinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### CreateCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅||
-| 2 | plugin_info |[PluginInfo](Collector.md#plugininfo)|✅||
+| 2 | plugin_info |[PluginInfo](collector.md#plugininfo)|✅||
 | 3 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌||
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 5 | domain_id |string|✅||
@@ -457,7 +457,7 @@ description:
 | 2 | collector_id |string|✅||
 | 3 | name |string|❌||
 | 4 | collect_mode |string|❌||
-| 5 | schedule |[Scheduled](Collector.md#scheduled)|✅||
+| 5 | schedule |[Scheduled](collector.md#scheduled)|✅||
 | 6 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 
 ### DeleteScheduleRequest
@@ -552,7 +552,7 @@ description:
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">collector_info</td>
-      <td style="text-align:left"><a href="Collector.md#collectorinfo">CollectorInfo</a></td>
+      <td style="text-align:left"><a href="collector.md#collectorinfo">CollectorInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -591,10 +591,10 @@ description:
 | 2 | schedule_id |string||
 | 3 | name |string||
 | 4 | collect_mode |string||
-| 5 | schedule |[Scheduled](Collector.md#scheduled)||
+| 5 | schedule |[Scheduled](collector.md#scheduled)||
 | 6 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)||
 | 7 | last_scheduled_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)||
-| 8 | collector_info |[CollectorInfo](Collector.md#collectorinfo)||
+| 8 | collector_info |[CollectorInfo](collector.md#collectorinfo)||
 | 9 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
 
 ### ScheduleQuery
@@ -623,7 +623,7 @@ description:
 ### SchedulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](Collector.md#scheduleinfo)||
+| 1 | results |[ScheduleInfo](collector.md#scheduleinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### UpdateCollectorRequest
@@ -631,7 +631,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | collector_id |string|✅||
 | 2 | name |string|❌||
-| 3 | plugin_info |[PluginInfo](Collector.md#plugininfo)|❌||
+| 3 | plugin_info |[PluginInfo](collector.md#plugininfo)|❌||
 | 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌||
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 6 | domain_id |string|✅||
@@ -644,7 +644,7 @@ description:
 | 3 | collector_id |string|✅||
 | 4 | name |string|❌||
 | 5 | collect_mode |string|❌||
-| 6 | schedule |[Scheduled](Collector.md#scheduled)|❌||
+| 6 | schedule |[Scheduled](collector.md#scheduled)|❌||
 | 7 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 
 ### VerifyInfo

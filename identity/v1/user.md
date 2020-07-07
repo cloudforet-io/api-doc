@@ -15,17 +15,17 @@ description: User API which allows member management within project, company, an
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](User.md#create)| [CreateUserRequest](User.md#createuserrequest) | [UserInfo](User.md#userinfo) |  |
-| 2 | [update](User.md#update)| [UpdateUserRequest](User.md#updateuserrequest) | [UserInfo](User.md#userinfo) |  |
-| 3 | [enable](User.md#enable)| [UserRequest](User.md#userrequest) | [UserInfo](User.md#userinfo) |  |
-| 4 | [disable](User.md#disable)| [UserRequest](User.md#userrequest) | [UserInfo](User.md#userinfo) |  |
-| 5 | [update_role](User.md#update_role)| [UpdateUserRoleRequest](User.md#updateuserrolerequest) | [UserInfo](User.md#userinfo) |  |
-| 6 | [delete](User.md#delete)| [UserRequest](User.md#userrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [get](User.md#get)| [GetUserRequest](User.md#getuserrequest) | [UserInfo](User.md#userinfo) |  |
-| 8 | [list](User.md#list)| [UserQuery](User.md#userquery) | [UsersInfo](User.md#usersinfo) |  |
-| 9 | [stat](User.md#stat)| [UserStatQuery](User.md#userstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 10 | [find](User.md#find)| [FindUserQuery](User.md#finduserquery) | [FindUsersInfo](User.md#findusersinfo) |  |
-| 11 | [sync](User.md#sync)| [UserRequest](User.md#userrequest) | [UserInfo](User.md#userinfo) |  | 
+| 1 | [create](user.md#create)| [CreateUserRequest](user.md#createuserrequest) | [UserInfo](user.md#userinfo) |  |
+| 2 | [update](user.md#update)| [UpdateUserRequest](user.md#updateuserrequest) | [UserInfo](user.md#userinfo) |  |
+| 3 | [enable](user.md#enable)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  |
+| 4 | [disable](user.md#disable)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  |
+| 5 | [update_role](user.md#update_role)| [UpdateUserRoleRequest](user.md#updateuserrolerequest) | [UserInfo](user.md#userinfo) |  |
+| 6 | [delete](user.md#delete)| [UserRequest](user.md#userrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [get](user.md#get)| [GetUserRequest](user.md#getuserrequest) | [UserInfo](user.md#userinfo) |  |
+| 8 | [list](user.md#list)| [UserQuery](user.md#userquery) | [UsersInfo](user.md#usersinfo) |  |
+| 9 | [stat](user.md#stat)| [UserStatQuery](user.md#userstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 10 | [find](user.md#find)| [FindUserQuery](user.md#finduserquery) | [FindUsersInfo](user.md#findusersinfo) |  |
+| 11 | [sync](user.md#sync)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  | 
  
  
  
@@ -37,8 +37,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateUserRequest](User.md#createuserrequest) |
-| Response |  [UserInfo](User.md#userinfo)  |
+| Request | [CreateUserRequest](user.md#createuserrequest) |
+| Response |  [UserInfo](user.md#userinfo)  |
  
  
  
@@ -52,8 +52,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateUserRequest](User.md#updateuserrequest) |
-| Response |  [UserInfo](User.md#userinfo)  |
+| Request | [UpdateUserRequest](user.md#updateuserrequest) |
+| Response |  [UserInfo](user.md#userinfo)  |
 {% tabs %}
 {% tab title="Request Example" %}
 ```text
@@ -109,8 +109,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UserRequest](User.md#userrequest) |
-| Response |  [UserInfo](User.md#userinfo)  |
+| Request | [UserRequest](user.md#userrequest) |
+| Response |  [UserInfo](user.md#userinfo)  |
  
  
  
@@ -123,8 +123,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UserRequest](User.md#userrequest) |
-| Response |  [UserInfo](User.md#userinfo)  |
+| Request | [UserRequest](user.md#userrequest) |
+| Response |  [UserInfo](user.md#userinfo)  |
  
  
  
@@ -137,8 +137,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateUserRoleRequest](User.md#updateuserrolerequest) |
-| Response |  [UserInfo](User.md#userinfo)  |
+| Request | [UpdateUserRoleRequest](user.md#updateuserrolerequest) |
+| Response |  [UserInfo](user.md#userinfo)  |
  
  
  
@@ -151,7 +151,7 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UserRequest](User.md#userrequest) |
+| Request | [UserRequest](user.md#userrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -165,8 +165,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetUserRequest](User.md#getuserrequest) |
-| Response |  [UserInfo](User.md#userinfo)  |
+| Request | [GetUserRequest](user.md#getuserrequest) |
+| Response |  [UserInfo](user.md#userinfo)  |
  
  
  
@@ -181,8 +181,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UserQuery](User.md#userquery) |
-| Response |  [UsersInfo](User.md#usersinfo)  |
+| Request | [UserQuery](user.md#userquery) |
+| Response |  [UsersInfo](user.md#usersinfo)  |
  
  
  
@@ -195,7 +195,7 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UserStatQuery](User.md#userstatquery) |
+| Request | [UserStatQuery](user.md#userstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
  
  
@@ -209,8 +209,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [FindUserQuery](User.md#finduserquery) |
-| Response |  [FindUsersInfo](User.md#findusersinfo)  |
+| Request | [FindUserQuery](user.md#finduserquery) |
+| Response |  [FindUsersInfo](user.md#findusersinfo)  |
  
  
  
@@ -223,8 +223,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UserRequest](User.md#userrequest) |
-| Response |  [UserInfo](User.md#userinfo)  |
+| Request | [UserRequest](user.md#userrequest) |
+| Response |  [UserInfo](user.md#userinfo)  |
 
 
 ## 
@@ -258,7 +258,7 @@ description: User API which allows member management within project, company, an
 ### FindUserQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | search |[FindUserSearch](User.md#findusersearch)|✅||
+| 1 | search |[FindUserSearch](user.md#findusersearch)|✅||
 | 2 | domain_id |string|✅||
 
 ### FindUserSearch
@@ -270,7 +270,7 @@ description: User API which allows member management within project, company, an
 ### FindUsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[FindUserInfo](User.md#finduserinfo)||
+| 1 | results |[FindUserInfo](user.md#finduserinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### GetUserRequest
@@ -376,7 +376,7 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">roles</td>
-      <td style="text-align:left"><a href="User.md#roleinfo">RoleInfo</a></td>
+      <td style="text-align:left"><a href="user.md#roleinfo">RoleInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -440,5 +440,5 @@ description: User API which allows member management within project, company, an
 ### UsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](User.md#userinfo)||
+| 1 | results |[UserInfo](user.md#userinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||

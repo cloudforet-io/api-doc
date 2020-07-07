@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Service-account.md#create)| [CreateServiceAccountRequest](Service-account.md#createserviceaccountrequest) | [ServiceAccountInfo](Service-account.md#serviceaccountinfo) |  |
-| 2 | [update](Service-account.md#update)| [UpdateServiceAccountRequest](Service-account.md#updateserviceaccountrequest) | [ServiceAccountInfo](Service-account.md#serviceaccountinfo) |  |
-| 3 | [delete](Service-account.md#delete)| [ServiceAccountRequest](Service-account.md#serviceaccountrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Service-account.md#get)| [GetServiceAccountRequest](Service-account.md#getserviceaccountrequest) | [ServiceAccountInfo](Service-account.md#serviceaccountinfo) |  |
-| 5 | [list](Service-account.md#list)| [ServiceAccountQuery](Service-account.md#serviceaccountquery) | [ServiceAccountsInfo](Service-account.md#serviceaccountsinfo) |  |
-| 6 | [stat](Service-account.md#stat)| [ServiceAccountStatQuery](Service-account.md#serviceaccountstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [create](service-account.md#create)| [CreateServiceAccountRequest](service-account.md#createserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
+| 2 | [update](service-account.md#update)| [UpdateServiceAccountRequest](service-account.md#updateserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
+| 3 | [delete](service-account.md#delete)| [ServiceAccountRequest](service-account.md#serviceaccountrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get](service-account.md#get)| [GetServiceAccountRequest](service-account.md#getserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
+| 5 | [list](service-account.md#list)| [ServiceAccountQuery](service-account.md#serviceaccountquery) | [ServiceAccountsInfo](service-account.md#serviceaccountsinfo) |  |
+| 6 | [stat](service-account.md#stat)| [ServiceAccountStatQuery](service-account.md#serviceaccountstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -32,8 +32,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateServiceAccountRequest](Service-account.md#createserviceaccountrequest) |
-| Response |  [ServiceAccountInfo](Service-account.md#serviceaccountinfo)  |
+| Request | [CreateServiceAccountRequest](service-account.md#createserviceaccountrequest) |
+| Response |  [ServiceAccountInfo](service-account.md#serviceaccountinfo)  |
  
  
  
@@ -46,8 +46,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateServiceAccountRequest](Service-account.md#updateserviceaccountrequest) |
-| Response |  [ServiceAccountInfo](Service-account.md#serviceaccountinfo)  |
+| Request | [UpdateServiceAccountRequest](service-account.md#updateserviceaccountrequest) |
+| Response |  [ServiceAccountInfo](service-account.md#serviceaccountinfo)  |
  
  
  
@@ -60,7 +60,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ServiceAccountRequest](Service-account.md#serviceaccountrequest) |
+| Request | [ServiceAccountRequest](service-account.md#serviceaccountrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -74,8 +74,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetServiceAccountRequest](Service-account.md#getserviceaccountrequest) |
-| Response |  [ServiceAccountInfo](Service-account.md#serviceaccountinfo)  |
+| Request | [GetServiceAccountRequest](service-account.md#getserviceaccountrequest) |
+| Response |  [ServiceAccountInfo](service-account.md#serviceaccountinfo)  |
  
  
  
@@ -90,8 +90,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ServiceAccountQuery](Service-account.md#serviceaccountquery) |
-| Response |  [ServiceAccountsInfo](Service-account.md#serviceaccountsinfo)  |
+| Request | [ServiceAccountQuery](service-account.md#serviceaccountquery) |
+| Response |  [ServiceAccountsInfo](service-account.md#serviceaccountsinfo)  |
  
  
  
@@ -104,7 +104,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ServiceAccountStatQuery](Service-account.md#serviceaccountstatquery) |
+| Request | [ServiceAccountStatQuery](service-account.md#serviceaccountstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -136,7 +136,7 @@ description:
 | 2 | name |string||
 | 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
 | 4 | provider |string||
-| 5 | project_info |[ProjectInfo](Service-account.md#projectinfo)||
+| 5 | project_info |[ProjectInfo](service-account.md#projectinfo)||
 | 6 | domain_id |string||
 | 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
 | 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)||
@@ -166,7 +166,7 @@ description:
 ### ServiceAccountsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ServiceAccountInfo](Service-account.md#serviceaccountinfo)||
+| 1 | results |[ServiceAccountInfo](service-account.md#serviceaccountinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### UpdateServiceAccountRequest

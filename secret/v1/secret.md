@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Secret.md#create)| [CreateSecretRequest](Secret.md#createsecretrequest) | [SecretInfo](Secret.md#secretinfo) |  |
-| 2 | [update](Secret.md#update)| [UpdateSecretRequest](Secret.md#updatesecretrequest) | [SecretInfo](Secret.md#secretinfo) |  |
-| 3 | [delete](Secret.md#delete)| [SecretRequest](Secret.md#secretrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get_data](Secret.md#get_data)| [SecretRequest](Secret.md#secretrequest) | [SecretDataInfo](Secret.md#secretdatainfo) |  |
-| 5 | [get](Secret.md#get)| [GetSecretRequest](Secret.md#getsecretrequest) | [SecretInfo](Secret.md#secretinfo) |  |
-| 6 | [list](Secret.md#list)| [SecretQuery](Secret.md#secretquery) | [SecretsInfo](Secret.md#secretsinfo) |  |
-| 7 | [stat](Secret.md#stat)| [SecretStatQuery](Secret.md#secretstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [create](secret.md#create)| [CreateSecretRequest](secret.md#createsecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
+| 2 | [update](secret.md#update)| [UpdateSecretRequest](secret.md#updatesecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
+| 3 | [delete](secret.md#delete)| [SecretRequest](secret.md#secretrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [get_data](secret.md#get_data)| [SecretRequest](secret.md#secretrequest) | [SecretDataInfo](secret.md#secretdatainfo) |  |
+| 5 | [get](secret.md#get)| [GetSecretRequest](secret.md#getsecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
+| 6 | [list](secret.md#list)| [SecretQuery](secret.md#secretquery) | [SecretsInfo](secret.md#secretsinfo) |  |
+| 7 | [stat](secret.md#stat)| [SecretStatQuery](secret.md#secretstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  
@@ -33,8 +33,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateSecretRequest](Secret.md#createsecretrequest) |
-| Response |  [SecretInfo](Secret.md#secretinfo)  |
+| Request | [CreateSecretRequest](secret.md#createsecretrequest) |
+| Response |  [SecretInfo](secret.md#secretinfo)  |
  
  
  
@@ -47,8 +47,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateSecretRequest](Secret.md#updatesecretrequest) |
-| Response |  [SecretInfo](Secret.md#secretinfo)  |
+| Request | [UpdateSecretRequest](secret.md#updatesecretrequest) |
+| Response |  [SecretInfo](secret.md#secretinfo)  |
  
  
  
@@ -61,7 +61,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretRequest](Secret.md#secretrequest) |
+| Request | [SecretRequest](secret.md#secretrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -75,8 +75,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretRequest](Secret.md#secretrequest) |
-| Response |  [SecretDataInfo](Secret.md#secretdatainfo)  |
+| Request | [SecretRequest](secret.md#secretrequest) |
+| Response |  [SecretDataInfo](secret.md#secretdatainfo)  |
  
  
  
@@ -89,8 +89,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetSecretRequest](Secret.md#getsecretrequest) |
-| Response |  [SecretInfo](Secret.md#secretinfo)  |
+| Request | [GetSecretRequest](secret.md#getsecretrequest) |
+| Response |  [SecretInfo](secret.md#secretinfo)  |
  
  
  
@@ -105,8 +105,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretQuery](Secret.md#secretquery) |
-| Response |  [SecretsInfo](Secret.md#secretsinfo)  |
+| Request | [SecretQuery](secret.md#secretquery) |
+| Response |  [SecretsInfo](secret.md#secretsinfo)  |
  
  
  
@@ -119,7 +119,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [SecretStatQuery](Secret.md#secretstatquery) |
+| Request | [SecretStatQuery](secret.md#secretstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -413,7 +413,7 @@ description:
 ### SecretsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SecretInfo](Secret.md#secretinfo)||
+| 1 | results |[SecretInfo](secret.md#secretinfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### UpdateSecretRequest

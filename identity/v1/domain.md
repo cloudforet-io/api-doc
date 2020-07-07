@@ -15,16 +15,16 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Domain.md#create)| [CreateDomainRequest](Domain.md#createdomainrequest) | [DomainInfo](Domain.md#domaininfo) |  |
-| 2 | [update](Domain.md#update)| [UpdateDomainRequest](Domain.md#updatedomainrequest) | [DomainInfo](Domain.md#domaininfo) |  |
-| 3 | [delete](Domain.md#delete)| [DomainRequest](Domain.md#domainrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [enable](Domain.md#enable)| [DomainRequest](Domain.md#domainrequest) | [DomainInfo](Domain.md#domaininfo) |  |
-| 5 | [disable](Domain.md#disable)| [DomainRequest](Domain.md#domainrequest) | [DomainInfo](Domain.md#domaininfo) |  |
-| 6 | [get](Domain.md#get)| [GetDomainRequest](Domain.md#getdomainrequest) | [DomainInfo](Domain.md#domaininfo) |  |
-| 7 | [list](Domain.md#list)| [DomainQuery](Domain.md#domainquery) | [DomainsInfo](Domain.md#domainsinfo) |  |
-| 8 | [stat](Domain.md#stat)| [DomainStatQuery](Domain.md#domainstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 9 | [get_public_key](Domain.md#get_public_key)|.spaceone.api.core.v1.AuthenticationRequest|.spaceone.api.core.v1.AuthenticationResponse|  |
-| 10 | [get_domain_key](Domain.md#get_domain_key)|.spaceone.api.core.v1.AuthenticationRequest| [DomainKeyResponse](Domain.md#domainkeyresponse) |  | 
+| 1 | [create](domain.md#create)| [CreateDomainRequest](domain.md#createdomainrequest) | [DomainInfo](domain.md#domaininfo) |  |
+| 2 | [update](domain.md#update)| [UpdateDomainRequest](domain.md#updatedomainrequest) | [DomainInfo](domain.md#domaininfo) |  |
+| 3 | [delete](domain.md#delete)| [DomainRequest](domain.md#domainrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [enable](domain.md#enable)| [DomainRequest](domain.md#domainrequest) | [DomainInfo](domain.md#domaininfo) |  |
+| 5 | [disable](domain.md#disable)| [DomainRequest](domain.md#domainrequest) | [DomainInfo](domain.md#domaininfo) |  |
+| 6 | [get](domain.md#get)| [GetDomainRequest](domain.md#getdomainrequest) | [DomainInfo](domain.md#domaininfo) |  |
+| 7 | [list](domain.md#list)| [DomainQuery](domain.md#domainquery) | [DomainsInfo](domain.md#domainsinfo) |  |
+| 8 | [stat](domain.md#stat)| [DomainStatQuery](domain.md#domainstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 9 | [get_public_key](domain.md#get_public_key)|.spaceone.api.core.v1.AuthenticationRequest|.spaceone.api.core.v1.AuthenticationResponse|  |
+| 10 | [get_domain_key](domain.md#get_domain_key)|.spaceone.api.core.v1.AuthenticationRequest| [DomainKeyResponse](domain.md#domainkeyresponse) |  | 
  
  
  
@@ -36,8 +36,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateDomainRequest](Domain.md#createdomainrequest) |
-| Response |  [DomainInfo](Domain.md#domaininfo)  |
+| Request | [CreateDomainRequest](domain.md#createdomainrequest) |
+| Response |  [DomainInfo](domain.md#domaininfo)  |
  
  
  
@@ -50,8 +50,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateDomainRequest](Domain.md#updatedomainrequest) |
-| Response |  [DomainInfo](Domain.md#domaininfo)  |
+| Request | [UpdateDomainRequest](domain.md#updatedomainrequest) |
+| Response |  [DomainInfo](domain.md#domaininfo)  |
  
  
  
@@ -64,7 +64,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DomainRequest](Domain.md#domainrequest) |
+| Request | [DomainRequest](domain.md#domainrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -78,8 +78,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DomainRequest](Domain.md#domainrequest) |
-| Response |  [DomainInfo](Domain.md#domaininfo)  |
+| Request | [DomainRequest](domain.md#domainrequest) |
+| Response |  [DomainInfo](domain.md#domaininfo)  |
  
  
  
@@ -92,8 +92,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DomainRequest](Domain.md#domainrequest) |
-| Response |  [DomainInfo](Domain.md#domaininfo)  |
+| Request | [DomainRequest](domain.md#domainrequest) |
+| Response |  [DomainInfo](domain.md#domaininfo)  |
  
  
  
@@ -106,8 +106,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetDomainRequest](Domain.md#getdomainrequest) |
-| Response |  [DomainInfo](Domain.md#domaininfo)  |
+| Request | [GetDomainRequest](domain.md#getdomainrequest) |
+| Response |  [DomainInfo](domain.md#domaininfo)  |
  
  
  
@@ -122,8 +122,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DomainQuery](Domain.md#domainquery) |
-| Response |  [DomainsInfo](Domain.md#domainsinfo)  |
+| Request | [DomainQuery](domain.md#domainquery) |
+| Response |  [DomainsInfo](domain.md#domainsinfo)  |
  
  
  
@@ -136,7 +136,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [DomainStatQuery](Domain.md#domainstatquery) |
+| Request | [DomainStatQuery](domain.md#domainstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
  
  
@@ -161,7 +161,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [AuthenticationRequest] |
-| Response |  [DomainKeyResponse](Domain.md#domainkeyresponse)  |
+| Response |  [DomainKeyResponse](domain.md#domainkeyresponse)  |
 
 
 ## 
@@ -172,7 +172,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅||
-| 2 | plugin_info |[PluginInfo](Domain.md#plugininfo)|❌||
+| 2 | plugin_info |[PluginInfo](domain.md#plugininfo)|❌||
 | 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 
@@ -215,7 +215,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">plugin_info</td>
-      <td style="text-align:left"><a href="Domain.md#plugininfo">PluginInfo</a></td>
+      <td style="text-align:left"><a href="domain.md#plugininfo">PluginInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -318,7 +318,7 @@ description:
 ### DomainsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[DomainInfo](Domain.md#domaininfo)||
+| 1 | results |[DomainInfo](domain.md#domaininfo)||
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
 
 ### GetDomainRequest
@@ -339,6 +339,6 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅||
-| 2 | plugin_info |[PluginInfo](Domain.md#plugininfo)|❌||
+| 2 | plugin_info |[PluginInfo](domain.md#plugininfo)|❌||
 | 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||

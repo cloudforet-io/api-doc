@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [get_data](Metric.md#get_data)| [MetricDataRequest](Metric.md#metricdatarequest) | [MetricDataInfo](Metric.md#metricdatainfo) |  |
-| 2 | [list](Metric.md#list)| [MetricRequest](Metric.md#metricrequest) | [MetricsInfo](Metric.md#metricsinfo) |  | 
+| 1 | [get_data](metric.md#get_data)| [MetricDataRequest](metric.md#metricdatarequest) | [MetricDataInfo](metric.md#metricdatainfo) |  |
+| 2 | [list](metric.md#list)| [MetricRequest](metric.md#metricrequest) | [MetricsInfo](metric.md#metricsinfo) |  | 
  
  
  
@@ -28,8 +28,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [MetricDataRequest](Metric.md#metricdatarequest) |
-| Response |  [MetricDataInfo](Metric.md#metricdatainfo)  |
+| Request | [MetricDataRequest](metric.md#metricdatarequest) |
+| Response |  [MetricDataInfo](metric.md#metricdatainfo)  |
  
  
  
@@ -42,8 +42,8 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [MetricRequest](Metric.md#metricrequest) |
-| Response |  [MetricsInfo](Metric.md#metricsinfo)  |
+| Request | [MetricRequest](metric.md#metricrequest) |
+| Response |  [MetricsInfo](metric.md#metricsinfo)  |
 
 
 ## 
@@ -90,6 +90,6 @@ description:
 ### MetricsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | metrics |[MetricInfo](Metric.md#metricinfo)||
+| 1 | metrics |[MetricInfo](metric.md#metricinfo)||
 | 2 | available_resources |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
 | 3 | domain_id |string||
