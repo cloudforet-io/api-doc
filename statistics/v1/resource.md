@@ -37,8 +37,9 @@ description:
 ### Formula
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅| |
+| 1 | name |string|❌| |
 | 2 | formula |string|✅| |
+| 3 | operator |string|❌| |
 
 ### JoinQuery
 <table>
