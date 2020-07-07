@@ -15,20 +15,19 @@ description: User API which allows member management within project, company, an
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](user.md#create)| [CreateUserRequest](user.md#createuserrequest) | [UserInfo](user.md#userinfo) |  |
-| 2 | [**update**](user.md#update)| [UpdateUserRequest](user.md#updateuserrequest) | [UserInfo](user.md#userinfo) |  |
-| 3 | [**enable**](user.md#enable)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  |
-| 4 | [**disable**](user.md#disable)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  |
-| 5 | [**update_role**](user.md#update_role)| [UpdateUserRoleRequest](user.md#updateuserrolerequest) | [UserInfo](user.md#userinfo) |  |
-| 6 | [**delete**](user.md#delete)| [UserRequest](user.md#userrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [**get**](user.md#get)| [GetUserRequest](user.md#getuserrequest) | [UserInfo](user.md#userinfo) |  |
-| 8 | [**list**](user.md#list)| [UserQuery](user.md#userquery) | [UsersInfo](user.md#usersinfo) |  |
-| 9 | [**stat**](user.md#stat)| [UserStatQuery](user.md#userstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 10 | [**find**](user.md#find)| [FindUserQuery](user.md#finduserquery) | [FindUsersInfo](user.md#findusersinfo) |  |
-| 11 | [**sync**](user.md#sync)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  | 
+| 1 | [**create**](user.md#create)|   [CreateUserRequest](user.md#createuserrequest) |   [UserInfo](user.md#userinfo) |  |
+| 2 | [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) | Update user info by given user_id |
+| 3 | [**enable**](user.md#enable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
+| 4 | [**disable**](user.md#disable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
+| 5 | [**update_role**](user.md#update_role)|   [UpdateUserRoleRequest](user.md#updateuserrolerequest) |   [UserInfo](user.md#userinfo) |  |
+| 6 | [**delete**](user.md#delete)|   [UserRequest](user.md#userrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [**get**](user.md#get)|   [GetUserRequest](user.md#getuserrequest) |   [UserInfo](user.md#userinfo) |  |
+| 8 | [**list**](user.md#list)|   [UserQuery](user.md#userquery) |   [UsersInfo](user.md#usersinfo) |  |
+| 9 | [**stat**](user.md#stat)|   [UserStatQuery](user.md#userstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 10 | [**find**](user.md#find)|   [FindUserQuery](user.md#finduserquery) |   [FindUsersInfo](user.md#findusersinfo) |  |
+| 11 | [**sync**](user.md#sync)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  | 
  
- 
- 
+
  
 ### create
 > **POST** /identity/v1/users
@@ -41,8 +40,7 @@ description: User API which allows member management within project, company, an
 | Response |  [UserInfo](user.md#userinfo)  |
  
  
- 
- 
+
  
 ### update
 > **PUT** /identity/v1/users
@@ -99,8 +97,7 @@ description: User API which allows member management within project, company, an
 {% endtabs %}
  
  
- 
- 
+
  
 ### enable
 > **PUT** /identity/v1/user/{user_id}/enable
@@ -113,8 +110,7 @@ description: User API which allows member management within project, company, an
 | Response |  [UserInfo](user.md#userinfo)  |
  
  
- 
- 
+
  
 ### disable
 > **PUT** /identity/v1/user/{user_id}/disable
@@ -127,8 +123,7 @@ description: User API which allows member management within project, company, an
 | Response |  [UserInfo](user.md#userinfo)  |
  
  
- 
- 
+
  
 ### update_role
 > **PUT** /identity/v1/user/{user_id}/roles
@@ -141,8 +136,7 @@ description: User API which allows member management within project, company, an
 | Response |  [UserInfo](user.md#userinfo)  |
  
  
- 
- 
+
  
 ### delete
 > **DELETE** /identity/v1/users
@@ -155,8 +149,7 @@ description: User API which allows member management within project, company, an
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### get
 > **GET** /identity/v1/user/{user_id}
@@ -169,8 +162,7 @@ description: User API which allows member management within project, company, an
 | Response |  [UserInfo](user.md#userinfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /identity/v1/users
@@ -185,8 +177,7 @@ description: User API which allows member management within project, company, an
 | Response |  [UsersInfo](user.md#usersinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /identity/v1/users/stat
@@ -199,8 +190,7 @@ description: User API which allows member management within project, company, an
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
  
  
- 
- 
+
  
 ### find
 > **POST** /identity/v1/users/find
@@ -213,8 +203,7 @@ description: User API which allows member management within project, company, an
 | Response |  [FindUsersInfo](user.md#findusersinfo)  |
  
  
- 
- 
+
  
 ### sync
 > **POST** /identity/v1/users/sync
@@ -234,72 +223,72 @@ description: User API which allows member management within project, company, an
 ### CreateUserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string|✅||
-| 2 | password |string|❌||
-| 3 | name |string|❌||
-| 4 | email |string|❌||
-| 5 | mobile |string|❌||
-| 6 | group |string|❌||
-| 7 | language |string|❌||
-| 8 | timezone |string|❌||
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 10 | domain_id |string|✅||
+| 1 | user_id |string|✅| |
+| 2 | password |string|❌| |
+| 3 | name |string|❌| |
+| 4 | email |string|❌| |
+| 5 | mobile |string|❌| |
+| 6 | group |string|❌| |
+| 7 | language |string|❌| |
+| 8 | timezone |string|❌| |
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 10 | domain_id |string|✅| |
 
 ### FindUserInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | user_id |string||
-| 2 | name |string||
-| 3 | email |string||
-| 4 | mobile |string||
-| 5 | group |string||
-| 6 | state |string||
+| 1 | user_id |string| |
+| 2 | name |string| |
+| 3 | email |string| |
+| 4 | mobile |string| |
+| 5 | group |string| |
+| 6 | state |string| |
 
 ### FindUserQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | search |[FindUserSearch](user.md#findusersearch)|✅||
-| 2 | domain_id |string|✅||
+| 1 | search |[FindUserSearch](user.md#findusersearch)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### FindUserSearch
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | user_id |string||
-| 2 | keyword |string||
+| 1 | user_id |string| |
+| 2 | keyword |string| |
 
 ### FindUsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[FindUserInfo](user.md#finduserinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[FindUserInfo](user.md#finduserinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### GetUserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | user_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | only |string|❌| |
 
 ### UpdateUserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string|✅||
-| 2 | password |string|❌||
-| 3 | name |string|❌||
-| 4 | email |string|❌||
-| 5 | mobile |string|❌||
-| 6 | group |string|❌||
-| 7 | language |string|❌||
-| 8 | timezone |string|❌||
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 10 | domain_id |string|✅||
+| 1 | user_id |string|✅| |
+| 2 | password |string|❌| |
+| 3 | name |string|❌| |
+| 4 | email |string|❌| |
+| 5 | mobile |string|❌| |
+| 6 | group |string|❌| |
+| 7 | language |string|❌| |
+| 8 | timezone |string|❌| |
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 10 | domain_id |string|✅| |
 
 ### UpdateUserRoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string|✅||
-| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅||
-| 3 | domain_id |string|✅||
+| 1 | user_id |string|✅| |
+| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅| |
+| 3 | domain_id |string|✅| |
 
 ### UserInfo
 <table>
@@ -412,33 +401,34 @@ description: User API which allows member management within project, company, an
 </table>
 
 
+
 ### UserQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
-| 2 | user_id |string|❌||
-| 3 | name |string|❌||
-| 4 | state |string|❌||
-| 5 | email |string|❌||
-| 6 | mobile |string|❌||
-| 7 | group |string|❌||
-| 8 | role_id |string|❌||
-| 9 | domain_id |string|❌||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| 2 | user_id |string|❌| |
+| 3 | name |string|❌| |
+| 4 | state |string|❌| |
+| 5 | email |string|❌| |
+| 6 | mobile |string|❌| |
+| 7 | group |string|❌| |
+| 8 | role_id |string|❌| |
+| 9 | domain_id |string|❌| |
 
 ### UserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | user_id |string|✅| |
+| 2 | domain_id |string|✅| |
 
 ### UserStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### UsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](user.md#userinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[UserInfo](user.md#userinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |

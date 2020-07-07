@@ -15,20 +15,19 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**publish**](supervisor.md#publish)| [PublishSupervisorRequest](supervisor.md#publishsupervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| 2 | [**register**](supervisor.md#register)| [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| 3 | [**update**](supervisor.md#update)| [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| 4 | [**deregister**](supervisor.md#deregister)| [SupervisorRequest](supervisor.md#supervisorrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [**enable**](supervisor.md#enable)| [SupervisorRequest](supervisor.md#supervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| 6 | [**disable**](supervisor.md#disable)| [SupervisorRequest](supervisor.md#supervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| 7 | [**recover_plugin**](supervisor.md#recover_plugin)| [RecoverPluginRequest](supervisor.md#recoverpluginrequest) | [PluginInfo](supervisor.md#plugininfo) |  |
-| 8 | [**get**](supervisor.md#get)| [GetSupervisorRequest](supervisor.md#getsupervisorrequest) | [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| 9 | [**list**](supervisor.md#list)| [SupervisorQuery](supervisor.md#supervisorquery) | [SupervisorsInfo](supervisor.md#supervisorsinfo) |  |
-| 10 | [**stat**](supervisor.md#stat)| [SupervisorStatQuery](supervisor.md#supervisorstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 11 | [**list_plugins**](supervisor.md#list_plugins)| [PluginQuery](supervisor.md#pluginquery) | [PluginsInfo](supervisor.md#pluginsinfo) |  | 
+| 1 | [**publish**](supervisor.md#publish)|   [PublishSupervisorRequest](supervisor.md#publishsupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 2 | [**register**](supervisor.md#register)|   [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 3 | [**update**](supervisor.md#update)|   [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 4 | [**deregister**](supervisor.md#deregister)|   [SupervisorRequest](supervisor.md#supervisorrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**enable**](supervisor.md#enable)|   [SupervisorRequest](supervisor.md#supervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 6 | [**disable**](supervisor.md#disable)|   [SupervisorRequest](supervisor.md#supervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 7 | [**recover_plugin**](supervisor.md#recover_plugin)|   [RecoverPluginRequest](supervisor.md#recoverpluginrequest) |   [PluginInfo](supervisor.md#plugininfo) |  |
+| 8 | [**get**](supervisor.md#get)|   [GetSupervisorRequest](supervisor.md#getsupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
+| 9 | [**list**](supervisor.md#list)|   [SupervisorQuery](supervisor.md#supervisorquery) |   [SupervisorsInfo](supervisor.md#supervisorsinfo) |  |
+| 10 | [**stat**](supervisor.md#stat)|   [SupervisorStatQuery](supervisor.md#supervisorstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 11 | [**list_plugins**](supervisor.md#list_plugins)|   [PluginQuery](supervisor.md#pluginquery) |   [PluginsInfo](supervisor.md#pluginsinfo) |  | 
  
- 
- 
+
  
 ### publish
 > **POST** /plugin/v1/supervisors
@@ -41,8 +40,7 @@ description:
 | Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
- 
- 
+
  
 ### register
 > **POST** /plugin/v1/supervisor/{supervisor_id}/register
@@ -55,8 +53,7 @@ description:
 | Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
- 
- 
+
  
 ### update
 > **PUT** /plugin/v1/supervisor/{supervisor_id}
@@ -69,8 +66,7 @@ description:
 | Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
- 
- 
+
  
 ### deregister
 > **DELETE** /plugin/v1/supervisor/{supervisor_id}/register
@@ -83,8 +79,7 @@ description:
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### enable
 > **PUT** /plugin/v1/supervisor/{supervisor_id}/enable
@@ -97,8 +92,7 @@ description:
 | Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
- 
- 
+
  
 ### disable
 > **PUT** /plugin/v1/supervisor/{supervisor_id}/disable
@@ -111,8 +105,7 @@ description:
 | Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
- 
- 
+
  
 ### recover_plugin
 > **POST** /plugin/v1/supervisor/{supervisor_id}/plugin/{plugin_id}/recover
@@ -125,8 +118,7 @@ description:
 | Response |  [PluginInfo](supervisor.md#plugininfo)  |
  
  
- 
- 
+
  
 ### get
 > **GET** /plugin/v1/supervisor/{supervisor_id}
@@ -139,8 +131,7 @@ description:
 | Response |  [SupervisorInfo](supervisor.md#supervisorinfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /plugin/v1/supervisors
@@ -155,8 +146,7 @@ description:
 | Response |  [SupervisorsInfo](supervisor.md#supervisorsinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /plugin/v1/supervisors/stat
@@ -169,8 +159,7 @@ description:
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
  
  
- 
- 
+
  
 ### list_plugins
 > **GET** /plugin/v1/supervisor/{supervisor_id}/plugins
@@ -192,9 +181,9 @@ description:
 ### GetSupervisorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | supervisor_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | only |string|❌| |
 
 ### PluginInfo
 <table>
@@ -271,6 +260,7 @@ description:
    </tr>
   </tbody>
 </table>
+
 
 
 ### PluginQuery
@@ -351,41 +341,42 @@ description:
 </table>
 
 
+
 ### PluginsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PluginInfo](supervisor.md#plugininfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[PluginInfo](supervisor.md#plugininfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### PublishSupervisorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | hostname |string|✅||
-| 3 | secret_key |string|❌||
-| 4 | plugin_info |[PluginInfo](supervisor.md#plugininfo)|❌||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 6 | is_public |bool|❌||
-| 7 | domain_id |string|✅||
+| 1 | name |string|✅| |
+| 2 | hostname |string|✅| |
+| 3 | secret_key |string|❌| |
+| 4 | plugin_info |[PluginInfo](supervisor.md#plugininfo)|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | is_public |bool|❌| |
+| 7 | domain_id |string|✅| |
 
 ### RecoverPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|✅||
-| 2 | plugin_id |string|✅||
-| 3 | version |string|✅||
-| 4 | domain_id |string|✅||
+| 1 | supervisor_id |string|✅| |
+| 2 | plugin_id |string|✅| |
+| 3 | version |string|✅| |
+| 4 | domain_id |string|✅| |
 
 ### RegisterSupervisorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|✅||
-| 2 | name |string|❌||
-| 3 | is_public |bool|❌||
-| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌||
-| 5 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 7 | domain_id |string|✅||
+| 1 | supervisor_id |string|✅| |
+| 2 | name |string|❌| |
+| 3 | is_public |bool|❌| |
+| 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
+| 5 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | domain_id |string|✅| |
 
 ### SupervisorInfo
 <table>
@@ -478,29 +469,30 @@ description:
 </table>
 
 
+
 ### SupervisorQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
-| 2 | supervisor_id |string|❌||
-| 3 | name |string|❌||
-| 4 | is_public |bool|❌||
-| 5 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| 2 | supervisor_id |string|❌| |
+| 3 | name |string|❌| |
+| 4 | is_public |bool|❌| |
+| 5 | domain_id |string|✅| |
 
 ### SupervisorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | supervisor_id |string|✅| |
+| 2 | domain_id |string|✅| |
 
 ### SupervisorStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### SupervisorsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SupervisorInfo](supervisor.md#supervisorinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[SupervisorInfo](supervisor.md#supervisorinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |

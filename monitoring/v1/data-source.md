@@ -15,18 +15,17 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**register**](data-source.md#register)| [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 2 | [**update**](data-source.md#update)| [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 3 | [**enable**](data-source.md#enable)| [DataSourceRequest](data-source.md#datasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 4 | [**disable**](data-source.md#disable)| [DataSourceRequest](data-source.md#datasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 5 | [**deregister**](data-source.md#deregister)| [DataSourceRequest](data-source.md#datasourcerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [**verify_plugin**](data-source.md#verify_plugin)| [DataSourceRequest](data-source.md#datasourcerequest) | [VerifyInfo](data-source.md#verifyinfo) |  |
-| 7 | [**get**](data-source.md#get)| [GetDataSourceRequest](data-source.md#getdatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 8 | [**list**](data-source.md#list)| [DataSourceQuery](data-source.md#datasourcequery) | [DataSourcesInfo](data-source.md#datasourcesinfo) |  |
-| 9 | [**stat**](data-source.md#stat)| [DataSourceStatQuery](data-source.md#datasourcestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**register**](data-source.md#register)|   [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 2 | [**update**](data-source.md#update)|   [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 3 | [**enable**](data-source.md#enable)|   [DataSourceRequest](data-source.md#datasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 4 | [**disable**](data-source.md#disable)|   [DataSourceRequest](data-source.md#datasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 5 | [**deregister**](data-source.md#deregister)|   [DataSourceRequest](data-source.md#datasourcerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [**verify_plugin**](data-source.md#verify_plugin)|   [DataSourceRequest](data-source.md#datasourcerequest) |   [VerifyInfo](data-source.md#verifyinfo) |  |
+| 7 | [**get**](data-source.md#get)|   [GetDataSourceRequest](data-source.md#getdatasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 8 | [**list**](data-source.md#list)|   [DataSourceQuery](data-source.md#datasourcequery) |   [DataSourcesInfo](data-source.md#datasourcesinfo) |  |
+| 9 | [**stat**](data-source.md#stat)|   [DataSourceStatQuery](data-source.md#datasourcestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
- 
- 
+
  
 ### register
 > **POST** /monitoring/v1/data-sources
@@ -39,8 +38,7 @@ description:
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
  
  
- 
- 
+
  
 ### update
 > **PUT** /monitoring/v1/data-source/{data_source_id}
@@ -53,8 +51,7 @@ description:
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
  
  
- 
- 
+
  
 ### enable
 > **PUT** /monitoring/v1/data-source/{data_source_id}/enable
@@ -67,8 +64,7 @@ description:
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
  
  
- 
- 
+
  
 ### disable
 > **PUT** /monitoring/v1/data-source/{data_source_id}/disable
@@ -81,8 +77,7 @@ description:
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
  
  
- 
- 
+
  
 ### deregister
 > **DELETE** /monitoring/v1/data-source/{data_source_id}
@@ -95,8 +90,7 @@ description:
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### verify_plugin
 > **PUT** /monitoring/v1/data-source/{data_source_id}/plugin/verify
@@ -109,8 +103,7 @@ description:
 | Response |  [VerifyInfo](data-source.md#verifyinfo)  |
  
  
- 
- 
+
  
 ### get
 > **GET** /monitoring/v1/data-source/{data_source_id}
@@ -123,8 +116,7 @@ description:
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /monitoring/v1/data-sources
@@ -139,8 +131,7 @@ description:
 | Response |  [DataSourcesInfo](data-source.md#datasourcesinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /monitoring/v1/data-sources/stat
@@ -250,6 +241,7 @@ description:
 </table>
 
 
+
 ### DataSourceQuery
 <table>
   <thead>
@@ -319,58 +311,59 @@ description:
 </table>
 
 
+
 ### DataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | data_source_id |string|✅| |
+| 2 | domain_id |string|✅| |
 
 ### DataSourceStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### DataSourcesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[DataSourceInfo](data-source.md#datasourceinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[DataSourceInfo](data-source.md#datasourceinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### GetDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | data_source_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | only |string|❌| |
 
 ### PluginInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string||
-| 2 | version |string||
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
-| 4 | secret_id |string||
-| 5 | provider |string||
+| 1 | plugin_id |string| |
+| 2 | version |string| |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 4 | secret_id |string| |
+| 5 | provider |string| |
 
 ### RegisterDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | plugin_info |[PluginInfo](data-source.md#plugininfo)|✅||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | domain_id |string|✅||
+| 1 | name |string|✅| |
+| 2 | plugin_info |[PluginInfo](data-source.md#plugininfo)|✅| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | domain_id |string|✅| |
 
 ### UpdateDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | data_source_id |string|✅||
-| 2 | name |string|❌||
-| 3 | plugin_info |[PluginInfo](data-source.md#plugininfo)|❌||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | domain_id |string|✅||
+| 1 | data_source_id |string|✅| |
+| 2 | name |string|❌| |
+| 3 | plugin_info |[PluginInfo](data-source.md#plugininfo)|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | domain_id |string|✅| |
 
 ### VerifyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | status |bool||
+| 1 | status |bool| |

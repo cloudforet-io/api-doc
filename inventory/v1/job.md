@@ -15,11 +15,10 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**list**](job.md#list)| [JobsQuery](job.md#jobsquery) | [JobsInfo](job.md#jobsinfo) |  |
-| 2 | [**stat**](job.md#stat)| [JobStatQuery](job.md#jobstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**list**](job.md#list)|   [JobsQuery](job.md#jobsquery) |   [JobsInfo](job.md#jobsinfo) |  |
+| 2 | [**stat**](job.md#stat)|   [JobStatQuery](job.md#jobstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
- 
- 
+
  
 ### list
 > **GET** /inventory/v1/jobs
@@ -34,8 +33,7 @@ description:
 | Response |  [JobsInfo](job.md#jobsinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /inventory/v1/jobs/stat
@@ -55,14 +53,14 @@ description:
 ### JobStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### JobsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[JobInfo](job.md#jobinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[JobInfo](job.md#jobinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### JobsQuery
 <table>
@@ -135,4 +133,5 @@ description:
    </tr>
   </tbody>
 </table>
+
 

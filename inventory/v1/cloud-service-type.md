@@ -15,16 +15,15 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](cloud-service-type.md#create)| [CreateServiceTypeRequest](cloud-service-type.md#createservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
-| 2 | [**update**](cloud-service-type.md#update)| [UpdateCloudServiceTypeRequest](cloud-service-type.md#updatecloudservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
-| 3 | [**pin_data**](cloud-service-type.md#pin_data)| [PinCloudServiceTypeDataRequest](cloud-service-type.md#pincloudservicetypedatarequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
-| 4 | [**delete**](cloud-service-type.md#delete)| [CloudServiceTypeRequest](cloud-service-type.md#cloudservicetyperequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [**get**](cloud-service-type.md#get)| [GetCloudServiceTypeRequest](cloud-service-type.md#getcloudservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
-| 6 | [**list**](cloud-service-type.md#list)| [CloudServiceTypeQuery](cloud-service-type.md#cloudservicetypequery) | [CloudServiceTypesInfo](cloud-service-type.md#cloudservicetypesinfo) |  |
-| 7 | [**stat**](cloud-service-type.md#stat)| [CloudServiceTypeStatQuery](cloud-service-type.md#cloudservicetypestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](cloud-service-type.md#create)|   [CreateServiceTypeRequest](cloud-service-type.md#createservicetyperequest) |   [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 2 | [**update**](cloud-service-type.md#update)|   [UpdateCloudServiceTypeRequest](cloud-service-type.md#updatecloudservicetyperequest) |   [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 3 | [**pin_data**](cloud-service-type.md#pin_data)|   [PinCloudServiceTypeDataRequest](cloud-service-type.md#pincloudservicetypedatarequest) |   [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 4 | [**delete**](cloud-service-type.md#delete)|   [CloudServiceTypeRequest](cloud-service-type.md#cloudservicetyperequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**get**](cloud-service-type.md#get)|   [GetCloudServiceTypeRequest](cloud-service-type.md#getcloudservicetyperequest) |   [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 6 | [**list**](cloud-service-type.md#list)|   [CloudServiceTypeQuery](cloud-service-type.md#cloudservicetypequery) |   [CloudServiceTypesInfo](cloud-service-type.md#cloudservicetypesinfo) |  |
+| 7 | [**stat**](cloud-service-type.md#stat)|   [CloudServiceTypeStatQuery](cloud-service-type.md#cloudservicetypestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
- 
- 
+
  
 ### create
 > **POST** /inventory/v1/cloud-service-types
@@ -37,8 +36,7 @@ description:
 | Response |  [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)  |
  
  
- 
- 
+
  
 ### update
 > **PUT** /inventory/v1/cloud-service-type/{cloud_service_type_id}
@@ -51,8 +49,7 @@ description:
 | Response |  [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)  |
  
  
- 
- 
+
  
 ### pin_data
 > **PUT** /inventory/v1/cloud-service-type/{cloud_service_type_id}/pin-data
@@ -65,8 +62,7 @@ description:
 | Response |  [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)  |
  
  
- 
- 
+
  
 ### delete
 > **DELETE** /inventory/v1/cloud-service-type/{cloud_service_type_id}
@@ -79,8 +75,7 @@ description:
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### get
 > **GET** /inventory/v1/cloud-service-type/{cloud_service_type_id}
@@ -93,8 +88,7 @@ description:
 | Response |  [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /inventory/v1/cloud-service-types
@@ -109,8 +103,7 @@ description:
 | Response |  [CloudServiceTypesInfo](cloud-service-type.md#cloudservicetypesinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /inventory/v1/cloud-service-types/stat
@@ -130,78 +123,78 @@ description:
 ### CloudServiceTypeInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | cloud_service_type_id |string||
-| 2 | name |string||
-| 3 | provider |string||
-| 4 | group |string||
-| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
-| 7 | labels |string||
-| 8 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
-| 9 | cloud_service_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
-| 10 | domain_id |string||
-| 11 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)||
-| 12 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)||
+| 1 | cloud_service_type_id |string| |
+| 2 | name |string| |
+| 3 | provider |string| |
+| 4 | group |string| |
+| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 7 | labels |string| |
+| 8 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 9 | cloud_service_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 10 | domain_id |string| |
+| 11 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 12 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
 
 ### CloudServiceTypeQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
-| 2 | cloud_service_type_id |string|❌||
-| 3 | name |string|❌||
-| 4 | provider |string|❌||
-| 5 | group |string|❌||
-| 6 | include_cloud_service_count |bool|❌||
-| 7 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| 2 | cloud_service_type_id |string|❌| |
+| 3 | name |string|❌| |
+| 4 | provider |string|❌| |
+| 5 | group |string|❌| |
+| 6 | include_cloud_service_count |bool|❌| |
+| 7 | domain_id |string|✅| |
 
 ### CloudServiceTypeRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | cloud_service_type_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | cloud_service_type_id |string|✅| |
+| 2 | domain_id |string|✅| |
 
 ### CloudServiceTypeStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### CloudServiceTypesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### CreateServiceTypeRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | provider |string|✅||
-| 3 | group |string|✅||
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 7 | domain_id |string|✅||
+| 1 | name |string|✅| |
+| 2 | provider |string|✅| |
+| 3 | group |string|✅| |
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | domain_id |string|✅| |
 
 ### GetCloudServiceTypeRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | cloud_service_type_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | cloud_service_type_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | only |string|❌| |
 
 ### PinCloudServiceTypeDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | cloud_service_type_id |string|✅||
-| 2 | keys |string|✅||
-| 3 | domain_id |string|✅||
+| 1 | cloud_service_type_id |string|✅| |
+| 2 | keys |string|✅| |
+| 3 | domain_id |string|✅| |
 
 ### UpdateCloudServiceTypeRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | cloud_service_type_id |string|✅||
-| 2 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 3 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | domain_id |string|✅||
+| 1 | cloud_service_type_id |string|✅| |
+| 2 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | domain_id |string|✅| |

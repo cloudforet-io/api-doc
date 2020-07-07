@@ -15,15 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](region.md#create)| [CreateRegionRequest](region.md#createregionrequest) | [RegionInfo](region.md#regioninfo) |  |
-| 2 | [**update**](region.md#update)| [UpdateRegionRequest](region.md#updateregionrequest) | [RegionInfo](region.md#regioninfo) |  |
-| 3 | [**delete**](region.md#delete)| [RegionRequest](region.md#regionrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](region.md#get)| [GetRegionRequest](region.md#getregionrequest) | [RegionInfo](region.md#regioninfo) |  |
-| 5 | [**list**](region.md#list)| [RegionQuery](region.md#regionquery) | [RegionsInfo](region.md#regionsinfo) |  |
-| 6 | [**stat**](region.md#stat)| [RegionStatQuery](region.md#regionstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](region.md#create)|   [CreateRegionRequest](region.md#createregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
+| 2 | [**update**](region.md#update)|   [UpdateRegionRequest](region.md#updateregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
+| 3 | [**delete**](region.md#delete)|   [RegionRequest](region.md#regionrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**get**](region.md#get)|   [GetRegionRequest](region.md#getregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
+| 5 | [**list**](region.md#list)|   [RegionQuery](region.md#regionquery) |   [RegionsInfo](region.md#regionsinfo) |  |
+| 6 | [**stat**](region.md#stat)|   [RegionStatQuery](region.md#regionstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
- 
- 
+
  
 ### create
 > **POST** /inventory/v1/regions
@@ -36,8 +35,7 @@ description:
 | Response |  [RegionInfo](region.md#regioninfo)  |
  
  
- 
- 
+
  
 ### update
 > **PUT** /inventory/v1/region/{region_id}
@@ -50,8 +48,7 @@ description:
 | Response |  [RegionInfo](region.md#regioninfo)  |
  
  
- 
- 
+
  
 ### delete
 > **DELETE** /inventory/v1/region/{region_id}
@@ -64,8 +61,7 @@ description:
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### get
 > **GET** /inventory/v1/region/{region_id}
@@ -78,8 +74,7 @@ description:
 | Response |  [RegionInfo](region.md#regioninfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /inventory/v1/regions
@@ -94,8 +89,7 @@ description:
 | Response |  [RegionsInfo](region.md#regionsinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /inventory/v1/regions/stat
@@ -115,16 +109,16 @@ description:
 ### CreateRegionRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 3 | domain_id |string|✅||
+| 1 | name |string|✅| |
+| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | domain_id |string|✅| |
 
 ### GetRegionRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | region_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | region_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | only |string|❌| |
 
 ### RegionInfo
 <table>
@@ -194,36 +188,37 @@ description:
 </table>
 
 
+
 ### RegionQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌||
-| 2 | region_id |string|❌||
-| 3 | name |string|❌||
-| 4 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| 2 | region_id |string|❌| |
+| 3 | name |string|❌| |
+| 4 | domain_id |string|✅| |
 
 ### RegionRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | region_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | region_id |string|✅| |
+| 2 | domain_id |string|✅| |
 
 ### RegionStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### RegionsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RegionInfo](region.md#regioninfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[RegionInfo](region.md#regioninfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### UpdateRegionRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | region_id |string|✅||
-| 2 | name |string|❌||
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | domain_id |string|✅||
+| 1 | region_id |string|✅| |
+| 2 | name |string|❌| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | domain_id |string|✅| |

@@ -15,18 +15,17 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**register**](plugin.md#register)| [CreatePluginRequest](plugin.md#createpluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 2 | [**update**](plugin.md#update)| [UpdatePluginRequest](plugin.md#updatepluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 3 | [**deregister**](plugin.md#deregister)| [PluginRequest](plugin.md#pluginrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**enable**](plugin.md#enable)| [PluginRequest](plugin.md#pluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 5 | [**disable**](plugin.md#disable)| [PluginRequest](plugin.md#pluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 6 | [**get_versions**](plugin.md#get_versions)| [RepositoryPluginRequest](plugin.md#repositorypluginrequest) | [VersionsInfo](plugin.md#versionsinfo) |  |
-| 7 | [**get**](plugin.md#get)| [GetRepositoryPluginRequest](plugin.md#getrepositorypluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 8 | [**list**](plugin.md#list)| [PluginQuery](plugin.md#pluginquery) | [PluginsInfo](plugin.md#pluginsinfo) |  |
-| 9 | [**stat**](plugin.md#stat)| [PluginStatQuery](plugin.md#pluginstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**register**](plugin.md#register)|   [CreatePluginRequest](plugin.md#createpluginrequest) |   [PluginInfo](plugin.md#plugininfo) |  |
+| 2 | [**update**](plugin.md#update)|   [UpdatePluginRequest](plugin.md#updatepluginrequest) |   [PluginInfo](plugin.md#plugininfo) |  |
+| 3 | [**deregister**](plugin.md#deregister)|   [PluginRequest](plugin.md#pluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**enable**](plugin.md#enable)|   [PluginRequest](plugin.md#pluginrequest) |   [PluginInfo](plugin.md#plugininfo) |  |
+| 5 | [**disable**](plugin.md#disable)|   [PluginRequest](plugin.md#pluginrequest) |   [PluginInfo](plugin.md#plugininfo) |  |
+| 6 | [**get_versions**](plugin.md#get_versions)|   [RepositoryPluginRequest](plugin.md#repositorypluginrequest) |   [VersionsInfo](plugin.md#versionsinfo) |  |
+| 7 | [**get**](plugin.md#get)|   [GetRepositoryPluginRequest](plugin.md#getrepositorypluginrequest) |   [PluginInfo](plugin.md#plugininfo) |  |
+| 8 | [**list**](plugin.md#list)|   [PluginQuery](plugin.md#pluginquery) |   [PluginsInfo](plugin.md#pluginsinfo) |  |
+| 9 | [**stat**](plugin.md#stat)|   [PluginStatQuery](plugin.md#pluginstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
- 
- 
+
  
 ### register
 > **POST** /repository/v1/plugins
@@ -39,8 +38,7 @@ description:
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
  
  
- 
- 
+
  
 ### update
 > **PUT** /repository/v1/plugin/{plugin_id}
@@ -53,8 +51,7 @@ description:
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
  
  
- 
- 
+
  
 ### deregister
 > **DELETE** /repository/v1/plugin/{plugin_id}
@@ -67,8 +64,7 @@ description:
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### enable
 > **PUT** /repository/v1/plugin/{plugin_id}/enable
@@ -81,8 +77,7 @@ description:
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
  
  
- 
- 
+
  
 ### disable
 > **PUT** /repository/v1/plugin/{plugin_id}/disable
@@ -95,8 +90,7 @@ description:
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
  
  
- 
- 
+
  
 ### get_versions
 > **GET** /repository/v1/plugins/{plugin_id}/versions
@@ -109,8 +103,7 @@ description:
 | Response |  [VersionsInfo](plugin.md#versionsinfo)  |
  
  
- 
- 
+
  
 ### get
 > **GET** /repository/v1/plugins/{plugin_id}
@@ -123,8 +116,7 @@ description:
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /repository/v1/plugins
@@ -139,8 +131,7 @@ description:
 | Response |  [PluginsInfo](plugin.md#pluginsinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /repository/v1/plugins/stat
@@ -160,24 +151,24 @@ description:
 ### CreatePluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅||
-| 2 | service_type |string|✅||
-| 3 | image |string|✅||
-| 4 | provider |string|❌||
-| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 6 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 7 | labels |string|❌||
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 9 | project_id |string|❌||
-| 10 | domain_id |string|✅||
+| 1 | name |string|✅| |
+| 2 | service_type |string|✅| |
+| 3 | image |string|✅| |
+| 4 | provider |string|❌| |
+| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | labels |string|❌| |
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | project_id |string|❌| |
+| 10 | domain_id |string|✅| |
 
 ### GetRepositoryPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | repository_id |string|❌||
-| 4 | only |string|❌||
+| 1 | plugin_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | repository_id |string|❌| |
+| 4 | only |string|❌| |
 
 ### PluginInfo
 <table>
@@ -303,6 +294,7 @@ description:
 </table>
 
 
+
 ### PluginQuery
 <table>
   <thead>
@@ -379,46 +371,47 @@ description:
 </table>
 
 
+
 ### PluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | plugin_id |string|✅| |
+| 2 | domain_id |string|✅| |
 
 ### PluginStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | repository_id |string|✅||
-| 3 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | repository_id |string|✅| |
+| 3 | domain_id |string|✅| |
 
 ### PluginsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PluginInfo](plugin.md#plugininfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[PluginInfo](plugin.md#plugininfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### RepositoryPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | repository_id |string|❌||
+| 1 | plugin_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | repository_id |string|❌| |
 
 ### UpdatePluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string|✅||
-| 2 | name |string|❌||
-| 3 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 4 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | labels |string|❌||
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 7 | domain_id |string|✅||
+| 1 | plugin_id |string|✅| |
+| 2 | name |string|❌| |
+| 3 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | labels |string|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | domain_id |string|✅| |
 
 ### VersionsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | version |string|deprecated field|
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
-| 3 | results |string||
+| 1 | version |string| deprecated field|
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 3 | results |string| |

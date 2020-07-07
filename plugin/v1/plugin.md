@@ -15,11 +15,10 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**get_plugin_endpoint**](plugin.md#get_plugin_endpoint)| [PluginEndpointRequest](plugin.md#pluginendpointrequest) | [PluginEndpoint](plugin.md#pluginendpoint) |  |
-| 2 | [**notify_failure**](plugin.md#notify_failure)| [PluginFailureRequest](plugin.md#pluginfailurerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
+| 1 | [**get_plugin_endpoint**](plugin.md#get_plugin_endpoint)|   [PluginEndpointRequest](plugin.md#pluginendpointrequest) |   [PluginEndpoint](plugin.md#pluginendpoint) |  |
+| 2 | [**notify_failure**](plugin.md#notify_failure)|   [PluginFailureRequest](plugin.md#pluginfailurerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
  
- 
- 
+
  
 ### get_plugin_endpoint
 > **POST** /plugin/v1/plugin/{plugin_id}/get-endpoint
@@ -32,8 +31,7 @@ description:
 | Response |  [PluginEndpoint](plugin.md#pluginendpoint)  |
  
  
- 
- 
+
  
 ### notify_failure
 > **PUT** /plugin/v1/plugin/{plugin_id}/notify-failure
@@ -53,21 +51,21 @@ description:
 ### PluginEndpoint
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | endpoint |string||
-| 2 | access_token |string||
+| 1 | endpoint |string| |
+| 2 | access_token |string| |
 
 ### PluginEndpointRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string|✅||
-| 2 | version |string|✅||
-| 3 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 4 | domain_id |string|✅||
+| 1 | plugin_id |string|✅| |
+| 2 | version |string|✅| |
+| 3 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 4 | domain_id |string|✅| |
 
 ### PluginFailureRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | supervisor_id |string|✅||
-| 2 | plugin_id |string|✅||
-| 3 | version |string|✅||
-| 4 | domain_id |string|✅||
+| 1 | supervisor_id |string|✅| |
+| 2 | plugin_id |string|✅| |
+| 3 | version |string|✅| |
+| 4 | domain_id |string|✅| |

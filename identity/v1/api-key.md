@@ -15,18 +15,17 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](api-key.md#create)| [CreateAPIKeyRequest](api-key.md#createapikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 2 | [**enable**](api-key.md#enable)| [APIKeyRequest](api-key.md#apikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 3 | [**disable**](api-key.md#disable)| [APIKeyRequest](api-key.md#apikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 4 | [**update_role**](api-key.md#update_role)| [UpdateAPIKeyRoleRequest](api-key.md#updateapikeyrolerequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 5 | [**update_allowed_hosts**](api-key.md#update_allowed_hosts)| [UpdateAPIKeyHostsRequest](api-key.md#updateapikeyhostsrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 6 | [**delete**](api-key.md#delete)| [APIKeyRequest](api-key.md#apikeyrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [**get**](api-key.md#get)| [GetAPIKeyRequest](api-key.md#getapikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 8 | [**list**](api-key.md#list)| [APIKeyQuery](api-key.md#apikeyquery) | [APIKeysInfo](api-key.md#apikeysinfo) |  |
-| 9 | [**stat**](api-key.md#stat)| [APIKeyStatQuery](api-key.md#apikeystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](api-key.md#create)|   [CreateAPIKeyRequest](api-key.md#createapikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 2 | [**enable**](api-key.md#enable)|   [APIKeyRequest](api-key.md#apikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 3 | [**disable**](api-key.md#disable)|   [APIKeyRequest](api-key.md#apikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 4 | [**update_role**](api-key.md#update_role)|   [UpdateAPIKeyRoleRequest](api-key.md#updateapikeyrolerequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 5 | [**update_allowed_hosts**](api-key.md#update_allowed_hosts)|   [UpdateAPIKeyHostsRequest](api-key.md#updateapikeyhostsrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 6 | [**delete**](api-key.md#delete)|   [APIKeyRequest](api-key.md#apikeyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [**get**](api-key.md#get)|   [GetAPIKeyRequest](api-key.md#getapikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 8 | [**list**](api-key.md#list)|   [APIKeyQuery](api-key.md#apikeyquery) |   [APIKeysInfo](api-key.md#apikeysinfo) |  |
+| 9 | [**stat**](api-key.md#stat)|   [APIKeyStatQuery](api-key.md#apikeystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
- 
- 
+
  
 ### create
 > **POST** /identity/v1/api-keys
@@ -39,8 +38,7 @@ description:
 | Response |  [APIKeyInfo](api-key.md#apikeyinfo)  |
  
  
- 
- 
+
  
 ### enable
 > **PUT** /identity/v1/api-key/{api_key_id}/enable
@@ -53,8 +51,7 @@ description:
 | Response |  [APIKeyInfo](api-key.md#apikeyinfo)  |
  
  
- 
- 
+
  
 ### disable
 > **PUT** /identity/v1/api-key/{api_key_id}/disable
@@ -67,8 +64,7 @@ description:
 | Response |  [APIKeyInfo](api-key.md#apikeyinfo)  |
  
  
- 
- 
+
  
 ### update_role
 > **PUT** /identity/v1/api-key/{api_key_id}/roles
@@ -81,8 +77,7 @@ description:
 | Response |  [APIKeyInfo](api-key.md#apikeyinfo)  |
  
  
- 
- 
+
  
 ### update_allowed_hosts
 > **PUT** /identity/v1/api-key/{api_key_id}/allowed-hosts
@@ -95,8 +90,7 @@ description:
 | Response |  [APIKeyInfo](api-key.md#apikeyinfo)  |
  
  
- 
- 
+
  
 ### delete
 > **DELETE** /identity/v1/api-key/{api_key_id}
@@ -109,8 +103,7 @@ description:
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### get
 > **GET** /identity/v1/api-key/{api_key_id}
@@ -123,8 +116,7 @@ description:
 | Response |  [APIKeyInfo](api-key.md#apikeyinfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /identity/v1/api-keys
@@ -139,8 +131,7 @@ description:
 | Response |  [APIKeysInfo](api-key.md#apikeysinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /identity/v1/api-keys/stat
@@ -232,6 +223,7 @@ description:
 </table>
 
 
+
 ### APIKeyQuery
 <table>
   <thead>
@@ -299,29 +291,30 @@ description:
 </table>
 
 
+
 ### APIKeyRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string|required|
-| 2 | domain_id |string|required|
+| 1 | api_key_id |string| |
+| 2 | domain_id |string| |
 
 ### APIKeyStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| None|
+| 2 | domain_id |string|✅| None|
 
 ### APIKeysInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[APIKeyInfo](api-key.md#apikeyinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[APIKeyInfo](api-key.md#apikeyinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### Acls
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | name |string|optional|
-| 2 | cidr |string|required|
+| 1 | name |string| |
+| 2 | cidr |string| |
 
 ### CreateAPIKeyRequest
 <table>
@@ -365,23 +358,24 @@ description:
 </table>
 
 
+
 ### GetAPIKeyRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string|required|
-| 2 | domain_id |string|required|
-| 3 | only |string|optional|
+| 1 | api_key_id |string| |
+| 2 | domain_id |string| |
+| 3 | only |string| |
 
 ### UpdateAPIKeyHostsRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string||
-| 2 | allowed_hosts |[Acls](api-key.md#acls)||
-| 3 | domain_id |string||
+| 1 | api_key_id |string| |
+| 2 | allowed_hosts |[Acls](api-key.md#acls)| |
+| 3 | domain_id |string| |
 
 ### UpdateAPIKeyRoleRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string||
-| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)||
-| 3 | domain_id |string||
+| 1 | api_key_id |string| |
+| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)| |
+| 3 | domain_id |string| |

@@ -15,15 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](role.md#create)| [CreateRoleRequest](role.md#createrolerequest) | [RoleInfo](role.md#roleinfo) |  |
-| 2 | [**update**](role.md#update)| [UpdateRoleRequest](role.md#updaterolerequest) | [RoleInfo](role.md#roleinfo) |  |
-| 3 | [**delete**](role.md#delete)| [RoleRequest](role.md#rolerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](role.md#get)| [GetRoleRequest](role.md#getrolerequest) | [RoleInfo](role.md#roleinfo) |  |
-| 5 | [**list**](role.md#list)| [RoleQuery](role.md#rolequery) | [RolesInfo](role.md#rolesinfo) |  |
-| 6 | [**stat**](role.md#stat)| [RoleStatQuery](role.md#rolestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](role.md#create)|   [CreateRoleRequest](role.md#createrolerequest) |   [RoleInfo](role.md#roleinfo) |  |
+| 2 | [**update**](role.md#update)|   [UpdateRoleRequest](role.md#updaterolerequest) |   [RoleInfo](role.md#roleinfo) |  |
+| 3 | [**delete**](role.md#delete)|   [RoleRequest](role.md#rolerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**get**](role.md#get)|   [GetRoleRequest](role.md#getrolerequest) |   [RoleInfo](role.md#roleinfo) |  |
+| 5 | [**list**](role.md#list)|   [RoleQuery](role.md#rolequery) |   [RolesInfo](role.md#rolesinfo) |  |
+| 6 | [**stat**](role.md#stat)|   [RoleStatQuery](role.md#rolestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
- 
- 
+
  
 ### create
 > **POST** /identity/v1/roles
@@ -36,8 +35,7 @@ description:
 | Response |  [RoleInfo](role.md#roleinfo)  |
  
  
- 
- 
+
  
 ### update
 > **PUT** /identity/v1/roles/{role_id}
@@ -50,8 +48,7 @@ description:
 | Response |  [RoleInfo](role.md#roleinfo)  |
  
  
- 
- 
+
  
 ### delete
 > **DELETE** /identity/v1/roles/{role_id}
@@ -64,8 +61,7 @@ description:
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### get
 > **GET** /identity/v1/roles/{role_id}
@@ -78,8 +74,7 @@ description:
 | Response |  [RoleInfo](role.md#roleinfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /identity/v1/roles
@@ -94,8 +89,7 @@ description:
 | Response |  [RolesInfo](role.md#rolesinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /identity/v1/roles/stat
@@ -168,12 +162,13 @@ description:
 </table>
 
 
+
 ### GetRoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | role_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | role_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | only |string|❌| |
 
 ### RoleInfo
 <table>
@@ -251,6 +246,7 @@ description:
 </table>
 
 
+
 ### RolePolicy
 <table>
   <thead>
@@ -289,6 +285,7 @@ description:
    </tr>
   </tbody>
 </table>
+
 
 
 ### RoleQuery
@@ -347,29 +344,30 @@ description:
 </table>
 
 
+
 ### RoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | role_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | role_id |string|✅| |
+| 2 | domain_id |string|✅| |
 
 ### RoleStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### RolesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RoleInfo](role.md#roleinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[RoleInfo](role.md#roleinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### UpdateRoleRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | role_id |string|✅||
-| 2 | name |string|❌||
-| 3 | policies |[RolePolicy](role.md#rolepolicy)|❌||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
-| 5 | domain_id |string|✅||
+| 1 | role_id |string|✅| |
+| 2 | name |string|❌| |
+| 3 | policies |[RolePolicy](role.md#rolepolicy)|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | domain_id |string|✅| |

@@ -113,22 +113,19 @@ def key_path_creator(path):
             appendable = True
     return key_to_append
 
-def field_desc_wrapper(desc):
+def _desc_wrapper(desc):
     fd_desc = _modify_yaml_to_json(desc)
-    if ('is_required' in fd_desc):
-        if (fd_desc['is_required'] == True):
-            fd_desc['is_required'] = '✅'
-        elif (fd_desc['is_required'] == False):
-            fd_desc['is_required'] = '❌'
-        else:
-            fd_desc['is_required'] = ''
+    if(type(fd_desc) is dict and len(fd_desc) > 0):
+        if ('is_required' in fd_desc):
+            if (fd_desc['is_required'] == True):
+                fd_desc['is_required'] = '✅'
+            elif (fd_desc['is_required'] == False):
+                fd_desc['is_required'] = '❌'
+            else:
+                fd_desc['is_required'] = ''
 
-    if ('desc' in fd_desc):
-        if (fd_desc['desc']) is None:
-            fd_desc['desc'] = ''
-
-    if ('desc' not in fd_desc and 'is_required' in fd_desc):
-            fd_desc['desc'] = ''
+        if ('desc' not in fd_desc):
+                fd_desc['desc'] = ''
 
     return fd_desc
 
@@ -186,7 +183,8 @@ def create_modified_json(reference_files):
             total_dictionary[key_path_creator(json_path)] = full_single_json
             for obj in single:
                 new_desc = _modify_yaml_to_json(obj['description'])
-                _.set(obj, 'description', new_desc)
+
+                obj['description'] = new_desc
                 package = obj['package']
                 enums = get_enums_dict(obj['enums'])
                 services = _.get(obj, 'services')
@@ -196,9 +194,7 @@ def create_modified_json(reference_files):
                 for service in services:
                      for method in service['methods']:
                          method_status = is_exists_in_same_file(message_names, method, fname)
-
-                         svc_desc = _modify_yaml_to_json(method['description'])
-                         method['description'] = svc_desc
+                         method['description'] = _desc_wrapper(method['description'])
                          google_api = _.get(method, 'options')
 
                          if(google_api is not None):
@@ -215,7 +211,7 @@ def create_modified_json(reference_files):
                     is_require_exits = False
                     for idx, field in enumerate(message["fields"]):
                         field_long_type_wrapper(message, field, enums)
-                        field['description'] = field_desc_wrapper(field['description'])
+                        field['description'] = _desc_wrapper(field['description'])
                         field_full_type_wrapper(fname, field, refer_link, package)
                         if(not is_require_exits and 'is_required' in field['description']):
                             is_require_exits = True

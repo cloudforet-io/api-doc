@@ -15,16 +15,15 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](server.md#create)| [CreateServerRequest](server.md#createserverrequest) | [ServerInfo](server.md#serverinfo) |  |
-| 2 | [**update**](server.md#update)| [UpdateServerRequest](server.md#updateserverrequest) | [ServerInfo](server.md#serverinfo) |  |
-| 3 | [**pin_data**](server.md#pin_data)| [PinServerDataRequest](server.md#pinserverdatarequest) | [ServerInfo](server.md#serverinfo) |  |
-| 4 | [**delete**](server.md#delete)| [ServerRequest](server.md#serverrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [**get**](server.md#get)| [GetServerRequest](server.md#getserverrequest) | [ServerInfo](server.md#serverinfo) |  |
-| 6 | [**list**](server.md#list)| [ServerQuery](server.md#serverquery) | [ServersInfo](server.md#serversinfo) |  |
-| 7 | [**stat**](server.md#stat)| [ServerStatQuery](server.md#serverstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](server.md#create)|   [CreateServerRequest](server.md#createserverrequest) |   [ServerInfo](server.md#serverinfo) |  |
+| 2 | [**update**](server.md#update)|   [UpdateServerRequest](server.md#updateserverrequest) |   [ServerInfo](server.md#serverinfo) |  |
+| 3 | [**pin_data**](server.md#pin_data)|   [PinServerDataRequest](server.md#pinserverdatarequest) |   [ServerInfo](server.md#serverinfo) |  |
+| 4 | [**delete**](server.md#delete)|   [ServerRequest](server.md#serverrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**get**](server.md#get)|   [GetServerRequest](server.md#getserverrequest) |   [ServerInfo](server.md#serverinfo) |  |
+| 6 | [**list**](server.md#list)|   [ServerQuery](server.md#serverquery) |   [ServersInfo](server.md#serversinfo) |  |
+| 7 | [**stat**](server.md#stat)|   [ServerStatQuery](server.md#serverstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
- 
- 
+
  
 ### create
 > **POST** /inventory/v1/servers
@@ -37,8 +36,7 @@ description:
 | Response |  [ServerInfo](server.md#serverinfo)  |
  
  
- 
- 
+
  
 ### update
 > **PUT** /inventory/v1/server/{server_id}
@@ -51,8 +49,7 @@ description:
 | Response |  [ServerInfo](server.md#serverinfo)  |
  
  
- 
- 
+
  
 ### pin_data
 > **PUT** /inventory/v1/server/{server_id}/pin-data
@@ -65,8 +62,7 @@ description:
 | Response |  [ServerInfo](server.md#serverinfo)  |
  
  
- 
- 
+
  
 ### delete
 > **DELETE** /inventory/v1/server/{server_id}
@@ -79,8 +75,7 @@ description:
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
- 
- 
+
  
 ### get
 > **GET** /inventory/v1/server/{server_id}
@@ -93,8 +88,7 @@ description:
 | Response |  [ServerInfo](server.md#serverinfo)  |
  
  
- 
- 
+
  
 ### list
 > **GET** /inventory/v1/servers
@@ -109,8 +103,7 @@ description:
 | Response |  [ServersInfo](server.md#serversinfo)  |
  
  
- 
- 
+
  
 ### stat
 > **POST** /inventory/v1/servers/stat
@@ -265,28 +258,29 @@ description:
 </table>
 
 
+
 ### GetServerRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | server_id |string|✅||
-| 2 | domain_id |string|✅||
-| 3 | only |string|❌||
+| 1 | server_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | only |string|❌| |
 
 ### PinServerDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | server_id |string|✅||
-| 2 | keys |string|✅||
-| 3 | domain_id |string|✅||
+| 1 | server_id |string|✅| |
+| 2 | keys |string|✅| |
+| 3 | domain_id |string|✅| |
 
 ### ServerDisk
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅||
-| 2 | device |string|❌||
-| 3 | disk_type |string|❌||
-| 4 | size |float|❌||
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| 2 | device |string|❌| |
+| 3 | disk_type |string|❌| |
+| 4 | size |float|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 
 ### ServerInfo
 <table>
@@ -467,17 +461,18 @@ description:
 </table>
 
 
+
 ### ServerNIC
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅||
-| 2 | device |string|❌||
-| 3 | nic_type |string|❌||
-| 4 | ip_addresses |string|✅||
-| 5 | cidr |string|❌||
-| 6 | mac_address |string|❌||
-| 7 | public_ip_address |string|❌||
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌||
+| 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| 2 | device |string|❌| |
+| 3 | nic_type |string|❌| |
+| 4 | ip_addresses |string|✅| |
+| 5 | cidr |string|❌| |
+| 6 | mac_address |string|❌| |
+| 7 | public_ip_address |string|❌| |
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 
 ### ServerQuery
 <table>
@@ -589,29 +584,30 @@ description:
 </table>
 
 
+
 ### ServerReference
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | resource_id |string||
-| 2 | external_link |string||
+| 1 | resource_id |string| |
+| 2 | external_link |string| |
 
 ### ServerRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | server_id |string|✅||
-| 2 | domain_id |string|✅||
+| 1 | server_id |string|✅| |
+| 2 | domain_id |string|✅| |
 
 ### ServerStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅||
-| 2 | domain_id |string|✅||
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
 
 ### ServersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ServerInfo](server.md#serverinfo)||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)||
+| 1 | results |[ServerInfo](server.md#serverinfo)| |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
 
 ### UpdateServerRequest
 <table>
@@ -770,4 +766,5 @@ description:
    </tr>
   </tbody>
 </table>
+
 

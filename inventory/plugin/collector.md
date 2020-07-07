@@ -15,11 +15,10 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**verify**](collector.md#verify)| [VerifyRequest](collector.md#verifyrequest) | [CollectorVerifyInfo](collector.md#collectorverifyinfo) |  |
-| 2 | [**collect**](collector.md#collect)| [CollectRequest](collector.md#collectrequest) | [ResourceInfo](collector.md#resourceinfo) |  | 
+| 1 | [**verify**](collector.md#verify)|   [VerifyRequest](collector.md#verifyrequest) |   [CollectorVerifyInfo](collector.md#collectorverifyinfo) |  |
+| 2 | [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) | **`stream`**   [ResourceInfo](collector.md#resourceinfo) |  | 
  
- 
- 
+
  
 ### verify
 
@@ -30,8 +29,7 @@ description:
 | Response |  [CollectorVerifyInfo](collector.md#collectorverifyinfo)  |
  
  
- 
- 
+
  
 ### collect
 
@@ -49,16 +47,16 @@ description:
 ### CollectRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 3 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 4 | zone_id |string|✅||
-| 5 | pool_id |string|✅||
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 3 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 4 | zone_id |string|✅| |
+| 5 | pool_id |string|✅| |
 
 ### CollectorVerifyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)||
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
 
 ### ResourceInfo
 <table>
@@ -126,8 +124,9 @@ description:
 </table>
 
 
+
 ### VerifyRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅||
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| None|
