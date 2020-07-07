@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](cloud-service.md#create)| [CreateServiceRequest](cloud-service.md#createservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
-| 2 | [update](cloud-service.md#update)| [UpdateCloudServiceRequest](cloud-service.md#updatecloudservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
-| 3 | [pin_data](cloud-service.md#pin_data)| [PinCloudServiceDataRequest](cloud-service.md#pincloudservicedatarequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
-| 4 | [delete](cloud-service.md#delete)| [CloudServiceRequest](cloud-service.md#cloudservicerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](cloud-service.md#get)| [GetCloudServiceRequest](cloud-service.md#getcloudservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
-| 6 | [list](cloud-service.md#list)| [CloudServiceQuery](cloud-service.md#cloudservicequery) | [CloudServicesInfo](cloud-service.md#cloudservicesinfo) |  |
-| 7 | [stat](cloud-service.md#stat)| [CloudServiceStatQuery](cloud-service.md#cloudservicestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](cloud-service.md#create)| [CreateServiceRequest](cloud-service.md#createservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
+| 2 | [**update**](cloud-service.md#update)| [UpdateCloudServiceRequest](cloud-service.md#updatecloudservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
+| 3 | [**pin_data**](cloud-service.md#pin_data)| [PinCloudServiceDataRequest](cloud-service.md#pincloudservicedatarequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
+| 4 | [**delete**](cloud-service.md#delete)| [CloudServiceRequest](cloud-service.md#cloudservicerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**get**](cloud-service.md#get)| [GetCloudServiceRequest](cloud-service.md#getcloudservicerequest) | [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
+| 6 | [**list**](cloud-service.md#list)| [CloudServiceQuery](cloud-service.md#cloudservicequery) | [CloudServicesInfo](cloud-service.md#cloudservicesinfo) |  |
+| 7 | [**stat**](cloud-service.md#stat)| [CloudServiceStatQuery](cloud-service.md#cloudservicestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

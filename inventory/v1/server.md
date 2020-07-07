@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](server.md#create)| [CreateServerRequest](server.md#createserverrequest) | [ServerInfo](server.md#serverinfo) |  |
-| 2 | [update](server.md#update)| [UpdateServerRequest](server.md#updateserverrequest) | [ServerInfo](server.md#serverinfo) |  |
-| 3 | [pin_data](server.md#pin_data)| [PinServerDataRequest](server.md#pinserverdatarequest) | [ServerInfo](server.md#serverinfo) |  |
-| 4 | [delete](server.md#delete)| [ServerRequest](server.md#serverrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](server.md#get)| [GetServerRequest](server.md#getserverrequest) | [ServerInfo](server.md#serverinfo) |  |
-| 6 | [list](server.md#list)| [ServerQuery](server.md#serverquery) | [ServersInfo](server.md#serversinfo) |  |
-| 7 | [stat](server.md#stat)| [ServerStatQuery](server.md#serverstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](server.md#create)| [CreateServerRequest](server.md#createserverrequest) | [ServerInfo](server.md#serverinfo) |  |
+| 2 | [**update**](server.md#update)| [UpdateServerRequest](server.md#updateserverrequest) | [ServerInfo](server.md#serverinfo) |  |
+| 3 | [**pin_data**](server.md#pin_data)| [PinServerDataRequest](server.md#pinserverdatarequest) | [ServerInfo](server.md#serverinfo) |  |
+| 4 | [**delete**](server.md#delete)| [ServerRequest](server.md#serverrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**get**](server.md#get)| [GetServerRequest](server.md#getserverrequest) | [ServerInfo](server.md#serverinfo) |  |
+| 6 | [**list**](server.md#list)| [ServerQuery](server.md#serverquery) | [ServersInfo](server.md#serversinfo) |  |
+| 7 | [**stat**](server.md#stat)| [ServerStatQuery](server.md#serverstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

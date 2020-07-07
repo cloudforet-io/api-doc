@@ -15,15 +15,15 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [register](data-source.md#register)| [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 2 | [update](data-source.md#update)| [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 3 | [enable](data-source.md#enable)| [DataSourceRequest](data-source.md#datasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 4 | [disable](data-source.md#disable)| [DataSourceRequest](data-source.md#datasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 5 | [deregister](data-source.md#deregister)| [DataSourceRequest](data-source.md#datasourcerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [verify_plugin](data-source.md#verify_plugin)| [DataSourceRequest](data-source.md#datasourcerequest) | [VerifyInfo](data-source.md#verifyinfo) |  |
-| 7 | [get](data-source.md#get)| [GetDataSourceRequest](data-source.md#getdatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
-| 8 | [list](data-source.md#list)| [DataSourceQuery](data-source.md#datasourcequery) | [DataSourcesInfo](data-source.md#datasourcesinfo) |  |
-| 9 | [stat](data-source.md#stat)| [DataSourceStatQuery](data-source.md#datasourcestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**register**](data-source.md#register)| [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 2 | [**update**](data-source.md#update)| [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 3 | [**enable**](data-source.md#enable)| [DataSourceRequest](data-source.md#datasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 4 | [**disable**](data-source.md#disable)| [DataSourceRequest](data-source.md#datasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 5 | [**deregister**](data-source.md#deregister)| [DataSourceRequest](data-source.md#datasourcerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [**verify_plugin**](data-source.md#verify_plugin)| [DataSourceRequest](data-source.md#datasourcerequest) | [VerifyInfo](data-source.md#verifyinfo) |  |
+| 7 | [**get**](data-source.md#get)| [GetDataSourceRequest](data-source.md#getdatasourcerequest) | [DataSourceInfo](data-source.md#datasourceinfo) |  |
+| 8 | [**list**](data-source.md#list)| [DataSourceQuery](data-source.md#datasourcequery) | [DataSourcesInfo](data-source.md#datasourcesinfo) |  |
+| 9 | [**stat**](data-source.md#stat)| [DataSourceStatQuery](data-source.md#datasourcestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

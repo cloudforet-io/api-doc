@@ -15,17 +15,17 @@ description: User API which allows member management within project, company, an
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](user.md#create)| [CreateUserRequest](user.md#createuserrequest) | [UserInfo](user.md#userinfo) |  |
-| 2 | [update](user.md#update)| [UpdateUserRequest](user.md#updateuserrequest) | [UserInfo](user.md#userinfo) |  |
-| 3 | [enable](user.md#enable)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  |
-| 4 | [disable](user.md#disable)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  |
-| 5 | [update_role](user.md#update_role)| [UpdateUserRoleRequest](user.md#updateuserrolerequest) | [UserInfo](user.md#userinfo) |  |
-| 6 | [delete](user.md#delete)| [UserRequest](user.md#userrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [get](user.md#get)| [GetUserRequest](user.md#getuserrequest) | [UserInfo](user.md#userinfo) |  |
-| 8 | [list](user.md#list)| [UserQuery](user.md#userquery) | [UsersInfo](user.md#usersinfo) |  |
-| 9 | [stat](user.md#stat)| [UserStatQuery](user.md#userstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 10 | [find](user.md#find)| [FindUserQuery](user.md#finduserquery) | [FindUsersInfo](user.md#findusersinfo) |  |
-| 11 | [sync](user.md#sync)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  | 
+| 1 | [**create**](user.md#create)| [CreateUserRequest](user.md#createuserrequest) | [UserInfo](user.md#userinfo) |  |
+| 2 | [**update**](user.md#update)| [UpdateUserRequest](user.md#updateuserrequest) | [UserInfo](user.md#userinfo) |  |
+| 3 | [**enable**](user.md#enable)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  |
+| 4 | [**disable**](user.md#disable)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  |
+| 5 | [**update_role**](user.md#update_role)| [UpdateUserRoleRequest](user.md#updateuserrolerequest) | [UserInfo](user.md#userinfo) |  |
+| 6 | [**delete**](user.md#delete)| [UserRequest](user.md#userrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [**get**](user.md#get)| [GetUserRequest](user.md#getuserrequest) | [UserInfo](user.md#userinfo) |  |
+| 8 | [**list**](user.md#list)| [UserQuery](user.md#userquery) | [UsersInfo](user.md#usersinfo) |  |
+| 9 | [**stat**](user.md#stat)| [UserStatQuery](user.md#userstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 10 | [**find**](user.md#find)| [FindUserQuery](user.md#finduserquery) | [FindUsersInfo](user.md#findusersinfo) |  |
+| 11 | [**sync**](user.md#sync)| [UserRequest](user.md#userrequest) | [UserInfo](user.md#userinfo) |  | 
  
  
  

@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](region.md#create)| [CreateRegionRequest](region.md#createregionrequest) | [RegionInfo](region.md#regioninfo) |  |
-| 2 | [update](region.md#update)| [UpdateRegionRequest](region.md#updateregionrequest) | [RegionInfo](region.md#regioninfo) |  |
-| 3 | [delete](region.md#delete)| [RegionRequest](region.md#regionrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](region.md#get)| [GetRegionRequest](region.md#getregionrequest) | [RegionInfo](region.md#regioninfo) |  |
-| 5 | [list](region.md#list)| [RegionQuery](region.md#regionquery) | [RegionsInfo](region.md#regionsinfo) |  |
-| 6 | [stat](region.md#stat)| [RegionStatQuery](region.md#regionstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](region.md#create)| [CreateRegionRequest](region.md#createregionrequest) | [RegionInfo](region.md#regioninfo) |  |
+| 2 | [**update**](region.md#update)| [UpdateRegionRequest](region.md#updateregionrequest) | [RegionInfo](region.md#regioninfo) |  |
+| 3 | [**delete**](region.md#delete)| [RegionRequest](region.md#regionrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**get**](region.md#get)| [GetRegionRequest](region.md#getregionrequest) | [RegionInfo](region.md#regioninfo) |  |
+| 5 | [**list**](region.md#list)| [RegionQuery](region.md#regionquery) | [RegionsInfo](region.md#regionsinfo) |  |
+| 6 | [**stat**](region.md#stat)| [RegionStatQuery](region.md#regionstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

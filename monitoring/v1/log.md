@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [list](log.md#list)| [LogRequest](log.md#logrequest) | [LogDataInfo](log.md#logdatainfo) |  | 
+| 1 | [**list**](log.md#list)| [LogRequest](log.md#logrequest) | [LogDataInfo](log.md#logdatainfo) |  | 
  
  
  

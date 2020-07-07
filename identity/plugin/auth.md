@@ -15,9 +15,9 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [verify](auth.md#verify)| [VerifyRequest](auth.md#verifyrequest) | [AuthVerifyInfo](auth.md#authverifyinfo) |  |
-| 2 | [find](auth.md#find)| [FindRequest](auth.md#findrequest) | [UsersInfo](auth.md#usersinfo) |  |
-| 3 | [login](auth.md#login)| [LoginRequest](auth.md#loginrequest) | [UserInfo](auth.md#userinfo) |  | 
+| 1 | [**verify**](auth.md#verify)| [VerifyRequest](auth.md#verifyrequest) | [AuthVerifyInfo](auth.md#authverifyinfo) |  |
+| 2 | [**find**](auth.md#find)| [FindRequest](auth.md#findrequest) | [UsersInfo](auth.md#usersinfo) |  |
+| 3 | [**login**](auth.md#login)| [LoginRequest](auth.md#loginrequest) | [UserInfo](auth.md#userinfo) |  | 
  
  
  

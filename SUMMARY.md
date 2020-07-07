@@ -68,5 +68,5 @@
 
 * [Search Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)
 * [Statistic Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)
-* [Stat Api](https://spaceone-dev.gitbook.io/api-reference/statistics-v1)
+* [Stat API](https://spaceone-dev.gitbook.io/api-reference/statistics-v1)
 

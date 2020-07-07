@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](cloud-service-type.md#create)| [CreateServiceTypeRequest](cloud-service-type.md#createservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
-| 2 | [update](cloud-service-type.md#update)| [UpdateCloudServiceTypeRequest](cloud-service-type.md#updatecloudservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
-| 3 | [pin_data](cloud-service-type.md#pin_data)| [PinCloudServiceTypeDataRequest](cloud-service-type.md#pincloudservicetypedatarequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
-| 4 | [delete](cloud-service-type.md#delete)| [CloudServiceTypeRequest](cloud-service-type.md#cloudservicetyperequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [get](cloud-service-type.md#get)| [GetCloudServiceTypeRequest](cloud-service-type.md#getcloudservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
-| 6 | [list](cloud-service-type.md#list)| [CloudServiceTypeQuery](cloud-service-type.md#cloudservicetypequery) | [CloudServiceTypesInfo](cloud-service-type.md#cloudservicetypesinfo) |  |
-| 7 | [stat](cloud-service-type.md#stat)| [CloudServiceTypeStatQuery](cloud-service-type.md#cloudservicetypestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](cloud-service-type.md#create)| [CreateServiceTypeRequest](cloud-service-type.md#createservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 2 | [**update**](cloud-service-type.md#update)| [UpdateCloudServiceTypeRequest](cloud-service-type.md#updatecloudservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 3 | [**pin_data**](cloud-service-type.md#pin_data)| [PinCloudServiceTypeDataRequest](cloud-service-type.md#pincloudservicetypedatarequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 4 | [**delete**](cloud-service-type.md#delete)| [CloudServiceTypeRequest](cloud-service-type.md#cloudservicetyperequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**get**](cloud-service-type.md#get)| [GetCloudServiceTypeRequest](cloud-service-type.md#getcloudservicetyperequest) | [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 6 | [**list**](cloud-service-type.md#list)| [CloudServiceTypeQuery](cloud-service-type.md#cloudservicetypequery) | [CloudServiceTypesInfo](cloud-service-type.md#cloudservicetypesinfo) |  |
+| 7 | [**stat**](cloud-service-type.md#stat)| [CloudServiceTypeStatQuery](cloud-service-type.md#cloudservicetypestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

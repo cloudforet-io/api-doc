@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [verify](data-source.md#verify)| [PluginVerifyRequest](data-source.md#pluginverifyrequest) | [PluginVerifyResponse](data-source.md#pluginverifyresponse) |  | 
+| 1 | [**verify**](data-source.md#verify)| [PluginVerifyRequest](data-source.md#pluginverifyrequest) | [PluginVerifyResponse](data-source.md#pluginverifyresponse) |  | 
  
  
  

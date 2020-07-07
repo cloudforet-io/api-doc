@@ -15,15 +15,15 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [register](plugin.md#register)| [CreatePluginRequest](plugin.md#createpluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 2 | [update](plugin.md#update)| [UpdatePluginRequest](plugin.md#updatepluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 3 | [deregister](plugin.md#deregister)| [PluginRequest](plugin.md#pluginrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [enable](plugin.md#enable)| [PluginRequest](plugin.md#pluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 5 | [disable](plugin.md#disable)| [PluginRequest](plugin.md#pluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 6 | [get_versions](plugin.md#get_versions)| [RepositoryPluginRequest](plugin.md#repositorypluginrequest) | [VersionsInfo](plugin.md#versionsinfo) |  |
-| 7 | [get](plugin.md#get)| [GetRepositoryPluginRequest](plugin.md#getrepositorypluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
-| 8 | [list](plugin.md#list)| [PluginQuery](plugin.md#pluginquery) | [PluginsInfo](plugin.md#pluginsinfo) |  |
-| 9 | [stat](plugin.md#stat)| [PluginStatQuery](plugin.md#pluginstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**register**](plugin.md#register)| [CreatePluginRequest](plugin.md#createpluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
+| 2 | [**update**](plugin.md#update)| [UpdatePluginRequest](plugin.md#updatepluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
+| 3 | [**deregister**](plugin.md#deregister)| [PluginRequest](plugin.md#pluginrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**enable**](plugin.md#enable)| [PluginRequest](plugin.md#pluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
+| 5 | [**disable**](plugin.md#disable)| [PluginRequest](plugin.md#pluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
+| 6 | [**get_versions**](plugin.md#get_versions)| [RepositoryPluginRequest](plugin.md#repositorypluginrequest) | [VersionsInfo](plugin.md#versionsinfo) |  |
+| 7 | [**get**](plugin.md#get)| [GetRepositoryPluginRequest](plugin.md#getrepositorypluginrequest) | [PluginInfo](plugin.md#plugininfo) |  |
+| 8 | [**list**](plugin.md#list)| [PluginQuery](plugin.md#pluginquery) | [PluginsInfo](plugin.md#pluginsinfo) |  |
+| 9 | [**stat**](plugin.md#stat)| [PluginStatQuery](plugin.md#pluginstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

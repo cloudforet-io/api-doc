@@ -15,13 +15,13 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](secret.md#create)| [CreateSecretRequest](secret.md#createsecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
-| 2 | [update](secret.md#update)| [UpdateSecretRequest](secret.md#updatesecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
-| 3 | [delete](secret.md#delete)| [SecretRequest](secret.md#secretrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get_data](secret.md#get_data)| [SecretRequest](secret.md#secretrequest) | [SecretDataInfo](secret.md#secretdatainfo) |  |
-| 5 | [get](secret.md#get)| [GetSecretRequest](secret.md#getsecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
-| 6 | [list](secret.md#list)| [SecretQuery](secret.md#secretquery) | [SecretsInfo](secret.md#secretsinfo) |  |
-| 7 | [stat](secret.md#stat)| [SecretStatQuery](secret.md#secretstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](secret.md#create)| [CreateSecretRequest](secret.md#createsecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
+| 2 | [**update**](secret.md#update)| [UpdateSecretRequest](secret.md#updatesecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
+| 3 | [**delete**](secret.md#delete)| [SecretRequest](secret.md#secretrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**get_data**](secret.md#get_data)| [SecretRequest](secret.md#secretrequest) | [SecretDataInfo](secret.md#secretdatainfo) |  |
+| 5 | [**get**](secret.md#get)| [GetSecretRequest](secret.md#getsecretrequest) | [SecretInfo](secret.md#secretinfo) |  |
+| 6 | [**list**](secret.md#list)| [SecretQuery](secret.md#secretquery) | [SecretsInfo](secret.md#secretsinfo) |  |
+| 7 | [**stat**](secret.md#stat)| [SecretStatQuery](secret.md#secretstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

@@ -15,10 +15,10 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](domain-owner.md#create)| [CreateDomainOwner](domain-owner.md#createdomainowner) | [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
-| 2 | [update](domain-owner.md#update)| [UpdateDomainOwner](domain-owner.md#updatedomainowner) | [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
-| 3 | [delete](domain-owner.md#delete)| [DomainOwnerRequest](domain-owner.md#domainownerrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](domain-owner.md#get)| [GetDomainOwnerRequest](domain-owner.md#getdomainownerrequest) | [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  | 
+| 1 | [**create**](domain-owner.md#create)| [CreateDomainOwner](domain-owner.md#createdomainowner) | [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
+| 2 | [**update**](domain-owner.md#update)| [UpdateDomainOwner](domain-owner.md#updatedomainowner) | [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
+| 3 | [**delete**](domain-owner.md#delete)| [DomainOwnerRequest](domain-owner.md#domainownerrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**get**](domain-owner.md#get)| [GetDomainOwnerRequest](domain-owner.md#getdomainownerrequest) | [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  | 
  
  
  

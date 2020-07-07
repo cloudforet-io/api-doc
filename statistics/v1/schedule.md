@@ -15,14 +15,14 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [add](schedule.md#add)| [AddScheduleRequest](schedule.md#addschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
-| 2 | [update](schedule.md#update)| [UpdateScheduleRequest](schedule.md#updateschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
-| 3 | [enable](schedule.md#enable)| [ScheduleRequest](schedule.md#schedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
-| 4 | [disable](schedule.md#disable)| [ScheduleRequest](schedule.md#schedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
-| 5 | [delete](schedule.md#delete)| [ScheduleRequest](schedule.md#schedulerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [get](schedule.md#get)| [GetScheduleRequest](schedule.md#getschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
-| 7 | [list](schedule.md#list)| [ScheduleQuery](schedule.md#schedulequery) | [SchedulesInfo](schedule.md#schedulesinfo) |  |
-| 8 | [stat](schedule.md#stat)| [ScheduleStatQuery](schedule.md#schedulestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**add**](schedule.md#add)| [AddScheduleRequest](schedule.md#addschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 2 | [**update**](schedule.md#update)| [UpdateScheduleRequest](schedule.md#updateschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 3 | [**enable**](schedule.md#enable)| [ScheduleRequest](schedule.md#schedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 4 | [**disable**](schedule.md#disable)| [ScheduleRequest](schedule.md#schedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 5 | [**delete**](schedule.md#delete)| [ScheduleRequest](schedule.md#schedulerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [**get**](schedule.md#get)| [GetScheduleRequest](schedule.md#getschedulerequest) | [ScheduleInfo](schedule.md#scheduleinfo) |  |
+| 7 | [**list**](schedule.md#list)| [ScheduleQuery](schedule.md#schedulequery) | [SchedulesInfo](schedule.md#schedulesinfo) |  |
+| 8 | [**stat**](schedule.md#stat)| [ScheduleStatQuery](schedule.md#schedulestatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

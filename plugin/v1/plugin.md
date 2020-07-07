@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [get_plugin_endpoint](plugin.md#get_plugin_endpoint)| [PluginEndpointRequest](plugin.md#pluginendpointrequest) | [PluginEndpoint](plugin.md#pluginendpoint) |  |
-| 2 | [notify_failure](plugin.md#notify_failure)| [PluginFailureRequest](plugin.md#pluginfailurerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
+| 1 | [**get_plugin_endpoint**](plugin.md#get_plugin_endpoint)| [PluginEndpointRequest](plugin.md#pluginendpointrequest) | [PluginEndpoint](plugin.md#pluginendpoint) |  |
+| 2 | [**notify_failure**](plugin.md#notify_failure)| [PluginFailureRequest](plugin.md#pluginfailurerequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
  
  
  

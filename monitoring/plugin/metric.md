@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [list](metric.md#list)| [MetricRequest](metric.md#metricrequest) | [PluginMetricsResponse](metric.md#pluginmetricsresponse) |  |
-| 2 | [get_data](metric.md#get_data)| [MetricDataRequest](metric.md#metricdatarequest) | [PluginMetricDataResponse](metric.md#pluginmetricdataresponse) |  | 
+| 1 | [**list**](metric.md#list)| [MetricRequest](metric.md#metricrequest) | [PluginMetricsResponse](metric.md#pluginmetricsresponse) |  |
+| 2 | [**get_data**](metric.md#get_data)| [MetricDataRequest](metric.md#metricdatarequest) | [PluginMetricDataResponse](metric.md#pluginmetricdataresponse) |  | 
  
  
  

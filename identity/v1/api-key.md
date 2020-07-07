@@ -15,15 +15,15 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](api-key.md#create)| [CreateAPIKeyRequest](api-key.md#createapikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 2 | [enable](api-key.md#enable)| [APIKeyRequest](api-key.md#apikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 3 | [disable](api-key.md#disable)| [APIKeyRequest](api-key.md#apikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 4 | [update_role](api-key.md#update_role)| [UpdateAPIKeyRoleRequest](api-key.md#updateapikeyrolerequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 5 | [update_allowed_hosts](api-key.md#update_allowed_hosts)| [UpdateAPIKeyHostsRequest](api-key.md#updateapikeyhostsrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 6 | [delete](api-key.md#delete)| [APIKeyRequest](api-key.md#apikeyrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [get](api-key.md#get)| [GetAPIKeyRequest](api-key.md#getapikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 8 | [list](api-key.md#list)| [APIKeyQuery](api-key.md#apikeyquery) | [APIKeysInfo](api-key.md#apikeysinfo) |  |
-| 9 | [stat](api-key.md#stat)| [APIKeyStatQuery](api-key.md#apikeystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](api-key.md#create)| [CreateAPIKeyRequest](api-key.md#createapikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 2 | [**enable**](api-key.md#enable)| [APIKeyRequest](api-key.md#apikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 3 | [**disable**](api-key.md#disable)| [APIKeyRequest](api-key.md#apikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 4 | [**update_role**](api-key.md#update_role)| [UpdateAPIKeyRoleRequest](api-key.md#updateapikeyrolerequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 5 | [**update_allowed_hosts**](api-key.md#update_allowed_hosts)| [UpdateAPIKeyHostsRequest](api-key.md#updateapikeyhostsrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 6 | [**delete**](api-key.md#delete)| [APIKeyRequest](api-key.md#apikeyrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [**get**](api-key.md#get)| [GetAPIKeyRequest](api-key.md#getapikeyrequest) | [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| 8 | [**list**](api-key.md#list)| [APIKeyQuery](api-key.md#apikeyquery) | [APIKeysInfo](api-key.md#apikeysinfo) |  |
+| 9 | [**stat**](api-key.md#stat)| [APIKeyStatQuery](api-key.md#apikeystatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

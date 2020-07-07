@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](provider.md#create)| [CreateProviderRequest](provider.md#createproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
-| 2 | [update](provider.md#update)| [UpdateProviderRequest](provider.md#updateproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
-| 3 | [delete](provider.md#delete)| [ProviderRequest](provider.md#providerrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](provider.md#get)| [GetProviderRequest](provider.md#getproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
-| 5 | [list](provider.md#list)| [ProviderQuery](provider.md#providerquery) | [ProvidersInfo](provider.md#providersinfo) |  |
-| 6 | [stat](provider.md#stat)| [ProviderStatQuery](provider.md#providerstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](provider.md#create)| [CreateProviderRequest](provider.md#createproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
+| 2 | [**update**](provider.md#update)| [UpdateProviderRequest](provider.md#updateproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
+| 3 | [**delete**](provider.md#delete)| [ProviderRequest](provider.md#providerrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**get**](provider.md#get)| [GetProviderRequest](provider.md#getproviderrequest) | [ProviderInfo](provider.md#providerinfo) |  |
+| 5 | [**list**](provider.md#list)| [ProviderQuery](provider.md#providerquery) | [ProvidersInfo](provider.md#providersinfo) |  |
+| 6 | [**stat**](provider.md#stat)| [ProviderStatQuery](provider.md#providerstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

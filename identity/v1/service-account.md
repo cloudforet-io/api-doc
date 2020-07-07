@@ -15,12 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](service-account.md#create)| [CreateServiceAccountRequest](service-account.md#createserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
-| 2 | [update](service-account.md#update)| [UpdateServiceAccountRequest](service-account.md#updateserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
-| 3 | [delete](service-account.md#delete)| [ServiceAccountRequest](service-account.md#serviceaccountrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](service-account.md#get)| [GetServiceAccountRequest](service-account.md#getserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
-| 5 | [list](service-account.md#list)| [ServiceAccountQuery](service-account.md#serviceaccountquery) | [ServiceAccountsInfo](service-account.md#serviceaccountsinfo) |  |
-| 6 | [stat](service-account.md#stat)| [ServiceAccountStatQuery](service-account.md#serviceaccountstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](service-account.md#create)| [CreateServiceAccountRequest](service-account.md#createserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
+| 2 | [**update**](service-account.md#update)| [UpdateServiceAccountRequest](service-account.md#updateserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
+| 3 | [**delete**](service-account.md#delete)| [ServiceAccountRequest](service-account.md#serviceaccountrequest) |[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**get**](service-account.md#get)| [GetServiceAccountRequest](service-account.md#getserviceaccountrequest) | [ServiceAccountInfo](service-account.md#serviceaccountinfo) |  |
+| 5 | [**list**](service-account.md#list)| [ServiceAccountQuery](service-account.md#serviceaccountquery) | [ServiceAccountsInfo](service-account.md#serviceaccountsinfo) |  |
+| 6 | [**stat**](service-account.md#stat)| [ServiceAccountStatQuery](service-account.md#serviceaccountstatquery) |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
  
  

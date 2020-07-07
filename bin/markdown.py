@@ -310,7 +310,7 @@ def _generate_summary_mds(context_input, managed_link, history):
 def _normalize_managed_link(managed_link):
     n_normalized = {}
     for key, value in managed_link.items():
-        n_key = key.replace('_',' ').title()
+        n_key = key.replace('_',' ')
         n_value = value
         n_normalized[n_key] = n_value
     return n_normalized
