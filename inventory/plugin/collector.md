@@ -15,8 +15,20 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**verify**](collector.md#verify)|   [VerifyRequest](collector.md#verifyrequest) |   [CollectorVerifyInfo](collector.md#collectorverifyinfo) |  |
-| 2 | [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) | **`stream`**   [ResourceInfo](collector.md#resourceinfo) |  | 
+| 1 | [**init**](collector.md#init)|   [InitRequest](collector.md#initrequest) |   [PluginInfo](collector.md#plugininfo) |  |
+| 2 | [**verify**](collector.md#verify)|   [VerifyRequest](collector.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 3 | [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) | **`stream`**   [ResourceInfo](collector.md#resourceinfo) |  | 
+ 
+
+ 
+### init
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [InitRequest](collector.md#initrequest) |
+| Response |  [PluginInfo](collector.md#plugininfo)  |
+ 
  
 
  
@@ -26,7 +38,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [VerifyRequest](collector.md#verifyrequest) |
-| Response |  [CollectorVerifyInfo](collector.md#collectorverifyinfo)  |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
 
@@ -50,13 +62,21 @@ description:
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 4 | zone_id |string|✅| |
-| 5 | pool_id |string|✅| |
 
 ### CollectorVerifyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+
+### InitRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+
+### PluginInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
 
 ### ResourceInfo
 <table>
@@ -108,13 +128,6 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">replace_rules</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">resource</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>

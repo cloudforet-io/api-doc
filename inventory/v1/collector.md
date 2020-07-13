@@ -17,19 +17,20 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**create**](collector.md#create)|   [CreateCollectorRequest](collector.md#createcollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
 | 2 | [**update**](collector.md#update)|   [UpdateCollectorRequest](collector.md#updatecollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| 3 | [**delete**](collector.md#delete)|   [CollectorRequest](collector.md#collectorrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](collector.md#get)|   [GetCollectorRequest](collector.md#getcollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| 5 | [**enable**](collector.md#enable)|   [CollectorRequest](collector.md#collectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| 6 | [**disable**](collector.md#disable)|   [CollectorRequest](collector.md#collectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| 7 | [**list**](collector.md#list)|   [CollectorQuery](collector.md#collectorquery) |   [CollectorsInfo](collector.md#collectorsinfo) |  |
-| 8 | [**stat**](collector.md#stat)|   [CollectorStatQuery](collector.md#collectorstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 9 | [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) |   [JobInfo](collector.md#jobinfo) |  |
-| 10 | [**verify_plugin**](collector.md#verify_plugin)|   [VerifyPluginRequest](collector.md#verifypluginrequest) |   [VerifyInfo](collector.md#verifyinfo) |  |
-| 11 | [**add_schedule**](collector.md#add_schedule)|   [CreateScheduleRequest](collector.md#createschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
-| 12 | [**get_schedule**](collector.md#get_schedule)|   [ScheduleRequest](collector.md#schedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
-| 13 | [**update_schedule**](collector.md#update_schedule)|   [UpdateScheduleRequest](collector.md#updateschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
-| 14 | [**delete_schedule**](collector.md#delete_schedule)|   [DeleteScheduleRequest](collector.md#deleteschedulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 15 | [**list_schedules**](collector.md#list_schedules)|   [ScheduleQuery](collector.md#schedulequery) |   [SchedulesInfo](collector.md#schedulesinfo) |  | 
+| 3 | [**update_plugin**](collector.md#update_plugin)|   [UpdatePluginRequest](collector.md#updatepluginrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
+| 4 | [**verify_plugin**](collector.md#verify_plugin)|   [VerifyPluginRequest](collector.md#verifypluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**delete**](collector.md#delete)|   [CollectorRequest](collector.md#collectorrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [**get**](collector.md#get)|   [GetCollectorRequest](collector.md#getcollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
+| 7 | [**enable**](collector.md#enable)|   [CollectorRequest](collector.md#collectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
+| 8 | [**disable**](collector.md#disable)|   [CollectorRequest](collector.md#collectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
+| 9 | [**list**](collector.md#list)|   [CollectorQuery](collector.md#collectorquery) |   [CollectorsInfo](collector.md#collectorsinfo) |  |
+| 10 | [**stat**](collector.md#stat)|   [CollectorStatQuery](collector.md#collectorstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 11 | [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) |   [JobInfo](collector.md#jobinfo) |  |
+| 12 | [**add_schedule**](collector.md#add_schedule)|   [CreateScheduleRequest](collector.md#createschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
+| 13 | [**get_schedule**](collector.md#get_schedule)|   [ScheduleRequest](collector.md#schedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
+| 14 | [**update_schedule**](collector.md#update_schedule)|   [UpdateScheduleRequest](collector.md#updateschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
+| 15 | [**delete_schedule**](collector.md#delete_schedule)|   [DeleteScheduleRequest](collector.md#deleteschedulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 16 | [**list_schedules**](collector.md#list_schedules)|   [ScheduleQuery](collector.md#schedulequery) |   [SchedulesInfo](collector.md#schedulesinfo) |  | 
  
 
  
@@ -55,6 +56,32 @@ description:
 | :--- | :--- |
 | Request | [UpdateCollectorRequest](collector.md#updatecollectorrequest) |
 | Response |  [CollectorInfo](collector.md#collectorinfo)  |
+ 
+ 
+
+ 
+### update_plugin
+> **PUT** /inventory/v1/collector/{collector_id}/plugin
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [UpdatePluginRequest](collector.md#updatepluginrequest) |
+| Response |  [CollectorInfo](collector.md#collectorinfo)  |
+ 
+ 
+
+ 
+### verify_plugin
+> **POST** /inventory/v1/collector/{collector_id}/plugin/verify
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [VerifyPluginRequest](collector.md#verifypluginrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
 
@@ -148,19 +175,6 @@ description:
 | :--- | :--- |
 | Request | [CollectRequest](collector.md#collectrequest) |
 | Response |  [JobInfo](collector.md#jobinfo)  |
- 
- 
-
- 
-### verify_plugin
-> **POST** /inventory/v1/collector/{collector_id}/plugin/verify
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [VerifyPluginRequest](collector.md#verifypluginrequest) |
-| Response |  [VerifyInfo](collector.md#verifyinfo)  |
  
  
 
@@ -336,6 +350,20 @@ description:
 <td style="text-align:left"></td>
 
    </tr>
+    <tr>
+      <td style="text-align:left">12</td>
+      <td style="text-align:left">is_public</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">13</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
   </tbody>
 </table>
 
@@ -436,6 +464,8 @@ description:
 | 3 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |
+| 6 | is_public |bool|❌| default is true|
+| 7 | project_id |string|❌| if is_public is false, project_id is required|
 
 ### CreateScheduleRequest
 | No | Field | Type | Required | Description |
@@ -571,6 +601,7 @@ description:
 | 4 | secret_id |string| |
 | 5 | secret_group_id |string| |
 | 6 | provider |string| |
+| 7 | service_account_id |string| |
 
 ### ScheduleInfo
 | No | Field | Type |  Description |
@@ -623,6 +654,14 @@ description:
 | 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | domain_id |string|✅| |
+
+### UpdatePluginRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | collector_id |string|✅| |
+| 2 | version |string|❌| |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | domain_id |string|✅| |
 
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |
