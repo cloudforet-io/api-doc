@@ -602,6 +602,7 @@ description:
 | 5 | secret_group_id |string| |
 | 6 | provider |string| |
 | 7 | service_account_id |string| |
+| 8 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
 
 ### ScheduleInfo
 | No | Field | Type |  Description |
