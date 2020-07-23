@@ -112,6 +112,8 @@ description:
 | 1 | name |string|✅| |
 | 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 3 | domain_id |string|✅| |
+| 4 | region_code |string|✅| |
+| 5 | region_type |string|✅| |
 
 ### GetRegionRequest
 | No | Field | Type | Required | Description |
@@ -184,6 +186,27 @@ description:
 <td style="text-align:left"></td>
 
    </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">region_code</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">region_type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">collection_info</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
   </tbody>
 </table>
 
@@ -196,6 +219,8 @@ description:
 | 2 | region_id |string|❌| |
 | 3 | name |string|❌| |
 | 4 | domain_id |string|✅| |
+| 5 | region_code |string|❌| |
+| 6 | region_type |string|❌| |
 
 ### RegionRequest
 | No | Field | Type | Required | Description |
