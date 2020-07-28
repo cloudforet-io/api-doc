@@ -5,21 +5,21 @@ description:
 
 >  **Package : spaceone.api.sample.v1**
 
-## Greeter
+## HelloWorld
 
 {% hint style="info" %}
-**Greeter Methods:**
+**HelloWorld Methods:**
 desc: The greeting service definition.
 {%  endhint %}
 
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**SayHello**](helloworld.md#SayHello)|   [HelloRequest](helloworld.md#hellorequest) |   [HelloReply](helloworld.md#helloreply) | Sends a greeting | 
+| 1 | [**say_hello**](helloworld.md#say_hello)|   [HelloRequest](helloworld.md#hellorequest) |   [HelloReply](helloworld.md#helloreply) | Sends a greeting | 
  
 
  
-### SayHello
+### say_hello
 
 > Sends a greeting
 
