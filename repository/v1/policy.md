@@ -133,9 +133,9 @@ description:
 ### PolicyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | name |string| |
-| 2 | service_type |string| |
-| 3 | policy |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | policy_id |string| |
+| 2 | name |string| |
+| 3 | permissions |string| |
 | 4 | labels |string| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
 | 6 | repository_info |[RepositoryInfo](policy.md#repositoryinfo)| |
