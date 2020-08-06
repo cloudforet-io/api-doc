@@ -87,10 +87,10 @@ description:
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>JOB_TASK_STATE_NONE</li>
-          	<li>PENDING</li>
-          	<li>IN_PROGRESS</li>
-          	<li>SUCCESS</li>
-          	<li>FAILURE</li>
+          	<li>JOB_TASK_PENDING</li>
+          	<li>JOB_TASK_IN_PROGRESS</li>
+          	<li>JOB_TASK_SUCCESS</li>
+          	<li>JOB_TASK_FAILURE</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -180,10 +180,10 @@ description:
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>JOB_TASK_STATE_NONE</li>
-          	<li>PENDING</li>
-          	<li>IN_PROGRESS</li>
-          	<li>SUCCESS</li>
-          	<li>FAILURE</li>
+          	<li>JOB_TASK_PENDING</li>
+          	<li>JOB_TASK_IN_PROGRESS</li>
+          	<li>JOB_TASK_SUCCESS</li>
+          	<li>JOB_TASK_FAILURE</li>
         </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
