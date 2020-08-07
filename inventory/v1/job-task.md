@@ -50,13 +50,6 @@ description:
 
 ## Message
 
-### ErrorInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | error_code |string| |
-| 2 | message |string| |
-| 3 | additional |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-
 ### JobTaskInfo
 <table>
   <thead>
@@ -87,10 +80,10 @@ description:
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>JOB_TASK_STATE_NONE</li>
-          	<li>JOB_TASK_PENDING</li>
-          	<li>JOB_TASK_IN_PROGRESS</li>
-          	<li>JOB_TASK_SUCCESS</li>
-          	<li>JOB_TASK_FAILURE</li>
+          	<li>PENDING</li>
+          	<li>IN_PROGRESS</li>
+          	<li>SUCCESS</li>
+          	<li>FAILURE</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -180,10 +173,10 @@ description:
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>JOB_TASK_STATE_NONE</li>
-          	<li>JOB_TASK_PENDING</li>
-          	<li>JOB_TASK_IN_PROGRESS</li>
-          	<li>JOB_TASK_SUCCESS</li>
-          	<li>JOB_TASK_FAILURE</li>
+          	<li>PENDING</li>
+          	<li>IN_PROGRESS</li>
+          	<li>SUCCESS</li>
+          	<li>FAILURE</li>
         </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>

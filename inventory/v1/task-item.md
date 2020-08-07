@@ -50,13 +50,6 @@ description:
 
 ## Message
 
-### ErrorInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | error_code |string| |
-| 2 | message |string| |
-| 3 | additional |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-
 ### TaskItemInfo
 <table>
   <thead>
@@ -108,17 +101,17 @@ description:
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>TASK_ITEM_STATE_NONE</li>
-          	<li>TASK_ITEM_CREATE</li>
-          	<li>TASK_ITEM_UPDATE</li>
-          	<li>TASK_ITEM_DELETE</li>
-          	<li>TASK_ITEM_FAILURE</li>
+          	<li>CREATE</li>
+          	<li>UPDATE</li>
+          	<li>DELETE</li>
+          	<li>FAILURE</li>
         </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">7</td>
-      <td style="text-align:left">errors</td>
+      <td style="text-align:left">error</td>
       <td style="text-align:left"><a href="task-item.md#errorinfo">ErrorInfo</a></td>
 <td style="text-align:left"></td>
 
@@ -194,10 +187,10 @@ description:
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>TASK_ITEM_STATE_NONE</li>
-          	<li>TASK_ITEM_CREATE</li>
-          	<li>TASK_ITEM_UPDATE</li>
-          	<li>TASK_ITEM_DELETE</li>
-          	<li>TASK_ITEM_FAILURE</li>
+          	<li>CREATE</li>
+          	<li>UPDATE</li>
+          	<li>DELETE</li>
+          	<li>FAILURE</li>
         </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>

@@ -484,6 +484,13 @@ description:
 | 2 | schedule_id |string|✅| |
 | 3 | collector_id |string|✅| |
 
+### ErrorInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | error_code |string| |
+| 2 | message |string| |
+| 3 | additional |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+
 ### GetCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -582,8 +589,15 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">11</td>
-      <td style="text-align:left">collected_resources</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">errors</td>
+      <td style="text-align:left"><a href="collector.md#errorinfo">ErrorInfo</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">12</td>
+      <td style="text-align:left">total_tasks</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
    </tr>
