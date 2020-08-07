@@ -177,7 +177,7 @@ description:
 | 4 | name |string|❌| |
 | 5 | template_id |string|❌| |
 | 6 | storage_id |string|❌| |
-| 7 | created_by |string|❌| |
+| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|❌| |
 
 ### ScheduleStatQuery
 | No | Field | Type | Required | Description |
