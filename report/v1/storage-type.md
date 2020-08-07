@@ -70,10 +70,9 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
-| 2 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 3 | storage_type_id |string|❌| |
-| 4 | name |string|❌| |
-| 5 | storage_type |string|❌| |
+| 2 | storage_type_id |string|❌| |
+| 3 | name |string|❌| |
+| 4 | storage_type |string|❌| |
 
 ### StorageTypesInfo
 | No | Field | Type |  Description |
