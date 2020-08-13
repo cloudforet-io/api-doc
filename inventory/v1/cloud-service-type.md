@@ -131,10 +131,9 @@ description:
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
 | 7 | labels |string| |
 | 8 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 9 | cloud_service_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
-| 10 | domain_id |string| |
-| 11 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 12 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 9 | domain_id |string| |
+| 10 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 11 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
 
 ### CloudServiceTypeQuery
 | No | Field | Type | Required | Description |
@@ -144,8 +143,7 @@ description:
 | 3 | name |string|❌| |
 | 4 | provider |string|❌| |
 | 5 | group |string|❌| |
-| 6 | include_cloud_service_count |bool|❌| |
-| 7 | domain_id |string|✅| |
+| 6 | domain_id |string|✅| |
 
 ### CloudServiceTypeRequest
 | No | Field | Type | Required | Description |
