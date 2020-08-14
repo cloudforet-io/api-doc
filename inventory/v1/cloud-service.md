@@ -216,7 +216,9 @@ description:
 | 3 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | project_id |string|❌| |
-| 7 | domain_id |string|✅| |
-| 8 | release_project |bool|❌| |
-| 9 | release_region |bool|❌| |
+| 6 | region_code |string|❌| |
+| 7 | region_type |string|❌| |
+| 8 | project_id |string|❌| |
+| 9 | domain_id |string|✅| |
+| 10 | release_project |bool|❌| |
+| 11 | release_region |bool|❌| |

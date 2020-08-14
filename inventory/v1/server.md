@@ -752,27 +752,41 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">14</td>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">15</td>
+      <td style="text-align:left">region_type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">16</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">18</td>
       <td style="text-align:left">release_region</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">19</td>
       <td style="text-align:left">release_project</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">❌</td>
