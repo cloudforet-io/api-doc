@@ -84,35 +84,34 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">job_task_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">job_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>TASK_ITEM_STATE_NONE</li>
-          	<li>CREATE</li>
-          	<li>UPDATE</li>
-          	<li>DELETE</li>
+          	<li>CREATED</li>
+          	<li>UPDATED</li>
           	<li>FAILURE</li>
         </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">error</td>
       <td style="text-align:left"><a href="task-item.md#errorinfo">ErrorInfo</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">job_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">job_task_id</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -170,8 +169,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">job_task_id</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">state</td>
+      <td style="text-align:left"><ul>
+          	<li>TASK_ITEM_STATE_NONE</li>
+          	<li>CREATED</li>
+          	<li>UPDATED</li>
+          	<li>FAILURE</li>
+        </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -184,19 +188,20 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">6</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>TASK_ITEM_STATE_NONE</li>
-          	<li>CREATE</li>
-          	<li>UPDATE</li>
-          	<li>DELETE</li>
-          	<li>FAILURE</li>
-        </ul></td>
+      <td style="text-align:left">job_task_id</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
