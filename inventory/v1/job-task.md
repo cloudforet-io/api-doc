@@ -70,7 +70,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left">status</td>
       <td style="text-align:left"><ul>
           	<li>JOB_TASK_STATE_NONE</li>
           	<li>PENDING</li>
@@ -205,7 +205,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left">status</td>
       <td style="text-align:left"><ul>
           	<li>JOB_TASK_STATE_NONE</li>
           	<li>PENDING</li>

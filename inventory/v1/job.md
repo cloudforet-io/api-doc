@@ -96,8 +96,8 @@ description:
           	<li>CREATED</li>
           	<li>CANCELED</li>
           	<li>IN_PROGRESS</li>
-          	<li>FINISHED</li>
-          	<li>FAILURE</li>
+          	<li>SUCCESS</li>
+          	<li>ERROR</li>
           	<li>TIMEOUT</li>
         </ul></td>
 <td style="text-align:left">❌</td>

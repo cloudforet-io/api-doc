@@ -518,14 +518,14 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left">status</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>CREATED</li>
           	<li>CANCELED</li>
           	<li>IN_PROGRESS</li>
-          	<li>FINISHED</li>
-          	<li>FAILURE</li>
+          	<li>SUCCESS</li>
+          	<li>ERROR</li>
           	<li>TIMEOUT</li>
         </ul></td>
 <td style="text-align:left"></td>
