@@ -126,7 +126,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string|✅| |
-| 2 | filter |spaceone.api.core.v1.Filter|✅| |
+| 2 | filter |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅| |
 
 ### ResourceGroupInfo
 | No | Field | Type |  Description |
