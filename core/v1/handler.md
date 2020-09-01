@@ -85,5 +85,5 @@ description:
 | 1 | service |string| |
 | 2 | resource |string| |
 | 3 | verb |string| |
-| 4 | state |string| |
+| 4 | status |string| |
 | 5 | message |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
