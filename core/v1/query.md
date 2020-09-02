@@ -29,6 +29,9 @@ description:
 | 4 | n |string| |
 | 5 | operator |string| |
 | 6 | o |string| |
+| 7 | value |string| |
+| 8 | v |string| |
+| 9 | date_format |string| |
 
 ### AggregateGroupKey
 | No | Field | Type |  Description |
