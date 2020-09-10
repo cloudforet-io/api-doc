@@ -109,11 +109,11 @@ description: Config Map API which configure environments for account
 ### ConfigMapInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | name |string| |
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 4 | domain_id |string| |
-| 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | name |string | |
+| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | domain_id |string | |
+| 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### ConfigMapQuery
 | No | Field | Type | Required | Description |
@@ -137,8 +137,8 @@ description: Config Map API which configure environments for account
 ### ConfigMapsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ConfigMapInfo](config-map.md#configmapinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ConfigMapInfo](config-map.md#configmapinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateConfigMapRequest
 | No | Field | Type | Required | Description |
@@ -153,7 +153,7 @@ description: Config Map API which configure environments for account
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### UpdateConfigMapRequest
 | No | Field | Type | Required | Description |

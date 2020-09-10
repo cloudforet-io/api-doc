@@ -73,8 +73,8 @@ description:
 ### HistoryInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[HistoryValueInfo](history.md#historyvalueinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[HistoryValueInfo](history.md#historyvalueinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### HistoryStatRequest
 | No | Field | Type | Required | Description |
@@ -86,10 +86,10 @@ description:
 ### HistoryValueInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | topic |string| |
-| 2 | values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 3 | domain_id |string| |
-| 4 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | topic |string | |
+| 2 | values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 3 | domain_id |string | |
+| 4 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### QueryHistoryRequest
 | No | Field | Type | Required | Description |

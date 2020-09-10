@@ -57,5 +57,5 @@ description:
 ### TokenInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | access_token |string| |
-| 2 | refresh_token |string| |
+| 1 | access_token |string | |
+| 2 | refresh_token |string | |

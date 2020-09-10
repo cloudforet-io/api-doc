@@ -53,8 +53,8 @@ description:
 ### PluginEndpoint
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | endpoint |string| |
-| 2 | access_token |string| |
+| 1 | endpoint |string | |
+| 2 | access_token |string | |
 
 ### PluginEndpointRequest
 | No | Field | Type | Required | Description |

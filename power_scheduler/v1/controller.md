@@ -109,14 +109,14 @@ description:
 ### ControllerInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | controller_id |string| |
-| 2 | name |string| |
-| 3 | provider |string| |
-| 4 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 5 | plugin_info |[PluginInfo](controller.md#plugininfo)| |
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 8 | domain_id |string| |
+| 1 | controller_id |string | |
+| 2 | name |string | |
+| 3 | provider |string | |
+| 4 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | plugin_info |[PluginInfo](controller.md#plugininfo) | |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 8 | domain_id |string | |
 
 ### ControllerQuery
 | No | Field | Type | Required | Description |
@@ -141,8 +141,8 @@ description:
 ### ControllersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ControllerInfo](controller.md#controllerinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ControllerInfo](controller.md#controllerinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateControllerRequest
 | No | Field | Type | Required | Description |
@@ -157,16 +157,16 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | controller_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### PluginInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string| |
-| 2 | version |string| |
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 4 | provider |string| |
-| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | plugin_id |string | |
+| 2 | version |string | |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | provider |string | |
+| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### UpdateControllerRequest
 | No | Field | Type | Required | Description |

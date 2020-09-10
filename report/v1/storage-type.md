@@ -55,16 +55,16 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | storage_type_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### StorageTypeInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | storage_type_id |string| |
-| 2 | name |string| |
-| 3 | storage_type |string| |
-| 4 | provider |string| |
-| 5 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | storage_type_id |string | |
+| 2 | name |string | |
+| 3 | storage_type |string | |
+| 4 | provider |string | |
+| 5 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### StorageTypeQuery
 | No | Field | Type | Required | Description |
@@ -77,5 +77,5 @@ description:
 ### StorageTypesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[StorageTypeInfo](storage-type.md#storagetypeinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[StorageTypeInfo](storage-type.md#storagetypeinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

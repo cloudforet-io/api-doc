@@ -35,7 +35,7 @@ description:
 ### PluginVerifyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### PluginVerifyRequest
 | No | Field | Type | Required | Description |

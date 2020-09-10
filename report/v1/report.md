@@ -78,13 +78,13 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | report_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### ReportError
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | code |string| |
-| 2 | message |string| |
+| 1 | code |string | |
+| 2 | message |string | |
 
 ### ReportInfo
 <table>
@@ -276,5 +276,5 @@ description:
 ### ReportsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ReportInfo](report.md#reportinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ReportInfo](report.md#reportinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

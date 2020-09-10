@@ -237,12 +237,12 @@ description: User API which allows member management within project, company, an
 ### FindUserInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | user_id |string| |
-| 2 | name |string| |
-| 3 | email |string| |
-| 4 | mobile |string| |
-| 5 | group |string| |
-| 6 | state |string| |
+| 1 | user_id |string | |
+| 2 | name |string | |
+| 3 | email |string | |
+| 4 | mobile |string | |
+| 5 | group |string | |
+| 6 | state |string | |
 
 ### FindUserQuery
 | No | Field | Type | Required | Description |
@@ -253,21 +253,21 @@ description: User API which allows member management within project, company, an
 ### FindUserSearch
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | user_id |string| |
-| 2 | keyword |string| |
+| 1 | user_id |string | |
+| 2 | keyword |string | |
 
 ### FindUsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[FindUserInfo](user.md#finduserinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[FindUserInfo](user.md#finduserinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### GetUserRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | user_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### UpdateUserRequest
 | No | Field | Type | Required | Description |
@@ -430,5 +430,5 @@ description: User API which allows member management within project, company, an
 ### UsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](user.md#userinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[UserInfo](user.md#userinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

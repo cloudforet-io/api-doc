@@ -327,24 +327,24 @@ description:
 ### DataSourcesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[DataSourceInfo](data-source.md#datasourceinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[DataSourceInfo](data-source.md#datasourceinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### GetDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | data_source_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### PluginInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string| |
-| 2 | version |string| |
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 4 | secret_id |string| |
-| 5 | provider |string| |
+| 1 | plugin_id |string | |
+| 2 | version |string | |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | secret_id |string | |
+| 5 | provider |string | |
 
 ### RegisterDataSourceRequest
 | No | Field | Type | Required | Description |
@@ -366,4 +366,4 @@ description:
 ### VerifyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | status |bool| |
+| 1 | status |bool | |

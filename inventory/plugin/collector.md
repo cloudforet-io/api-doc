@@ -66,7 +66,7 @@ description:
 ### CollectorVerifyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### InitRequest
 | No | Field | Type | Required | Description |
@@ -76,7 +76,7 @@ description:
 ### PluginInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### ResourceInfo
 <table>

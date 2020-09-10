@@ -201,12 +201,12 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | secret_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### SecretDataInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### SecretInfo
 <table>
@@ -409,8 +409,8 @@ description:
 ### SecretsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SecretInfo](secret.md#secretinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[SecretInfo](secret.md#secretinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateSecretRequest
 | No | Field | Type | Required | Description |

@@ -55,7 +55,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | template_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### TemplateInfo
 <table>
@@ -155,5 +155,5 @@ description:
 ### TemplatesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[TemplateInfo](template.md#templateinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[TemplateInfo](template.md#templateinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

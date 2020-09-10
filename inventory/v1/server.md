@@ -271,13 +271,13 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | server_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### PinServerDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | server_id |string|✅| |
-| 2 | keys |string|✅| |
+| 2 | keys |list of string|✅| |
 | 3 | domain_id |string|✅| |
 
 ### ServerDisk
@@ -482,7 +482,7 @@ description:
 | 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
 | 2 | device |string|❌| |
 | 3 | nic_type |string|❌| |
-| 4 | ip_addresses |string|✅| |
+| 4 | ip_addresses |list of string|✅| |
 | 5 | cidr |string|❌| |
 | 6 | mac_address |string|❌| |
 | 7 | public_ip_address |string|❌| |
@@ -609,8 +609,8 @@ description:
 ### ServerReference
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | resource_id |string| |
-| 2 | external_link |string| |
+| 1 | resource_id |string | |
+| 2 | external_link |string | |
 
 ### ServerRequest
 | No | Field | Type | Required | Description |
@@ -627,8 +627,8 @@ description:
 ### ServersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ServerInfo](server.md#serverinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ServerInfo](server.md#serverinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateServerRequest
 <table>

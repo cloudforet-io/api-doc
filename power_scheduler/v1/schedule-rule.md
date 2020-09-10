@@ -199,14 +199,14 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | schedule_rule_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### Rule
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | day |string| |
-| 2 | date |string| |
-| 3 | times |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | day |string | |
+| 2 | date |string | |
+| 3 | times |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RuleInfo
 <table>
@@ -319,8 +319,8 @@ description:
 ### RulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RuleInfo](schedule-rule.md#ruleinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[RuleInfo](schedule-rule.md#ruleinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### ScheduleRuleQuery
 <table>

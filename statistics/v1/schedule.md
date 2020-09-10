@@ -148,7 +148,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | schedule_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### QueryOption
 | No | Field | Type | Required | Description |
@@ -264,7 +264,7 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">keys</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">list of string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -332,16 +332,16 @@ description:
 ### Scheduled
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | cron |string| |
-| 2 | interval |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
-| 3 | minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
-| 4 | hours |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | cron |string | |
+| 2 | interval |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 3 | minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 4 | hours |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### SchedulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](schedule.md#scheduleinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ScheduleInfo](schedule.md#scheduleinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |

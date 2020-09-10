@@ -47,8 +47,8 @@ description:
 ### MetricDataInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)| |
-| 2 | values |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)| |
+| 1 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| 2 | values |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
 
 ### MetricDataRequest
 | No | Field | Type | Required | Description |
@@ -65,11 +65,11 @@ description:
 ### MetricInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | key |string| |
-| 2 | name |string| |
-| 3 | unit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 4 | chart_type |string| |
-| 5 | chart_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | key |string | |
+| 2 | name |string | |
+| 3 | unit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | chart_type |string | |
+| 5 | chart_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### MetricRequest
 | No | Field | Type | Required | Description |
@@ -81,7 +81,7 @@ description:
 ### MetricsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | metrics |[MetricInfo](metric.md#metricinfo)| |
+| 1 | metrics |[MetricInfo](metric.md#metricinfo) | |
 
 ### PluginMetricDataResponse
 | No | Field | Type | Required | Description |
