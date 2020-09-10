@@ -123,23 +123,23 @@ description:
 ### CloudServiceInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | cloud_service_id |string| |
-| 2 | cloud_service_type |string| |
-| 3 | provider |string| |
-| 4 | cloud_service_group |string| |
-| 5 | state |string| |
-| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 8 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)| |
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 10 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 11 | project_id |string| |
-| 12 | domain_id |string| |
-| 13 | region_code |string| |
-| 14 | region_type |string| |
-| 15 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 16 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 17 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | cloud_service_id |string | |
+| 2 | cloud_service_type |string | |
+| 3 | provider |string | |
+| 4 | cloud_service_group |string | |
+| 5 | state |string | |
+| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 8 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference) | |
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 10 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 11 | project_id |string | |
+| 12 | domain_id |string | |
+| 13 | region_code |string | |
+| 14 | region_type |string | |
+| 15 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 16 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 17 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### CloudServiceQuery
 | No | Field | Type | Required | Description |
@@ -158,8 +158,8 @@ description:
 ### CloudServiceReference
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | resource_id |string| |
-| 2 | external_link |string| |
+| 1 | resource_id |string | |
+| 2 | external_link |string | |
 
 ### CloudServiceRequest
 | No | Field | Type | Required | Description |
@@ -176,8 +176,8 @@ description:
 ### CloudServicesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CloudServiceInfo](cloud-service.md#cloudserviceinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[CloudServiceInfo](cloud-service.md#cloudserviceinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateServiceRequest
 | No | Field | Type | Required | Description |
@@ -199,13 +199,13 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | cloud_service_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### PinCloudServiceDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | cloud_service_id |string|✅| |
-| 2 | keys |string|✅| |
+| 2 | keys |list of string|✅| |
 | 3 | domain_id |string|✅| |
 
 ### UpdateCloudServiceRequest

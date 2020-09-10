@@ -110,8 +110,8 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
-| 2 | permissions |string|✅| |
-| 3 | labels |string|❌| |
+| 2 | permissions |list of string|✅| |
+| 3 | labels |list of string|❌| |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | project_id |string|❌| |
 | 6 | domain_id |string|✅| |
@@ -122,26 +122,26 @@ description:
 | 1 | policy_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | repository_id |string|❌| |
-| 4 | only |string|❌| |
+| 4 | only |list of string|❌| |
 
 ### PoliciesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PolicyInfo](policy.md#policyinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[PolicyInfo](policy.md#policyinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### PolicyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | policy_id |string| |
-| 2 | name |string| |
-| 3 | permissions |string| |
-| 4 | labels |string| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 6 | repository_info |[RepositoryInfo](policy.md#repositoryinfo)| |
-| 7 | project_id |string| |
-| 8 | domain_id |string| |
-| 9 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | policy_id |string | |
+| 2 | name |string | |
+| 3 | permissions |list of string | list of permissions|
+| 4 | labels |list of string | list of labels|
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 6 | repository_info |[RepositoryInfo](policy.md#repositoryinfo) | |
+| 7 | project_id |string | |
+| 8 | domain_id |string | |
+| 9 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### PolicyQuery
 | No | Field | Type | Required | Description |
@@ -171,7 +171,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | policy_id |string|✅| |
 | 2 | name |string|❌| |
-| 3 | permissions |string|❌| |
-| 4 | labels |string|❌| |
+| 3 | permissions |list of string|❌| |
+| 4 | labels |list of string|❌| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | domain_id |string|✅| |

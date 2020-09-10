@@ -295,8 +295,8 @@ description:
 ### APIKeyRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string| |
-| 2 | domain_id |string| |
+| 1 | api_key_id |string | |
+| 2 | domain_id |string | |
 
 ### APIKeyStatQuery
 | No | Field | Type | Required | Description |
@@ -307,14 +307,14 @@ description:
 ### APIKeysInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[APIKeyInfo](api-key.md#apikeyinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[APIKeyInfo](api-key.md#apikeyinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### Acls
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | name |string| |
-| 2 | cidr |string| |
+| 1 | name |string | |
+| 2 | cidr |string | |
 
 ### CreateAPIKeyRequest
 <table>
@@ -362,20 +362,20 @@ description:
 ### GetAPIKeyRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string| |
-| 2 | domain_id |string| |
-| 3 | only |string| |
+| 1 | api_key_id |string | |
+| 2 | domain_id |string | |
+| 3 | only |list of string | |
 
 ### UpdateAPIKeyHostsRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string| |
-| 2 | allowed_hosts |[Acls](api-key.md#acls)| |
-| 3 | domain_id |string| |
+| 1 | api_key_id |string | |
+| 2 | allowed_hosts |[Acls](api-key.md#acls) | |
+| 3 | domain_id |string | |
 
 ### UpdateAPIKeyRoleRequest
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | api_key_id |string| |
-| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)| |
-| 3 | domain_id |string| |
+| 1 | api_key_id |string | |
+| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| 3 | domain_id |string | |

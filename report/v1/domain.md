@@ -86,9 +86,9 @@ description:
 ### DomainInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string| |
-| 2 | register_templates |string| |
-| 3 | relation_resources |[RelationResourceInfo](domain.md#relationresourceinfo)| |
+| 1 | domain_id |string | |
+| 2 | register_templates |list of string | |
+| 3 | relation_resources |[RelationResourceInfo](domain.md#relationresourceinfo) | |
 
 ### DomainQuery
 | No | Field | Type | Required | Description |
@@ -99,8 +99,8 @@ description:
 ### DomainsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[DomainInfo](domain.md#domaininfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[DomainInfo](domain.md#domaininfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### EnableDomainRequest
 | No | Field | Type | Required | Description |
@@ -111,18 +111,18 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
-| 2 | only |string|❌| |
+| 2 | only |list of string|❌| |
 
 ### IdentityInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | key |string| |
-| 2 | value |string| |
+| 1 | key |string | |
+| 2 | value |string | |
 
 ### RelationResourceInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | service |string| |
-| 2 | resource |string| |
-| 3 | identity |[IdentityInfo](domain.md#identityinfo)| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | service |string | |
+| 2 | resource |string | |
+| 3 | identity |[IdentityInfo](domain.md#identityinfo) | |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |

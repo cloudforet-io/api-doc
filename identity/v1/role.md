@@ -168,7 +168,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | role_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### RoleInfo
 <table>
@@ -360,8 +360,8 @@ description:
 ### RolesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RoleInfo](role.md#roleinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[RoleInfo](role.md#roleinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateRoleRequest
 | No | Field | Type | Required | Description |

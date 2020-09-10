@@ -120,7 +120,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | region_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### RegionInfo
 <table>
@@ -237,8 +237,8 @@ description:
 ### RegionsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RegionInfo](region.md#regioninfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[RegionInfo](region.md#regioninfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateRegionRequest
 | No | Field | Type | Required | Description |

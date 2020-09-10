@@ -36,7 +36,7 @@ desc: The greeting service definition.
 ### HelloReply
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | message |string| |
+| 1 | message |string | |
 
 ### HelloRequest
 | No | Field | Type | Required | Description |

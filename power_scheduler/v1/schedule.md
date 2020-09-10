@@ -198,13 +198,13 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | schedule_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### ResourceGroup
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | resource_group_id |string| |
-| 2 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | resource_group_id |string | |
+| 2 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### ResourceGroupRequest
 | No | Field | Type | Required | Description |
@@ -382,8 +382,8 @@ description:
 ### SchedulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](schedule.md#scheduleinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ScheduleInfo](schedule.md#scheduleinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateScheduleRequest
 <table>

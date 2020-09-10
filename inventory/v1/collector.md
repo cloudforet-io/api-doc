@@ -453,8 +453,8 @@ description:
 ### CollectorsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CollectorInfo](collector.md#collectorinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[CollectorInfo](collector.md#collectorinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateCollectorRequest
 | No | Field | Type | Required | Description |
@@ -487,16 +487,16 @@ description:
 ### ErrorInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | error_code |string| |
-| 2 | message |string| |
-| 3 | additional |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | error_code |string | |
+| 2 | message |string | |
+| 3 | additional |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### GetCollectorRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | collector_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### JobInfo
 <table>
@@ -609,27 +609,27 @@ description:
 ### PluginInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string| |
-| 2 | version |string| |
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 4 | secret_id |string| |
-| 5 | secret_group_id |string| |
-| 6 | provider |string| |
-| 7 | service_account_id |string| |
-| 8 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | plugin_id |string | |
+| 2 | version |string | |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | secret_id |string | |
+| 5 | secret_group_id |string | |
+| 6 | provider |string | |
+| 7 | service_account_id |string | |
+| 8 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### ScheduleInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string| |
-| 2 | schedule_id |string| |
-| 3 | name |string| |
-| 4 | collect_mode |string| |
-| 5 | schedule |[Scheduled](collector.md#scheduled)| |
-| 6 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 7 | last_scheduled_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 8 | collector_info |[CollectorInfo](collector.md#collectorinfo)| |
-| 9 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | domain_id |string | |
+| 2 | schedule_id |string | |
+| 3 | name |string | |
+| 4 | collect_mode |string | |
+| 5 | schedule |[Scheduled](collector.md#scheduled) | |
+| 6 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 7 | last_scheduled_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 8 | collector_info |[CollectorInfo](collector.md#collectorinfo) | |
+| 9 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### ScheduleQuery
 | No | Field | Type | Required | Description |
@@ -649,16 +649,16 @@ description:
 ### Scheduled
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | cron |string| |
-| 2 | interval |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
-| 3 | minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
-| 4 | hours |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | cron |string | |
+| 2 | interval |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 3 | minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 4 | hours |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### SchedulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](collector.md#scheduleinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ScheduleInfo](collector.md#scheduleinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateCollectorRequest
 | No | Field | Type | Required | Description |
@@ -692,7 +692,7 @@ description:
 ### VerifyInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | status |bool| |
+| 1 | status |bool | |
 
 ### VerifyPluginRequest
 | No | Field | Type | Required | Description |

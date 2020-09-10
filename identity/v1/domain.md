@@ -245,8 +245,8 @@ description:
 ### DomainKeyResponse
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string| |
-| 2 | domain_key |string| |
+| 1 | domain_id |string | |
+| 2 | domain_key |string | |
 
 ### DomainQuery
 <table>
@@ -310,22 +310,22 @@ description:
 ### DomainsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[DomainInfo](domain.md#domaininfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[DomainInfo](domain.md#domaininfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### GetDomainRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
-| 2 | only |string|❌| |
+| 2 | only |list of string|❌| |
 
 ### PluginInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string| |
-| 2 | version |string| |
-| 3 | secret_id |string| |
-| 4 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | plugin_id |string | |
+| 2 | version |string | |
+| 3 | secret_id |string | |
+| 4 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### UpdateDomainRequest
 | No | Field | Type | Required | Description |

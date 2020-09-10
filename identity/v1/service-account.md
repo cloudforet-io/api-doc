@@ -121,19 +121,19 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | service_account_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### ServiceAccountInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | service_account_id |string| |
-| 2 | name |string| |
-| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 4 | provider |string| |
-| 5 | project_info |[ProjectInfo](service-account.md#projectinfo)| |
-| 6 | domain_id |string| |
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | service_account_id |string | |
+| 2 | name |string | |
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | provider |string | |
+| 5 | project_info |[ProjectInfo](service-account.md#projectinfo) | |
+| 6 | domain_id |string | |
+| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### ServiceAccountQuery
 | No | Field | Type | Required | Description |
@@ -160,8 +160,8 @@ description:
 ### ServiceAccountsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ServiceAccountInfo](service-account.md#serviceaccountinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ServiceAccountInfo](service-account.md#serviceaccountinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateServiceAccountRequest
 | No | Field | Type | Required | Description |

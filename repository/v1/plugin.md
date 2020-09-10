@@ -157,7 +157,7 @@ description:
 | 4 | provider |string|❌| |
 | 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 7 | labels |string|❌| |
+| 7 | labels |list of string|❌| |
 | 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 9 | project_id |string|❌| |
 | 10 | domain_id |string|✅| |
@@ -168,7 +168,7 @@ description:
 | 1 | plugin_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | repository_id |string|❌| |
-| 4 | only |string|❌| |
+| 4 | only |list of string|❌| |
 
 ### PluginInfo
 <table>
@@ -251,7 +251,7 @@ description:
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">labels</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -388,8 +388,8 @@ description:
 ### PluginsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PluginInfo](plugin.md#plugininfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[PluginInfo](plugin.md#plugininfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RepositoryPluginRequest
 | No | Field | Type | Required | Description |
@@ -405,13 +405,13 @@ description:
 | 2 | name |string|❌| |
 | 3 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | labels |string|❌| |
+| 5 | labels |list of string|❌| |
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | domain_id |string|✅| |
 
 ### VersionsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | version |string| deprecated field|
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
-| 3 | results |string| |
+| 1 | version |list of string | deprecated field|
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 3 | results |list of string | |

@@ -178,28 +178,28 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | project_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### ProjectInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | project_id |string| |
-| 2 | name |string| |
-| 3 | state |string| |
-| 4 | project_group_info |[ProjectGroupInfo](project.md#projectgroupinfo)| |
-| 5 | domain_id |string| |
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 7 | created_by |string| |
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 9 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | project_id |string | |
+| 2 | name |string | |
+| 3 | state |string | |
+| 4 | project_group_info |[ProjectGroupInfo](project.md#projectgroupinfo) | |
+| 5 | domain_id |string | |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | created_by |string | |
+| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 9 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### ProjectMemberInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | project_info |[ProjectInfo](project.md#projectinfo)| |
-| 2 | user_info |[UserInfo](project.md#userinfo)| |
-| 3 | roles |[RoleInfo](project.md#roleinfo)| |
-| 4 | labels |string| |
+| 1 | project_info |[ProjectInfo](project.md#projectinfo) | |
+| 2 | user_info |[UserInfo](project.md#userinfo) | |
+| 3 | roles |[RoleInfo](project.md#roleinfo) | |
+| 4 | labels |list of string | |
 
 ### ProjectMemberQuery
 | No | Field | Type | Required | Description |
@@ -215,14 +215,14 @@ description:
 | 1 | project_id |string|✅| |
 | 2 | user_id |string|✅| |
 | 3 | domain_id |string|✅| |
-| 4 | roles |string|❌| |
-| 5 | labels |string|❌| |
+| 4 | roles |list of string|❌| |
+| 5 | labels |list of string|❌| |
 
 ### ProjectMembersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectMemberInfo](project.md#projectmemberinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ProjectMemberInfo](project.md#projectmemberinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### ProjectQuery
 | No | Field | Type | Required | Description |
@@ -248,8 +248,8 @@ description:
 ### ProjectsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectInfo](project.md#projectinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ProjectInfo](project.md#projectinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RemoveProjectMemberRequest
 | No | Field | Type | Required | Description |

@@ -123,17 +123,17 @@ description:
 ### CloudServiceTypeInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | cloud_service_type_id |string| |
-| 2 | name |string| |
-| 3 | provider |string| |
-| 4 | group |string| |
-| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 7 | labels |string| |
-| 8 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 9 | domain_id |string| |
-| 10 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 11 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | cloud_service_type_id |string | |
+| 2 | name |string | |
+| 3 | provider |string | |
+| 4 | group |string | |
+| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | labels |list of string | |
+| 8 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 9 | domain_id |string | |
+| 10 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 11 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### CloudServiceTypeQuery
 | No | Field | Type | Required | Description |
@@ -160,8 +160,8 @@ description:
 ### CloudServiceTypesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateServiceTypeRequest
 | No | Field | Type | Required | Description |
@@ -179,13 +179,13 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | cloud_service_type_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### PinCloudServiceTypeDataRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | cloud_service_type_id |string|✅| |
-| 2 | keys |string|✅| |
+| 2 | keys |list of string|✅| |
 | 3 | domain_id |string|✅| |
 
 ### UpdateCloudServiceTypeRequest

@@ -47,7 +47,7 @@ description:
 ### LogsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | logs |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)| |
+| 1 | logs |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
 
 ### PluginLogsResponse
 | No | Field | Type | Required | Description |
@@ -59,5 +59,5 @@ description:
 ### Sort
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | key |string| |
-| 2 | desc |bool| |
+| 1 | key |string | |
+| 2 | desc |bool | |

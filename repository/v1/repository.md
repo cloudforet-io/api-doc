@@ -120,25 +120,25 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | repository_id |string|✅| |
-| 2 | only |string|❌| |
+| 2 | only |list of string|❌| |
 | 3 | domain_id |string|✅| |
 
 ### RepositoriesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RepositoryInfo](repository.md#repositoryinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[RepositoryInfo](repository.md#repositoryinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RepositoryInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | repository_id |string| |
-| 2 | name |string| |
-| 3 | repository_type |string| |
-| 4 | endpoint |string| |
-| 5 | version |string| |
-| 6 | secret_id |string| |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | repository_id |string | |
+| 2 | name |string | |
+| 3 | repository_type |string | |
+| 4 | endpoint |string | |
+| 5 | version |string | |
+| 6 | secret_id |string | |
+| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### RepositoryQuery
 | No | Field | Type | Required | Description |

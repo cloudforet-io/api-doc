@@ -56,7 +56,7 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">keys</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">list of string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>

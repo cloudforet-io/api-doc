@@ -78,7 +78,7 @@ description:
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">references</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -221,5 +221,5 @@ description:
 ### TaskItemsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[TaskItemInfo](task-item.md#taskiteminfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[TaskItemInfo](task-item.md#taskiteminfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

@@ -120,7 +120,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_group_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### Resource
 | No | Field | Type | Required | Description |
@@ -131,13 +131,13 @@ description:
 ### ResourceGroupInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | resource_group_id |string| |
-| 2 | name |string| |
-| 3 | resources |[Resource](resource-group.md#resource)| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 5 | project_id |string| |
-| 6 | domain_id |string| |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | resource_group_id |string | |
+| 2 | name |string | |
+| 3 | resources |[Resource](resource-group.md#resource) | |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | project_id |string | |
+| 6 | domain_id |string | |
+| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### ResourceGroupQuery
 | No | Field | Type | Required | Description |
@@ -163,8 +163,8 @@ description:
 ### ResourceGroupsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ResourceGroupInfo](resource-group.md#resourcegroupinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[ResourceGroupInfo](resource-group.md#resourcegroupinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateResourceGroupRequest
 | No | Field | Type | Required | Description |

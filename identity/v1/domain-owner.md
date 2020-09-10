@@ -91,15 +91,15 @@ description:
 ### DomainOwnerInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | owner_id |string| |
-| 2 | name |string| |
-| 3 | email |string| |
-| 4 | mobile |string| |
-| 5 | language |string| |
-| 6 | timezone |string| |
-| 7 | last_accessed_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
-| 9 | domain_id |string| |
+| 1 | owner_id |string | |
+| 2 | name |string | |
+| 3 | email |string | |
+| 4 | mobile |string | |
+| 5 | language |string | |
+| 6 | timezone |string | |
+| 7 | last_accessed_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 9 | domain_id |string | |
 
 ### DomainOwnerRequest
 | No | Field | Type | Required | Description |
@@ -112,7 +112,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | owner_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### UpdateDomainOwner
 | No | Field | Type | Required | Description |

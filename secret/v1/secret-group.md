@@ -146,16 +146,16 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | secret_group_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### SecretGroupInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | secret_group_id |string| |
-| 2 | name |string| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 4 | domain_id |string| |
-| 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | secret_group_id |string | |
+| 2 | name |string | |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | domain_id |string | |
+| 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### SecretGroupQuery
 | No | Field | Type | Required | Description |
@@ -175,9 +175,9 @@ description:
 ### SecretGroupSecretInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | secret_group_info |[SecretGroupInfo](secret-group.md#secretgroupinfo)| |
-| 2 | secret_info |[SecretInfo](secret-group.md#secretinfo)| |
-| 3 | domain_id |string| |
+| 1 | secret_group_info |[SecretGroupInfo](secret-group.md#secretgroupinfo) | |
+| 2 | secret_info |[SecretInfo](secret-group.md#secretinfo) | |
+| 3 | domain_id |string | |
 
 ### SecretGroupSecretRequest
 | No | Field | Type | Required | Description |
@@ -195,8 +195,8 @@ description:
 ### SecretGroupsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SecretGroupInfo](secret-group.md#secretgroupinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[SecretGroupInfo](secret-group.md#secretgroupinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateSecretGroupRequest
 | No | Field | Type | Required | Description |

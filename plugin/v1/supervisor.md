@@ -183,7 +183,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | supervisor_id |string|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### PluginInfo
 <table>
@@ -254,7 +254,7 @@ description:
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">endpoints</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -345,8 +345,8 @@ description:
 ### PluginsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PluginInfo](supervisor.md#plugininfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[PluginInfo](supervisor.md#plugininfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### PublishSupervisorRequest
 | No | Field | Type | Required | Description |
@@ -494,5 +494,5 @@ description:
 ### SupervisorsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SupervisorInfo](supervisor.md#supervisorinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[SupervisorInfo](supervisor.md#supervisorinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

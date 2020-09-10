@@ -53,9 +53,9 @@ description:
 ### ErrorInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | error_code |string| |
-| 2 | message |string| |
-| 3 | additional |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
+| 1 | error_code |string | |
+| 2 | message |string | |
+| 3 | additional |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### JobInfo
 <table>
@@ -174,8 +174,8 @@ description:
 ### JobsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[JobInfo](job.md#jobinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[JobInfo](job.md#jobinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### JobsQuery
 <table>

@@ -103,7 +103,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | storage_id |string|✅| |
-| 3 | only |string|❌| |
+| 3 | only |list of string|❌| |
 
 ### RegisterStorageRequest
 | No | Field | Type | Required | Description |
@@ -117,13 +117,13 @@ description:
 ### StorageInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | domain_id |string| |
-| 2 | storage_id |string| |
-| 3 | name |string| |
-| 4 | secret_id |string| |
-| 5 | storage_type_info |[StorageTypeInfo](storage.md#storagetypeinfo)| |
-| 6 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)| |
+| 1 | domain_id |string | |
+| 2 | storage_id |string | |
+| 3 | name |string | |
+| 4 | secret_id |string | |
+| 5 | storage_type_info |[StorageTypeInfo](storage.md#storagetypeinfo) | |
+| 6 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### StorageQuery
 | No | Field | Type | Required | Description |
@@ -138,8 +138,8 @@ description:
 ### StoragesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[StorageInfo](storage.md#storageinfo)| |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)| |
+| 1 | results |[StorageInfo](storage.md#storageinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateStorageRequest
 | No | Field | Type | Required | Description |
