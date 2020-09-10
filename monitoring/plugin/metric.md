@@ -81,18 +81,18 @@ description:
 ### MetricsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | metrics |[MetricInfo](metric.md#metricinfo) | |
+| 1 | metrics |[list of MetricInfo](metric.md#metricinfo) | |
 
 ### PluginMetricDataResponse
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string|✅| |
-| 2 | actions |[spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
+| 2 | actions |[list of spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
 | 3 | result |[MetricDataInfo](metric.md#metricdatainfo)|✅| |
 
 ### PluginMetricsResponse
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string|✅| |
-| 2 | actions |[spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
+| 2 | actions |[list of spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
 | 3 | result |[MetricsInfo](metric.md#metricsinfo)|✅| |

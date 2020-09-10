@@ -142,7 +142,7 @@ description:
 ### UsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](auth.md#userinfo) | |
+| 1 | results |[list of UserInfo](auth.md#userinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### VerifyRequest

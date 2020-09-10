@@ -222,14 +222,14 @@ description:
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="server.md#servernic">ServerNIC</a></td>
+      <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="server.md#serverdisk">ServerDisk</a></td>
+      <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -404,14 +404,14 @@ description:
     <tr>
       <td style="text-align:left">13</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="server.md#servernic">ServerNIC</a></td>
+      <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">14</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="server.md#serverdisk">ServerDisk</a></td>
+      <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -627,7 +627,7 @@ description:
 ### ServersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ServerInfo](server.md#serverinfo) | |
+| 1 | results |[list of ServerInfo](server.md#serverinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateServerRequest
@@ -725,14 +725,14 @@ description:
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">nics</td>
-      <td style="text-align:left"><a href="server.md#servernic">ServerNIC</a></td>
+      <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">disks</td>
-      <td style="text-align:left"><a href="server.md#serverdisk">ServerDisk</a></td>
+      <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>

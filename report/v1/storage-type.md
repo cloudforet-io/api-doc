@@ -77,5 +77,5 @@ description:
 ### StorageTypesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[StorageTypeInfo](storage-type.md#storagetypeinfo) | |
+| 1 | results |[list of StorageTypeInfo](storage-type.md#storagetypeinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

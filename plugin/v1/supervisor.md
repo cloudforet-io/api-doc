@@ -345,7 +345,7 @@ description:
 ### PluginsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PluginInfo](supervisor.md#plugininfo) | |
+| 1 | results |[list of PluginInfo](supervisor.md#plugininfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### PublishSupervisorRequest
@@ -354,7 +354,7 @@ description:
 | 1 | name |string|✅| |
 | 2 | hostname |string|✅| |
 | 3 | secret_key |string|❌| |
-| 4 | plugin_info |[PluginInfo](supervisor.md#plugininfo)|❌| |
+| 4 | plugin_info |[list of PluginInfo](supervisor.md#plugininfo)|❌| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | is_public |bool|❌| |
 | 7 | domain_id |string|✅| |
@@ -494,5 +494,5 @@ description:
 ### SupervisorsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SupervisorInfo](supervisor.md#supervisorinfo) | |
+| 1 | results |[list of SupervisorInfo](supervisor.md#supervisorinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

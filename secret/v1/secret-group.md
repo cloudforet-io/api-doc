@@ -195,7 +195,7 @@ description:
 ### SecretGroupsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SecretGroupInfo](secret-group.md#secretgroupinfo) | |
+| 1 | results |[list of SecretGroupInfo](secret-group.md#secretgroupinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateSecretGroupRequest

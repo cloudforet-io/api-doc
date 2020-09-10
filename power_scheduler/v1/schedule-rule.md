@@ -157,7 +157,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">rule</td>
-      <td style="text-align:left"><a href="schedule-rule.md#rule">Rule</a></td>
+      <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
@@ -206,7 +206,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | day |string | |
 | 2 | date |string | |
-| 3 | times |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 3 | times |[list of int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RuleInfo
 <table>
@@ -258,7 +258,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">rule</td>
-      <td style="text-align:left"><a href="schedule-rule.md#rule">Rule</a></td>
+      <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -319,7 +319,7 @@ description:
 ### RulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RuleInfo](schedule-rule.md#ruleinfo) | |
+| 1 | results |[list of RuleInfo](schedule-rule.md#ruleinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### ScheduleRuleQuery
@@ -451,7 +451,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">rule</td>
-      <td style="text-align:left"><a href="schedule-rule.md#rule">Rule</a></td>
+      <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>

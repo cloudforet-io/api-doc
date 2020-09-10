@@ -176,7 +176,7 @@ description:
 ### CloudServicesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CloudServiceInfo](cloud-service.md#cloudserviceinfo) | |
+| 1 | results |[list of CloudServiceInfo](cloud-service.md#cloudserviceinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateServiceRequest

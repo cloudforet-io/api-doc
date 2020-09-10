@@ -114,7 +114,7 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">errors</td>
-      <td style="text-align:left"><a href="job.md#errorinfo">ErrorInfo</a></td>
+      <td style="text-align:left"><a href="job.md#errorinfo">list of ErrorInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -174,7 +174,7 @@ description:
 ### JobsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[JobInfo](job.md#jobinfo) | |
+| 1 | results |[list of JobInfo](job.md#jobinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### JobsQuery

@@ -237,7 +237,7 @@ description:
 ### RegionsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RegionInfo](region.md#regioninfo) | |
+| 1 | results |[list of RegionInfo](region.md#regioninfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateRegionRequest

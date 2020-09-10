@@ -141,7 +141,7 @@ description:
 ### ControllersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ControllerInfo](controller.md#controllerinfo) | |
+| 1 | results |[list of ControllerInfo](controller.md#controllerinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateControllerRequest

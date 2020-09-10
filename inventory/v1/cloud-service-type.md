@@ -160,7 +160,7 @@ description:
 ### CloudServiceTypesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) | |
+| 1 | results |[list of CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateServiceTypeRequest

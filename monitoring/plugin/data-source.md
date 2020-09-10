@@ -47,5 +47,5 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string|✅| |
-| 2 | actions |[spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
+| 2 | actions |[list of spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
 | 3 | result |[PluginVerifyInfo](data-source.md#pluginverifyinfo)|✅| |

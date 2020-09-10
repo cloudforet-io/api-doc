@@ -453,7 +453,7 @@ description:
 ### CollectorsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[CollectorInfo](collector.md#collectorinfo) | |
+| 1 | results |[list of CollectorInfo](collector.md#collectorinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateCollectorRequest
@@ -555,7 +555,7 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">errors</td>
-      <td style="text-align:left"><a href="collector.md#errorinfo">ErrorInfo</a></td>
+      <td style="text-align:left"><a href="collector.md#errorinfo">list of ErrorInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -651,13 +651,13 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | cron |string | |
 | 2 | interval |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
-| 3 | minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
-| 4 | hours |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 3 | minutes |[list of int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 4 | hours |[list of int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### SchedulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](collector.md#scheduleinfo) | |
+| 1 | results |[list of ScheduleInfo](collector.md#scheduleinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateCollectorRequest

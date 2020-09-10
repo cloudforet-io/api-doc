@@ -310,7 +310,7 @@ description:
 ### DomainsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[DomainInfo](domain.md#domaininfo) | |
+| 1 | results |[list of DomainInfo](domain.md#domaininfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### GetDomainRequest

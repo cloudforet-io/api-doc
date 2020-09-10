@@ -140,7 +140,7 @@ description:
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">policies</td>
-      <td style="text-align:left"><a href="role.md#rolepolicy">RolePolicy</a></td>
+      <td style="text-align:left"><a href="role.md#rolepolicy">list of RolePolicy</a></td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
@@ -210,7 +210,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">policies</td>
-      <td style="text-align:left"><a href="role.md#rolepolicy">RolePolicy</a></td>
+      <td style="text-align:left"><a href="role.md#rolepolicy">list of RolePolicy</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -360,7 +360,7 @@ description:
 ### RolesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RoleInfo](role.md#roleinfo) | |
+| 1 | results |[list of RoleInfo](role.md#roleinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateRoleRequest
@@ -368,6 +368,6 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | role_id |string|✅| |
 | 2 | name |string|❌| |
-| 3 | policies |[RolePolicy](role.md#rolepolicy)|❌| |
+| 3 | policies |[list of RolePolicy](role.md#rolepolicy)|❌| |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |

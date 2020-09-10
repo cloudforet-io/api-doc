@@ -126,7 +126,7 @@ description:
 ### RepositoriesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RepositoryInfo](repository.md#repositoryinfo) | |
+| 1 | results |[list of RepositoryInfo](repository.md#repositoryinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RepositoryInfo

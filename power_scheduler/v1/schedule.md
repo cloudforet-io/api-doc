@@ -253,7 +253,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">resource_groups</td>
-      <td style="text-align:left"><a href="schedule.md#resourcegroup">ResourceGroup</a></td>
+      <td style="text-align:left"><a href="schedule.md#resourcegroup">list of ResourceGroup</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -382,7 +382,7 @@ description:
 ### SchedulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](schedule.md#scheduleinfo) | |
+| 1 | results |[list of ScheduleInfo](schedule.md#scheduleinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateScheduleRequest
