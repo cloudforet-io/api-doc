@@ -120,7 +120,7 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
           	<li>{{enum.name}}</li>
 		{%- endfor %}
         </ul>
-{%- elif (field.fullType_link is defined) -%}<a href="{{field.fullType_link}}">{{field.longType}}</a>{%- else %}{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}{% endif %}</td>
+{%- elif (field.fullType_link is defined) -%}<a href="{{field.fullType_link}}">{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}</a>{%- else %}{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}{% endif %}</td>
 {% if (field.description.is_required is defined and message.no_requires is not defined) -%}
         <td style="text-align:left">{{field.description.is_required}}</td>
 {% endif -%}
@@ -140,13 +140,13 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 {%- for field in message.fields %}
-| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{{field.longType}}]{%- else %}{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %} | {{field.description.desc}}|
+| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}]{%- else %}{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %} | {{field.description.desc}}|
 {%- endfor %}
 {% else %}
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 {%- for field in message.fields %}
-| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{{field.longType}}]{%- else %}{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %}| {%- if (field.description.is_required is defined) -%}{{field.description.is_required}}{% endif %}| {{field.description.desc}}|
+| {{ loop.index }} | {{field.name}} |{%- if (field.fullType_link is defined) %}[{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}]{%- else %}{%- if (field.label|length and field.label == 'repeated') %}list of {{field.longType}}{%- else %}{{field.longType}}{% endif %}{% endif %}{%- if (field.fullType_link is defined) %}({{field.fullType_link}}){% endif %}| {%- if (field.description.is_required is defined) -%}{{field.description.is_required}}{% endif %}| {{field.description.desc}}|
 {%- endfor %}
 {% endif -%}
 {% endif -%}
