@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) | **`stream`**   [PluginMetricsResponse](metric.md#pluginmetricsresponse) |  |
-| 2 | [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) | **`stream`**   [PluginMetricDataResponse](metric.md#pluginmetricdataresponse) |  | 
+| 1 | [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) |   [PluginMetricsResponse](metric.md#pluginmetricsresponse) |  |
+| 2 | [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [PluginMetricDataResponse](metric.md#pluginmetricdataresponse) |  | 
  
 
  
@@ -61,6 +61,7 @@ description:
 | 6 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|✅| |
 | 7 | period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
 | 8 | stat |string|❌| |
+| 9 | schema |string|❌| |
 
 ### MetricInfo
 | No | Field | Type |  Description |
@@ -77,6 +78,7 @@ description:
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | resource |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅| |
+| 4 | schema |string|❌| |
 
 ### MetricsInfo
 | No | Field | Type |  Description |

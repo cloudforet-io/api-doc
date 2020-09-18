@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](cloud-service-type.md#create)|   [CreateServiceTypeRequest](cloud-service-type.md#createservicetyperequest) |   [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
+| 1 | [**create**](cloud-service-type.md#create)|   [CreateCloudServiceTypeRequest](cloud-service-type.md#createcloudservicetyperequest) |   [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
 | 2 | [**update**](cloud-service-type.md#update)|   [UpdateCloudServiceTypeRequest](cloud-service-type.md#updatecloudservicetyperequest) |   [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
 | 3 | [**pin_data**](cloud-service-type.md#pin_data)|   [PinCloudServiceTypeDataRequest](cloud-service-type.md#pincloudservicetypedatarequest) |   [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) |  |
 | 4 | [**delete**](cloud-service-type.md#delete)|   [CloudServiceTypeRequest](cloud-service-type.md#cloudservicetyperequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -32,7 +32,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateServiceTypeRequest](cloud-service-type.md#createservicetyperequest) |
+| Request | [CreateCloudServiceTypeRequest](cloud-service-type.md#createcloudservicetyperequest) |
 | Response |  [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)  |
  
  
@@ -163,7 +163,7 @@ description:
 | 1 | results |[list of CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
-### CreateServiceTypeRequest
+### CreateCloudServiceTypeRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
