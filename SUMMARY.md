@@ -40,7 +40,6 @@
     * [Region](inventory/v1/region.md)
     * [Resource Group](inventory/v1/resource-group.md)
     * [Server](inventory/v1/server.md)
-    * [Task Item](inventory/v1/task-item.md)
 * [Monitoring](monitoring/README.md)
   * [Plugin](monitoring/plugin/README.md)
     * [Data Source](monitoring/plugin/data-source.md)
