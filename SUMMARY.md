@@ -54,6 +54,8 @@
     * [Plugin](plugin/v1/plugin.md)
     * [Supervisor](plugin/v1/supervisor.md)
 * [Power_Scheduler](power_scheduler/README.md)
+  * [Plugin](power_scheduler/plugin/README.md)
+    * [Controller](power_scheduler/plugin/controller.md)
   * [V1](power_scheduler/v1/README.md)
     * [Controller](power_scheduler/v1/controller.md)
     * [Job](power_scheduler/v1/job.md)
