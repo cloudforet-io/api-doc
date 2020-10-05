@@ -114,47 +114,57 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">errors</td>
-      <td style="text-align:left"><a href="job.md#errorinfo">ErrorInfo</a></td>
+      <td style="text-align:left"><a href="job.md#errorinfo">list of ErrorInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">7</td>
-      <td style="text-align:left">controller_info</td>
-      <td style="text-align:left"><a href="job.md#controllerinfo">ControllerInfo</a></td>
+      <td style="text-align:left">schedule_info</td>
+      <td style="text-align:left"><a href="job.md#scheduleinfo">ScheduleInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">8</td>
+      <td style="text-align:left">control_action</td>
+      <td style="text-align:left"><ul>
+          	<li>RUNNING</li>
+          	<li>STOPPED</li>
+        </ul></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">finished_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
@@ -174,7 +184,7 @@ description:
 ### JobsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[JobInfo](job.md#jobinfo) | |
+| 1 | results |[list of JobInfo](job.md#jobinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### JobsQuery
@@ -207,7 +217,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">status</td>
       <td style="text-align:left"><ul>
-          	<li>JOB_STATE_NONE</li>
+          	<li>JOB_STATUS_NONE</li>
           	<li>CREATED</li>
           	<li>CANCELED</li>
           	<li>IN_PROGRESS</li>
@@ -227,13 +237,23 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
+      <td style="text-align:left">control_action</td>
+      <td style="text-align:left"><ul>
+          	<li>RUNNING</li>
+          	<li>STOPPED</li>
+        </ul></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>

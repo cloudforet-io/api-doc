@@ -127,7 +127,7 @@ description:
 ### PoliciesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PolicyInfo](policy.md#policyinfo) | |
+| 1 | results |[list of PolicyInfo](policy.md#policyinfo) | list of PolicyInfo|
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### PolicyInfo

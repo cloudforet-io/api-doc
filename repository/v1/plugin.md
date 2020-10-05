@@ -388,7 +388,7 @@ description:
 ### PluginsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[PluginInfo](plugin.md#plugininfo) | |
+| 1 | results |[list of PluginInfo](plugin.md#plugininfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RepositoryPluginRequest

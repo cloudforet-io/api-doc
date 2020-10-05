@@ -156,8 +156,8 @@ description:
 | 1 | data_source_id |string|❌| |
 | 2 | resource_type |string|✅| |
 | 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 4 | join |[ScheduleJoinQuery](schedule.md#schedulejoinquery)|❌| |
-| 5 | formulas |[ScheduleFormula](schedule.md#scheduleformula)|❌| |
+| 4 | join |[list of ScheduleJoinQuery](schedule.md#schedulejoinquery)|❌| |
+| 5 | formulas |[list of ScheduleFormula](schedule.md#scheduleformula)|❌| |
 
 ### ScheduleFormula
 | No | Field | Type | Required | Description |
@@ -334,13 +334,13 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | cron |string | |
 | 2 | interval |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
-| 3 | minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
-| 4 | hours |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 3 | minutes |[list of int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 4 | hours |[list of int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### SchedulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ScheduleInfo](schedule.md#scheduleinfo) | |
+| 1 | results |[list of ScheduleInfo](schedule.md#scheduleinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateScheduleRequest

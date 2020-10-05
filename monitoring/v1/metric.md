@@ -88,6 +88,6 @@ description:
 ### MetricsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | metrics |[MetricInfo](metric.md#metricinfo) | |
+| 1 | metrics |[list of MetricInfo](metric.md#metricinfo) | |
 | 2 | available_resources |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 3 | domain_id |string | |

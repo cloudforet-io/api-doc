@@ -155,5 +155,5 @@ description:
 ### TemplatesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[TemplateInfo](template.md#templateinfo) | |
+| 1 | results |[list of TemplateInfo](template.md#templateinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

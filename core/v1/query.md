@@ -17,8 +17,8 @@ description:
 ### AggregateGroup
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | keys |[AggregateGroupKey](query.md#aggregategroupkey) | |
-| 2 | fields |[AggregateGroupField](query.md#aggregategroupfield) | |
+| 1 | keys |[list of AggregateGroupKey](query.md#aggregategroupkey) | |
+| 2 | fields |[list of AggregateGroupField](query.md#aggregategroupfield) | |
 
 ### AggregateGroupField
 | No | Field | Type |  Description |
@@ -66,8 +66,8 @@ description:
 ### Query
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | filter |[Filter](query.md#filter) | |
-| 2 | filter_or |[Filter](query.md#filter) | |
+| 1 | filter |[list of Filter](query.md#filter) | |
+| 2 | filter_or |[list of Filter](query.md#filter) | |
 | 3 | sort |[Sort](query.md#sort) | |
 | 4 | page |[Page](query.md#page) | |
 | 5 | minimal |bool | |
@@ -84,15 +84,15 @@ description:
 ### StatisticsAggregate
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | unwind |[AggregateUnwind](query.md#aggregateunwind) | |
+| 1 | unwind |[list of AggregateUnwind](query.md#aggregateunwind) | |
 | 2 | group |[AggregateGroup](query.md#aggregategroup) | |
 | 3 | count |[AggregateCount](query.md#aggregatecount) | |
 
 ### StatisticsQuery
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | filter |[Filter](query.md#filter) | |
-| 2 | filter_or |[Filter](query.md#filter) | |
+| 1 | filter |[list of Filter](query.md#filter) | |
+| 2 | filter_or |[list of Filter](query.md#filter) | |
 | 3 | aggregate |[StatisticsAggregate](query.md#statisticsaggregate) | |
 | 4 | sort |[StatisticsSort](query.md#statisticssort) | |
 | 5 | page |[Page](query.md#page) | |

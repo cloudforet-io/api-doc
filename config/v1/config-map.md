@@ -137,7 +137,7 @@ description: Config Map API which configure environments for account
 ### ConfigMapsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ConfigMapInfo](config-map.md#configmapinfo) | |
+| 1 | results |[list of ConfigMapInfo](config-map.md#configmapinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateConfigMapRequest

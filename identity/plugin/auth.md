@@ -15,9 +15,21 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**verify**](auth.md#verify)|   [VerifyRequest](auth.md#verifyrequest) |   [AuthVerifyInfo](auth.md#authverifyinfo) |  |
-| 2 | [**find**](auth.md#find)|   [FindRequest](auth.md#findrequest) |   [UsersInfo](auth.md#usersinfo) |  |
-| 3 | [**login**](auth.md#login)|   [LoginRequest](auth.md#loginrequest) |   [UserInfo](auth.md#userinfo) |  | 
+| 1 | [**init**](auth.md#init)|   [InitRequest](auth.md#initrequest) |   [PluginInfo](auth.md#plugininfo) |  |
+| 2 | [**verify**](auth.md#verify)|   [VerifyRequest](auth.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 3 | [**find**](auth.md#find)|   [FindRequest](auth.md#findrequest) |   [UsersInfo](auth.md#usersinfo) |  |
+| 4 | [**login**](auth.md#login)|   [LoginRequest](auth.md#loginrequest) |   [UserInfo](auth.md#userinfo) |  | 
+ 
+
+ 
+### init
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [InitRequest](auth.md#initrequest) |
+| Response |  [PluginInfo](auth.md#plugininfo)  |
+ 
  
 
  
@@ -27,7 +39,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [VerifyRequest](auth.md#verifyrequest) |
-| Response |  [AuthVerifyInfo](auth.md#authverifyinfo)  |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
 
@@ -68,6 +80,12 @@ description:
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | user_id |string|❌| |
 | 4 | keyword |string|❌| |
+| 5 | schema |string|❌| |
+
+### InitRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 
 ### LoginRequest
 | No | Field | Type | Required | Description |
@@ -75,6 +93,12 @@ description:
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | user_credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 4 | schema |string|❌| |
+
+### PluginInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### UserInfo
 <table>
@@ -142,7 +166,7 @@ description:
 ### UsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](auth.md#userinfo) | |
+| 1 | results |[list of UserInfo](auth.md#userinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### VerifyRequest
@@ -150,3 +174,4 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 3 | schema |string|❌| |

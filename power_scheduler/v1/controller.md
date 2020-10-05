@@ -20,7 +20,10 @@ description:
 | 3 | [**delete**](controller.md#delete)|   [ControllerRequest](controller.md#controllerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 4 | [**get**](controller.md#get)|   [GetControllerRequest](controller.md#getcontrollerrequest) |   [ControllerInfo](controller.md#controllerinfo) |  |
 | 5 | [**list**](controller.md#list)|   [ControllerQuery](controller.md#controllerquery) |   [ControllersInfo](controller.md#controllersinfo) |  |
-| 6 | [**stat**](controller.md#stat)|   [ControllerStatQuery](controller.md#controllerstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 6 | [**stat**](controller.md#stat)|   [ControllerStatQuery](controller.md#controllerstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 7 | [**control**](controller.md#control)|   [ControlRequest](controller.md#controlrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 8 | [**update_plugin**](controller.md#update_plugin)|   [UpdatePluginRequest](controller.md#updatepluginrequest) |   [ControllerInfo](controller.md#controllerinfo) |  |
+| 9 | [**verify_plugin**](controller.md#verify_plugin)|   [VerifyPluginRequest](controller.md#verifypluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
  
 
  
@@ -100,11 +103,59 @@ description:
 | :--- | :--- |
 | Request | [ControllerStatQuery](controller.md#controllerstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
+ 
+ 
+
+ 
+### control
+> **POST** /power-scheduler/v1/controller/{controller_id}/control
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [ControlRequest](controller.md#controlrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+ 
+ 
+
+ 
+### update_plugin
+> **PUT** /power-scheduler/v1/controller/{controller_id}/plugin
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [UpdatePluginRequest](controller.md#updatepluginrequest) |
+| Response |  [ControllerInfo](controller.md#controllerinfo)  |
+ 
+ 
+
+ 
+### verify_plugin
+> **POST** /power-scheduler/v1/controller/{controller_id}/plugin/verify
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [VerifyPluginRequest](controller.md#verifypluginrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
 
 
 ## 
 
 ## Message
+
+### ControlRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | controller_id |string|✅| |
+| 2 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | secret_id |string|❌| |
+| 4 | domain_id |string|✅| |
+| 5 | use_cache |bool|❌| |
 
 ### ControllerInfo
 | No | Field | Type |  Description |
@@ -141,7 +192,7 @@ description:
 ### ControllersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ControllerInfo](controller.md#controllerinfo) | |
+| 1 | results |[list of ControllerInfo](controller.md#controllerinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateControllerRequest
@@ -176,3 +227,18 @@ description:
 | 3 | plugin_info |[PluginInfo](controller.md#plugininfo)|❌| |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |
+
+### UpdatePluginRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | controller_id |string|✅| |
+| 2 | version |string|❌| |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | domain_id |string|✅| |
+
+### VerifyPluginRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | controller_id |string|✅| |
+| 2 | secret_id |string|❌| |
+| 3 | domain_id |string|✅| |

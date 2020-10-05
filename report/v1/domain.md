@@ -88,7 +88,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string | |
 | 2 | register_templates |list of string | |
-| 3 | relation_resources |[RelationResourceInfo](domain.md#relationresourceinfo) | |
+| 3 | relation_resources |[list of RelationResourceInfo](domain.md#relationresourceinfo) | |
 
 ### DomainQuery
 | No | Field | Type | Required | Description |
@@ -99,7 +99,7 @@ description:
 ### DomainsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[DomainInfo](domain.md#domaininfo) | |
+| 1 | results |[list of DomainInfo](domain.md#domaininfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### EnableDomainRequest
@@ -124,5 +124,5 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | service |string | |
 | 2 | resource |string | |
-| 3 | identity |[IdentityInfo](domain.md#identityinfo) | |
+| 3 | identity |[list of IdentityInfo](domain.md#identityinfo) | |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |

@@ -409,7 +409,7 @@ description:
 ### SecretsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SecretInfo](secret.md#secretinfo) | |
+| 1 | results |[list of SecretInfo](secret.md#secretinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateSecretRequest

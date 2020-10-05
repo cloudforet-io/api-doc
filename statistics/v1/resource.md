@@ -104,6 +104,6 @@ description:
 | 1 | data_source_id |string|❌| |
 | 2 | resource_type |string|✅| |
 | 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 4 | join |[JoinQuery](resource.md#joinquery)|❌| |
-| 5 | formulas |[Formula](resource.md#formula)|❌| |
+| 4 | join |[list of JoinQuery](resource.md#joinquery)|❌| |
+| 5 | formulas |[list of Formula](resource.md#formula)|❌| |
 | 6 | domain_id |string|✅| |

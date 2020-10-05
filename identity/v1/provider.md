@@ -158,7 +158,7 @@ description:
 ### ProvidersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProviderInfo](provider.md#providerinfo) | |
+| 1 | results |[list of ProviderInfo](provider.md#providerinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateProviderRequest

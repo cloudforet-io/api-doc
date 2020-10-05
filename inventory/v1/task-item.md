@@ -221,5 +221,5 @@ description:
 ### TaskItemsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[TaskItemInfo](task-item.md#taskiteminfo) | |
+| 1 | results |[list of TaskItemInfo](task-item.md#taskiteminfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

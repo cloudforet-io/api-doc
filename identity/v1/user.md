@@ -259,7 +259,7 @@ description: User API which allows member management within project, company, an
 ### FindUsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[FindUserInfo](user.md#finduserinfo) | |
+| 1 | results |[list of FindUserInfo](user.md#finduserinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### GetUserRequest
@@ -365,7 +365,7 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">roles</td>
-      <td style="text-align:left"><a href="user.md#roleinfo">RoleInfo</a></td>
+      <td style="text-align:left"><a href="user.md#roleinfo">list of RoleInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -430,5 +430,5 @@ description: User API which allows member management within project, company, an
 ### UsersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[UserInfo](user.md#userinfo) | |
+| 1 | results |[list of UserInfo](user.md#userinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

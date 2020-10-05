@@ -213,7 +213,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | project_group_info |[ProjectGroupInfo](project-group.md#projectgroupinfo) | |
 | 2 | user_info |[UserInfo](project-group.md#userinfo) | |
-| 3 | roles |[RoleInfo](project-group.md#roleinfo) | |
+| 3 | roles |[list of RoleInfo](project-group.md#roleinfo) | |
 | 4 | labels |list of string | |
 
 ### ProjectGroupMemberQuery
@@ -236,7 +236,7 @@ description:
 ### ProjectGroupMembersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupMemberInfo](project-group.md#projectgroupmemberinfo) | |
+| 1 | results |[list of ProjectGroupMemberInfo](project-group.md#projectgroupmemberinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### ProjectGroupProjectInfo
@@ -263,7 +263,7 @@ description:
 ### ProjectGroupProjectsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupProjectInfo](project-group.md#projectgroupprojectinfo) | |
+| 1 | results |[list of ProjectGroupProjectInfo](project-group.md#projectgroupprojectinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### ProjectGroupQuery
@@ -291,7 +291,7 @@ description:
 ### ProjectGroupsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectGroupInfo](project-group.md#projectgroupinfo) | |
+| 1 | results |[list of ProjectGroupInfo](project-group.md#projectgroupinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RemoveProjectGroupMemberRequest

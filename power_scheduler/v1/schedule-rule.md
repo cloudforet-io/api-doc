@@ -136,7 +136,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>ScheduleRuleState_NONE</li>
+          	<li>SCHEDULERULESTATE_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -147,7 +147,7 @@ description:
       <td style="text-align:left">4</td>
       <td style="text-align:left">rule_type</td>
       <td style="text-align:left"><ul>
-          	<li>RuleType_NONE</li>
+          	<li>RULETYPE_NONE</li>
           	<li>ROUTINE</li>
           	<li>TICKET</li>
         </ul></td>
@@ -157,7 +157,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">rule</td>
-      <td style="text-align:left"><a href="schedule-rule.md#rule">Rule</a></td>
+      <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
@@ -206,7 +206,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | day |string | |
 | 2 | date |string | |
-| 3 | times |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 3 | times |[list of int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RuleInfo
 <table>
@@ -237,7 +237,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>ScheduleRuleState_NONE</li>
+          	<li>SCHEDULERULESTATE_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -248,7 +248,7 @@ description:
       <td style="text-align:left">4</td>
       <td style="text-align:left">rule_type</td>
       <td style="text-align:left"><ul>
-          	<li>RuleType_NONE</li>
+          	<li>RULETYPE_NONE</li>
           	<li>ROUTINE</li>
           	<li>TICKET</li>
         </ul></td>
@@ -258,7 +258,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">rule</td>
-      <td style="text-align:left"><a href="schedule-rule.md#rule">Rule</a></td>
+      <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -278,34 +278,41 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">8</td>
+      <td style="text-align:left">schedule_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">created_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
@@ -319,7 +326,7 @@ description:
 ### RulesInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[RuleInfo](schedule-rule.md#ruleinfo) | |
+| 1 | results |[list of RuleInfo](schedule-rule.md#ruleinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### ScheduleRuleQuery
@@ -373,7 +380,7 @@ description:
       <td style="text-align:left">6</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>ScheduleRuleState_NONE</li>
+          	<li>SCHEDULERULESTATE_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -441,7 +448,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>ScheduleRuleState_NONE</li>
+          	<li>SCHEDULERULESTATE_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -451,7 +458,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">rule</td>
-      <td style="text-align:left"><a href="schedule-rule.md#rule">Rule</a></td>
+      <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>

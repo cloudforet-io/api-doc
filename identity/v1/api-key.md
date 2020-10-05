@@ -201,7 +201,7 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">allowed_hosts</td>
-      <td style="text-align:left"><a href="api-key.md#acls">Acls</a></td>
+      <td style="text-align:left"><a href="api-key.md#acls">list of Acls</a></td>
 <td style="text-align:left">repeated spaceone.api.identity.v1.RoleInfo roles = 7;</td>
 
    </tr>
@@ -307,7 +307,7 @@ description:
 ### APIKeysInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[APIKeyInfo](api-key.md#apikeyinfo) | |
+| 1 | results |[list of APIKeyInfo](api-key.md#apikeyinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### Acls
@@ -370,7 +370,7 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | api_key_id |string | |
-| 2 | allowed_hosts |[Acls](api-key.md#acls) | |
+| 2 | allowed_hosts |[list of Acls](api-key.md#acls) | |
 | 3 | domain_id |string | |
 
 ### UpdateAPIKeyRoleRequest

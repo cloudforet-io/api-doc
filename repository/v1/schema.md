@@ -164,7 +164,7 @@ description:
 ### SchemasInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[SchemaInfo](schema.md#schemainfo) | |
+| 1 | results |[list of SchemaInfo](schema.md#schemainfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateSchemaRequest

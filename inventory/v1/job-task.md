@@ -105,7 +105,7 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">errors</td>
-      <td style="text-align:left"><a href="job-task.md#errorinfo">ErrorInfo</a></td>
+      <td style="text-align:left"><a href="job-task.md#errorinfo">list of ErrorInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -272,5 +272,5 @@ description:
 ### JobTasksInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[JobTaskInfo](job-task.md#jobtaskinfo) | |
+| 1 | results |[list of JobTaskInfo](job-task.md#jobtaskinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

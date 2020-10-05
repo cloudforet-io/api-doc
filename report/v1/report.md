@@ -16,8 +16,9 @@ description:
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**get**](report.md#get)|   [GetReportRequest](report.md#getreportrequest) |   [ReportInfo](report.md#reportinfo) |  |
-| 2 | [**list**](report.md#list)|   [ReportQuery](report.md#reportquery) |   [ReportsInfo](report.md#reportsinfo) |  |
-| 3 | [**create**](report.md#create)|   [CreateReportRequest](report.md#createreportrequest) |   [ReportInfo](report.md#reportinfo) |  | 
+| 2 | [**get_download_url**](report.md#get_download_url)|   [GetDownloadURLRequest](report.md#getdownloadurlrequest) |   [ReportDownloadInfo](report.md#reportdownloadinfo) |  |
+| 3 | [**list**](report.md#list)|   [ReportQuery](report.md#reportquery) |   [ReportsInfo](report.md#reportsinfo) |  |
+| 4 | [**create**](report.md#create)|   [CreateReportRequest](report.md#createreportrequest) |   [ReportInfo](report.md#reportinfo) |  | 
  
 
  
@@ -30,6 +31,19 @@ description:
 | :--- | :--- |
 | Request | [GetReportRequest](report.md#getreportrequest) |
 | Response |  [ReportInfo](report.md#reportinfo)  |
+ 
+ 
+
+ 
+### get_download_url
+> **GET** /report/v1/report/{report_id}/download_url
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [GetDownloadURLRequest](report.md#getdownloadurlrequest) |
+| Response |  [ReportDownloadInfo](report.md#reportdownloadinfo)  |
  
  
 
@@ -73,12 +87,23 @@ description:
 | 4 | template_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | storage_id |string|❌| |
 
+### GetDownloadURLRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | domain_id |string|✅| |
+| 2 | report_id |string|✅| |
+
 ### GetReportRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | report_id |string|✅| |
 | 3 | only |list of string|❌| |
+
+### ReportDownloadInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | download_url |string | |
 
 ### ReportError
 | No | Field | Type |  Description |
@@ -155,34 +180,27 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">8</td>
-      <td style="text-align:left">download_url</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">created_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">schedule_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">error</td>
       <td style="text-align:left"><a href="report.md#reporterror">ReportError</a></td>
 <td style="text-align:left"></td>
@@ -276,5 +294,5 @@ description:
 ### ReportsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ReportInfo](report.md#reportinfo) | |
+| 1 | results |[list of ReportInfo](report.md#reportinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

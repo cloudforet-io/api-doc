@@ -198,7 +198,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | project_info |[ProjectInfo](project.md#projectinfo) | |
 | 2 | user_info |[UserInfo](project.md#userinfo) | |
-| 3 | roles |[RoleInfo](project.md#roleinfo) | |
+| 3 | roles |[list of RoleInfo](project.md#roleinfo) | |
 | 4 | labels |list of string | |
 
 ### ProjectMemberQuery
@@ -221,7 +221,7 @@ description:
 ### ProjectMembersInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectMemberInfo](project.md#projectmemberinfo) | |
+| 1 | results |[list of ProjectMemberInfo](project.md#projectmemberinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### ProjectQuery
@@ -248,7 +248,7 @@ description:
 ### ProjectsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[ProjectInfo](project.md#projectinfo) | |
+| 1 | results |[list of ProjectInfo](project.md#projectinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RemoveProjectMemberRequest

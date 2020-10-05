@@ -43,6 +43,7 @@ description:
 | 6 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|❌| |
 | 7 | sort |[Sort](log.md#sort)|❌| |
 | 8 | limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
+| 9 | schema |string|❌| |
 
 ### LogsInfo
 | No | Field | Type |  Description |
@@ -53,7 +54,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string|✅| |
-| 2 | actions |[spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
+| 2 | actions |[list of spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
 | 3 | result |[LogsInfo](log.md#logsinfo)|✅| |
 
 ### Sort
