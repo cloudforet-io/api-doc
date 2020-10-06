@@ -293,7 +293,8 @@ def _generate_summary_mds(context_input, managed_link, history):
             else:
                 check_key = parsed_path[i]
 
-            updated_header = base_bullet + '[' + parsed_path[i] + ']'
+            title_no_under_bar = parsed_path[i].replace('_', ' ')
+            updated_header = base_bullet + '[' + title_no_under_bar + ']'
             if _.get(table_of_contents, check_key, None) is None:
                 if i == (len(parsed_path) - 1):
                     _.set(table_of_contents, check_key, {})
@@ -310,8 +311,9 @@ def _generate_summary_mds(context_input, managed_link, history):
                     title_index.append({'title': updated_header.title(), 'url': readme_url})
 
     output_to_create = os.path.join(BASE_DIR, 'SUMMARY.md')
+    normalized_link = _normalize_managed_link(managed_link)
     context_input = {'toc': title_index,
-                     'managed_link': _normalize_managed_link(managed_link),
+                     'managed_link': normalized_link,
                      'history': history
                      }
 
@@ -321,7 +323,8 @@ def _generate_summary_mds(context_input, managed_link, history):
     # Updating All README.md
     output_to_create = os.path.join(BASE_DIR, 'README.md')
     README_OUTPUT = _.get(config, 'intro_comment')
-    _.set(README_OUTPUT, 'version', history['cur_version'])
+    version_info = history['cur_version'] if history['cur_version'].startswith('v') else 'v' + history['cur_version']
+    _.set(README_OUTPUT, 'version', version_info)
     _generate_md_file(output_to_create, TEMPLATE_NAMES[2], README_OUTPUT)
 
 
@@ -330,6 +333,7 @@ def _normalize_managed_link(managed_link):
     for key, value in managed_link.items():
         n_key = key.replace('_', ' ')
         n_value = value
+
         n_normalized[n_key] = n_value
     return n_normalized
 
