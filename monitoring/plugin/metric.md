@@ -56,7 +56,7 @@ description:
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | resource |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅| |
-| 4 | metric |string|✅| |
+| 4 | metric |string|✅| metric identifier in case of requested metric info is not a single.|
 | 5 | start |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|✅| |
 | 6 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|✅| |
 | 7 | period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
