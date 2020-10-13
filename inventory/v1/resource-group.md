@@ -111,9 +111,10 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | resources |[list of Resource](resource-group.md#resource)|✅| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | project_id |string|✅| |
-| 5 | domain_id |string|✅| |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | project_id |string|✅| |
+| 6 | domain_id |string|✅| |
 
 ### GetResourceGroupRequest
 | No | Field | Type | Required | Description |
@@ -134,10 +135,11 @@ description:
 | 1 | resource_group_id |string | |
 | 2 | name |string | |
 | 3 | resources |[list of Resource](resource-group.md#resource) | |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 5 | project_id |string | |
-| 6 | domain_id |string | |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 4 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 6 | project_id |string | |
+| 7 | domain_id |string | |
+| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### ResourceGroupQuery
 | No | Field | Type | Required | Description |
@@ -172,7 +174,8 @@ description:
 | 1 | resource_group_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | resources |[list of Resource](resource-group.md#resource)|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | release_project |bool|❌| |
-| 6 | project_id |string|❌| |
-| 7 | domain_id |string|✅| |
+| 4 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | release_project |bool|❌| |
+| 7 | project_id |string|❌| |
+| 8 | domain_id |string|✅| |
