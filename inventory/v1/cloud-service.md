@@ -150,10 +150,11 @@ description:
 | 4 | cloud_service_group |string|❌| |
 | 5 | provider |string|❌| |
 | 6 | state |string|❌| |
-| 7 | project_id |string|❌| |
-| 8 | domain_id |string|✅| |
-| 9 | region_code |string|❌| |
-| 10 | region_type |string|❌| |
+| 7 | region_code |string|❌| |
+| 8 | region_type |string|❌| |
+| 9 | resource_group_id |string|❌| |
+| 10 | project_id |string|❌| |
+| 11 | domain_id |string|✅| |
 
 ### CloudServiceReference
 | No | Field | Type |  Description |
@@ -172,6 +173,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
+| 3 | resource_group_id |string|❌| |
 
 ### CloudServicesInfo
 | No | Field | Type |  Description |

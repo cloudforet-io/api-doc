@@ -589,13 +589,20 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">12</td>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">resource_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">13</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
@@ -623,6 +630,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
+| 3 | resource_group_id |string|❌| |
 
 ### ServersInfo
 | No | Field | Type |  Description |

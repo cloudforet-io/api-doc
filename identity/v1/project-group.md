@@ -274,7 +274,8 @@ description:
 | 3 | parent_project_group_id |string|❌| |
 | 4 | name |string|❌| |
 | 5 | template_id |string|❌| |
-| 6 | domain_id |string|✅| |
+| 6 | user_id |string|❌| |
+| 7 | domain_id |string|✅| |
 
 ### ProjectGroupRequest
 | No | Field | Type | Required | Description |
@@ -287,6 +288,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
+| 3 | user_id |string|❌| |
 
 ### ProjectGroupsInfo
 | No | Field | Type |  Description |

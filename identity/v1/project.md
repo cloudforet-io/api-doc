@@ -229,9 +229,10 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | project_id |string|❌| |
-| 3 | project_group_id |string|| |
-| 4 | domain_id |string|✅| |
-| 5 | name |string|❌| |
+| 3 | project_group_id |string|❌| |
+| 4 | name |string|❌| |
+| 5 | user_id |string|❌| |
+| 6 | domain_id |string|✅| |
 
 ### ProjectRequest
 | No | Field | Type | Required | Description |
@@ -244,6 +245,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
+| 3 | user_id |string|❌| |
 
 ### ProjectsInfo
 | No | Field | Type |  Description |
