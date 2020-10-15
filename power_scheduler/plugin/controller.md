@@ -18,7 +18,8 @@ description:
 | 1 | [**init**](controller.md#init)|   [InitRequest](controller.md#initrequest) |   [PluginInfo](controller.md#plugininfo) |  |
 | 2 | [**verify**](controller.md#verify)|   [VerifyRequest](controller.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 3 | [**start**](controller.md#start)|   [StartRequest](controller.md#startrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**stop**](controller.md#stop)|   [StopRequest](controller.md#stoprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
+| 4 | [**stop**](controller.md#stop)|   [StopRequest](controller.md#stoprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**reboot**](controller.md#reboot)|   [RebootRequest](controller.md#rebootrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
  
 
  
@@ -62,6 +63,17 @@ description:
 | :--- | :--- |
 | Request | [StopRequest](controller.md#stoprequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+ 
+ 
+
+ 
+### reboot
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [RebootRequest](controller.md#rebootrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
 
 
 ## 
@@ -77,6 +89,16 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+
+### RebootRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 3 | resource_id |string|✅| |
+| 4 | resource_type |string|✅| |
+| 5 | resource_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | schema |string|❌| |
 
 ### Resource
 | No | Field | Type |  Description |

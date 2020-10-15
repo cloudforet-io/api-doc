@@ -1,48 +1,48 @@
 ---
 description:  
 ---
-# Job task
+# Job
 
->  **Package : spaceone.api.power_scheduler.v1**
+>  **Package : spaceone.api.cost_saving.v1**
 
-## JobTask
+## Job
 
 {% hint style="info" %}
-**JobTask Methods:**
+**Job Methods:**
 
 {%  endhint %}
 
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**list**](job-task.md#list)|   [JobTaskQuery](job-task.md#jobtaskquery) |   [JobTasksInfo](job-task.md#jobtasksinfo) |  |
-| 2 | [**stat**](job-task.md#stat)|   [JobTaskStatQuery](job-task.md#jobtaskstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**list**](job.md#list)|   [JobsQuery](job.md#jobsquery) |   [JobsInfo](job.md#jobsinfo) |  |
+| 2 | [**stat**](job.md#stat)|   [JobStatQuery](job.md#jobstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
 ### list
-> **GET** /power-scheduler/v1/job-tasks
+> **GET** /cost-saving/v1/jobs
 >
-> **POST** /power-scheduler/v1/job-tasks/search
+> **POST** /cost-saving/v1/jobs/search
 
 
 
 | Type | Message |
 | :--- | :--- |
-| Request | [JobTaskQuery](job-task.md#jobtaskquery) |
-| Response |  [JobTasksInfo](job-task.md#jobtasksinfo)  |
+| Request | [JobsQuery](job.md#jobsquery) |
+| Response |  [JobsInfo](job.md#jobsinfo)  |
  
  
 
  
 ### stat
-> **POST** /power-scheduler/v1/job-tasks/stat
+> **POST** /cost-saving/v1/jobs/stat
 >
 
 
 | Type | Message |
 | :--- | :--- |
-| Request | [JobTaskStatQuery](job-task.md#jobtaskstatquery) |
+| Request | [JobStatQuery](job.md#jobstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
@@ -50,7 +50,14 @@ description:
 
 ## Message
 
-### JobTaskInfo
+### ErrorInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | error_code |string | |
+| 2 | message |string | |
+| 3 | additional |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+
+### JobInfo
 <table>
   <thead>
     <tr>
@@ -63,7 +70,7 @@ description:
   <tbody>
     <tr>
       <td style="text-align:left">1</td>
-      <td style="text-align:left">job_task_id</td>
+      <td style="text-align:left">job_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -74,32 +81,32 @@ description:
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>CREATED</li>
-          	<li>PENDING</li>
           	<li>CANCELED</li>
           	<li>IN_PROGRESS</li>
           	<li>SUCCESS</li>
-          	<li>FAILURE</li>
+          	<li>ERROR</li>
+          	<li>TIMEOUT</li>
         </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">success_count</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
+      <td style="text-align:left">filter</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">failure_count</td>
+      <td style="text-align:left">total_tasks</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">total_count</td>
+      <td style="text-align:left">remained_tasks</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
@@ -107,78 +114,40 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">errors</td>
-      <td style="text-align:left"><a href="job-task.md#errorinfo">list of ErrorInfo</a></td>
+      <td style="text-align:left"><a href="job.md#errorinfo">list of ErrorInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">7</td>
-      <td style="text-align:left">job_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">control_action</td>
-      <td style="text-align:left"><ul>
-          	<li>RUNNING</li>
-          	<li>STOPPED</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">9</td>
-      <td style="text-align:left">schedule_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">10</td>
-      <td style="text-align:left">resource_group_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">11</td>
-      <td style="text-align:left">priority</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">12</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
-      <td style="text-align:left">started_at</td>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">updated_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">finished_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
@@ -189,7 +158,19 @@ description:
 
 
 
-### JobTaskQuery
+### JobStatQuery
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 2 | domain_id |string|✅| |
+
+### JobsInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | results |[list of JobInfo](job.md#jobinfo) | |
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+
+### JobsQuery
 <table>
   <thead>
     <tr>
@@ -210,7 +191,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">job_task_id</td>
+      <td style="text-align:left">job_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
@@ -219,57 +200,26 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">status</td>
       <td style="text-align:left"><ul>
-          	<li>JOB_TASK_STATUS_NONE</li>
+          	<li>JOB_STATE_NONE</li>
           	<li>CREATED</li>
-          	<li>PENDING</li>
           	<li>CANCELED</li>
           	<li>IN_PROGRESS</li>
           	<li>SUCCESS</li>
-          	<li>FAILURE</li>
+          	<li>ERROR</li>
+          	<li>TIMEOUT</li>
         </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">job_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">control_action</td>
-      <td style="text-align:left"><ul>
-          	<li>RUNNING</li>
-          	<li>STOPPED</li>
-        </ul></td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">schedule_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">7</td>
-      <td style="text-align:left">resource_group_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
@@ -279,15 +229,3 @@ description:
 </table>
 
 
-
-### JobTaskStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
-
-### JobTasksInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of JobTaskInfo](job-task.md#jobtaskinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
