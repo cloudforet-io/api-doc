@@ -127,7 +127,8 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string|✅| |
-| 2 | filter |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅| |
+| 2 | filter |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 3 | keyword |string|❌| |
 
 ### ResourceGroupInfo
 | No | Field | Type |  Description |
