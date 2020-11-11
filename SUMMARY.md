@@ -2,8 +2,8 @@
 
 * [Config](config/README.md)
   * [V1](config/v1/README.md)
-    * [Config Map](config/v1/config-map.md)
     * [Domain Config](config/v1/domain-config.md)
+    * [User Config](config/v1/user-config.md)
 * [Core](core/README.md)
   * [V1](core/v1/README.md)
     * [Handler](core/v1/handler.md)
