@@ -65,6 +65,7 @@
     * [Controller](power_scheduler/plugin/controller.md)
   * [V1](power_scheduler/v1/README.md)
     * [Controller](power_scheduler/v1/controller.md)
+    * [Domain](power_scheduler/v1/domain.md)
     * [Job](power_scheduler/v1/job.md)
     * [Job Task](power_scheduler/v1/job-task.md)
     * [Schedule](power_scheduler/v1/schedule.md)
