@@ -158,6 +158,14 @@ description:
 | 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 4 | join |[list of ScheduleJoinQuery](schedule.md#schedulejoinquery)|❌| |
 | 5 | formulas |[list of ScheduleFormula](schedule.md#scheduleformula)|❌| |
+| 6 | append |[list of ScheduleAppendQuery](schedule.md#scheduleappendquery)|❌| |
+
+### ScheduleAppendQuery
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | data_source_id |string|❌| |
+| 2 | resource_type |string|✅| |
+| 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 
 ### ScheduleFormula
 | No | Field | Type | Required | Description |
