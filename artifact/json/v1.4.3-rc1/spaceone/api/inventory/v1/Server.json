@@ -206,16 +206,6 @@
               "defaultValue": ""
             },
             {
-              "name": "region_type",
-              "description": "is_required: false",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "defaultValue": ""
-            },
-            {
               "name": "data",
               "description": "is_required: false",
               "label": "",
@@ -551,16 +541,6 @@
             },
             {
               "name": "region_code",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "defaultValue": ""
-            },
-            {
-              "name": "region_type",
               "description": "",
               "label": "",
               "type": "string",
@@ -912,16 +892,6 @@
               "defaultValue": ""
             },
             {
-              "name": "region_type",
-              "description": "is_required: false",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "defaultValue": ""
-            },
-            {
               "name": "resource_group_id",
               "description": "is_required: false",
               "label": "",
@@ -1188,16 +1158,6 @@
             },
             {
               "name": "region_code",
-              "description": "is_required: false\nis_required: false",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "defaultValue": ""
-            },
-            {
-              "name": "region_type",
               "description": "is_required: false",
               "label": "",
               "type": "string",
@@ -1208,7 +1168,7 @@
             },
             {
               "name": "data",
-              "description": "",
+              "description": "is_required: false",
               "label": "",
               "type": "Struct",
               "longType": "google.protobuf.Struct",

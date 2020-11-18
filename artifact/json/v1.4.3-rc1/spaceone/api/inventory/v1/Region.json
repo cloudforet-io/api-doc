@@ -8,31 +8,7 @@
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
-      "enums": [
-        {
-          "name": "State",
-          "longName": "RegionInfo.State",
-          "fullName": "spaceone.api.inventory.v1.RegionInfo.State",
-          "description": "",
-          "values": [
-            {
-              "name": "NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "ACTIVE",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "DELETED",
-              "number": "2",
-              "description": ""
-            }
-          ]
-        }
-      ],
+      "enums": [],
       "extensions": [],
       "messages": [
         {
@@ -85,8 +61,8 @@
               "defaultValue": ""
             },
             {
-              "name": "region_type",
-              "description": "is_required: true",
+              "name": "provider",
+              "description": "is_required: false",
               "label": "",
               "type": "string",
               "longType": "string",
@@ -157,16 +133,6 @@
               "defaultValue": ""
             },
             {
-              "name": "state",
-              "description": "",
-              "label": "",
-              "type": "State",
-              "longType": "RegionInfo.State",
-              "fullType": "spaceone.api.inventory.v1.RegionInfo.State",
-              "ismap": false,
-              "defaultValue": ""
-            },
-            {
               "name": "name",
               "description": "",
               "label": "",
@@ -227,7 +193,7 @@
               "defaultValue": ""
             },
             {
-              "name": "region_type",
+              "name": "provider",
               "description": "",
               "label": "",
               "type": "string",
@@ -308,7 +274,7 @@
               "defaultValue": ""
             },
             {
-              "name": "region_type",
+              "name": "provider",
               "description": "is_required: false",
               "label": "",
               "type": "string",

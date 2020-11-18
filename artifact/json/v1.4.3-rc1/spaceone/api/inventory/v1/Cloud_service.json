@@ -151,16 +151,6 @@
               "defaultValue": ""
             },
             {
-              "name": "region_type",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "defaultValue": ""
-            },
-            {
               "name": "created_at",
               "description": "",
               "label": "",
@@ -263,16 +253,6 @@
             },
             {
               "name": "region_code",
-              "description": "is_required: false",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "defaultValue": ""
-            },
-            {
-              "name": "region_type",
               "description": "is_required: false",
               "label": "",
               "type": "string",
@@ -555,16 +535,6 @@
               "fullType": "string",
               "ismap": false,
               "defaultValue": ""
-            },
-            {
-              "name": "region_type",
-              "description": "is_required: false",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "defaultValue": ""
             }
           ]
         },
@@ -711,16 +681,6 @@
             },
             {
               "name": "region_code",
-              "description": "is_required: false",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "defaultValue": ""
-            },
-            {
-              "name": "region_type",
               "description": "is_required: false",
               "label": "",
               "type": "string",

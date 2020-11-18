@@ -61,6 +61,16 @@
               "defaultValue": ""
             },
             {
+              "name": "service_code",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
               "name": "is_primary",
               "description": "",
               "label": "",
@@ -213,6 +223,16 @@
             },
             {
               "name": "group",
+              "description": "is_required: false",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "service_code",
               "description": "is_required: false",
               "label": "",
               "type": "string",
@@ -396,6 +416,16 @@
               "defaultValue": ""
             },
             {
+              "name": "service_code",
+              "description": "is_required: false",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
               "name": "is_primary",
               "description": "is_required: false",
               "label": "",
@@ -561,6 +591,16 @@
             {
               "name": "cloud_service_type_id",
               "description": "is_required: true",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "service_code",
+              "description": "is_required: false",
               "label": "",
               "type": "string",
               "longType": "string",
