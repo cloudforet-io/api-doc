@@ -207,6 +207,9 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 2 | encrypted_data |string | |
+| 3 | encrypted |bool | |
+| 4 | encrypt_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### SecretInfo
 <table>

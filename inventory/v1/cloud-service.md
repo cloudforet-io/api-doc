@@ -136,10 +136,9 @@ description:
 | 11 | project_id |string | |
 | 12 | domain_id |string | |
 | 13 | region_code |string | |
-| 14 | region_type |string | |
-| 15 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-| 16 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-| 17 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 14 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 15 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 16 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### CloudServiceQuery
 | No | Field | Type | Required | Description |
@@ -151,10 +150,9 @@ description:
 | 5 | provider |string|❌| |
 | 6 | state |string|❌| |
 | 7 | region_code |string|❌| |
-| 8 | region_type |string|❌| |
-| 9 | resource_group_id |string|❌| |
-| 10 | project_id |string|❌| |
-| 11 | domain_id |string|✅| |
+| 8 | resource_group_id |string|❌| |
+| 9 | project_id |string|❌| |
+| 10 | domain_id |string|✅| |
 
 ### CloudServiceReference
 | No | Field | Type |  Description |
@@ -194,7 +192,6 @@ description:
 | 8 | project_id |string|❌| |
 | 9 | domain_id |string|✅| |
 | 10 | region_code |string|❌| |
-| 11 | region_type |string|❌| |
 
 ### GetCloudServiceRequest
 | No | Field | Type | Required | Description |
@@ -219,8 +216,7 @@ description:
 | 4 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | region_code |string|❌| |
-| 7 | region_type |string|❌| |
-| 8 | project_id |string|❌| |
-| 9 | domain_id |string|✅| |
-| 10 | release_project |bool|❌| |
-| 11 | release_region |bool|❌| |
+| 7 | project_id |string|❌| |
+| 8 | domain_id |string|✅| |
+| 9 | release_project |bool|❌| |
+| 10 | release_region |bool|❌| |

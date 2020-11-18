@@ -113,7 +113,7 @@ description:
 | 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 3 | domain_id |string|✅| |
 | 4 | region_code |string|✅| |
-| 5 | region_type |string|✅| |
+| 5 | provider |string|❌| |
 
 ### GetRegionRequest
 | No | Field | Type | Required | Description |
@@ -123,94 +123,17 @@ description:
 | 3 | only |list of string|❌| |
 
 ### RegionInfo
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">region_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>ACTIVE</li>
-          	<li>DELETED</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">7</td>
-      <td style="text-align:left">deleted_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">region_code</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">9</td>
-      <td style="text-align:left">region_type</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">10</td>
-      <td style="text-align:left">collection_info</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-  </tbody>
-</table>
-
-
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | region_id |string | |
+| 2 | name |string | |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | domain_id |string | |
+| 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 6 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 7 | region_code |string | |
+| 8 | provider |string | |
+| 9 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### RegionQuery
 | No | Field | Type | Required | Description |
@@ -220,7 +143,7 @@ description:
 | 3 | name |string|❌| |
 | 4 | domain_id |string|✅| |
 | 5 | region_code |string|❌| |
-| 6 | region_type |string|❌| |
+| 6 | provider |string|❌| |
 
 ### RegionRequest
 | No | Field | Type | Required | Description |

@@ -214,62 +214,55 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">10</td>
-      <td style="text-align:left">region_type</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">11</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">nics</td>
       <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">disks</td>
       <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">reference</td>
       <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">18</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
@@ -410,90 +403,83 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">12</td>
-      <td style="text-align:left">region_type</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">13</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">nics</td>
       <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">disks</td>
       <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">reference</td>
       <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">18</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">19</td>
+      <td style="text-align:left">18</td>
       <td style="text-align:left">collection_info</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">20</td>
+      <td style="text-align:left">19</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">21</td>
+      <td style="text-align:left">20</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">22</td>
+      <td style="text-align:left">21</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">23</td>
+      <td style="text-align:left">22</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">24</td>
+      <td style="text-align:left">23</td>
       <td style="text-align:left">deleted_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
@@ -624,27 +610,20 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">13</td>
-      <td style="text-align:left">region_type</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">14</td>
       <td style="text-align:left">resource_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
@@ -781,76 +760,69 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">11</td>
-      <td style="text-align:left">region_type</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">data</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">12</td>
-      <td style="text-align:left">data</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">13</td>
       <td style="text-align:left">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">nics</td>
       <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">disks</td>
       <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">reference</td>
       <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">18</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">19</td>
+      <td style="text-align:left">18</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">20</td>
+      <td style="text-align:left">19</td>
       <td style="text-align:left">release_region</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">21</td>
+      <td style="text-align:left">20</td>
       <td style="text-align:left">release_project</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">❌</td>
