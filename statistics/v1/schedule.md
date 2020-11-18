@@ -158,14 +158,16 @@ description:
 | 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 4 | join |[list of ScheduleJoinQuery](schedule.md#schedulejoinquery)|❌| |
 | 5 | formulas |[list of ScheduleFormula](schedule.md#scheduleformula)|❌| |
-| 6 | append |[list of ScheduleAppendQuery](schedule.md#scheduleappendquery)|❌| |
+| 6 | concat |[list of ScheduleConcatQuery](schedule.md#scheduleconcatquery)|❌| |
+| 7 | extend_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 
-### ScheduleAppendQuery
+### ScheduleConcatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | data_source_id |string|❌| |
 | 2 | resource_type |string|✅| |
 | 3 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| 4 | extend_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 
 ### ScheduleFormula
 | No | Field | Type | Required | Description |
@@ -307,6 +309,13 @@ description:
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a></td>
 <td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">extend_data</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
