@@ -22,12 +22,12 @@ jobs:
         ARTIFACT_VERSION: ./artifact/json
         IS_SUDO: true
       run: |
-        echo "::set-env name=SERVICE::$SERVICE"
-        echo "::set-env name=PYPI_UPLOAD::$PYPI_UPLOAD"
-        echo "::set-env name=LOCATION_SETUP_PY::$LOCATION_SETUP_PY"
-        echo "::set-env name=LOCATION_VERSION::$LOCATION_VERSION"
-        echo "::set-env name=IS_SUDO::$IS_SUDO"
-        echo "::set-env name=ARTIFACT_VERSION::$ARTIFACT_VERSION"
+        echo "SERVICE=$SERVICE" >> $GITHUB_ENV
+        echo "PYPI_UPLOAD=$PYPI_UPLOAD" >> $GITHUB_ENV
+        echo "LOCATION_SETUP_PY=$LOCATION_SETUP_PY" >> $GITHUB_ENV
+        echo "LOCATION_VERSION=$LOCATION_VERSION" >> $GITHUB_ENV
+        echo "IS_SUDO=$IS_SUDO" >> $GITHUB_ENV
+        echo "ARTIFACT_VERSION=$ARTIFACT_VERSION" >> $GITHUB_ENV
 
     - name: Clone master branch
       uses: actions/checkout@v2
@@ -43,11 +43,11 @@ jobs:
         echo "PR VERSION"
         cat $LOCATION_VERSION/VERSION
         echo -e "\n\n"
-        echo "::set-env name=IS_NEW_VERSION::false"
+        echo "IS_NEW_VERSION=false" >> $GITHUB_ENV
         cmp --silent master_branch/$LOCATION_VERSION/VERSION $LOCATION_VERSION/VERSION || \
-        echo "::set-env name=IS_NEW_VERSION::true"
-        echo "::set-env name=API_DOC_VERSION::$(cat $LOCATION_VERSION/VERSION)"
-        echo "::set-env name=API_VERSION_NAME::v$(cat $LOCATION_VERSION/VERSION)"
+        echo "IS_NEW_VERSION=true" >> $GITHUB_ENV
+        echo "API_DOC_VERSION=$(cat $LOCATION_VERSION/VERSION)" >> $GITHUB_ENV
+        echo "API_VERSION_NAME=v$(cat $LOCATION_VERSION/VERSION)" >> $GITHUB_ENV
         echo "$(cat $LOCATION_VERSION/VERSION)-${{ github.run_id }}">$LOCATION_VERSION/VERSION
 
     - name: Versioning with baranches
@@ -59,7 +59,7 @@ jobs:
     - name: File exists
       if: steps.check_files.outputs.files_exists == 'true'
       run: |
-        echo "::set-env name=ARTIFACT_VERSION::$(cat $ARTIFACT_VERSION/VERSION)"
+        echo "ARTIFACT_VERSION=$(cat $ARTIFACT_VERSION/VERSION)" >> $GITHUB_ENV
 
     - name: Check version updates
       if: env.ARTIFACT_VERSION > env.API_DOC_VERSION
