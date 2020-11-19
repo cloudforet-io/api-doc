@@ -124,3 +124,4 @@ description:
 | 6 | domain_id |string|✅| |
 | 7 | concat |[list of ConcatQuery](resource.md#concatquery)|❌| |
 | 8 | extend_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | fill_na |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
