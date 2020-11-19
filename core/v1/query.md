@@ -98,6 +98,7 @@ description:
 | 5 | page |[Page](query.md#page) | |
 | 6 | limit |[uint32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 | 7 | distinct |string | |
+| 8 | keyword |string | |
 
 ### StatisticsSort
 | No | Field | Type |  Description |
