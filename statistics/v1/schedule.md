@@ -160,6 +160,7 @@ description:
 | 5 | formulas |[list of ScheduleFormula](schedule.md#scheduleformula)|❌| |
 | 6 | concat |[list of ScheduleConcatQuery](schedule.md#scheduleconcatquery)|❌| |
 | 7 | extend_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 8 | fill_na |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 
 ### ScheduleConcatQuery
 | No | Field | Type | Required | Description |
@@ -172,9 +173,8 @@ description:
 ### ScheduleFormula
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|❌| |
-| 2 | formula |string|✅| |
-| 3 | operator |string|❌| |
+| 1 | formula |string|✅| |
+| 2 | operator |string|❌| |
 
 ### ScheduleInfo
 <table>
