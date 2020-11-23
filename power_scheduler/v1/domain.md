@@ -100,7 +100,7 @@ description:
       <td style="text-align:left">2</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>NONE</li>
+          	<li>DOMAIN_STATE_NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
@@ -135,7 +135,7 @@ description:
       <td style="text-align:left">2</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>NONE</li>
+          	<li>DOMAIN_STATE_NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
