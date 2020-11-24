@@ -1,5 +1,12 @@
 # Table of contents
 
+* [Billing](billing/README.md)
+  * [Plugin](billing/plugin/README.md)
+    * [Billing](billing/plugin/billing.md)
+    * [Data Source](billing/plugin/data-source.md)
+  * [V1](billing/v1/README.md)
+    * [Billing](billing/v1/billing.md)
+    * [Data Source](billing/v1/data-source.md)
 * [Config](config/README.md)
   * [V1](config/v1/README.md)
     * [Domain Config](config/v1/domain-config.md)
