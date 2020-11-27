@@ -31,6 +31,7 @@
     * [Authorization](identity/v1/authorization.md)
     * [Domain](identity/v1/domain.md)
     * [Domain Owner](identity/v1/domain-owner.md)
+    * [Endpoint](identity/v1/endpoint.md)
     * [Policy](identity/v1/policy.md)
     * [Project](identity/v1/project.md)
     * [Project Group](identity/v1/project-group.md)
