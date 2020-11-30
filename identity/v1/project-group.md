@@ -186,8 +186,7 @@ description:
 | 1 | name |string|✅| |
 | 2 | parent_project_group_id |string|❌| |
 | 3 | domain_id |string|✅| |
-| 4 | template_id |string|❌| |
-| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 
 ### GetProjectGroupRequest
 | No | Field | Type | Required | Description |
@@ -273,9 +272,8 @@ description:
 | 2 | project_group_id |string|❌| |
 | 3 | parent_project_group_id |string|❌| |
 | 4 | name |string|❌| |
-| 5 | template_id |string|❌| |
-| 6 | user_id |string|❌| |
-| 7 | domain_id |string|✅| |
+| 5 | user_id |string|❌| |
+| 6 | domain_id |string|✅| |
 
 ### ProjectGroupRequest
 | No | Field | Type | Required | Description |
@@ -311,5 +309,4 @@ description:
 | 3 | name |string|❌| |
 | 4 | release_parent_project_group |bool|❌| |
 | 5 | domain_id |string|✅| |
-| 6 | template_id |string|❌| |
-| 7 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 6 | tags |list of spaceone.api.core.v1.Tag|❌| |

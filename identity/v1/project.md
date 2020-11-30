@@ -170,8 +170,7 @@ description:
 | 1 | name |string|✅| |
 | 2 | project_group_id |string|✅| |
 | 3 | domain_id |string|✅| |
-| 4 | template_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 
 ### GetProjectRequest
 | No | Field | Type | Required | Description |
@@ -267,5 +266,4 @@ description:
 | 2 | project_group_id |string|❌| |
 | 3 | name |string|❌| |
 | 4 | domain_id |string|✅| |
-| 5 | template_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
