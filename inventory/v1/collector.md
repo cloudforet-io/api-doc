@@ -311,7 +311,7 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -462,7 +462,7 @@ description:
 | 1 | name |string|✅| |
 | 2 | plugin_info |[PluginInfo](collector.md#plugininfo)|✅| |
 | 3 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 5 | domain_id |string|✅| |
 | 6 | is_public |bool|❌| default is true|
 | 7 | project_id |string|❌| if is_public is false, project_id is required|
@@ -667,7 +667,7 @@ description:
 | 2 | name |string|❌| |
 | 3 | plugin_info |[PluginInfo](collector.md#plugininfo)|❌| |
 | 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | domain_id |string|✅| |
 
 ### UpdatePluginRequest

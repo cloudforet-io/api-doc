@@ -113,7 +113,7 @@ description:
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | provider |string|✅| |
 | 4 | project_id |string|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | domain_id |string|✅| |
 
 ### GetServiceAccountRequest
@@ -132,7 +132,7 @@ description:
 | 4 | provider |string | |
 | 5 | project_info |[ProjectInfo](service-account.md#projectinfo) | |
 | 6 | domain_id |string | |
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | tags |list of spaceone.api.core.v1.Tag | |
 | 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### ServiceAccountQuery
@@ -170,6 +170,6 @@ description:
 | 2 | name |string|❌| |
 | 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | project_id |string|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | domain_id |string|✅| |
 | 7 | release_project |bool|❌| |

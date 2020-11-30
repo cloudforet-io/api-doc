@@ -113,7 +113,7 @@ description:
 | 2 | service_type |string|✅| |
 | 3 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 4 | labels |list of string|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | project_id |string|❌| |
 | 7 | domain_id |string|✅| |
 
@@ -132,7 +132,7 @@ description:
 | 2 | service_type |string | |
 | 3 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 4 | labels |list of string | |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | tags |list of spaceone.api.core.v1.Tag | |
 | 6 | repository_info |[RepositoryInfo](schema.md#repositoryinfo) | |
 | 7 | project_id |string | |
 | 8 | domain_id |string | |
@@ -173,5 +173,5 @@ description:
 | 1 | name |string|✅| |
 | 2 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 3 | labels |list of string|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 5 | domain_id |string|✅| |

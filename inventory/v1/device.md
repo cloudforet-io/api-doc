@@ -129,7 +129,7 @@ description:
 | 4 | region_type |string|❌| |
 | 5 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 6 | reference |[DeviceReference](device.md#devicereference)|❌| |
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 8 | domain_id |string|✅| |
 
 ### DeviceInfo
@@ -207,7 +207,7 @@ description:
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -304,5 +304,5 @@ description:
 | 6 | release_region |bool|❌| |
 | 7 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 8 | reference |[DeviceReference](device.md#devicereference)|❌| |
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 10 | domain_id |string|✅| |

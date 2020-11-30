@@ -111,7 +111,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | permissions |list of string|✅| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 4 | domain_id |string|✅| |
 
 ### GetPolicyRequest
@@ -134,7 +134,7 @@ description:
 | 2 | name |string | |
 | 3 | permissions |list of string | |
 | 4 | domain_id |string | |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | tags |list of spaceone.api.core.v1.Tag | |
 | 6 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### PolicyQuery
@@ -163,5 +163,5 @@ description:
 | 1 | policy_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | permissions |list of string|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 5 | domain_id |string|✅| |

@@ -57,10 +57,16 @@ description: User API which allows member management within project, company, an
 ```text
 {
     "user_id": "dkang@mz.co.kr",
-    "tags": {
-        "user1": "Reuters",
-        "user2": "Bloomberg"
-    },
+    "tags": [
+        {
+            "key": "user1",
+            "value": "Reuters"
+        },
+        {
+            "key": "user2",
+            "value": "Bloomberg"
+        }
+    ],
     "domain_id": "{{DOMAIN_ID}}"
 }
 ```
@@ -78,10 +84,16 @@ description: User API which allows member management within project, company, an
     "group": "",
     "language": "en",
     "timezone": "UTC",
-    "tags": {
-        "user1": "Reuters",
-        "user2": "Bloomberg"
-    },
+    "tags": [
+        {
+            "key": "user1",
+            "value": "Reuters"
+        },
+        {
+            "key": "user2",
+            "value": "Bloomberg"
+        }
+    ],
     "last_accessed_at": {
         "seconds": "1593161630",
         "nanos": 79000000
@@ -231,7 +243,7 @@ description: User API which allows member management within project, company, an
 | 6 | group |string|❌| |
 | 7 | language |string|❌| |
 | 8 | timezone |string|❌| |
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 10 | domain_id |string|✅| |
 
 ### FindUserInfo
@@ -280,7 +292,7 @@ description: User API which allows member management within project, company, an
 | 6 | group |string|❌| |
 | 7 | language |string|❌| |
 | 8 | timezone |string|❌| |
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 10 | domain_id |string|✅| |
 
 ### UpdateUserRoleRequest
@@ -372,7 +384,7 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>

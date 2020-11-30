@@ -147,7 +147,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -217,7 +217,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -369,5 +369,5 @@ description:
 | 1 | role_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | policies |[list of RolePolicy](role.md#rolepolicy)|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 5 | domain_id |string|✅| |

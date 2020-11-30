@@ -111,7 +111,7 @@ description: DomainConfig API which configure environments for domain
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 4 | schema |string|❌| |
 | 5 | domain_id |string|✅| |
 
@@ -120,7 +120,7 @@ description: DomainConfig API which configure environments for domain
 | :--- | :--- | :--- | :--- |
 | 1 | name |string | |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 3 | tags |list of spaceone.api.core.v1.Tag | |
 | 4 | schema |string | |
 | 5 | domain_id |string | |
 | 6 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
@@ -162,6 +162,6 @@ description: DomainConfig API which configure environments for domain
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 4 | schema |string|❌| |
 | 5 | domain_id |string|✅| |

@@ -140,7 +140,7 @@ description:
 | 1 | topic |string|✅| |
 | 2 | options |[QueryOption](schedule.md#queryoption)|✅| |
 | 3 | schedule |[Scheduled](schedule.md#scheduled)|✅| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 5 | domain_id |string|✅| |
 
 ### GetScheduleRequest
@@ -229,7 +229,7 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -365,5 +365,5 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | schedule_id |string|✅| |
 | 2 | schedule |[Scheduled](schedule.md#scheduled)|❌| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 4 | domain_id |string|✅| |

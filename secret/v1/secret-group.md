@@ -138,7 +138,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
-| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 2 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 3 | domain_id |string|✅| |
 
 ### GetSecretGroupRequest
@@ -153,7 +153,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | secret_group_id |string | |
 | 2 | name |string | |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 3 | tags |list of spaceone.api.core.v1.Tag | |
 | 4 | domain_id |string | |
 | 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
@@ -203,5 +203,5 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | secret_group_id |string|✅| |
 | 2 | name |string|❌| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 4 | domain_id |string|✅| |

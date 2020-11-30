@@ -187,7 +187,7 @@ description:
 | 2 | parent_project_group_id |string|❌| |
 | 3 | domain_id |string|✅| |
 | 4 | template_id |string|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 
 ### GetProjectGroupRequest
 | No | Field | Type | Required | Description |
@@ -203,7 +203,7 @@ description:
 | 2 | name |string | |
 | 3 | parent_project_group_info |[ProjectGroupInfo](project-group.md#projectgroupinfo) | |
 | 4 | domain_id |string | |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | tags |list of spaceone.api.core.v1.Tag | |
 | 6 | created_by |string | |
 | 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 | 8 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
@@ -312,4 +312,4 @@ description:
 | 4 | release_parent_project_group |bool|❌| |
 | 5 | domain_id |string|✅| |
 | 6 | template_id |string|❌| |
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | tags |list of spaceone.api.core.v1.Tag|❌| |

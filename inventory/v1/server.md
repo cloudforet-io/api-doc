@@ -250,7 +250,7 @@ description:
     <tr>
       <td style="text-align:left">15</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -294,7 +294,7 @@ description:
 | 2 | device |string|❌| |
 | 3 | disk_type |string|❌| |
 | 4 | size |float|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 
 ### ServerInfo
 <table>
@@ -439,7 +439,7 @@ description:
     <tr>
       <td style="text-align:left">17</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -500,7 +500,7 @@ description:
 | 5 | cidr |string|❌| |
 | 6 | mac_address |string|❌| |
 | 7 | public_ip_address |string|❌| |
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 8 | tags |list of spaceone.api.core.v1.Tag|❌| |
 
 ### ServerQuery
 <table>
@@ -796,7 +796,7 @@ description:
     <tr>
       <td style="text-align:left">16</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>

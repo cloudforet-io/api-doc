@@ -355,7 +355,7 @@ description:
 | 2 | hostname |string|✅| |
 | 3 | secret_key |string|❌| |
 | 4 | plugin_info |[list of PluginInfo](supervisor.md#plugininfo)|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | is_public |bool|❌| |
 | 7 | domain_id |string|✅| |
 
@@ -375,7 +375,7 @@ description:
 | 3 | is_public |bool|❌| |
 | 4 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
 | 5 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 7 | domain_id |string|✅| |
 
 ### SupervisorInfo
@@ -440,7 +440,7 @@ description:
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>

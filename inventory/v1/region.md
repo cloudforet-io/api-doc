@@ -110,7 +110,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
-| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 2 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 3 | domain_id |string|✅| |
 | 4 | region_code |string|✅| |
 | 5 | provider |string|❌| |
@@ -127,7 +127,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | region_id |string | |
 | 2 | name |string | |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 3 | tags |list of spaceone.api.core.v1.Tag | |
 | 4 | domain_id |string | |
 | 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 | 6 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
@@ -168,5 +168,5 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | region_id |string|✅| |
 | 2 | name |string|❌| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 4 | domain_id |string|✅| |

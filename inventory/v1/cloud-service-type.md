@@ -132,7 +132,7 @@ description:
 | 7 | is_major |bool | |
 | 8 | resource_type |string | |
 | 9 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 10 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 10 | tags |list of spaceone.api.core.v1.Tag | |
 | 11 | labels |list of string | |
 | 12 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 13 | domain_id |string | |
@@ -183,7 +183,7 @@ description:
 | 7 | resource_type |string|❌| |
 | 8 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 9 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| 10 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 10 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 11 | domain_id |string|✅| |
 
 ### GetCloudServiceTypeRequest
@@ -210,5 +210,5 @@ description:
 | 5 | resource_type |string|❌| |
 | 6 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 8 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 9 | domain_id |string|✅| |

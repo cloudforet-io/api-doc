@@ -131,7 +131,7 @@ description:
 | 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 8 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference) | |
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 9 | tags |list of spaceone.api.core.v1.Tag | |
 | 10 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 11 | project_id |string | |
 | 12 | domain_id |string | |
@@ -188,7 +188,7 @@ description:
 | 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 8 | project_id |string|❌| |
 | 9 | domain_id |string|✅| |
 | 10 | region_code |string|❌| |
@@ -214,7 +214,7 @@ description:
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 3 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | region_code |string|❌| |
 | 7 | project_id |string|❌| |
 | 8 | domain_id |string|✅| |

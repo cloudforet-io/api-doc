@@ -112,7 +112,7 @@ description:
 | 1 | name |string|✅| |
 | 2 | permissions |list of string|✅| |
 | 3 | labels |list of string|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 5 | project_id |string|❌| |
 | 6 | domain_id |string|✅| |
 
@@ -137,7 +137,7 @@ description:
 | 2 | name |string | |
 | 3 | permissions |list of string | list of permissions|
 | 4 | labels |list of string | list of labels|
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | tags |list of spaceone.api.core.v1.Tag | |
 | 6 | repository_info |[RepositoryInfo](policy.md#repositoryinfo) | |
 | 7 | project_id |string | |
 | 8 | domain_id |string | |
@@ -173,5 +173,5 @@ description:
 | 2 | name |string|❌| |
 | 3 | permissions |list of string|❌| |
 | 4 | labels |list of string|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | domain_id |string|✅| |

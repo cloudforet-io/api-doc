@@ -164,7 +164,7 @@ description:
 | 1 | name |string|✅| |
 | 2 | plugin_info |[PluginInfo](domain.md#plugininfo)|❌| |
 | 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 
 ### DomainInfo
 <table>
@@ -219,7 +219,7 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -333,4 +333,4 @@ description:
 | 1 | domain_id |string|✅| |
 | 2 | plugin_info |[PluginInfo](domain.md#plugininfo)|❌| |
 | 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
