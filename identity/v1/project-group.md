@@ -246,7 +246,7 @@ description:
 | 3 | state |string | |
 | 4 | project_group_info |[ProjectGroupInfo](project-group.md#projectgroupinfo) | |
 | 5 | domain_id |string | |
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 6 | tags |list of spaceone.api.core.v1.Tag | |
 | 7 | created_by |string | |
 | 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 | 9 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |

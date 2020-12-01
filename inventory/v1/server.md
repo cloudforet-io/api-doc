@@ -294,7 +294,7 @@ description:
 | 2 | device |string|❌| |
 | 3 | disk_type |string|❌| |
 | 4 | size |float|❌| |
-| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 
 ### ServerInfo
 <table>
@@ -500,7 +500,7 @@ description:
 | 5 | cidr |string|❌| |
 | 6 | mac_address |string|❌| |
 | 7 | public_ip_address |string|❌| |
-| 8 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 
 ### ServerQuery
 <table>
