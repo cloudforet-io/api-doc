@@ -80,8 +80,6 @@ description: User API which allows member management within project, company, an
     "name": "Dong Yoo kang",
     "state": "ENABLED",
     "email": "dkang@mz.co.kr",
-    "mobile": "",
-    "group": "",
     "language": "en",
     "timezone": "UTC",
     "tags": [
@@ -233,18 +231,99 @@ description: User API which allows member management within project, company, an
 ## Message
 
 ### CreateUserRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string|✅| |
-| 2 | password |string|❌| |
-| 3 | name |string|❌| |
-| 4 | email |string|❌| |
-| 5 | mobile |string|❌| |
-| 6 | group |string|❌| |
-| 7 | language |string|❌| |
-| 8 | timezone |string|❌| |
-| 9 | tags |list of spaceone.api.core.v1.Tag|❌| |
-| 10 | domain_id |string|✅| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">user_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">password</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">email</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">user_type</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_USER_TYPE</li>
+          	<li>USER</li>
+          	<li>API_USER</li>
+        </ul></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">backend</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_BACKEND</li>
+          	<li>LOCAL</li>
+          	<li>EXTERNAL</li>
+        </ul></td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">language</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">timezone</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">tags</td>
+      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### FindUserInfo
 | No | Field | Type |  Description |
@@ -252,9 +331,7 @@ description: User API which allows member management within project, company, an
 | 1 | user_id |string | |
 | 2 | name |string | |
 | 3 | email |string | |
-| 4 | mobile |string | |
-| 5 | group |string | |
-| 6 | state |string | |
+| 4 | tags |list of spaceone.api.core.v1.Tag | |
 
 ### FindUserQuery
 | No | Field | Type | Required | Description |
@@ -288,12 +365,10 @@ description: User API which allows member management within project, company, an
 | 2 | password |string|❌| |
 | 3 | name |string|❌| |
 | 4 | email |string|❌| |
-| 5 | mobile |string|❌| |
-| 6 | group |string|❌| |
-| 7 | language |string|❌| |
-| 8 | timezone |string|❌| |
-| 9 | tags |list of spaceone.api.core.v1.Tag|❌| |
-| 10 | domain_id |string|✅| |
+| 5 | language |string|❌| |
+| 6 | timezone |string|❌| |
+| 7 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 8 | domain_id |string|✅| |
 
 ### UpdateUserRoleRequest
 | No | Field | Type | Required | Description |
@@ -334,7 +409,7 @@ description: User API which allows member management within project, company, an
           	<li>NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
-          	<li>UNIDENTIFIED</li>
+          	<li>PENDING</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -348,15 +423,23 @@ description: User API which allows member management within project, company, an
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">mobile</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">user_type</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_USER_TYPE</li>
+          	<li>USER</li>
+          	<li>API_USER</li>
+        </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">6</td>
-      <td style="text-align:left">group</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">backend</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_BACKEND</li>
+          	<li>LOCAL</li>
+          	<li>EXTERNAL</li>
+        </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -415,17 +498,92 @@ description: User API which allows member management within project, company, an
 
 
 ### UserQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | user_id |string|❌| |
-| 3 | name |string|❌| |
-| 4 | state |string|❌| |
-| 5 | email |string|❌| |
-| 6 | mobile |string|❌| |
-| 7 | group |string|❌| |
-| 8 | role_id |string|❌| |
-| 9 | domain_id |string|❌| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">query</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">user_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">state</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">email</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">user_type</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_USER_TYPE</li>
+          	<li>USER</li>
+          	<li>API_USER</li>
+        </ul></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">backend</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_BACKEND</li>
+          	<li>LOCAL</li>
+          	<li>EXTERNAL</li>
+        </ul></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">role_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### UserRequest
 | No | Field | Type | Required | Description |

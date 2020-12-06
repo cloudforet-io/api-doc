@@ -58,6 +58,7 @@ description:
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>PROJECT</li>
+          	<li>SYSTEM</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -65,6 +66,13 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
