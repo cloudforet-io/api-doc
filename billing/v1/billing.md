@@ -55,8 +55,8 @@ description:
 | 3 | service_accounts |list of string|❌| |
 | 4 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | aggregation |list of string|❌| |
-| 6 | start |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|✅| |
-| 7 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|✅| |
+| 6 | start |string|✅| |
+| 7 | end |string|✅| |
 | 8 | granularity |string|✅| |
 | 9 | domain_id |string|✅| |
 
