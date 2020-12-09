@@ -37,8 +37,8 @@ description:
 ### BillingData
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | cost |string | |
-| 2 | date |string | |
+| 1 | date |string | |
+| 2 | cost |double | |
 | 3 | currency |string | |
 
 ### BillingDataInfo
