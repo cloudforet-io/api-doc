@@ -23,8 +23,7 @@ description:
 | 6 | [**get**](domain.md#get)|   [GetDomainRequest](domain.md#getdomainrequest) |   [DomainInfo](domain.md#domaininfo) |  |
 | 7 | [**list**](domain.md#list)|   [DomainQuery](domain.md#domainquery) |   [DomainsInfo](domain.md#domainsinfo) |  |
 | 8 | [**stat**](domain.md#stat)|   [DomainStatQuery](domain.md#domainstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 9 | [**get_public_key**](domain.md#get_public_key)| .spaceone.api.core.v1.AuthenticationRequest|  .spaceone.api.core.v1.AuthenticationResponse|  |
-| 10 | [**get_domain_key**](domain.md#get_domain_key)| .spaceone.api.core.v1.AuthenticationRequest|   [DomainKeyResponse](domain.md#domainkeyresponse) |  | 
+| 9 | [**get_public_key**](domain.md#get_public_key)| .spaceone.api.core.v1.AuthenticationRequest|  .spaceone.api.core.v1.AuthenticationResponse|  | 
  
 
  
@@ -141,17 +140,6 @@ description:
 | :--- | :--- |
 | Request | [AuthenticationRequest] |
 | Response | .spaceone.api.core.v1.AuthenticationResponse |
- 
- 
-
- 
-### get_domain_key
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [AuthenticationRequest] |
-| Response |  [DomainKeyResponse](domain.md#domainkeyresponse)  |
 
 
 ## 
@@ -241,12 +229,6 @@ description:
 </table>
 
 
-
-### DomainKeyResponse
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | |
-| 2 | domain_key |string | |
 
 ### DomainQuery
 <table>

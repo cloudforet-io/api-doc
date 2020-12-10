@@ -83,10 +83,9 @@ description:
 | 2 | password |string|✅| |
 | 3 | name |string|❌| |
 | 4 | email |string|❌| |
-| 5 | mobile |string|❌| |
-| 6 | language |string|❌| |
-| 7 | timezone |string|❌| |
-| 8 | domain_id |string|✅| |
+| 5 | language |string|❌| |
+| 6 | timezone |string|❌| |
+| 7 | domain_id |string|✅| |
 
 ### DomainOwnerInfo
 | No | Field | Type |  Description |
@@ -94,12 +93,11 @@ description:
 | 1 | owner_id |string | |
 | 2 | name |string | |
 | 3 | email |string | |
-| 4 | mobile |string | |
-| 5 | language |string | |
-| 6 | timezone |string | |
-| 7 | last_accessed_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-| 9 | domain_id |string | |
+| 4 | language |string | |
+| 5 | timezone |string | |
+| 6 | last_accessed_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 8 | domain_id |string | |
 
 ### DomainOwnerRequest
 | No | Field | Type | Required | Description |
@@ -121,7 +119,6 @@ description:
 | 2 | password |string|❌| |
 | 3 | name |string|❌| |
 | 4 | email |string|❌| |
-| 5 | mobile |string|❌| |
-| 6 | language |string|❌| |
-| 7 | timezone |string|❌| |
-| 8 | domain_id |string|✅| |
+| 5 | language |string|❌| |
+| 6 | timezone |string|❌| |
+| 7 | domain_id |string|✅| |

@@ -51,8 +51,10 @@ description:
 ### IssueTokenRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 2 | domain_id |string|✅| |
+| 1 | user_id |string|✅| |
+| 2 | credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 3 | user_type |string|❌| |
+| 4 | domain_id |string|✅| |
 
 ### TokenInfo
 | No | Field | Type |  Description |
