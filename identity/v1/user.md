@@ -19,13 +19,12 @@ description: User API which allows member management within project, company, an
 | 2 | [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) | Update user info by given user_id |
 | 3 | [**enable**](user.md#enable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
 | 4 | [**disable**](user.md#disable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
-| 5 | [**update_role**](user.md#update_role)|   [UpdateUserRoleRequest](user.md#updateuserrolerequest) |   [UserInfo](user.md#userinfo) |  |
-| 6 | [**delete**](user.md#delete)|   [UserRequest](user.md#userrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 7 | [**get**](user.md#get)|   [GetUserRequest](user.md#getuserrequest) |   [UserInfo](user.md#userinfo) |  |
-| 8 | [**list**](user.md#list)|   [UserQuery](user.md#userquery) |   [UsersInfo](user.md#usersinfo) |  |
-| 9 | [**stat**](user.md#stat)|   [UserStatQuery](user.md#userstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 10 | [**find**](user.md#find)|   [FindUserQuery](user.md#finduserquery) |   [FindUsersInfo](user.md#findusersinfo) |  |
-| 11 | [**sync**](user.md#sync)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  | 
+| 5 | [**delete**](user.md#delete)|   [UserRequest](user.md#userrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 6 | [**get**](user.md#get)|   [GetUserRequest](user.md#getuserrequest) |   [UserInfo](user.md#userinfo) |  |
+| 7 | [**list**](user.md#list)|   [UserQuery](user.md#userquery) |   [UsersInfo](user.md#usersinfo) |  |
+| 8 | [**stat**](user.md#stat)|   [UserStatQuery](user.md#userstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 9 | [**find**](user.md#find)|   [FindUserQuery](user.md#finduserquery) |   [FindUsersInfo](user.md#findusersinfo) |  |
+| 10 | [**sync**](user.md#sync)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  | 
  
 
  
@@ -75,7 +74,6 @@ description: User API which allows member management within project, company, an
 {% tab title="Response Example" %}
 ```text
 {
-    "roles": [],
     "user_id": "dkang@mz.co.kr",
     "name": "Dong Yoo kang",
     "state": "ENABLED",
@@ -130,19 +128,6 @@ description: User API which allows member management within project, company, an
 | Type | Message |
 | :--- | :--- |
 | Request | [UserRequest](user.md#userrequest) |
-| Response |  [UserInfo](user.md#userinfo)  |
- 
- 
-
- 
-### update_role
-> **PUT** /identity/v1/user/{user_id}/roles
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [UpdateUserRoleRequest](user.md#updateuserrolerequest) |
 | Response |  [UserInfo](user.md#userinfo)  |
  
  
@@ -370,13 +355,6 @@ description: User API which allows member management within project, company, an
 | 7 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 8 | domain_id |string|✅| |
 
-### UpdateUserRoleRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | user_id |string|✅| |
-| 2 | roles |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅| |
-| 3 | domain_id |string|✅| |
-
 ### UserInfo
 <table>
   <thead>
@@ -459,34 +437,27 @@ description: User API which allows member management within project, company, an
    </tr>
     <tr>
       <td style="text-align:left">9</td>
-      <td style="text-align:left">roles</td>
-      <td style="text-align:left"><a href="user.md#roleinfo">list of RoleInfo</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">10</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">last_accessed_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -568,13 +539,6 @@ description: User API which allows member management within project, company, an
    </tr>
     <tr>
       <td style="text-align:left">8</td>
-      <td style="text-align:left">role_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>

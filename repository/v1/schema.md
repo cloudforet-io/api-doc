@@ -137,6 +137,7 @@ description:
 | 7 | project_id |string | |
 | 8 | domain_id |string | |
 | 9 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 10 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### SchemaQuery
 | No | Field | Type | Required | Description |

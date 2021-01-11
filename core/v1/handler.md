@@ -57,21 +57,29 @@ description:
       <td style="text-align:left">scope</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
-          	<li>PROJECT</li>
           	<li>SYSTEM</li>
+          	<li>DOMAIN</li>
+          	<li>PROJECT</li>
         </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">6</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -86,6 +94,8 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | role_type |string | |
+| 2 | projects |list of string | |
+| 3 | project_groups |list of string | |
 
 ### EventRequest
 | No | Field | Type |  Description |

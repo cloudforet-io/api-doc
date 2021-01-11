@@ -290,6 +290,13 @@ description:
 <td style="text-align:left"></td>
 
    </tr>
+    <tr>
+      <td style="text-align:left">16</td>
+      <td style="text-align:left">updated_at</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
   </tbody>
 </table>
 

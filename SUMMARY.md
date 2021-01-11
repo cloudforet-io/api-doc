@@ -38,6 +38,7 @@
     * [Project Group](identity/v1/project-group.md)
     * [Provider](identity/v1/provider.md)
     * [Role](identity/v1/role.md)
+    * [Role Binding](identity/v1/role-binding.md)
     * [Service Account](identity/v1/service-account.md)
     * [Token](identity/v1/token.md)
     * [User](identity/v1/user.md)

@@ -46,8 +46,8 @@ description:
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | aggregation |list of string|❌| |
-| 5 | start |string|❌| |
-| 6 | end |string|✅| |
+| 5 | start |string|❌| billing period's start date|
+| 6 | end |string|✅| billing period's end date|
 | 7 | granularity |string|❌| |
 | 8 | schema |string|❌| |
 

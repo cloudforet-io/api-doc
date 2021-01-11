@@ -358,6 +358,7 @@ description:
 | 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | is_public |bool|❌| |
 | 7 | domain_id |string|✅| |
+| 8 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 
 ### RecoverPluginRequest
 | No | Field | Type | Required | Description |
