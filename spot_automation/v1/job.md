@@ -3,7 +3,7 @@ description:
 ---
 # Job
 
->  **Package : spaceone.api.power_scheduler.v1**
+>  **Package : spaceone.api.spot_automation.v1**
 
 ## Job
 
@@ -21,9 +21,9 @@ description:
 
  
 ### list
-> **GET** /power-scheduler/v1/jobs
+> **GET** /spot-automation/v1/jobs
 >
-> **POST** /power-scheduler/v1/jobs/search
+> **POST** /spot-automation/v1/jobs/search
 
 
 
@@ -36,7 +36,7 @@ description:
 
  
 ### stat
-> **POST** /power-scheduler/v1/jobs/stat
+> **POST** /spot-automation/v1/jobs/stat
 >
 
 
@@ -120,61 +120,34 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">7</td>
-      <td style="text-align:left">schedule_info</td>
-      <td style="text-align:left"><a href="job.md#scheduleinfo">ScheduleInfo</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">control_action</td>
-      <td style="text-align:left"><ul>
-          	<li>RUNNING</li>
-          	<li>STOPPED</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
-      <td style="text-align:left">job_type</td>
-      <td style="text-align:left"><ul>
-          	<li>APPLY</li>
-          	<li>MAINTAIN</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">finished_at</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
 <td style="text-align:left"></td>
@@ -240,43 +213,16 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">schedule_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">control_action</td>
-      <td style="text-align:left"><ul>
-          	<li>RUNNING</li>
-          	<li>STOPPED</li>
-        </ul></td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">job_type</td>
-      <td style="text-align:left"><ul>
-          	<li>APPLY</li>
-          	<li>MAINTAIN</li>
-        </ul></td>
-<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>

@@ -17,8 +17,8 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**init**](controller.md#init)|   [InitRequest](controller.md#initrequest) |   [PluginInfo](controller.md#plugininfo) |  |
 | 2 | [**verify**](controller.md#verify)|   [VerifyRequest](controller.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 3 | [**start**](controller.md#start)|   [StartRequest](controller.md#startrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**stop**](controller.md#stop)|   [StopRequest](controller.md#stoprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 3 | [**start**](controller.md#start)|   [StartRequest](controller.md#startrequest) |   [UpdateInfo](controller.md#updateinfo) |  |
+| 4 | [**stop**](controller.md#stop)|   [StopRequest](controller.md#stoprequest) |   [UpdateInfo](controller.md#updateinfo) |  |
 | 5 | [**reboot**](controller.md#reboot)|   [RebootRequest](controller.md#rebootrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
  
 
@@ -51,7 +51,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [StartRequest](controller.md#startrequest) |
-| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+| Response |  [UpdateInfo](controller.md#updateinfo)  |
  
  
 
@@ -62,7 +62,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [StopRequest](controller.md#stoprequest) |
-| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+| Response |  [UpdateInfo](controller.md#updateinfo)  |
  
  
 
@@ -80,6 +80,13 @@ description:
 
 ## Message
 
+### DataInfo
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | desired_capacity |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| 2 | min_size |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| 3 | power_scheduler |[PowerSchedulerInfo](controller.md#powerschedulerinfo)|✅| |
+
 ### InitRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -90,15 +97,19 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
+### PowerSchedulerInfo
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | original_desired_capacity |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| 2 | original_min_size |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| 3 | original_instance_type |string|✅| |
+
 ### RebootRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | resource_id |string|✅| |
-| 4 | resource_type |string|✅| |
-| 5 | resource_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | schema |string|❌| |
+| 1 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 2 | resource_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 3 | schema |string|❌| |
 
 ### Resource
 | No | Field | Type |  Description |
@@ -168,22 +179,22 @@ description:
 ### StartRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | resource_id |string|✅| |
-| 4 | resource_type |string|✅| |
-| 5 | resource_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | schema |string|❌| |
+| 1 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 2 | resource_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 3 | schema |string|❌| |
 
 ### StopRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | resource_id |string|✅| |
-| 4 | resource_type |string|✅| |
-| 5 | resource_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | schema |string|❌| |
+| 1 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 2 | resource_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 3 | schema |string|❌| |
+
+### UpdateInfo
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | action |string|✅| |
+| 2 | data |[DataInfo](controller.md#datainfo)|✅| |
 
 ### VerifyRequest
 | No | Field | Type | Required | Description |
