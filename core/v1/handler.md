@@ -92,6 +92,20 @@ description:
 <td style="text-align:left"></td>
 
    </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">require_project_id</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">require_project_group_id</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left"></td>
+
+   </tr>
   </tbody>
 </table>
 
