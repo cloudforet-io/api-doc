@@ -136,7 +136,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>SCHEDULERULESTATE_NONE</li>
+          	<li>RULE_STATE_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -147,7 +147,7 @@ description:
       <td style="text-align:left">4</td>
       <td style="text-align:left">rule_type</td>
       <td style="text-align:left"><ul>
-          	<li>RULETYPE_NONE</li>
+          	<li>RULE_TYPE_NONE</li>
           	<li>ROUTINE</li>
           	<li>TICKET</li>
         </ul></td>
@@ -237,7 +237,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>SCHEDULERULESTATE_NONE</li>
+          	<li>RULE_STATE_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -248,7 +248,7 @@ description:
       <td style="text-align:left">4</td>
       <td style="text-align:left">rule_type</td>
       <td style="text-align:left"><ul>
-          	<li>RULETYPE_NONE</li>
+          	<li>RULE_TYPE_NONE</li>
           	<li>ROUTINE</li>
           	<li>TICKET</li>
         </ul></td>
@@ -373,7 +373,7 @@ description:
       <td style="text-align:left">6</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>SCHEDULERULESTATE_NONE</li>
+          	<li>RULE_STATE_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -441,7 +441,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>SCHEDULERULESTATE_NONE</li>
+          	<li>RULE_STATE_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>

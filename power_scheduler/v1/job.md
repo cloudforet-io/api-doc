@@ -129,6 +129,7 @@ description:
       <td style="text-align:left">8</td>
       <td style="text-align:left">control_action</td>
       <td style="text-align:left"><ul>
+          	<li>CONTROL_ACTION_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -153,6 +154,7 @@ description:
       <td style="text-align:left">11</td>
       <td style="text-align:left">job_type</td>
       <td style="text-align:left"><ul>
+          	<li>JOB_TYPE_NONE</li>
           	<li>APPLY</li>
           	<li>MAINTAIN</li>
         </ul></td>
@@ -249,6 +251,7 @@ description:
       <td style="text-align:left">5</td>
       <td style="text-align:left">control_action</td>
       <td style="text-align:left"><ul>
+          	<li>CONTROL_ACTION_NONE</li>
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
@@ -273,6 +276,7 @@ description:
       <td style="text-align:left">8</td>
       <td style="text-align:left">job_type</td>
       <td style="text-align:left"><ul>
+          	<li>JOB_TYPE_NONE</li>
           	<li>APPLY</li>
           	<li>MAINTAIN</li>
         </ul></td>
