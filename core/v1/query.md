@@ -42,6 +42,12 @@ description:
 | 4 | n |string | |
 | 5 | date_format |string | |
 
+### AggregateSort
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | key |string | |
+| 2 | desc |bool | |
+
 ### AggregateUnwind
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
@@ -84,24 +90,17 @@ description:
 ### StatisticsAggregate
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | unwind |[list of AggregateUnwind](query.md#aggregateunwind) | |
+| 1 | unwind |[AggregateUnwind](query.md#aggregateunwind) | |
 | 2 | group |[AggregateGroup](query.md#aggregategroup) | |
 | 3 | count |[AggregateCount](query.md#aggregatecount) | |
+| 4 | sort |[AggregateSort](query.md#aggregatesort) | |
 
 ### StatisticsQuery
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | filter |[list of Filter](query.md#filter) | |
 | 2 | filter_or |[list of Filter](query.md#filter) | |
-| 3 | aggregate |[StatisticsAggregate](query.md#statisticsaggregate) | |
-| 4 | sort |[StatisticsSort](query.md#statisticssort) | |
-| 5 | page |[Page](query.md#page) | |
-| 6 | limit |[uint32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
-| 7 | distinct |string | |
-| 8 | keyword |string | |
-
-### StatisticsSort
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | name |string | |
-| 2 | desc |bool | |
+| 3 | aggregate |[list of StatisticsAggregate](query.md#statisticsaggregate) | |
+| 4 | page |[Page](query.md#page) | |
+| 5 | distinct |string | |
+| 6 | keyword |string | |
