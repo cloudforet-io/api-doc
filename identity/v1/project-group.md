@@ -267,7 +267,8 @@ description:
 | 2 | project_group_id |string|❌| |
 | 3 | name |string|❌| |
 | 4 | parent_project_group_id |string|❌| |
-| 5 | domain_id |string|✅| |
+| 5 | author_within |bool|❌| |
+| 6 | domain_id |string|✅| |
 
 ### ProjectGroupRequest
 | No | Field | Type | Required | Description |
