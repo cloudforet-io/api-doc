@@ -80,13 +80,6 @@ description:
 
 ## Message
 
-### DataInfo
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | desired_capacity |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
-| 2 | min_size |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
-| 3 | power_scheduler |[PowerSchedulerInfo](controller.md#powerschedulerinfo)|✅| |
-
 ### InitRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -96,13 +89,6 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-
-### PowerSchedulerInfo
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | original_desired_capacity |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
-| 2 | original_min_size |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
-| 3 | original_instance_type |string|✅| |
 
 ### RebootRequest
 | No | Field | Type | Required | Description |
@@ -194,7 +180,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | action |string|✅| |
-| 2 | data |[DataInfo](controller.md#datainfo)|✅| |
+| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 
 ### VerifyRequest
 | No | Field | Type | Required | Description |
