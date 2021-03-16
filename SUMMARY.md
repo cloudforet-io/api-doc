@@ -96,6 +96,8 @@
   * [V1](spot_automation/v1/README.md)
     * [Controller](spot_automation/v1/controller.md)
     * [Domain](spot_automation/v1/domain.md)
+    * [History](spot_automation/v1/history.md)
+    * [Interrupt](spot_automation/v1/interrupt.md)
     * [Job](spot_automation/v1/job.md)
     * [Spot Group](spot_automation/v1/spot-group.md)
 * [Statistics](statistics/README.md)
