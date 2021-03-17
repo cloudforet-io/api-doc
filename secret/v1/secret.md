@@ -18,10 +18,11 @@ description:
 | 1 | [**create**](secret.md#create)|   [CreateSecretRequest](secret.md#createsecretrequest) |   [SecretInfo](secret.md#secretinfo) |  |
 | 2 | [**update**](secret.md#update)|   [UpdateSecretRequest](secret.md#updatesecretrequest) |   [SecretInfo](secret.md#secretinfo) |  |
 | 3 | [**delete**](secret.md#delete)|   [SecretRequest](secret.md#secretrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get_data**](secret.md#get_data)|   [SecretRequest](secret.md#secretrequest) |   [SecretDataInfo](secret.md#secretdatainfo) |  |
-| 5 | [**get**](secret.md#get)|   [GetSecretRequest](secret.md#getsecretrequest) |   [SecretInfo](secret.md#secretinfo) |  |
-| 6 | [**list**](secret.md#list)|   [SecretQuery](secret.md#secretquery) |   [SecretsInfo](secret.md#secretsinfo) |  |
-| 7 | [**stat**](secret.md#stat)|   [SecretStatQuery](secret.md#secretstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 4 | [**update_data**](secret.md#update_data)|   [UpdateSecretDataRequest](secret.md#updatesecretdatarequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**get_data**](secret.md#get_data)|   [SecretRequest](secret.md#secretrequest) |   [SecretDataInfo](secret.md#secretdatainfo) |  |
+| 6 | [**get**](secret.md#get)|   [GetSecretRequest](secret.md#getsecretrequest) |   [SecretInfo](secret.md#secretinfo) |  |
+| 7 | [**list**](secret.md#list)|   [SecretQuery](secret.md#secretquery) |   [SecretsInfo](secret.md#secretsinfo) |  |
+| 8 | [**stat**](secret.md#stat)|   [SecretStatQuery](secret.md#secretstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -64,8 +65,21 @@ description:
  
 
  
+### update_data
+> **PUT** /secret/v1/secret/{secret_id}/data
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [UpdateSecretDataRequest](secret.md#updatesecretdatarequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+ 
+ 
+
+ 
 ### get_data
-> **GET** /secret/v1/secret/{secret_id}/get-data
+> **GET** /secret/v1/secret/{secret_id}/data
 >
 
 
@@ -413,6 +427,13 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | results |[list of SecretInfo](secret.md#secretinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+
+### UpdateSecretDataRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | secret_id |string|✅| |
+| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 3 | domain_id |string|✅| |
 
 ### UpdateSecretRequest
 | No | Field | Type | Required | Description |
