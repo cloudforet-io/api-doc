@@ -222,7 +222,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 2 | encrypted |bool | |
-| 3 | encrypted_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 3 | encrypt_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### SecretInfo
 <table>
