@@ -93,6 +93,8 @@
 * [Spot Automation](spot_automation/README.md)
   * [Plugin](spot_automation/plugin/README.md)
     * [Controller](spot_automation/plugin/controller.md)
+    * [History](spot_automation/plugin/history.md)
+    * [Interrupt](spot_automation/plugin/interrupt.md)
   * [V1](spot_automation/v1/README.md)
     * [Controller](spot_automation/v1/controller.md)
     * [Domain](spot_automation/v1/domain.md)
