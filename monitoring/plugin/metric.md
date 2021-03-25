@@ -15,8 +15,8 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) |   [PluginMetricsResponse](metric.md#pluginmetricsresponse) |  |
-| 2 | [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [PluginMetricDataResponse](metric.md#pluginmetricdataresponse) |  | 
+| 1 | [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) |   [MetricsInfo](metric.md#metricsinfo) |  |
+| 2 | [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [MetricDataInfo](metric.md#metricdatainfo) |  | 
  
 
  
@@ -26,7 +26,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [MetricRequest](metric.md#metricrequest) |
-| Response |  [PluginMetricsResponse](metric.md#pluginmetricsresponse)  |
+| Response |  [MetricsInfo](metric.md#metricsinfo)  |
  
  
 
@@ -37,7 +37,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [MetricDataRequest](metric.md#metricdatarequest) |
-| Response |  [PluginMetricDataResponse](metric.md#pluginmetricdataresponse)  |
+| Response |  [MetricDataInfo](metric.md#metricdatainfo)  |
 
 
 ## 
@@ -84,17 +84,3 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | metrics |[list of MetricInfo](metric.md#metricinfo) | |
-
-### PluginMetricDataResponse
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | resource_type |string|✅| |
-| 2 | actions |[list of spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
-| 3 | result |[MetricDataInfo](metric.md#metricdatainfo)|✅| |
-
-### PluginMetricsResponse
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | resource_type |string|✅| |
-| 2 | actions |[list of spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
-| 3 | result |[MetricsInfo](metric.md#metricsinfo)|✅| |

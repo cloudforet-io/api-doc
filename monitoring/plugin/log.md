@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**list**](log.md#list)|   [LogRequest](log.md#logrequest) | **`stream`**   [PluginLogsResponse](log.md#pluginlogsresponse) |  | 
+| 1 | [**list**](log.md#list)|   [LogRequest](log.md#logrequest) | **`stream`**   [LogsDataInfo](log.md#logsdatainfo) |  | 
  
 
  
@@ -25,7 +25,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [LogRequest](log.md#logrequest) |
-| Response |  [PluginLogsResponse](log.md#pluginlogsresponse)  |
+| Response |  [LogsDataInfo](log.md#logsdatainfo)  |
 
 
 ## 
@@ -45,17 +45,10 @@ description:
 | 8 | limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
 | 9 | schema |string|❌| |
 
-### LogsInfo
+### LogsDataInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | logs |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
-
-### PluginLogsResponse
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | resource_type |string|✅| |
-| 2 | actions |[list of spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction)|❌| |
-| 3 | result |[LogsInfo](log.md#logsinfo)|✅| |
 
 ### Sort
 | No | Field | Type |  Description |
