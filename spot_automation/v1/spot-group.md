@@ -138,7 +138,7 @@ description:
 | 1 | name |string|✅| |
 | 2 | resource_id |string|✅| |
 | 3 | resource_type |string|✅| |
-| 4 | options |[SpotGroupOptions](spot-group.md#spotgroupoptions)|❌| |
+| 4 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 6 | user_id |string|✅| |
 | 7 | domain_id |string|✅| |
@@ -182,59 +182,12 @@ description:
 | 7 | cloud_service_group |string | |
 | 8 | cloud_service_type |string | |
 | 9 | reference |[SpotGroupResourceReference](spot-group.md#spotgroupresourcereference) | |
-| 10 | options |[SpotGroupOptions](spot-group.md#spotgroupoptions) | |
+| 10 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 11 | project_id |string | |
 | 12 | tags |list of spaceone.api.core.v1.Tag | |
 | 13 | domain_id |string | |
 | 14 | created_by |string | |
 | 15 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-
-### SpotGroupOptions
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">min_ondemand_size</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">min_ondemand_ratio</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">recommend_types</td>
-      <td style="text-align:left">list of string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">replace_strategy</td>
-      <td style="text-align:left"><ul>
-          	<li>CHEAPEST</li>
-          	<li>OPTIMAL</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-  </tbody>
-</table>
-
-
 
 ### SpotGroupRequest
 | No | Field | Type | Required | Description |
@@ -265,6 +218,6 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | spot_group_id |string|✅| |
 | 2 | name |string|❌| |
-| 3 | options |[SpotGroupOptions](spot-group.md#spotgroupoptions)|❌| |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
 | 5 | domain_id |string|✅| |
