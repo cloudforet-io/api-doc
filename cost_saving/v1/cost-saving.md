@@ -15,63 +15,21 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](cost-saving.md#create)|   [CreateCostSavingRequest](cost-saving.md#createcostsavingrequest) |   [CostSavingInfo](cost-saving.md#costsavinginfo) |  |
-| 2 | [**update**](cost-saving.md#update)|   [UpdateCostSavingRequest](cost-saving.md#updatecostsavingrequest) |   [CostSavingInfo](cost-saving.md#costsavinginfo) |  |
-| 3 | [**delete**](cost-saving.md#delete)|   [CostSavingRequest](cost-saving.md#costsavingrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](cost-saving.md#get)|   [GetCostSavingRequest](cost-saving.md#getcostsavingrequest) |   [CostSavingInfo](cost-saving.md#costsavinginfo) |  |
-| 5 | [**list**](cost-saving.md#list)|   [CostSavingQuery](cost-saving.md#costsavingquery) |   [CostSavingsInfo](cost-saving.md#costsavingsinfo) |  |
-| 6 | [**stat**](cost-saving.md#stat)|   [CostSavingStatQuery](cost-saving.md#costsavingstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**record**](cost-saving.md#record)|   [RecordRequest](cost-saving.md#recordrequest) |   [RecordInfo](cost-saving.md#recordinfo) |  |
+| 2 | [**list**](cost-saving.md#list)|   [CostSavingQuery](cost-saving.md#costsavingquery) |   [CostSavingsInfo](cost-saving.md#costsavingsinfo) |  |
+| 3 | [**stat**](cost-saving.md#stat)|   [CostSavingStatQuery](cost-saving.md#costsavingstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
-### create
-> **POST** /cost-saving/v1/cost-saving
+### record
+> **POST** /cost-saving/v1/record
 >
 
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateCostSavingRequest](cost-saving.md#createcostsavingrequest) |
-| Response |  [CostSavingInfo](cost-saving.md#costsavinginfo)  |
- 
- 
-
- 
-### update
-> **PUT** /cost-saving/v1/cost-saving/{cost_saving_id}
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [UpdateCostSavingRequest](cost-saving.md#updatecostsavingrequest) |
-| Response |  [CostSavingInfo](cost-saving.md#costsavinginfo)  |
- 
- 
-
- 
-### delete
-> **DELETE** /cost-saving/v1/cost-saving/{cost_saving_id}
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [CostSavingRequest](cost-saving.md#costsavingrequest) |
-| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
- 
- 
-
- 
-### get
-> **GET** /cost-saving/v1/cost-saving/{cost_saving_id}
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [GetCostSavingRequest](cost-saving.md#getcostsavingrequest) |
-| Response |  [CostSavingInfo](cost-saving.md#costsavinginfo)  |
+| Request | [RecordRequest](cost-saving.md#recordrequest) |
+| Response |  [RecordInfo](cost-saving.md#recordinfo)  |
  
  
 
@@ -107,177 +65,33 @@ description:
 ## Message
 
 ### CostSavingInfo
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">cost_saving_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">project_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">saving_by</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>RUNNING</li>
-          	<li>STOPPED</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">provider</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">7</td>
-      <td style="text-align:left">region</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">resource_type</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">9</td>
-      <td style="text-align:left">data</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">10</td>
-      <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">11</td>
-      <td style="text-align:left">updated_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">12</td>
-      <td style="text-align:left">expired_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-  </tbody>
-</table>
-
-
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | cost_saving_id |string | |
+| 2 | cost_saving |float | |
+| 3 | provider |string | |
+| 4 | resource_type |string | |
+| 5 | region_code |string | |
+| 6 | project_id |string | |
+| 7 | domain_id |string | |
+| 8 | saving_service |string | |
+| 9 | saving_by |string | |
+| 10 | calc_dimensions |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 11 | saving_begin_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 12 | saving_duration |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 13 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### CostSavingQuery
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">query</td>
-      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">cost_saving_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>RUNNING</li>
-          	<li>STOPPED</li>
-        </ul></td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">saving_by</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">project_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
-
-### CostSavingRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | cost_saving_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| 2 | resource_type |string|❌| |
+| 3 | provider |string|❌| |
+| 4 | region_code |string|❌| |
+| 5 | project_id |string|❌| |
+| 6 | saving_service |string|❌| |
+| 7 | saving_by |string|❌| |
+| 8 | domain_id |string|✅| |
 
 ### CostSavingStatQuery
 | No | Field | Type | Required | Description |
@@ -291,91 +105,104 @@ description:
 | 1 | results |[list of CostSavingInfo](cost-saving.md#costsavinginfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
-### CreateCostSavingRequest
+### RecordInfo
 <table>
   <thead>
     <tr>
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">1</td>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">record_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
+
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
+
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">saving_by</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+      <td style="text-align:left">saving_mode</td>
+      <td style="text-align:left"><ul>
+          	<li>MODE_NONE</li>
+          	<li>SAVING</li>
+          	<li>NORMAL</li>
+        </ul></td>
 <td style="text-align:left"></td>
+
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>RUNNING</li>
-          	<li>STOPPED</li>
-        </ul></td>
-<td style="text-align:left">✅</td>
+      <td style="text-align:left">calc_dimensions</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
+
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">❌</td>
+      <td style="text-align:left">provider</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
+
    </tr>
     <tr>
       <td style="text-align:left">6</td>
-      <td style="text-align:left">region</td>
+      <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
+
    </tr>
     <tr>
       <td style="text-align:left">7</td>
-      <td style="text-align:left">provider</td>
+      <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
+
    </tr>
     <tr>
       <td style="text-align:left">8</td>
-      <td style="text-align:left">resource</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">✅</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">saving_service</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">saving_by</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
+      <td style="text-align:left">created_at</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+<td style="text-align:left"></td>
+
    </tr>
   </tbody>
 </table>
 
 
 
-### GetCostSavingRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | cost_saving_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
-
-### UpdateCostSavingRequest
+### RecordRequest
 <table>
   <thead>
     <tr>
@@ -389,45 +216,66 @@ description:
   <tbody>
     <tr>
       <td style="text-align:left">1</td>
-      <td style="text-align:left">cost_saving_id</td>
+      <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">saving_by</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+      <td style="text-align:left">saving_mode</td>
+      <td style="text-align:left"><ul>
+          	<li>MODE_NONE</li>
+          	<li>SAVING</li>
+          	<li>NORMAL</li>
+        </ul></td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>RUNNING</li>
-          	<li>STOPPED</li>
-        </ul></td>
-<td style="text-align:left">❌</td>
+      <td style="text-align:left">calc_dimensions</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
+      <td style="text-align:left">saving_service</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">saving_by</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">region_code</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">saving_details</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">❌</td>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">provider</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>

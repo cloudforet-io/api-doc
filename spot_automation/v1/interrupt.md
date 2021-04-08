@@ -94,7 +94,9 @@ description:
 | 5 | availability_zone |string | |
 | 6 | region_code |string | |
 | 7 | provider |string | |
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 8 | project_id |string | |
+| 9 | domain_id |string | |
+| 10 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### InterruptRequest
 | No | Field | Type | Required | Description |

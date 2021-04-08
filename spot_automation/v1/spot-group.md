@@ -20,8 +20,8 @@ description:
 | 3 | [**delete**](spot-group.md#delete)|   [SpotGroupRequest](spot-group.md#spotgrouprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 4 | [**get**](spot-group.md#get)|   [GetSpotGroupRequest](spot-group.md#getspotgrouprequest) |   [SpotGroupInfo](spot-group.md#spotgroupinfo) |  |
 | 5 | [**list**](spot-group.md#list)|   [QuerySpotGroupRequest](spot-group.md#queryspotgrouprequest) |   [SpotGroupsInfo](spot-group.md#spotgroupsinfo) |  |
-| 6 | [**stat**](spot-group.md#stat)|   [SpotGroupStatRequest](spot-group.md#spotgroupstatrequest) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 7 | [**get_candidates**](spot-group.md#get_candidates)|   [GetCandidatesRequest](spot-group.md#getcandidatesrequest) |   [CandidatesInfo](spot-group.md#candidatesinfo) |  | 
+| 6 | [**get_candidates**](spot-group.md#get_candidates)|   [GetCandidatesRequest](spot-group.md#getcandidatesrequest) |   [CandidatesInfo](spot-group.md#candidatesinfo) |  |
+| 7 | [**stat**](spot-group.md#stat)|   [SpotGroupStatRequest](spot-group.md#spotgroupstatrequest) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -92,19 +92,6 @@ description:
  
 
  
-### stat
-> **POST** /spot-automation/v1/spot-groups/stat
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [SpotGroupStatRequest](spot-group.md#spotgroupstatrequest) |
-| Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
- 
- 
-
- 
 ### get_candidates
 > **GET** /spot-automation/v1/spot-group/candidates
 >
@@ -114,6 +101,19 @@ description:
 | :--- | :--- |
 | Request | [GetCandidatesRequest](spot-group.md#getcandidatesrequest) |
 | Response |  [CandidatesInfo](spot-group.md#candidatesinfo)  |
+ 
+ 
+
+ 
+### stat
+> **POST** /spot-automation/v1/spot-groups/stat
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [SpotGroupStatRequest](spot-group.md#spotgroupstatrequest) |
+| Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
 ## 
@@ -148,7 +148,8 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource_id |string|✅| |
 | 2 | resource_type |string|✅| |
-| 3 | domain_id |string|✅| |
+| 3 | limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| 4 | domain_id |string|✅| |
 
 ### GetSpotGroupRequest
 | No | Field | Type | Required | Description |

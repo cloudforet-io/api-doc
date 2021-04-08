@@ -70,9 +70,10 @@ description:
 | 3 | ondemand_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 | 4 | spot_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 | 5 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
-| 6 | domain_id |string | |
-| 7 | history_at |string | |
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 6 | project_id |string | |
+| 7 | domain_id |string | |
+| 8 | history_at |string | |
+| 9 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
 
 ### QueryHistoryRequest
 | No | Field | Type | Required | Description |
