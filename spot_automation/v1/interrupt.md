@@ -82,7 +82,11 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | provider |string|✅| |
-| 2 | data |string|✅| |
+| 2 | region_code |string|✅| |
+| 3 | domain_id |string|✅| |
+| 4 | secret_id |string|✅| |
+| 5 | token |string|✅| |
+| 6 | data |string|✅| |
 
 ### InterruptInfo
 | No | Field | Type |  Description |
@@ -102,7 +106,11 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | provider |string|✅| |
-| 2 | data |string|✅| |
+| 2 | region_code |string|✅| |
+| 3 | domain_id |string|✅| |
+| 4 | secret_id |string|✅| |
+| 5 | token |string|✅| |
+| 6 | data |string|✅| |
 
 ### InterruptResourceReference
 | No | Field | Type |  Description |
