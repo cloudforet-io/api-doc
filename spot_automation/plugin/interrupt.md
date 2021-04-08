@@ -66,6 +66,7 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | resource_id |string | |
+| 2 | type |string | |
 
 ### HandleRequest
 | No | Field | Type | Required | Description |
