@@ -65,8 +65,9 @@ description:
 ### HandleInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | resource_id |string | |
-| 2 | type |string | |
+| 1 | spot_group_resource_id |string | |
+| 2 | resource_id |string | |
+| 3 | type |string | |
 
 ### HandleRequest
 | No | Field | Type | Required | Description |
