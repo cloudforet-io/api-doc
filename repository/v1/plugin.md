@@ -157,8 +157,8 @@ description:
 | 4 | provider |string|❌| |
 | 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 7 | labels |list of string|❌| |
-| 8 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 7 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 9 | project_id |string|❌| |
 | 10 | domain_id |string|✅| |
 
@@ -251,14 +251,14 @@ description:
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">labels</td>
-      <td style="text-align:left">list of string</td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -286,14 +286,14 @@ description:
     <tr>
       <td style="text-align:left">15</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">16</td>
       <td style="text-align:left">updated_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -412,8 +412,8 @@ description:
 | 2 | name |string|❌| |
 | 3 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | labels |list of string|❌| |
-| 6 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 5 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | domain_id |string|✅| |
 
 ### VersionsInfo

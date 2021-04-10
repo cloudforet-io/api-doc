@@ -39,8 +39,8 @@ description:
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 4 | resource |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| 5 | start |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|❌| |
-| 6 | end |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto)|❌| |
+| 5 | start |string|❌| |
+| 6 | end |string|❌| |
 | 7 | sort |[Sort](log.md#sort)|❌| |
 | 8 | limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
 | 9 | schema |string|❌| |

@@ -294,7 +294,7 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -316,7 +316,7 @@ description: User API which allows member management within project, company, an
 | 1 | user_id |string | |
 | 2 | name |string | |
 | 3 | email |string | |
-| 4 | tags |list of spaceone.api.core.v1.Tag | |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### FindUserQuery
 | No | Field | Type | Required | Description |
@@ -352,7 +352,7 @@ description: User API which allows member management within project, company, an
 | 4 | email |string|❌| |
 | 5 | language |string|❌| |
 | 6 | timezone |string|❌| |
-| 7 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 8 | domain_id |string|✅| |
 
 ### UserInfo
@@ -438,21 +438,21 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">last_accessed_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>

@@ -111,7 +111,7 @@ description: Config Map API which configure environments for user
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
 
 ### GetUserConfigRequest
@@ -126,7 +126,7 @@ description: Config Map API which configure environments for user
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
 
 ### UserConfigInfo
@@ -134,9 +134,9 @@ description: Config Map API which configure environments for user
 | :--- | :--- | :--- | :--- |
 | 1 | name |string | |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 3 | tags |list of spaceone.api.core.v1.Tag | |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 4 | domain_id |string | |
-| 5 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 5 | created_at |string | |
 
 ### UserConfigQuery
 | No | Field | Type | Required | Description |

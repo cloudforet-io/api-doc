@@ -208,7 +208,7 @@ description:
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -222,7 +222,7 @@ description:
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -281,7 +281,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | plugin_info |[PluginInfo](data-source.md#plugininfo)|✅| |
-| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
 
 ### UpdateDataSourceRequest
@@ -290,7 +290,7 @@ description:
 | 1 | data_source_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | plugin_info |[PluginInfo](data-source.md#plugininfo)|❌| |
-| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |
 
 ### VerifyInfo

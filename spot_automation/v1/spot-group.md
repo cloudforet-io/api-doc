@@ -139,7 +139,7 @@ description:
 | 2 | resource_id |string|✅| |
 | 3 | resource_type |string|✅| |
 | 4 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | user_id |string|✅| |
 | 7 | domain_id |string|✅| |
 
@@ -185,10 +185,10 @@ description:
 | 9 | reference |[SpotGroupResourceReference](spot-group.md#spotgroupresourcereference) | |
 | 10 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 11 | project_id |string | |
-| 12 | tags |list of spaceone.api.core.v1.Tag | |
+| 12 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 13 | domain_id |string | |
 | 14 | created_by |string | |
-| 15 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 15 | created_at |string | |
 
 ### SpotGroupRequest
 | No | Field | Type | Required | Description |
@@ -220,5 +220,5 @@ description:
 | 1 | spot_group_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |

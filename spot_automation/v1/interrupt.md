@@ -82,11 +82,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | provider |string|✅| |
-| 2 | region_code |string|✅| |
-| 3 | domain_id |string|✅| |
-| 4 | secret_id |string|✅| |
-| 5 | token |string|✅| |
-| 6 | data |string|✅| |
+| 2 | data |string|✅| |
 
 ### InterruptInfo
 | No | Field | Type |  Description |
@@ -98,19 +94,13 @@ description:
 | 5 | availability_zone |string | |
 | 6 | region_code |string | |
 | 7 | provider |string | |
-| 8 | project_id |string | |
-| 9 | domain_id |string | |
-| 10 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 8 | created_at |string | |
 
 ### InterruptRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | provider |string|✅| |
-| 2 | region_code |string|✅| |
-| 3 | domain_id |string|✅| |
-| 4 | secret_id |string|✅| |
-| 5 | token |string|✅| |
-| 6 | data |string|✅| |
+| 2 | data |string|✅| |
 
 ### InterruptResourceReference
 | No | Field | Type |  Description |

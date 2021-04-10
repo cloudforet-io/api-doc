@@ -73,7 +73,7 @@ description:
 | 6 | project_id |string | |
 | 7 | domain_id |string | |
 | 8 | history_at |string | |
-| 9 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 9 | created_at |string | |
 
 ### QueryHistoryRequest
 | No | Field | Type | Required | Description |

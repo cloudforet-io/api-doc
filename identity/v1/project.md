@@ -170,8 +170,8 @@ description:
 | 1 | project_id |string|✅| |
 | 2 | user_id |string|✅| |
 | 3 | role_id |string|❌| |
-| 4 | labels |list of string|❌| |
-| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | domain_id |string|✅| |
 
 ### CreateProjectRequest
@@ -179,7 +179,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | project_group_id |string|✅| |
-| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
 
 ### GetProjectRequest
@@ -194,8 +194,8 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | project_id |string|✅| |
 | 2 | user_id |string|✅| |
-| 3 | labels |list of string|❌| |
-| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 3 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |
 
 ### ProjectInfo
@@ -203,11 +203,11 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | project_id |string | |
 | 2 | name |string | |
-| 3 | tags |list of spaceone.api.core.v1.Tag | |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 4 | project_group_info |[ProjectGroupInfo](project.md#projectgroupinfo) | |
 | 5 | domain_id |string | |
 | 6 | created_by |string | |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 7 | created_at |string | |
 
 ### ProjectMemberQuery
 | No | Field | Type | Required | Description |
@@ -243,10 +243,10 @@ description:
 | 3 | resource_id |string | |
 | 4 | role_info |[RoleInfo](project.md#roleinfo) | |
 | 5 | project_info |[ProjectInfo](project.md#projectinfo) | |
-| 6 | labels |list of string | |
-| 7 | tags |list of spaceone.api.core.v1.Tag | |
+| 6 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 8 | domain_id |string | |
-| 9 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 9 | created_at |string | |
 
 ### ProjectRoleBindingsInfo
 | No | Field | Type |  Description |
@@ -279,5 +279,5 @@ description:
 | 1 | project_id |string|✅| |
 | 2 | project_group_id |string|❌| |
 | 3 | name |string|❌| |
-| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |

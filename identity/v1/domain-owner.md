@@ -95,8 +95,8 @@ description:
 | 3 | email |string | |
 | 4 | language |string | |
 | 5 | timezone |string | |
-| 6 | last_accessed_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 6 | last_accessed_at |string | |
+| 7 | created_at |string | |
 | 8 | domain_id |string | |
 
 ### DomainOwnerRequest

@@ -165,8 +165,8 @@ description:
 | 3 | provider |string | |
 | 4 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 5 | plugin_info |[PluginInfo](controller.md#plugininfo) | |
-| 6 | tags |list of spaceone.api.core.v1.Tag | |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | created_at |string | |
 | 8 | domain_id |string | |
 
 ### ControllerQuery
@@ -200,7 +200,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | plugin_info |[PluginInfo](controller.md#plugininfo)|✅| |
-| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
 
 ### GetControllerRequest
@@ -225,7 +225,7 @@ description:
 | 1 | controller_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | plugin_info |[PluginInfo](controller.md#plugininfo)|❌| |
-| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |
 
 ### UpdatePluginRequest

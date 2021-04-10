@@ -112,7 +112,7 @@ description:
 | 1 | name |string|✅| |
 | 2 | resources |[list of Resource](resource-group.md#resource)|✅| |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | project_id |string|✅| |
 | 6 | domain_id |string|✅| |
 
@@ -137,10 +137,10 @@ description:
 | 2 | name |string | |
 | 3 | resources |[list of Resource](resource-group.md#resource) | |
 | 4 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 5 | tags |list of spaceone.api.core.v1.Tag | |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 6 | project_id |string | |
 | 7 | domain_id |string | |
-| 8 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 8 | created_at |string | |
 
 ### ResourceGroupQuery
 | No | Field | Type | Required | Description |
@@ -176,7 +176,7 @@ description:
 | 2 | name |string|❌| |
 | 3 | resources |[list of Resource](resource-group.md#resource)|❌| |
 | 4 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | release_project |bool|❌| |
 | 7 | project_id |string|❌| |
 | 8 | domain_id |string|✅| |

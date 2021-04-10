@@ -89,7 +89,7 @@ description:
 | 1 | topic |string | |
 | 2 | values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 3 | domain_id |string | |
-| 4 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 4 | created_at |string | |
 
 ### QueryHistoryRequest
 | No | Field | Type | Required | Description |

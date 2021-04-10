@@ -111,8 +111,8 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | permissions |list of string|✅| |
-| 3 | labels |list of string|❌| |
-| 4 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 3 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | project_id |string|❌| |
 | 6 | domain_id |string|✅| |
 
@@ -136,13 +136,13 @@ description:
 | 1 | policy_id |string | |
 | 2 | name |string | |
 | 3 | permissions |list of string | list of permissions|
-| 4 | labels |list of string | list of labels|
-| 5 | tags |list of spaceone.api.core.v1.Tag | |
+| 4 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | list of labels|
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 6 | repository_info |[RepositoryInfo](policy.md#repositoryinfo) | |
 | 7 | project_id |string | |
 | 8 | domain_id |string | |
-| 9 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-| 10 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 9 | created_at |string | |
+| 10 | updated_at |string | |
 
 ### PolicyQuery
 | No | Field | Type | Required | Description |
@@ -173,6 +173,6 @@ description:
 | 1 | policy_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | permissions |list of string|❌| |
-| 4 | labels |list of string|❌| |
-| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 4 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | domain_id |string|✅| |

@@ -173,7 +173,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -269,7 +269,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">list of spaceone.api.core.v1.Tag</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -311,7 +311,7 @@ description:
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -440,7 +440,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | secret_id |string|✅| |
 | 2 | name |string|❌| |
-| 3 | tags |list of spaceone.api.core.v1.Tag|❌| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | project_id |string|❌| |
 | 5 | domain_id |string|✅| |
 | 6 | release_project |bool|❌| |

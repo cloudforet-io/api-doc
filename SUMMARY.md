@@ -17,7 +17,6 @@
     * [Plugin](core/v1/plugin.md)
     * [Query](core/v1/query.md)
     * [Server Info](core/v1/server-info.md)
-    * [Tag](core/v1/tag.md)
 * [Cost Saving](cost_saving/README.md)
   * [V1](cost_saving/v1/README.md)
     * [Cost Saving](cost_saving/v1/cost-saving.md)

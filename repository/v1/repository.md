@@ -138,7 +138,7 @@ description:
 | 4 | endpoint |string | |
 | 5 | version |string | |
 | 6 | secret_id |string | |
-| 7 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 7 | created_at |string | |
 
 ### RepositoryQuery
 | No | Field | Type | Required | Description |

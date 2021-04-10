@@ -128,17 +128,18 @@ description:
 | 3 | provider |string | |
 | 4 | cloud_service_group |string | |
 | 5 | state |string | |
-| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 8 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference) | |
-| 9 | tags |list of spaceone.api.core.v1.Tag | |
-| 10 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 11 | project_id |string | |
-| 12 | domain_id |string | |
-| 13 | region_code |string | |
-| 14 | created_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-| 15 | updated_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
-| 16 | deleted_at |[google.protobuf.Timestamp](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto) | |
+| 6 | name |string | |
+| 7 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 8 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 9 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference) | |
+| 10 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 11 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 12 | project_id |string | |
+| 13 | domain_id |string | |
+| 14 | region_code |string | |
+| 15 | created_at |string | |
+| 16 | updated_at |string | |
+| 17 | deleted_at |string | |
 
 ### CloudServiceQuery
 | No | Field | Type | Required | Description |
@@ -150,9 +151,10 @@ description:
 | 5 | provider |string|❌| |
 | 6 | state |string|❌| |
 | 7 | region_code |string|❌| |
-| 8 | resource_group_id |string|❌| |
-| 9 | project_id |string|❌| |
-| 10 | domain_id |string|✅| |
+| 8 | name |string|❌| |
+| 9 | resource_group_id |string|❌| |
+| 10 | project_id |string|❌| |
+| 11 | domain_id |string|✅| |
 
 ### CloudServiceReference
 | No | Field | Type |  Description |
@@ -185,13 +187,14 @@ description:
 | 1 | cloud_service_type |string|✅| |
 | 2 | provider |string|✅| |
 | 3 | cloud_service_group |string|✅| |
-| 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
-| 7 | tags |list of spaceone.api.core.v1.Tag|❌| |
-| 8 | project_id |string|❌| |
-| 9 | domain_id |string|✅| |
-| 10 | region_code |string|❌| |
+| 4 | name |string|❌| |
+| 5 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 6 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | project_id |string|❌| |
+| 10 | domain_id |string|✅| |
+| 11 | region_code |string|❌| |
 
 ### GetCloudServiceRequest
 | No | Field | Type | Required | Description |
@@ -211,12 +214,13 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | cloud_service_id |string|✅| |
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 3 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
-| 5 | tags |list of spaceone.api.core.v1.Tag|❌| |
-| 6 | region_code |string|❌| |
-| 7 | project_id |string|❌| |
-| 8 | domain_id |string|✅| |
-| 9 | release_project |bool|❌| |
-| 10 | release_region |bool|❌| |
+| 2 | name |string|❌| |
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | region_code |string|❌| |
+| 8 | project_id |string|❌| |
+| 9 | domain_id |string|✅| |
+| 10 | release_project |bool|❌| |
+| 11 | release_region |bool|❌| |
