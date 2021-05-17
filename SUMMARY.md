@@ -100,10 +100,13 @@
     * [Job](spot_automation/v1/job.md)
     * [Spot Group](spot_automation/v1/spot-group.md)
 * [Statistics](statistics/README.md)
+  * [Plugin](statistics/plugin/README.md)
+    * [Storage](statistics/plugin/storage.md)
   * [V1](statistics/v1/README.md)
     * [History](statistics/v1/history.md)
     * [Resource](statistics/v1/resource.md)
     * [Schedule](statistics/v1/schedule.md)
+    * [Storage](statistics/v1/storage.md)
 
 
 ## Reference Link

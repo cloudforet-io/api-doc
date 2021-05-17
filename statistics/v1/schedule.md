@@ -141,7 +141,8 @@ description:
 | 2 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | schedule |[Scheduled](schedule.md#scheduled)|✅| |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | domain_id |string|✅| |
+| 5 | user_id |string|✅| |
+| 6 | domain_id |string|✅| |
 
 ### GetScheduleRequest
 | No | Field | Type | Required | Description |
@@ -281,4 +282,5 @@ description:
 | 1 | schedule_id |string|✅| |
 | 2 | schedule |[Scheduled](schedule.md#scheduled)|❌| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | domain_id |string|✅| |
+| 4 | storage_id |string|✅| |
+| 5 | domain_id |string|✅| |
