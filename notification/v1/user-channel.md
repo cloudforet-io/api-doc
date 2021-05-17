@@ -3,7 +3,7 @@ description:
 ---
 # User channel
 
->  **Package : spaceone.api.monitoring.v1**
+>  **Package : spaceone.api.notification.v1**
 
 ## UserChannel
 
@@ -27,7 +27,7 @@ description:
 
  
 ### create
-> **POST** /monitoring/v1/user-channels
+> **POST** /notification/v1/user-channels
 >
 
 
@@ -40,7 +40,7 @@ description:
 
  
 ### update
-> **PUT** /monitoring/v1/user-channel/{user_channel_id}
+> **PUT** /notification/v1/user-channel/{user_channel_id}
 >
 
 
@@ -53,7 +53,7 @@ description:
 
  
 ### enable
-> **PUT** /monitoring/v1/user-channel/{user_channel_id}/enable
+> **PUT** /notification/v1/user-channel/{user_channel_id}/enable
 >
 
 
@@ -66,7 +66,7 @@ description:
 
  
 ### disable
-> **PUT** /monitoring/v1/user-channel/{user_channel_id}/disable
+> **PUT** /notification/v1/user-channel/{user_channel_id}/disable
 >
 
 
@@ -79,7 +79,7 @@ description:
 
  
 ### delete
-> **DELETE** /monitoring/v1/user-channel/{user_channel_id}
+> **DELETE** /notification/v1/user-channel/{user_channel_id}
 >
 
 
@@ -92,7 +92,7 @@ description:
 
  
 ### get
-> **GET** /monitoring/v1/user-channel/{user_channel_id}
+> **GET** /notification/v1/user-channel/{user_channel_id}
 >
 
 
@@ -105,9 +105,9 @@ description:
 
  
 ### list
-> **GET** /monitoring/v1/user-channels
+> **GET** /notification/v1/user-channels
 >
-> **POST** /monitoring/v1/user-channels/search
+> **POST** /notification/v1/user-channels/search
 
 
 
@@ -120,7 +120,7 @@ description:
 
  
 ### stat
-> **POST** /monitoring/v1/user-channels/stat
+> **POST** /notification/v1/user-channels/stat
 >
 
 

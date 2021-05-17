@@ -3,7 +3,7 @@ description:
 ---
 # Protocol
 
->  **Package : spaceone.api.monitoring.v1**
+>  **Package : spaceone.api.notification.v1**
 
 ## Protocol
 
@@ -28,7 +28,7 @@ description:
 
  
 ### create
-> **POST** /monitoring/v1/protocols
+> **POST** /notification/v1/protocols
 >
 
 
@@ -41,7 +41,7 @@ description:
 
  
 ### update
-> **PUT** /monitoring/v1/protocol/{protocol_id}
+> **PUT** /notification/v1/protocol/{protocol_id}
 >
 
 
@@ -54,7 +54,7 @@ description:
 
  
 ### update_plugin
-> **PUT** /monitoring/v1/protocol/{protocol_id}/plugin
+> **PUT** /notification/v1/protocol/{protocol_id}/plugin
 >
 
 
@@ -67,7 +67,7 @@ description:
 
  
 ### enable
-> **PUT** /monitoring/v1/protocol/{protocol_id}/enable
+> **PUT** /notification/v1/protocol/{protocol_id}/enable
 >
 
 
@@ -80,7 +80,7 @@ description:
 
  
 ### disable
-> **PUT** /monitoring/v1/protocol/{protocol_id}/disable
+> **PUT** /notification/v1/protocol/{protocol_id}/disable
 >
 
 
@@ -93,7 +93,7 @@ description:
 
  
 ### delete
-> **DELETE** /monitoring/v1/protocol/{protocol_id}
+> **DELETE** /notification/v1/protocol/{protocol_id}
 >
 
 
@@ -106,7 +106,7 @@ description:
 
  
 ### get
-> **GET** /monitoring/v1/protocol/{protocol_id}
+> **GET** /notification/v1/protocol/{protocol_id}
 >
 
 
@@ -119,9 +119,9 @@ description:
 
  
 ### list
-> **GET** /monitoring/v1/protocols
+> **GET** /notification/v1/protocols
 >
-> **POST** /monitoring/v1/protocols/search
+> **POST** /notification/v1/protocols/search
 
 
 
@@ -134,7 +134,7 @@ description:
 
  
 ### stat
-> **POST** /monitoring/v1/protocols/stat
+> **POST** /notification/v1/protocols/stat
 >
 
 
