@@ -111,8 +111,8 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | title |string|✅| |
 | 2 | projects |list of string|✅| |
-| 3 | start |string|✅| |
-| 4 | end |string|✅| |
+| 3 | start_time |string|✅| |
+| 4 | end_time |string|✅| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | domain_id |string|✅| |
 
@@ -161,14 +161,14 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">start</td>
+      <td style="text-align:left">start_time</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">end</td>
+      <td style="text-align:left">end_time</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -307,7 +307,7 @@ description:
 | 1 | maintenance_window_id |string|✅| |
 | 2 | title |string|❌| |
 | 3 | projects |list of string|❌| |
-| 4 | start |string|❌| |
-| 5 | end |string|❌| |
+| 4 | start_time |string|❌| |
+| 5 | end_time |string|❌| |
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | domain_id |string|✅| |
