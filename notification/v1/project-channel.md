@@ -17,12 +17,13 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**create**](project-channel.md#create)|   [CreateProjectChannelRequest](project-channel.md#createprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
 | 2 | [**update**](project-channel.md#update)|   [UpdateProjectChannelRequest](project-channel.md#updateprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
-| 3 | [**enable**](project-channel.md#enable)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
-| 4 | [**disable**](project-channel.md#disable)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
-| 5 | [**delete**](project-channel.md#delete)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [**get**](project-channel.md#get)|   [GetProjectChannelRequest](project-channel.md#getprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
-| 7 | [**list**](project-channel.md#list)|   [ProjectChannelQuery](project-channel.md#projectchannelquery) |   [ProjectChannelsInfo](project-channel.md#projectchannelsinfo) |  |
-| 8 | [**stat**](project-channel.md#stat)|   [ProjectChannelStatQuery](project-channel.md#projectchannelstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 3 | [**set_subscription**](project-channel.md#set_subscription)|   [UpdateSubscriptionRequest](project-channel.md#updatesubscriptionrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
+| 4 | [**enable**](project-channel.md#enable)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
+| 5 | [**disable**](project-channel.md#disable)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
+| 6 | [**delete**](project-channel.md#delete)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 7 | [**get**](project-channel.md#get)|   [GetProjectChannelRequest](project-channel.md#getprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
+| 8 | [**list**](project-channel.md#list)|   [ProjectChannelQuery](project-channel.md#projectchannelquery) |   [ProjectChannelsInfo](project-channel.md#projectchannelsinfo) |  |
+| 9 | [**stat**](project-channel.md#stat)|   [ProjectChannelStatQuery](project-channel.md#projectchannelstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -47,6 +48,19 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateProjectChannelRequest](project-channel.md#updateprojectchannelrequest) |
+| Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
+ 
+ 
+
+ 
+### set_subscription
+> **PUT** /notification/v1/project-channel/{project_channel_id}/subscription
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [UpdateSubscriptionRequest](project-channel.md#updatesubscriptionrequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
  
  
@@ -141,12 +155,13 @@ description:
 | 2 | name |string|✅| |
 | 3 | schema |string|✅| |
 | 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 5 | subscriptions |list of string|❌| |
-| 6 | notification_level |string|❌| |
-| 7 | schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|❌| |
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 9 | project_id |string|✅| |
-| 10 | domain_id |string|✅| |
+| 5 | is_subscribe |bool|❌| |
+| 6 | subscriptions |list of string|❌| |
+| 7 | notification_level |string|❌| |
+| 8 | schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|❌| |
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 10 | project_id |string|✅| |
+| 11 | domain_id |string|✅| |
 
 ### GetProjectChannelRequest
 | No | Field | Type | Required | Description |
@@ -214,55 +229,62 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">7</td>
+      <td style="text-align:left">is_subscribe</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">subscriptions</td>
       <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">notification_level</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">schedule</td>
       <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -349,7 +371,7 @@ description:
       <td style="text-align:left">9</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -434,8 +456,15 @@ description:
 | 1 | project_channel_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | subscriptions |list of string|❌| |
-| 5 | notification_level |string|❌| |
-| 6 | schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|❌| |
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 8 | domain_id |string|✅| |
+| 4 | notification_level |string|❌| |
+| 5 | schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | domain_id |string|✅| |
+
+### UpdateSubscriptionRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | project_channel_id |string|✅| |
+| 2 | is_subscribe |bool|✅| |
+| 3 | subscriptions |list of string|❌| |
+| 4 | domain_id |string|✅| |
