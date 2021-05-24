@@ -196,20 +196,27 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">9</td>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left">created_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">10</td>
-      <td style="text-align:left">updated_at</td>
+      <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">11</td>
+      <td style="text-align:left">updated_at</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">closed_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -268,11 +275,18 @@ description:
       <td style="text-align:left">5</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
-
    </tr>
     <tr>
       <td style="text-align:left">6</td>
+      <td style="text-align:left">created_by</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
