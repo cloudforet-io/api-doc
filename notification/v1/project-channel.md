@@ -54,7 +54,7 @@ description:
 
  
 ### set_subscription
-> **PUT** /notification/v1/user-channel/{user_channel_id}/subscription
+> **PUT** /notification/v1/project-channel/{project_channel_id}/subscription
 >
 
 
