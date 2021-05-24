@@ -226,7 +226,7 @@ description:
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">plugin_info</td>
-      <td style="text-align:left"><a href="data-source.md#plugininfo">PluginInfo</a></td>
+      <td style="text-align:left"><a href="data-source.md#datasourceplugininfo">DataSourcePluginInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -255,6 +255,16 @@ description:
 </table>
 
 
+
+### DataSourcePluginInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | plugin_id |string | |
+| 2 | version |string | |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | secret_id |string | |
+| 6 | provider |string | |
 
 ### DataSourceQuery
 <table>
@@ -351,21 +361,11 @@ description:
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
-### PluginInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string | |
-| 2 | version |string | |
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 5 | secret_id |string | |
-| 6 | provider |string | |
-
 ### RegisterDataSourceRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
-| 2 | plugin_info |[PluginInfo](data-source.md#plugininfo)|✅| |
+| 2 | plugin_info |[DataSourcePluginInfo](data-source.md#datasourceplugininfo)|✅| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
 
@@ -382,9 +382,8 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | data_source_id |string|✅| |
 | 2 | name |string|❌| |
-| 3 | plugin_info |[PluginInfo](data-source.md#plugininfo)|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | domain_id |string|✅| |
+| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | domain_id |string|✅| |
 
 ### VerifyInfo
 | No | Field | Type |  Description |

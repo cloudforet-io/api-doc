@@ -142,7 +142,7 @@ description:
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">rules</td>
-      <td style="text-align:left"><a href="escalation-policy.md#escalationpolicyrules">list of EscalationPolicyRules</a></td>
+      <td style="text-align:left"><a href="escalation-policy.md#escalationpolicyrule">list of EscalationPolicyRule</a></td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
@@ -202,7 +202,7 @@ description:
 | 1 | escalation_policy_id |string | |
 | 2 | name |string | |
 | 3 | is_default |bool | |
-| 4 | rules |[list of EscalationPolicyRules](escalation-policy.md#escalationpolicyrules) | |
+| 4 | rules |[list of EscalationPolicyRule](escalation-policy.md#escalationpolicyrule) | |
 | 5 | repeat_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 | 6 | project_id |string | |
 | 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
@@ -223,11 +223,43 @@ description:
 | 1 | escalation_policy_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
-### EscalationPolicyRules
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | notification_level |string | |
-| 2 | escalate_minutes |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+### EscalationPolicyRule
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ALL</li>
+          	<li>LV1</li>
+          	<li>LV2</li>
+          	<li>LV3</li>
+          	<li>LV4</li>
+          	<li>LV5</li>
+        </ul></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">escalate_minutes</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### EscalationPolicyStatQuery
 | No | Field | Type | Required | Description |
@@ -271,7 +303,7 @@ description:
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">rules</td>
-      <td style="text-align:left"><a href="escalation-policy.md#escalationpolicyrules">list of EscalationPolicyRules</a></td>
+      <td style="text-align:left"><a href="escalation-policy.md#escalationpolicyrule">list of EscalationPolicyRule</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>

@@ -152,7 +152,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
-| 2 | plugin_info |[PluginInfo](webhook.md#plugininfo)|✅| |
+| 2 | plugin_info |[WebhookPluginInfo](webhook.md#webhookplugininfo)|✅| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | project_id |string|✅| |
 | 5 | domain_id |string|✅| |
@@ -163,14 +163,6 @@ description:
 | 1 | webhook_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
-
-### PluginInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string | |
-| 2 | version |string | |
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### UpdateWebhookPluginRequest
 | No | Field | Type | Required | Description |
@@ -248,7 +240,7 @@ description:
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">plugin_info</td>
-      <td style="text-align:left"><a href="webhook.md#plugininfo">PluginInfo</a></td>
+      <td style="text-align:left"><a href="webhook.md#webhookplugininfo">WebhookPluginInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -284,6 +276,14 @@ description:
 </table>
 
 
+
+### WebhookPluginInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | plugin_id |string | |
+| 2 | version |string | |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### WebhookQuery
 <table>
