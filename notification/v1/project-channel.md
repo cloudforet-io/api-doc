@@ -17,7 +17,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**create**](project-channel.md#create)|   [CreateProjectChannelRequest](project-channel.md#createprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
 | 2 | [**update**](project-channel.md#update)|   [UpdateProjectChannelRequest](project-channel.md#updateprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
-| 3 | [**set_subscription**](project-channel.md#set_subscription)|   [UpdateSubscriptionRequest](project-channel.md#updatesubscriptionrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
+| 3 | [**set_subscription**](project-channel.md#set_subscription)|   [UpdateProjectChannelSubscriptionRequest](project-channel.md#updateprojectchannelsubscriptionrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
 | 4 | [**enable**](project-channel.md#enable)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
 | 5 | [**disable**](project-channel.md#disable)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |  |
 | 6 | [**delete**](project-channel.md#delete)|   [ProjectChannelRequest](project-channel.md#projectchannelrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -60,7 +60,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateSubscriptionRequest](project-channel.md#updatesubscriptionrequest) |
+| Request | [UpdateProjectChannelSubscriptionRequest](project-channel.md#updateprojectchannelsubscriptionrequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
  
  
@@ -634,7 +634,7 @@ description:
 
 
 
-### UpdateSubscriptionRequest
+### UpdateProjectChannelSubscriptionRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | project_channel_id |string|✅| |

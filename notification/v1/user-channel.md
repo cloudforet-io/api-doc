@@ -17,7 +17,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**create**](user-channel.md#create)|   [CreateUserChannelRequest](user-channel.md#createuserchannelrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |  |
 | 2 | [**update**](user-channel.md#update)|   [UpdateUserChannelRequest](user-channel.md#updateuserchannelrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |  |
-| 3 | [**set_subscription**](user-channel.md#set_subscription)|   [UpdateSubscriptionRequest](user-channel.md#updatesubscriptionrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |  |
+| 3 | [**set_subscription**](user-channel.md#set_subscription)|   [UpdateUserChannelSubscriptionRequest](user-channel.md#updateuserchannelsubscriptionrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |  |
 | 4 | [**enable**](user-channel.md#enable)|   [UserChannelRequest](user-channel.md#userchannelrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |  |
 | 5 | [**disable**](user-channel.md#disable)|   [UserChannelRequest](user-channel.md#userchannelrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |  |
 | 6 | [**delete**](user-channel.md#delete)|   [UserChannelRequest](user-channel.md#userchannelrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -60,7 +60,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateSubscriptionRequest](user-channel.md#updatesubscriptionrequest) |
+| Request | [UpdateUserChannelSubscriptionRequest](user-channel.md#updateuserchannelsubscriptionrequest) |
 | Response |  [UserChannelInfo](user-channel.md#userchannelinfo)  |
  
  
@@ -169,14 +169,6 @@ description:
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
-### UpdateSubscriptionRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | user_channel_id |string|✅| |
-| 2 | is_subscribe |bool|✅| |
-| 3 | subscriptions |list of string|❌| |
-| 4 | domain_id |string|✅| |
-
 ### UpdateUserChannelRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -186,6 +178,14 @@ description:
 | 4 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|❌| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | domain_id |string|✅| |
+
+### UpdateUserChannelSubscriptionRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | user_channel_id |string|✅| |
+| 2 | is_subscribe |bool|✅| |
+| 3 | subscriptions |list of string|❌| |
+| 4 | domain_id |string|✅| |
 
 ### UserChannelInfo
 <table>
