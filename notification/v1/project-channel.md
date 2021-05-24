@@ -149,18 +149,106 @@ description:
 ## Message
 
 ### CreateProjectChannelRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | protocol_id |string|✅| |
-| 2 | name |string|✅| |
-| 3 | schema |string|✅| |
-| 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 5 | subscriptions |list of string|❌| |
-| 6 | notification_level |string|❌| |
-| 7 | schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|❌| |
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 9 | project_id |string|✅| |
-| 10 | domain_id |string|✅| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">protocol_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">schema</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">data</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">is_subscribe</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">subscriptions</td>
+      <td style="text-align:left">list of string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ALL</li>
+          	<li>LV1</li>
+          	<li>LV2</li>
+          	<li>LV3</li>
+          	<li>LV4</li>
+          	<li>LV5</li>
+        </ul></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">schedule</td>
+      <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">tags</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### GetProjectChannelRequest
 | No | Field | Type | Required | Description |
@@ -228,55 +316,70 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">7</td>
+      <td style="text-align:left">is_subscribe</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">subscriptions</td>
       <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">notification_level</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ALL</li>
+          	<li>LV1</li>
+          	<li>LV2</li>
+          	<li>LV3</li>
+          	<li>LV4</li>
+          	<li>LV5</li>
+        </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">schedule</td>
       <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -348,7 +451,15 @@ description:
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">notification_level</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ALL</li>
+          	<li>LV1</li>
+          	<li>LV2</li>
+          	<li>LV3</li>
+          	<li>LV4</li>
+          	<li>LV5</li>
+        </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -443,16 +554,85 @@ description:
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateProjectChannelRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | project_channel_id |string|✅| |
-| 2 | name |string|❌| |
-| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | subscriptions |list of string|❌| |
-| 5 | notification_level |string|❌| |
-| 6 | schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|❌| |
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 8 | domain_id |string|✅| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">project_channel_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">data</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">subscriptions</td>
+      <td style="text-align:left">list of string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ALL</li>
+          	<li>LV1</li>
+          	<li>LV2</li>
+          	<li>LV3</li>
+          	<li>LV4</li>
+          	<li>LV5</li>
+        </ul></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">schedule</td>
+      <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">tags</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### UpdateSubscriptionRequest
 | No | Field | Type | Required | Description |
