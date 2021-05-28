@@ -157,9 +157,9 @@ description:
       <td style="text-align:left">4</td>
       <td style="text-align:left">finish_condition</td>
       <td style="text-align:left"><ul>
-          	<li>FINISH_CONDITION_NONE</li>
-          	<li>ALL</li>
-          	<li>HIGH_ONLY</li>
+          	<li>NONE</li>
+          	<li>ACKNOWLEDGED</li>
+          	<li>RESOLVED</li>
         </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
@@ -246,9 +246,9 @@ description:
       <td style="text-align:left">6</td>
       <td style="text-align:left">finish_condition</td>
       <td style="text-align:left"><ul>
-          	<li>FINISH_CONDITION_NONE</li>
-          	<li>ALL</li>
-          	<li>HIGH_ONLY</li>
+          	<li>NONE</li>
+          	<li>ACKNOWLEDGED</li>
+          	<li>RESOLVED</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -341,9 +341,9 @@ description:
       <td style="text-align:left">5</td>
       <td style="text-align:left">finish_condition</td>
       <td style="text-align:left"><ul>
-          	<li>FINISH_CONDITION_NONE</li>
-          	<li>ALL</li>
-          	<li>HIGH_ONLY</li>
+          	<li>NONE</li>
+          	<li>ACKNOWLEDGED</li>
+          	<li>RESOLVED</li>
         </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
@@ -479,9 +479,9 @@ description:
       <td style="text-align:left">5</td>
       <td style="text-align:left">finish_condition</td>
       <td style="text-align:left"><ul>
-          	<li>FINISH_CONDITION_NONE</li>
-          	<li>ALL</li>
-          	<li>HIGH_ONLY</li>
+          	<li>NONE</li>
+          	<li>ACKNOWLEDGED</li>
+          	<li>RESOLVED</li>
         </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
