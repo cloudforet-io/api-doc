@@ -124,11 +124,12 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | note_id |string | |
-| 2 | note |string | |
-| 3 | user_id |string | |
-| 4 | project_id |string | |
-| 5 | domain_id |string | |
-| 6 | created_at |string | |
+| 2 | alert_id |string | |
+| 3 | note |string | |
+| 4 | user_id |string | |
+| 5 | project_id |string | |
+| 6 | domain_id |string | |
+| 7 | created_at |string | |
 
 ### NoteQuery
 | No | Field | Type | Required | Description |

@@ -198,7 +198,7 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">alert_number</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -284,7 +284,7 @@ description:
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">escalation_level</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -392,7 +392,7 @@ description:
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">alert_number</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
