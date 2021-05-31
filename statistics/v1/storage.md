@@ -184,7 +184,7 @@ description:
 | 1 | plugin_id |string | |
 | 2 | version |string | |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | secret_data |string | |
+| 4 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 5 | schema |string | |
 
 ### RegisterStorageRequest
