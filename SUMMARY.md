@@ -66,6 +66,7 @@
     * [Webhook](monitoring/v1/webhook.md)
 * [Notification](notification/README.md)
   * [V1](notification/v1/README.md)
+    * [Notification](notification/v1/notification.md)
     * [Project Channel](notification/v1/project-channel.md)
     * [Protocol](notification/v1/protocol.md)
     * [User Channel](notification/v1/user-channel.md)
