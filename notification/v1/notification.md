@@ -5,10 +5,10 @@ description:
 
 >  **Package : spaceone.api.notification.v1**
 
-## Protocol
+## Notification
 
 {% hint style="info" %}
-**Protocol Methods:**
+**Notification Methods:**
 
 {%  endhint %}
 
