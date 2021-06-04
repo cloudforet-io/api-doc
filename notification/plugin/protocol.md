@@ -58,3 +58,4 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
