@@ -69,7 +69,7 @@
 * [Notification](notification/README.md)
   * [Plugin](notification/plugin/README.md)
     * [Notification](notification/plugin/notification.md)
-    * [Webhook](notification/plugin/webhook.md)
+    * [Protocol](notification/plugin/protocol.md)
   * [V1](notification/v1/README.md)
     * [Notification](notification/v1/notification.md)
     * [Project Channel](notification/v1/project-channel.md)
