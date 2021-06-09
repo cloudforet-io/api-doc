@@ -32,7 +32,7 @@ description:
 
 ## Message
 
-### EventResult
+### EventInfo
 <table>
   <thead>
     <tr>
@@ -52,20 +52,27 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">title</td>
+      <td style="text-align:left">event_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">description</td>
+      <td style="text-align:left">title</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">4</td>
+      <td style="text-align:left">description</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">severity</td>
       <td style="text-align:left"><ul>
           	<li>SEVERITY_NONE</li>
@@ -79,21 +86,21 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">resource</td>
-      <td style="text-align:left"><a href="event.md#resource">Resource</a></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">rule</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
@@ -107,18 +114,10 @@ description:
 ### EventsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[list of EventResult](event.md#eventresult) | |
+| 1 | results |[list of EventInfo](event.md#eventinfo) | |
 
 ### ParseRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 2 | raw_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-
-### Resource
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | resource_id |string | |
-| 2 | name |string | |
-| 3 | ip_address |string | |
-| 4 | resource_type |string | |
