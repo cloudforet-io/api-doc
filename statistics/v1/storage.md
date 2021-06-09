@@ -329,8 +329,3 @@ description:
 | 2 | name |string|❌| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
-
-### VerifyInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | status |bool | |
