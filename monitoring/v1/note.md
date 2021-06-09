@@ -126,7 +126,7 @@ description:
 | 1 | note_id |string | |
 | 2 | alert_id |string | |
 | 3 | note |string | |
-| 4 | user_id |string | |
+| 4 | created_by |string | |
 | 5 | project_id |string | |
 | 6 | domain_id |string | |
 | 7 | created_at |string | |
@@ -137,7 +137,7 @@ description:
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | note_id |string|❌| |
 | 3 | alert_id |string|❌| |
-| 4 | user_id |string|❌| |
+| 4 | created_by |string|❌| |
 | 5 | project_id |string|❌| |
 | 6 | domain_id |string|❌| |
 
