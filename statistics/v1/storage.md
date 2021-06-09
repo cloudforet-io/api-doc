@@ -320,7 +320,8 @@ description:
 | 1 | storage_id |string|✅| |
 | 2 | version |string|❌| |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | domain_id |string|✅| |
+| 4 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | domain_id |string|✅| |
 
 ### UpdateStorageRequest
 | No | Field | Type | Required | Description |
