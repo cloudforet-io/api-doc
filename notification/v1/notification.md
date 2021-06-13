@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) |  |
+| 1 | [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 2 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 3 | [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) |  |
 | 4 | [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) |  |
@@ -31,7 +31,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateNotificationRequest](notification.md#createnotificationrequest) |
-| Response |  [NotificationInfo](notification.md#notificationinfo)  |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
 
