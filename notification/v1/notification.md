@@ -178,6 +178,7 @@ description:
 | 1 | notification_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
+| 4 | set_read |bool|❌| |
 
 ### NotificationInfo
 <table>
@@ -363,6 +364,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">10</td>
+      <td style="text-align:left">set_read</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
