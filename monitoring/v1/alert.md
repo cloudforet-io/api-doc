@@ -56,7 +56,7 @@ description:
 
  
 ### update_state
-> **PUT** /monitoring/v1/alert/{alert_id}/state
+> **POST** /monitoring/v1/alert/{alert_id}/{access_key}/{state}
 >
 
 
@@ -631,27 +631,34 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">status_message</td>
+      <td style="text-align:left">state</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">description</td>
+      <td style="text-align:left">status_message</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">assignee</td>
+      <td style="text-align:left">description</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
+      <td style="text-align:left">assignee</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">urgency</td>
       <td style="text-align:left"><ul>
           	<li>ALERT_URGENCY_NONE</li>
@@ -662,14 +669,14 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
@@ -681,51 +688,8 @@ description:
 
 
 ### UpdateAlertStateRequest
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">alert_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>ALERT_STATE_NONE</li>
-          	<li>TRIGGERED</li>
-          	<li>ACKNOWLEDGED</li>
-          	<li>RESOLVED</li>
-        </ul></td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">status_message</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | alert_id |string|✅| |
+| 2 | access_key |string|✅| |
+| 3 | state |string|❌| |

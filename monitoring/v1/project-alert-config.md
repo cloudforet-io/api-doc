@@ -106,22 +106,7 @@ description:
 
 ## Message
 
-### CreateProjectAlertConfigRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | project_id |string|✅| |
-| 2 | escalation_policy_id |string|❌| |
-| 3 | notification_options |[NotificationOptions](project-alert-config.md#notificationoptions)|❌| |
-| 4 | domain_id |string|✅| |
-
-### GetProjectAlertConfigRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | project_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
-
-### NotificationOptions
+### AlertOptions
 <table>
   <thead>
     <tr>
@@ -134,7 +119,7 @@ description:
   <tbody>
     <tr>
       <td style="text-align:left">1</td>
-      <td style="text-align:left">urgency</td>
+      <td style="text-align:left">notification_urgency</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ALL</li>
@@ -143,16 +128,38 @@ description:
 <td style="text-align:left"></td>
 
    </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">auto_recovery</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left"></td>
+
+   </tr>
   </tbody>
 </table>
 
 
 
+### CreateProjectAlertConfigRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | project_id |string|✅| |
+| 2 | escalation_policy_id |string|❌| |
+| 3 | options |[AlertOptions](project-alert-config.md#alertoptions)|❌| |
+| 4 | domain_id |string|✅| |
+
+### GetProjectAlertConfigRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | project_id |string|✅| |
+| 2 | domain_id |string|✅| |
+| 3 | only |list of string|❌| |
+
 ### ProjectAlertConfigInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | project_id |string | |
-| 2 | notification_options |[NotificationOptions](project-alert-config.md#notificationoptions) | |
+| 2 | options |[AlertOptions](project-alert-config.md#alertoptions) | |
 | 3 | escalation_policy_info |[EscalationPolicyInfo](project-alert-config.md#escalationpolicyinfo) | |
 | 4 | domain_id |string | |
 | 5 | created_at |string | |
@@ -188,5 +195,5 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | project_id |string|✅| |
 | 2 | escalation_policy_id |string|❌| |
-| 3 | notification_options |[NotificationOptions](project-alert-config.md#notificationoptions)|❌| |
+| 3 | options |[AlertOptions](project-alert-config.md#alertoptions)|❌| |
 | 4 | domain_id |string|✅| |
