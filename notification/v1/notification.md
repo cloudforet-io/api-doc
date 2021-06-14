@@ -248,27 +248,20 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">7</td>
-      <td style="text-align:left">parent_notification_id</td>
+      <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">8</td>
-      <td style="text-align:left">user_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">string project_id = 8;</td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
