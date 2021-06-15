@@ -15,7 +15,7 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](event.md#create)|   [CreateEventRequest](event.md#createeventrequest) |   [EventInfo](event.md#eventinfo) |  |
+| 1 | [**create**](event.md#create)|   [CreateEventRequest](event.md#createeventrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 2 | [**get**](event.md#get)|   [GetEventRequest](event.md#geteventrequest) |   [EventInfo](event.md#eventinfo) |  |
 | 3 | [**list**](event.md#list)|   [EventQuery](event.md#eventquery) |   [EventsInfo](event.md#eventsinfo) |  |
 | 4 | [**stat**](event.md#stat)|   [EventStatQuery](event.md#eventstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
@@ -30,7 +30,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateEventRequest](event.md#createeventrequest) |
-| Response |  [EventInfo](event.md#eventinfo)  |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
 
