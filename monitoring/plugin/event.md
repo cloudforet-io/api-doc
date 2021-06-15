@@ -108,7 +108,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">9</td>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left">additional_info</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
