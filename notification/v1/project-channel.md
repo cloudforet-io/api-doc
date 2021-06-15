@@ -666,7 +666,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | project_channel_id |string|✅| |
-| 2 | is_schedule |bool|✅| |
+| 2 | is_scheduled |bool|✅| |
 | 3 | schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|❌| |
 | 4 | domain_id |string|✅| |
 

@@ -197,7 +197,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | user_channel_id |string|✅| |
-| 2 | is_schedule |bool|| |
+| 2 | is_scheduled |bool|✅| |
 | 3 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|❌| |
 | 4 | domain_id |string|✅| |
 
