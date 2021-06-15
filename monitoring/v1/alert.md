@@ -20,12 +20,14 @@ description:
 | 3 | [**update_state**](alert.md#update_state)|   [UpdateAlertStateRequest](alert.md#updatealertstaterequest) |   [AlertInfo](alert.md#alertinfo) |  |
 | 4 | [**merge**](alert.md#merge)|   [MergeAlertRequest](alert.md#mergealertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
 | 5 | [**snooze**](alert.md#snooze)|   [SnoozeAlertRequest](alert.md#snoozealertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| 6 | [**add_responder**](alert.md#add_responder)|   [AddAlertResponderRequest](alert.md#addalertresponderrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| 7 | [**remove_responder**](alert.md#remove_responder)|   [RemoveAlertResponderRequest](alert.md#removealertresponderrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| 8 | [**delete**](alert.md#delete)|   [AlertRequest](alert.md#alertrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 9 | [**get**](alert.md#get)|   [GetAlertRequest](alert.md#getalertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| 10 | [**list**](alert.md#list)|   [AlertQuery](alert.md#alertquery) |   [AlertsInfo](alert.md#alertsinfo) |  |
-| 11 | [**stat**](alert.md#stat)|   [AlertStatQuery](alert.md#alertstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 6 | [**add_responder**](alert.md#add_responder)|   [AlertResponderRequest](alert.md#alertresponderrequest) |   [AlertInfo](alert.md#alertinfo) |  |
+| 7 | [**remove_responder**](alert.md#remove_responder)|   [AlertResponderRequest](alert.md#alertresponderrequest) |   [AlertInfo](alert.md#alertinfo) |  |
+| 8 | [**add_project_dependency**](alert.md#add_project_dependency)|   [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest) |   [AlertInfo](alert.md#alertinfo) |  |
+| 9 | [**remove_project_dependency**](alert.md#remove_project_dependency)|   [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest) |   [AlertInfo](alert.md#alertinfo) |  |
+| 10 | [**delete**](alert.md#delete)|   [AlertRequest](alert.md#alertrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 11 | [**get**](alert.md#get)|   [GetAlertRequest](alert.md#getalertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
+| 12 | [**list**](alert.md#list)|   [AlertQuery](alert.md#alertquery) |   [AlertsInfo](alert.md#alertsinfo) |  |
+| 13 | [**stat**](alert.md#stat)|   [AlertStatQuery](alert.md#alertstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -101,7 +103,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [AddAlertResponderRequest](alert.md#addalertresponderrequest) |
+| Request | [AlertResponderRequest](alert.md#alertresponderrequest) |
 | Response |  [AlertInfo](alert.md#alertinfo)  |
  
  
@@ -114,7 +116,33 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RemoveAlertResponderRequest](alert.md#removealertresponderrequest) |
+| Request | [AlertResponderRequest](alert.md#alertresponderrequest) |
+| Response |  [AlertInfo](alert.md#alertinfo)  |
+ 
+ 
+
+ 
+### add_project_dependency
+> **POST** /monitoring/v1/alert/{alert_id}/project-dependencies
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest) |
+| Response |  [AlertInfo](alert.md#alertinfo)  |
+ 
+ 
+
+ 
+### remove_project_dependency
+> **DELETE** /monitoring/v1/alert/{alert_id}/project-dependency/{project_id}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest) |
 | Response |  [AlertInfo](alert.md#alertinfo)  |
  
  
@@ -175,14 +203,6 @@ description:
 ## 
 
 ## Message
-
-### AddAlertResponderRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | alert_id |string|✅| |
-| 2 | resource_type |string|✅| |
-| 3 | resource_id |string|✅| |
-| 4 | domain_id |string|✅| |
 
 ### AlertInfo
 <table>
@@ -269,97 +289,125 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">10</td>
+      <td style="text-align:left">rule</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
+      <td style="text-align:left">resource</td>
+      <td style="text-align:left"><a href="alert.md#alertresource">AlertResource</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">12</td>
+      <td style="text-align:left">additional_info</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">is_snoozed</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">snoozed_end_time</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
-      <td style="text-align:left">escalation_level</td>
+      <td style="text-align:left">15</td>
+      <td style="text-align:left">escalation_step</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">escalation_ttl</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">responders</td>
       <td style="text-align:left"><a href="alert.md#alertresponder">list of AlertResponder</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">18</td>
+      <td style="text-align:left">project_dependencies</td>
+      <td style="text-align:left">list of string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">19</td>
       <td style="text-align:left">webhook_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">20</td>
       <td style="text-align:left">escalation_policy_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">21</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">18</td>
+      <td style="text-align:left">22</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">19</td>
+      <td style="text-align:left">23</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">20</td>
+      <td style="text-align:left">24</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">21</td>
+      <td style="text-align:left">25</td>
       <td style="text-align:left">acknowledged_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">22</td>
+      <td style="text-align:left">26</td>
       <td style="text-align:left">resolved_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">23</td>
+      <td style="text-align:left">27</td>
       <td style="text-align:left">escalated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -369,6 +417,13 @@ description:
 </table>
 
 
+
+### AlertProjectDependencyRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | alert_id |string|✅| |
+| 2 | project_id |string|✅| |
+| 3 | domain_id |string|✅| |
 
 ### AlertQuery
 <table>
@@ -493,11 +548,27 @@ description:
 | 1 | alert_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
+### AlertResource
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | resource_id |string | |
+| 2 | resource_type |string | |
+| 3 | name |string | |
+| 4 | ip_address |string | |
+
 ### AlertResponder
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | resource_type |string | |
 | 2 | resource_id |string | |
+
+### AlertResponderRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | alert_id |string|✅| |
+| 2 | resource_type |string|✅| |
+| 3 | resource_id |string|✅| |
+| 4 | domain_id |string|✅| |
 
 ### AlertStatQuery
 | No | Field | Type | Required | Description |
@@ -587,14 +658,6 @@ description:
 | 1 | alerts |list of string|✅| |
 | 2 | merge_to |string|✅| |
 | 3 | domain_id |string|✅| |
-
-### RemoveAlertResponderRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | alert_id |string|✅| |
-| 2 | resource_type |string|✅| |
-| 3 | resource_id |string|✅| |
-| 4 | domain_id |string|✅| |
 
 ### SnoozeAlertRequest
 | No | Field | Type | Required | Description |

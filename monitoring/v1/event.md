@@ -97,7 +97,7 @@ description:
 | 7 | rule |string | |
 | 8 | resource |[EventResource](event.md#eventresource) | |
 | 9 | raw_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 10 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 10 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 11 | alert_id |string | |
 | 12 | webhook_id |string | |
 | 13 | project_id |string | |
