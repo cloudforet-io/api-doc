@@ -78,6 +78,13 @@ description:
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">channel_data</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
   </tbody>
 </table>
 
