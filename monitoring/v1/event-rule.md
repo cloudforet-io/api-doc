@@ -132,7 +132,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | conditions |[list of EventRuleCondition](event-rule.md#eventrulecondition)|✅| |
-| 3 | action |[EventRuleAction](event-rule.md#eventruleaction)|✅| |
+| 3 | actions |[EventRuleAction](event-rule.md#eventruleaction)|✅| |
 | 4 | options |[EventRuleOptions](event-rule.md#eventruleoptions)|❌| |
 | 5 | project_id |string|❌| |
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
@@ -203,7 +203,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">action</td>
+      <td style="text-align:left">actions</td>
       <td style="text-align:left"><a href="event-rule.md#eventruleaction">EventRuleAction</a></td>
 <td style="text-align:left"></td>
 
@@ -358,7 +358,7 @@ description:
 | 1 | event_rule_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | conditions |[list of EventRuleCondition](event-rule.md#eventrulecondition)|❌| |
-| 4 | action |[EventRuleAction](event-rule.md#eventruleaction)|❌| |
+| 4 | actions |[EventRuleAction](event-rule.md#eventruleaction)|❌| |
 | 5 | options |[EventRuleOptions](event-rule.md#eventruleoptions)|❌| |
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | domain_id |string|✅| |
