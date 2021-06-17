@@ -132,13 +132,19 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | name |string|✅| |
 | 2 | conditions |[list of EventRuleCondition](event-rule.md#eventrulecondition)|✅| |
-| 3 | actions |[EventRuleAction](event-rule.md#eventruleaction)|✅| |
+| 3 | actions |[EventRuleActions](event-rule.md#eventruleactions)|✅| |
 | 4 | options |[EventRuleOptions](event-rule.md#eventruleoptions)|❌| |
 | 5 | project_id |string|❌| |
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | domain_id |string|✅| |
 
-### EventRuleAction
+### EventRuleActionResponder
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | resource_type |string | |
+| 2 | resource_id |string | |
+
+### EventRuleActions
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | change_assignee |string | |
@@ -148,12 +154,6 @@ description:
 | 5 | add_responder |[list of EventRuleActionResponder](event-rule.md#eventruleactionresponder) | |
 | 6 | add_additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 7 | no_notification |bool | |
-
-### EventRuleActionResponder
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | resource_type |string | |
-| 2 | resource_id |string | |
 
 ### EventRuleCondition
 | No | Field | Type |  Description |
@@ -204,7 +204,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">actions</td>
-      <td style="text-align:left"><a href="event-rule.md#eventruleaction">EventRuleAction</a></td>
+      <td style="text-align:left"><a href="event-rule.md#eventruleactions">EventRuleActions</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -358,7 +358,7 @@ description:
 | 1 | event_rule_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | conditions |[list of EventRuleCondition](event-rule.md#eventrulecondition)|❌| |
-| 4 | actions |[EventRuleAction](event-rule.md#eventruleaction)|❌| |
+| 4 | actions |[EventRuleActions](event-rule.md#eventruleactions)|❌| |
 | 5 | options |[EventRuleOptions](event-rule.md#eventruleoptions)|❌| |
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | domain_id |string|✅| |
