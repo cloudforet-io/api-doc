@@ -61,6 +61,7 @@
     * [Data Source](monitoring/v1/data-source.md)
     * [Escalation Policy](monitoring/v1/escalation-policy.md)
     * [Event](monitoring/v1/event.md)
+    * [Event Rule](monitoring/v1/event-rule.md)
     * [Log](monitoring/v1/log.md)
     * [Maintenance Window](monitoring/v1/maintenance-window.md)
     * [Metric](monitoring/v1/metric.md)
