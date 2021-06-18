@@ -190,34 +190,27 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">schema</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
+      <td style="text-align:left">4</td>
       <td style="text-align:left">is_subscribe</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">subscriptions</td>
       <td style="text-align:left">list of string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -232,35 +225,35 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">is_scheduled</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">schedule</td>
       <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
@@ -316,41 +309,34 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">schema</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">is_subscribe</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">subscriptions</td>
       <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -365,49 +351,49 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">is_scheduled</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">schedule</td>
       <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -464,20 +450,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">schema</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -492,21 +471,21 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>

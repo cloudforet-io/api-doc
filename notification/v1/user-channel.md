@@ -167,15 +167,14 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | protocol_id |string|✅| |
 | 2 | name |string|✅| |
-| 3 | schema |string|✅| |
-| 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 5 | is_subscribe |bool|❌| |
-| 6 | subscriptions |list of string|❌| |
-| 7 | is_scheduled |bool|❌| |
-| 8 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|❌| |
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 10 | user_id |string|✅| |
-| 11 | domain_id |string|✅| |
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 4 | is_subscribe |bool|❌| |
+| 5 | subscriptions |list of string|❌| |
+| 6 | is_scheduled |bool|❌| |
+| 7 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|❌| |
+| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | user_id |string|✅| |
+| 10 | domain_id |string|✅| |
 
 ### GetUserChannelRequest
 | No | Field | Type | Required | Description |
@@ -248,83 +247,76 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">schema</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">is_subscribe</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">subscriptions</td>
       <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">is_scheduled</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">schedule</td>
       <td style="text-align:left"><a href="user-channel.md#userchannelschedule">UserChannelSchedule</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -381,34 +373,27 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">schema</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
