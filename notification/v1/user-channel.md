@@ -171,10 +171,11 @@ description:
 | 4 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 5 | is_subscribe |bool|❌| |
 | 6 | subscriptions |list of string|❌| |
-| 7 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|❌| |
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 9 | user_id |string|✅| |
-| 10 | domain_id |string|✅| |
+| 7 | is_scheduled |bool|❌| |
+| 8 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|❌| |
+| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 10 | user_id |string|✅| |
+| 11 | domain_id |string|✅| |
 
 ### GetUserChannelRequest
 | No | Field | Type | Required | Description |
