@@ -128,15 +128,81 @@ description:
 | 3 | domain_id |string|✅| |
 
 ### CreateEventRuleRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string|✅| |
-| 2 | conditions |[list of EventRuleCondition](event-rule.md#eventrulecondition)|✅| |
-| 3 | actions |[EventRuleActions](event-rule.md#eventruleactions)|✅| |
-| 4 | options |[EventRuleOptions](event-rule.md#eventruleoptions)|❌| |
-| 5 | project_id |string|❌| |
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 7 | domain_id |string|✅| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">conditions</td>
+      <td style="text-align:left"><a href="event-rule.md#eventrulecondition">list of EventRuleCondition</a></td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">conditions_policy</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ALL</li>
+          	<li>ANY</li>
+        </ul></td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">actions</td>
+      <td style="text-align:left"><a href="event-rule.md#eventruleactions">EventRuleActions</a></td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left"><a href="event-rule.md#eventruleoptions">EventRuleOptions</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">tags</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### EventRuleActionResponder
 | No | Field | Type |  Description |
@@ -203,20 +269,31 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
+      <td style="text-align:left">conditions_policy</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ALL</li>
+          	<li>ANY</li>
+        </ul></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">actions</td>
       <td style="text-align:left"><a href="event-rule.md#eventruleactions">EventRuleActions</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">options</td>
       <td style="text-align:left"><a href="event-rule.md#eventruleoptions">EventRuleOptions</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">scope</td>
       <td style="text-align:left"><ul>
           	<li>SCOPE_NONE</li>
@@ -227,28 +304,28 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -353,12 +430,78 @@ description:
 | 3 | only |list of string|❌| |
 
 ### UpdateEventRuleRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | event_rule_id |string|✅| |
-| 2 | name |string|❌| |
-| 3 | conditions |[list of EventRuleCondition](event-rule.md#eventrulecondition)|❌| |
-| 4 | actions |[EventRuleActions](event-rule.md#eventruleactions)|❌| |
-| 5 | options |[EventRuleOptions](event-rule.md#eventruleoptions)|❌| |
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 7 | domain_id |string|✅| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">event_rule_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">conditions</td>
+      <td style="text-align:left"><a href="event-rule.md#eventrulecondition">list of EventRuleCondition</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">conditions_policy</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ALL</li>
+          	<li>ANY</li>
+        </ul></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">actions</td>
+      <td style="text-align:left"><a href="event-rule.md#eventruleactions">EventRuleActions</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left"><a href="event-rule.md#eventruleoptions">EventRuleOptions</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">tags</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
