@@ -575,7 +575,6 @@ description:
 | 1 | resource_id |string | |
 | 2 | resource_type |string | |
 | 3 | name |string | |
-| 4 | ip_address |string | |
 
 ### AlertResponder
 | No | Field | Type |  Description |

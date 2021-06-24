@@ -125,7 +125,6 @@ description:
 | 1 | resource_id |string | |
 | 2 | resource_type |string | |
 | 3 | name |string | |
-| 4 | ip_address |string | |
 
 ### EventStatQuery
 | No | Field | Type | Required | Description |
