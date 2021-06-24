@@ -214,7 +214,6 @@ description:
       <td style="text-align:left">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
-          	<li>ALL</li>
           	<li>LV1</li>
           	<li>LV2</li>
           	<li>LV3</li>
@@ -340,7 +339,6 @@ description:
       <td style="text-align:left">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
-          	<li>ALL</li>
           	<li>LV1</li>
           	<li>LV2</li>
           	<li>LV3</li>
@@ -460,7 +458,6 @@ description:
       <td style="text-align:left">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
-          	<li>ALL</li>
           	<li>LV1</li>
           	<li>LV2</li>
           	<li>LV3</li>
@@ -605,7 +602,6 @@ description:
       <td style="text-align:left">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
-          	<li>ALL</li>
           	<li>LV1</li>
           	<li>LV2</li>
           	<li>LV3</li>
