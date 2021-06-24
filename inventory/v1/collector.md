@@ -465,7 +465,7 @@ description:
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |
 | 6 | is_public |bool|❌| default is true|
-| 7 | project_id |string|❌| if is_public is false, project_id is required|
+| 7 | project_id |string|| if is_public is false, project_id is requireremained as is_public | True | False|
 
 ### CreateScheduleRequest
 | No | Field | Type | Required | Description |
