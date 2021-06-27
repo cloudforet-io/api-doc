@@ -244,6 +244,7 @@ description:
           	<li>TRIGGERED</li>
           	<li>ACKNOWLEDGED</li>
           	<li>RESOLVED</li>
+          	<li>ERROR</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -480,6 +481,7 @@ description:
           	<li>TRIGGERED</li>
           	<li>ACKNOWLEDGED</li>
           	<li>RESOLVED</li>
+          	<li>ERROR</li>
         </ul></td>
 <td style="text-align:left">❌</td>
 <td style="text-align:left"></td>
