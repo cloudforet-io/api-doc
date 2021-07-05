@@ -162,23 +162,23 @@ description:
 | 1 | name |string|✅| The name of Protocol. It can have a maximum of 255 characters.|
 | 2 | plugin_info |[PluginRequest](protocol.md#pluginrequest)|✅| Describe a Plugin information for protocol that include was used plugin, specific version, schema etc.|
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The tags for protocol.|
-| 4 | project_id |string|✅| The ID of project|
-| 5 | domain_id |string|✅| The ID of domain to which the Protocol belongs|
+| 4 | project_id |string|✅| The ID of project.|
+| 5 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 
 ### GetProtocolRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | protocol_id |string|✅| The ID of Protocol|
-| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs|
+| 1 | protocol_id |string|✅| The ID of Protocol.|
+| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 | 3 | only |list of string|❌| The list of the Protocol information column you want to be returned. It must be specified in the ProtocolInfo.|
 
 ### PluginInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string | The ID of plugin set in the Protocol|
+| 1 | plugin_id |string | The ID of plugin set in the Protocol.|
 | 2 | version |string | The version of plugin.|
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | The Options that contains information about using plugin|
-| 4 | secret_id |string | The ID of the Secret containing encrypted data to be used in the plugin|
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | The Options that contains information about using plugin.|
+| 4 | secret_id |string | The ID of the Secret containing encrypted data to be used in the plugin.|
 | 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | The metadata of plugin. It includes schema for the data that must be set for the Channel when creating the Channel using a Protocol.The schema follows the JSON Schema format.|
 
 ### PluginRequest
@@ -186,7 +186,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | plugin_id |string|✅| The ID of plugin.|
 | 2 | version |string|✅| The version of plugin.|
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The Options that contains information about using plugin|
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The Options that contains information about using plugin.|
 | 4 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The data for using plugin if necessary. This data is encrypted and stored in the Secret service.|
 | 5 | schema |string|| The name of schema.When the secret_data is stored in the Secret service, it can be set with schema if the schema is existed.The schema is provided through the Repository service.|
 
@@ -221,7 +221,7 @@ description:
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
-<td style="text-align:left">The state of Protocol.</td>
+<td style="text-align:left">The state of Protocol.ENABLED or DISABLED only.</td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -231,7 +231,8 @@ description:
           	<li>INTERNAL</li>
           	<li>EXTERNAL</li>
         </ul></td>
-<td style="text-align:left">The type of Protocol.</td>
+<td style="text-align:left">{}</td>
+
    </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -261,7 +262,7 @@ description:
       <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">The ID of domain to which the Protocol belongs</td>
+<td style="text-align:left">The ID of domain to which the Protocol belongs.</td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
@@ -298,14 +299,14 @@ description:
       <td style="text-align:left">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
-<td style="text-align:left">The ID of Protocol</td>
+<td style="text-align:left">The ID of Protocol.</td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
-<td style="text-align:left">The name of Protocol</td>
+<td style="text-align:left">The name of Protocol.</td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -316,7 +317,7 @@ description:
           	<li>DISABLED</li>
         </ul></td>
 <td style="text-align:left">❌</td>
-<td style="text-align:left">The state of Protocol. Can be selected one the listed type only.</td>
+<td style="text-align:left">The state of Protocol. ENABLED or DISABLED only.</td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -327,14 +328,14 @@ description:
           	<li>EXTERNAL</li>
         </ul></td>
 <td style="text-align:left">❌</td>
-<td style="text-align:left">The type of Protocol. Can be selected one the listed type only.</td>
+<td style="text-align:left">The type of Protocol. INTERNAL or EXTERNAL only.</td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">✅</td>
-<td style="text-align:left">The ID of domain to which the Protocol belongs</td>
+<td style="text-align:left">The ID of domain to which the Protocol belongs.</td>
    </tr>
   </tbody>
 </table>
@@ -344,33 +345,33 @@ description:
 ### ProtocolRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | protocol_id |string|✅| The ID of Protocol|
-| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs|
+| 1 | protocol_id |string|✅| The ID of Protocol.|
+| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 
 ### ProtocolStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
-| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs|
+| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 
 ### ProtocolsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | results |[list of ProtocolInfo](protocol.md#protocolinfo) | List of queried protocols.|
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | Total counts of queried Protocols|
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | Total counts of queried Protocols.|
 
 ### UpdateProtocolPluginRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | protocol_id |string|✅| The ID of Protocol|
+| 1 | protocol_id |string|✅| The ID of Protocol.|
 | 2 | version |string|❌| The version of plugin you want to update. Version means the tags of plugin container image in repository that specific market place.|
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The Options that contains information about using plugin|
-| 4 | domain_id |string|✅| The ID of domain to which the Protocol belongs|
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The Options that contains information about using plugin.|
+| 4 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 
 ### UpdateProtocolRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | protocol_id |string|✅| The ID of Protocol|
+| 1 | protocol_id |string|✅| The ID of Protocol.|
 | 2 | name |string|❌| The Name of Protocol. It can have a maximum of 255 characters.|
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The tags for protocol. When updating, existing tag information is deleted all and will be updated with new.|
-| 4 | domain_id |string|✅| The ID of domain to which the Protocol belongs|
+| 4 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
