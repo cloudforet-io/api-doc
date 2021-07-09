@@ -15,11 +15,12 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 2 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 3 | [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) |  |
-| 4 | [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) |  |
-| 5 | [**stat**](notification.md#stat)|   [NotificationStatQuery](notification.md#notificationstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Creates a new Notification.Notification is |
+| 2 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete the Notification. |
+| 3 | [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Change the notifications to read status. |
+| 4 | [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) | Gets a single Notification. |
+| 5 | [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) | Lists the specified notifications.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. |
+| 6 | [**stat**](notification.md#stat)|   [NotificationStatQuery](notification.md#notificationstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -27,6 +28,7 @@ description:
 > **POST** /notification/v1/notifications
 >
 
+> Creates a new Notification.Notification is
 
 | Type | Message |
 | :--- | :--- |
@@ -40,6 +42,7 @@ description:
 > **DELETE** /notification/v1/notification/{notification_id}
 >
 
+> Delete the Notification.
 
 | Type | Message |
 | :--- | :--- |
@@ -49,10 +52,25 @@ description:
  
 
  
+### set_read
+> **POST** /notification/v1/notifications/read
+>
+
+> Change the notifications to read status.
+
+| Type | Message |
+| :--- | :--- |
+| Request | [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+ 
+ 
+
+ 
 ### get
 > **GET** /notification/v1/notification/{notification_id}
 >
 
+> Gets a single Notification.
 
 | Type | Message |
 | :--- | :--- |
@@ -68,6 +86,7 @@ description:
 > **POST** /notification/v1/notifications/search
 
 
+> Lists the specified notifications.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.
 
 | Type | Message |
 | :--- | :--- |
@@ -158,13 +177,13 @@ description:
           	<li>LV5</li>
         </ul></td>
 <td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -175,10 +194,9 @@ description:
 ### GetNotificationRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | notification_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
-| 4 | set_read |bool|❌| |
+| 1 | notification_id |string|✅| The ID of Notification.|
+| 2 | domain_id |string|| |
+| 3 | only |list of string|❌| The list of the notification information column you want to be returned. It must be specified in the NotificationInfo.|
 
 ### NotificationInfo
 <table>
@@ -195,7 +213,7 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">notification_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The ID of notification.</td>
 
    </tr>
     <tr>
@@ -222,8 +240,7 @@ description:
           	<li>SUCCESS</li>
           	<li>WARNING</li>
         </ul></td>
-<td style="text-align:left"></td>
-
+<td style="text-align:left">The type of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -237,36 +254,31 @@ description:
           	<li>LV4</li>
           	<li>LV5</li>
         </ul></td>
-<td style="text-align:left"></td>
-
+<td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">is_read</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:left"></td>
-
+<td style="text-align:left">Whether or not to check the notification.If notification has been returned at least once through the Get or List method, is_read is changed to True .</td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
+<td style="text-align:left">The ID of user to whom the notification was dispatched.</td>
    </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
+<td style="text-align:left">The ID of domain</td>
    </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
+<td style="text-align:left">Notification creation time.</td>
    </tr>
   </tbody>
 </table>
@@ -290,14 +302,14 @@ description:
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">notification_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The ID of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -359,21 +371,14 @@ description:
       <td style="text-align:left">9</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:left"></td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
-      <td style="text-align:left">set_read</td>
-      <td style="text-align:left">bool</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">11</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:left"></td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -384,17 +389,23 @@ description:
 ### NotificationRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | notification_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| 1 | notification_id |string|✅| The ID of Notification.|
+| 2 | domain_id |string|| |
 
 ### NotificationStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
+| 2 | domain_id |string|| |
 
 ### NotificationsInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | results |[list of NotificationInfo](notification.md#notificationinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 1 | results |[list of NotificationInfo](notification.md#notificationinfo) | List of queried notifications.|
+| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | Total counts of queried notifications.|
+
+### SetReadNotificationRequest
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | notifications |list of string|✅| The ID list of notification that want to change read status.|
+| 2 | domain_id |string|| |
