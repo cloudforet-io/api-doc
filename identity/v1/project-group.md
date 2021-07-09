@@ -232,7 +232,7 @@ description:
 | 2 | project_group_id |string|✅| |
 | 3 | user_id |string|❌| |
 | 4 | role_id |string|❌| |
-| 5 | include_parent_member |string|❌| |
+| 5 | include_parent_member |bool|❌| |
 | 6 | domain_id |string|✅| |
 
 ### ProjectGroupProjectInfo
