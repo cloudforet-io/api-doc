@@ -162,12 +162,14 @@ description:
 | 1 | name |string|✅| The name of Protocol. It can have a maximum of 255 characters.|
 | 2 | plugin_info |[PluginRequest](protocol.md#pluginrequest)|✅| Describe a Plugin information for protocol that include was used plugin, specific version, schema etc.|
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The tags for protocol.|
+| 4 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 
 ### GetProtocolRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | protocol_id |string|✅| The ID of Protocol.|
-| 2 | only |list of string|❌| The list of the Protocol information column you want to be returned. It must be specified in the ProtocolInfo.|
+| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
+| 3 | only |list of string|❌| The list of the Protocol information column you want to be returned. It must be specified in the ProtocolInfo.|
 
 ### PluginInfo
 | No | Field | Type |  Description |
@@ -257,6 +259,12 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">9</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">The ID of domain to which the Protocol belongs.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">Protocol creation time.</td>
@@ -321,6 +329,13 @@ description:
 <td style="text-align:left">❌</td>
 <td style="text-align:left">The type of Protocol. INTERNAL or EXTERNAL only.</td>
    </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">The ID of domain to which the Protocol belongs.</td>
+   </tr>
   </tbody>
 </table>
 
@@ -330,11 +345,13 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | protocol_id |string|✅| The ID of Protocol.|
+| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 
 ### ProtocolStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
+| 2 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 
 ### ProtocolsInfo
 | No | Field | Type |  Description |
@@ -348,6 +365,7 @@ description:
 | 1 | protocol_id |string|✅| The ID of Protocol.|
 | 2 | version |string|❌| The version of plugin you want to update. Version means the tags of plugin container image in repository that specific market place.|
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The Options that contains information about using plugin.|
+| 4 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
 
 ### UpdateProtocolRequest
 | No | Field | Type | Required | Description |
@@ -355,3 +373,4 @@ description:
 | 1 | protocol_id |string|✅| The ID of Protocol.|
 | 2 | name |string|❌| The Name of Protocol. It can have a maximum of 255 characters.|
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The tags for protocol. When updating, existing tag information is deleted all and will be updated with new.|
+| 4 | domain_id |string|✅| The ID of domain to which the Protocol belongs.|
