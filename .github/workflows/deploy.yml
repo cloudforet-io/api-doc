@@ -47,7 +47,7 @@ jobs:
         cmp --silent master_branch/$LOCATION_VERSION/VERSION $LOCATION_VERSION/VERSION || \
         echo "IS_NEW_VERSION=true" >> $GITHUB_ENV
         echo "API_DOC_VERSION=$(cat $LOCATION_VERSION/VERSION)" >> $GITHUB_ENV
-        echo "API_VERSION_NAME=v$(cat $LOCATION_VERSION/VERSION)" >> $GITHUB_ENV
+        echo "API_VERSION_NAME=$(cat $LOCATION_VERSION/VERSION)" >> $GITHUB_ENV
         echo "$(cat $LOCATION_VERSION/VERSION)-${{ github.run_id }}">$LOCATION_VERSION/VERSION
 
     - name: Versioning with baranches
@@ -61,7 +61,7 @@ jobs:
       run: |
         echo "ARTIFACT_VERSION=$(cat $ARTIFACT_VERSION/VERSION)" >> $GITHUB_ENV
 
-    - name: Check version updates
+    - name: Check version updates # Check which version is latest, if doc version is higher and then create a release branch
       if: env.ARTIFACT_VERSION > env.API_DOC_VERSION
       uses: peterjgrainger/action-create-branch@v1.0.0
       env:
