@@ -57,7 +57,7 @@ description:
 
 ### MetricDataRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | data_source_id |string|✅| |
 | 2 | resource_type |string|✅| |
 | 3 | resources |list of string|✅| |
@@ -79,7 +79,7 @@ description:
 
 ### MetricRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | data_source_id |string|✅| |
 | 2 | resource_type |string|✅| |
 | 3 | resources |list of string|✅| |

@@ -93,7 +93,7 @@ description:
 
 ### EndpointQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | service |string|❌| |
 | 3 | domain_id |string|✅| |

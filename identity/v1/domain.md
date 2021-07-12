@@ -190,14 +190,14 @@ description:
 
 ### ChangeAuthRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | plugin_info |[PluginInfo](domain.md#plugininfo)|❌| |
 | 3 | release_auth_plugin |string|❌| |
 
 ### CreateDomainRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | plugin_info |[PluginInfo](domain.md#plugininfo)|❌| |
 | 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
@@ -286,7 +286,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -295,21 +295,21 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -320,7 +320,7 @@ description:
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -330,12 +330,12 @@ description:
 
 ### DomainRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 
 ### DomainStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 
 ### DomainsInfo
@@ -346,7 +346,7 @@ description:
 
 ### GetDomainRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | only |list of string|❌| |
 
@@ -363,7 +363,7 @@ description:
 
 ### UpdateDomainRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | plugin_info |[PluginInfo](domain.md#plugininfo)|❌| |
 | 3 | config |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
@@ -371,7 +371,7 @@ description:
 
 ### UpdatePluginRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | version |string|❌| |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |

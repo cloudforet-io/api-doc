@@ -66,7 +66,7 @@ description:
 
 ### CreateHistoryRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | schedule_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -78,7 +78,7 @@ description:
 
 ### HistoryStatRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | topic |string|❌| |
 | 3 | domain_id |string|✅| |
@@ -93,7 +93,7 @@ description:
 
 ### QueryHistoryRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | topic |string|❌| |
 | 3 | domain_id |string|✅| |

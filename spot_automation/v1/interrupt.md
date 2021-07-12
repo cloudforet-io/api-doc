@@ -80,7 +80,7 @@ description:
 
 ### ConfirmRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | provider |string|✅| |
 | 2 | region_code |string|✅| |
 | 3 | domain_id |string|✅| |
@@ -102,7 +102,7 @@ description:
 
 ### InterruptRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | provider |string|✅| |
 | 2 | region_code |string|✅| |
 | 3 | domain_id |string|✅| |
@@ -118,7 +118,7 @@ description:
 
 ### InterruptStatRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -130,7 +130,7 @@ description:
 
 ### QueryInterruptRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | spot_group_id |string|❌| |
 | 3 | domain_id |string|✅| |

@@ -134,7 +134,7 @@ description:
 
 ### CreateSpotGroupRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | resource_id |string|✅| |
 | 3 | resource_type |string|✅| |
@@ -145,7 +145,7 @@ description:
 
 ### GetCandidatesRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | resource_id |string|✅| |
 | 2 | resource_type |string|✅| |
 | 3 | limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
@@ -153,14 +153,14 @@ description:
 
 ### GetSpotGroupRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | spot_group_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
 ### QuerySpotGroupRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | spot_group_id |string|❌| |
 | 3 | name |string|❌| |
@@ -192,7 +192,7 @@ description:
 
 ### SpotGroupRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | spot_group_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -204,7 +204,7 @@ description:
 
 ### SpotGroupStatRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -216,7 +216,7 @@ description:
 
 ### UpdateSpotGroupRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | spot_group_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |

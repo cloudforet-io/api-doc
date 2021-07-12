@@ -160,7 +160,7 @@ description:
 
 ### JobStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -177,7 +177,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -186,14 +186,14 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">job_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -208,21 +208,21 @@ description:
           	<li>ERROR</li>
           	<li>TIMEOUT</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>

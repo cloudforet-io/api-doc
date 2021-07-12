@@ -39,7 +39,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -48,14 +48,14 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">options</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -68,21 +68,21 @@ description:
           	<li>SUCCESS</li>
           	<li>WARNING</li>
         </ul></td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">secret_data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">channel_data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>

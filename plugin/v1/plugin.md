@@ -58,7 +58,7 @@ description:
 
 ### PluginEndpointRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | plugin_id |string|✅| |
 | 2 | version |string|✅| |
 | 3 | labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
@@ -66,7 +66,7 @@ description:
 
 ### PluginFailureRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | supervisor_id |string|✅| |
 | 2 | plugin_id |string|✅| |
 | 3 | version |string|✅| |

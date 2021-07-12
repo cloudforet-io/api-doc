@@ -127,7 +127,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -136,7 +136,7 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -150,14 +150,14 @@ description:
           	<li>CLOSED</li>
           	<li>DELETED</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">primary_ip_address</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -170,7 +170,7 @@ description:
           	<li>HYPERVISOR</li>
           	<li>UNKNOWN</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -181,91 +181,91 @@ description:
           	<li>LINUX</li>
           	<li>WINDOWS</li>
         </ul></td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">cloud_service_group</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">cloud_service_type</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">nics</td>
       <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">13</td>
       <td style="text-align:left">disks</td>
       <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">14</td>
       <td style="text-align:left">reference</td>
       <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">15</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">16</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">17</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -275,21 +275,21 @@ description:
 
 ### GetServerRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | server_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
 ### PinServerDataRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | server_id |string|✅| |
 | 2 | keys |list of string|✅| |
 | 3 | domain_id |string|✅| |
 
 ### ServerDisk
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
 | 2 | device |string|❌| |
 | 3 | disk_type |string|❌| |
@@ -492,7 +492,7 @@ description:
 
 ### ServerNIC
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | device_index |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
 | 2 | device |string|❌| |
 | 3 | nic_type |string|❌| |
@@ -509,7 +509,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -518,42 +518,42 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">server_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">primary_ip_address</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">ip_addresses</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -566,7 +566,7 @@ description:
           	<li>HYPERVISOR</li>
           	<li>UNKNOWN</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -577,56 +577,56 @@ description:
           	<li>LINUX</li>
           	<li>WINDOWS</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">cloud_service_group</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">cloud_service_type</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">13</td>
       <td style="text-align:left">resource_group_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">14</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">15</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -642,13 +642,13 @@ description:
 
 ### ServerRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | server_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### ServerStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | resource_group_id |string|❌| |
@@ -666,7 +666,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -675,14 +675,14 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">server_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left">server unique id</td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -696,14 +696,14 @@ description:
           	<li>CLOSED</li>
           	<li>DELETED</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">primary_ip_address</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -716,7 +716,7 @@ description:
           	<li>HYPERVISOR</li>
           	<li>UNKNOWN</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -727,105 +727,105 @@ description:
           	<li>LINUX</li>
           	<li>WINDOWS</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">cloud_service_group</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">cloud_service_type</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">11</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">12</td>
       <td style="text-align:left">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">13</td>
       <td style="text-align:left">nics</td>
       <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">14</td>
       <td style="text-align:left">disks</td>
       <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">15</td>
       <td style="text-align:left">reference</td>
       <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">16</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">17</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">18</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">19</td>
       <td style="text-align:left">release_region</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">20</td>
       <td style="text-align:left">release_project</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>

@@ -108,7 +108,7 @@ description:
 
 ### CreateProviderRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | provider |string|✅| |
 | 2 | name |string|✅| |
 | 3 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
@@ -119,7 +119,7 @@ description:
 
 ### GetProviderRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | provider |string|✅| |
 | 2 | only |list of string|❌| |
 | 3 | domain_id |string|✅| |
@@ -137,7 +137,7 @@ description:
 
 ### ProviderQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | provider |string|❌| |
 | 3 | name |string|❌| |
@@ -145,13 +145,13 @@ description:
 
 ### ProviderRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | provider |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### ProviderStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -163,7 +163,7 @@ description:
 
 ### UpdateProviderRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | provider |string|✅| |
 | 2 | name |string|❌| |
 | 3 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |

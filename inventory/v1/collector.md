@@ -250,7 +250,7 @@ description:
 
 ### CollectRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | collector_id |string|✅| |
 | 2 | filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 3 | secret_id |string|❌| |
@@ -440,13 +440,13 @@ description:
 
 ### CollectorRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | collector_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### CollectorStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -458,18 +458,18 @@ description:
 
 ### CreateCollectorRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | plugin_info |[PluginInfo](collector.md#plugininfo)|✅| |
 | 3 | priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 5 | domain_id |string|✅| |
 | 6 | is_public |bool|❌| default is true|
-| 7 | project_id |string|| if is_public is false, project_id is requireremained as is_public | True | False|
+| 7 | project_id |string|✅| if is_public is false, project_id is requireremained as is_public | True | False|
 
 ### CreateScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | collector_id |string|✅| |
 | 3 | name |string|❌| |
@@ -479,7 +479,7 @@ description:
 
 ### DeleteScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | schedule_id |string|✅| |
 | 3 | collector_id |string|✅| |
@@ -493,7 +493,7 @@ description:
 
 ### GetCollectorRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | collector_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
@@ -633,7 +633,7 @@ description:
 
 ### ScheduleQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | collector_id |string|✅| |
 | 3 | schedule_id |string|❌| |
@@ -641,7 +641,7 @@ description:
 
 ### ScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | schedule_id |string|✅| |
 | 3 | collector_id |string|✅| |
@@ -662,7 +662,7 @@ description:
 
 ### UpdateCollectorRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | collector_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | plugin_info |[PluginInfo](collector.md#plugininfo)|❌| |
@@ -672,7 +672,7 @@ description:
 
 ### UpdatePluginRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | collector_id |string|✅| |
 | 2 | version |string|❌| |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
@@ -680,7 +680,7 @@ description:
 
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | schedule_id |string|✅| |
 | 3 | collector_id |string|✅| |
@@ -696,7 +696,7 @@ description:
 
 ### VerifyPluginRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | collector_id |string|✅| |
 | 2 | secret_id |string|❌| |
 | 3 | domain_id |string|✅| |

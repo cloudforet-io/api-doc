@@ -173,12 +173,12 @@ description:
 
 ### CreateUserChannelRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | protocol_id |string|✅| The ID of protocol that will be set in user channel.|
 | 2 | name |string|✅| The name of User Channel. It can have a maximum of 255 characters.|
-| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|| The data for using user channel.This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.In this case, the secret ID that is stored in the security service will be returned and the data value will be empty.if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.|
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| The data for using user channel.This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.In this case, the secret ID that is stored in the security service will be returned and the data value will be empty.if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.|
 | 4 | is_subscribe |bool|❌| Indicates whether subscriptions will be used.|
-| 5 | subscriptions |list of string|| When using subscriptions, it indicates the topic list to subscription.If is_subscribe is set to false, this value is ignored.|
+| 5 | subscriptions |list of string|✅| When using subscriptions, it indicates the topic list to subscription.If is_subscribe is set to false, this value is ignored.|
 | 6 | is_scheduled |bool|❌| Indicates whether schedule will be used.|
 | 7 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|❌| Schedule for which you want to receive notifications through the user channel.|
 | 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The tags for user channel.|
@@ -187,24 +187,24 @@ description:
 
 ### GetUserChannelRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | user_channel_id |string|✅| The ID of user channel.|
 | 2 | domain_id |string|✅| The ID of domain.|
 | 3 | only |list of string|❌| The list of the user channel information column you want to be returned. It must be specified in the UserChannelInfo.|
 
 ### UpdateUserChannelRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | user_channel_id |string|✅| The ID of user channel.|
 | 2 | name |string|❌| The name of user channel. It can have a maximum of 255 characters.|
-| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|| The data for using user channel.This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.In this case, the secret ID that is stored in the security service will be returned and the data value will be empty.if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.|
-| 4 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|| Set the level of notification.If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.|
+| 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| The data for using user channel.This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.In this case, the secret ID that is stored in the security service will be returned and the data value will be empty.if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.|
+| 4 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|✅| Set the level of notification.If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.|
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The tags for user channel.|
 | 6 | domain_id |string|✅| The ID of domain.|
 
 ### UpdateUserChannelScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | user_channel_id |string|✅| The ID of user channel.|
 | 2 | is_scheduled |bool|✅| Indicates whether schedule will be used.|
 | 3 | schedule |[UserChannelSchedule](user-channel.md#userchannelschedule)|❌| Schedule for which you want to receive notifications through the user channel.|
@@ -212,10 +212,10 @@ description:
 
 ### UpdateUserChannelSubscriptionRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | user_channel_id |string|✅| The ID of user channel.|
 | 2 | is_subscribe |bool|✅| Indicates whether subscriptions will be used.|
-| 3 | subscriptions |list of string|| |
+| 3 | subscriptions |list of string|✅| |
 | 4 | domain_id |string|✅| The ID of domain.|
 
 ### UserChannelInfo
@@ -330,7 +330,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -339,21 +339,21 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">user_channel_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of user channel.</td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">The name of user channel. It can have a maximum of 255 characters.</td>
    </tr>
     <tr>
@@ -364,35 +364,35 @@ description:
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">The state of user channel. ENABLED or DISABLED only.</td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">secret_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">protocol_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of protocol set in the user channel.</td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of user using the user channel.</td>
    </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of domain.</td>
    </tr>
   </tbody>
@@ -402,7 +402,7 @@ description:
 
 ### UserChannelRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | user_channel_id |string|✅| The ID of user channel.|
 | 2 | domain_id |string|✅| The ID of domain.|
 
@@ -451,7 +451,7 @@ description:
 
 ### UserChannelStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
 | 2 | domain_id |string|✅| The ID of domain.|
 

@@ -136,7 +136,7 @@ description:
 
 ### AddScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | topic |string|✅| |
 | 2 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | schedule |[Scheduled](schedule.md#scheduled)|✅| |
@@ -146,14 +146,14 @@ description:
 
 ### GetScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | schedule_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
 ### QueryOption
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | aggregate |[StatAggregate](schedule.md#stataggregate)|✅| |
 | 2 | page |[StatPage](schedule.md#statpage)|❌| |
 
@@ -242,7 +242,7 @@ description:
 
 ### ScheduleQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | schedule_id |string|❌| |
 | 3 | topic |string|❌| |
@@ -252,13 +252,13 @@ description:
 
 ### ScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | schedule_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### ScheduleStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -278,7 +278,7 @@ description:
 
 ### UpdateScheduleRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | schedule_id |string|✅| |
 | 2 | schedule |[Scheduled](schedule.md#scheduled)|❌| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |

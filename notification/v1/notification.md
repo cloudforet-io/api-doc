@@ -118,7 +118,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -127,28 +127,28 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">resource_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">topic</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -161,7 +161,7 @@ description:
           	<li>SUCCESS</li>
           	<li>WARNING</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -176,14 +176,14 @@ description:
           	<li>LV4</li>
           	<li>LV5</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -193,9 +193,9 @@ description:
 
 ### GetNotificationRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | notification_id |string|✅| The ID of Notification.|
-| 2 | domain_id |string|| |
+| 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| The list of the notification information column you want to be returned. It must be specified in the NotificationInfo.|
 
 ### NotificationInfo
@@ -292,7 +292,7 @@ description:
       <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
-      <th style="text-align:left">Required</th>
+      <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -301,21 +301,21 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">notification_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">topic</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -328,7 +328,7 @@ description:
           	<li>SUCCESS</li>
           	<li>WARNING</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -343,42 +343,42 @@ description:
           	<li>LV4</li>
           	<li>LV5</li>
         </ul></td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">is_read</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">parent_notification_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -388,15 +388,15 @@ description:
 
 ### NotificationRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | notification_id |string|✅| The ID of Notification.|
-| 2 | domain_id |string|| |
+| 2 | domain_id |string|✅| |
 
 ### NotificationStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
-| 2 | domain_id |string|| |
+| 2 | domain_id |string|✅| |
 
 ### NotificationsInfo
 | No | Field | Type |  Description |
@@ -406,6 +406,6 @@ description:
 
 ### SetReadNotificationRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | notifications |list of string|✅| The ID list of notification that want to change read status.|
-| 2 | domain_id |string|| |
+| 2 | domain_id |string|✅| |

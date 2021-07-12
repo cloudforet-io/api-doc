@@ -108,14 +108,14 @@ description:
 
 ### CreateNoteRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | alert_id |string|✅| |
 | 2 | note |string|✅| |
 | 3 | domain_id |string|✅| |
 
 ### GetNoteRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | note_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
@@ -133,7 +133,7 @@ description:
 
 ### NoteQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | note_id |string|❌| |
 | 3 | alert_id |string|❌| |
@@ -143,13 +143,13 @@ description:
 
 ### NoteRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | note_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### NoteStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -161,7 +161,7 @@ description:
 
 ### UpdateNoteRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | note_id |string|✅| |
 | 2 | note |string|❌| |
 | 3 | domain_id |string|✅| |

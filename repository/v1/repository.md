@@ -108,7 +108,7 @@ description:
 
 ### CreateRepositoryRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | repository_type |string|✅| |
 | 3 | endpoint |string|❌| |
@@ -118,7 +118,7 @@ description:
 
 ### GetRepositoryRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | repository_id |string|✅| |
 | 2 | only |list of string|❌| |
 | 3 | domain_id |string|✅| |
@@ -142,7 +142,7 @@ description:
 
 ### RepositoryQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | repository_id |string|❌| |
 | 3 | name |string|❌| |
@@ -151,19 +151,19 @@ description:
 
 ### RepositoryRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | repository_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### RepositoryStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
 ### UpdateRepositoryRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | repository_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | domain_id |string|✅| |

@@ -36,7 +36,7 @@ description:
 
 ### BillingDataRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | project_id |string|❌| |
 | 2 | project_group_id |string|❌| |
 | 3 | service_accounts |list of string|❌| |

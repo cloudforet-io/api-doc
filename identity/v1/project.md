@@ -166,7 +166,7 @@ description:
 
 ### AddProjectMemberRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | project_id |string|✅| |
 | 2 | user_id |string|✅| |
 | 3 | role_id |string|❌| |
@@ -176,7 +176,7 @@ description:
 
 ### CreateProjectRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | project_group_id |string|✅| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
@@ -184,14 +184,14 @@ description:
 
 ### GetProjectRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | project_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
 ### ModifyProjectMemberRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | project_id |string|✅| |
 | 2 | user_id |string|✅| |
 | 3 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
@@ -211,7 +211,7 @@ description:
 
 ### ProjectMemberQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | project_id |string|✅| |
 | 3 | user_id |string|❌| |
@@ -221,7 +221,7 @@ description:
 
 ### ProjectQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | project_id |string|❌| |
 | 3 | name |string|❌| |
@@ -231,7 +231,7 @@ description:
 
 ### ProjectRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | project_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -257,7 +257,7 @@ description:
 
 ### ProjectStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -269,14 +269,14 @@ description:
 
 ### RemoveProjectMemberRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | project_id |string|✅| |
 | 2 | user_id |string|✅| |
 | 3 | domain_id |string|✅| |
 
 ### UpdateProjectRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | project_id |string|✅| |
 | 2 | project_group_id |string|❌| |
 | 3 | name |string|❌| |

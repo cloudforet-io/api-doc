@@ -141,7 +141,7 @@ description:
 
 ### CloudServiceTypeQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | cloud_service_type_id |string|❌| |
 | 3 | name |string|❌| |
@@ -155,13 +155,13 @@ description:
 
 ### CloudServiceTypeRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_type_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### CloudServiceTypeStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 
@@ -173,7 +173,7 @@ description:
 
 ### CreateCloudServiceTypeRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | provider |string|✅| |
 | 3 | group |string|✅| |
@@ -188,21 +188,21 @@ description:
 
 ### GetCloudServiceTypeRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_type_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
 ### PinCloudServiceTypeDataRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_type_id |string|✅| |
 | 2 | keys |list of string|✅| |
 | 3 | domain_id |string|✅| |
 
 ### UpdateCloudServiceTypeRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_type_id |string|✅| |
 | 2 | service_code |string|❌| |
 | 3 | is_primary |bool|❌| |

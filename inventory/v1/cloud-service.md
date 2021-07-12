@@ -143,7 +143,7 @@ description:
 
 ### CloudServiceQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | cloud_service_id |string|❌| |
 | 3 | cloud_service_type |string|❌| |
@@ -164,13 +164,13 @@ description:
 
 ### CloudServiceRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### CloudServiceStatQuery
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | resource_group_id |string|❌| |
@@ -183,7 +183,7 @@ description:
 
 ### CreateServiceRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_type |string|✅| |
 | 2 | provider |string|✅| |
 | 3 | cloud_service_group |string|✅| |
@@ -198,21 +198,21 @@ description:
 
 ### GetCloudServiceRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
 ### PinCloudServiceDataRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_id |string|✅| |
 | 2 | keys |list of string|✅| |
 | 3 | domain_id |string|✅| |
 
 ### UpdateCloudServiceRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | cloud_service_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |

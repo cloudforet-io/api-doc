@@ -40,5 +40,5 @@ desc: The greeting service definition.
 
 ### HelloRequest
 | No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
