@@ -598,7 +598,7 @@ def main() -> None:
         _update_current_version(VERSION, artifact_version)
 
         # [7]. Delete artifact that was copied from api-repo
-        #_delete_json1_in_artifact(TARGET_DIR)
+        _delete_json1_in_artifact(TARGET_DIR)
 
         print(f" Version: {artifact_version}, API Document is successfully processed")
 
