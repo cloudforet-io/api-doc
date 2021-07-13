@@ -376,7 +376,7 @@ description:
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The ID of domain.</td>
    </tr>
   </tbody>
 </table>
