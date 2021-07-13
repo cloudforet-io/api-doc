@@ -128,14 +128,14 @@ description:
       <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The type of resource to which the notification is dispatched.Currently, only "identity.Project" or "identity.User" can be set.</td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">resource_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The ID of the resource to which notifications are dispatched.If resource_type is "identity.Project", then resource_id requires a project ID values.If resource_type is "identity.User", then resource_id requires a user ID value.</td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
@@ -149,7 +149,7 @@ description:
       <td style="text-align:left">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">This message is used for each protocol.</td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -184,7 +184,7 @@ description:
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The ID of domain.</td>
    </tr>
   </tbody>
 </table>
@@ -195,7 +195,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | notification_id |string|✅| The ID of Notification.|
-| 2 | domain_id |string|✅| |
+| 2 | domain_id |string|✅| The ID of domain.|
 | 3 | only |list of string|❌| The list of the notification information column you want to be returned. It must be specified in the NotificationInfo.|
 
 ### NotificationInfo
@@ -214,7 +214,6 @@ description:
       <td style="text-align:left">notification_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of notification.</td>
-
    </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -355,22 +354,22 @@ description:
       <td style="text-align:left">7</td>
       <td style="text-align:left">parent_notification_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left">The ID of parent notification. Not used yet.</td>
    </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left">The project ID to which the notification will be dispatched.</td>
    </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left">The ID of user.</td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
@@ -388,13 +387,13 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | notification_id |string|✅| The ID of Notification.|
-| 2 | domain_id |string|✅| |
+| 2 | domain_id |string|✅| The ID of domain.|
 
 ### NotificationStatQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
-| 2 | domain_id |string|✅| |
+| 2 | domain_id |string|✅| The ID of domain.|
 
 ### NotificationsInfo
 | No | Field | Type |  Description |
@@ -406,4 +405,4 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | notifications |list of string|✅| The ID list of notification that want to change read status.|
-| 2 | domain_id |string|✅| |
+| 2 | domain_id |string|✅| The ID of domain.|
