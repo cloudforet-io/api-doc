@@ -15,9 +15,9 @@ description:
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Creates a new Notification.Notification is |
+| 1 | [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Creates a new Notification.A notification is a definition of an event to be delivered to the user.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user. |
 | 2 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete the Notification. |
-| 3 | [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Change the notifications to read status. |
+| 3 | [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Change the notifications to read status.When the notification is created, the is_read value is False, and when the set_read method is used, the read state can be changed. |
 | 4 | [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) | Gets a single Notification. |
 | 5 | [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) | Lists the specified notifications.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. |
 | 6 | [**stat**](notification.md#stat)|   [NotificationStatQuery](notification.md#notificationstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
@@ -28,7 +28,7 @@ description:
 > **POST** /notification/v1/notifications
 >
 
-> Creates a new Notification.Notification is
+> Creates a new Notification.A notification is a definition of an event to be delivered to the user.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user.
 
 | Type | Message |
 | :--- | :--- |
@@ -56,7 +56,7 @@ description:
 > **POST** /notification/v1/notifications/read
 >
 
-> Change the notifications to read status.
+> Change the notifications to read status.When the notification is created, the is_read value is False, and when the set_read method is used, the read state can be changed.
 
 | Type | Message |
 | :--- | :--- |
@@ -142,7 +142,7 @@ description:
       <td style="text-align:left">topic</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The topic of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -162,7 +162,7 @@ description:
           	<li>WARNING</li>
         </ul></td>
 <td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The type of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -220,15 +220,13 @@ description:
       <td style="text-align:left">2</td>
       <td style="text-align:left">topic</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
+<td style="text-align:left">The topic of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
+<td style="text-align:left">The contents of notification.This message is used for each protocol.</td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -260,7 +258,7 @@ description:
       <td style="text-align:left">6</td>
       <td style="text-align:left">is_read</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:left">Whether or not to check the notification.If notification has been returned at least once through the Get or List method, is_read is changed to True .</td>
+<td style="text-align:left">Whether or not to check the notification.If notification has been returned at least once through the Get or List method, is_read is changed to True.</td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -316,7 +314,7 @@ description:
       <td style="text-align:left">topic</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The topic of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">4</td>
@@ -329,7 +327,7 @@ description:
           	<li>WARNING</li>
         </ul></td>
 <td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The type of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -344,27 +342,27 @@ description:
           	<li>LV5</li>
         </ul></td>
 <td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">is_read</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left">Whether or not to check the notification.If is_read is False, the user has not checked the notification yet.</td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">parent_notification_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
