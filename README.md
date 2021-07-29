@@ -1,6 +1,6 @@
 # Introduction
 
-**Latest Version**: v1.7.3-rc21
+**Latest Version**: v1.7.4
 
 
 **Description**: SpaceONE's API which auto-generated from API's Protobuffs

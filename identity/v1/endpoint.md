@@ -96,7 +96,8 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | service |string|❌| |
-| 3 | domain_id |string|✅| |
+| 3 | endpoint_type |string|❌| |
+| 4 | domain_id |string|✅| |
 
 ### EndpointsInfo
 | No | Field | Type |  Description |
