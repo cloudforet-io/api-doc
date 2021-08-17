@@ -189,6 +189,7 @@ description:
 | 4 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
 | 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | domain_id |string|✅| |
+| 7 | is_external_user |bool|❌| |
 
 ### CreateProjectGroupRequest
 | No | Field | Type | Required | Description |
