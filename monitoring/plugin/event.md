@@ -75,7 +75,7 @@ description:
       <td style="text-align:left">5</td>
       <td style="text-align:left">severity</td>
       <td style="text-align:left"><ul>
-          	<li>SEVERITY_NONE</li>
+          	<li>NONE</li>
           	<li>CRITICAL</li>
           	<li>ERROR</li>
           	<li>WARNING</li>
