@@ -121,7 +121,7 @@ description:
       <td style="text-align:left">1</td>
       <td style="text-align:left">notification_urgency</td>
       <td style="text-align:left"><ul>
-          	<li>NONE</li>
+          	<li>URGENCY_NONE</li>
           	<li>ALL</li>
           	<li>HIGH_ONLY</li>
         </ul></td>
@@ -130,8 +130,12 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">auto_recovery</td>
-      <td style="text-align:left">bool</td>
+      <td style="text-align:left">recovery_mode</td>
+      <td style="text-align:left"><ul>
+          	<li>RECOVERY_NONE</li>
+          	<li>AUTO</li>
+          	<li>MANUAL</li>
+        </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
