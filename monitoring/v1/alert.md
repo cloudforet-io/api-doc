@@ -762,6 +762,27 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">9</td>
+      <td style="text-align:left">reset_status_message</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">reset_description</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
+      <td style="text-align:left">reset_assignee</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
