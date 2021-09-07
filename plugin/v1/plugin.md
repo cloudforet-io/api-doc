@@ -99,7 +99,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">auto_upgrade</td>
+      <td style="text-align:left">upgrade_mode</td>
       <td style="text-align:left"><ul>
           	<li>MANUAL</li>
           	<li>AUTO</li>
