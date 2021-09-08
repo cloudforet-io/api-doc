@@ -172,22 +172,123 @@ description:
 | 3 | only |list of string|❌| The list of the Protocol information column you want to be returned. It must be specified in the ProtocolInfo.|
 
 ### PluginInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string | The ID of plugin set in the Protocol.|
-| 2 | version |string | The version of plugin.|
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | The Options that contains information about using plugin.|
-| 4 | secret_id |string | The ID of the Secret containing encrypted data to be used in the plugin.|
-| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | The metadata of plugin. It includes schema for the data that must be set for the Channel when creating the Channel using a Protocol.The schema follows the JSON Schema format.|
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">plugin_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">The ID of plugin set in the Protocol.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">version</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">The version of plugin.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">The Options that contains information about using plugin.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">secret_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left">The ID of the Secret containing encrypted data to be used in the plugin.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">metadata</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left">The metadata of plugin. It includes schema for the data that must be set for the Channel when creating the Channel using a Protocol.The schema follows the JSON Schema format.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">upgrade_mode</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>AUTO</li>
+          	<li>MANUAL</li>
+        </ul></td>
+<td style="text-align:left">Auto upgrade for plugin.If the upgrade_mode is AUTO, check the latest plugin version when running the plugin, and if a new version is existed, replace the plugin and then run it.</td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### PluginRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | plugin_id |string|✅| The ID of plugin.|
-| 2 | version |string|✅| The version of plugin.|
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The Options that contains information about using plugin.|
-| 4 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| The data for using plugin if necessary. This data is encrypted and stored in the Secret service.|
-| 5 | schema |string|✅| The name of schema.When the secret_data is stored in the Secret service, it can be set with schema if the schema is existed.The schema is provided through the Repository service.|
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">plugin_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left">The ID of plugin.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">version</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left">The version of plugin.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left">The Options that contains information about using plugin.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">secret_data</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left">The data for using plugin if necessary. This data is encrypted and stored in the Secret service.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">schema</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left">The name of schema.When the secret_data is stored in the Secret service, it can be set with schema if the schema is existed.The schema is provided through the Repository service.</td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">upgrade_mode</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>AUTO</li>
+          	<li>MANUAL</li>
+        </ul></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left">Auto upgrade feature for plugin.If the upgrade mode is AUTO, check the latest plugin version when running the plugin, and if a new version is existed, replace the plugin and then run it.</td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### ProtocolInfo
 <table>
