@@ -98,12 +98,13 @@ description:
 | 8 | resource |[EventResource](event.md#eventresource) | |
 | 9 | raw_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 10 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 11 | alert_id |string | |
-| 12 | webhook_id |string | |
-| 13 | project_id |string | |
-| 14 | domain_id |string | |
-| 15 | created_at |string | |
-| 16 | occurred_at |string | |
+| 11 | image_url |string | |
+| 12 | alert_id |string | |
+| 13 | webhook_id |string | |
+| 14 | project_id |string | |
+| 15 | domain_id |string | |
+| 16 | created_at |string | |
+| 17 | occurred_at |string | |
 
 ### EventQuery
 | No | Field | Type | Required | Description |
