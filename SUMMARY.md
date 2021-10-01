@@ -7,6 +7,8 @@
   * [V1](billing/v1/README.md)
     * [Billing](billing/v1/billing.md)
     * [Data Source](billing/v1/data-source.md)
+  * [V2](billing/v2/README.md)
+    * [Data Source](billing/v2/data-source.md)
 * [Config](config/README.md)
   * [V1](config/v1/README.md)
     * [Domain Config](config/v1/domain-config.md)

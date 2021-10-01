@@ -113,6 +113,13 @@ description:
 <td style="text-align:left"></td>
 
    </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">image_url</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
   </tbody>
 </table>
 

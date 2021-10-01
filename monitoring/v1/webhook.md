@@ -18,7 +18,7 @@ description:
 | 1 | [**create**](webhook.md#create)|   [CreateWebhookRequest](webhook.md#createwebhookrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
 | 2 | [**update**](webhook.md#update)|   [UpdateWebhookRequest](webhook.md#updatewebhookrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
 | 3 | [**update_plugin**](webhook.md#update_plugin)|   [UpdateWebhookPluginRequest](webhook.md#updatewebhookpluginrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
-| 4 | [**verify_plugin**](webhook.md#verify_plugin)|   [UpdateWebhookPluginRequest](webhook.md#updatewebhookpluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**verify_plugin**](webhook.md#verify_plugin)|   [WebhookRequest](webhook.md#webhookrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 5 | [**enable**](webhook.md#enable)|   [WebhookRequest](webhook.md#webhookrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
 | 6 | [**disable**](webhook.md#disable)|   [WebhookRequest](webhook.md#webhookrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
 | 7 | [**delete**](webhook.md#delete)|   [WebhookRequest](webhook.md#webhookrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -74,7 +74,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateWebhookPluginRequest](webhook.md#updatewebhookpluginrequest) |
+| Request | [WebhookRequest](webhook.md#webhookrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
