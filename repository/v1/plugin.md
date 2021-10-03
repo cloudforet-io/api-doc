@@ -155,12 +155,14 @@ description:
 | 2 | service_type |string|✅| |
 | 3 | image |string|✅| |
 | 4 | provider |string|❌| |
-| 5 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 7 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| 8 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 9 | project_id |string|❌| |
-| 10 | domain_id |string|✅| |
+| 5 | registry_type |string|❌| |
+| 6 | registry_url |string|❌| |
+| 7 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 8 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 10 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 11 | project_id |string|❌| |
+| 12 | domain_id |string|✅| |
 
 ### GetRepositoryPluginRequest
 | No | Field | Type | Required | Description |
@@ -236,62 +238,69 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">8</td>
+      <td style="text-align:left">registry_type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">capability</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">template</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">labels</td>
       <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">repository_info</td>
       <td style="text-align:left"><a href="plugin.md#repositoryinfo">RepositoryInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -372,6 +381,13 @@ description:
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">registry_type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>

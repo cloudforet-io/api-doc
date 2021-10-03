@@ -9,6 +9,7 @@
     * [Data Source](billing/v1/data-source.md)
   * [V2](billing/v2/README.md)
     * [Data Source](billing/v2/data-source.md)
+    * [Schedule](billing/v2/schedule.md)
 * [Config](config/README.md)
   * [V1](config/v1/README.md)
     * [Domain Config](config/v1/domain-config.md)
