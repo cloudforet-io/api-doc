@@ -149,20 +149,102 @@ description:
 ## Message
 
 ### CreatePluginRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
-| 2 | service_type |string|✅| |
-| 3 | image |string|✅| |
-| 4 | provider |string|❌| |
-| 5 | registry_type |string|❌| |
-| 6 | registry_url |string|❌| |
-| 7 | capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 8 | template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 9 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| 10 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 11 | project_id |string|❌| |
-| 12 | domain_id |string|✅| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">service_type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">image</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">provider</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">registry_type</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_REGISTRY_TYPE</li>
+          	<li>DOCKER_HUB</li>
+          	<li>AWS_PUBLIC_ECR</li>
+        </ul></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">capability</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">template</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">labels</td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">tags</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### GetRepositoryPluginRequest
 | No | Field | Type | Required | Description |
@@ -239,7 +321,11 @@ description:
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">registry_type</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_REGISTRY_TYPE</li>
+          	<li>DOCKER_HUB</li>
+          	<li>AWS_PUBLIC_ECR</li>
+        </ul></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -386,7 +472,11 @@ description:
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">registry_type</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_REGISTRY_TYPE</li>
+          	<li>DOCKER_HUB</li>
+          	<li>AWS_PUBLIC_ECR</li>
+        </ul></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
