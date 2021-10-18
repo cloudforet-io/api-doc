@@ -111,10 +111,11 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | permissions |list of string|✅| |
-| 3 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | project_id |string|❌| |
-| 6 | domain_id |string|✅| |
+| 3 | policy_id |string|✅| |
+| 4 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | project_id |string|❌| |
+| 7 | domain_id |string|✅| |
 
 ### GetRepositoryPolicyRequest
 | No | Field | Type | Required | Description |
