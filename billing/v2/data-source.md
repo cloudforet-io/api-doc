@@ -30,7 +30,7 @@ description:
 
  
 ### register
-> **POST** /billing/v1/data-sources
+> **POST** /billing/v2/data-sources
 >
 
 
@@ -43,7 +43,7 @@ description:
 
  
 ### update
-> **PUT** /billing/v1/data-source/{data_source_id}
+> **PUT** /billing/v2/data-source/{data_source_id}
 >
 
 
@@ -56,7 +56,7 @@ description:
 
  
 ### update_plugin
-> **PUT** /billing/v1/data-source/{data_source_id}/plugin
+> **PUT** /billing/v2/data-source/{data_source_id}/plugin
 >
 
 
@@ -69,7 +69,7 @@ description:
 
  
 ### verify_plugin
-> **POST** /billing/v1/data-source/{data_source_id}/plugin/verify
+> **POST** /billing/v2/data-source/{data_source_id}/plugin/verify
 >
 
 
@@ -82,7 +82,7 @@ description:
 
  
 ### enable
-> **PUT** /billing/v1/data-source/{data_source_id}/enable
+> **PUT** /billing/v2/data-source/{data_source_id}/enable
 >
 
 
@@ -95,7 +95,7 @@ description:
 
  
 ### disable
-> **PUT** /billing/v1/data-source/{data_source_id}/disable
+> **PUT** /billing/v2/data-source/{data_source_id}/disable
 >
 
 
@@ -108,7 +108,7 @@ description:
 
  
 ### deregister
-> **DELETE** /billing/v1/data-source/{data_source_id}
+> **DELETE** /billing/v2/data-source/{data_source_id}
 >
 
 
@@ -121,7 +121,7 @@ description:
 
  
 ### sync
-> **POST** /billing/v1/data-source/{data_source_id}/sync
+> **POST** /billing/v2/data-source/{data_source_id}/sync
 >
 
 
@@ -134,7 +134,7 @@ description:
 
  
 ### get
-> **GET** /billing/v1/data-source/{data_source_id}
+> **GET** /billing/v2/data-source/{data_source_id}
 >
 
 
@@ -147,9 +147,9 @@ description:
 
  
 ### list
-> **GET** /billing/v1/data-sources
+> **GET** /billing/v2/data-sources
 >
-> **POST** /billing/v1/data-sources/search
+> **POST** /billing/v2/data-sources/search
 
 
 
@@ -162,7 +162,7 @@ description:
 
  
 ### stat
-> **POST** /billing/v1/data-sources/stat
+> **POST** /billing/v2/data-sources/stat
 >
 
 

@@ -19,7 +19,7 @@ description:
 | 2 | [**update**](schedule.md#update)|   [UpdateScheduleRequest](schedule.md#updateschedulerequest) |   [ScheduleInfo](schedule.md#scheduleinfo) |  |
 | 3 | [**enable**](schedule.md#enable)|   [ScheduleRequest](schedule.md#schedulerequest) |   [ScheduleInfo](schedule.md#scheduleinfo) |  |
 | 4 | [**disable**](schedule.md#disable)|   [ScheduleRequest](schedule.md#schedulerequest) |   [ScheduleInfo](schedule.md#scheduleinfo) |  |
-| 5 | [**deregister**](schedule.md#deregister)|   [ScheduleRequest](schedule.md#schedulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**delete**](schedule.md#delete)|   [ScheduleRequest](schedule.md#schedulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 6 | [**get**](schedule.md#get)|   [GetScheduleRequest](schedule.md#getschedulerequest) |   [ScheduleInfo](schedule.md#scheduleinfo) |  |
 | 7 | [**list**](schedule.md#list)|   [ScheduleQuery](schedule.md#schedulequery) |   [SchedulesInfo](schedule.md#schedulesinfo) |  |
 | 8 | [**stat**](schedule.md#stat)|   [ScheduleStatQuery](schedule.md#schedulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
@@ -27,7 +27,7 @@ description:
 
  
 ### create
-> **POST** /billing/v1/schedules
+> **POST** /billing/v2/schedules
 >
 
 
@@ -40,7 +40,7 @@ description:
 
  
 ### update
-> **PUT** /billing/v1/schedule/{schedule_id}
+> **PUT** /billing/v2/schedule/{schedule_id}
 >
 
 
@@ -53,7 +53,7 @@ description:
 
  
 ### enable
-> **PUT** /billing/v1/schedule/{schedule_id}/enable
+> **PUT** /billing/v2/schedule/{schedule_id}/enable
 >
 
 
@@ -66,7 +66,7 @@ description:
 
  
 ### disable
-> **PUT** /billing/v1/schedule/{schedule_id}/disable
+> **PUT** /billing/v2/schedule/{schedule_id}/disable
 >
 
 
@@ -78,8 +78,8 @@ description:
  
 
  
-### deregister
-> **DELETE** /billing/v1/schedule/{schedule_id}
+### delete
+> **DELETE** /billing/v2/schedule/{schedule_id}
 >
 
 
@@ -92,7 +92,7 @@ description:
 
  
 ### get
-> **GET** /billing/v1/schedule/{schedule_id}
+> **GET** /billing/v2/schedule/{schedule_id}
 >
 
 
@@ -105,9 +105,9 @@ description:
 
  
 ### list
-> **GET** /billing/v1/schedules
+> **GET** /billing/v2/schedules
 >
-> **POST** /billing/v1/schedules/search
+> **POST** /billing/v2/schedules/search
 
 
 
@@ -120,7 +120,7 @@ description:
 
  
 ### stat
-> **POST** /billing/v1/schedules/stat
+> **POST** /billing/v2/schedules/stat
 >
 
 
