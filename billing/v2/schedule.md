@@ -210,8 +210,8 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">7</td>
-      <td style="text-align:left">data_source_info</td>
-      <td style="text-align:left">spaceone.api.billing.v2.data_source.DataSourceInfo</td>
+      <td style="text-align:left">data_source_id</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>

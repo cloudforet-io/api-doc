@@ -465,5 +465,6 @@ description:
 | 2 | name |string|❌| |
 | 3 | limit |int64|❌| |
 | 4 | planned_limits |[PlannedLimits](budget.md#plannedlimits)|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | domain_id |string|✅| |
+| 5 | time_period |[TimePeriod](budget.md#timeperiod)|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | domain_id |string|✅| |
