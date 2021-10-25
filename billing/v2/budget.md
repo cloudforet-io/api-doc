@@ -155,7 +155,7 @@ description:
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">planned_limits</td>
-      <td style="text-align:left"><a href="budget.md#plannedlimits">PlannedLimits</a></td>
+      <td style="text-align:left"><a href="budget.md#plannedlimit">list of PlannedLimit</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -355,7 +355,7 @@ description:
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">planned_limits</td>
-      <td style="text-align:left"><a href="budget.md#plannedlimits">PlannedLimits</a></td>
+      <td style="text-align:left"><a href="budget.md#plannedlimit">list of PlannedLimit</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -436,10 +436,9 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | date |string | |
-| 2 | limit |int64 | |
-| 3 | usd_cost |int64 | |
+| 2 | usd_cost |int64 | |
 
-### PlannedLimits
+### PlannedLimit
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | date |string | |
@@ -464,7 +463,7 @@ description:
 | 1 | budget_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | limit |int64|❌| |
-| 4 | planned_limits |[PlannedLimits](budget.md#plannedlimits)|❌| |
+| 4 | planned_limits |[list of PlannedLimit](budget.md#plannedlimit)|❌| |
 | 5 | time_period |[TimePeriod](budget.md#timeperiod)|❌| |
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | domain_id |string|✅| |
