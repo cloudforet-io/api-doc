@@ -168,6 +168,7 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | results |[list of UserInfo](auth.md#userinfo) | |
 | 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 3 | more |bool | |
 
 ### VerifyRequest
 | No | Field | Type | Required | Description |
