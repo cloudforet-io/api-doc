@@ -3,7 +3,7 @@ description:
 ---
 # Cost query set
 
->  **Package : spaceone.api.billing.v2.cost_query_set**
+>  **Package : spaceone.api.billing.v2**
 
 ## CostQuerySet
 

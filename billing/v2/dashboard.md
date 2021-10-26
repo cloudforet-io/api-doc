@@ -3,7 +3,7 @@ description:
 ---
 # Dashboard
 
->  **Package : spaceone.api.billing.v2.dashboard**
+>  **Package : spaceone.api.billing.v2**
 
 ## Dashboard
 

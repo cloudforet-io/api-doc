@@ -3,7 +3,7 @@ description:
 ---
 # Budget
 
->  **Package : spaceone.api.billing.v2.budget**
+>  **Package : spaceone.api.billing.v2**
 
 ## Budget
 

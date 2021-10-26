@@ -3,7 +3,7 @@ description:
 ---
 # Data source
 
->  **Package : spaceone.api.billing.v2.data_source**
+>  **Package : spaceone.api.billing.v2**
 
 ## DataSource
 
@@ -205,7 +205,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
-          	<li>NONE</li>
+          	<li>STATE_NONE</li>
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
@@ -216,7 +216,7 @@ description:
       <td style="text-align:left">4</td>
       <td style="text-align:left">data_source_type</td>
       <td style="text-align:left"><ul>
-          	<li>NONE</li>
+          	<li>TYPE_NONE</li>
           	<li>LOCAL</li>
           	<li>EXTERNAL</li>
         </ul></td>

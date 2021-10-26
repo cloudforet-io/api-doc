@@ -3,7 +3,7 @@ description:
 ---
 # Data source rule
 
->  **Package : spaceone.api.billing.v2.data_source_rule**
+>  **Package : spaceone.api.billing.v2**
 
 ## DataSourceRule
 

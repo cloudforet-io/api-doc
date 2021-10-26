@@ -3,7 +3,7 @@ description:
 ---
 # Cost
 
->  **Package : spaceone.api.billing.v2.cost**
+>  **Package : spaceone.api.billing.v2**
 
 ## Cost
 

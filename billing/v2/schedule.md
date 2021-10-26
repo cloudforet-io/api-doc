@@ -3,7 +3,7 @@ description:
 ---
 # Schedule
 
->  **Package : spaceone.api.billing.v2.schedule**
+>  **Package : spaceone.api.billing.v2**
 
 ## Schedule
 

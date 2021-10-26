@@ -3,7 +3,7 @@ description:
 ---
 # Exchange rate
 
->  **Package : spaceone.api.billing.v2.exchange_rate**
+>  **Package : spaceone.api.billing.v2**
 
 ## ExchangeRate
 
