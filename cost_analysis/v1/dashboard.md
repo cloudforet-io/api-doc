@@ -17,7 +17,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**create**](dashboard.md#create)|   [CreateDashboardRequest](dashboard.md#createdashboardrequest) |   [DashboardInfo](dashboard.md#dashboardinfo) |  |
 | 2 | [**update**](dashboard.md#update)|   [UpdateDashboardRequest](dashboard.md#updatedashboardrequest) |   [DashboardInfo](dashboard.md#dashboardinfo) |  |
-| 3 | [**change_scope**](dashboard.md#change_scope)|   [UpdateDashboardRequest](dashboard.md#updatedashboardrequest) |   [DashboardInfo](dashboard.md#dashboardinfo) |  |
+| 3 | [**change_scope**](dashboard.md#change_scope)|   [ChangeDashboardScopeRequest](dashboard.md#changedashboardscoperequest) |   [DashboardInfo](dashboard.md#dashboardinfo) |  |
 | 4 | [**delete**](dashboard.md#delete)|   [DashboardRequest](dashboard.md#dashboardrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 5 | [**get**](dashboard.md#get)|   [GetDashboardRequest](dashboard.md#getdashboardrequest) |   [DashboardInfo](dashboard.md#dashboardinfo) |  |
 | 6 | [**list**](dashboard.md#list)|   [DashboardQuery](dashboard.md#dashboardquery) |   [DashboardsInfo](dashboard.md#dashboardsinfo) |  |
@@ -58,7 +58,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateDashboardRequest](dashboard.md#updatedashboardrequest) |
+| Request | [ChangeDashboardScopeRequest](dashboard.md#changedashboardscoperequest) |
 | Response |  [DashboardInfo](dashboard.md#dashboardinfo)  |
  
  

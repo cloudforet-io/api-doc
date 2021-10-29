@@ -148,7 +148,7 @@ description:
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">limit</td>
-      <td style="text-align:left">int64</td>
+      <td style="text-align:left">float</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -162,7 +162,7 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">total_usd_cost</td>
-      <td style="text-align:left">int64</td>
+      <td style="text-align:left">float</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -194,55 +194,62 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">9</td>
-      <td style="text-align:left">time_period</td>
-      <td style="text-align:left"><a href="budget.md#timeperiod">TimePeriod</a></td>
+      <td style="text-align:left">start</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">10</td>
+      <td style="text-align:left">end</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">notifications</td>
       <td style="text-align:left"><a href="budget.md#budgetnotification">list of BudgetNotification</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -267,7 +274,7 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">threshold</td>
-      <td style="text-align:left">int64</td>
+      <td style="text-align:left">float</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -348,7 +355,7 @@ description:
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">limit</td>
-      <td style="text-align:left">int64</td>
+      <td style="text-align:left">float</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
@@ -375,46 +382,53 @@ description:
           	<li>MONTHLY</li>
           	<li>YEARLY</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">6</td>
-      <td style="text-align:left">time_period</td>
-      <td style="text-align:left"><a href="budget.md#timeperiod">TimePeriod</a></td>
-<td style="text-align:center">❌</td>
+      <td style="text-align:left">start</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">7</td>
+      <td style="text-align:left">end</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">notifications</td>
       <td style="text-align:left"><a href="budget.md#budgetnotification">list of BudgetNotification</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -436,13 +450,13 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | date |string | |
-| 2 | usd_cost |int64 | |
+| 2 | usd_cost |float | |
 
 ### PlannedLimit
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | date |string | |
-| 2 | limit |int64 | |
+| 2 | limit |float | |
 
 ### SetBudgetNotificationRequest
 | No | Field | Type | Required | Description |
@@ -451,19 +465,13 @@ description:
 | 2 | notifications |[list of BudgetNotification](budget.md#budgetnotification)|✅| |
 | 3 | domain_id |string|✅| |
 
-### TimePeriod
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | start |string | |
-| 2 | end |string | |
-
 ### UpdateBudgetRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | budget_id |string|✅| |
 | 2 | name |string|❌| |
-| 3 | limit |int64|❌| |
+| 3 | limit |float|❌| |
 | 4 | planned_limits |[list of PlannedLimit](budget.md#plannedlimit)|❌| |
-| 5 | time_period |[TimePeriod](budget.md#timeperiod)|❌| |
+| 5 | end |string|❌| |
 | 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | domain_id |string|✅| |

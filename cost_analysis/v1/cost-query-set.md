@@ -17,7 +17,7 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**create**](cost-query-set.md#create)|   [CreateCostQuerySetRequest](cost-query-set.md#createcostquerysetrequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
 | 2 | [**update**](cost-query-set.md#update)|   [UpdateCostQuerySetRequest](cost-query-set.md#updatecostquerysetrequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
-| 3 | [**change_scope**](cost-query-set.md#change_scope)|   [UpdateCostQuerySetRequest](cost-query-set.md#updatecostquerysetrequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
+| 3 | [**change_scope**](cost-query-set.md#change_scope)|   [ChangeCostQuerySetScopeRequest](cost-query-set.md#changecostquerysetscoperequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
 | 4 | [**delete**](cost-query-set.md#delete)|   [CostQuerySetRequest](cost-query-set.md#costquerysetrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 5 | [**get**](cost-query-set.md#get)|   [GetCostQuerySetRequest](cost-query-set.md#getcostquerysetrequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
 | 6 | [**list**](cost-query-set.md#list)|   [CostQuerySetQuery](cost-query-set.md#costquerysetquery) |   [CostQuerySetsInfo](cost-query-set.md#costquerysetsinfo) |  |
@@ -58,7 +58,7 @@ description:
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateCostQuerySetRequest](cost-query-set.md#updatecostquerysetrequest) |
+| Request | [ChangeCostQuerySetScopeRequest](cost-query-set.md#changecostquerysetscoperequest) |
 | Response |  [CostQuerySetInfo](cost-query-set.md#costquerysetinfo)  |
  
  

@@ -97,10 +97,10 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | cost_id |string | |
 | 2 | cost_key |string | |
-| 3 | usd_cost |int64 | |
+| 3 | usd_cost |float | |
 | 4 | original_currency |string | |
-| 5 | original_cost |int64 | |
-| 6 | usage_quantity |int64 | |
+| 5 | original_cost |float | |
+| 6 | usage_quantity |float | |
 | 7 | provider |string | |
 | 8 | region_code |string | |
 | 9 | product |string | |
@@ -157,9 +157,9 @@ description:
 ### CreateCostRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
-| 1 | original_cost |int64|✅| |
+| 1 | original_cost |float|✅| |
 | 2 | original_currency |string|✅| |
-| 3 | usage_quantity |int64|❌| |
+| 3 | usage_quantity |float|❌| |
 | 4 | provider |string|❌| |
 | 5 | region_code |string|❌| |
 | 6 | product |string|❌| |

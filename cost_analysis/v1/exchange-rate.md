@@ -82,7 +82,7 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | currency |string | |
-| 2 | rate |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 2 | rate |float | |
 | 3 | is_default |bool | |
 | 4 | domain_id |string | |
 
@@ -107,5 +107,5 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | currency |string|✅| |
-| 2 | rate |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| 2 | rate |float|✅| |
 | 3 | domain_id |string|✅| |
