@@ -183,20 +183,9 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">scope</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>PUBLIC</li>
-          	<li>PRIVATE</li>
-        </ul></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">granularity</td>
       <td style="text-align:left"><ul>
-          	<li>GRANULARITY_NONE</li>
+          	<li>NONE</li>
           	<li>MONTHLY</li>
           	<li>YEARLY</li>
         </ul></td>
@@ -204,35 +193,35 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
+      <td style="text-align:left">3</td>
       <td style="text-align:left">default_layout_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
+      <td style="text-align:left">4</td>
       <td style="text-align:left">custom_layouts</td>
       <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">default_filter</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -272,7 +261,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">scope</td>
       <td style="text-align:left"><ul>
-          	<li>NONE</li>
+          	<li>SCOPE_NONE</li>
           	<li>PUBLIC</li>
           	<li>PRIVATE</li>
         </ul></td>
@@ -283,7 +272,7 @@ description:
       <td style="text-align:left">4</td>
       <td style="text-align:left">granularity</td>
       <td style="text-align:left"><ul>
-          	<li>GRANULARITY_NONE</li>
+          	<li>NONE</li>
           	<li>MONTHLY</li>
           	<li>YEARLY</li>
         </ul></td>
@@ -388,7 +377,7 @@ description:
       <td style="text-align:left">4</td>
       <td style="text-align:left">scope</td>
       <td style="text-align:left"><ul>
-          	<li>NONE</li>
+          	<li>SCOPE_NONE</li>
           	<li>PUBLIC</li>
           	<li>PRIVATE</li>
         </ul></td>
@@ -399,7 +388,7 @@ description:
       <td style="text-align:left">5</td>
       <td style="text-align:left">granularity</td>
       <td style="text-align:left"><ul>
-          	<li>GRANULARITY_NONE</li>
+          	<li>NONE</li>
           	<li>MONTHLY</li>
           	<li>YEARLY</li>
         </ul></td>
@@ -480,7 +469,7 @@ description:
       <td style="text-align:left">3</td>
       <td style="text-align:left">granularity</td>
       <td style="text-align:left"><ul>
-          	<li>GRANULARITY_NONE</li>
+          	<li>NONE</li>
           	<li>MONTHLY</li>
           	<li>YEARLY</li>
         </ul></td>
