@@ -29,9 +29,7 @@ description:
 | 4 | n |string | |
 | 5 | operator |string | |
 | 6 | o |string | |
-| 7 | value |string | |
-| 8 | v |string | |
-| 9 | date_format |string | |
+| 7 | fields |[list of AggregateGroupSubField](query.md#aggregategroupsubfield) | |
 
 ### AggregateGroupKey
 | No | Field | Type |  Description |
@@ -42,11 +40,20 @@ description:
 | 4 | n |string | |
 | 5 | date_format |string | |
 
+### AggregateGroupSubField
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | key |string | |
+| 2 | k |string | |
+| 3 | name |string | |
+| 4 | n |string | |
+
 ### AggregateSort
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | key |string | |
 | 2 | desc |bool | |
+| 3 | keys |[list of SortKey](query.md#sortkey) | |
 
 ### AggregateUnwind
 | No | Field | Type |  Description |
@@ -82,6 +89,13 @@ description:
 | 8 | keyword |string | |
 
 ### Sort
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | key |string | |
+| 2 | desc |bool | |
+| 3 | keys |[list of SortKey](query.md#sortkey) | |
+
+### SortKey
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | key |string | |
