@@ -111,11 +111,12 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | service_type |string|✅| |
-| 3 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 4 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | project_id |string|❌| |
-| 7 | domain_id |string|✅| |
+| 3 | schema_id |string|✅| |
+| 4 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 5 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | project_id |string|❌| |
+| 8 | domain_id |string|✅| |
 
 ### GetRepositorySchemaRequest
 | No | Field | Type | Required | Description |
@@ -124,36 +125,106 @@ description:
 | 2 | domain_id |string|✅| |
 | 3 | repository_id |string|❌| |
 | 4 | only |list of string|❌| |
+| 5 | schema_id |string|❌| |
 
 ### SchemaInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | name |string | |
 | 2 | service_type |string | |
-| 3 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 6 | repository_info |[RepositoryInfo](schema.md#repositoryinfo) | |
-| 7 | project_id |string | |
-| 8 | domain_id |string | |
-| 9 | created_at |string | |
-| 10 | updated_at |string | |
+| 3 | schema_id |string | |
+| 4 | schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | repository_info |[RepositoryInfo](schema.md#repositoryinfo) | |
+| 8 | project_id |string | |
+| 9 | domain_id |string | |
+| 10 | created_at |string | |
+| 11 | updated_at |string | |
 
 ### SchemaQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | name |string|❌| |
-| 3 | service_type |string|❌| |
-| 4 | project_id |string|✅| |
-| 5 | repository_id |string|✅| |
-| 6 | domain_id |string|✅| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">query</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">service_type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">repository_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">schema_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">state</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ENABLED</li>
+          	<li>DISABLED</li>
+        </ul></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### SchemaRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
 | 2 | domain_id |string|✅| |
+| 3 | schema_id |string|❌| |
 
 ### SchemaStatQuery
 | No | Field | Type | Required | Description |
