@@ -26,7 +26,7 @@ description:
 
  
 ### create
-> **POST** /cost-analysis/v2/dashboards
+> **POST** /cost-analysis/v1/dashboards
 >
 
 
@@ -39,7 +39,7 @@ description:
 
  
 ### update
-> **PUT** /cost-analysis/v2/dashboard/{dashboard_id}
+> **PUT** /cost-analysis/v1/dashboard/{dashboard_id}
 >
 
 
@@ -52,7 +52,7 @@ description:
 
  
 ### change_scope
-> **PUT** /cost-analysis/v2/dashboard/{dashboard_id}/scope
+> **PUT** /cost-analysis/v1/dashboard/{dashboard_id}/scope
 >
 
 
@@ -65,7 +65,7 @@ description:
 
  
 ### delete
-> **DELETE** /cost-analysis/v2/dashboard/{dashboard_id}
+> **DELETE** /cost-analysis/v1/dashboard/{dashboard_id}
 >
 
 
@@ -78,7 +78,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v2/dashboard/{dashboard_id}
+> **GET** /cost-analysis/v1/dashboard/{dashboard_id}
 >
 
 
@@ -91,9 +91,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v2/dashboards
+> **GET** /cost-analysis/v1/dashboards
 >
-> **POST** /cost-analysis/v2/dashboards/search
+> **POST** /cost-analysis/v1/dashboards/search
 
 
 
@@ -106,7 +106,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v2/dashboards/stat
+> **POST** /cost-analysis/v1/dashboards/stat
 >
 
 
@@ -163,74 +163,14 @@ description:
 
 
 ### CreateDashboardRequest
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:center">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">granularity</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>MONTHLY</li>
-          	<li>YEARLY</li>
-        </ul></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">default_layout_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">custom_layouts</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">default_filter</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">7</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :---: | :--- |
+| 1 | name |string|✅| |
+| 2 | default_layout_id |string|❌| |
+| 3 | custom_layouts |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 4 | default_filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | domain_id |string|✅| |
 
 ### DashboardInfo
 <table>
@@ -270,66 +210,55 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">granularity</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>MONTHLY</li>
-          	<li>YEARLY</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">default_layout_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">5</td>
       <td style="text-align:left">custom_layouts</td>
       <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">default_filter</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -386,24 +315,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">granularity</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>MONTHLY</li>
-          	<li>YEARLY</li>
-        </ul></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">6</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -440,78 +358,12 @@ description:
 | 3 | only |list of string|❌| |
 
 ### UpdateDashboardRequest
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:center">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">dashboard_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">granularity</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>MONTHLY</li>
-          	<li>YEARLY</li>
-        </ul></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">default_layout_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">custom_layouts</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">default_filter</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">7</td>
-      <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :---: | :--- |
+| 1 | dashboard_id |string|✅| |
+| 2 | name |string|❌| |
+| 3 | default_layout_id |string|❌| |
+| 4 | custom_layouts |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
+| 5 | default_filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 7 | domain_id |string|✅| |

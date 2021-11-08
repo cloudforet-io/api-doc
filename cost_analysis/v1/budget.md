@@ -26,7 +26,7 @@ description:
 
  
 ### create
-> **POST** /cost-analysis/v2/budgets
+> **POST** /cost-analysis/v1/budgets
 >
 
 
@@ -39,7 +39,7 @@ description:
 
  
 ### update
-> **PUT** /cost-analysis/v2/budget/{budget_id}
+> **PUT** /cost-analysis/v1/budget/{budget_id}
 >
 
 
@@ -52,7 +52,7 @@ description:
 
  
 ### set_notification
-> **PUT** /cost-analysis/v2/budget/{budget_id}/notification
+> **PUT** /cost-analysis/v1/budget/{budget_id}/notification
 >
 
 
@@ -65,7 +65,7 @@ description:
 
  
 ### delete
-> **DELETE** /cost-analysis/v2/budget/{budget_id}
+> **DELETE** /cost-analysis/v1/budget/{budget_id}
 >
 
 
@@ -78,7 +78,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v2/budget/{budget_id}
+> **GET** /cost-analysis/v1/budget/{budget_id}
 >
 
 
@@ -91,9 +91,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v2/budgets
+> **GET** /cost-analysis/v1/budgets
 >
-> **POST** /cost-analysis/v2/budgets/search
+> **POST** /cost-analysis/v1/budgets/search
 
 
 
@@ -106,7 +106,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v2/budgets/stat
+> **POST** /cost-analysis/v1/budgets/stat
 >
 
 
@@ -161,27 +161,20 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">total_usd_cost</td>
+      <td style="text-align:left">total_usage_usd_cost</td>
       <td style="text-align:left">float</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">6</td>
-      <td style="text-align:left">monthly_costs</td>
-      <td style="text-align:left"><a href="budget.md#monthlybudgetcost">list of MonthlyBudgetCost</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">cost_types</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">time_unit</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -193,63 +186,63 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">start</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">end</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">notifications</td>
       <td style="text-align:left"><a href="budget.md#budgetnotification">list of BudgetNotification</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -445,12 +438,6 @@ description:
 | 1 | budget_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
-
-### MonthlyBudgetCost
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | date |string | |
-| 2 | usd_cost |float | |
 
 ### PlannedLimit
 | No | Field | Type |  Description |

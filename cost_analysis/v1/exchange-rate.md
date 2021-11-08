@@ -23,7 +23,7 @@ description:
 
  
 ### set
-> **POST** /cost-analysis/v2/exchange-rate/{currency}/set
+> **POST** /cost-analysis/v1/exchange-rate/{currency}/set
 >
 
 
@@ -36,7 +36,7 @@ description:
 
  
 ### reset
-> **POST** /cost-analysis/v2/exchange-rate/{currency}/reset
+> **POST** /cost-analysis/v1/exchange-rate/{currency}/reset
 >
 
 
@@ -49,7 +49,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v2/exchange-rate/{currency}
+> **GET** /cost-analysis/v1/exchange-rate/{currency}
 >
 
 
@@ -62,9 +62,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v2/exchange-rates
+> **GET** /cost-analysis/v1/exchange-rates
 >
-> **POST** /cost-analysis/v2/exchange-rates/search
+> **POST** /cost-analysis/v1/exchange-rates/search
 
 
 

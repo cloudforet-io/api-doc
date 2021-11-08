@@ -26,7 +26,7 @@ description:
 
  
 ### create
-> **POST** /cost-analysis/v2/data_source_rules
+> **POST** /cost-analysis/v1/data_source_rules
 >
 
 
@@ -39,7 +39,7 @@ description:
 
  
 ### update
-> **PUT** /cost-analysis/v2/data_source_rule/{data_source_rule_id}
+> **PUT** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
 >
 
 
@@ -52,7 +52,7 @@ description:
 
  
 ### change_order
-> **PUT** /cost-analysis/v2/data_source_rule/{data_source_rule_id}/order
+> **PUT** /cost-analysis/v1/data_source_rule/{data_source_rule_id}/order
 >
 
 
@@ -65,7 +65,7 @@ description:
 
  
 ### delete
-> **DELETE** /cost-analysis/v2/data_source_rule/{data_source_rule_id}
+> **DELETE** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
 >
 
 
@@ -78,7 +78,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v2/data_source_rule/{data_source_rule_id}
+> **GET** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
 >
 
 
@@ -91,9 +91,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v2/data_source_rules
+> **GET** /cost-analysis/v1/data_source_rules
 >
-> **POST** /cost-analysis/v2/data_source_rules/search
+> **POST** /cost-analysis/v1/data_source_rules/search
 
 
 
@@ -106,7 +106,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v2/data_source_rules/stat
+> **POST** /cost-analysis/v1/data_source_rules/stat
 >
 
 

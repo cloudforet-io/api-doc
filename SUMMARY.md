@@ -19,6 +19,7 @@
 * [Cost Analysis](cost_analysis/README.md)
   * [V1](cost_analysis/v1/README.md)
     * [Budget](cost_analysis/v1/budget.md)
+    * [Budget Usage](cost_analysis/v1/budget-usage.md)
     * [Cost](cost_analysis/v1/cost.md)
     * [Cost Query Set](cost_analysis/v1/cost-query-set.md)
     * [Dashboard](cost_analysis/v1/dashboard.md)

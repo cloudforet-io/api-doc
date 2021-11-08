@@ -30,7 +30,7 @@ description:
 
  
 ### register
-> **POST** /cost-analysis/v2/data-sources
+> **POST** /cost-analysis/v1/data-sources
 >
 
 
@@ -43,7 +43,7 @@ description:
 
  
 ### update
-> **PUT** /cost-analysis/v2/data-source/{data_source_id}
+> **PUT** /cost-analysis/v1/data-source/{data_source_id}
 >
 
 
@@ -56,7 +56,7 @@ description:
 
  
 ### update_plugin
-> **PUT** /cost-analysis/v2/data-source/{data_source_id}/plugin
+> **PUT** /cost-analysis/v1/data-source/{data_source_id}/plugin
 >
 
 
@@ -69,7 +69,7 @@ description:
 
  
 ### verify_plugin
-> **POST** /cost-analysis/v2/data-source/{data_source_id}/plugin/verify
+> **POST** /cost-analysis/v1/data-source/{data_source_id}/plugin/verify
 >
 
 
@@ -82,7 +82,7 @@ description:
 
  
 ### enable
-> **PUT** /cost-analysis/v2/data-source/{data_source_id}/enable
+> **PUT** /cost-analysis/v1/data-source/{data_source_id}/enable
 >
 
 
@@ -95,7 +95,7 @@ description:
 
  
 ### disable
-> **PUT** /cost-analysis/v2/data-source/{data_source_id}/disable
+> **PUT** /cost-analysis/v1/data-source/{data_source_id}/disable
 >
 
 
@@ -108,7 +108,7 @@ description:
 
  
 ### deregister
-> **DELETE** /cost-analysis/v2/data-source/{data_source_id}
+> **DELETE** /cost-analysis/v1/data-source/{data_source_id}
 >
 
 
@@ -121,7 +121,7 @@ description:
 
  
 ### sync
-> **POST** /cost-analysis/v2/data-source/{data_source_id}/sync
+> **POST** /cost-analysis/v1/data-source/{data_source_id}/sync
 >
 
 
@@ -134,7 +134,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v2/data-source/{data_source_id}
+> **GET** /cost-analysis/v1/data-source/{data_source_id}
 >
 
 
@@ -147,9 +147,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v2/data-sources
+> **GET** /cost-analysis/v1/data-sources
 >
-> **POST** /cost-analysis/v2/data-sources/search
+> **POST** /cost-analysis/v1/data-sources/search
 
 
 
@@ -162,7 +162,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v2/data-sources/stat
+> **POST** /cost-analysis/v1/data-sources/stat
 >
 
 

@@ -26,7 +26,7 @@ description:
 
  
 ### create
-> **POST** /cost-analysis/v2/cost_query_sets
+> **POST** /cost-analysis/v1/cost_query_sets
 >
 
 
@@ -39,7 +39,7 @@ description:
 
  
 ### update
-> **PUT** /cost-analysis/v2/cost_query_set/{cost_query_set_id}
+> **PUT** /cost-analysis/v1/cost_query_set/{cost_query_set_id}
 >
 
 
@@ -52,7 +52,7 @@ description:
 
  
 ### change_scope
-> **PUT** /cost-analysis/v2/cost_query_set/{cost_query_set_id}/scope
+> **PUT** /cost-analysis/v1/cost_query_set/{cost_query_set_id}/scope
 >
 
 
@@ -65,7 +65,7 @@ description:
 
  
 ### delete
-> **DELETE** /cost-analysis/v2/cost_query_set/{cost_query_set_id}
+> **DELETE** /cost-analysis/v1/cost_query_set/{cost_query_set_id}
 >
 
 
@@ -78,7 +78,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v2/cost_query_set/{cost_query_set_id}
+> **GET** /cost-analysis/v1/cost_query_set/{cost_query_set_id}
 >
 
 
@@ -91,9 +91,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v2/cost_query_sets
+> **GET** /cost-analysis/v1/cost_query_sets
 >
-> **POST** /cost-analysis/v2/cost_query_sets/search
+> **POST** /cost-analysis/v1/cost_query_sets/search
 
 
 
@@ -106,7 +106,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v2/cost_query_sets/stat
+> **POST** /cost-analysis/v1/cost_query_sets/stat
 >
 
 

@@ -24,7 +24,7 @@ description:
 
  
 ### create
-> **POST** /cost-analysis/v2/costs
+> **POST** /cost-analysis/v1/costs
 >
 
 
@@ -37,7 +37,7 @@ description:
 
  
 ### delete
-> **DELETE** /cost-analysis/v2/cost/{cost_id}
+> **DELETE** /cost-analysis/v1/cost/{cost_id}
 >
 
 
@@ -50,7 +50,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v2/cost/{cost_id}
+> **GET** /cost-analysis/v1/cost/{cost_id}
 >
 
 
@@ -63,9 +63,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v2/costs
+> **GET** /cost-analysis/v1/costs
 >
-> **POST** /cost-analysis/v2/costs/search
+> **POST** /cost-analysis/v1/costs/search
 
 
 
@@ -78,7 +78,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v2/costs/stat
+> **POST** /cost-analysis/v1/costs/stat
 >
 
 

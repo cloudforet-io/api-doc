@@ -27,7 +27,7 @@ description:
 
  
 ### create
-> **POST** /cost-analysis/v2/schedules
+> **POST** /cost-analysis/v1/schedules
 >
 
 
@@ -40,7 +40,7 @@ description:
 
  
 ### update
-> **PUT** /cost-analysis/v2/schedule/{schedule_id}
+> **PUT** /cost-analysis/v1/schedule/{schedule_id}
 >
 
 
@@ -53,7 +53,7 @@ description:
 
  
 ### enable
-> **PUT** /cost-analysis/v2/schedule/{schedule_id}/enable
+> **PUT** /cost-analysis/v1/schedule/{schedule_id}/enable
 >
 
 
@@ -66,7 +66,7 @@ description:
 
  
 ### disable
-> **PUT** /cost-analysis/v2/schedule/{schedule_id}/disable
+> **PUT** /cost-analysis/v1/schedule/{schedule_id}/disable
 >
 
 
@@ -79,7 +79,7 @@ description:
 
  
 ### delete
-> **DELETE** /cost-analysis/v2/schedule/{schedule_id}
+> **DELETE** /cost-analysis/v1/schedule/{schedule_id}
 >
 
 
@@ -92,7 +92,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v2/schedule/{schedule_id}
+> **GET** /cost-analysis/v1/schedule/{schedule_id}
 >
 
 
@@ -105,9 +105,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v2/schedules
+> **GET** /cost-analysis/v1/schedules
 >
-> **POST** /cost-analysis/v2/schedules/search
+> **POST** /cost-analysis/v1/schedules/search
 
 
 
@@ -120,7 +120,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v2/schedules/stat
+> **POST** /cost-analysis/v1/schedules/stat
 >
 
 
