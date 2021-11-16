@@ -18,7 +18,7 @@ description:
 | 1 | [**set**](exchange-rate.md#set)|   [SetExchangeRateRequest](exchange-rate.md#setexchangeraterequest) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  |
 | 2 | [**reset**](exchange-rate.md#reset)|   [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  |
 | 3 | [**get**](exchange-rate.md#get)|   [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  |
-| 4 | [**list**](exchange-rate.md#list)|   [ExchangeRateQuery](exchange-rate.md#exchangeratequery) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  | 
+| 4 | [**list**](exchange-rate.md#list)|   [ExchangeRateQuery](exchange-rate.md#exchangeratequery) |   [ExchangeRatesInfo](exchange-rate.md#exchangeratesinfo) |  | 
  
 
  
@@ -71,7 +71,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [ExchangeRateQuery](exchange-rate.md#exchangeratequery) |
-| Response |  [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  |
+| Response |  [ExchangeRatesInfo](exchange-rate.md#exchangeratesinfo)  |
 
 
 ## 
