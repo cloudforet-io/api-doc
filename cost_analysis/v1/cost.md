@@ -159,22 +159,23 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | original_cost |float|✅| |
 | 2 | original_currency |string|✅| |
-| 3 | usage_quantity |float|❌| |
-| 4 | provider |string|❌| |
-| 5 | region_code |string|❌| |
-| 6 | product |string|❌| |
-| 7 | account |string|❌| |
-| 8 | type |string|❌| |
-| 9 | resource_group |string|❌| |
-| 10 | resource |string|❌| |
-| 11 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 12 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 13 | service_account_id |string|❌| |
-| 14 | project_id |string|✅| |
-| 15 | data_source_id |string|✅| |
-| 16 | domain_id |string|✅| |
-| 17 | billed_at |string|❌| |
-| 18 | created_at |string|❌| |
+| 3 | usd_cost |float|❌| |
+| 4 | usage_quantity |float|❌| |
+| 5 | provider |string|❌| |
+| 6 | region_code |string|❌| |
+| 7 | product |string|❌| |
+| 8 | account |string|❌| |
+| 9 | type |string|❌| |
+| 10 | resource_group |string|❌| |
+| 11 | resource |string|❌| |
+| 12 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 13 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 14 | service_account_id |string|❌| |
+| 15 | project_id |string|✅| |
+| 16 | data_source_id |string|✅| |
+| 17 | domain_id |string|✅| |
+| 18 | billed_at |string|❌| |
+| 19 | created_at |string|❌| |
 
 ### GetCostRequest
 | No | Field | Type | Required | Description |
