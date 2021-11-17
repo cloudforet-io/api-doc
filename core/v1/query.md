@@ -30,6 +30,8 @@ description:
 | 5 | operator |string | |
 | 6 | o |string | |
 | 7 | fields |[list of AggregateGroupSubField](query.md#aggregategroupsubfield) | |
+| 8 | condition |[AggregateGroupSubCondition](query.md#aggregategroupsubcondition) | |
+| 9 | c |[AggregateGroupSubCondition](query.md#aggregategroupsubcondition) | |
 
 ### AggregateGroupKey
 | No | Field | Type |  Description |
@@ -39,6 +41,16 @@ description:
 | 3 | name |string | |
 | 4 | n |string | |
 | 5 | date_format |string | |
+
+### AggregateGroupSubCondition
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | key |string | |
+| 2 | k |string | |
+| 3 | value |string | |
+| 4 | v |string | |
+| 5 | operator |string | |
+| 6 | o |string | |
 
 ### AggregateGroupSubField
 | No | Field | Type |  Description |
