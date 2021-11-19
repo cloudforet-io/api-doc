@@ -53,7 +53,7 @@ description:
 ### BudgetUsageInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | budget_id_ |string | |
+| 1 | budget_id |string | |
 | 2 | date |string | |
 | 3 | usd_cost |float | |
 | 4 | limit |float | |
