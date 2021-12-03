@@ -110,10 +110,10 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
-| 2 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 3 | domain_id |string|✅| |
-| 4 | region_code |string|✅| |
-| 5 | provider |string|❌| |
+| 2 | region_code |string|✅| |
+| 3 | provider |string|❌| |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 5 | domain_id |string|✅| |
 
 ### GetRegionRequest
 | No | Field | Type | Required | Description |
@@ -127,13 +127,13 @@ description:
 | :--- | :--- | :--- | :--- |
 | 1 | region_id |string | |
 | 2 | name |string | |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | domain_id |string | |
-| 5 | created_at |string | |
-| 6 | updated_at |string | |
-| 7 | region_code |string | |
-| 8 | provider |string | |
-| 9 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 3 | region_key |string | |
+| 4 | region_code |string | |
+| 5 | provider |string | |
+| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | domain_id |string | |
+| 8 | created_at |string | |
+| 9 | updated_at |string | |
 
 ### RegionQuery
 | No | Field | Type | Required | Description |
@@ -141,9 +141,10 @@ description:
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | region_id |string|❌| |
 | 3 | name |string|❌| |
-| 4 | domain_id |string|✅| |
+| 4 | region_key |string|❌| |
 | 5 | region_code |string|❌| |
 | 6 | provider |string|❌| |
+| 7 | domain_id |string|✅| |
 
 ### RegionRequest
 | No | Field | Type | Required | Description |

@@ -141,40 +141,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">2</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>STATE_NONE</li>
-          	<li>PENDING</li>
-          	<li>INSERVICE</li>
-          	<li>MAINTENANCE</li>
-          	<li>CLOSED</li>
-          	<li>DELETED</li>
-        </ul></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">primary_ip_address</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">server_type</td>
-      <td style="text-align:left"><ul>
-          	<li>SERVER_TYPE_NONE</li>
-          	<li>BAREMETAL</li>
-          	<li>VM</li>
-          	<li>HYPERVISOR</li>
-          	<li>UNKNOWN</li>
-        </ul></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
+      <td style="text-align:left">3</td>
       <td style="text-align:left">os_type</td>
       <td style="text-align:left"><ul>
           	<li>OS_TYPE_NONE</li>
@@ -185,84 +158,105 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">account</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
       <td style="text-align:left">6</td>
+      <td style="text-align:left">size</td>
+      <td style="text-align:left">float</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
       <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">cloud_service_group</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">cloud_service_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">nics</td>
       <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">disks</td>
       <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">reference</td>
       <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">18</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -324,14 +318,7 @@ description:
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>STATE_NONE</li>
-          	<li>PENDING</li>
-          	<li>INSERVICE</li>
-          	<li>MAINTENANCE</li>
-          	<li>CLOSED</li>
-          	<li>DELETED</li>
-        </ul></td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -345,25 +332,12 @@ description:
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">ip_addresses</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+      <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">6</td>
-      <td style="text-align:left">server_type</td>
-      <td style="text-align:left"><ul>
-          	<li>SERVER_TYPE_NONE</li>
-          	<li>BAREMETAL</li>
-          	<li>VM</li>
-          	<li>HYPERVISOR</li>
-          	<li>UNKNOWN</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">os_type</td>
       <td style="text-align:left"><ul>
           	<li>OS_TYPE_NONE</li>
@@ -374,113 +348,141 @@ description:
 
    </tr>
     <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">account</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
       <td style="text-align:left">8</td>
-      <td style="text-align:left">provider</td>
+      <td style="text-align:left">type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">9</td>
-      <td style="text-align:left">cloud_service_group</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">size</td>
+      <td style="text-align:left">float</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">10</td>
-      <td style="text-align:left">cloud_service_type</td>
+      <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">11</td>
-      <td style="text-align:left">region_code</td>
+      <td style="text-align:left">cloud_service_group</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left">12</td>
+      <td style="text-align:left">cloud_service_type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">13</td>
+      <td style="text-align:left">region_code</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">nics</td>
       <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">disks</td>
       <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">18</td>
       <td style="text-align:left">reference</td>
       <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">19</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">18</td>
+      <td style="text-align:left">20</td>
       <td style="text-align:left">collection_info</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">19</td>
+      <td style="text-align:left">21</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">20</td>
+      <td style="text-align:left">22</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">21</td>
+      <td style="text-align:left">23</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">22</td>
+      <td style="text-align:left">24</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">23</td>
+      <td style="text-align:left">25</td>
       <td style="text-align:left">deleted_at</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">26</td>
+      <td style="text-align:left">launched_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -558,19 +560,6 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">7</td>
-      <td style="text-align:left">server_type</td>
-      <td style="text-align:left"><ul>
-          	<li>SERVER_TYPE_NONE</li>
-          	<li>BAREMETAL</li>
-          	<li>VM</li>
-          	<li>HYPERVISOR</li>
-          	<li>UNKNOWN</li>
-        </ul></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">os_type</td>
       <td style="text-align:left"><ul>
           	<li>OS_TYPE_NONE</li>
@@ -581,49 +570,63 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">account</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
       <td style="text-align:left">9</td>
-      <td style="text-align:left">provider</td>
+      <td style="text-align:left">type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">10</td>
-      <td style="text-align:left">cloud_service_group</td>
+      <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">11</td>
-      <td style="text-align:left">cloud_service_type</td>
+      <td style="text-align:left">cloud_service_group</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">12</td>
-      <td style="text-align:left">region_code</td>
+      <td style="text-align:left">cloud_service_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">13</td>
-      <td style="text-align:left">resource_group_id</td>
+      <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">14</td>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">resource_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">15</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -676,7 +679,7 @@ description:
       <td style="text-align:left">server_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
-<td style="text-align:left">server unique id</td>
+<td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left">2</td>
@@ -687,40 +690,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">state</td>
-      <td style="text-align:left"><ul>
-          	<li>STATE_NONE</li>
-          	<li>PENDING</li>
-          	<li>INSERVICE</li>
-          	<li>MAINTENANCE</li>
-          	<li>CLOSED</li>
-          	<li>DELETED</li>
-        </ul></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">primary_ip_address</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">server_type</td>
-      <td style="text-align:left"><ul>
-          	<li>SERVER_TYPE_NONE</li>
-          	<li>BAREMETAL</li>
-          	<li>VM</li>
-          	<li>HYPERVISOR</li>
-          	<li>UNKNOWN</li>
-        </ul></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
+      <td style="text-align:left">4</td>
       <td style="text-align:left">os_type</td>
       <td style="text-align:left"><ul>
           	<li>OS_TYPE_NONE</li>
@@ -731,98 +707,119 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">account</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">type</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
       <td style="text-align:left">7</td>
+      <td style="text-align:left">size</td>
+      <td style="text-align:left">float</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
       <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
+      <td style="text-align:left">9</td>
       <td style="text-align:left">cloud_service_group</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
+      <td style="text-align:left">10</td>
       <td style="text-align:left">cloud_service_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
+      <td style="text-align:left">11</td>
       <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">nics</td>
       <td style="text-align:left"><a href="server.md#servernic">list of ServerNIC</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">14</td>
+      <td style="text-align:left">15</td>
       <td style="text-align:left">disks</td>
       <td style="text-align:left"><a href="server.md#serverdisk">list of ServerDisk</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">15</td>
+      <td style="text-align:left">16</td>
       <td style="text-align:left">reference</td>
       <td style="text-align:left"><a href="server.md#serverreference">ServerReference</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">16</td>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">17</td>
+      <td style="text-align:left">18</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">18</td>
+      <td style="text-align:left">19</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">19</td>
+      <td style="text-align:left">20</td>
       <td style="text-align:left">release_region</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">20</td>
+      <td style="text-align:left">21</td>
       <td style="text-align:left">release_project</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:center">❌</td>
