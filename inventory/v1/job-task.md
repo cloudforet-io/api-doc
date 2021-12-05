@@ -74,6 +74,7 @@ description:
       <td style="text-align:left"><ul>
           	<li>JOB_TASK_STATE_NONE</li>
           	<li>PENDING</li>
+          	<li>CANCELED</li>
           	<li>IN_PROGRESS</li>
           	<li>SUCCESS</li>
           	<li>FAILURE</li>
