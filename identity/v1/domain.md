@@ -193,7 +193,7 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | domain_id |string|✅| |
 | 2 | plugin_info |[PluginInfo](domain.md#plugininfo)|❌| |
-| 3 | release_auth_plugin |string|❌| |
+| 3 | release_auth_plugin |bool|❌| |
 
 ### CreateDomainRequest
 | No | Field | Type | Required | Description |
