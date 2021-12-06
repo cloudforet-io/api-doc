@@ -434,6 +434,7 @@ description:
 | 1 | secret_id |string|✅| |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | domain_id |string|✅| |
+| 4 | schema |string|❌| |
 
 ### UpdateSecretRequest
 | No | Field | Type | Required | Description |
