@@ -127,7 +127,7 @@ description:
 | 2 | name |string | |
 | 3 | state |string | |
 | 4 | account |string | |
-| 5 | type |string | |
+| 5 | instance_type |string | |
 | 6 | size |float | |
 | 7 | cloud_service_type |string | |
 | 8 | cloud_service_group |string | |
@@ -153,7 +153,7 @@ description:
 | 3 | name |string|❌| |
 | 4 | state |string|❌| |
 | 5 | account |string|❌| |
-| 6 | type |string|❌| |
+| 6 | instance_type |string|❌| |
 | 7 | cloud_service_type |string|❌| |
 | 8 | cloud_service_group |string|❌| |
 | 9 | provider |string|❌| |
@@ -195,15 +195,16 @@ description:
 | 3 | cloud_service_group |string|✅| |
 | 4 | name |string|❌| |
 | 5 | account |string|❌| |
-| 6 | type |string|❌| |
+| 6 | instance_type |string|❌| |
 | 7 | size |float|❌| |
-| 8 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 9 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 10 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
-| 11 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 12 | region_code |string|❌| |
-| 13 | project_id |string|❌| |
-| 14 | domain_id |string|✅| |
+| 8 | launched_at |string|❌| |
+| 9 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| 10 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 11 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
+| 12 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 13 | region_code |string|❌| |
+| 14 | project_id |string|❌| |
+| 15 | domain_id |string|✅| |
 
 ### GetCloudServiceRequest
 | No | Field | Type | Required | Description |
@@ -225,14 +226,15 @@ description:
 | 1 | cloud_service_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | account |string|❌| |
-| 4 | type |string|❌| |
+| 4 | instance_type |string|❌| |
 | 5 | size |float|❌| |
-| 6 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 7 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 8 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
-| 9 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 10 | region_code |string|❌| |
-| 11 | project_id |string|❌| |
-| 12 | domain_id |string|✅| |
-| 13 | release_project |bool|❌| |
-| 14 | release_region |bool|❌| |
+| 6 | launched_at |string|❌| |
+| 7 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 8 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 9 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
+| 10 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 11 | region_code |string|❌| |
+| 12 | project_id |string|❌| |
+| 13 | domain_id |string|✅| |
+| 14 | release_project |bool|❌| |
+| 15 | release_region |bool|❌| |
