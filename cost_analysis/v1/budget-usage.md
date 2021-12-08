@@ -57,8 +57,9 @@ description:
 | 2 | date |string | |
 | 3 | usd_cost |float | |
 | 4 | limit |float | |
-| 5 | domain_id |string | |
-| 6 | updated_at |string | |
+| 5 | cost_types |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 6 | domain_id |string | |
+| 7 | updated_at |string | |
 
 ### BudgetUsageQuery
 | No | Field | Type | Required | Description |

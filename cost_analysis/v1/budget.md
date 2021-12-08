@@ -299,14 +299,75 @@ description:
 
 
 ### BudgetQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | budget_id |string|❌| |
-| 3 | name |string|❌| |
-| 4 | project_id |string|❌| |
-| 5 | project_group_id |string|❌| |
-| 6 | domain_id |string|✅| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">query</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">budget_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">project_group_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">time_unit</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>TOTAL</li>
+          	<li>MONTHLY</li>
+          	<li>YEARLY</li>
+        </ul></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### BudgetRequest
 | No | Field | Type | Required | Description |
