@@ -66,9 +66,10 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | budget_id |string|✅| |
-| 3 | date |string|❌| |
-| 4 | domain_id |string|✅| |
+| 2 | budget_id |string|❌| |
+| 3 | name |string|❌| |
+| 4 | date |string|❌| |
+| 5 | domain_id |string|✅| |
 
 ### BudgetUsageStatQuery
 | No | Field | Type | Required | Description |
