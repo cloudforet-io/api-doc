@@ -127,8 +127,8 @@ description:
 | 2 | name |string | |
 | 3 | state |string | |
 | 4 | account |string | |
-| 5 | instance_type |string | |
-| 6 | instance_size |float | |
+| 5 | resource_type |string | |
+| 6 | resource_size |float | |
 | 7 | cloud_service_type |string | |
 | 8 | cloud_service_group |string | |
 | 9 | provider |string | |
@@ -153,7 +153,7 @@ description:
 | 3 | name |string|❌| |
 | 4 | state |string|❌| |
 | 5 | account |string|❌| |
-| 6 | instance_type |string|❌| |
+| 6 | resource_type |string|❌| |
 | 7 | cloud_service_type |string|❌| |
 | 8 | cloud_service_group |string|❌| |
 | 9 | provider |string|❌| |
@@ -195,8 +195,8 @@ description:
 | 3 | cloud_service_group |string|✅| |
 | 4 | name |string|❌| |
 | 5 | account |string|❌| |
-| 6 | instance_type |string|❌| |
-| 7 | instance_size |float|❌| |
+| 6 | resource_type |string|❌| |
+| 7 | resource_size |float|❌| |
 | 8 | launched_at |string|❌| |
 | 9 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 10 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
@@ -226,8 +226,8 @@ description:
 | 1 | cloud_service_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | account |string|❌| |
-| 4 | instance_type |string|❌| |
-| 5 | instance_size |float|❌| |
+| 4 | resource_type |string|❌| |
+| 5 | resource_size |float|❌| |
 | 6 | launched_at |string|❌| |
 | 7 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 8 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |

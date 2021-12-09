@@ -166,7 +166,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">instance_type</td>
+      <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
@@ -356,7 +356,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">8</td>
-      <td style="text-align:left">instance_type</td>
+      <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -571,7 +571,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">9</td>
-      <td style="text-align:left">instance_type</td>
+      <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
@@ -708,7 +708,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">6</td>
-      <td style="text-align:left">instance_type</td>
+      <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
