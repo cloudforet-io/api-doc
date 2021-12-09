@@ -54,12 +54,13 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | budget_id |string | |
-| 2 | date |string | |
-| 3 | usd_cost |float | |
-| 4 | limit |float | |
-| 5 | cost_types |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 6 | domain_id |string | |
-| 7 | updated_at |string | |
+| 2 | name |string | |
+| 3 | date |string | |
+| 4 | usd_cost |float | |
+| 5 | limit |float | |
+| 6 | cost_types |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 7 | domain_id |string | |
+| 8 | updated_at |string | |
 
 ### BudgetUsageQuery
 | No | Field | Type | Required | Description |
