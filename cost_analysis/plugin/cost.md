@@ -43,7 +43,7 @@ description:
 | 6 | region_code |string | |
 | 7 | product |string | |
 | 8 | account |string | |
-| 9 | resource_type |string | |
+| 9 | instance_type |string | |
 | 10 | resource_group |string | |
 | 11 | resource |string | |
 | 12 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
@@ -61,6 +61,4 @@ description:
 | 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | schema |string|❌| |
-| 4 | start |string|✅| |
-| 5 | end |string|✅| |
-| 6 | task_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 4 | task_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |

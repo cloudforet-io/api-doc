@@ -45,9 +45,7 @@ description:
 ### TaskInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | start |string | |
-| 2 | end |string | |
-| 3 | task_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 1 | task_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### TasksInfo
 | No | Field | Type |  Description |
