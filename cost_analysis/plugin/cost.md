@@ -3,7 +3,7 @@ description:
 ---
 # Cost
 
->  **Package : spaceone.api.cost_analysis.job**
+>  **Package : spaceone.api.cost_analysis.plugin**
 
 ## Cost
 
