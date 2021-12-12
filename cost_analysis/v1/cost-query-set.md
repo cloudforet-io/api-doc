@@ -17,11 +17,10 @@ description:
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [**create**](cost-query-set.md#create)|   [CreateCostQuerySetRequest](cost-query-set.md#createcostquerysetrequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
 | 2 | [**update**](cost-query-set.md#update)|   [UpdateCostQuerySetRequest](cost-query-set.md#updatecostquerysetrequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
-| 3 | [**change_scope**](cost-query-set.md#change_scope)|   [ChangeCostQuerySetScopeRequest](cost-query-set.md#changecostquerysetscoperequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
-| 4 | [**delete**](cost-query-set.md#delete)|   [CostQuerySetRequest](cost-query-set.md#costquerysetrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [**get**](cost-query-set.md#get)|   [GetCostQuerySetRequest](cost-query-set.md#getcostquerysetrequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
-| 6 | [**list**](cost-query-set.md#list)|   [CostQuerySetQuery](cost-query-set.md#costquerysetquery) |   [CostQuerySetsInfo](cost-query-set.md#costquerysetsinfo) |  |
-| 7 | [**stat**](cost-query-set.md#stat)|   [CostQuerySetStatQuery](cost-query-set.md#costquerysetstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 3 | [**delete**](cost-query-set.md#delete)|   [CostQuerySetRequest](cost-query-set.md#costquerysetrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 4 | [**get**](cost-query-set.md#get)|   [GetCostQuerySetRequest](cost-query-set.md#getcostquerysetrequest) |   [CostQuerySetInfo](cost-query-set.md#costquerysetinfo) |  |
+| 5 | [**list**](cost-query-set.md#list)|   [CostQuerySetQuery](cost-query-set.md#costquerysetquery) |   [CostQuerySetsInfo](cost-query-set.md#costquerysetsinfo) |  |
+| 6 | [**stat**](cost-query-set.md#stat)|   [CostQuerySetStatQuery](cost-query-set.md#costquerysetstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -46,19 +45,6 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateCostQuerySetRequest](cost-query-set.md#updatecostquerysetrequest) |
-| Response |  [CostQuerySetInfo](cost-query-set.md#costquerysetinfo)  |
- 
- 
-
- 
-### change_scope
-> **PUT** /cost-analysis/v1/cost_query_set/{cost_query_set_id}/scope
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [ChangeCostQuerySetScopeRequest](cost-query-set.md#changecostquerysetscoperequest) |
 | Response |  [CostQuerySetInfo](cost-query-set.md#costquerysetinfo)  |
  
  
@@ -119,48 +105,6 @@ description:
 ## 
 
 ## Message
-
-### ChangeCostQuerySetScopeRequest
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:center">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">cost_query_set_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">scope</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>PUBLIC</li>
-          	<li>PRIVATE</li>
-        </ul></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
 
 ### CostQuerySetInfo
 <table>
@@ -333,6 +277,7 @@ description:
 | 2 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
+| 5 | user_id |string|❌| |
 
 ### GetCostQuerySetRequest
 | No | Field | Type | Required | Description |
