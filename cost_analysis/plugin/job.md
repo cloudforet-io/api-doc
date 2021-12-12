@@ -51,4 +51,4 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | tasks |[list of TaskInfo](job.md#taskinfo) | |
-| 2 | last_updated_at |string | |
+| 2 | last_changed_at |string | |
