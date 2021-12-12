@@ -103,19 +103,20 @@ description:
 | 6 | usage_quantity |float | |
 | 7 | provider |string | |
 | 8 | region_code |string | |
-| 9 | product |string | |
-| 10 | account |string | |
-| 11 | instance_type |string | |
-| 12 | resource_group |string | |
-| 13 | resource |string | |
-| 14 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 15 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 16 | service_account_id |string | |
-| 17 | project_id |string | |
-| 18 | data_source_id |string | |
-| 19 | domain_id |string | |
-| 20 | billed_at |string | |
-| 21 | created_at |string | |
+| 9 | region_key |string | |
+| 10 | product |string | |
+| 11 | account |string | |
+| 12 | instance_type |string | |
+| 13 | resource_group |string | |
+| 14 | resource |string | |
+| 15 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 16 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 17 | service_account_id |string | |
+| 18 | project_id |string | |
+| 19 | data_source_id |string | |
+| 20 | domain_id |string | |
+| 21 | billed_at |string | |
+| 22 | created_at |string | |
 
 ### CostQuery
 | No | Field | Type | Required | Description |
@@ -126,15 +127,16 @@ description:
 | 4 | original_currency |string|❌| |
 | 5 | provider |string|❌| |
 | 6 | region_code |string|❌| |
-| 7 | product |string|❌| |
-| 8 | account |string|❌| |
-| 9 | instance_type |string|❌| |
-| 10 | resource_group |string|❌| |
-| 11 | resource |string|❌| |
-| 12 | service_account_id |string|❌| |
-| 13 | project_id |string|❌| |
-| 14 | data_source_id |string|❌| |
-| 15 | domain_id |string|✅| |
+| 7 | region_key |string|❌| |
+| 8 | product |string|❌| |
+| 9 | account |string|❌| |
+| 10 | instance_type |string|❌| |
+| 11 | resource_group |string|❌| |
+| 12 | resource |string|❌| |
+| 13 | service_account_id |string|❌| |
+| 14 | project_id |string|❌| |
+| 15 | data_source_id |string|❌| |
+| 16 | domain_id |string|✅| |
 
 ### CostRequest
 | No | Field | Type | Required | Description |
