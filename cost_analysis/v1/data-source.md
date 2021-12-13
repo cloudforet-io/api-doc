@@ -523,8 +523,7 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | data_source_id |string|✅| |
 | 2 | start |string|❌| |
-| 3 | end |string|❌| |
-| 4 | domain_id |string|✅| |
+| 3 | domain_id |string|✅| |
 
 ### UpdateDataSourcePluginRequest
 <table>

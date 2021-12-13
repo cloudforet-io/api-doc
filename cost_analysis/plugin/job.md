@@ -39,8 +39,7 @@ description:
 | 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | schema |string|❌| |
 | 4 | start |string|❌| |
-| 5 | end |string|❌| |
-| 6 | last_synchronized_at |string|❌| |
+| 5 | last_synchronized_at |string|❌| |
 
 ### TaskInfo
 | No | Field | Type |  Description |
