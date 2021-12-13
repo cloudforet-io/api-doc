@@ -106,7 +106,7 @@ description:
 | 9 | region_key |string | |
 | 10 | product |string | |
 | 11 | account |string | |
-| 12 | instance_type |string | |
+| 12 | usage_type |string | |
 | 13 | resource_group |string | |
 | 14 | resource |string | |
 | 15 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
@@ -130,7 +130,7 @@ description:
 | 7 | region_key |string|❌| |
 | 8 | product |string|❌| |
 | 9 | account |string|❌| |
-| 10 | instance_type |string|❌| |
+| 10 | usage_type |string|❌| |
 | 11 | resource_group |string|❌| |
 | 12 | resource |string|❌| |
 | 13 | service_account_id |string|❌| |
@@ -167,7 +167,7 @@ description:
 | 6 | region_code |string|❌| |
 | 7 | product |string|❌| |
 | 8 | account |string|❌| |
-| 9 | instance_type |string|❌| |
+| 9 | usage_type |string|❌| |
 | 10 | resource_group |string|❌| |
 | 11 | resource |string|❌| |
 | 12 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |

@@ -43,7 +43,7 @@ description:
 | 6 | region_code |string | |
 | 7 | product |string | |
 | 8 | account |string | |
-| 9 | instance_type |string | |
+| 9 | usage_type |string | |
 | 10 | resource_group |string | |
 | 11 | resource |string | |
 | 12 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
