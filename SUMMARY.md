@@ -30,6 +30,8 @@
     * [Data Source](cost_analysis/v1/data-source.md)
     * [Data Source Rule](cost_analysis/v1/data-source-rule.md)
     * [Exchange Rate](cost_analysis/v1/exchange-rate.md)
+    * [Job](cost_analysis/v1/job.md)
+    * [Job Task](cost_analysis/v1/job-task.md)
     * [Schedule](cost_analysis/v1/schedule.md)
 * [Cost Saving](cost_saving/README.md)
   * [V1](cost_saving/v1/README.md)

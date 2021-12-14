@@ -173,7 +173,7 @@ description:
 | 12 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 13 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 14 | service_account_id |string|❌| |
-| 15 | project_id |string|✅| |
+| 15 | project_id |string|❌| |
 | 16 | data_source_id |string|✅| |
 | 17 | domain_id |string|✅| |
 | 18 | billed_at |string|❌| |
