@@ -22,7 +22,7 @@ description:
 | 5 | [**enable**](data-source.md#enable)|   [DataSourceRequest](data-source.md#datasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
 | 6 | [**disable**](data-source.md#disable)|   [DataSourceRequest](data-source.md#datasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
 | 7 | [**deregister**](data-source.md#deregister)|   [DataSourceRequest](data-source.md#datasourcerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 8 | [**sync**](data-source.md#sync)|   [SyncDataSourceRequest](data-source.md#syncdatasourcerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 8 | [**sync**](data-source.md#sync)|   [SyncDataSourceRequest](data-source.md#syncdatasourcerequest) |  JobInfo|  |
 | 9 | [**get**](data-source.md#get)|   [GetDataSourceRequest](data-source.md#getdatasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
 | 10 | [**list**](data-source.md#list)|   [DataSourceQuery](data-source.md#datasourcequery) |   [DataSourcesInfo](data-source.md#datasourcesinfo) |  |
 | 11 | [**stat**](data-source.md#stat)|   [DataSourceStatQuery](data-source.md#datasourcestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
@@ -128,7 +128,7 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [SyncDataSourceRequest](data-source.md#syncdatasourcerequest) |
-| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+| Response | JobInfo |
  
  
 
