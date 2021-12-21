@@ -30,8 +30,7 @@ description:
 | 5 | operator |string | |
 | 6 | o |string | |
 | 7 | fields |[list of AggregateGroupSubField](query.md#aggregategroupsubfield) | |
-| 8 | condition |[AggregateGroupSubCondition](query.md#aggregategroupsubcondition) | |
-| 9 | c |[AggregateGroupSubCondition](query.md#aggregategroupsubcondition) | |
+| 8 | conditions |[list of AggregateSubCondition](query.md#aggregatesubcondition) | |
 
 ### AggregateGroupKey
 | No | Field | Type |  Description |
@@ -42,16 +41,6 @@ description:
 | 4 | n |string | |
 | 5 | date_format |string | |
 
-### AggregateGroupSubCondition
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | key |string | |
-| 2 | k |string | |
-| 3 | value |string | |
-| 4 | v |string | |
-| 5 | operator |string | |
-| 6 | o |string | |
-
 ### AggregateGroupSubField
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
@@ -60,12 +49,38 @@ description:
 | 3 | name |string | |
 | 4 | n |string | |
 
+### AggregateProject
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | fields |[list of AggregateProjectField](query.md#aggregateprojectfield) | |
+| 2 | exclude_keys |bool | |
+
+### AggregateProjectField
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | key |string | |
+| 2 | k |string | |
+| 3 | name |string | |
+| 4 | n |string | |
+| 5 | operator |string | |
+| 6 | o |string | |
+
 ### AggregateSort
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | key |string | |
 | 2 | desc |bool | |
 | 3 | keys |[list of SortKey](query.md#sortkey) | |
+
+### AggregateSubCondition
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | key |string | |
+| 2 | k |string | |
+| 3 | value |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| 4 | v |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| 5 | operator |string | |
+| 6 | o |string | |
 
 ### AggregateUnwind
 | No | Field | Type |  Description |
@@ -120,6 +135,9 @@ description:
 | 2 | group |[AggregateGroup](query.md#aggregategroup) | |
 | 3 | count |[AggregateCount](query.md#aggregatecount) | |
 | 4 | sort |[AggregateSort](query.md#aggregatesort) | |
+| 5 | project |[AggregateProject](query.md#aggregateproject) | |
+| 6 | limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| 7 | skip |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### StatisticsQuery
 | No | Field | Type |  Description |
