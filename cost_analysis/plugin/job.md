@@ -32,6 +32,12 @@ description:
 
 ## Message
 
+### ChangedInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | start |string | |
+| 2 | end |string | |
+
 ### GetTasksRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
@@ -50,4 +56,4 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | tasks |[list of TaskInfo](job.md#taskinfo) | |
-| 2 | last_changed_at |string | |
+| 2 | changed |[list of ChangedInfo](job.md#changedinfo) | |
