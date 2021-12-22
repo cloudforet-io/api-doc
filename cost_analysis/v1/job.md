@@ -78,6 +78,12 @@ description:
 
 ## Message
 
+### ChangedInfo
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | start |string | |
+| 2 | end |string | |
+
 ### GetJobRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
@@ -182,8 +188,8 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">12</td>
-      <td style="text-align:left">last_changed_at</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left">changed</td>
+      <td style="text-align:left"><a href="job.md#changedinfo">list of ChangedInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
