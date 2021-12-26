@@ -112,8 +112,7 @@ description: DomainConfig API which configure environments for domain
 | 1 | name |string|✅| |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | schema |string|❌| |
-| 5 | domain_id |string|✅| |
+| 4 | domain_id |string|✅| |
 
 ### DomainConfigInfo
 | No | Field | Type |  Description |
@@ -121,9 +120,8 @@ description: DomainConfig API which configure environments for domain
 | 1 | name |string | |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | schema |string | |
-| 5 | domain_id |string | |
-| 6 | created_at |string | |
+| 4 | domain_id |string | |
+| 5 | created_at |string | |
 
 ### DomainConfigQuery
 | No | Field | Type | Required | Description |
@@ -163,5 +161,4 @@ description: DomainConfig API which configure environments for domain
 | 1 | name |string|✅| |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | schema |string|❌| |
-| 5 | domain_id |string|✅| |
+| 4 | domain_id |string|✅| |

@@ -135,15 +135,17 @@ description: Config Map API which configure environments for user
 | 1 | name |string | |
 | 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | domain_id |string | |
-| 5 | created_at |string | |
+| 4 | user_id |string | |
+| 5 | domain_id |string | |
+| 6 | created_at |string | |
 
 ### UserConfigQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | name |string|❌| |
-| 3 | domain_id |string|✅| |
+| 3 | user_id |string|❌| |
+| 4 | domain_id |string|✅| |
 
 ### UserConfigRequest
 | No | Field | Type | Required | Description |
