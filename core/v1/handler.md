@@ -60,6 +60,7 @@ description:
           	<li>SYSTEM</li>
           	<li>DOMAIN</li>
           	<li>PROJECT</li>
+          	<li>USER</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -102,6 +103,13 @@ description:
     <tr>
       <td style="text-align:left">10</td>
       <td style="text-align:left">require_project_group_id</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
+      <td style="text-align:left">require_user_id</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
