@@ -169,6 +169,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">12</td>
+      <td style="text-align:left">updated_at</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left">13</td>
       <td style="text-align:left">finished_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
