@@ -133,10 +133,12 @@ description:
 | 10 | usage_type |string|❌| |
 | 11 | resource_group |string|❌| |
 | 12 | resource |string|❌| |
-| 13 | service_account_id |string|❌| |
-| 14 | project_id |string|❌| |
-| 15 | data_source_id |string|❌| |
-| 16 | domain_id |string|✅| |
+| 13 | start |string|❌| |
+| 14 | end |string|❌| |
+| 15 | service_account_id |string|❌| |
+| 16 | project_id |string|❌| |
+| 17 | data_source_id |string|❌| |
+| 18 | domain_id |string|✅| |
 
 ### CostRequest
 | No | Field | Type | Required | Description |
@@ -149,6 +151,8 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
+| 3 | start |string|❌| |
+| 4 | end |string|❌| |
 
 ### CostsInfo
 | No | Field | Type |  Description |
