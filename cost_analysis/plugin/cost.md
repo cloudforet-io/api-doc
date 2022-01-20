@@ -35,12 +35,12 @@ description:
 ### CostInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | cost_key |string | |
-| 2 | cost |float | |
-| 3 | currency |string | |
-| 4 | usage_quantity |float | |
-| 5 | provider |string | |
-| 6 | region_code |string | |
+| 1 | cost |float | |
+| 2 | currency |string | |
+| 3 | usage_quantity |float | |
+| 4 | provider |string | |
+| 5 | region_code |string | |
+| 6 | category |string | |
 | 7 | product |string | |
 | 8 | account |string | |
 | 9 | usage_type |string | |

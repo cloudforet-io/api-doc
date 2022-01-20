@@ -96,14 +96,14 @@ description:
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
 | 1 | cost_id |string | |
-| 2 | cost_key |string | |
-| 3 | usd_cost |float | |
-| 4 | original_currency |string | |
-| 5 | original_cost |float | |
-| 6 | usage_quantity |float | |
-| 7 | provider |string | |
-| 8 | region_code |string | |
-| 9 | region_key |string | |
+| 2 | usd_cost |float | |
+| 3 | original_currency |string | |
+| 4 | original_cost |float | |
+| 5 | usage_quantity |float | |
+| 6 | provider |string | |
+| 7 | region_code |string | |
+| 8 | region_key |string | |
+| 9 | category |string | |
 | 10 | product |string | |
 | 11 | account |string | |
 | 12 | usage_type |string | |
@@ -123,11 +123,11 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 | 2 | cost_id |string|❌| |
-| 3 | cost_key |string|❌| |
-| 4 | original_currency |string|❌| |
-| 5 | provider |string|❌| |
-| 6 | region_code |string|❌| |
-| 7 | region_key |string|❌| |
+| 3 | original_currency |string|❌| |
+| 4 | provider |string|❌| |
+| 5 | region_code |string|❌| |
+| 6 | region_key |string|❌| |
+| 7 | category |string|❌| |
 | 8 | product |string|❌| |
 | 9 | account |string|❌| |
 | 10 | usage_type |string|❌| |
@@ -169,19 +169,19 @@ description:
 | 4 | usage_quantity |float|❌| |
 | 5 | provider |string|❌| |
 | 6 | region_code |string|❌| |
-| 7 | product |string|❌| |
-| 8 | account |string|❌| |
-| 9 | usage_type |string|❌| |
-| 10 | resource_group |string|❌| |
-| 11 | resource |string|❌| |
-| 12 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 13 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 14 | service_account_id |string|❌| |
-| 15 | project_id |string|❌| |
-| 16 | data_source_id |string|✅| |
-| 17 | domain_id |string|✅| |
-| 18 | billed_at |string|❌| |
-| 19 | created_at |string|❌| |
+| 7 | category |string|❌| |
+| 8 | product |string|❌| |
+| 9 | account |string|❌| |
+| 10 | usage_type |string|❌| |
+| 11 | resource_group |string|❌| |
+| 12 | resource |string|❌| |
+| 13 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 14 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 15 | service_account_id |string|❌| |
+| 16 | project_id |string|❌| |
+| 17 | data_source_id |string|✅| |
+| 18 | domain_id |string|✅| |
+| 19 | billed_at |string|❌| |
 
 ### GetCostRequest
 | No | Field | Type | Required | Description |
