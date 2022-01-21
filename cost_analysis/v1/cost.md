@@ -19,7 +19,8 @@ description:
 | 2 | [**delete**](cost.md#delete)|   [CostRequest](cost.md#costrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | 3 | [**get**](cost.md#get)|   [GetCostRequest](cost.md#getcostrequest) |   [CostInfo](cost.md#costinfo) |  |
 | 4 | [**list**](cost.md#list)|   [CostQuery](cost.md#costquery) |   [CostsInfo](cost.md#costsinfo) |  |
-| 5 | [**stat**](cost.md#stat)|   [CostStatQuery](cost.md#coststatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 5 | [**analyze**](cost.md#analyze)|   [CostAnalyzeQuery](cost.md#costanalyzequery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 6 | [**stat**](cost.md#stat)|   [CostStatQuery](cost.md#coststatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -77,6 +78,19 @@ description:
  
 
  
+### analyze
+> **POST** /cost-analysis/v1/costs/analyze
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [CostAnalyzeQuery](cost.md#costanalyzequery) |
+| Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
+ 
+ 
+
+ 
 ### stat
 > **POST** /cost-analysis/v1/costs/stat
 >
@@ -91,6 +105,106 @@ description:
 ## 
 
 ## Message
+
+### CostAnalyzeQuery
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">No</th>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">granularity</td>
+      <td style="text-align:left"><ul>
+          	<li>UNIT_NONE</li>
+          	<li>ACCUMULATED</li>
+          	<li>DAILY</li>
+          	<li>MONTHLY</li>
+          	<li>YEARLY</li>
+        </ul></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">start</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">end</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">group_by</td>
+      <td style="text-align:left">list of string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">filter</td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">limit</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">page</td>
+      <td style="text-align:left">spaceone.api.core.v1.Page</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">8</td>
+      <td style="text-align:left">sort</td>
+      <td style="text-align:left">spaceone.api.core.v1.Sort</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">9</td>
+      <td style="text-align:left">include_usage_quantity</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">10</td>
+      <td style="text-align:left">include_others</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">11</td>
+      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### CostInfo
 | No | Field | Type |  Description |
@@ -133,12 +247,10 @@ description:
 | 10 | usage_type |string|❌| |
 | 11 | resource_group |string|❌| |
 | 12 | resource |string|❌| |
-| 13 | start |string|❌| |
-| 14 | end |string|❌| |
-| 15 | service_account_id |string|❌| |
-| 16 | project_id |string|❌| |
-| 17 | data_source_id |string|❌| |
-| 18 | domain_id |string|✅| |
+| 13 | service_account_id |string|❌| |
+| 14 | project_id |string|❌| |
+| 15 | data_source_id |string|❌| |
+| 16 | domain_id |string|✅| |
 
 ### CostRequest
 | No | Field | Type | Required | Description |
@@ -151,8 +263,6 @@ description:
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
 | 2 | domain_id |string|✅| |
-| 3 | start |string|❌| |
-| 4 | end |string|❌| |
 
 ### CostsInfo
 | No | Field | Type |  Description |
