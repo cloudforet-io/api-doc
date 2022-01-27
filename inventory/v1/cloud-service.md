@@ -160,7 +160,8 @@ description:
 | 10 | region_code |string|❌| |
 | 11 | resource_group_id |string|❌| |
 | 12 | project_id |string|❌| |
-| 13 | domain_id |string|✅| |
+| 13 | project_group_id |string|❌| |
+| 14 | domain_id |string|✅| |
 
 ### CloudServiceReference
 | No | Field | Type |  Description |

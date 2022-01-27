@@ -620,6 +620,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left">16</td>
+      <td style="text-align:left">project_group_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left">17</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
