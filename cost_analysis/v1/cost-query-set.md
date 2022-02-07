@@ -25,7 +25,7 @@ description:
 
  
 ### create
-> **POST** /cost-analysis/v1/cost_query_sets
+> **POST** /cost-analysis/v1/cost-query-sets
 >
 
 
@@ -38,7 +38,7 @@ description:
 
  
 ### update
-> **PUT** /cost-analysis/v1/cost_query_set/{cost_query_set_id}
+> **PUT** /cost-analysis/v1/cost-query-set/{cost_query_set_id}
 >
 
 
@@ -51,7 +51,7 @@ description:
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/cost_query_set/{cost_query_set_id}
+> **DELETE** /cost-analysis/v1/cost-query-set/{cost_query_set_id}
 >
 
 
@@ -64,7 +64,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v1/cost_query_set/{cost_query_set_id}
+> **GET** /cost-analysis/v1/cost-query-set/{cost_query_set_id}
 >
 
 
@@ -77,9 +77,9 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v1/cost_query_sets
+> **GET** /cost-analysis/v1/cost-query-sets
 >
-> **POST** /cost-analysis/v1/cost_query_sets/search
+> **POST** /cost-analysis/v1/cost-query-sets/search
 
 
 
@@ -92,7 +92,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v1/cost_query_sets/stat
+> **POST** /cost-analysis/v1/cost-query-sets/stat
 >
 
 
@@ -107,150 +107,25 @@ description:
 ## Message
 
 ### CostQuerySetInfo
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">cost_query_set_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">scope</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>PUBLIC</li>
-          	<li>PRIVATE</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">user_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">7</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">created_at</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left">9</td>
-      <td style="text-align:left">updated_at</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-  </tbody>
-</table>
-
-
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | cost_query_set_id |string | |
+| 2 | name |string | |
+| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 5 | user_id |string | |
+| 6 | domain_id |string | |
+| 7 | created_at |string | |
+| 8 | updated_at |string | |
 
 ### CostQuerySetQuery
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">No</th>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:center">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">1</td>
-      <td style="text-align:left">query</td>
-      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">2</td>
-      <td style="text-align:left">cost_query_set_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">3</td>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">4</td>
-      <td style="text-align:left">scope</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>PUBLIC</li>
-          	<li>PRIVATE</li>
-        </ul></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">5</td>
-      <td style="text-align:left">user_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
+| No | Field | Type | Required | Description |
+| :--- | :--- | :--- | :---: | :--- |
+| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| 2 | cost_query_set_id |string|❌| |
+| 3 | name |string|❌| |
+| 4 | user_id |string|❌| |
+| 5 | domain_id |string|✅| |
 
 ### CostQuerySetRequest
 | No | Field | Type | Required | Description |
@@ -277,7 +152,6 @@ description:
 | 2 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
-| 5 | user_id |string|❌| |
 
 ### GetCostQuerySetRequest
 | No | Field | Type | Required | Description |
