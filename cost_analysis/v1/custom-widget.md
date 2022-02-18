@@ -38,7 +38,7 @@ description:
 
  
 ### update
-> **PUT** /cost-analysis/v1/custom-widget/{custom_widget_id}
+> **PUT** /cost-analysis/v1/custom-widget/{widget_id}
 >
 
 
@@ -51,7 +51,7 @@ description:
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/custom-widget/{custom_widget_id}
+> **DELETE** /cost-analysis/v1/custom-widget/{widget_id}
 >
 
 
@@ -64,7 +64,7 @@ description:
 
  
 ### get
-> **GET** /cost-analysis/v1/custom-widget/{custom_widget_id}
+> **GET** /cost-analysis/v1/custom-widget/{widget_id}
 >
 
 
@@ -117,7 +117,7 @@ description:
 ### CustomWidgetInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
-| 1 | custom_widget_id |string | |
+| 1 | widget_id |string | |
 | 2 | name |string | |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
@@ -130,7 +130,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | custom_widget_id |string|❌| |
+| 2 | widget_id |string|❌| |
 | 3 | name |string|❌| |
 | 4 | user_id |string|❌| |
 | 5 | domain_id |string|✅| |
@@ -138,7 +138,7 @@ description:
 ### CustomWidgetRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
-| 1 | custom_widget_id |string|✅| |
+| 1 | widget_id |string|✅| |
 | 2 | domain_id |string|✅| |
 
 ### CustomWidgetStatQuery
@@ -156,14 +156,14 @@ description:
 ### GetCustomWidgetRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
-| 1 | custom_widget_id |string|✅| |
+| 1 | widget_id |string|✅| |
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
 ### UpdateCustomWidgetRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
-| 1 | custom_widget_id |string|✅| |
+| 1 | widget_id |string|✅| |
 | 2 | name |string|❌| |
 | 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
