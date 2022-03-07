@@ -441,7 +441,7 @@ description:
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | protocol_id |string|✅| The ID of Protocol.|
-| 2 | data |string|✅| |
+| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | message |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 4 | notification_type |string|❌| |
 | 5 | notification_level |string|❌| |
