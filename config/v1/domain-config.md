@@ -15,12 +15,13 @@ description: DomainConfig API which configure environments for domain
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](domain-config.md#create)|   [CreateDomainConfigRequest](domain-config.md#createdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
-| 2 | [**update**](domain-config.md#update)|   [UpdateDomainConfigRequest](domain-config.md#updatedomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
-| 3 | [**delete**](domain-config.md#delete)|   [DomainConfigRequest](domain-config.md#domainconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](domain-config.md#get)|   [GetDomainConfigRequest](domain-config.md#getdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
-| 5 | [**list**](domain-config.md#list)|   [DomainConfigQuery](domain-config.md#domainconfigquery) |   [DomainConfigsInfo](domain-config.md#domainconfigsinfo) |  |
-| 6 | [**stat**](domain-config.md#stat)|   [DomainConfigStatQuery](domain-config.md#domainconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](domain-config.md#create)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
+| 2 | [**update**](domain-config.md#update)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
+| 3 | [**set**](domain-config.md#set)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
+| 4 | [**delete**](domain-config.md#delete)|   [DomainConfigRequest](domain-config.md#domainconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**get**](domain-config.md#get)|   [GetDomainConfigRequest](domain-config.md#getdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
+| 6 | [**list**](domain-config.md#list)|   [DomainConfigQuery](domain-config.md#domainconfigquery) |   [DomainConfigsInfo](domain-config.md#domainconfigsinfo) |  |
+| 7 | [**stat**](domain-config.md#stat)|   [DomainConfigStatQuery](domain-config.md#domainconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -31,7 +32,7 @@ description: DomainConfig API which configure environments for domain
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateDomainConfigRequest](domain-config.md#createdomainconfigrequest) |
+| Request | [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |
 | Response |  [DomainConfigInfo](domain-config.md#domainconfiginfo)  |
  
  
@@ -44,7 +45,20 @@ description: DomainConfig API which configure environments for domain
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateDomainConfigRequest](domain-config.md#updatedomainconfigrequest) |
+| Request | [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |
+| Response |  [DomainConfigInfo](domain-config.md#domainconfiginfo)  |
+ 
+ 
+
+ 
+### set
+> **POST** /config/v1/domain-config/{name}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |
 | Response |  [DomainConfigInfo](domain-config.md#domainconfiginfo)  |
  
  
@@ -106,14 +120,6 @@ description: DomainConfig API which configure environments for domain
 
 ## Message
 
-### CreateDomainConfigRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | domain_id |string|✅| |
-
 ### DomainConfigInfo
 | No | Field | Type |  Description |
 | :--- | :--- | :--- | :--- |
@@ -122,6 +128,7 @@ description: DomainConfig API which configure environments for domain
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | 4 | domain_id |string | |
 | 5 | created_at |string | |
+| 6 | updated_at |string | |
 
 ### DomainConfigQuery
 | No | Field | Type | Required | Description |
@@ -155,10 +162,10 @@ description: DomainConfig API which configure environments for domain
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
-### UpdateDomainConfigRequest
+### SetDomainConfigRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |

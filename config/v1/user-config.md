@@ -1,5 +1,5 @@
 ---
-description: Config Map API which configure environments for user
+description: UserConfig API which configure environments for user
 ---
 # User config
 
@@ -15,12 +15,13 @@ description: Config Map API which configure environments for user
 
 | NO |  Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](user-config.md#create)|   [CreateUserConfigRequest](user-config.md#createuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
-| 2 | [**update**](user-config.md#update)|   [UpdateUserConfigRequest](user-config.md#updateuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
-| 3 | [**delete**](user-config.md#delete)|   [UserConfigRequest](user-config.md#userconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](user-config.md#get)|   [GetUserConfigRequest](user-config.md#getuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
-| 5 | [**list**](user-config.md#list)|   [UserConfigQuery](user-config.md#userconfigquery) |   [UserConfigsInfo](user-config.md#userconfigsinfo) |  |
-| 6 | [**stat**](user-config.md#stat)|   [UserConfigStatQuery](user-config.md#userconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| 1 | [**create**](user-config.md#create)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
+| 2 | [**update**](user-config.md#update)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
+| 3 | [**set**](user-config.md#set)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
+| 4 | [**delete**](user-config.md#delete)|   [UserConfigRequest](user-config.md#userconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| 5 | [**get**](user-config.md#get)|   [GetUserConfigRequest](user-config.md#getuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
+| 6 | [**list**](user-config.md#list)|   [UserConfigQuery](user-config.md#userconfigquery) |   [UserConfigsInfo](user-config.md#userconfigsinfo) |  |
+| 7 | [**stat**](user-config.md#stat)|   [UserConfigStatQuery](user-config.md#userconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -31,7 +32,7 @@ description: Config Map API which configure environments for user
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreateUserConfigRequest](user-config.md#createuserconfigrequest) |
+| Request | [SetUserConfigRequest](user-config.md#setuserconfigrequest) |
 | Response |  [UserConfigInfo](user-config.md#userconfiginfo)  |
  
  
@@ -44,7 +45,20 @@ description: Config Map API which configure environments for user
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdateUserConfigRequest](user-config.md#updateuserconfigrequest) |
+| Request | [SetUserConfigRequest](user-config.md#setuserconfigrequest) |
+| Response |  [UserConfigInfo](user-config.md#userconfiginfo)  |
+ 
+ 
+
+ 
+### set
+> **POST** /config/v1/user-config/{name}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [SetUserConfigRequest](user-config.md#setuserconfigrequest) |
 | Response |  [UserConfigInfo](user-config.md#userconfiginfo)  |
  
  
@@ -106,14 +120,6 @@ description: Config Map API which configure environments for user
 
 ## Message
 
-### CreateUserConfigRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | domain_id |string|✅| |
-
 ### GetUserConfigRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
@@ -121,11 +127,11 @@ description: Config Map API which configure environments for user
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
-### UpdateUserConfigRequest
+### SetUserConfigRequest
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | 1 | name |string|✅| |
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 | 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 4 | domain_id |string|✅| |
 
@@ -138,6 +144,7 @@ description: Config Map API which configure environments for user
 | 4 | user_id |string | |
 | 5 | domain_id |string | |
 | 6 | created_at |string | |
+| 7 | updated_at |string | |
 
 ### UserConfigQuery
 | No | Field | Type | Required | Description |
