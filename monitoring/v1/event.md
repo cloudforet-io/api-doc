@@ -96,15 +96,17 @@ description:
 | 6 | severity |string | |
 | 7 | rule |string | |
 | 8 | resource |[EventResource](event.md#eventresource) | |
-| 9 | raw_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 10 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 9 | provider |string | |
+| 10 | account |string | |
 | 11 | image_url |string | |
-| 12 | alert_id |string | |
-| 13 | webhook_id |string | |
-| 14 | project_id |string | |
-| 15 | domain_id |string | |
-| 16 | created_at |string | |
-| 17 | occurred_at |string | |
+| 12 | raw_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 13 | additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 14 | alert_id |string | |
+| 15 | webhook_id |string | |
+| 16 | project_id |string | |
+| 17 | domain_id |string | |
+| 18 | created_at |string | |
+| 19 | occurred_at |string | |
 
 ### EventQuery
 | No | Field | Type | Required | Description |
@@ -115,10 +117,12 @@ description:
 | 4 | event_type |string|❌| |
 | 5 | severity |string|❌| |
 | 6 | resource_id |string|❌| |
-| 7 | alert_id |string|❌| |
-| 8 | webhook_id |string|❌| |
-| 9 | project_id |string|❌| |
-| 10 | domain_id |string|❌| |
+| 7 | provider |string|❌| |
+| 8 | account |string|❌| |
+| 9 | alert_id |string|❌| |
+| 10 | webhook_id |string|❌| |
+| 11 | project_id |string|❌| |
+| 12 | domain_id |string|❌| |
 
 ### EventResource
 | No | Field | Type |  Description |
