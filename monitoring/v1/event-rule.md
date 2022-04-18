@@ -160,6 +160,7 @@ description:
           	<li>NONE</li>
           	<li>ALL</li>
           	<li>ANY</li>
+          	<li>ALWAYS</li>
         </ul></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
@@ -218,8 +219,9 @@ description:
 | 3 | change_project |string | |
 | 4 | add_project_dependency |list of string | |
 | 5 | add_responder |[list of EventRuleActionResponder](event-rule.md#eventruleactionresponder) | |
-| 6 | add_additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 7 | no_notification |bool | |
+| 6 | match_service_account |[MatchRule](event-rule.md#matchrule) | |
+| 7 | add_additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| 8 | no_notification |bool | |
 
 ### EventRuleCondition
 | No | Field | Type |  Description |
@@ -274,6 +276,7 @@ description:
           	<li>NONE</li>
           	<li>ALL</li>
           	<li>ANY</li>
+          	<li>ALWAYS</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -429,6 +432,12 @@ description:
 | 2 | domain_id |string|✅| |
 | 3 | only |list of string|❌| |
 
+### MatchRule
+| No | Field | Type |  Description |
+| :--- | :--- | :--- | :--- |
+| 1 | source |string | |
+| 2 | target |string | |
+
 ### UpdateEventRuleRequest
 <table>
   <thead>
@@ -469,6 +478,7 @@ description:
           	<li>NONE</li>
           	<li>ALL</li>
           	<li>ANY</li>
+          	<li>ALWAYS</li>
         </ul></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
