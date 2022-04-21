@@ -114,6 +114,13 @@ description:
 <td style="text-align:left"></td>
 
    </tr>
+    <tr>
+      <td style="text-align:left">12</td>
+      <td style="text-align:left">require_domain_id</td>
+      <td style="text-align:left">bool</td>
+<td style="text-align:left"></td>
+
+   </tr>
   </tbody>
 </table>
 
