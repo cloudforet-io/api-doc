@@ -127,7 +127,7 @@ description:
 | 2 | category |string|❌| |
 | 3 | title |string|✅| |
 | 4 | contents |string|✅| |
-| 5 | options |[PostOptions](post.md#postoptions)|❌| |
+| 5 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 6 | writer |string|❌| |
 | 7 | domain_id |string|❌| |
 
@@ -188,7 +188,7 @@ description:
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">options</td>
-      <td style="text-align:left"><a href="post.md#postoptions">PostOptions</a></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -249,12 +249,6 @@ description:
 
 
 
-### PostOptions
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | is_pinned |bool | |
-| 2 | is_popup |bool | |
-
 ### PostQuery
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :---: | :--- |
@@ -300,6 +294,6 @@ description:
 | 3 | category |string|❌| |
 | 4 | title |string|❌| |
 | 5 | contents |string|❌| |
-| 6 | options |[PostOptions](post.md#postoptions)|❌| |
+| 6 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
 | 7 | writer |string|❌| |
 | 8 | domain_id |string|❌| |
