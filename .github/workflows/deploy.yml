@@ -90,7 +90,7 @@ jobs:
         python markdown.py
     - name: Commit files # transfer the new html files back into the repository
       run: |
-        git config --local user.name "xellos00"
+        git config --local user.name "SpaceONE"
         git add .
         git commit -m "Update modified markdowns"
     - name: Push changes # push the output folder to your repo
