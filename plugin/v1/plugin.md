@@ -13,10 +13,10 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**get_plugin_endpoint**](plugin.md#get_plugin_endpoint)|   [PluginEndpointRequest](plugin.md#pluginendpointrequest) |   [PluginEndpoint](plugin.md#pluginendpoint) | Retrieve plugins end points. |
-| 2 | [**notify_failure**](plugin.md#notify_failure)|   [PluginFailureRequest](plugin.md#pluginfailurerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| send a notification if it has failed. | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**get_plugin_endpoint**](plugin.md#get_plugin_endpoint)|   [PluginEndpointRequest](plugin.md#pluginendpointrequest) |   [PluginEndpoint](plugin.md#pluginendpoint) | Retrieve plugins end points. |
+| [**notify_failure**](plugin.md#notify_failure)|   [PluginFailureRequest](plugin.md#pluginfailurerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| send a notification if it has failed. | 
  
 
  
@@ -51,17 +51,16 @@ description:
 ## Message
 
 ### PluginEndpoint
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | endpoint |string | |
-| 2 | access_token |string | |
-| 3 | updated_version |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| endpoint |string | |
+| access_token |string | |
+| updated_version |string | |
 
 ### PluginEndpointRequest
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
@@ -70,35 +69,30 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">plugin_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">version</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">labels</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">upgrade_mode</td>
       <td style="text-align:left"><ul>
           	<li>MANUAL</li>
@@ -113,9 +107,9 @@ description:
 
 
 ### PluginFailureRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | supervisor_id |string|✅| |
-| 2 | plugin_id |string|✅| |
-| 3 | version |string|✅| |
-| 4 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| supervisor_id |string|✅| |
+| plugin_id |string|✅| |
+| version |string|✅| |
+| domain_id |string|✅| |

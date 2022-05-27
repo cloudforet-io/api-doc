@@ -13,11 +13,11 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**setup**](interrupt.md#setup)|   [SetupRequest](interrupt.md#setuprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 2 | [**confirm**](interrupt.md#confirm)|   [ConfirmInterruptRequest](interrupt.md#confirminterruptrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 3 | [**handle**](interrupt.md#handle)|   [HandleRequest](interrupt.md#handlerequest) |   [HandleInfo](interrupt.md#handleinfo) |  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**setup**](interrupt.md#setup)|   [SetupRequest](interrupt.md#setuprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**confirm**](interrupt.md#confirm)|   [ConfirmInterruptRequest](interrupt.md#confirminterruptrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**handle**](interrupt.md#handle)|   [HandleRequest](interrupt.md#handlerequest) |   [HandleInfo](interrupt.md#handleinfo) |  | 
  
 
  
@@ -57,26 +57,26 @@ description:
 ## Message
 
 ### ConfirmInterruptRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | data |string|✅| |
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| data |string|✅| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 
 ### HandleInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | spot_group_resource_id |string | |
-| 2 | resource_id |string | |
-| 3 | type |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| spot_group_resource_id |string | |
+| resource_id |string | |
+| type |string | |
 
 ### HandleRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | data |string|✅| |
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| data |string|✅| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
 
 ### SetupRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | endpoint |string|✅| |
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| endpoint |string|✅| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |

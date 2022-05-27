@@ -13,14 +13,14 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](role.md#create)|   [CreateRoleRequest](role.md#createrolerequest) |   [RoleInfo](role.md#roleinfo) |  |
-| 2 | [**update**](role.md#update)|   [UpdateRoleRequest](role.md#updaterolerequest) |   [RoleInfo](role.md#roleinfo) |  |
-| 3 | [**delete**](role.md#delete)|   [RoleRequest](role.md#rolerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](role.md#get)|   [GetRoleRequest](role.md#getrolerequest) |   [RoleInfo](role.md#roleinfo) |  |
-| 5 | [**list**](role.md#list)|   [RoleQuery](role.md#rolequery) |   [RolesInfo](role.md#rolesinfo) |  |
-| 6 | [**stat**](role.md#stat)|   [RoleStatQuery](role.md#rolestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**create**](role.md#create)|   [CreateRoleRequest](role.md#createrolerequest) |   [RoleInfo](role.md#roleinfo) |  |
+| [**update**](role.md#update)|   [UpdateRoleRequest](role.md#updaterolerequest) |   [RoleInfo](role.md#roleinfo) |  |
+| [**delete**](role.md#delete)|   [RoleRequest](role.md#rolerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](role.md#get)|   [GetRoleRequest](role.md#getrolerequest) |   [RoleInfo](role.md#roleinfo) |  |
+| [**list**](role.md#list)|   [RoleQuery](role.md#rolequery) |   [RolesInfo](role.md#rolesinfo) |  |
+| [**stat**](role.md#stat)|   [RoleStatQuery](role.md#rolestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -110,7 +110,6 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
@@ -119,14 +118,12 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">role_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -138,28 +135,24 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">policies</td>
       <td style="text-align:left"><a href="role.md#rolepolicy">list of RolePolicy</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">page_permissions</td>
       <td style="text-align:left"><a href="role.md#pagepermission">list of PagePermission</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -171,17 +164,16 @@ description:
 
 
 ### GetRoleRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | role_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| role_id |string|✅| |
+| domain_id |string|✅| |
+| only |list of string|❌| |
 
 ### PagePermission
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -189,14 +181,12 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">page</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">permission</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -215,7 +205,6 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -223,21 +212,18 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">role_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">role_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -249,42 +235,36 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">policies</td>
       <td style="text-align:left"><a href="role.md#rolepolicy">list of RolePolicy</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">page_permissions</td>
       <td style="text-align:left"><a href="role.md#pagepermission">list of PagePermission</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">deleted_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -299,7 +279,6 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -307,7 +286,6 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">policy_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -318,7 +296,6 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">policy_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -333,7 +310,6 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
@@ -342,28 +318,24 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">role_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">role_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -375,14 +347,12 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">policy_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -394,30 +364,30 @@ description:
 
 
 ### RoleRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | role_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| role_id |string|✅| |
+| domain_id |string|✅| |
 
 ### RoleStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### RolesInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of RoleInfo](role.md#roleinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of RoleInfo](role.md#roleinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateRoleRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | role_id |string|✅| |
-| 2 | name |string|❌| |
-| 3 | policies |[list of RolePolicy](role.md#rolepolicy)|❌| |
-| 4 | page_permissions |[list of PagePermission](role.md#pagepermission)|❌| |
-| 5 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | release_page_permissions |bool|❌| |
-| 7 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| role_id |string|✅| |
+| name |string|❌| |
+| policies |[list of RolePolicy](role.md#rolepolicy)|❌| |
+| page_permissions |[list of PagePermission](role.md#pagepermission)|❌| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| release_page_permissions |bool|❌| |
+| domain_id |string|✅| |

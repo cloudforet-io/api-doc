@@ -13,18 +13,18 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**register**](storage.md#register)|   [RegisterStorageRequest](storage.md#registerstoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
-| 2 | [**update**](storage.md#update)|   [UpdateStorageRequest](storage.md#updatestoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
-| 3 | [**update_plugin**](storage.md#update_plugin)|   [UpdateStoragePluginRequest](storage.md#updatestoragepluginrequest) |   [StorageInfo](storage.md#storageinfo) |  |
-| 4 | [**verify_plugin**](storage.md#verify_plugin)|   [StorageRequest](storage.md#storagerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [**enable**](storage.md#enable)|   [StorageRequest](storage.md#storagerequest) |   [StorageInfo](storage.md#storageinfo) |  |
-| 6 | [**disable**](storage.md#disable)|   [StorageRequest](storage.md#storagerequest) |   [StorageInfo](storage.md#storageinfo) |  |
-| 7 | [**deregister**](storage.md#deregister)|   [StorageRequest](storage.md#storagerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 8 | [**get**](storage.md#get)|   [GetStorageRequest](storage.md#getstoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
-| 9 | [**list**](storage.md#list)|   [StorageQuery](storage.md#storagequery) |   [StoragesInfo](storage.md#storagesinfo) |  |
-| 10 | [**stat**](storage.md#stat)|   [StorageStatQuery](storage.md#storagestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**register**](storage.md#register)|   [RegisterStorageRequest](storage.md#registerstoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
+| [**update**](storage.md#update)|   [UpdateStorageRequest](storage.md#updatestoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
+| [**update_plugin**](storage.md#update_plugin)|   [UpdateStoragePluginRequest](storage.md#updatestoragepluginrequest) |   [StorageInfo](storage.md#storageinfo) |  |
+| [**verify_plugin**](storage.md#verify_plugin)|   [StorageRequest](storage.md#storagerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**enable**](storage.md#enable)|   [StorageRequest](storage.md#storagerequest) |   [StorageInfo](storage.md#storageinfo) |  |
+| [**disable**](storage.md#disable)|   [StorageRequest](storage.md#storagerequest) |   [StorageInfo](storage.md#storageinfo) |  |
+| [**deregister**](storage.md#deregister)|   [StorageRequest](storage.md#storagerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](storage.md#get)|   [GetStorageRequest](storage.md#getstoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
+| [**list**](storage.md#list)|   [StorageQuery](storage.md#storagequery) |   [StoragesInfo](storage.md#storagesinfo) |  |
+| [**stat**](storage.md#stat)|   [StorageStatQuery](storage.md#storagestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -163,44 +163,43 @@ description:
 ## Message
 
 ### GetStorageRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | storage_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| storage_id |string|✅| |
+| domain_id |string|✅| |
+| only |list of string|❌| |
 
 ### PluginInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string | |
-| 2 | version |string | |
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | secret_id |string | |
-| 5 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| plugin_id |string | |
+| version |string | |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| secret_id |string | |
+| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### PluginRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | plugin_id |string | |
-| 2 | version |string | |
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 5 | schema |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| plugin_id |string | |
+| version |string | |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| schema |string | |
 
 ### RegisterStorageRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
-| 2 | plugin_info |[PluginRequest](storage.md#pluginrequest)|❌| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | user_id |string|✅| |
-| 5 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| name |string|✅| |
+| plugin_info |[PluginRequest](storage.md#pluginrequest)|❌| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| user_id |string|✅| |
+| domain_id |string|✅| |
 
 ### StorageInfo
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -208,21 +207,18 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">storage_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -233,49 +229,42 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">options</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">capability</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">plugin_info</td>
       <td style="text-align:left"><a href="storage.md#plugininfo">PluginInfo</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -287,46 +276,46 @@ description:
 
 
 ### StorageQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | storage_id |string|❌| |
-| 3 | name |string|❌| |
-| 4 | state |string|❌| |
-| 5 | user_id |string|❌| |
-| 6 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| storage_id |string|❌| |
+| name |string|❌| |
+| state |string|❌| |
+| user_id |string|❌| |
+| domain_id |string|✅| |
 
 ### StorageRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | storage_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| storage_id |string|✅| |
+| domain_id |string|✅| |
 
 ### StorageStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### StoragesInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of StorageInfo](storage.md#storageinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of StorageInfo](storage.md#storageinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateStoragePluginRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | storage_id |string|✅| |
-| 2 | version |string|❌| |
-| 3 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| storage_id |string|✅| |
+| version |string|❌| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| domain_id |string|✅| |
 
 ### UpdateStorageRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | storage_id |string|✅| |
-| 2 | name |string|❌| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| storage_id |string|✅| |
+| name |string|❌| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| domain_id |string|✅| |

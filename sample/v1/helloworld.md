@@ -13,9 +13,9 @@ desc: The greeting service definition.
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**say_hello**](helloworld.md#say_hello)|   [HelloRequest](helloworld.md#hellorequest) |   [HelloReply](helloworld.md#helloreply) | Sends a greeting | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**say_hello**](helloworld.md#say_hello)|   [HelloRequest](helloworld.md#hellorequest) |   [HelloReply](helloworld.md#helloreply) | Sends a greeting | 
  
 
  
@@ -34,11 +34,11 @@ desc: The greeting service definition.
 ## Message
 
 ### HelloReply
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | message |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| message |string | |
 
 ### HelloRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| name |string|✅| |

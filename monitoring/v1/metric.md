@@ -13,10 +13,10 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [MetricDataInfo](metric.md#metricdatainfo) |  |
-| 2 | [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) |   [MetricsInfo](metric.md#metricsinfo) |  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [MetricDataInfo](metric.md#metricdatainfo) |  |
+| [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) |   [MetricsInfo](metric.md#metricsinfo) |  | 
  
 
  
@@ -49,45 +49,45 @@ description:
 ## Message
 
 ### MetricDataInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
-| 2 | resource_values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 3 | domain_id |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| resource_values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| domain_id |string | |
 
 ### MetricDataRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | data_source_id |string|✅| |
-| 2 | resource_type |string|✅| |
-| 3 | resources |list of string|✅| |
-| 4 | metric |string|✅| |
-| 5 | start |string|✅| |
-| 6 | end |string|✅| |
-| 7 | period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| 8 | stat |string|❌| |
-| 9 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| data_source_id |string|✅| |
+| resource_type |string|✅| |
+| resources |list of string|✅| |
+| metric |string|✅| |
+| start |string|✅| |
+| end |string|✅| |
+| period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
+| stat |string|❌| |
+| domain_id |string|✅| |
 
 ### MetricInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | key |string | |
-| 2 | name |string | |
-| 3 | unit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | chart_type |string | |
-| 5 | chart_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| key |string | |
+| name |string | |
+| unit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| chart_type |string | |
+| chart_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### MetricRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | data_source_id |string|✅| |
-| 2 | resource_type |string|✅| |
-| 3 | resources |list of string|✅| |
-| 4 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| data_source_id |string|✅| |
+| resource_type |string|✅| |
+| resources |list of string|✅| |
+| domain_id |string|✅| |
 
 ### MetricsInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | metrics |[list of MetricInfo](metric.md#metricinfo) | |
-| 2 | available_resources |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 3 | domain_id |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| metrics |[list of MetricInfo](metric.md#metricinfo) | |
+| available_resources |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| domain_id |string | |

@@ -13,14 +13,14 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](region.md#create)|   [CreateRegionRequest](region.md#createregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
-| 2 | [**update**](region.md#update)|   [UpdateRegionRequest](region.md#updateregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
-| 3 | [**delete**](region.md#delete)|   [RegionRequest](region.md#regionrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](region.md#get)|   [GetRegionRequest](region.md#getregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
-| 5 | [**list**](region.md#list)|   [RegionQuery](region.md#regionquery) |   [RegionsInfo](region.md#regionsinfo) |  |
-| 6 | [**stat**](region.md#stat)|   [RegionStatQuery](region.md#regionstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**create**](region.md#create)|   [CreateRegionRequest](region.md#createregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
+| [**update**](region.md#update)|   [UpdateRegionRequest](region.md#updateregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
+| [**delete**](region.md#delete)|   [RegionRequest](region.md#regionrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](region.md#get)|   [GetRegionRequest](region.md#getregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
+| [**list**](region.md#list)|   [RegionQuery](region.md#regionquery) |   [RegionsInfo](region.md#regionsinfo) |  |
+| [**stat**](region.md#stat)|   [RegionStatQuery](region.md#regionstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -107,67 +107,67 @@ description:
 ## Message
 
 ### CreateRegionRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
-| 2 | region_code |string|✅| |
-| 3 | provider |string|❌| |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 5 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| name |string|✅| |
+| region_code |string|✅| |
+| provider |string|❌| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| domain_id |string|✅| |
 
 ### GetRegionRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | region_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| region_id |string|✅| |
+| domain_id |string|✅| |
+| only |list of string|❌| |
 
 ### RegionInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | region_id |string | |
-| 2 | name |string | |
-| 3 | region_key |string | |
-| 4 | region_code |string | |
-| 5 | provider |string | |
-| 6 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 7 | domain_id |string | |
-| 8 | created_at |string | |
-| 9 | updated_at |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| region_id |string | |
+| name |string | |
+| region_key |string | |
+| region_code |string | |
+| provider |string | |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| domain_id |string | |
+| created_at |string | |
+| updated_at |string | |
 
 ### RegionQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | region_id |string|❌| |
-| 3 | name |string|❌| |
-| 4 | region_key |string|❌| |
-| 5 | region_code |string|❌| |
-| 6 | provider |string|❌| |
-| 7 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| region_id |string|❌| |
+| name |string|❌| |
+| region_key |string|❌| |
+| region_code |string|❌| |
+| provider |string|❌| |
+| domain_id |string|✅| |
 
 ### RegionRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | region_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| region_id |string|✅| |
+| domain_id |string|✅| |
 
 ### RegionStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### RegionsInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of RegionInfo](region.md#regioninfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of RegionInfo](region.md#regioninfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateRegionRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | region_id |string|✅| |
-| 2 | name |string|❌| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| region_id |string|✅| |
+| name |string|❌| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| domain_id |string|✅| |

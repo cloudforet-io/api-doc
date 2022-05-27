@@ -13,18 +13,18 @@ description: User API which allows member management within project, company, an
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](user.md#create)|   [CreateUserRequest](user.md#createuserrequest) |   [UserInfo](user.md#userinfo) |  |
-| 2 | [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) | Update user info by given user_id |
-| 3 | [**enable**](user.md#enable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
-| 4 | [**disable**](user.md#disable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
-| 5 | [**delete**](user.md#delete)|   [UserRequest](user.md#userrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 6 | [**get**](user.md#get)|   [GetUserRequest](user.md#getuserrequest) |   [UserInfo](user.md#userinfo) |  |
-| 7 | [**list**](user.md#list)|   [UserQuery](user.md#userquery) |   [UsersInfo](user.md#usersinfo) |  |
-| 8 | [**stat**](user.md#stat)|   [UserStatQuery](user.md#userstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| 9 | [**find**](user.md#find)|   [FindUserQuery](user.md#finduserquery) |   [FindUsersInfo](user.md#findusersinfo) |  |
-| 10 | [**sync**](user.md#sync)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**create**](user.md#create)|   [CreateUserRequest](user.md#createuserrequest) |   [UserInfo](user.md#userinfo) |  |
+| [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) | Update user info by given user_id |
+| [**enable**](user.md#enable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
+| [**disable**](user.md#disable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
+| [**delete**](user.md#delete)|   [UserRequest](user.md#userrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](user.md#get)|   [GetUserRequest](user.md#getuserrequest) |   [UserInfo](user.md#userinfo) |  |
+| [**list**](user.md#list)|   [UserQuery](user.md#userquery) |   [UsersInfo](user.md#usersinfo) |  |
+| [**stat**](user.md#stat)|   [UserStatQuery](user.md#userstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| [**find**](user.md#find)|   [FindUserQuery](user.md#finduserquery) |   [FindUsersInfo](user.md#findusersinfo) |  |
+| [**sync**](user.md#sync)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  | 
  
 
  
@@ -219,7 +219,6 @@ description: User API which allows member management within project, company, an
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
@@ -228,35 +227,30 @@ description: User API which allows member management within project, company, an
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">password</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">email</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">user_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE_USER_TYPE</li>
@@ -267,7 +261,6 @@ description: User API which allows member management within project, company, an
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">backend</td>
       <td style="text-align:left"><ul>
           	<li>NONE_BACKEND</li>
@@ -278,28 +271,24 @@ description: User API which allows member management within project, company, an
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">language</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">timezone</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -311,55 +300,54 @@ description: User API which allows member management within project, company, an
 
 
 ### FindUserInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | user_id |string | |
-| 2 | name |string | |
-| 3 | email |string | |
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| user_id |string | |
+| name |string | |
+| email |string | |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### FindUserQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | search |[FindUserSearch](user.md#findusersearch)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| search |[FindUserSearch](user.md#findusersearch)|✅| |
+| domain_id |string|✅| |
 
 ### FindUserSearch
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | user_id |string | |
-| 2 | keyword |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| user_id |string | |
+| keyword |string | |
 
 ### FindUsersInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of FindUserInfo](user.md#finduserinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of FindUserInfo](user.md#finduserinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### GetUserRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | user_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| user_id |string|✅| |
+| domain_id |string|✅| |
+| only |list of string|❌| |
 
 ### UpdateUserRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | user_id |string|✅| |
-| 2 | password |string|❌| |
-| 3 | name |string|❌| |
-| 4 | email |string|❌| |
-| 5 | language |string|❌| |
-| 6 | timezone |string|❌| |
-| 7 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 8 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| user_id |string|✅| |
+| password |string|❌| |
+| name |string|❌| |
+| email |string|❌| |
+| language |string|❌| |
+| timezone |string|❌| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| domain_id |string|✅| |
 
 ### UserInfo
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -367,21 +355,18 @@ description: User API which allows member management within project, company, an
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -393,14 +378,12 @@ description: User API which allows member management within project, company, an
 
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">email</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">user_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE_USER_TYPE</li>
@@ -411,7 +394,6 @@ description: User API which allows member management within project, company, an
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">backend</td>
       <td style="text-align:left"><ul>
           	<li>NONE_BACKEND</li>
@@ -422,42 +404,36 @@ description: User API which allows member management within project, company, an
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">language</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">timezone</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
       <td style="text-align:left">last_accessed_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -472,7 +448,6 @@ description: User API which allows member management within project, company, an
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
@@ -481,42 +456,36 @@ description: User API which allows member management within project, company, an
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">email</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">user_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE_USER_TYPE</li>
@@ -527,7 +496,6 @@ description: User API which allows member management within project, company, an
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">backend</td>
       <td style="text-align:left"><ul>
           	<li>NONE_BACKEND</li>
@@ -538,7 +506,6 @@ description: User API which allows member management within project, company, an
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
@@ -550,19 +517,19 @@ description: User API which allows member management within project, company, an
 
 
 ### UserRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | user_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| user_id |string|✅| |
+| domain_id |string|✅| |
 
 ### UserStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### UsersInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of UserInfo](user.md#userinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of UserInfo](user.md#userinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |

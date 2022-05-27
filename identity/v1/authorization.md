@@ -13,9 +13,9 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**verify**](authorization.md#verify)| .spaceone.api.core.v1.AuthorizationRequest|  .spaceone.api.core.v1.AuthorizationResponse|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**verify**](authorization.md#verify)| .spaceone.api.core.v1.AuthorizationRequest|  .spaceone.api.core.v1.AuthorizationResponse|  | 
  
 
  

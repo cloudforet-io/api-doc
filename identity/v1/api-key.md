@@ -13,15 +13,15 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](api-key.md#create)|   [CreateAPIKeyRequest](api-key.md#createapikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 2 | [**enable**](api-key.md#enable)|   [APIKeyRequest](api-key.md#apikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 3 | [**disable**](api-key.md#disable)|   [APIKeyRequest](api-key.md#apikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 4 | [**delete**](api-key.md#delete)|   [APIKeyRequest](api-key.md#apikeyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [**get**](api-key.md#get)|   [GetAPIKeyRequest](api-key.md#getapikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
-| 6 | [**list**](api-key.md#list)|   [APIKeyQuery](api-key.md#apikeyquery) |   [APIKeysInfo](api-key.md#apikeysinfo) |  |
-| 7 | [**stat**](api-key.md#stat)|   [APIKeyStatQuery](api-key.md#apikeystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**create**](api-key.md#create)|   [CreateAPIKeyRequest](api-key.md#createapikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| [**enable**](api-key.md#enable)|   [APIKeyRequest](api-key.md#apikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| [**disable**](api-key.md#disable)|   [APIKeyRequest](api-key.md#apikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| [**delete**](api-key.md#delete)|   [APIKeyRequest](api-key.md#apikeyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](api-key.md#get)|   [GetAPIKeyRequest](api-key.md#getapikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
+| [**list**](api-key.md#list)|   [APIKeyQuery](api-key.md#apikeyquery) |   [APIKeysInfo](api-key.md#apikeysinfo) |  |
+| [**stat**](api-key.md#stat)|   [APIKeyStatQuery](api-key.md#apikeystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -124,7 +124,6 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -132,21 +131,18 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">api_key_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">api_key</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE_STATE</li>
@@ -157,28 +153,24 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">last_accessed_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -193,7 +185,6 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
@@ -202,21 +193,18 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">api_key_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE_STATE</li>
@@ -227,14 +215,12 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
@@ -246,32 +232,32 @@ description:
 
 
 ### APIKeyRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | api_key_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| api_key_id |string|✅| |
+| domain_id |string|✅| |
 
 ### APIKeyStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### APIKeysInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of APIKeyInfo](api-key.md#apikeyinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of APIKeyInfo](api-key.md#apikeyinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### CreateAPIKeyRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | user_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| user_id |string|✅| |
+| domain_id |string|✅| |
 
 ### GetAPIKeyRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | api_key_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| api_key_id |string|✅| |
+| domain_id |string|✅| |
+| only |list of string|❌| |

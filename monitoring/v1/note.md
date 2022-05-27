@@ -13,14 +13,14 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](note.md#create)|   [CreateNoteRequest](note.md#createnoterequest) |   [NoteInfo](note.md#noteinfo) |  |
-| 2 | [**update**](note.md#update)|   [UpdateNoteRequest](note.md#updatenoterequest) |   [NoteInfo](note.md#noteinfo) |  |
-| 3 | [**delete**](note.md#delete)|   [NoteRequest](note.md#noterequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](note.md#get)|   [GetNoteRequest](note.md#getnoterequest) |   [NoteInfo](note.md#noteinfo) |  |
-| 5 | [**list**](note.md#list)|   [NoteQuery](note.md#notequery) |   [NotesInfo](note.md#notesinfo) |  |
-| 6 | [**stat**](note.md#stat)|   [NoteStatQuery](note.md#notestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**create**](note.md#create)|   [CreateNoteRequest](note.md#createnoterequest) |   [NoteInfo](note.md#noteinfo) |  |
+| [**update**](note.md#update)|   [UpdateNoteRequest](note.md#updatenoterequest) |   [NoteInfo](note.md#noteinfo) |  |
+| [**delete**](note.md#delete)|   [NoteRequest](note.md#noterequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](note.md#get)|   [GetNoteRequest](note.md#getnoterequest) |   [NoteInfo](note.md#noteinfo) |  |
+| [**list**](note.md#list)|   [NoteQuery](note.md#notequery) |   [NotesInfo](note.md#notesinfo) |  |
+| [**stat**](note.md#stat)|   [NoteStatQuery](note.md#notestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -107,61 +107,61 @@ description:
 ## Message
 
 ### CreateNoteRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | alert_id |string|✅| |
-| 2 | note |string|✅| |
-| 3 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| alert_id |string|✅| |
+| note |string|✅| |
+| domain_id |string|✅| |
 
 ### GetNoteRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | note_id |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| note_id |string|✅| |
+| domain_id |string|✅| |
+| only |list of string|❌| |
 
 ### NoteInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | note_id |string | |
-| 2 | alert_id |string | |
-| 3 | note |string | |
-| 4 | created_by |string | |
-| 5 | project_id |string | |
-| 6 | domain_id |string | |
-| 7 | created_at |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| note_id |string | |
+| alert_id |string | |
+| note |string | |
+| created_by |string | |
+| project_id |string | |
+| domain_id |string | |
+| created_at |string | |
 
 ### NoteQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | note_id |string|❌| |
-| 3 | alert_id |string|❌| |
-| 4 | created_by |string|❌| |
-| 5 | project_id |string|❌| |
-| 6 | domain_id |string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| note_id |string|❌| |
+| alert_id |string|❌| |
+| created_by |string|❌| |
+| project_id |string|❌| |
+| domain_id |string|❌| |
 
 ### NoteRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | note_id |string|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| note_id |string|✅| |
+| domain_id |string|✅| |
 
 ### NoteStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### NotesInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of NoteInfo](note.md#noteinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of NoteInfo](note.md#noteinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### UpdateNoteRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | note_id |string|✅| |
-| 2 | note |string|❌| |
-| 3 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| note_id |string|✅| |
+| note |string|❌| |
+| domain_id |string|✅| |

@@ -13,9 +13,9 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**get_tasks**](job.md#get_tasks)|   [GetTasksRequest](job.md#gettasksrequest) |   [TasksInfo](job.md#tasksinfo) |  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**get_tasks**](job.md#get_tasks)|   [GetTasksRequest](job.md#gettasksrequest) |   [TasksInfo](job.md#tasksinfo) |  | 
  
 
  
@@ -33,27 +33,27 @@ description:
 ## Message
 
 ### ChangedInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | start |string | |
-| 2 | end |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| start |string | |
+| end |string | |
 
 ### GetTasksRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 2 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | schema |string|❌| |
-| 4 | start |string|❌| |
-| 5 | last_synchronized_at |string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| schema |string|❌| |
+| start |string|❌| |
+| last_synchronized_at |string|❌| |
 
 ### TaskInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | task_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| task_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### TasksInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | tasks |[list of TaskInfo](job.md#taskinfo) | |
-| 2 | changed |[list of ChangedInfo](job.md#changedinfo) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| tasks |[list of TaskInfo](job.md#taskinfo) | |
+| changed |[list of ChangedInfo](job.md#changedinfo) | |

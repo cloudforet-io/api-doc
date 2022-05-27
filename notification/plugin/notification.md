@@ -13,9 +13,9 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**dispatch**](notification.md#dispatch)|   [PluginDispatchRequest](notification.md#plugindispatchrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| A method to propagate the Notification to external systems. | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**dispatch**](notification.md#dispatch)|   [PluginDispatchRequest](notification.md#plugindispatchrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| A method to propagate the Notification to external systems. | 
  
 
  
@@ -37,7 +37,6 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
@@ -46,21 +45,18 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">options</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">Option value required for notification delivery.</td>
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">Message containing notification information</td>
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">notification_type</td>
       <td style="text-align:left"><ul>
           	<li>NOTIFICATION_TYPE_NONE</li>
@@ -73,14 +69,12 @@ description:
 <td style="text-align:left">The type of Notification</td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">secret_data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">Secret value required for notification delivery.The secret data usually includes the credential information required for the plugin to access the external system.</td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">channel_data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>

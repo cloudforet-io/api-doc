@@ -10,21 +10,20 @@ description:
 ## Message
 
 ### AuthenticationRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| domain_id |string | |
 
 ### AuthenticationResponse
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | domain_id |string | |
-| 2 | public_key |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| domain_id |string | |
+| public_key |string | |
 
 ### AuthorizationRequest
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -32,28 +31,24 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">service</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">resource</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">verb</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">scope</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
@@ -66,56 +61,48 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">require_project_id</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
       <td style="text-align:left">require_project_group_id</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
       <td style="text-align:left">require_user_id</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
       <td style="text-align:left">require_domain_id</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
@@ -127,17 +114,17 @@ description:
 
 
 ### AuthorizationResponse
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | role_type |string | |
-| 2 | projects |list of string | |
-| 3 | project_groups |list of string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| role_type |string | |
+| projects |list of string | |
+| project_groups |list of string | |
 
 ### EventRequest
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | service |string | |
-| 2 | resource |string | |
-| 3 | verb |string | |
-| 4 | status |string | |
-| 5 | message |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| service |string | |
+| resource |string | |
+| verb |string | |
+| status |string | |
+| message |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |

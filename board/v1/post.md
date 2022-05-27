@@ -13,15 +13,15 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](post.md#create)|   [CreatePostRequest](post.md#createpostrequest) |   [PostInfo](post.md#postinfo) |  |
-| 2 | [**update**](post.md#update)|   [UpdatePostRequest](post.md#updatepostrequest) |   [PostInfo](post.md#postinfo) |  |
-| 3 | [**send_notification**](post.md#send_notification)|   [SendNotificationRequest](post.md#sendnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**delete**](post.md#delete)|   [PostRequest](post.md#postrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [**get**](post.md#get)|   [GetPostRequest](post.md#getpostrequest) |   [PostInfo](post.md#postinfo) |  |
-| 6 | [**list**](post.md#list)|   [PostQuery](post.md#postquery) |   [PostsInfo](post.md#postsinfo) |  |
-| 7 | [**stat**](post.md#stat)|   [PostStatQuery](post.md#poststatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**create**](post.md#create)|   [CreatePostRequest](post.md#createpostrequest) |   [PostInfo](post.md#postinfo) |  |
+| [**update**](post.md#update)|   [UpdatePostRequest](post.md#updatepostrequest) |   [PostInfo](post.md#postinfo) |  |
+| [**send_notification**](post.md#send_notification)|   [SendNotificationRequest](post.md#sendnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**delete**](post.md#delete)|   [PostRequest](post.md#postrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](post.md#get)|   [GetPostRequest](post.md#getpostrequest) |   [PostInfo](post.md#postinfo) |  |
+| [**list**](post.md#list)|   [PostQuery](post.md#postquery) |   [PostsInfo](post.md#postsinfo) |  |
+| [**stat**](post.md#stat)|   [PostStatQuery](post.md#poststatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -121,29 +121,28 @@ description:
 ## Message
 
 ### CreatePostRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | board_id |string|✅| |
-| 2 | category |string|❌| |
-| 3 | title |string|✅| |
-| 4 | contents |string|✅| |
-| 5 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 6 | writer |string|❌| |
-| 7 | domain_id |string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| board_id |string|✅| |
+| category |string|❌| |
+| title |string|✅| |
+| contents |string|✅| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| writer |string|❌| |
+| domain_id |string|❌| |
 
 ### GetPostRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | board_id |string|✅| |
-| 2 | post_id |string|✅| |
-| 3 | only |list of string|❌| |
-| 4 | domain_id |string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| board_id |string|✅| |
+| post_id |string|✅| |
+| only |list of string|❌| |
+| domain_id |string|❌| |
 
 ### PostInfo
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -151,63 +150,54 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">board_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">post_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">category</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">title</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">contents</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">options</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">view_count</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">writer</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">scope</td>
       <td style="text-align:left"><ul>
           	<li>SYSTEM</li>
@@ -217,28 +207,24 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
       <td style="text-align:left">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">12</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">13</td>
       <td style="text-align:left">updated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -250,50 +236,50 @@ description:
 
 
 ### PostQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | board_id |string|✅| |
-| 2 | post_id |string|❌| |
-| 3 | category |string|❌| |
-| 4 | writer |string|❌| |
-| 5 | user_id |string|❌| |
-| 6 | domain_id |string|❌| |
-| 7 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| board_id |string|✅| |
+| post_id |string|❌| |
+| category |string|❌| |
+| writer |string|❌| |
+| user_id |string|❌| |
+| domain_id |string|❌| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
 
 ### PostRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | board_id |string|✅| |
-| 2 | post_id |string|✅| |
-| 3 | domain_id |string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| board_id |string|✅| |
+| post_id |string|✅| |
+| domain_id |string|❌| |
 
 ### PostStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### PostsInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of PostInfo](post.md#postinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of PostInfo](post.md#postinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### SendNotificationRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | board_id |string|✅| |
-| 2 | post_id |string|✅| |
-| 3 | domain_id |string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| board_id |string|✅| |
+| post_id |string|✅| |
+| domain_id |string|❌| |
 
 ### UpdatePostRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | board_id |string|✅| |
-| 2 | post_id |string|✅| |
-| 3 | category |string|❌| |
-| 4 | title |string|❌| |
-| 5 | contents |string|❌| |
-| 6 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 7 | writer |string|❌| |
-| 8 | domain_id |string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| board_id |string|✅| |
+| post_id |string|✅| |
+| category |string|❌| |
+| title |string|❌| |
+| contents |string|❌| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| writer |string|❌| |
+| domain_id |string|❌| |

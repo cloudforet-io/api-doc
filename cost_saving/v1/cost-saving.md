@@ -13,11 +13,11 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**record**](cost-saving.md#record)|   [RecordRequest](cost-saving.md#recordrequest) |   [RecordInfo](cost-saving.md#recordinfo) |  |
-| 2 | [**list**](cost-saving.md#list)|   [CostSavingQuery](cost-saving.md#costsavingquery) |   [CostSavingsInfo](cost-saving.md#costsavingsinfo) |  |
-| 3 | [**stat**](cost-saving.md#stat)|   [CostSavingStatQuery](cost-saving.md#costsavingstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**record**](cost-saving.md#record)|   [RecordRequest](cost-saving.md#recordrequest) |   [RecordInfo](cost-saving.md#recordinfo) |  |
+| [**list**](cost-saving.md#list)|   [CostSavingQuery](cost-saving.md#costsavingquery) |   [CostSavingsInfo](cost-saving.md#costsavingsinfo) |  |
+| [**stat**](cost-saving.md#stat)|   [CostSavingStatQuery](cost-saving.md#costsavingstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -65,53 +65,52 @@ description:
 ## Message
 
 ### CostSavingInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | cost_saving_id |string | |
-| 2 | cost_normal |float | |
-| 3 | cost_saving |float | |
-| 4 | saving_result |float | |
-| 5 | provider |string | |
-| 6 | resource_type |string | |
-| 7 | region_code |string | |
-| 8 | project_id |string | |
-| 9 | domain_id |string | |
-| 10 | saving_service |string | |
-| 11 | saving_by |string | |
-| 12 | calc_dimensions |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 13 | saving_begin_at |string | |
-| 14 | saving_duration |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
-| 15 | created_at |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| cost_saving_id |string | |
+| cost_normal |float | |
+| cost_saving |float | |
+| saving_result |float | |
+| provider |string | |
+| resource_type |string | |
+| region_code |string | |
+| project_id |string | |
+| domain_id |string | |
+| saving_service |string | |
+| saving_by |string | |
+| calc_dimensions |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| saving_begin_at |string | |
+| saving_duration |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| created_at |string | |
 
 ### CostSavingQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | resource_type |string|❌| |
-| 3 | provider |string|❌| |
-| 4 | region_code |string|❌| |
-| 5 | project_id |string|❌| |
-| 6 | saving_service |string|❌| |
-| 7 | saving_by |string|❌| |
-| 8 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| resource_type |string|❌| |
+| provider |string|❌| |
+| region_code |string|❌| |
+| project_id |string|❌| |
+| saving_service |string|❌| |
+| saving_by |string|❌| |
+| domain_id |string|✅| |
 
 ### CostSavingStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### CostSavingsInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of CostSavingInfo](cost-saving.md#costsavinginfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of CostSavingInfo](cost-saving.md#costsavinginfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### RecordInfo
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
@@ -119,21 +118,18 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">record_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">saving_mode</td>
       <td style="text-align:left"><ul>
           	<li>MODE_NONE</li>
@@ -144,56 +140,48 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">calc_dimensions</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">saving_service</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">10</td>
       <td style="text-align:left">saving_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">11</td>
       <td style="text-align:left">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -208,7 +196,6 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">No</th>
       <th style="text-align:left">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
@@ -217,14 +204,12 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">1</td>
       <td style="text-align:left">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">2</td>
       <td style="text-align:left">saving_mode</td>
       <td style="text-align:left"><ul>
           	<li>MODE_NONE</li>
@@ -235,49 +220,42 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">3</td>
       <td style="text-align:left">calc_dimensions</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">4</td>
       <td style="text-align:left">saving_service</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">5</td>
       <td style="text-align:left">saving_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">6</td>
       <td style="text-align:left">region_code</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">7</td>
       <td style="text-align:left">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">8</td>
       <td style="text-align:left">provider</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">9</td>
       <td style="text-align:left">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>

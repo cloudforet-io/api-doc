@@ -13,9 +13,9 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**get_version**](server-info.md#get_version)| [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|   [VersionInfo](server-info.md#versioninfo) |  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**get_version**](server-info.md#get_version)| [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|   [VersionInfo](server-info.md#versioninfo) |  | 
  
 
  
@@ -33,6 +33,6 @@ description:
 ## Message
 
 ### VersionInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | version |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| version |string | |

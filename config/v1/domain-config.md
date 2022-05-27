@@ -13,15 +13,15 @@ description: DomainConfig API which configure environments for domain
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](domain-config.md#create)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
-| 2 | [**update**](domain-config.md#update)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
-| 3 | [**set**](domain-config.md#set)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
-| 4 | [**delete**](domain-config.md#delete)|   [DomainConfigRequest](domain-config.md#domainconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 5 | [**get**](domain-config.md#get)|   [GetDomainConfigRequest](domain-config.md#getdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
-| 6 | [**list**](domain-config.md#list)|   [DomainConfigQuery](domain-config.md#domainconfigquery) |   [DomainConfigsInfo](domain-config.md#domainconfigsinfo) |  |
-| 7 | [**stat**](domain-config.md#stat)|   [DomainConfigStatQuery](domain-config.md#domainconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**create**](domain-config.md#create)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
+| [**update**](domain-config.md#update)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
+| [**set**](domain-config.md#set)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
+| [**delete**](domain-config.md#delete)|   [DomainConfigRequest](domain-config.md#domainconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](domain-config.md#get)|   [GetDomainConfigRequest](domain-config.md#getdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
+| [**list**](domain-config.md#list)|   [DomainConfigQuery](domain-config.md#domainconfigquery) |   [DomainConfigsInfo](domain-config.md#domainconfigsinfo) |  |
+| [**stat**](domain-config.md#stat)|   [DomainConfigStatQuery](domain-config.md#domainconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -121,51 +121,51 @@ description: DomainConfig API which configure environments for domain
 ## Message
 
 ### DomainConfigInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | name |string | |
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| 4 | domain_id |string | |
-| 5 | created_at |string | |
-| 6 | updated_at |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| name |string | |
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| domain_id |string | |
+| created_at |string | |
+| updated_at |string | |
 
 ### DomainConfigQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | name |string|❌| |
-| 3 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| name |string|❌| |
+| domain_id |string|✅| |
 
 ### DomainConfigRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| name |string|✅| |
+| domain_id |string|✅| |
 
 ### DomainConfigStatQuery
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### DomainConfigsInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of DomainConfigInfo](domain-config.md#domainconfiginfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of DomainConfigInfo](domain-config.md#domainconfiginfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### GetDomainConfigRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
-| 2 | domain_id |string|✅| |
-| 3 | only |list of string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| name |string|✅| |
+| domain_id |string|✅| |
+| only |list of string|❌| |
 
 ### SetDomainConfigRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | name |string|✅| |
-| 2 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| 3 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| 4 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| name |string|✅| |
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| domain_id |string|✅| |

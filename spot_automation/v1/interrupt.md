@@ -13,12 +13,12 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**confirm**](interrupt.md#confirm)|   [ConfirmRequest](interrupt.md#confirmrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 2 | [**interrupt**](interrupt.md#interrupt)|   [InterruptRequest](interrupt.md#interruptrequest) |   [InterruptInfo](interrupt.md#interruptinfo) |  |
-| 3 | [**list**](interrupt.md#list)|   [QueryInterruptRequest](interrupt.md#queryinterruptrequest) |   [InterruptsInfo](interrupt.md#interruptsinfo) |  |
-| 4 | [**stat**](interrupt.md#stat)|   [InterruptStatRequest](interrupt.md#interruptstatrequest) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**confirm**](interrupt.md#confirm)|   [ConfirmRequest](interrupt.md#confirmrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**interrupt**](interrupt.md#interrupt)|   [InterruptRequest](interrupt.md#interruptrequest) |   [InterruptInfo](interrupt.md#interruptinfo) |  |
+| [**list**](interrupt.md#list)|   [QueryInterruptRequest](interrupt.md#queryinterruptrequest) |   [InterruptsInfo](interrupt.md#interruptsinfo) |  |
+| [**stat**](interrupt.md#stat)|   [InterruptStatRequest](interrupt.md#interruptstatrequest) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
  
 
  
@@ -79,58 +79,58 @@ description:
 ## Message
 
 ### ConfirmRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | provider |string|✅| |
-| 2 | region_code |string|✅| |
-| 3 | domain_id |string|✅| |
-| 4 | secret_id |string|✅| |
-| 5 | token |string|✅| |
-| 6 | data |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| provider |string|✅| |
+| region_code |string|✅| |
+| domain_id |string|✅| |
+| secret_id |string|✅| |
+| token |string|✅| |
+| data |string|✅| |
 
 ### InterruptInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | interrupt_id |string | |
-| 2 | spot_group_id |string | |
-| 3 | type |string | |
-| 4 | reference |[InterruptResourceReference](interrupt.md#interruptresourcereference) | |
-| 5 | availability_zone |string | |
-| 6 | region_code |string | |
-| 7 | provider |string | |
-| 8 | created_at |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| interrupt_id |string | |
+| spot_group_id |string | |
+| type |string | |
+| reference |[InterruptResourceReference](interrupt.md#interruptresourcereference) | |
+| availability_zone |string | |
+| region_code |string | |
+| provider |string | |
+| created_at |string | |
 
 ### InterruptRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | provider |string|✅| |
-| 2 | region_code |string|✅| |
-| 3 | domain_id |string|✅| |
-| 4 | secret_id |string|✅| |
-| 5 | token |string|✅| |
-| 6 | data |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| provider |string|✅| |
+| region_code |string|✅| |
+| domain_id |string|✅| |
+| secret_id |string|✅| |
+| token |string|✅| |
+| data |string|✅| |
 
 ### InterruptResourceReference
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | resource_id |string | |
-| 2 | external_link |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| resource_id |string | |
+| external_link |string | |
 
 ### InterruptStatRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| 2 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| domain_id |string|✅| |
 
 ### InterruptsInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | results |[list of InterruptInfo](interrupt.md#interruptinfo) | |
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of InterruptInfo](interrupt.md#interruptinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
 ### QueryInterruptRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| 2 | spot_group_id |string|❌| |
-| 3 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| spot_group_id |string|❌| |
+| domain_id |string|✅| |

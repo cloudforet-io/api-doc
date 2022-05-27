@@ -13,12 +13,12 @@ description:
 {%  endhint %}
 
 
-| NO |  Method | Request Type | Response Type | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | [**create**](domain-owner.md#create)|   [CreateDomainOwner](domain-owner.md#createdomainowner) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
-| 2 | [**update**](domain-owner.md#update)|   [UpdateDomainOwner](domain-owner.md#updatedomainowner) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
-| 3 | [**delete**](domain-owner.md#delete)|   [DomainOwnerRequest](domain-owner.md#domainownerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [**get**](domain-owner.md#get)|   [GetDomainOwnerRequest](domain-owner.md#getdomainownerrequest) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  | 
+| Method | Request | Response | Description |
+| :--- | :--- | :--- | :--- |
+| [**create**](domain-owner.md#create)|   [CreateDomainOwner](domain-owner.md#createdomainowner) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
+| [**update**](domain-owner.md#update)|   [UpdateDomainOwner](domain-owner.md#updatedomainowner) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
+| [**delete**](domain-owner.md#delete)|   [DomainOwnerRequest](domain-owner.md#domainownerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
+| [**get**](domain-owner.md#get)|   [GetDomainOwnerRequest](domain-owner.md#getdomainownerrequest) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  | 
  
 
  
@@ -77,48 +77,48 @@ description:
 ## Message
 
 ### CreateDomainOwner
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | owner_id |string|❌| |
-| 2 | password |string|✅| |
-| 3 | name |string|❌| |
-| 4 | email |string|❌| |
-| 5 | language |string|❌| |
-| 6 | timezone |string|❌| |
-| 7 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| owner_id |string|❌| |
+| password |string|✅| |
+| name |string|❌| |
+| email |string|❌| |
+| language |string|❌| |
+| timezone |string|❌| |
+| domain_id |string|✅| |
 
 ### DomainOwnerInfo
-| No | Field | Type |  Description |
-| :--- | :--- | :--- | :--- |
-| 1 | owner_id |string | |
-| 2 | name |string | |
-| 3 | email |string | |
-| 4 | language |string | |
-| 5 | timezone |string | |
-| 6 | last_accessed_at |string | |
-| 7 | created_at |string | |
-| 8 | domain_id |string | |
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| owner_id |string | |
+| name |string | |
+| email |string | |
+| language |string | |
+| timezone |string | |
+| last_accessed_at |string | |
+| created_at |string | |
+| domain_id |string | |
 
 ### DomainOwnerRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | domain_id |string|✅| |
-| 2 | owner_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| domain_id |string|✅| |
+| owner_id |string|✅| |
 
 ### GetDomainOwnerRequest
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | domain_id |string|✅| |
-| 2 | owner_id |string|✅| |
-| 3 | only |list of string|❌| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| domain_id |string|✅| |
+| owner_id |string|✅| |
+| only |list of string|❌| |
 
 ### UpdateDomainOwner
-| No | Field | Type | Required | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| 1 | owner_id |string|✅| |
-| 2 | password |string|❌| |
-| 3 | name |string|❌| |
-| 4 | email |string|❌| |
-| 5 | language |string|❌| |
-| 6 | timezone |string|❌| |
-| 7 | domain_id |string|✅| |
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| owner_id |string|✅| |
+| password |string|❌| |
+| name |string|❌| |
+| email |string|❌| |
+| language |string|❌| |
+| timezone |string|❌| |
+| domain_id |string|✅| |
