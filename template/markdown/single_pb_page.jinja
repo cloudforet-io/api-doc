@@ -29,7 +29,7 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
 
 {% if service.methods is defined %}
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 {%- for method in service.methods %}
 | [**{{ method.name }}**]({{file_info.full_name_lower}}#{{method.name}})|{% if method.requestStreaming == true %} **`stream`** {% endif %} {% if method.req_link is defined %}  [{{ method.requestLongType }}]({{method.req_link}}) {% elif method.requestFullType_link is defined %}[{{ method.requestFullType }}]({{method.requestFullType_link}}){% else %}{{ method.requestLongType }}{% endif %}|{% if method.responseStreaming == true %} **`stream`** {%- endif %}  {% if method.res_link is defined %} [{{ method.responseLongType }}]({{method.res_link}}) {% elif method.responseFullType_link is defined %}[{{ method.responseFullType }}]({{method.responseFullType_link}}){% else %}{{ method.responseLongType }}{% endif %}|
 {%- endfor -%}
