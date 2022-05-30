@@ -13,111 +13,21 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](alert.md#create)|   [CreateAlertRequest](alert.md#createalertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**update**](alert.md#update)|   [UpdateAlertRequest](alert.md#updatealertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**update_state**](alert.md#update_state)|   [UpdateAlertStateRequest](alert.md#updatealertstaterequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**merge**](alert.md#merge)|   [MergeAlertRequest](alert.md#mergealertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**snooze**](alert.md#snooze)|   [SnoozeAlertRequest](alert.md#snoozealertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**add_responder**](alert.md#add_responder)|   [AlertResponderRequest](alert.md#alertresponderrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**remove_responder**](alert.md#remove_responder)|   [AlertResponderRequest](alert.md#alertresponderrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**add_project_dependency**](alert.md#add_project_dependency)|   [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**remove_project_dependency**](alert.md#remove_project_dependency)|   [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**delete**](alert.md#delete)|   [AlertRequest](alert.md#alertrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**get**](alert.md#get)|   [GetAlertRequest](alert.md#getalertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
-| [**list**](alert.md#list)|   [AlertQuery](alert.md#alertquery) |   [AlertsInfo](alert.md#alertsinfo) |  |
-| [**stat**](alert.md#stat)|   [AlertStatQuery](alert.md#alertstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateAlertRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateAlertRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update_state</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateAlertStateRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">merge</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MergeAlertRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">snooze</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SnoozeAlertRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">add_responder</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertResponderRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">remove_responder</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertResponderRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">add_project_dependency</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertProjectDependencyRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">remove_project_dependency</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertProjectDependencyRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetAlertRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertsInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   AlertStatQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr></tbody>
-</table> 
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
+| [**create**](alert.md#create)|   [CreateAlertRequest](alert.md#createalertrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**update**](alert.md#update)|   [UpdateAlertRequest](alert.md#updatealertrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**update_state**](alert.md#update_state)|   [UpdateAlertStateRequest](alert.md#updatealertstaterequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**merge**](alert.md#merge)|   [MergeAlertRequest](alert.md#mergealertrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**snooze**](alert.md#snooze)|   [SnoozeAlertRequest](alert.md#snoozealertrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**add_responder**](alert.md#add_responder)|   [AlertResponderRequest](alert.md#alertresponderrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**remove_responder**](alert.md#remove_responder)|   [AlertResponderRequest](alert.md#alertresponderrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**add_project_dependency**](alert.md#add_project_dependency)|   [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**remove_project_dependency**](alert.md#remove_project_dependency)|   [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**delete**](alert.md#delete)|   [AlertRequest](alert.md#alertrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](alert.md#get)|   [GetAlertRequest](alert.md#getalertrequest) |   [AlertInfo](alert.md#alertinfo) |
+| [**list**](alert.md#list)|   [AlertQuery](alert.md#alertquery) |   [AlertsInfo](alert.md#alertsinfo) |
+| [**stat**](alert.md#stat)|   [AlertStatQuery](alert.md#alertstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
  

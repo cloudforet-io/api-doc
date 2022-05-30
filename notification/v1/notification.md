@@ -13,76 +13,16 @@ desc: Notification service Methods
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Create a new Notification.When a notification is created,it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set,the notification is also propagated to the user. |
-| [**push**](notification.md#push)|   [PushNotificationRequest](notification.md#pushnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Push a new Notification directly. |
-| [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete the Notification. |
-| [**delete_all**](notification.md#delete_all)|   [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user. |
-| [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Change the notifications to read status. |
-| [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) | Gets a single Notification. |
-| [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) | Lists the specified notifications. |
-| [**stat**](notification.md#stat)|   [NotificationStatQuery](notification.md#notificationstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateNotificationRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Create a new Notification.When a notification is created,it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set,the notification is also propagated to the user.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">push</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   PushNotificationRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Push a new Notification directly.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Delete the Notification.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete_all</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationDeleteAllRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">set_read</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SetReadNotificationRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Change the notifications to read status.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetNotificationRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Gets a single Notification.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationsInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Lists the specified notifications.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationStatQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr></tbody>
-</table> 
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
+| [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**push**](notification.md#push)|   [PushNotificationRequest](notification.md#pushnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**delete_all**](notification.md#delete_all)|   [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) |
+| [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) |
+| [**stat**](notification.md#stat)|   [NotificationStatQuery](notification.md#notificationstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
  
@@ -192,7 +132,7 @@ desc: Notification service Methods
 > **POST** /notification/v1/notification/delete_all
 >
 
-> Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user.
+> Delete all Notifications.
 
 | Type | Message |
 | :--- | :--- |

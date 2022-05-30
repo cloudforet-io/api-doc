@@ -13,132 +13,24 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](collector.md#create)|   [CreateCollectorRequest](collector.md#createcollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| [**update**](collector.md#update)|   [UpdateCollectorRequest](collector.md#updatecollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| [**update_plugin**](collector.md#update_plugin)|   [UpdatePluginRequest](collector.md#updatepluginrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| [**verify_plugin**](collector.md#verify_plugin)|   [VerifyPluginRequest](collector.md#verifypluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**delete**](collector.md#delete)|   [CollectorRequest](collector.md#collectorrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**get**](collector.md#get)|   [GetCollectorRequest](collector.md#getcollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| [**enable**](collector.md#enable)|   [CollectorRequest](collector.md#collectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| [**disable**](collector.md#disable)|   [CollectorRequest](collector.md#collectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
-| [**list**](collector.md#list)|   [CollectorQuery](collector.md#collectorquery) |   [CollectorsInfo](collector.md#collectorsinfo) |  |
-| [**stat**](collector.md#stat)|   [CollectorStatQuery](collector.md#collectorstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) |   [JobInfo](collector.md#jobinfo) |  |
-| [**add_schedule**](collector.md#add_schedule)|   [CreateScheduleRequest](collector.md#createschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
-| [**get_schedule**](collector.md#get_schedule)|   [ScheduleRequest](collector.md#schedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
-| [**update_schedule**](collector.md#update_schedule)|   [UpdateScheduleRequest](collector.md#updateschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
-| [**delete_schedule**](collector.md#delete_schedule)|   [DeleteScheduleRequest](collector.md#deleteschedulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**list_schedules**](collector.md#list_schedules)|   [ScheduleQuery](collector.md#schedulequery) |   [SchedulesInfo](collector.md#schedulesinfo) |  |TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateCollectorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateCollectorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update_plugin</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdatePluginRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">verify_plugin</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   VerifyPluginRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetCollectorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">enable</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">disable</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorsInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectorStatQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">collect</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CollectRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   JobInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">add_schedule</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateScheduleRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ScheduleInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get_schedule</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ScheduleRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ScheduleInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update_schedule</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateScheduleRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ScheduleInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete_schedule</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DeleteScheduleRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list_schedules</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ScheduleQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SchedulesInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr></tbody>
-</table> 
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
+| [**create**](collector.md#create)|   [CreateCollectorRequest](collector.md#createcollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |
+| [**update**](collector.md#update)|   [UpdateCollectorRequest](collector.md#updatecollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |
+| [**update_plugin**](collector.md#update_plugin)|   [UpdatePluginRequest](collector.md#updatepluginrequest) |   [CollectorInfo](collector.md#collectorinfo) |
+| [**verify_plugin**](collector.md#verify_plugin)|   [VerifyPluginRequest](collector.md#verifypluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**delete**](collector.md#delete)|   [CollectorRequest](collector.md#collectorrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](collector.md#get)|   [GetCollectorRequest](collector.md#getcollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |
+| [**enable**](collector.md#enable)|   [CollectorRequest](collector.md#collectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |
+| [**disable**](collector.md#disable)|   [CollectorRequest](collector.md#collectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |
+| [**list**](collector.md#list)|   [CollectorQuery](collector.md#collectorquery) |   [CollectorsInfo](collector.md#collectorsinfo) |
+| [**stat**](collector.md#stat)|   [CollectorStatQuery](collector.md#collectorstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|
+| [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) |   [JobInfo](collector.md#jobinfo) |
+| [**add_schedule**](collector.md#add_schedule)|   [CreateScheduleRequest](collector.md#createschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |
+| [**get_schedule**](collector.md#get_schedule)|   [ScheduleRequest](collector.md#schedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |
+| [**update_schedule**](collector.md#update_schedule)|   [UpdateScheduleRequest](collector.md#updateschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |
+| [**delete_schedule**](collector.md#delete_schedule)|   [DeleteScheduleRequest](collector.md#deleteschedulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**list_schedules**](collector.md#list_schedules)|   [ScheduleQuery](collector.md#schedulequery) |   [SchedulesInfo](collector.md#schedulesinfo) | 
  
 
  

@@ -13,69 +13,15 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](data-source-rule.md#create)|   [CreateDataSourceRuleRequest](data-source-rule.md#createdatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |  |
-| [**update**](data-source-rule.md#update)|   [UpdateDataSourceRuleRequest](data-source-rule.md#updatedatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |  |
-| [**change_order**](data-source-rule.md#change_order)|   [ChangeDataSourceRuleOrderRequest](data-source-rule.md#changedatasourceruleorderrequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |  |
-| [**delete**](data-source-rule.md#delete)|   [DataSourceRuleRequest](data-source-rule.md#datasourcerulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**get**](data-source-rule.md#get)|   [GetDataSourceRuleRequest](data-source-rule.md#getdatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |  |
-| [**list**](data-source-rule.md#list)|   [DataSourceRuleQuery](data-source-rule.md#datasourcerulequery) |   [DataSourceRulesInfo](data-source-rule.md#datasourcerulesinfo) |  |
-| [**stat**](data-source-rule.md#stat)|   [DataSourceRuleStatQuery](data-source-rule.md#datasourcerulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateDataSourceRuleRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DataSourceRuleInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateDataSourceRuleRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DataSourceRuleInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">change_order</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ChangeDataSourceRuleOrderRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DataSourceRuleInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DataSourceRuleRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetDataSourceRuleRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DataSourceRuleInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DataSourceRuleQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DataSourceRulesInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   DataSourceRuleStatQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr></tbody>
-</table> 
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
+| [**create**](data-source-rule.md#create)|   [CreateDataSourceRuleRequest](data-source-rule.md#createdatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |
+| [**update**](data-source-rule.md#update)|   [UpdateDataSourceRuleRequest](data-source-rule.md#updatedatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |
+| [**change_order**](data-source-rule.md#change_order)|   [ChangeDataSourceRuleOrderRequest](data-source-rule.md#changedatasourceruleorderrequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |
+| [**delete**](data-source-rule.md#delete)|   [DataSourceRuleRequest](data-source-rule.md#datasourcerulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](data-source-rule.md#get)|   [GetDataSourceRuleRequest](data-source-rule.md#getdatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |
+| [**list**](data-source-rule.md#list)|   [DataSourceRuleQuery](data-source-rule.md#datasourcerulequery) |   [DataSourceRulesInfo](data-source-rule.md#datasourcerulesinfo) |
+| [**stat**](data-source-rule.md#stat)|   [DataSourceRuleStatQuery](data-source-rule.md#datasourcerulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
  

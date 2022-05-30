@@ -13,83 +13,17 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](protocol.md#create)|   [CreateProtocolRequest](protocol.md#createprotocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) | Creates a new Protocol.Protocol is the definition of which method to use when dispatching the Notifications through a Channel.When creating a protocol, you must specify the plugins provided from the repository, and you must also set the credentials to be set in the plugin if necessary. |
-| [**update**](protocol.md#update)|   [UpdateProtocolRequest](protocol.md#updateprotocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) | Updates a Protocol information.Update methods can update name, tags only. If you want to update plugin version or options, you can use update_plugin method. |
-| [**update_plugin**](protocol.md#update_plugin)|   [UpdateProtocolPluginRequest](protocol.md#updateprotocolpluginrequest) |   [ProtocolInfo](protocol.md#protocolinfo) | Updates a plugin for Protocol.This method is usually used when redeploying a deployed plugin container to a new version. |
-| [**enable**](protocol.md#enable)|   [ProtocolRequest](protocol.md#protocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) | Enables a Protocol.If the disabled Protocol is enabled, the Protocol can be used again and the notification can be dispatched. |
-| [**disable**](protocol.md#disable)|   [ProtocolRequest](protocol.md#protocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) | Disables a Protocol.If you disable the Protocol, the notification will not be dispatched, even if they are created. |
-| [**delete**](protocol.md#delete)|   [ProtocolRequest](protocol.md#protocolrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete the protocol.If there is even one channel using the protocol, it cannot be deleted. |
-| [**get**](protocol.md#get)|   [GetProtocolRequest](protocol.md#getprotocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) | Gets a single Protocol. |
-| [**list**](protocol.md#list)|   [ProtocolQuery](protocol.md#protocolquery) |   [ProtocolsInfo](protocol.md#protocolsinfo) | Lists the specified Protocols.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. |
-| [**stat**](protocol.md#stat)|   [ProtocolStatQuery](protocol.md#protocolstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateProtocolRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Creates a new Protocol.Protocol is the definition of which method to use when dispatching the Notifications through a Channel.When creating a protocol, you must specify the plugins provided from the repository, and you must also set the credentials to be set in the plugin if necessary.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateProtocolRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Updates a Protocol information.Update methods can update name, tags only. If you want to update plugin version or options, you can use update_plugin method.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update_plugin</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateProtocolPluginRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Updates a plugin for Protocol.This method is usually used when redeploying a deployed plugin container to a new version.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">enable</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Enables a Protocol.If the disabled Protocol is enabled, the Protocol can be used again and the notification can be dispatched.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">disable</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Disables a Protocol.If you disable the Protocol, the notification will not be dispatched, even if they are created.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Delete the protocol.If there is even one channel using the protocol, it cannot be deleted.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetProtocolRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Gets a single Protocol.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolsInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Lists the specified Protocols.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.</td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolStatQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr></tbody>
-</table> 
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
+| [**create**](protocol.md#create)|   [CreateProtocolRequest](protocol.md#createprotocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) |
+| [**update**](protocol.md#update)|   [UpdateProtocolRequest](protocol.md#updateprotocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) |
+| [**update_plugin**](protocol.md#update_plugin)|   [UpdateProtocolPluginRequest](protocol.md#updateprotocolpluginrequest) |   [ProtocolInfo](protocol.md#protocolinfo) |
+| [**enable**](protocol.md#enable)|   [ProtocolRequest](protocol.md#protocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) |
+| [**disable**](protocol.md#disable)|   [ProtocolRequest](protocol.md#protocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) |
+| [**delete**](protocol.md#delete)|   [ProtocolRequest](protocol.md#protocolrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](protocol.md#get)|   [GetProtocolRequest](protocol.md#getprotocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) |
+| [**list**](protocol.md#list)|   [ProtocolQuery](protocol.md#protocolquery) |   [ProtocolsInfo](protocol.md#protocolsinfo) |
+| [**stat**](protocol.md#stat)|   [ProtocolStatQuery](protocol.md#protocolstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
  

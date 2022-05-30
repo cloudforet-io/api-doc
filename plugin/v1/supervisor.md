@@ -13,97 +13,19 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
-| [**publish**](supervisor.md#publish)|   [PublishSupervisorRequest](supervisor.md#publishsupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| [**register**](supervisor.md#register)|   [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| [**update**](supervisor.md#update)|   [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| [**deregister**](supervisor.md#deregister)|   [SupervisorRequest](supervisor.md#supervisorrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**enable**](supervisor.md#enable)|   [SupervisorRequest](supervisor.md#supervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| [**disable**](supervisor.md#disable)|   [SupervisorRequest](supervisor.md#supervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| [**recover_plugin**](supervisor.md#recover_plugin)|   [RecoverPluginRequest](supervisor.md#recoverpluginrequest) |   [PluginInfo](supervisor.md#plugininfo) |  |
-| [**get**](supervisor.md#get)|   [GetSupervisorRequest](supervisor.md#getsupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
-| [**list**](supervisor.md#list)|   [SupervisorQuery](supervisor.md#supervisorquery) |   [SupervisorsInfo](supervisor.md#supervisorsinfo) |  |
-| [**stat**](supervisor.md#stat)|   [SupervisorStatQuery](supervisor.md#supervisorstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| [**list_plugins**](supervisor.md#list_plugins)|   [PluginQuery](supervisor.md#pluginquery) |   [PluginsInfo](supervisor.md#pluginsinfo) |  |TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">publish</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   PublishSupervisorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">register</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegisterSupervisorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegisterSupervisorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">deregister</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">enable</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">disable</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">recover_plugin</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RecoverPluginRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   PluginInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetSupervisorRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorsInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SupervisorStatQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list_plugins</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   PluginQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   PluginsInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr></tbody>
-</table> 
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
+| [**publish**](supervisor.md#publish)|   [PublishSupervisorRequest](supervisor.md#publishsupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |
+| [**register**](supervisor.md#register)|   [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |
+| [**update**](supervisor.md#update)|   [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |
+| [**deregister**](supervisor.md#deregister)|   [SupervisorRequest](supervisor.md#supervisorrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**enable**](supervisor.md#enable)|   [SupervisorRequest](supervisor.md#supervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |
+| [**disable**](supervisor.md#disable)|   [SupervisorRequest](supervisor.md#supervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |
+| [**recover_plugin**](supervisor.md#recover_plugin)|   [RecoverPluginRequest](supervisor.md#recoverpluginrequest) |   [PluginInfo](supervisor.md#plugininfo) |
+| [**get**](supervisor.md#get)|   [GetSupervisorRequest](supervisor.md#getsupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |
+| [**list**](supervisor.md#list)|   [SupervisorQuery](supervisor.md#supervisorquery) |   [SupervisorsInfo](supervisor.md#supervisorsinfo) |
+| [**stat**](supervisor.md#stat)|   [SupervisorStatQuery](supervisor.md#supervisorstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|
+| [**list_plugins**](supervisor.md#list_plugins)|   [PluginQuery](supervisor.md#pluginquery) |   [PluginsInfo](supervisor.md#pluginsinfo) | 
  
 
  

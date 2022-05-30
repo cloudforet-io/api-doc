@@ -13,76 +13,16 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](secret-group.md#create)|   [CreateSecretGroupRequest](secret-group.md#createsecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
-| [**update**](secret-group.md#update)|   [UpdateSecretGroupRequest](secret-group.md#updatesecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
-| [**add_secret**](secret-group.md#add_secret)|   [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |   [SecretGroupSecretInfo](secret-group.md#secretgroupsecretinfo) |  |
-| [**remove_secret**](secret-group.md#remove_secret)|   [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**delete**](secret-group.md#delete)|   [SecretGroupRequest](secret-group.md#secretgrouprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**get**](secret-group.md#get)|   [GetSecretGroupRequest](secret-group.md#getsecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
-| [**list**](secret-group.md#list)|   [SecretGroupQuery](secret-group.md#secretgroupquery) |   [SecretGroupsInfo](secret-group.md#secretgroupsinfo) |  |
-| [**stat**](secret-group.md#stat)|   [SecretGroupStatQuery](secret-group.md#secretgroupstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateSecretGroupRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateSecretGroupRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">add_secret</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupSecretRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupSecretInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">remove_secret</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupSecretRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetSecretGroupRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupsInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SecretGroupStatQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr></tbody>
-</table> 
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
+| [**create**](secret-group.md#create)|   [CreateSecretGroupRequest](secret-group.md#createsecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |
+| [**update**](secret-group.md#update)|   [UpdateSecretGroupRequest](secret-group.md#updatesecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |
+| [**add_secret**](secret-group.md#add_secret)|   [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |   [SecretGroupSecretInfo](secret-group.md#secretgroupsecretinfo) |
+| [**remove_secret**](secret-group.md#remove_secret)|   [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**delete**](secret-group.md#delete)|   [SecretGroupRequest](secret-group.md#secretgrouprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](secret-group.md#get)|   [GetSecretGroupRequest](secret-group.md#getsecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |
+| [**list**](secret-group.md#list)|   [SecretGroupQuery](secret-group.md#secretgroupquery) |   [SecretGroupsInfo](secret-group.md#secretgroupsinfo) |
+| [**stat**](secret-group.md#stat)|   [SecretGroupStatQuery](secret-group.md#secretgroupstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
  

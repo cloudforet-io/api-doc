@@ -13,62 +13,14 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](maintenance-window.md#create)|   [CreateMaintenanceWindowRequest](maintenance-window.md#createmaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |  |
-| [**update**](maintenance-window.md#update)|   [UpdateMaintenanceWindowRequest](maintenance-window.md#updatemaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |  |
-| [**close**](maintenance-window.md#close)|   [MaintenanceWindowRequest](maintenance-window.md#maintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |  |
-| [**get**](maintenance-window.md#get)|   [GetMaintenanceWindowRequest](maintenance-window.md#getmaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |  |
-| [**list**](maintenance-window.md#list)|   [MaintenanceWindowQuery](maintenance-window.md#maintenancewindowquery) |   [MaintenanceWindowsInfo](maintenance-window.md#maintenancewindowsinfo) |  |
-| [**stat**](maintenance-window.md#stat)|   [MaintenanceWindowStatQuery](maintenance-window.md#maintenancewindowstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateMaintenanceWindowRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MaintenanceWindowInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateMaintenanceWindowRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MaintenanceWindowInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">close</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MaintenanceWindowRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MaintenanceWindowInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetMaintenanceWindowRequest </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MaintenanceWindowInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MaintenanceWindowQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MaintenanceWindowsInfo </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   MaintenanceWindowStatQuery </td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
-    </tr></tbody>
-</table> 
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
+| [**create**](maintenance-window.md#create)|   [CreateMaintenanceWindowRequest](maintenance-window.md#createmaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |
+| [**update**](maintenance-window.md#update)|   [UpdateMaintenanceWindowRequest](maintenance-window.md#updatemaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |
+| [**close**](maintenance-window.md#close)|   [MaintenanceWindowRequest](maintenance-window.md#maintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |
+| [**get**](maintenance-window.md#get)|   [GetMaintenanceWindowRequest](maintenance-window.md#getmaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |
+| [**list**](maintenance-window.md#list)|   [MaintenanceWindowQuery](maintenance-window.md#maintenancewindowquery) |   [MaintenanceWindowsInfo](maintenance-window.md#maintenancewindowsinfo) |
+| [**stat**](maintenance-window.md#stat)|   [MaintenanceWindowStatQuery](maintenance-window.md#maintenancewindowstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
  
