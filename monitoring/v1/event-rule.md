@@ -8,8 +8,8 @@ description:
 ## EventRule
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**EventRule Methods:**
+
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description:
 ## History
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**History Methods:**
+
 {%  endhint %}
 
 

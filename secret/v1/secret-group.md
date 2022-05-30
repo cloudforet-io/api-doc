@@ -8,8 +8,8 @@ description:
 ## SecretGroup
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**SecretGroup Methods:**
+
 {%  endhint %}
 
 

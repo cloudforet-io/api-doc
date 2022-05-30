@@ -8,8 +8,8 @@ description:
 ## Board
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Board Methods:**
+
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description: User API which allows member management within project, company, an
 ## User
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**User Methods:**
+
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description:
 ## Protocol
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Protocol Methods:**
+
 {%  endhint %}
 
 

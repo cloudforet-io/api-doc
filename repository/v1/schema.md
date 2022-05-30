@@ -8,8 +8,8 @@ description:
 ## Schema
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Schema Methods:**
+
 {%  endhint %}
 
 

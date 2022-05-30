@@ -8,8 +8,8 @@ description:
 ## Webhook
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Webhook Methods:**
+
 {%  endhint %}
 
 

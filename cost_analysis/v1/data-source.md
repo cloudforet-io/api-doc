@@ -8,8 +8,8 @@ description:
 ## DataSource
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**DataSource Methods:**
+
 {%  endhint %}
 
 

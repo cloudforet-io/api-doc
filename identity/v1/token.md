@@ -8,8 +8,8 @@ description:
 ## Token
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Token Methods:**
+
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description:
 ## Alert
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Alert Methods:**
+
 {%  endhint %}
 
 

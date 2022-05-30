@@ -8,8 +8,8 @@ description:
 ## Collector
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Collector Methods:**
+
 {%  endhint %}
 
 

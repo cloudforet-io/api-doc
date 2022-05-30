@@ -8,8 +8,8 @@ description: UserConfig API which configure environments for user
 ## UserConfig
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**UserConfig Methods:**
+
 {%  endhint %}
 
 

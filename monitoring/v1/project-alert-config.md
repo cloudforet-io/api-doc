@@ -8,8 +8,8 @@ description:
 ## ProjectAlertConfig
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**ProjectAlertConfig Methods:**
+
 {%  endhint %}
 
 

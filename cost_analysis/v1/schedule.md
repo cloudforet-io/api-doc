@@ -8,8 +8,8 @@ description:
 ## Schedule
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Schedule Methods:**
+
 {%  endhint %}
 
 

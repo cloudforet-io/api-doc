@@ -8,8 +8,8 @@ description:
 ## Repository
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Repository Methods:**
+
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description:
 ## Notification
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Notification Methods:**
+
 {%  endhint %}
 
 

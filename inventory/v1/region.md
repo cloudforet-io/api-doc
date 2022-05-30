@@ -8,8 +8,8 @@ description:
 ## Region
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Region Methods:**
+
 {%  endhint %}
 
 

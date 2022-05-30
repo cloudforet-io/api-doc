@@ -8,8 +8,8 @@ description:
 ## SpotGroup
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**SpotGroup Methods:**
+
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description:
 ## APIKey
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**APIKey Methods:**
+
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description:
 ## UserDashboard
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**UserDashboard Methods:**
+
 {%  endhint %}
 
 

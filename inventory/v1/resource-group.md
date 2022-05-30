@@ -8,8 +8,8 @@ description:
 ## ResourceGroup
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**ResourceGroup Methods:**
+
 {%  endhint %}
 
 

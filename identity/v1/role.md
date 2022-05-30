@@ -8,8 +8,8 @@ description:
 ## Role
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Role Methods:**
+
 {%  endhint %}
 
 

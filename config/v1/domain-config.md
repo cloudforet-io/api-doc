@@ -8,8 +8,8 @@ description: DomainConfig API which configure environments for domain
 ## DomainConfig
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**DomainConfig Methods:**
+
 {%  endhint %}
 
 

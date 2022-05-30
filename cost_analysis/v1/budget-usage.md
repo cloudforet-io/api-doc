@@ -8,8 +8,8 @@ description:
 ## BudgetUsage
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**BudgetUsage Methods:**
+
 {%  endhint %}
 
 

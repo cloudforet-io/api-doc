@@ -8,8 +8,8 @@ description:
 ## UserChannel
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**UserChannel Methods:**
+
 {%  endhint %}
 
 

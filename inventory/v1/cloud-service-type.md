@@ -8,8 +8,8 @@ description:
 ## CloudServiceType
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**CloudServiceType Methods:**
+
 {%  endhint %}
 
 

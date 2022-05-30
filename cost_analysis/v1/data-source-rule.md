@@ -8,8 +8,8 @@ description:
 ## DataSourceRule
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**DataSourceRule Methods:**
+
 {%  endhint %}
 
 

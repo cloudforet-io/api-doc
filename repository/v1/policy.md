@@ -8,8 +8,8 @@ description:
 ## Policy
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Policy Methods:**
+
 {%  endhint %}
 
 

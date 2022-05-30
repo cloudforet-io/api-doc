@@ -1,5 +1,5 @@
 ---
-description:  
+description: Notification is a service that delivers event information generated in SpaceONE to a project or user.Protocol is the definition of “in what way” when Notification is delivered through Channel. The created protocol delivers Notification to Project or User through Channel.Notification propagation is not possible with the protocol itself, and must be delivered by setting a channel.Channel is largely divided into Project Channel and User Channel.
 ---
 # Notification
 
@@ -8,8 +8,8 @@ description:
 ## Notification
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Notification Methods:**
+
 {%  endhint %}
 
 
@@ -30,32 +30,11 @@ description:
 > **POST** /notification/v1/notifications
 >
 
-> Create a new Notification.When a notification is created,it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set,the notification is also propagated to the user.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateNotificationRequest](notification.md#createnotificationrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
-{% tabs %}
-{% tab title="Request Example" %}
-```text
-{
-    "domain_id": "xxxx-aws-abcd",
-    "tags": {
-        "env": "dev"
-    }
-}
-```
-{% endtab %}
-
-{% tab title="Response Example" %}
-```text
-{
-    "domain_id": "xxxx-aws-abcd"
-}
-```
-{% endtab %}
-{% endtabs %}
  
  
 

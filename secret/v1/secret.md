@@ -8,8 +8,8 @@ description:
 ## Secret
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Secret Methods:**
+
 {%  endhint %}
 
 

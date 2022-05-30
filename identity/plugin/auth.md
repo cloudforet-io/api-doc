@@ -8,8 +8,8 @@ description:
 ## Auth
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Auth Methods:**
+
 {%  endhint %}
 
 

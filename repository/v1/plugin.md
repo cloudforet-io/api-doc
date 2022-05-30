@@ -8,8 +8,8 @@ description:
 ## Plugin
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Plugin Methods:**
+
 {%  endhint %}
 
 

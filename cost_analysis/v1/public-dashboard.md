@@ -8,8 +8,8 @@ description:
 ## PublicDashboard
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**PublicDashboard Methods:**
+
 {%  endhint %}
 
 

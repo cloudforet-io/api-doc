@@ -8,8 +8,8 @@ description:
 ## CostQuerySet
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**CostQuerySet Methods:**
+
 {%  endhint %}
 
 

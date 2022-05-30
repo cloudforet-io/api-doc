@@ -8,8 +8,8 @@ description:
 ## DomainOwner
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**DomainOwner Methods:**
+
 {%  endhint %}
 
 

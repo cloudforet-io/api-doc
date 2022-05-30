@@ -8,8 +8,8 @@ description:
 ## Post
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Post Methods:**
+
 {%  endhint %}
 
 

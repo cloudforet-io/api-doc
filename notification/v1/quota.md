@@ -8,8 +8,8 @@ description:
 ## Quota
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Quota Methods:**
+
 {%  endhint %}
 
 

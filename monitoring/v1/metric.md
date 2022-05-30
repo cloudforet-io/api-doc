@@ -8,8 +8,8 @@ description:
 ## Metric
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Metric Methods:**
+
 {%  endhint %}
 
 

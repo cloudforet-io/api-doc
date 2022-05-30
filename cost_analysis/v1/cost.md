@@ -8,8 +8,8 @@ description:
 ## Cost
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Cost Methods:**
+
 {%  endhint %}
 
 

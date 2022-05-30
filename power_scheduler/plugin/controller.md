@@ -8,8 +8,8 @@ description:
 ## Controller
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Controller Methods:**
+
 {%  endhint %}
 
 

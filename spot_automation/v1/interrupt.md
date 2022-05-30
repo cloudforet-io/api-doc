@@ -8,8 +8,8 @@ description:
 ## Interrupt
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Interrupt Methods:**
+
 {%  endhint %}
 
 

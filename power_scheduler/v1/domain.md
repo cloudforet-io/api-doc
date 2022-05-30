@@ -8,8 +8,8 @@ description:
 ## Domain
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Domain Methods:**
+
 {%  endhint %}
 
 

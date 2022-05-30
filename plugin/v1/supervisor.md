@@ -8,8 +8,8 @@ description:
 ## Supervisor
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Supervisor Methods:**
+
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description:
 ## ProjectChannel
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**ProjectChannel Methods:**
+
 {%  endhint %}
 
 

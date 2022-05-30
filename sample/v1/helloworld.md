@@ -8,8 +8,8 @@ description:
 ## HelloWorld
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**HelloWorld Methods:**
+desc: The greeting service definition.
 {%  endhint %}
 
 

@@ -8,8 +8,8 @@ description:
 ## Storage
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Storage Methods:**
+
 {%  endhint %}
 
 

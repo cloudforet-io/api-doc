@@ -8,8 +8,8 @@ description:
 ## ProjectGroup
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**ProjectGroup Methods:**
+
 {%  endhint %}
 
 

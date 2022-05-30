@@ -8,8 +8,8 @@ description:
 ## Billing
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Billing Methods:**
+
 {%  endhint %}
 
 

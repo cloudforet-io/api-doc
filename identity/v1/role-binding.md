@@ -8,8 +8,8 @@ description:
 ## RoleBinding
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**RoleBinding Methods:**
+
 {%  endhint %}
 
 

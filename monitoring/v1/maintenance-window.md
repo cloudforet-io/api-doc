@@ -8,8 +8,8 @@ description:
 ## MaintenanceWindow
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**MaintenanceWindow Methods:**
+
 {%  endhint %}
 
 

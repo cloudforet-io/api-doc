@@ -8,8 +8,8 @@ description:
 ## ExchangeRate
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**ExchangeRate Methods:**
+
 {%  endhint %}
 
 

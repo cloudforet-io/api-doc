@@ -8,8 +8,8 @@ description:
 ## Project
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Project Methods:**
+
 {%  endhint %}
 
 

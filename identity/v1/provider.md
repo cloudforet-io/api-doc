@@ -8,8 +8,8 @@ description:
 ## Provider
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**Provider Methods:**
+
 {%  endhint %}
 
 

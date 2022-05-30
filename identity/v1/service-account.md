@@ -8,8 +8,8 @@ description:
 ## ServiceAccount
 
 {% hint style="info" %}
-**{{ service.name }} Methods:**
-{{ service.description }}
+**ServiceAccount Methods:**
+
 {%  endhint %}
 
 
