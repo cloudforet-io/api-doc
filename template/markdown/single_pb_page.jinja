@@ -28,34 +28,11 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
 {% raw %}{%  endhint %}{% endraw %}
 
 {% if service.methods is defined %}
-| Method | Request | Response | Description |
-| :-----: | :--------: | :--------: | :-------------------- |
+| Method | Request | Response |
+| :-----: | :--------: | :--------: |
 {%- for method in service.methods %}
-| [**{{ method.name }}**]({{file_info.full_name_lower}}#{{method.name}})|{% if method.requestStreaming == true %} **`stream`** {% endif %} {% if method.req_link is defined %}  [{{ method.requestLongType }}]({{method.req_link}}) {% elif method.requestFullType_link is defined %}[{{ method.requestFullType }}]({{method.requestFullType_link}}){% else %}{{ method.requestLongType }}{% endif %}|{% if method.responseStreaming == true %} **`stream`** {%- endif %}  {% if method.res_link is defined %} [{{ method.responseLongType }}]({{method.res_link}}) {% elif method.responseFullType_link is defined %}[{{ method.responseFullType }}]({{method.responseFullType_link}}){% else %}{{ method.responseLongType }}{% endif %}| {{ method.description.desc }} |
+| [**{{ method.name }}**]({{file_info.full_name_lower}}#{{method.name}})|{% if method.requestStreaming == true %} **`stream`** {% endif %} {% if method.req_link is defined %}  [{{ method.requestLongType }}]({{method.req_link}}) {% elif method.requestFullType_link is defined %}[{{ method.requestFullType }}]({{method.requestFullType_link}}){% else %}{{ method.requestLongType }}{% endif %}|{% if method.responseStreaming == true %} **`stream`** {%- endif %}  {% if method.res_link is defined %} [{{ method.responseLongType }}]({{method.res_link}}) {% elif method.responseFullType_link is defined %}[{{ method.responseFullType }}]({{method.responseFullType_link}}){% else %}{{ method.responseLongType }}{% endif %}|
 {%- endfor -%}
-
-TEST
-
-<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
-    <thead>
-    <tr>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
-      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    {%- for method in service.methods %}
-    <tr>
-      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">{{ method.name }}</th>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">{% if method.requestStreaming == true %} **`stream`** {% endif %} {% if method.req_link is defined %}  {{ method.requestLongType }} {% elif method.requestFullType_link is defined %} {{ method.requestFullType }} {% else %} {{ method.requestLongType }} {% endif %}</td>
-      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">{% if method.responseStreaming == true %} **`stream`** {%- endif %}  {% if method.res_link is defined %} {{ method.responseLongType }} {% elif method.responseFullType_link is defined %} {{ method.responseFullType }} {% else %} {{ method.responseLongType }} {% endif %}</td>
-      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">{{ method.description.desc }}</td>
-    </tr>
-    {%- endfor -%}
-    </tbody>
-</table>
 {%- for method in service.methods -%}
 
 {{title_space}}
