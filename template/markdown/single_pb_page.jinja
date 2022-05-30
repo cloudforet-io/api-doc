@@ -19,8 +19,13 @@ description: {%- if (value.desc is defined) %} {{value.desc}} {%- else %} {{valu
 ## {{service.name}}
 
 {% raw %}{% hint style="info" %}{% endraw %}
-{% raw %}**{{ service.name }} Methods:**{% endraw %}
-{% raw %}{{ service.description }}{% endraw %}
+**{{ service.name }} Methods:**
+{%- if (service.description.desc is defined) %}
+
+{{service.description.desc}}
+{%- else %}
+{{ service.description }}
+{%- endif %}
 {% raw %}{%  endhint %}{% endraw %}
 
 {% if service.methods is defined %}
