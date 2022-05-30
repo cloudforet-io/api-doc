@@ -8,8 +8,8 @@ description:
 ## Job
 
 {% hint style="info" %}
-**Job Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -175,8 +175,8 @@ description:
 ### JobStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### JobsInfo
 | Field | Type |  Description |
@@ -198,13 +198,13 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">job_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -218,13 +218,13 @@ description:
           	<li>ERROR</li>
           	<li>TIMEOUT</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">schedule_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -234,19 +234,19 @@ description:
           	<li>RUNNING</li>
           	<li>STOPPED</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -256,7 +256,7 @@ description:
           	<li>APPLY</li>
           	<li>MAINTAIN</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>

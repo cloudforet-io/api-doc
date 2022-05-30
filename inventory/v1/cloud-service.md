@@ -8,8 +8,8 @@ description:
 ## CloudService
 
 {% hint style="info" %}
-**CloudService Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -148,20 +148,20 @@ description:
 ### CloudServiceQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| cloud_service_id |string|❌| |
-| name |string|❌| |
-| state |string|❌| |
-| account |string|❌| |
-| instance_type |string|❌| |
-| cloud_service_type |string|❌| |
-| cloud_service_group |string|❌| |
-| provider |string|❌| |
-| region_code |string|❌| |
-| resource_group_id |string|❌| |
-| project_id |string|❌| |
-| project_group_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| cloud_service_id |string|✘| |
+| name |string|✘| |
+| state |string|✘| |
+| account |string|✘| |
+| instance_type |string|✘| |
+| cloud_service_type |string|✘| |
+| cloud_service_group |string|✘| |
+| provider |string|✘| |
+| region_code |string|✘| |
+| resource_group_id |string|✘| |
+| project_id |string|✘| |
+| project_group_id |string|✘| |
+| domain_id |string|✔| |
 
 ### CloudServiceReference
 | Field | Type |  Description |
@@ -172,15 +172,15 @@ description:
 ### CloudServiceRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cloud_service_id |string|✅| |
-| domain_id |string|✅| |
+| cloud_service_id |string|✔| |
+| domain_id |string|✔| |
 
 ### CloudServiceStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
-| resource_group_id |string|❌| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
+| resource_group_id |string|✘| |
 
 ### CloudServicesInfo
 | Field | Type |  Description |
@@ -191,51 +191,51 @@ description:
 ### CreateServiceRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cloud_service_type |string|✅| |
-| provider |string|✅| |
-| cloud_service_group |string|✅| |
-| name |string|❌| |
-| account |string|❌| |
-| instance_type |string|❌| |
-| instance_size |float|❌| |
-| launched_at |string|❌| |
-| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| region_code |string|❌| |
-| project_id |string|❌| |
-| domain_id |string|✅| |
+| cloud_service_type |string|✔| |
+| provider |string|✔| |
+| cloud_service_group |string|✔| |
+| name |string|✘| |
+| account |string|✘| |
+| instance_type |string|✘| |
+| instance_size |float|✘| |
+| launched_at |string|✘| |
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| region_code |string|✘| |
+| project_id |string|✘| |
+| domain_id |string|✔| |
 
 ### GetCloudServiceRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cloud_service_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| cloud_service_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### PinCloudServiceDataRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cloud_service_id |string|✅| |
-| keys |list of string|✅| |
-| domain_id |string|✅| |
+| cloud_service_id |string|✔| |
+| keys |list of string|✔| |
+| domain_id |string|✔| |
 
 ### UpdateCloudServiceRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cloud_service_id |string|✅| |
-| name |string|❌| |
-| account |string|❌| |
-| instance_type |string|❌| |
-| instance_size |float|❌| |
-| launched_at |string|❌| |
-| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| region_code |string|❌| |
-| project_id |string|❌| |
-| domain_id |string|✅| |
-| release_project |bool|❌| |
-| release_region |bool|❌| |
+| cloud_service_id |string|✔| |
+| name |string|✘| |
+| account |string|✘| |
+| instance_type |string|✘| |
+| instance_size |float|✘| |
+| launched_at |string|✘| |
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| region_code |string|✘| |
+| project_id |string|✘| |
+| domain_id |string|✔| |
+| release_project |bool|✘| |
+| release_region |bool|✘| |

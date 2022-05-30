@@ -8,8 +8,8 @@ description:
 ## Protocol
 
 {% hint style="info" %}
-**Protocol Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -49,7 +49,7 @@ description:
 ### InitRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| Option value used when initializing the plugin.|
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| Option value used when initializing the plugin.|
 
 ### PluginInfo
 | Field | Type |  Description |
@@ -59,5 +59,5 @@ description:
 ### PluginVerifyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| Option values required for the plugin to work.|
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| The secret value required for the plugin to work.The secret data usually includes the credential information required for the plugin to access the external system.|
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| Option values required for the plugin to work.|
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| The secret value required for the plugin to work.The secret data usually includes the credential information required for the plugin to access the external system.|

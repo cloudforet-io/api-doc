@@ -8,8 +8,8 @@ description:
 ## CostQuerySet
 
 {% hint style="info" %}
-**CostQuerySet Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -121,23 +121,23 @@ description:
 ### CostQuerySetQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| cost_query_set_id |string|❌| |
-| name |string|❌| |
-| user_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| cost_query_set_id |string|✘| |
+| name |string|✘| |
+| user_id |string|✘| |
+| domain_id |string|✔| |
 
 ### CostQuerySetRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cost_query_set_id |string|✅| |
-| domain_id |string|✅| |
+| cost_query_set_id |string|✔| |
+| domain_id |string|✔| |
 
 ### CostQuerySetStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### CostQuerySetsInfo
 | Field | Type |  Description |
@@ -148,23 +148,23 @@ description:
 ### CreateCostQuerySetRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetCostQuerySetRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cost_query_set_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| cost_query_set_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### UpdateCostQuerySetRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cost_query_set_id |string|✅| |
-| name |string|❌| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| cost_query_set_id |string|✔| |
+| name |string|✘| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

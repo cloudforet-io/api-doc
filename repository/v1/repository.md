@@ -8,8 +8,8 @@ description:
 ## Repository
 
 {% hint style="info" %}
-**Repository Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,19 +109,19 @@ description:
 ### CreateRepositoryRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| repository_type |string|✅| |
-| endpoint |string|❌| |
-| version |string|❌| |
-| secret_id |string|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| repository_type |string|✔| |
+| endpoint |string|✘| |
+| version |string|✘| |
+| secret_id |string|✘| |
+| domain_id |string|✔| |
 
 ### GetRepositoryRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| repository_id |string|✅| |
-| only |list of string|❌| |
-| domain_id |string|✅| |
+| repository_id |string|✔| |
+| only |list of string|✘| |
+| domain_id |string|✔| |
 
 ### RepositoriesInfo
 | Field | Type |  Description |
@@ -143,27 +143,27 @@ description:
 ### RepositoryQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| repository_id |string|❌| |
-| name |string|❌| |
-| repository_type |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| repository_id |string|✘| |
+| name |string|✘| |
+| repository_type |string|✘| |
+| domain_id |string|✔| |
 
 ### RepositoryRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| repository_id |string|✅| |
-| domain_id |string|✅| |
+| repository_id |string|✔| |
+| domain_id |string|✔| |
 
 ### RepositoryStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### UpdateRepositoryRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| repository_id |string|✅| |
-| name |string|❌| |
-| domain_id |string|✅| |
+| repository_id |string|✔| |
+| name |string|✘| |
+| domain_id |string|✔| |

@@ -8,8 +8,8 @@ description:
 ## Post
 
 {% hint style="info" %}
-**Post Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -123,21 +123,21 @@ description:
 ### CreatePostRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| category |string|❌| |
-| title |string|✅| |
-| contents |string|✅| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| writer |string|❌| |
-| domain_id |string|❌| |
+| board_id |string|✔| |
+| category |string|✘| |
+| title |string|✔| |
+| contents |string|✔| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| writer |string|✘| |
+| domain_id |string|✘| |
 
 ### GetPostRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| post_id |string|✅| |
-| only |list of string|❌| |
-| domain_id |string|❌| |
+| board_id |string|✔| |
+| post_id |string|✔| |
+| only |list of string|✘| |
+| domain_id |string|✘| |
 
 ### PostInfo
 <table>
@@ -238,26 +238,26 @@ description:
 ### PostQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| post_id |string|❌| |
-| category |string|❌| |
-| writer |string|❌| |
-| user_id |string|❌| |
-| domain_id |string|❌| |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| board_id |string|✔| |
+| post_id |string|✘| |
+| category |string|✘| |
+| writer |string|✘| |
+| user_id |string|✘| |
+| domain_id |string|✘| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
 
 ### PostRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| post_id |string|✅| |
-| domain_id |string|❌| |
+| board_id |string|✔| |
+| post_id |string|✔| |
+| domain_id |string|✘| |
 
 ### PostStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### PostsInfo
 | Field | Type |  Description |
@@ -268,18 +268,18 @@ description:
 ### SendNotificationRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| post_id |string|✅| |
-| domain_id |string|❌| |
+| board_id |string|✔| |
+| post_id |string|✔| |
+| domain_id |string|✘| |
 
 ### UpdatePostRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| post_id |string|✅| |
-| category |string|❌| |
-| title |string|❌| |
-| contents |string|❌| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| writer |string|❌| |
-| domain_id |string|❌| |
+| board_id |string|✔| |
+| post_id |string|✔| |
+| category |string|✘| |
+| title |string|✘| |
+| contents |string|✘| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| writer |string|✘| |
+| domain_id |string|✘| |

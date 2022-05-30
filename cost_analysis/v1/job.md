@@ -8,8 +8,8 @@ description:
 ## Job
 
 {% hint style="info" %}
-**Job Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -87,9 +87,9 @@ description:
 ### GetJobRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| job_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| job_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### JobInfo
 <table>
@@ -205,13 +205,13 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">job_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -224,19 +224,19 @@ description:
           	<li>TIMEOUT</li>
           	<li>CANCELED</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">data_source_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -247,14 +247,14 @@ description:
 ### JobRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| job_id |string|✅| |
-| domain_id |string|✅| |
+| job_id |string|✔| |
+| domain_id |string|✔| |
 
 ### JobStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### JobsInfo
 | Field | Type |  Description |

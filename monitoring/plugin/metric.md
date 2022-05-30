@@ -8,8 +8,8 @@ description:
 ## Metric
 
 {% hint style="info" %}
-**Metric Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -53,15 +53,15 @@ description:
 ### MetricDataRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| resource |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| metric |string|✅| metric identifier in case of requested metric info is not a single.|
-| start |string|✅| |
-| end |string|✅| |
-| period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| stat |string|❌| |
-| schema |string|❌| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| resource |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| metric |string|✔| metric identifier in case of requested metric info is not a single.|
+| start |string|✔| |
+| end |string|✔| |
+| period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| stat |string|✘| |
+| schema |string|✘| |
 
 ### MetricInfo
 | Field | Type |  Description |
@@ -75,10 +75,10 @@ description:
 ### MetricRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| resource |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview)|✅| |
-| schema |string|❌| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| resource |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview)|✔| |
+| schema |string|✘| |
 
 ### MetricsInfo
 | Field | Type |  Description |

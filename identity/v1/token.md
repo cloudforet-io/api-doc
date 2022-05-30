@@ -8,8 +8,8 @@ description:
 ## Token
 
 {% hint style="info" %}
-**Token Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -51,10 +51,10 @@ description:
 ### IssueTokenRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| user_id |string|❌| |
-| credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| user_type |string|❌| |
-| domain_id |string|✅| |
+| user_id |string|✘| |
+| credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| user_type |string|✘| |
+| domain_id |string|✔| |
 
 ### TokenInfo
 | Field | Type |  Description |

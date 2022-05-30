@@ -8,8 +8,8 @@ description:
 ## HelloWorld
 
 {% hint style="info" %}
-**HelloWorld Methods:**
-desc: The greeting service definition.
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -41,4 +41,4 @@ desc: The greeting service definition.
 ### HelloRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
+| name |string|✔| |

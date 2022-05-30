@@ -8,8 +8,8 @@ description: User API which allows member management within project, company, an
 ## User
 
 {% hint style="info" %}
-**User Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -229,25 +229,25 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">password</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">email</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -257,7 +257,7 @@ description: User API which allows member management within project, company, an
           	<li>USER</li>
           	<li>API_USER</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -267,31 +267,31 @@ description: User API which allows member management within project, company, an
           	<li>LOCAL</li>
           	<li>EXTERNAL</li>
         </ul></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">language</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">timezone</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -310,8 +310,8 @@ description: User API which allows member management within project, company, an
 ### FindUserQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| search |[FindUserSearch](user.md#findusersearch)|✅| |
-| domain_id |string|✅| |
+| search |[FindUserSearch](user.md#findusersearch)|✔| |
+| domain_id |string|✔| |
 
 ### FindUserSearch
 | Field | Type |  Description |
@@ -328,21 +328,21 @@ description: User API which allows member management within project, company, an
 ### GetUserRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| user_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| user_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### UpdateUserRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| user_id |string|✅| |
-| password |string|❌| |
-| name |string|❌| |
-| email |string|❌| |
-| language |string|❌| |
-| timezone |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| user_id |string|✔| |
+| password |string|✘| |
+| name |string|✘| |
+| email |string|✘| |
+| language |string|✘| |
+| timezone |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### UserInfo
 <table>
@@ -458,31 +458,31 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">email</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -492,7 +492,7 @@ description: User API which allows member management within project, company, an
           	<li>USER</li>
           	<li>API_USER</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -502,13 +502,13 @@ description: User API which allows member management within project, company, an
           	<li>LOCAL</li>
           	<li>EXTERNAL</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -519,14 +519,14 @@ description: User API which allows member management within project, company, an
 ### UserRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| user_id |string|✅| |
-| domain_id |string|✅| |
+| user_id |string|✔| |
+| domain_id |string|✔| |
 
 ### UserStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### UsersInfo
 | Field | Type |  Description |

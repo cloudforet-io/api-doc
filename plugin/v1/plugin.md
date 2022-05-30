@@ -8,8 +8,8 @@ description:
 ## Plugin
 
 {% hint style="info" %}
-**Plugin Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -71,25 +71,25 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">plugin_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">version</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">labels</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -98,7 +98,7 @@ description:
           	<li>MANUAL</li>
           	<li>AUTO</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -109,7 +109,7 @@ description:
 ### PluginFailureRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| supervisor_id |string|✅| |
-| plugin_id |string|✅| |
-| version |string|✅| |
-| domain_id |string|✅| |
+| supervisor_id |string|✔| |
+| plugin_id |string|✔| |
+| version |string|✔| |
+| domain_id |string|✔| |

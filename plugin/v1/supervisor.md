@@ -8,8 +8,8 @@ description:
 ## Supervisor
 
 {% hint style="info" %}
-**Supervisor Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -181,9 +181,9 @@ description:
 ### GetSupervisorRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| supervisor_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| supervisor_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### PluginInfo
 <table>
@@ -268,31 +268,31 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">supervisor_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">hostname</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">plugin_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">version</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -304,19 +304,19 @@ description:
           	<li>RE_PROVISIONING</li>
           	<li>ERROR</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">endpoint</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -333,33 +333,33 @@ description:
 ### PublishSupervisorRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| hostname |string|✅| |
-| secret_key |string|❌| |
-| plugin_info |[list of PluginInfo](supervisor.md#plugininfo)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| is_public |bool|❌| |
-| domain_id |string|✅| |
-| labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| name |string|✔| |
+| hostname |string|✔| |
+| secret_key |string|✘| |
+| plugin_info |[list of PluginInfo](supervisor.md#plugininfo)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| is_public |bool|✘| |
+| domain_id |string|✔| |
+| labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 
 ### RecoverPluginRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| supervisor_id |string|✅| |
-| plugin_id |string|✅| |
-| version |string|✅| |
-| domain_id |string|✅| |
+| supervisor_id |string|✔| |
+| plugin_id |string|✔| |
+| version |string|✔| |
+| domain_id |string|✔| |
 
 ### RegisterSupervisorRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| supervisor_id |string|✅| |
-| name |string|❌| |
-| is_public |bool|❌| |
-| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| supervisor_id |string|✔| |
+| name |string|✘| |
+| is_public |bool|✘| |
+| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| labels |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### SupervisorInfo
 <table>
@@ -445,23 +445,23 @@ description:
 ### SupervisorQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| supervisor_id |string|❌| |
-| name |string|❌| |
-| is_public |bool|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| supervisor_id |string|✘| |
+| name |string|✘| |
+| is_public |bool|✘| |
+| domain_id |string|✔| |
 
 ### SupervisorRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| supervisor_id |string|✅| |
-| domain_id |string|✅| |
+| supervisor_id |string|✔| |
+| domain_id |string|✔| |
 
 ### SupervisorStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### SupervisorsInfo
 | Field | Type |  Description |

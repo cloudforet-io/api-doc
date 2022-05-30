@@ -8,8 +8,8 @@ description:
 ## ExchangeRate
 
 {% hint style="info" %}
-**ExchangeRate Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -158,13 +158,13 @@ description:
 ### ExchangeRateQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| domain_id |string|✅| |
+| domain_id |string|✔| |
 
 ### ExchangeRateRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| currency |string|✅| |
-| domain_id |string|✅| |
+| currency |string|✔| |
+| domain_id |string|✔| |
 
 ### ExchangeRatesInfo
 | Field | Type |  Description |
@@ -175,6 +175,6 @@ description:
 ### SetExchangeRateRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| currency |string|✅| |
-| rate |float|✅| |
-| domain_id |string|✅| |
+| currency |string|✔| |
+| rate |float|✔| |
+| domain_id |string|✔| |

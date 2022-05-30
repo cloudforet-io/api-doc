@@ -8,8 +8,8 @@ description:
 ## Provider
 
 {% hint style="info" %}
-**Provider Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,20 +109,20 @@ description:
 ### CreateProviderRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| provider |string|✅| |
-| name |string|✅| |
-| template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| provider |string|✔| |
+| name |string|✔| |
+| template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetProviderRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| provider |string|✅| |
-| only |list of string|❌| |
-| domain_id |string|✅| |
+| provider |string|✔| |
+| only |list of string|✘| |
+| domain_id |string|✔| |
 
 ### ProviderInfo
 | Field | Type |  Description |
@@ -138,22 +138,22 @@ description:
 ### ProviderQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| provider |string|❌| |
-| name |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| provider |string|✘| |
+| name |string|✘| |
+| domain_id |string|✔| |
 
 ### ProviderRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| provider |string|✅| |
-| domain_id |string|✅| |
+| provider |string|✔| |
+| domain_id |string|✔| |
 
 ### ProviderStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### ProvidersInfo
 | Field | Type |  Description |
@@ -164,10 +164,10 @@ description:
 ### UpdateProviderRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| provider |string|✅| |
-| name |string|❌| |
-| template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| provider |string|✔| |
+| name |string|✘| |
+| template |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| capability |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

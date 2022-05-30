@@ -8,8 +8,8 @@ description:
 ## Storage
 
 {% hint style="info" %}
-**Storage Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -165,9 +165,9 @@ description:
 ### GetStorageRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| storage_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| storage_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### PluginInfo
 | Field | Type |  Description |
@@ -190,11 +190,11 @@ description:
 ### RegisterStorageRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| plugin_info |[PluginRequest](storage.md#pluginrequest)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| user_id |string|✅| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| plugin_info |[PluginRequest](storage.md#pluginrequest)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| user_id |string|✔| |
+| domain_id |string|✔| |
 
 ### StorageInfo
 <table>
@@ -278,24 +278,24 @@ description:
 ### StorageQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| storage_id |string|❌| |
-| name |string|❌| |
-| state |string|❌| |
-| user_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| storage_id |string|✘| |
+| name |string|✘| |
+| state |string|✘| |
+| user_id |string|✘| |
+| domain_id |string|✔| |
 
 ### StorageRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| storage_id |string|✅| |
-| domain_id |string|✅| |
+| storage_id |string|✔| |
+| domain_id |string|✔| |
 
 ### StorageStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### StoragesInfo
 | Field | Type |  Description |
@@ -306,16 +306,16 @@ description:
 ### UpdateStoragePluginRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| storage_id |string|✅| |
-| version |string|❌| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| storage_id |string|✔| |
+| version |string|✘| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### UpdateStorageRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| storage_id |string|✅| |
-| name |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| storage_id |string|✔| |
+| name |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

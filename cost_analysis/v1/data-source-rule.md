@@ -8,8 +8,8 @@ description:
 ## DataSourceRule
 
 {% hint style="info" %}
-**DataSourceRule Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -123,9 +123,9 @@ description:
 ### ChangeDataSourceRuleOrderRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_rule_id |string|✅| |
-| order |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
-| domain_id |string|✅| |
+| data_source_rule_id |string|✔| |
+| order |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✔| |
+| domain_id |string|✔| |
 
 ### CreateDataSourceRuleRequest
 <table>
@@ -141,13 +141,13 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">conditions</td>
       <td style="text-align:left"><a href="data-source-rule.md#datasourcerulecondition">list of DataSourceRuleCondition</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -158,37 +158,37 @@ description:
           	<li>ANY</li>
           	<li>ALWAYS</li>
         </ul></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">actions</td>
       <td style="text-align:left"><a href="data-source-rule.md#datasourceruleactions">DataSourceRuleActions</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">options</td>
       <td style="text-align:left"><a href="data-source-rule.md#datasourceruleoptions">DataSourceRuleOptions</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">data_source_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -305,23 +305,23 @@ description:
 ### DataSourceRuleQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| data_source_rule_id |string|❌| |
-| name |string|❌| |
-| data_source_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| data_source_rule_id |string|✘| |
+| name |string|✘| |
+| data_source_id |string|✘| |
+| domain_id |string|✔| |
 
 ### DataSourceRuleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_rule_id |string|✅| |
-| domain_id |string|✅| |
+| data_source_rule_id |string|✔| |
+| domain_id |string|✔| |
 
 ### DataSourceRuleStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### DataSourceRulesInfo
 | Field | Type |  Description |
@@ -332,9 +332,9 @@ description:
 ### GetDataSourceRuleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_rule_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| data_source_rule_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### MatchRule
 | Field | Type |  Description |
@@ -356,19 +356,19 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">data_source_rule_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">conditions</td>
       <td style="text-align:left"><a href="data-source-rule.md#datasourcerulecondition">list of DataSourceRuleCondition</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -379,31 +379,31 @@ description:
           	<li>ANY</li>
           	<li>ALWAYS</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">actions</td>
       <td style="text-align:left"><a href="data-source-rule.md#datasourceruleactions">DataSourceRuleActions</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">options</td>
       <td style="text-align:left"><a href="data-source-rule.md#datasourceruleoptions">DataSourceRuleOptions</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>

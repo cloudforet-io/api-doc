@@ -8,8 +8,8 @@ description:
 ## CloudServiceType
 
 {% hint style="info" %}
-**CloudServiceType Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -128,29 +128,29 @@ description:
 ### CloudServiceTypeQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| cloud_service_type_id |string|❌| |
-| name |string|❌| |
-| provider |string|❌| |
-| group |string|❌| |
-| cloud_service_type_key |string|❌| |
-| service_code |string|❌| |
-| is_primary |bool|❌| |
-| is_major |bool|❌| |
-| resource_type |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| cloud_service_type_id |string|✘| |
+| name |string|✘| |
+| provider |string|✘| |
+| group |string|✘| |
+| cloud_service_type_key |string|✘| |
+| service_code |string|✘| |
+| is_primary |bool|✘| |
+| is_major |bool|✘| |
+| resource_type |string|✘| |
+| domain_id |string|✔| |
 
 ### CloudServiceTypeRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cloud_service_type_id |string|✅| |
-| domain_id |string|✅| |
+| cloud_service_type_id |string|✔| |
+| domain_id |string|✔| |
 
 ### CloudServiceTypeStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### CloudServiceTypesInfo
 | Field | Type |  Description |
@@ -161,34 +161,34 @@ description:
 ### CreateCloudServiceTypeRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| provider |string|✅| |
-| group |string|✅| |
-| service_code |string|❌| |
-| is_primary |bool|❌| |
-| is_major |bool|❌| |
-| resource_type |string|❌| |
-| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| provider |string|✔| |
+| group |string|✔| |
+| service_code |string|✘| |
+| is_primary |bool|✘| |
+| is_major |bool|✘| |
+| resource_type |string|✘| |
+| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetCloudServiceTypeRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cloud_service_type_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| cloud_service_type_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### UpdateCloudServiceTypeRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cloud_service_type_id |string|✅| |
-| service_code |string|❌| |
-| is_primary |bool|❌| |
-| is_major |bool|❌| |
-| resource_type |string|❌| |
-| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| cloud_service_type_id |string|✔| |
+| service_code |string|✘| |
+| is_primary |bool|✘| |
+| is_major |bool|✘| |
+| resource_type |string|✘| |
+| metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

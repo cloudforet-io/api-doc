@@ -8,8 +8,8 @@ description:
 ## ProjectChannel
 
 {% hint style="info" %}
-**ProjectChannel Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -185,31 +185,31 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of protocol that will be set in project channel.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The name of Project Channel. It can have a maximum of 255 characters.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The data for using project channel.This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.In this case, the secret ID that is stored in the security service will be returned and the data value will be empty.if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">is_subscribe</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">Indicates whether subscriptions will be used.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">subscriptions</td>
       <td style="text-align:left">list of string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">When using subscriptions, it indicates the topic list to subscription.If is_subscribe is set to false, this value is ignored.</td>
    </tr>
     <tr>
@@ -222,37 +222,37 @@ description:
           	<li>LV4</li>
           	<li>LV5</li>
         </ul></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">Set the level of notification.If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">is_scheduled</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">Indicates whether schedule will be used.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">schedule</td>
       <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">Schedule for which you want to receive notifications through the project channel.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The tags for project channel.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of project to which the project channel belongs.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of domain.</td>
    </tr>
   </tbody>
@@ -263,9 +263,9 @@ description:
 ### GetProjectChannelRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_channel_id |string|✅| The ID of project channel.|
-| domain_id |string|✅| The ID of domain.|
-| only |list of string|❌| The list of the project channel information column you want to be returned. It must be specified in the ProjectChannelInfo.|
+| project_channel_id |string|✔| The ID of project channel.|
+| domain_id |string|✔| The ID of domain.|
+| only |list of string|✘| The list of the project channel information column you want to be returned. It must be specified in the ProjectChannelInfo.|
 
 ### ProjectChannelInfo
 <table>
@@ -383,19 +383,19 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">project_channel_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The ID of project channel.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The name of project channel.</td>
    </tr>
     <tr>
@@ -405,13 +405,13 @@ description:
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The state of project channel. ENABLED or DISABLED only.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">secret_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -424,25 +424,25 @@ description:
           	<li>LV4</li>
           	<li>LV5</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The ID of protocol set in the project channel.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The ID of project to which the project channel belongs.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of domain.</td>
    </tr>
   </tbody>
@@ -453,8 +453,8 @@ description:
 ### ProjectChannelRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_channel_id |string|✅| The ID of project channel.|
-| domain_id |string|✅| The ID of domain.|
+| project_channel_id |string|✔| The ID of project channel.|
+| domain_id |string|✔| The ID of domain.|
 
 ### ProjectChannelSchedule
 <table>
@@ -498,8 +498,8 @@ description:
 ### ProjectChannelStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
-| domain_id |string|✅| The ID of domain.|
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| Statistics Query format provided by SpaceONE. Please check the link for more information.|
+| domain_id |string|✔| The ID of domain.|
 
 ### ProjectChannelsInfo
 | Field | Type |  Description |
@@ -521,19 +521,19 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">project_channel_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of project channel.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The name of Project Channel. It can have a maximum of 255 characters.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The data for using project channel.This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.In this case, the secret ID that is stored in the security service will be returned and the data value will be empty.if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.</td>
    </tr>
     <tr>
@@ -546,19 +546,19 @@ description:
           	<li>LV4</li>
           	<li>LV5</li>
         </ul></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">Set the level of notification.If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The tags for project channel.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of domain.</td>
    </tr>
   </tbody>
@@ -569,15 +569,15 @@ description:
 ### UpdateProjectChannelScheduleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_channel_id |string|✅| The ID of project channel.|
-| is_scheduled |bool|✅| Indicates whether schedule will be used.|
-| schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|❌| Schedule for which you want to receive notifications through the project channel.|
-| domain_id |string|✅| The ID of domain.|
+| project_channel_id |string|✔| The ID of project channel.|
+| is_scheduled |bool|✔| Indicates whether schedule will be used.|
+| schedule |[ProjectChannelSchedule](project-channel.md#projectchannelschedule)|✘| Schedule for which you want to receive notifications through the project channel.|
+| domain_id |string|✔| The ID of domain.|
 
 ### UpdateProjectChannelSubscriptionRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_channel_id |string|✅| The ID of project channel.|
-| is_subscribe |bool|✅| Indicates whether subscriptions will be used.|
-| subscriptions |list of string|✅| When using subscriptions, it indicates the topic list to subscription.If is_subscribe is set to false, this value is ignored.|
-| domain_id |string|✅| The ID of domain.|
+| project_channel_id |string|✔| The ID of project channel.|
+| is_subscribe |bool|✔| Indicates whether subscriptions will be used.|
+| subscriptions |list of string|✔| When using subscriptions, it indicates the topic list to subscription.If is_subscribe is set to false, this value is ignored.|
+| domain_id |string|✔| The ID of domain.|

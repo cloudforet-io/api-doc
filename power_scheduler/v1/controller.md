@@ -8,8 +8,8 @@ description:
 ## Controller
 
 {% hint style="info" %}
-**Controller Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -151,11 +151,11 @@ description:
 ### ControlRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| controller_id |string|✅| |
-| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| secret_id |string|❌| |
-| domain_id |string|✅| |
-| use_cache |bool|❌| |
+| controller_id |string|✔| |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| secret_id |string|✘| |
+| domain_id |string|✔| |
+| use_cache |bool|✘| |
 
 ### ControllerInfo
 | Field | Type |  Description |
@@ -172,22 +172,22 @@ description:
 ### ControllerQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| controller_id |string|❌| |
-| name |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| controller_id |string|✘| |
+| name |string|✘| |
+| domain_id |string|✔| |
 
 ### ControllerRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| controller_id |string|✅| |
-| domain_id |string|✅| |
+| controller_id |string|✔| |
+| domain_id |string|✔| |
 
 ### ControllerStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### ControllersInfo
 | Field | Type |  Description |
@@ -198,17 +198,17 @@ description:
 ### CreateControllerRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| plugin_info |[PluginInfo](controller.md#plugininfo)|✅| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| plugin_info |[PluginInfo](controller.md#plugininfo)|✔| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetControllerRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| controller_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| controller_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### PluginInfo
 | Field | Type |  Description |
@@ -222,23 +222,23 @@ description:
 ### UpdateControllerRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| controller_id |string|✅| |
-| name |string|❌| |
-| plugin_info |[PluginInfo](controller.md#plugininfo)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| controller_id |string|✔| |
+| name |string|✘| |
+| plugin_info |[PluginInfo](controller.md#plugininfo)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### UpdatePluginRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| controller_id |string|✅| |
-| version |string|❌| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| controller_id |string|✔| |
+| version |string|✘| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### VerifyPluginRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| controller_id |string|✅| |
-| secret_id |string|❌| |
-| domain_id |string|✅| |
+| controller_id |string|✔| |
+| secret_id |string|✘| |
+| domain_id |string|✔| |

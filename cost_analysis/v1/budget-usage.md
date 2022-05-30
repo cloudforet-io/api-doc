@@ -8,8 +8,8 @@ description:
 ## BudgetUsage
 
 {% hint style="info" %}
-**BudgetUsage Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -65,17 +65,17 @@ description:
 ### BudgetUsageQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| budget_id |string|❌| |
-| name |string|❌| |
-| date |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| budget_id |string|✘| |
+| name |string|✘| |
+| date |string|✘| |
+| domain_id |string|✔| |
 
 ### BudgetUsageStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### BudgetUsagesInfo
 | Field | Type |  Description |

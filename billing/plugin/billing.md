@@ -8,8 +8,8 @@ description:
 ## Billing
 
 {% hint style="info" %}
-**Billing Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -35,31 +35,31 @@ description:
 ### BillingData
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| date |string|✅| |
-| cost |double|✅| |
-| currency |string|❌| |
+| date |string|✔| |
+| cost |double|✔| |
+| currency |string|✘| |
 
 ### BillingDataRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| aggregation |list of string|❌| |
-| start |string|❌| billing period's start date|
-| end |string|✅| billing period's end date|
-| granularity |string|❌| |
-| schema |string|❌| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| aggregation |list of string|✘| |
+| start |string|✘| billing period's start date|
+| end |string|✔| billing period's end date|
+| granularity |string|✘| |
+| schema |string|✘| |
 
 ### BillingInfo
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_type |string|✅| |
-| billing_data |[list of BillingData](billing.md#billingdata)|✅| |
-| name |string|❌| |
+| resource_type |string|✔| |
+| billing_data |[list of BillingData](billing.md#billingdata)|✔| |
+| name |string|✘| |
 
 ### PluginBillingDataResponse
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| results |[list of BillingInfo](billing.md#billinginfo)|✅| |
-| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| results |[list of BillingInfo](billing.md#billinginfo)|✔| |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✔| |

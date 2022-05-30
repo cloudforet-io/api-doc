@@ -8,8 +8,8 @@ description:
 ## Notification
 
 {% hint style="info" %}
-**Notification Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -47,13 +47,13 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">options</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">Option value required for notification delivery.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">Message containing notification information</td>
    </tr>
     <tr>
@@ -65,19 +65,19 @@ description:
           	<li>SUCCESS</li>
           	<li>WARNING</li>
         </ul></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The type of Notification</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">secret_data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">Secret value required for notification delivery.The secret data usually includes the credential information required for the plugin to access the external system.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">channel_data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">Channel data required for notification delivery.</td>
    </tr>
   </tbody>

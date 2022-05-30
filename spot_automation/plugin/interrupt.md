@@ -8,8 +8,8 @@ description:
 ## Interrupt
 
 {% hint style="info" %}
-**Interrupt Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -59,8 +59,8 @@ description:
 ### ConfirmInterruptRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data |string|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| data |string|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 
 ### HandleInfo
 | Field | Type |  Description |
@@ -72,11 +72,11 @@ description:
 ### HandleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data |string|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| data |string|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 
 ### SetupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| endpoint |string|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| endpoint |string|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |

@@ -8,8 +8,8 @@ description:
 ## Log
 
 {% hint style="info" %}
-**Log Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -43,12 +43,12 @@ description:
 ### LogRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_id |string|✅| |
-| resource_type |string|✅| |
-| resource_id |string|✅| |
-| start |string|❌| |
-| end |string|❌| |
-| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| sort |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| domain_id |string|✅| |
+| data_source_id |string|✔| |
+| resource_type |string|✔| |
+| resource_id |string|✔| |
+| start |string|✘| |
+| end |string|✘| |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| sort |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| domain_id |string|✔| |

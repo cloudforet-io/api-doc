@@ -8,8 +8,8 @@ description:
 ## Policy
 
 {% hint style="info" %}
-**Policy Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,17 +109,17 @@ description:
 ### CreatePolicyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| permissions |list of string|✅| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| permissions |list of string|✔| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetPolicyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| policy_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| policy_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### PoliciesInfo
 | Field | Type |  Description |
@@ -140,28 +140,28 @@ description:
 ### PolicyQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| policy_id |string|❌| |
-| name |string|❌| |
-| domain_id |string|❌| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| policy_id |string|✘| |
+| name |string|✘| |
+| domain_id |string|✘| |
 
 ### PolicyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| policy_id |string|✅| |
-| domain_id |string|✅| |
+| policy_id |string|✔| |
+| domain_id |string|✔| |
 
 ### PolicyStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### UpdatePolicyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| policy_id |string|✅| |
-| name |string|❌| |
-| permissions |list of string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| policy_id |string|✔| |
+| name |string|✘| |
+| permissions |list of string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

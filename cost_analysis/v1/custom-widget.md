@@ -8,8 +8,8 @@ description:
 ## CustomWidget
 
 {% hint style="info" %}
-**CustomWidget Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,10 +109,10 @@ description:
 ### CreateCustomWidgetRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### CustomWidgetInfo
 | Field | Type |  Description |
@@ -129,23 +129,23 @@ description:
 ### CustomWidgetQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| widget_id |string|❌| |
-| name |string|❌| |
-| user_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| widget_id |string|✘| |
+| name |string|✘| |
+| user_id |string|✘| |
+| domain_id |string|✔| |
 
 ### CustomWidgetRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| widget_id |string|✅| |
-| domain_id |string|✅| |
+| widget_id |string|✔| |
+| domain_id |string|✔| |
 
 ### CustomWidgetStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### CustomWidgetsInfo
 | Field | Type |  Description |
@@ -156,15 +156,15 @@ description:
 ### GetCustomWidgetRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| widget_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| widget_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### UpdateCustomWidgetRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| widget_id |string|✅| |
-| name |string|❌| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| widget_id |string|✔| |
+| name |string|✘| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

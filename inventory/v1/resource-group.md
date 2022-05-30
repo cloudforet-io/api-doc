@@ -8,8 +8,8 @@ description:
 ## ResourceGroup
 
 {% hint style="info" %}
-**ResourceGroup Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,26 +109,26 @@ description:
 ### CreateResourceGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| resources |[list of Resource](resource-group.md#resource)|✅| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| project_id |string|✅| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| resources |[list of Resource](resource-group.md#resource)|✔| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| project_id |string|✔| |
+| domain_id |string|✔| |
 
 ### GetResourceGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_group_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| resource_group_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### Resource
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_type |string|✅| |
-| filter |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| keyword |string|❌| |
+| resource_type |string|✔| |
+| filter |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| keyword |string|✘| |
 
 ### ResourceGroupInfo
 | Field | Type |  Description |
@@ -145,23 +145,23 @@ description:
 ### ResourceGroupQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| resource_group_id |string|❌| |
-| name |string|❌| |
-| project_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| resource_group_id |string|✘| |
+| name |string|✘| |
+| project_id |string|✘| |
+| domain_id |string|✔| |
 
 ### ResourceGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_group_id |string|✅| |
-| domain_id |string|✅| |
+| resource_group_id |string|✔| |
+| domain_id |string|✔| |
 
 ### ResourceGroupStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### ResourceGroupsInfo
 | Field | Type |  Description |
@@ -172,11 +172,11 @@ description:
 ### UpdateResourceGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_group_id |string|✅| |
-| name |string|❌| |
-| resources |[list of Resource](resource-group.md#resource)|❌| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| release_project |bool|❌| |
-| project_id |string|❌| |
-| domain_id |string|✅| |
+| resource_group_id |string|✔| |
+| name |string|✘| |
+| resources |[list of Resource](resource-group.md#resource)|✘| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| release_project |bool|✘| |
+| project_id |string|✘| |
+| domain_id |string|✔| |

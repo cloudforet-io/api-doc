@@ -8,8 +8,8 @@ description:
 ## Schedule
 
 {% hint style="info" %}
-**Schedule Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -179,26 +179,26 @@ description:
 ### CreateResourceGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| schedule_id |string|✅| |
-| resource_group_id |string|✅| |
-| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| domain_id |string|✅| |
+| schedule_id |string|✔| |
+| resource_group_id |string|✔| |
+| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| domain_id |string|✔| |
 
 ### CreateScheduleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| user_id |string|✅| |
-| project_id |string|✅| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| user_id |string|✔| |
+| project_id |string|✔| |
+| domain_id |string|✔| |
 
 ### GetScheduleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| schedule_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| schedule_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### ResourceGroup
 | Field | Type |  Description |
@@ -209,10 +209,10 @@ description:
 ### ResourceGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| schedule_id |string|✅| |
-| resource_group_id |string|✅| |
-| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
-| domain_id |string|✅| |
+| schedule_id |string|✔| |
+| resource_group_id |string|✔| |
+| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✔| |
+| domain_id |string|✔| |
 
 ### ScheduleInfo
 <table>
@@ -301,19 +301,19 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">schedule_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -323,25 +323,25 @@ description:
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">resource_group_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -352,14 +352,14 @@ description:
 ### ScheduleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| schedule_id |string|✅| |
-| domain_id |string|✅| |
+| schedule_id |string|✔| |
+| domain_id |string|✔| |
 
 ### ScheduleStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### SchedulesInfo
 | Field | Type |  Description |
@@ -381,13 +381,13 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">schedule_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -397,19 +397,19 @@ description:
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>

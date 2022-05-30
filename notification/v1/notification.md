@@ -8,8 +8,8 @@ description:
 ## Notification
 
 {% hint style="info" %}
-**Notification Methods:**
-desc: Notification service Methods
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -235,25 +235,25 @@ desc: Notification service Methods
     <tr>
       <td style="text-align:left; width:100px;">resource_type</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The type of resource to which the notification is dispatched.Currently, only "identity.Project" or "identity.User" can be set.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">resource_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of the resource to which notifications are dispatched.If resource_type is "identity.Project", then resource_id requires a project ID values.If resource_type is "identity.User", then resource_id requires a user ID value.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">topic</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The topic of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">This message is used for each protocol.</td>
    </tr>
     <tr>
@@ -265,7 +265,7 @@ desc: Notification service Methods
           	<li>SUCCESS</li>
           	<li>WARNING</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The type of notification.</td>
    </tr>
     <tr>
@@ -279,13 +279,13 @@ desc: Notification service Methods
           	<li>LV4</li>
           	<li>LV5</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of domain.</td>
    </tr>
   </tbody>
@@ -296,14 +296,14 @@ desc: Notification service Methods
 ### GetNotificationRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| notification_id |string|✅| The ID of Notification.|
-| domain_id |string|✅| The ID of domain.|
-| only |list of string|❌| The list of the notification information column you want to be returned. It must be specified in the NotificationInfo.|
+| notification_id |string|✔| The ID of Notification.|
+| domain_id |string|✔| The ID of domain.|
+| only |list of string|✘| The list of the notification information column you want to be returned. It must be specified in the NotificationInfo.|
 
 ### NotificationDeleteAllRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| users |list of string|✅| ID list of users to be deleted|
+| users |list of string|✔| ID list of users to be deleted|
 | domain_id |string|| |
 
 ### NotificationInfo
@@ -394,19 +394,19 @@ desc: Notification service Methods
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">notification_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The ID of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">topic</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The topic of notification.</td>
    </tr>
     <tr>
@@ -418,7 +418,7 @@ desc: Notification service Methods
           	<li>SUCCESS</li>
           	<li>WARNING</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The type of notification.</td>
    </tr>
     <tr>
@@ -432,37 +432,37 @@ desc: Notification service Methods
           	<li>LV4</li>
           	<li>LV5</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">is_read</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">Whether or not to check the notification.If is_read is False, the user has not checked the notification yet.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">parent_notification_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The ID of parent notification. Not used yet.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The project ID to which the notification will be dispatched.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left">The ID of user.</td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left">The ID of domain.</td>
    </tr>
   </tbody>
@@ -473,14 +473,14 @@ desc: Notification service Methods
 ### NotificationRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| notification_id |string|✅| The ID of Notification.|
-| domain_id |string|✅| The ID of domain.|
+| notification_id |string|✔| The ID of Notification.|
+| domain_id |string|✔| The ID of domain.|
 
 ### NotificationStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
-| domain_id |string|✅| The ID of domain.|
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| Statistics Query format provided by SpaceONE. Please check the link for more information.|
+| domain_id |string|✔| The ID of domain.|
 
 ### NotificationsInfo
 | Field | Type |  Description |
@@ -491,15 +491,15 @@ desc: Notification service Methods
 ### PushNotificationRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| protocol_id |string|✅| The ID of Protocol.|
-| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| message |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| notification_type |string|❌| |
-| notification_level |string|❌| |
-| domain_id |string|✅| |
+| protocol_id |string|✔| The ID of Protocol.|
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| message |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| notification_type |string|✘| |
+| notification_level |string|✘| |
+| domain_id |string|✔| |
 
 ### SetReadNotificationRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| notifications |list of string|✅| The ID list of notification that want to change read status.|
-| domain_id |string|✅| The ID of domain.|
+| notifications |list of string|✔| The ID list of notification that want to change read status.|
+| domain_id |string|✔| The ID of domain.|

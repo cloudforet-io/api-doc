@@ -8,8 +8,8 @@ description:
 ## Interrupt
 
 {% hint style="info" %}
-**Interrupt Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -81,12 +81,12 @@ description:
 ### ConfirmRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| provider |string|✅| |
-| region_code |string|✅| |
-| domain_id |string|✅| |
-| secret_id |string|✅| |
-| token |string|✅| |
-| data |string|✅| |
+| provider |string|✔| |
+| region_code |string|✔| |
+| domain_id |string|✔| |
+| secret_id |string|✔| |
+| token |string|✔| |
+| data |string|✔| |
 
 ### InterruptInfo
 | Field | Type |  Description |
@@ -103,12 +103,12 @@ description:
 ### InterruptRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| provider |string|✅| |
-| region_code |string|✅| |
-| domain_id |string|✅| |
-| secret_id |string|✅| |
-| token |string|✅| |
-| data |string|✅| |
+| provider |string|✔| |
+| region_code |string|✔| |
+| domain_id |string|✔| |
+| secret_id |string|✔| |
+| token |string|✔| |
+| data |string|✔| |
 
 ### InterruptResourceReference
 | Field | Type |  Description |
@@ -119,8 +119,8 @@ description:
 ### InterruptStatRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### InterruptsInfo
 | Field | Type |  Description |
@@ -131,6 +131,6 @@ description:
 ### QueryInterruptRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| spot_group_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| spot_group_id |string|✘| |
+| domain_id |string|✔| |

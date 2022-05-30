@@ -8,8 +8,8 @@ description:
 ## DomainOwner
 
 {% hint style="info" %}
-**DomainOwner Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -79,13 +79,13 @@ description:
 ### CreateDomainOwner
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| owner_id |string|❌| |
-| password |string|✅| |
-| name |string|❌| |
-| email |string|❌| |
-| language |string|❌| |
-| timezone |string|❌| |
-| domain_id |string|✅| |
+| owner_id |string|✘| |
+| password |string|✔| |
+| name |string|✘| |
+| email |string|✘| |
+| language |string|✘| |
+| timezone |string|✘| |
+| domain_id |string|✔| |
 
 ### DomainOwnerInfo
 | Field | Type |  Description |
@@ -102,23 +102,23 @@ description:
 ### DomainOwnerRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| domain_id |string|✅| |
-| owner_id |string|✅| |
+| domain_id |string|✔| |
+| owner_id |string|✔| |
 
 ### GetDomainOwnerRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| domain_id |string|✅| |
-| owner_id |string|✅| |
-| only |list of string|❌| |
+| domain_id |string|✔| |
+| owner_id |string|✔| |
+| only |list of string|✘| |
 
 ### UpdateDomainOwner
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| owner_id |string|✅| |
-| password |string|❌| |
-| name |string|❌| |
-| email |string|❌| |
-| language |string|❌| |
-| timezone |string|❌| |
-| domain_id |string|✅| |
+| owner_id |string|✔| |
+| password |string|✘| |
+| name |string|✘| |
+| email |string|✘| |
+| language |string|✘| |
+| timezone |string|✘| |
+| domain_id |string|✔| |

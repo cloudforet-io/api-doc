@@ -8,8 +8,8 @@ description:
 ## MaintenanceWindow
 
 {% hint style="info" %}
-**MaintenanceWindow Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,19 +109,19 @@ description:
 ### CreateMaintenanceWindowRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| title |string|✅| |
-| projects |list of string|✅| |
-| start_time |string|✅| |
-| end_time |string|✅| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| title |string|✔| |
+| projects |list of string|✔| |
+| start_time |string|✔| |
+| end_time |string|✔| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetMaintenanceWindowRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| maintenance_window_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| maintenance_window_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### MaintenanceWindowInfo
 <table>
@@ -228,19 +228,19 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">maintenance_window_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">title</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -250,25 +250,25 @@ description:
           	<li>OPEN</li>
           	<li>CLOSED</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">created_by</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -279,14 +279,14 @@ description:
 ### MaintenanceWindowRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| maintenance_window_id |string|✅| |
-| domain_id |string|✅| |
+| maintenance_window_id |string|✔| |
+| domain_id |string|✔| |
 
 ### MaintenanceWindowStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### MaintenanceWindowsInfo
 | Field | Type |  Description |
@@ -297,10 +297,10 @@ description:
 ### UpdateMaintenanceWindowRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| maintenance_window_id |string|✅| |
-| title |string|❌| |
-| projects |list of string|❌| |
-| start_time |string|❌| |
-| end_time |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| maintenance_window_id |string|✔| |
+| title |string|✘| |
+| projects |list of string|✘| |
+| start_time |string|✘| |
+| end_time |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

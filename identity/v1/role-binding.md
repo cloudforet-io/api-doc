@@ -8,8 +8,8 @@ description:
 ## RoleBinding
 
 {% hint style="info" %}
-**RoleBinding Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,21 +109,21 @@ description:
 ### CreateRoleBindingRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_type |string|✅| |
-| resource_id |string|✅| |
-| role_id |string|✅| |
-| project_id |string|❌| |
-| project_group_id |string|❌| |
-| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| resource_type |string|✔| |
+| resource_id |string|✔| |
+| role_id |string|✔| |
+| project_id |string|✘| |
+| project_group_id |string|✘| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetRoleBindingRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| role_binding_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| role_binding_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### RoleBindingInfo
 | Field | Type |  Description |
@@ -142,27 +142,27 @@ description:
 ### RoleBindingQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| role_binding_id |string|❌| |
-| resource_type |string|❌| |
-| resource_id |string|❌| |
-| role_id |string|❌| |
-| role_type |string|❌| |
-| project_id |string|❌| |
-| project_group_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| role_binding_id |string|✘| |
+| resource_type |string|✘| |
+| resource_id |string|✘| |
+| role_id |string|✘| |
+| role_type |string|✘| |
+| project_id |string|✘| |
+| project_group_id |string|✘| |
+| domain_id |string|✔| |
 
 ### RoleBindingRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| role_binding_id |string|✅| |
-| domain_id |string|✅| |
+| role_binding_id |string|✔| |
+| domain_id |string|✔| |
 
 ### RoleBindingStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### RoleBindingsInfo
 | Field | Type |  Description |
@@ -173,7 +173,7 @@ description:
 ### UpdateRoleBindingRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| role_binding_id |string|✅| |
-| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| role_binding_id |string|✔| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

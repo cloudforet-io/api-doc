@@ -8,8 +8,8 @@ description:
 ## Metric
 
 {% hint style="info" %}
-**Metric Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -58,15 +58,15 @@ description:
 ### MetricDataRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_id |string|✅| |
-| resource_type |string|✅| |
-| resources |list of string|✅| |
-| metric |string|✅| |
-| start |string|✅| |
-| end |string|✅| |
-| period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| stat |string|❌| |
-| domain_id |string|✅| |
+| data_source_id |string|✔| |
+| resource_type |string|✔| |
+| resources |list of string|✔| |
+| metric |string|✔| |
+| start |string|✔| |
+| end |string|✔| |
+| period |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| stat |string|✘| |
+| domain_id |string|✔| |
 
 ### MetricInfo
 | Field | Type |  Description |
@@ -80,10 +80,10 @@ description:
 ### MetricRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_id |string|✅| |
-| resource_type |string|✅| |
-| resources |list of string|✅| |
-| domain_id |string|✅| |
+| data_source_id |string|✔| |
+| resource_type |string|✔| |
+| resources |list of string|✔| |
+| domain_id |string|✔| |
 
 ### MetricsInfo
 | Field | Type |  Description |

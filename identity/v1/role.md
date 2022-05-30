@@ -8,8 +8,8 @@ description:
 ## Role
 
 {% hint style="info" %}
-**Role Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -120,7 +120,7 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -131,31 +131,31 @@ description:
           	<li>DOMAIN</li>
           	<li>PROJECT</li>
         </ul></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">policies</td>
       <td style="text-align:left"><a href="role.md#rolepolicy">list of RolePolicy</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">page_permissions</td>
       <td style="text-align:left"><a href="role.md#pagepermission">list of PagePermission</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -166,9 +166,9 @@ description:
 ### GetRoleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| role_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| role_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### PagePermission
 <table>
@@ -320,19 +320,19 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">role_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -343,19 +343,19 @@ description:
           	<li>DOMAIN</li>
           	<li>PROJECT</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">policy_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -366,14 +366,14 @@ description:
 ### RoleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| role_id |string|✅| |
-| domain_id |string|✅| |
+| role_id |string|✔| |
+| domain_id |string|✔| |
 
 ### RoleStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### RolesInfo
 | Field | Type |  Description |
@@ -384,10 +384,10 @@ description:
 ### UpdateRoleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| role_id |string|✅| |
-| name |string|❌| |
-| policies |[list of RolePolicy](role.md#rolepolicy)|❌| |
-| page_permissions |[list of PagePermission](role.md#pagepermission)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| release_page_permissions |bool|❌| |
-| domain_id |string|✅| |
+| role_id |string|✔| |
+| name |string|✘| |
+| policies |[list of RolePolicy](role.md#rolepolicy)|✘| |
+| page_permissions |[list of PagePermission](role.md#pagepermission)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| release_page_permissions |bool|✘| |
+| domain_id |string|✔| |

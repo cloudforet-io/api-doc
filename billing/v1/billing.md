@@ -8,8 +8,8 @@ description:
 ## Billing
 
 {% hint style="info" %}
-**Billing Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -37,14 +37,14 @@ description:
 ### BillingDataRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_id |string|❌| |
-| project_group_id |string|❌| |
-| service_accounts |list of string|❌| |
-| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| aggregation |list of string|❌| |
-| start |string|✅| |
-| end |string|✅| |
-| granularity |string|✅| |
-| domain_id |string|✅| |
-| sort |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
+| project_id |string|✘| |
+| project_group_id |string|✘| |
+| service_accounts |list of string|✘| |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| aggregation |list of string|✘| |
+| start |string|✔| |
+| end |string|✔| |
+| granularity |string|✔| |
+| domain_id |string|✔| |
+| sort |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |

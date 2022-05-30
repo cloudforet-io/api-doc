@@ -8,8 +8,8 @@ description:
 ## ProjectGroup
 
 {% hint style="info" %}
-**ProjectGroup Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -183,37 +183,37 @@ description:
 ### AddProjectGroupMemberRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_group_id |string|✅| |
-| user_id |string|✅| |
-| role_id |string|❌| |
-| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
-| is_external_user |bool|❌| |
+| project_group_id |string|✔| |
+| user_id |string|✔| |
+| role_id |string|✘| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
+| is_external_user |bool|✘| |
 
 ### CreateProjectGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| parent_project_group_id |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| parent_project_group_id |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetProjectGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_group_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| project_group_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### ModifyProjectGroupMemberRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_group_id |string|✅| |
-| user_id |string|✅| |
-| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| project_group_id |string|✔| |
+| user_id |string|✔| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### ProjectGroupInfo
 | Field | Type |  Description |
@@ -229,12 +229,12 @@ description:
 ### ProjectGroupMemberQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| project_group_id |string|✅| |
-| user_id |string|❌| |
-| role_id |string|❌| |
-| include_parent_member |bool|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| project_group_id |string|✔| |
+| user_id |string|✘| |
+| role_id |string|✘| |
+| include_parent_member |bool|✘| |
+| domain_id |string|✔| |
 
 ### ProjectGroupProjectInfo
 | Field | Type |  Description |
@@ -250,10 +250,10 @@ description:
 ### ProjectGroupProjectQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| project_group_id |string|✅| |
-| recursive |bool|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| project_group_id |string|✔| |
+| recursive |bool|✘| |
+| domain_id |string|✔| |
 
 ### ProjectGroupProjectsInfo
 | Field | Type |  Description |
@@ -264,18 +264,18 @@ description:
 ### ProjectGroupQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| project_group_id |string|❌| |
-| name |string|❌| |
-| parent_project_group_id |string|❌| |
-| author_within |bool|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| project_group_id |string|✘| |
+| name |string|✘| |
+| parent_project_group_id |string|✘| |
+| author_within |bool|✘| |
+| domain_id |string|✔| |
 
 ### ProjectGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_group_id |string|✅| |
-| domain_id |string|✅| |
+| project_group_id |string|✔| |
+| domain_id |string|✔| |
 
 ### ProjectGroupRoleBindingInfo
 | Field | Type |  Description |
@@ -299,8 +299,8 @@ description:
 ### ProjectGroupStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### ProjectGroupsInfo
 | Field | Type |  Description |
@@ -311,16 +311,16 @@ description:
 ### RemoveProjectGroupMemberRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_group_id |string|✅| |
-| user_id |string|✅| |
-| domain_id |string|✅| |
+| project_group_id |string|✔| |
+| user_id |string|✔| |
+| domain_id |string|✔| |
 
 ### UpdateProjectGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_group_id |string|✅| |
-| name |string|❌| |
-| parent_project_group_id |string|❌| |
-| release_parent_project_group |bool|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| project_group_id |string|✔| |
+| name |string|✘| |
+| parent_project_group_id |string|✘| |
+| release_parent_project_group |bool|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

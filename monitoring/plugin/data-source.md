@@ -8,8 +8,8 @@ description:
 ## DataSource
 
 {% hint style="info" %}
-**DataSource Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -47,7 +47,7 @@ description:
 ### InitRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 
 ### PluginInfo
 | Field | Type |  Description |
@@ -57,6 +57,6 @@ description:
 ### PluginVerifyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| schema |string|❌| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| schema |string|✘| |

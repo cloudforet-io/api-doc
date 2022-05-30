@@ -8,8 +8,8 @@ description:
 ## Region
 
 {% hint style="info" %}
-**Region Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,18 +109,18 @@ description:
 ### CreateRegionRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| region_code |string|✅| |
-| provider |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| region_code |string|✔| |
+| provider |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetRegionRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| region_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| region_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### RegionInfo
 | Field | Type |  Description |
@@ -138,25 +138,25 @@ description:
 ### RegionQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| region_id |string|❌| |
-| name |string|❌| |
-| region_key |string|❌| |
-| region_code |string|❌| |
-| provider |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| region_id |string|✘| |
+| name |string|✘| |
+| region_key |string|✘| |
+| region_code |string|✘| |
+| provider |string|✘| |
+| domain_id |string|✔| |
 
 ### RegionRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| region_id |string|✅| |
-| domain_id |string|✅| |
+| region_id |string|✔| |
+| domain_id |string|✔| |
 
 ### RegionStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### RegionsInfo
 | Field | Type |  Description |
@@ -167,7 +167,7 @@ description:
 ### UpdateRegionRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| region_id |string|✅| |
-| name |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| region_id |string|✔| |
+| name |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

@@ -8,8 +8,8 @@ description:
 ## Note
 
 {% hint style="info" %}
-**Note Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,16 +109,16 @@ description:
 ### CreateNoteRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| alert_id |string|✅| |
-| note |string|✅| |
-| domain_id |string|✅| |
+| alert_id |string|✔| |
+| note |string|✔| |
+| domain_id |string|✔| |
 
 ### GetNoteRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| note_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| note_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### NoteInfo
 | Field | Type |  Description |
@@ -134,24 +134,24 @@ description:
 ### NoteQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| note_id |string|❌| |
-| alert_id |string|❌| |
-| created_by |string|❌| |
-| project_id |string|❌| |
-| domain_id |string|❌| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| note_id |string|✘| |
+| alert_id |string|✘| |
+| created_by |string|✘| |
+| project_id |string|✘| |
+| domain_id |string|✘| |
 
 ### NoteRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| note_id |string|✅| |
-| domain_id |string|✅| |
+| note_id |string|✔| |
+| domain_id |string|✔| |
 
 ### NoteStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### NotesInfo
 | Field | Type |  Description |
@@ -162,6 +162,6 @@ description:
 ### UpdateNoteRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| note_id |string|✅| |
-| note |string|❌| |
-| domain_id |string|✅| |
+| note_id |string|✔| |
+| note |string|✘| |
+| domain_id |string|✔| |

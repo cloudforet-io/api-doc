@@ -8,8 +8,8 @@ description:
 ## NotificationUsage
 
 {% hint style="info" %}
-**NotificationUsage Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -63,15 +63,15 @@ description:
 ### NotificationUsageQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| Query format provided by SpaceONE. Please check the link for more information.|
-| protocol_id |string|❌| The ID of Protocol.|
-| domain_id |string|✅| The ID of domain.|
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| Query format provided by SpaceONE. Please check the link for more information.|
+| protocol_id |string|✘| The ID of Protocol.|
+| domain_id |string|✔| The ID of domain.|
 
 ### NotificationUsageStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
-| domain_id |string|✅| The ID of domain.|
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| Statistics Query format provided by SpaceONE. Please check the link for more information.|
+| domain_id |string|✔| The ID of domain.|
 
 ### NotificationUsagesInfo
 | Field | Type |  Description |

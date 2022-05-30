@@ -8,8 +8,8 @@ description:
 ## Resource
 
 {% hint style="info" %}
-**Resource Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -37,9 +37,9 @@ description:
 ### ResourceStatRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| aggregate |[list of StatAggregate](resource.md#stataggregate)|✅| |
-| page |[StatPage](resource.md#statpage)|❌| |
-| domain_id |string|✅| |
+| aggregate |[list of StatAggregate](resource.md#stataggregate)|✔| |
+| page |[StatPage](resource.md#statpage)|✘| |
+| domain_id |string|✔| |
 
 ### StatAggregate
 | Field | Type |  Description |
@@ -54,14 +54,14 @@ description:
 ### StatAggregateConcat
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_type |string|✅| |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| extend_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| resource_type |string|✔| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| extend_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 
 ### StatAggregateFillNA
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 
 ### StatAggregateFormula
 | Field | Type |  Description |
@@ -83,19 +83,19 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">resource_type</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">extend_data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -106,13 +106,13 @@ description:
           	<li>OUTER</li>
           	<li>INNER</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">keys</td>
       <td style="text-align:left">list of string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -123,18 +123,18 @@ description:
 ### StatAggregateQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_type |string|✅| |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| extend_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| resource_type |string|✔| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| extend_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 
 ### StatAggregateSort
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| key |string|✅| |
-| desc |bool|❌| |
+| key |string|✔| |
+| desc |bool|✘| |
 
 ### StatPage
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| start |[uint32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| limit |[uint32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
+| start |[uint32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| limit |[uint32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✔| |

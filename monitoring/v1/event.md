@@ -8,8 +8,8 @@ description:
 ## Event
 
 {% hint style="info" %}
-**Event Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -81,9 +81,9 @@ description:
 ### CreateEventRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| webhook_id |string|✅| |
-| access_key |string|✅| |
-| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| webhook_id |string|✔| |
+| access_key |string|✔| |
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 
 ### EventInfo
 | Field | Type |  Description |
@@ -111,18 +111,18 @@ description:
 ### EventQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| event_id |string|❌| |
-| event_key |string|❌| |
-| event_type |string|❌| |
-| severity |string|❌| |
-| resource_id |string|❌| |
-| provider |string|❌| |
-| account |string|❌| |
-| alert_id |string|❌| |
-| webhook_id |string|❌| |
-| project_id |string|❌| |
-| domain_id |string|❌| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| event_id |string|✘| |
+| event_key |string|✘| |
+| event_type |string|✘| |
+| severity |string|✘| |
+| resource_id |string|✘| |
+| provider |string|✘| |
+| account |string|✘| |
+| alert_id |string|✘| |
+| webhook_id |string|✘| |
+| project_id |string|✘| |
+| domain_id |string|✘| |
 
 ### EventResource
 | Field | Type |  Description |
@@ -134,8 +134,8 @@ description:
 ### EventStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### EventsInfo
 | Field | Type |  Description |
@@ -146,6 +146,6 @@ description:
 ### GetEventRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| event_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| event_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |

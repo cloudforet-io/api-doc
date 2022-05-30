@@ -8,8 +8,8 @@ description:
 ## Quota
 
 {% hint style="info" %}
-**Quota Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -114,9 +114,9 @@ description:
 ### CreateQuotaRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| protocol_id |string|✅| |
-| limit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| The information about Quota limitation.|
-| domain_id |string|✅| The ID of domain.|
+| protocol_id |string|✔| |
+| limit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| The information about Quota limitation.|
+| domain_id |string|✔| The ID of domain.|
 
 ### QuotaInfo
 | Field | Type |  Description |
@@ -129,22 +129,22 @@ description:
 ### QuotaQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| Query format provided by SpaceONE. Please check the link for more information.|
-| quota_id |string|❌| The ID of Quota.|
-| protocol_id |string|❌| The ID of Protocol.|
-| domain_id |string|✅| The ID of domain.|
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| Query format provided by SpaceONE. Please check the link for more information.|
+| quota_id |string|✘| The ID of Quota.|
+| protocol_id |string|✘| The ID of Protocol.|
+| domain_id |string|✔| The ID of domain.|
 
 ### QuotaRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| quota_id |string|✅| The ID of Quota.|
-| domain_id |string|✅| The ID of domain.|
+| quota_id |string|✔| The ID of Quota.|
+| domain_id |string|✔| The ID of domain.|
 
 ### QuotaStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| Statistics Query format provided by SpaceONE. Please check the link for more information.|
-| domain_id |string|✅| The ID of domain.|
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| Statistics Query format provided by SpaceONE. Please check the link for more information.|
+| domain_id |string|✔| The ID of domain.|
 
 ### QuotasInfo
 | Field | Type |  Description |
@@ -155,6 +155,6 @@ description:
 ### UpdateQuotaRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| quota_id |string|✅| The ID of Quota.|
-| limit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| The information about Quota limitation.|
-| domain_id |string|✅| |
+| quota_id |string|✔| The ID of Quota.|
+| limit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| The information about Quota limitation.|
+| domain_id |string|✔| |

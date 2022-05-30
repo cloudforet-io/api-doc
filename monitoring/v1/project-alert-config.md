@@ -8,8 +8,8 @@ description:
 ## ProjectAlertConfig
 
 {% hint style="info" %}
-**ProjectAlertConfig Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -144,17 +144,17 @@ description:
 ### CreateProjectAlertConfigRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_id |string|✅| |
-| escalation_policy_id |string|❌| |
-| options |[AlertOptions](project-alert-config.md#alertoptions)|❌| |
-| domain_id |string|✅| |
+| project_id |string|✔| |
+| escalation_policy_id |string|✘| |
+| options |[AlertOptions](project-alert-config.md#alertoptions)|✘| |
+| domain_id |string|✔| |
 
 ### GetProjectAlertConfigRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| project_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### ProjectAlertConfigInfo
 | Field | Type |  Description |
@@ -168,22 +168,22 @@ description:
 ### ProjectAlertConfigQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| project_id |string|❌| |
-| escalation_policy_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| project_id |string|✘| |
+| escalation_policy_id |string|✘| |
+| domain_id |string|✔| |
 
 ### ProjectAlertConfigRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_id |string|✅| |
-| domain_id |string|✅| |
+| project_id |string|✔| |
+| domain_id |string|✔| |
 
 ### ProjectAlertConfigStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### ProjectAlertConfigsInfo
 | Field | Type |  Description |
@@ -194,7 +194,7 @@ description:
 ### UpdateProjectAlertConfigRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| project_id |string|✅| |
-| escalation_policy_id |string|❌| |
-| options |[AlertOptions](project-alert-config.md#alertoptions)|❌| |
-| domain_id |string|✅| |
+| project_id |string|✔| |
+| escalation_policy_id |string|✘| |
+| options |[AlertOptions](project-alert-config.md#alertoptions)|✘| |
+| domain_id |string|✔| |

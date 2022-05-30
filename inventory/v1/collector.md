@@ -8,8 +8,8 @@ description:
 ## Collector
 
 {% hint style="info" %}
-**Collector Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -251,12 +251,12 @@ description:
 ### CollectRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| collector_id |string|✅| |
-| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| secret_id |string|❌| |
-| collect_mode |string|❌| |
-| domain_id |string|✅| |
-| use_cache |bool|❌| |
+| collector_id |string|✔| |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| secret_id |string|✘| |
+| collect_mode |string|✘| |
+| domain_id |string|✔| |
+| use_cache |bool|✘| |
 
 ### CollectorInfo
 <table>
@@ -419,14 +419,14 @@ description:
 ### CollectorRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| collector_id |string|✅| |
-| domain_id |string|✅| |
+| collector_id |string|✔| |
+| domain_id |string|✔| |
 
 ### CollectorStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### CollectorsInfo
 | Field | Type |  Description |
@@ -437,30 +437,30 @@ description:
 ### CreateCollectorRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| plugin_info |[PluginInfo](collector.md#plugininfo)|✅| |
-| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
-| is_public |bool|❌| default is true|
-| project_id |string|✅| if is_public is false, project_id is requireremained as is_public | True | False|
+| name |string|✔| |
+| plugin_info |[PluginInfo](collector.md#plugininfo)|✔| |
+| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
+| is_public |bool|✘| default is true|
+| project_id |string|✔| if is_public is false, project_id is requireremained as is_public | True | False|
 
 ### CreateScheduleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| domain_id |string|✅| |
-| collector_id |string|✅| |
-| name |string|❌| |
-| collect_mode |string|❌| |
-| schedule |[Scheduled](collector.md#scheduled)|✅| |
-| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| domain_id |string|✔| |
+| collector_id |string|✔| |
+| name |string|✘| |
+| collect_mode |string|✘| |
+| schedule |[Scheduled](collector.md#scheduled)|✔| |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 
 ### DeleteScheduleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| domain_id |string|✅| |
-| schedule_id |string|✅| |
-| collector_id |string|✅| |
+| domain_id |string|✔| |
+| schedule_id |string|✔| |
+| collector_id |string|✔| |
 
 ### ErrorInfo
 | Field | Type |  Description |
@@ -472,9 +472,9 @@ description:
 ### GetCollectorRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| collector_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| collector_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### JobInfo
 <table>
@@ -660,17 +660,17 @@ description:
 ### ScheduleQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| collector_id |string|✅| |
-| schedule_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| collector_id |string|✔| |
+| schedule_id |string|✘| |
+| domain_id |string|✔| |
 
 ### ScheduleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| domain_id |string|✅| |
-| schedule_id |string|✅| |
-| collector_id |string|✅| |
+| domain_id |string|✔| |
+| schedule_id |string|✔| |
+| collector_id |string|✔| |
 
 ### Scheduled
 | Field | Type |  Description |
@@ -689,12 +689,12 @@ description:
 ### UpdateCollectorRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| collector_id |string|✅| |
-| name |string|❌| |
-| plugin_info |[PluginInfo](collector.md#plugininfo)|❌| |
-| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| collector_id |string|✔| |
+| name |string|✘| |
+| plugin_info |[PluginInfo](collector.md#plugininfo)|✘| |
+| priority |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### UpdatePluginRequest
 <table>
@@ -710,25 +710,25 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">collector_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">version</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">options</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -738,7 +738,7 @@ description:
           	<li>MANUAL</li>
           	<li>AUTO</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -749,13 +749,13 @@ description:
 ### UpdateScheduleRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| domain_id |string|✅| |
-| schedule_id |string|✅| |
-| collector_id |string|✅| |
-| name |string|❌| |
-| collect_mode |string|❌| |
-| schedule |[Scheduled](collector.md#scheduled)|❌| |
-| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| domain_id |string|✔| |
+| schedule_id |string|✔| |
+| collector_id |string|✔| |
+| name |string|✘| |
+| collect_mode |string|✘| |
+| schedule |[Scheduled](collector.md#scheduled)|✘| |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 
 ### VerifyInfo
 | Field | Type |  Description |
@@ -765,6 +765,6 @@ description:
 ### VerifyPluginRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| collector_id |string|✅| |
-| secret_id |string|❌| |
-| domain_id |string|✅| |
+| collector_id |string|✔| |
+| secret_id |string|✘| |
+| domain_id |string|✔| |

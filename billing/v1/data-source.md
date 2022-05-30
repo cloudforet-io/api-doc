@@ -8,8 +8,8 @@ description:
 ## DataSource
 
 {% hint style="info" %}
-**DataSource Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -224,24 +224,24 @@ description:
 ### DataSourceQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| data_source_id |string|❌| |
-| name |string|❌| |
-| state |string|❌| |
-| provider |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| data_source_id |string|✘| |
+| name |string|✘| |
+| state |string|✘| |
+| provider |string|✘| |
+| domain_id |string|✔| |
 
 ### DataSourceRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_id |string|✅| |
-| domain_id |string|✅| |
+| data_source_id |string|✔| |
+| domain_id |string|✔| |
 
 ### DataSourceStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### DataSourcesInfo
 | Field | Type |  Description |
@@ -252,9 +252,9 @@ description:
 ### GetDataSourceRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| data_source_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### PluginInfo
 <table>
@@ -320,19 +320,19 @@ description:
 ### RegisterDataSourceRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| plugin_info |[PluginInfo](data-source.md#plugininfo)|✅| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| plugin_info |[PluginInfo](data-source.md#plugininfo)|✔| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### UpdateDataSourceRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| data_source_id |string|✅| |
-| name |string|❌| |
-| plugin_info |[PluginInfo](data-source.md#plugininfo)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| data_source_id |string|✔| |
+| name |string|✘| |
+| plugin_info |[PluginInfo](data-source.md#plugininfo)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### VerifyInfo
 | Field | Type |  Description |

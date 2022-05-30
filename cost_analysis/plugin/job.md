@@ -8,8 +8,8 @@ description:
 ## Job
 
 {% hint style="info" %}
-**Job Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -41,11 +41,11 @@ description:
 ### GetTasksRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| schema |string|❌| |
-| start |string|❌| |
-| last_synchronized_at |string|❌| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| schema |string|✘| |
+| start |string|✘| |
+| last_synchronized_at |string|✘| |
 
 ### TaskInfo
 | Field | Type |  Description |

@@ -8,8 +8,8 @@ description:
 ## Board
 
 {% hint style="info" %}
-**Board Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -132,19 +132,19 @@ description:
 ### BoardQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|❌| |
-| name |string|❌| |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
+| board_id |string|✘| |
+| name |string|✘| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
 
 ### BoardRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
+| board_id |string|✔| |
 
 ### BoardStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
 
 ### BoardsInfo
 | Field | Type |  Description |
@@ -155,25 +155,25 @@ description:
 ### CreateBoardRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| categories |list of string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| name |string|✔| |
+| categories |list of string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 
 ### GetBoardRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| only |list of string|❌| |
+| board_id |string|✔| |
+| only |list of string|✘| |
 
 ### SetBoardCategoriesRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| categories |list of string|❌| |
+| board_id |string|✔| |
+| categories |list of string|✘| |
 
 ### UpdateBoardRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| board_id |string|✅| |
-| name |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
+| board_id |string|✔| |
+| name |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |

@@ -8,8 +8,8 @@ description:
 ## History
 
 {% hint style="info" %}
-**History Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -40,5 +40,5 @@ description:
 ### HistoryRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_id |string|✅| |
-| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
+| resource_id |string|✔| |
+| secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |

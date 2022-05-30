@@ -8,8 +8,8 @@ description:
 ## APIKey
 
 {% hint style="info" %}
-**APIKey Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -195,13 +195,13 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">api_key_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -211,19 +211,19 @@ description:
           	<li>ENABLED</li>
           	<li>DISABLED</li>
         </ul></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -234,14 +234,14 @@ description:
 ### APIKeyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| api_key_id |string|✅| |
-| domain_id |string|✅| |
+| api_key_id |string|✔| |
+| domain_id |string|✔| |
 
 ### APIKeyStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### APIKeysInfo
 | Field | Type |  Description |
@@ -252,12 +252,12 @@ description:
 ### CreateAPIKeyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| user_id |string|✅| |
-| domain_id |string|✅| |
+| user_id |string|✔| |
+| domain_id |string|✔| |
 
 ### GetAPIKeyRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| api_key_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| api_key_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |

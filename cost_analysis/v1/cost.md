@@ -8,8 +8,8 @@ description:
 ## Cost
 
 {% hint style="info" %}
-**Cost Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -126,67 +126,67 @@ description:
           	<li>MONTHLY</li>
           	<li>YEARLY</li>
         </ul></td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">start</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">end</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">group_by</td>
       <td style="text-align:left">list of string</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">filter</td>
       <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">limit</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">page</td>
       <td style="text-align:left">spaceone.api.core.v1.Page</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">sort</td>
       <td style="text-align:left">spaceone.api.core.v1.Sort</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">include_usage_quantity</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">include_others</td>
       <td style="text-align:left">bool</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -223,34 +223,34 @@ description:
 ### CostQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| cost_id |string|❌| |
-| original_currency |string|❌| |
-| provider |string|❌| |
-| region_code |string|❌| |
-| region_key |string|❌| |
-| category |string|❌| |
-| product |string|❌| |
-| account |string|❌| |
-| usage_type |string|❌| |
-| resource_group |string|❌| |
-| resource |string|❌| |
-| service_account_id |string|❌| |
-| project_id |string|❌| |
-| data_source_id |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| cost_id |string|✘| |
+| original_currency |string|✘| |
+| provider |string|✘| |
+| region_code |string|✘| |
+| region_key |string|✘| |
+| category |string|✘| |
+| product |string|✘| |
+| account |string|✘| |
+| usage_type |string|✘| |
+| resource_group |string|✘| |
+| resource |string|✘| |
+| service_account_id |string|✘| |
+| project_id |string|✘| |
+| data_source_id |string|✘| |
+| domain_id |string|✔| |
 
 ### CostRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cost_id |string|✅| |
-| domain_id |string|✅| |
+| cost_id |string|✔| |
+| domain_id |string|✔| |
 
 ### CostStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### CostsInfo
 | Field | Type |  Description |
@@ -261,29 +261,29 @@ description:
 ### CreateCostRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| original_cost |float|✅| |
-| original_currency |string|✅| |
-| usd_cost |float|❌| |
-| usage_quantity |float|❌| |
-| provider |string|❌| |
-| region_code |string|❌| |
-| category |string|❌| |
-| product |string|❌| |
-| account |string|❌| |
-| usage_type |string|❌| |
-| resource_group |string|❌| |
-| resource |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| service_account_id |string|❌| |
-| project_id |string|❌| |
-| data_source_id |string|✅| |
-| domain_id |string|✅| |
-| billed_at |string|❌| |
+| original_cost |float|✔| |
+| original_currency |string|✔| |
+| usd_cost |float|✘| |
+| usage_quantity |float|✘| |
+| provider |string|✘| |
+| region_code |string|✘| |
+| category |string|✘| |
+| product |string|✘| |
+| account |string|✘| |
+| usage_type |string|✘| |
+| resource_group |string|✘| |
+| resource |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| additional_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| service_account_id |string|✘| |
+| project_id |string|✘| |
+| data_source_id |string|✔| |
+| domain_id |string|✔| |
+| billed_at |string|✘| |
 
 ### GetCostRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| cost_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| cost_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |

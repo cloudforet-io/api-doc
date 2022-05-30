@@ -8,8 +8,8 @@ description:
 ## ServiceAccount
 
 {% hint style="info" %}
-**ServiceAccount Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -109,19 +109,19 @@ description:
 ### CreateServiceAccountRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| provider |string|✅| |
-| project_id |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| provider |string|✔| |
+| project_id |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
 
 ### GetServiceAccountRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| service_account_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| service_account_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### ServiceAccountInfo
 | Field | Type |  Description |
@@ -138,24 +138,24 @@ description:
 ### ServiceAccountQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| service_account_id |string|❌| |
-| name |string|❌| |
-| provider |string|❌| |
-| project_id |string|❌| |
-| domain_id |string|❌| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| service_account_id |string|✘| |
+| name |string|✘| |
+| provider |string|✘| |
+| project_id |string|✘| |
+| domain_id |string|✘| |
 
 ### ServiceAccountRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| service_account_id |string|✅| |
-| domain_id |string|✅| |
+| service_account_id |string|✔| |
+| domain_id |string|✔| |
 
 ### ServiceAccountStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### ServiceAccountsInfo
 | Field | Type |  Description |
@@ -166,10 +166,10 @@ description:
 ### UpdateServiceAccountRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| service_account_id |string|✅| |
-| name |string|❌| |
-| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| project_id |string|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
-| release_project |bool|❌| |
+| service_account_id |string|✔| |
+| name |string|✘| |
+| data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| project_id |string|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
+| release_project |bool|✘| |

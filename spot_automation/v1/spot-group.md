@@ -8,8 +8,8 @@ description:
 ## SpotGroup
 
 {% hint style="info" %}
-**SpotGroup Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -135,41 +135,41 @@ description:
 ### CreateSpotGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| name |string|✅| |
-| resource_id |string|✅| |
-| resource_type |string|✅| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✅| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| user_id |string|✅| |
-| domain_id |string|✅| |
+| name |string|✔| |
+| resource_id |string|✔| |
+| resource_type |string|✔| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| user_id |string|✔| |
+| domain_id |string|✔| |
 
 ### GetCandidatesRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| resource_id |string|✅| |
-| resource_type |string|✅| |
-| limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✅| |
-| domain_id |string|✅| |
+| resource_id |string|✔| |
+| resource_type |string|✔| |
+| limit |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✔| |
+| domain_id |string|✔| |
 
 ### GetSpotGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| spot_group_id |string|✅| |
-| domain_id |string|✅| |
-| only |list of string|❌| |
+| spot_group_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### QuerySpotGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| spot_group_id |string|❌| |
-| name |string|❌| |
-| resource_id |string|❌| |
-| resource_type |string|❌| |
-| provider |string|❌| |
-| project_id |string|❌| |
-| region_code |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| spot_group_id |string|✘| |
+| name |string|✘| |
+| resource_id |string|✘| |
+| resource_type |string|✘| |
+| provider |string|✘| |
+| project_id |string|✘| |
+| region_code |string|✘| |
+| domain_id |string|✔| |
 
 ### SpotGroupInfo
 | Field | Type |  Description |
@@ -193,8 +193,8 @@ description:
 ### SpotGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| spot_group_id |string|✅| |
-| domain_id |string|✅| |
+| spot_group_id |string|✔| |
+| domain_id |string|✔| |
 
 ### SpotGroupResourceReference
 | Field | Type |  Description |
@@ -205,8 +205,8 @@ description:
 ### SpotGroupStatRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✅| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
 
 ### SpotGroupsInfo
 | Field | Type |  Description |
@@ -217,8 +217,8 @@ description:
 ### UpdateSpotGroupRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| spot_group_id |string|✅| |
-| name |string|❌| |
-| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|❌| |
-| domain_id |string|✅| |
+| spot_group_id |string|✔| |
+| name |string|✘| |
+| options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |

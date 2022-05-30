@@ -8,8 +8,8 @@ description:
 ## Endpoint
 
 {% hint style="info" %}
-**Endpoint Methods:**
-
+**{{ service.name }} Methods:**
+{{ service.description }}
 {%  endhint %}
 
 
@@ -88,10 +88,10 @@ description:
 ### EndpointQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|❌| |
-| service |string|❌| |
-| endpoint_type |string|❌| |
-| domain_id |string|✅| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| service |string|✘| |
+| endpoint_type |string|✘| |
+| domain_id |string|✔| |
 
 ### EndpointsInfo
 | Field | Type |  Description |
