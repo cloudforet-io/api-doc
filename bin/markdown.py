@@ -180,9 +180,9 @@ def _desc_wrapper(desc):
     if type(fd_desc) is dict and len(fd_desc) > 0:
         if 'is_required' in fd_desc:
             if fd_desc.get('is_required'):
-                fd_desc['is_required'] = '✅'
+                fd_desc['is_required'] = '✔'
             elif not fd_desc.get('is_required'):
-                fd_desc['is_required'] = '❌'
+                fd_desc['is_required'] = '✘'
             else:
                 fd_desc['is_required'] = ''
         if 'desc' not in fd_desc:
