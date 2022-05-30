@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**cancel**](job.md#cancel)|   [JobRequest](job.md#jobrequest) |   [JobInfo](job.md#jobinfo) |
 | [**get**](job.md#get)|   [GetJobRequest](job.md#getjobrequest) |   [JobInfo](job.md#jobinfo) |
 | [**list**](job.md#list)|   [JobQuery](job.md#jobquery) |   [JobsInfo](job.md#jobsinfo) |

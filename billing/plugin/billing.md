@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**get_data**](billing.md#get_data)|   [BillingDataRequest](billing.md#billingdatarequest) |   [PluginBillingDataResponse](billing.md#pluginbillingdataresponse) | 
  
 

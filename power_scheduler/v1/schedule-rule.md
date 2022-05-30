@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](schedule-rule.md#create)|   [CreateScheduleRuleRequest](schedule-rule.md#createschedulerulerequest) |   [RuleInfo](schedule-rule.md#ruleinfo) |
 | [**update**](schedule-rule.md#update)|   [UpdateScheduleRuleRequest](schedule-rule.md#updateschedulerulerequest) |   [RuleInfo](schedule-rule.md#ruleinfo) |
 | [**delete**](schedule-rule.md#delete)|   [ScheduleRuleRequest](schedule-rule.md#schedulerulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|

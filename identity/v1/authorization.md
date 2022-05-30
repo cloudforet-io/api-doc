@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**verify**](authorization.md#verify)| .spaceone.api.core.v1.AuthorizationRequest|  .spaceone.api.core.v1.AuthorizationResponse| 
  
 

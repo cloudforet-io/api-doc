@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](domain.md#create)|   [CreateDomainRequest](domain.md#createdomainrequest) |   [DomainInfo](domain.md#domaininfo) |
 | [**update**](domain.md#update)|   [UpdateDomainRequest](domain.md#updatedomainrequest) |   [DomainInfo](domain.md#domaininfo) |
 | [**change_auth_plugin**](domain.md#change_auth_plugin)|   [ChangeAuthRequest](domain.md#changeauthrequest) |   [DomainInfo](domain.md#domaininfo) |

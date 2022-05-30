@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**list**](notification-usage.md#list)|   [NotificationUsageQuery](notification-usage.md#notificationusagequery) |   [NotificationUsagesInfo](notification-usage.md#notificationusagesinfo) |
 | [**stat**](notification-usage.md#stat)|   [NotificationUsageStatQuery](notification-usage.md#notificationusagestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  

@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**get_data**](cost.md#get_data)|   [GetDataRequest](cost.md#getdatarequest) | **`stream`**   [CostsInfo](cost.md#costsinfo) | 
  
 

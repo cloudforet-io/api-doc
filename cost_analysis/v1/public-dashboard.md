@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](public-dashboard.md#create)|   [CreatePublicDashboardRequest](public-dashboard.md#createpublicdashboardrequest) |   [PublicDashboardInfo](public-dashboard.md#publicdashboardinfo) |
 | [**update**](public-dashboard.md#update)|   [UpdatePublicDashboardRequest](public-dashboard.md#updatepublicdashboardrequest) |   [PublicDashboardInfo](public-dashboard.md#publicdashboardinfo) |
 | [**delete**](public-dashboard.md#delete)|   [PublicDashboardRequest](public-dashboard.md#publicdashboardrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|

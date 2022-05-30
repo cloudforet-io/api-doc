@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](provider.md#create)|   [CreateProviderRequest](provider.md#createproviderrequest) |   [ProviderInfo](provider.md#providerinfo) |
 | [**update**](provider.md#update)|   [UpdateProviderRequest](provider.md#updateproviderrequest) |   [ProviderInfo](provider.md#providerinfo) |
 | [**delete**](provider.md#delete)|   [ProviderRequest](provider.md#providerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|

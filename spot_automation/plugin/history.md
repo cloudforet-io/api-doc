@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**get**](history.md#get)|   [HistoryRequest](history.md#historyrequest) |   [HistoryInfo](history.md#historyinfo) | 
  
 

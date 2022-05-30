@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](data-source-rule.md#create)|   [CreateDataSourceRuleRequest](data-source-rule.md#createdatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |
 | [**update**](data-source-rule.md#update)|   [UpdateDataSourceRuleRequest](data-source-rule.md#updatedatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |
 | [**change_order**](data-source-rule.md#change_order)|   [ChangeDataSourceRuleOrderRequest](data-source-rule.md#changedatasourceruleorderrequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |

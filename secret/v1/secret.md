@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](secret.md#create)|   [CreateSecretRequest](secret.md#createsecretrequest) |   [SecretInfo](secret.md#secretinfo) |
 | [**update**](secret.md#update)|   [UpdateSecretRequest](secret.md#updatesecretrequest) |   [SecretInfo](secret.md#secretinfo) |
 | [**delete**](secret.md#delete)|   [SecretRequest](secret.md#secretrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|

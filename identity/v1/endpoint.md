@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**list**](endpoint.md#list)|   [EndpointQuery](endpoint.md#endpointquery) |   [EndpointsInfo](endpoint.md#endpointsinfo) | 
  
 

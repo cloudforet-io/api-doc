@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](domain-owner.md#create)|   [CreateDomainOwner](domain-owner.md#createdomainowner) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |
 | [**update**](domain-owner.md#update)|   [UpdateDomainOwner](domain-owner.md#updatedomainowner) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |
 | [**delete**](domain-owner.md#delete)|   [DomainOwnerRequest](domain-owner.md#domainownerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|

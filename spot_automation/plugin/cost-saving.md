@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**get**](cost-saving.md#get)|   [CostSavingRequest](cost-saving.md#costsavingrequest) |   [CostSavingInfo](cost-saving.md#costsavinginfo) | 
  
 

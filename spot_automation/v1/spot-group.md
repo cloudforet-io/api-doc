@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](spot-group.md#create)|   [CreateSpotGroupRequest](spot-group.md#createspotgrouprequest) |   [SpotGroupInfo](spot-group.md#spotgroupinfo) |
 | [**update**](spot-group.md#update)|   [UpdateSpotGroupRequest](spot-group.md#updatespotgrouprequest) |   [SpotGroupInfo](spot-group.md#spotgroupinfo) |
 | [**delete**](spot-group.md#delete)|   [SpotGroupRequest](spot-group.md#spotgrouprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|

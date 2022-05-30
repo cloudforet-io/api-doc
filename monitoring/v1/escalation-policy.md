@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](escalation-policy.md#create)|   [CreateEscalationPolicyRequest](escalation-policy.md#createescalationpolicyrequest) |   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo) |
 | [**update**](escalation-policy.md#update)|   [UpdateEscalationPolicyRequest](escalation-policy.md#updateescalationpolicyrequest) |   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo) |
 | [**set_default**](escalation-policy.md#set_default)|   [EscalationPolicyRequest](escalation-policy.md#escalationpolicyrequest) |   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo) |

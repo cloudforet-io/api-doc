@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](secret-group.md#create)|   [CreateSecretGroupRequest](secret-group.md#createsecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |
 | [**update**](secret-group.md#update)|   [UpdateSecretGroupRequest](secret-group.md#updatesecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |
 | [**add_secret**](secret-group.md#add_secret)|   [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |   [SecretGroupSecretInfo](secret-group.md#secretgroupsecretinfo) |

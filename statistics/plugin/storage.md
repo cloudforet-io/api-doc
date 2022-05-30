@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**init**](storage.md#init)|   [InitRequest](storage.md#initrequest) |   [PluginInfo](storage.md#plugininfo) |
 | [**verify**](storage.md#verify)|   [VerifyRequest](storage.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**export**](storage.md#export)|   [ExportRequest](storage.md#exportrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| 

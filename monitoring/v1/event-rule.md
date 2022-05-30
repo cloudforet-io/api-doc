@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](event-rule.md#create)|   [CreateEventRuleRequest](event-rule.md#createeventrulerequest) |   [EventRuleInfo](event-rule.md#eventruleinfo) |
 | [**update**](event-rule.md#update)|   [UpdateEventRuleRequest](event-rule.md#updateeventrulerequest) |   [EventRuleInfo](event-rule.md#eventruleinfo) |
 | [**change_order**](event-rule.md#change_order)|   [ChangeEventRuleOrderRequest](event-rule.md#changeeventruleorderrequest) |   [EventRuleInfo](event-rule.md#eventruleinfo) |

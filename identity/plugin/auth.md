@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**init**](auth.md#init)|   [InitRequest](auth.md#initrequest) |   [PluginInfo](auth.md#plugininfo) |
 | [**verify**](auth.md#verify)|   [VerifyRequest](auth.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**find**](auth.md#find)|   [FindRequest](auth.md#findrequest) |   [UsersInfo](auth.md#usersinfo) |

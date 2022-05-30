@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](project-channel.md#create)|   [CreateProjectChannelRequest](project-channel.md#createprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |
 | [**update**](project-channel.md#update)|   [UpdateProjectChannelRequest](project-channel.md#updateprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |
 | [**set_schedule**](project-channel.md#set_schedule)|   [UpdateProjectChannelScheduleRequest](project-channel.md#updateprojectchannelschedulerequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) |

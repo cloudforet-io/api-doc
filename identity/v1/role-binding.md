@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](role-binding.md#create)|   [CreateRoleBindingRequest](role-binding.md#createrolebindingrequest) |   [RoleBindingInfo](role-binding.md#rolebindinginfo) |
 | [**update**](role-binding.md#update)|   [UpdateRoleBindingRequest](role-binding.md#updaterolebindingrequest) |   [RoleBindingInfo](role-binding.md#rolebindinginfo) |
 | [**delete**](role-binding.md#delete)|   [RoleBindingRequest](role-binding.md#rolebindingrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|

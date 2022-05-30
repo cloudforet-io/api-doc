@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](project.md#create)|   [CreateProjectRequest](project.md#createprojectrequest) |   [ProjectInfo](project.md#projectinfo) |
 | [**update**](project.md#update)|   [UpdateProjectRequest](project.md#updateprojectrequest) |   [ProjectInfo](project.md#projectinfo) |
 | [**delete**](project.md#delete)|   [ProjectRequest](project.md#projectrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|

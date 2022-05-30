@@ -14,7 +14,7 @@ description: UserConfig API which configure environments for user
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](user-config.md#create)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |
 | [**update**](user-config.md#update)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |
 | [**set**](user-config.md#set)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |

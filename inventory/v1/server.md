@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](server.md#create)|   [CreateServerRequest](server.md#createserverrequest) |   [ServerInfo](server.md#serverinfo) |
 | [**update**](server.md#update)|   [UpdateServerRequest](server.md#updateserverrequest) |   [ServerInfo](server.md#serverinfo) |
 | [**pin_data**](server.md#pin_data)|   [PinServerDataRequest](server.md#pinserverdatarequest) |   [ServerInfo](server.md#serverinfo) |

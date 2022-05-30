@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**init**](collector.md#init)|   [InitRequest](collector.md#initrequest) |   [PluginInfo](collector.md#plugininfo) |
 | [**verify**](collector.md#verify)|   [VerifyRequest](collector.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) | **`stream`**   [ResourceInfo](collector.md#resourceinfo) | 

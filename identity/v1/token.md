@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**issue**](token.md#issue)|   [IssueTokenRequest](token.md#issuetokenrequest) |   [TokenInfo](token.md#tokeninfo) |
 | [**refresh**](token.md#refresh)| [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|   [TokenInfo](token.md#tokeninfo) | 
  

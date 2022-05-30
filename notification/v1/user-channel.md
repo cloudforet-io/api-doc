@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](user-channel.md#create)|   [CreateUserChannelRequest](user-channel.md#createuserchannelrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |
 | [**update**](user-channel.md#update)|   [UpdateUserChannelRequest](user-channel.md#updateuserchannelrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |
 | [**set_schedule**](user-channel.md#set_schedule)|   [UpdateUserChannelScheduleRequest](user-channel.md#updateuserchannelschedulerequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) |

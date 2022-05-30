@@ -14,7 +14,7 @@ description:
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**parse**](event.md#parse)|   [ParseRequest](event.md#parserequest) |   [EventsInfo](event.md#eventsinfo) | 
  
 

@@ -14,7 +14,7 @@ desc: Notification service Methods
 
 
 | Method | Request | Response |
-| :-----: | :--------: | :--------: |
+| :----- | :-------- | :-------- |
 | [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**push**](notification.md#push)|   [PushNotificationRequest](notification.md#pushnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
@@ -64,7 +64,7 @@ desc: Notification service Methods
 > **POST** /notification/v1/notifications/push
 >
 
-> Push a new Notification directly.
+> Push a new Notification directly.When a notification is created, it is propagated through the channel of the project to which the notification belongs, and if an internal channel or user channel is set, the notification is also propagated to the user.
 
 | Type | Message |
 | :--- | :--- |
@@ -98,7 +98,7 @@ desc: Notification service Methods
 > **DELETE** /notification/v1/notification/{notification_id}
 >
 
-> Delete the Notification.
+> Delete the Notification. When a notification is created,\n it is propagated through the channel of the project to which the notification belongs,\n and if an internal channel or user channel is set,\n the notification is also propagated to the user.
 
 | Type | Message |
 | :--- | :--- |
@@ -132,7 +132,7 @@ desc: Notification service Methods
 > **POST** /notification/v1/notification/delete_all
 >
 
-> Delete all Notifications.
+> Delete all Notifications. `When a notification is created,` `it is propagated through the channel of the project to which the notification belongs,` `and if an internal channel or user channel is set,` `the notification is also propagated to the user.`
 
 | Type | Message |
 | :--- | :--- |
