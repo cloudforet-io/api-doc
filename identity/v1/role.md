@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](role.md#create)|   [CreateRoleRequest](role.md#createrolerequest) |   [RoleInfo](role.md#roleinfo) |  |
 | [**update**](role.md#update)|   [UpdateRoleRequest](role.md#updaterolerequest) |   [RoleInfo](role.md#roleinfo) |  |
 | [**delete**](role.md#delete)|   [RoleRequest](role.md#rolerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](role.md#get)|   [GetRoleRequest](role.md#getrolerequest) |   [RoleInfo](role.md#roleinfo) |  |
 | [**list**](role.md#list)|   [RoleQuery](role.md#rolequery) |   [RolesInfo](role.md#rolesinfo) |  |
-| [**stat**](role.md#stat)|   [RoleStatQuery](role.md#rolestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](role.md#stat)|   [RoleStatQuery](role.md#rolestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](role.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateRoleRequest](role.md#createrolerequest)  </div> | <div style="width:200px; text-align:center;">   [RoleInfo](role.md#roleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](role.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateRoleRequest](role.md#updaterolerequest)  </div> | <div style="width:200px; text-align:center;">   [RoleInfo](role.md#roleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](role.md#delete) </div> | <div style="width:200px; text-align:center;">    [RoleRequest](role.md#rolerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](role.md#get) </div> | <div style="width:200px; text-align:center;">    [GetRoleRequest](role.md#getrolerequest)  </div> | <div style="width:200px; text-align:center;">   [RoleInfo](role.md#roleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](role.md#list) </div> | <div style="width:200px; text-align:center;">    [RoleQuery](role.md#rolequery)  </div> | <div style="width:200px; text-align:center;">   [RolesInfo](role.md#rolesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](role.md#stat) </div> | <div style="width:200px; text-align:center;">    [RoleStatQuery](role.md#rolestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

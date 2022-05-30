@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](secret.md#create)|   [CreateSecretRequest](secret.md#createsecretrequest) |   [SecretInfo](secret.md#secretinfo) |  |
 | [**update**](secret.md#update)|   [UpdateSecretRequest](secret.md#updatesecretrequest) |   [SecretInfo](secret.md#secretinfo) |  |
 | [**delete**](secret.md#delete)|   [SecretRequest](secret.md#secretrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -22,7 +22,18 @@ description:
 | [**get_data**](secret.md#get_data)|   [SecretRequest](secret.md#secretrequest) |   [SecretDataInfo](secret.md#secretdatainfo) |  |
 | [**get**](secret.md#get)|   [GetSecretRequest](secret.md#getsecretrequest) |   [SecretInfo](secret.md#secretinfo) |  |
 | [**list**](secret.md#list)|   [SecretQuery](secret.md#secretquery) |   [SecretsInfo](secret.md#secretsinfo) |  |
-| [**stat**](secret.md#stat)|   [SecretStatQuery](secret.md#secretstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](secret.md#stat)|   [SecretStatQuery](secret.md#secretstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](secret.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateSecretRequest](secret.md#createsecretrequest)  </div> | <div style="width:200px; text-align:center;">   [SecretInfo](secret.md#secretinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](secret.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateSecretRequest](secret.md#updatesecretrequest)  </div> | <div style="width:200px; text-align:center;">   [SecretInfo](secret.md#secretinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](secret.md#delete) </div> | <div style="width:200px; text-align:center;">    [SecretRequest](secret.md#secretrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_data**](secret.md#update_data) </div> | <div style="width:200px; text-align:center;">    [UpdateSecretDataRequest](secret.md#updatesecretdatarequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get_data**](secret.md#get_data) </div> | <div style="width:200px; text-align:center;">    [SecretRequest](secret.md#secretrequest)  </div> | <div style="width:200px; text-align:center;">   [SecretDataInfo](secret.md#secretdatainfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](secret.md#get) </div> | <div style="width:200px; text-align:center;">    [GetSecretRequest](secret.md#getsecretrequest)  </div> | <div style="width:200px; text-align:center;">   [SecretInfo](secret.md#secretinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](secret.md#list) </div> | <div style="width:200px; text-align:center;">    [SecretQuery](secret.md#secretquery)  </div> | <div style="width:200px; text-align:center;">   [SecretsInfo](secret.md#secretsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](secret.md#stat) </div> | <div style="width:200px; text-align:center;">    [SecretStatQuery](secret.md#secretstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

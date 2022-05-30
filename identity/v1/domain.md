@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](domain.md#create)|   [CreateDomainRequest](domain.md#createdomainrequest) |   [DomainInfo](domain.md#domaininfo) |  |
 | [**update**](domain.md#update)|   [UpdateDomainRequest](domain.md#updatedomainrequest) |   [DomainInfo](domain.md#domaininfo) |  |
 | [**change_auth_plugin**](domain.md#change_auth_plugin)|   [ChangeAuthRequest](domain.md#changeauthrequest) |   [DomainInfo](domain.md#domaininfo) |  |
@@ -26,7 +26,22 @@ description:
 | [**get**](domain.md#get)|   [GetDomainRequest](domain.md#getdomainrequest) |   [DomainInfo](domain.md#domaininfo) |  |
 | [**list**](domain.md#list)|   [DomainQuery](domain.md#domainquery) |   [DomainsInfo](domain.md#domainsinfo) |  |
 | [**stat**](domain.md#stat)|   [DomainStatQuery](domain.md#domainstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| [**get_public_key**](domain.md#get_public_key)| .spaceone.api.core.v1.AuthenticationRequest|  .spaceone.api.core.v1.AuthenticationResponse|  | 
+| [**get_public_key**](domain.md#get_public_key)| .spaceone.api.core.v1.AuthenticationRequest|  .spaceone.api.core.v1.AuthenticationResponse|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](domain.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateDomainRequest](domain.md#createdomainrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](domain.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateDomainRequest](domain.md#updatedomainrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**change_auth_plugin**](domain.md#change_auth_plugin) </div> | <div style="width:200px; text-align:center;">    [ChangeAuthRequest](domain.md#changeauthrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_plugin**](domain.md#update_plugin) </div> | <div style="width:200px; text-align:center;">    [UpdatePluginRequest](domain.md#updatepluginrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify_plugin**](domain.md#verify_plugin) </div> | <div style="width:200px; text-align:center;">    [DomainRequest](domain.md#domainrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](domain.md#delete) </div> | <div style="width:200px; text-align:center;">    [DomainRequest](domain.md#domainrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](domain.md#enable) </div> | <div style="width:200px; text-align:center;">    [DomainRequest](domain.md#domainrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](domain.md#disable) </div> | <div style="width:200px; text-align:center;">    [DomainRequest](domain.md#domainrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](domain.md#get) </div> | <div style="width:200px; text-align:center;">    [GetDomainRequest](domain.md#getdomainrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](domain.md#list) </div> | <div style="width:200px; text-align:center;">    [DomainQuery](domain.md#domainquery)  </div> | <div style="width:200px; text-align:center;">   [DomainsInfo](domain.md#domainsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](domain.md#stat) </div> | <div style="width:200px; text-align:center;">    [DomainStatQuery](domain.md#domainstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get_public_key**](domain.md#get_public_key) </div> | <div style="width:200px; text-align:center;">  .spaceone.api.core.v1.AuthenticationRequest </div> | <div style="width:200px; text-align:center;">  .spaceone.api.core.v1.AuthenticationResponse </div> | <div style="width:400px;">  </div> | 
  
 
  

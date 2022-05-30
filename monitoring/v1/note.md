@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](note.md#create)|   [CreateNoteRequest](note.md#createnoterequest) |   [NoteInfo](note.md#noteinfo) |  |
 | [**update**](note.md#update)|   [UpdateNoteRequest](note.md#updatenoterequest) |   [NoteInfo](note.md#noteinfo) |  |
 | [**delete**](note.md#delete)|   [NoteRequest](note.md#noterequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](note.md#get)|   [GetNoteRequest](note.md#getnoterequest) |   [NoteInfo](note.md#noteinfo) |  |
 | [**list**](note.md#list)|   [NoteQuery](note.md#notequery) |   [NotesInfo](note.md#notesinfo) |  |
-| [**stat**](note.md#stat)|   [NoteStatQuery](note.md#notestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](note.md#stat)|   [NoteStatQuery](note.md#notestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](note.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateNoteRequest](note.md#createnoterequest)  </div> | <div style="width:200px; text-align:center;">   [NoteInfo](note.md#noteinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](note.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateNoteRequest](note.md#updatenoterequest)  </div> | <div style="width:200px; text-align:center;">   [NoteInfo](note.md#noteinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](note.md#delete) </div> | <div style="width:200px; text-align:center;">    [NoteRequest](note.md#noterequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](note.md#get) </div> | <div style="width:200px; text-align:center;">    [GetNoteRequest](note.md#getnoterequest)  </div> | <div style="width:200px; text-align:center;">   [NoteInfo](note.md#noteinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](note.md#list) </div> | <div style="width:200px; text-align:center;">    [NoteQuery](note.md#notequery)  </div> | <div style="width:200px; text-align:center;">   [NotesInfo](note.md#notesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](note.md#stat) </div> | <div style="width:200px; text-align:center;">    [NoteStatQuery](note.md#notestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

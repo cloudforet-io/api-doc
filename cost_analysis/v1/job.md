@@ -13,12 +13,19 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**cancel**](job.md#cancel)|   [JobRequest](job.md#jobrequest) |   [JobInfo](job.md#jobinfo) |  |
 | [**get**](job.md#get)|   [GetJobRequest](job.md#getjobrequest) |   [JobInfo](job.md#jobinfo) |  |
 | [**list**](job.md#list)|   [JobQuery](job.md#jobquery) |   [JobsInfo](job.md#jobsinfo) |  |
-| [**stat**](job.md#stat)|   [JobStatQuery](job.md#jobstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](job.md#stat)|   [JobStatQuery](job.md#jobstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**cancel**](job.md#cancel) </div> | <div style="width:200px; text-align:center;">    [JobRequest](job.md#jobrequest)  </div> | <div style="width:200px; text-align:center;">   [JobInfo](job.md#jobinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](job.md#get) </div> | <div style="width:200px; text-align:center;">    [GetJobRequest](job.md#getjobrequest)  </div> | <div style="width:200px; text-align:center;">   [JobInfo](job.md#jobinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](job.md#list) </div> | <div style="width:200px; text-align:center;">    [JobQuery](job.md#jobquery)  </div> | <div style="width:200px; text-align:center;">   [JobsInfo](job.md#jobsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](job.md#stat) </div> | <div style="width:200px; text-align:center;">    [JobStatQuery](job.md#jobstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

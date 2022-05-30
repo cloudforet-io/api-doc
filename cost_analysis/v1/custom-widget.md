@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](custom-widget.md#create)|   [CreateCustomWidgetRequest](custom-widget.md#createcustomwidgetrequest) |   [CustomWidgetInfo](custom-widget.md#customwidgetinfo) |  |
 | [**update**](custom-widget.md#update)|   [UpdateCustomWidgetRequest](custom-widget.md#updatecustomwidgetrequest) |   [CustomWidgetInfo](custom-widget.md#customwidgetinfo) |  |
 | [**delete**](custom-widget.md#delete)|   [CustomWidgetRequest](custom-widget.md#customwidgetrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](custom-widget.md#get)|   [GetCustomWidgetRequest](custom-widget.md#getcustomwidgetrequest) |   [CustomWidgetInfo](custom-widget.md#customwidgetinfo) |  |
 | [**list**](custom-widget.md#list)|   [CustomWidgetQuery](custom-widget.md#customwidgetquery) |   [CustomWidgetsInfo](custom-widget.md#customwidgetsinfo) |  |
-| [**stat**](custom-widget.md#stat)|   [CustomWidgetStatQuery](custom-widget.md#customwidgetstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](custom-widget.md#stat)|   [CustomWidgetStatQuery](custom-widget.md#customwidgetstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](custom-widget.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateCustomWidgetRequest](custom-widget.md#createcustomwidgetrequest)  </div> | <div style="width:200px; text-align:center;">   [CustomWidgetInfo](custom-widget.md#customwidgetinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](custom-widget.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateCustomWidgetRequest](custom-widget.md#updatecustomwidgetrequest)  </div> | <div style="width:200px; text-align:center;">   [CustomWidgetInfo](custom-widget.md#customwidgetinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](custom-widget.md#delete) </div> | <div style="width:200px; text-align:center;">    [CustomWidgetRequest](custom-widget.md#customwidgetrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](custom-widget.md#get) </div> | <div style="width:200px; text-align:center;">    [GetCustomWidgetRequest](custom-widget.md#getcustomwidgetrequest)  </div> | <div style="width:200px; text-align:center;">   [CustomWidgetInfo](custom-widget.md#customwidgetinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](custom-widget.md#list) </div> | <div style="width:200px; text-align:center;">    [CustomWidgetQuery](custom-widget.md#customwidgetquery)  </div> | <div style="width:200px; text-align:center;">   [CustomWidgetsInfo](custom-widget.md#customwidgetsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](custom-widget.md#stat) </div> | <div style="width:200px; text-align:center;">    [CustomWidgetStatQuery](custom-widget.md#customwidgetstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

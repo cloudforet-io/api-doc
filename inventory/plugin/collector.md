@@ -13,11 +13,17 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**init**](collector.md#init)|   [InitRequest](collector.md#initrequest) |   [PluginInfo](collector.md#plugininfo) |  |
 | [**verify**](collector.md#verify)|   [VerifyRequest](collector.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) | **`stream`**   [ResourceInfo](collector.md#resourceinfo) |  | 
+| [**collect**](collector.md#collect)|   [CollectRequest](collector.md#collectrequest) | **`stream`**   [ResourceInfo](collector.md#resourceinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**init**](collector.md#init) </div> | <div style="width:200px; text-align:center;">    [InitRequest](collector.md#initrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](collector.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify**](collector.md#verify) </div> | <div style="width:200px; text-align:center;">    [VerifyRequest](collector.md#verifyrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**collect**](collector.md#collect) </div> | <div style="width:200px; text-align:center;">    [CollectRequest](collector.md#collectrequest)  </div> | <div style="width:200px; text-align:center;"> **`stream`**   [ResourceInfo](collector.md#resourceinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

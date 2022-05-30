@@ -13,15 +13,25 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](server.md#create)|   [CreateServerRequest](server.md#createserverrequest) |   [ServerInfo](server.md#serverinfo) |  |
 | [**update**](server.md#update)|   [UpdateServerRequest](server.md#updateserverrequest) |   [ServerInfo](server.md#serverinfo) |  |
 | [**pin_data**](server.md#pin_data)|   [PinServerDataRequest](server.md#pinserverdatarequest) |   [ServerInfo](server.md#serverinfo) |  |
 | [**delete**](server.md#delete)|   [ServerRequest](server.md#serverrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](server.md#get)|   [GetServerRequest](server.md#getserverrequest) |   [ServerInfo](server.md#serverinfo) |  |
 | [**list**](server.md#list)|   [ServerQuery](server.md#serverquery) |   [ServersInfo](server.md#serversinfo) |  |
-| [**stat**](server.md#stat)|   [ServerStatQuery](server.md#serverstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](server.md#stat)|   [ServerStatQuery](server.md#serverstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](server.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateServerRequest](server.md#createserverrequest)  </div> | <div style="width:200px; text-align:center;">   [ServerInfo](server.md#serverinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](server.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateServerRequest](server.md#updateserverrequest)  </div> | <div style="width:200px; text-align:center;">   [ServerInfo](server.md#serverinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**pin_data**](server.md#pin_data) </div> | <div style="width:200px; text-align:center;">    [PinServerDataRequest](server.md#pinserverdatarequest)  </div> | <div style="width:200px; text-align:center;">   [ServerInfo](server.md#serverinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](server.md#delete) </div> | <div style="width:200px; text-align:center;">    [ServerRequest](server.md#serverrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](server.md#get) </div> | <div style="width:200px; text-align:center;">    [GetServerRequest](server.md#getserverrequest)  </div> | <div style="width:200px; text-align:center;">   [ServerInfo](server.md#serverinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](server.md#list) </div> | <div style="width:200px; text-align:center;">    [ServerQuery](server.md#serverquery)  </div> | <div style="width:200px; text-align:center;">   [ServersInfo](server.md#serversinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](server.md#stat) </div> | <div style="width:200px; text-align:center;">    [ServerStatQuery](server.md#serverstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

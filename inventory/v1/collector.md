@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](collector.md#create)|   [CreateCollectorRequest](collector.md#createcollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
 | [**update**](collector.md#update)|   [UpdateCollectorRequest](collector.md#updatecollectorrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
 | [**update_plugin**](collector.md#update_plugin)|   [UpdatePluginRequest](collector.md#updatepluginrequest) |   [CollectorInfo](collector.md#collectorinfo) |  |
@@ -30,7 +30,26 @@ description:
 | [**get_schedule**](collector.md#get_schedule)|   [ScheduleRequest](collector.md#schedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
 | [**update_schedule**](collector.md#update_schedule)|   [UpdateScheduleRequest](collector.md#updateschedulerequest) |   [ScheduleInfo](collector.md#scheduleinfo) |  |
 | [**delete_schedule**](collector.md#delete_schedule)|   [DeleteScheduleRequest](collector.md#deleteschedulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**list_schedules**](collector.md#list_schedules)|   [ScheduleQuery](collector.md#schedulequery) |   [SchedulesInfo](collector.md#schedulesinfo) |  | 
+| [**list_schedules**](collector.md#list_schedules)|   [ScheduleQuery](collector.md#schedulequery) |   [SchedulesInfo](collector.md#schedulesinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](collector.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateCollectorRequest](collector.md#createcollectorrequest)  </div> | <div style="width:200px; text-align:center;">   [CollectorInfo](collector.md#collectorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](collector.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateCollectorRequest](collector.md#updatecollectorrequest)  </div> | <div style="width:200px; text-align:center;">   [CollectorInfo](collector.md#collectorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_plugin**](collector.md#update_plugin) </div> | <div style="width:200px; text-align:center;">    [UpdatePluginRequest](collector.md#updatepluginrequest)  </div> | <div style="width:200px; text-align:center;">   [CollectorInfo](collector.md#collectorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify_plugin**](collector.md#verify_plugin) </div> | <div style="width:200px; text-align:center;">    [VerifyPluginRequest](collector.md#verifypluginrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](collector.md#delete) </div> | <div style="width:200px; text-align:center;">    [CollectorRequest](collector.md#collectorrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](collector.md#get) </div> | <div style="width:200px; text-align:center;">    [GetCollectorRequest](collector.md#getcollectorrequest)  </div> | <div style="width:200px; text-align:center;">   [CollectorInfo](collector.md#collectorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](collector.md#enable) </div> | <div style="width:200px; text-align:center;">    [CollectorRequest](collector.md#collectorrequest)  </div> | <div style="width:200px; text-align:center;">   [CollectorInfo](collector.md#collectorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](collector.md#disable) </div> | <div style="width:200px; text-align:center;">    [CollectorRequest](collector.md#collectorrequest)  </div> | <div style="width:200px; text-align:center;">   [CollectorInfo](collector.md#collectorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](collector.md#list) </div> | <div style="width:200px; text-align:center;">    [CollectorQuery](collector.md#collectorquery)  </div> | <div style="width:200px; text-align:center;">   [CollectorsInfo](collector.md#collectorsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](collector.md#stat) </div> | <div style="width:200px; text-align:center;">    [CollectorStatQuery](collector.md#collectorstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**collect**](collector.md#collect) </div> | <div style="width:200px; text-align:center;">    [CollectRequest](collector.md#collectrequest)  </div> | <div style="width:200px; text-align:center;">   [JobInfo](collector.md#jobinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**add_schedule**](collector.md#add_schedule) </div> | <div style="width:200px; text-align:center;">    [CreateScheduleRequest](collector.md#createschedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](collector.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get_schedule**](collector.md#get_schedule) </div> | <div style="width:200px; text-align:center;">    [ScheduleRequest](collector.md#schedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](collector.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_schedule**](collector.md#update_schedule) </div> | <div style="width:200px; text-align:center;">    [UpdateScheduleRequest](collector.md#updateschedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](collector.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete_schedule**](collector.md#delete_schedule) </div> | <div style="width:200px; text-align:center;">    [DeleteScheduleRequest](collector.md#deleteschedulerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list_schedules**](collector.md#list_schedules) </div> | <div style="width:200px; text-align:center;">    [ScheduleQuery](collector.md#schedulequery)  </div> | <div style="width:200px; text-align:center;">   [SchedulesInfo](collector.md#schedulesinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

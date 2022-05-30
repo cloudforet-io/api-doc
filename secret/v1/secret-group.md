@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](secret-group.md#create)|   [CreateSecretGroupRequest](secret-group.md#createsecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
 | [**update**](secret-group.md#update)|   [UpdateSecretGroupRequest](secret-group.md#updatesecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
 | [**add_secret**](secret-group.md#add_secret)|   [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest) |   [SecretGroupSecretInfo](secret-group.md#secretgroupsecretinfo) |  |
@@ -22,7 +22,18 @@ description:
 | [**delete**](secret-group.md#delete)|   [SecretGroupRequest](secret-group.md#secretgrouprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](secret-group.md#get)|   [GetSecretGroupRequest](secret-group.md#getsecretgrouprequest) |   [SecretGroupInfo](secret-group.md#secretgroupinfo) |  |
 | [**list**](secret-group.md#list)|   [SecretGroupQuery](secret-group.md#secretgroupquery) |   [SecretGroupsInfo](secret-group.md#secretgroupsinfo) |  |
-| [**stat**](secret-group.md#stat)|   [SecretGroupStatQuery](secret-group.md#secretgroupstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](secret-group.md#stat)|   [SecretGroupStatQuery](secret-group.md#secretgroupstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](secret-group.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateSecretGroupRequest](secret-group.md#createsecretgrouprequest)  </div> | <div style="width:200px; text-align:center;">   [SecretGroupInfo](secret-group.md#secretgroupinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](secret-group.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateSecretGroupRequest](secret-group.md#updatesecretgrouprequest)  </div> | <div style="width:200px; text-align:center;">   [SecretGroupInfo](secret-group.md#secretgroupinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**add_secret**](secret-group.md#add_secret) </div> | <div style="width:200px; text-align:center;">    [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest)  </div> | <div style="width:200px; text-align:center;">   [SecretGroupSecretInfo](secret-group.md#secretgroupsecretinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**remove_secret**](secret-group.md#remove_secret) </div> | <div style="width:200px; text-align:center;">    [SecretGroupSecretRequest](secret-group.md#secretgroupsecretrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](secret-group.md#delete) </div> | <div style="width:200px; text-align:center;">    [SecretGroupRequest](secret-group.md#secretgrouprequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](secret-group.md#get) </div> | <div style="width:200px; text-align:center;">    [GetSecretGroupRequest](secret-group.md#getsecretgrouprequest)  </div> | <div style="width:200px; text-align:center;">   [SecretGroupInfo](secret-group.md#secretgroupinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](secret-group.md#list) </div> | <div style="width:200px; text-align:center;">    [SecretGroupQuery](secret-group.md#secretgroupquery)  </div> | <div style="width:200px; text-align:center;">   [SecretGroupsInfo](secret-group.md#secretgroupsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](secret-group.md#stat) </div> | <div style="width:200px; text-align:center;">    [SecretGroupStatQuery](secret-group.md#secretgroupstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

@@ -13,12 +13,19 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](domain-owner.md#create)|   [CreateDomainOwner](domain-owner.md#createdomainowner) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
 | [**update**](domain-owner.md#update)|   [UpdateDomainOwner](domain-owner.md#updatedomainowner) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |
 | [**delete**](domain-owner.md#delete)|   [DomainOwnerRequest](domain-owner.md#domainownerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**get**](domain-owner.md#get)|   [GetDomainOwnerRequest](domain-owner.md#getdomainownerrequest) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  | 
+| [**get**](domain-owner.md#get)|   [GetDomainOwnerRequest](domain-owner.md#getdomainownerrequest) |   [DomainOwnerInfo](domain-owner.md#domainownerinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](domain-owner.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateDomainOwner](domain-owner.md#createdomainowner)  </div> | <div style="width:200px; text-align:center;">   [DomainOwnerInfo](domain-owner.md#domainownerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](domain-owner.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateDomainOwner](domain-owner.md#updatedomainowner)  </div> | <div style="width:200px; text-align:center;">   [DomainOwnerInfo](domain-owner.md#domainownerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](domain-owner.md#delete) </div> | <div style="width:200px; text-align:center;">    [DomainOwnerRequest](domain-owner.md#domainownerrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](domain-owner.md#get) </div> | <div style="width:200px; text-align:center;">    [GetDomainOwnerRequest](domain-owner.md#getdomainownerrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainOwnerInfo](domain-owner.md#domainownerinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

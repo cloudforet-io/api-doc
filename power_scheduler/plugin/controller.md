@@ -13,13 +13,21 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**init**](controller.md#init)|   [InitRequest](controller.md#initrequest) |   [PluginInfo](controller.md#plugininfo) |  |
 | [**verify**](controller.md#verify)|   [VerifyRequest](controller.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**start**](controller.md#start)|   [StartRequest](controller.md#startrequest) |   [UpdateInfo](controller.md#updateinfo) |  |
 | [**stop**](controller.md#stop)|   [StopRequest](controller.md#stoprequest) |   [UpdateInfo](controller.md#updateinfo) |  |
-| [**reboot**](controller.md#reboot)|   [RebootRequest](controller.md#rebootrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
+| [**reboot**](controller.md#reboot)|   [RebootRequest](controller.md#rebootrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**init**](controller.md#init) </div> | <div style="width:200px; text-align:center;">    [InitRequest](controller.md#initrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](controller.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify**](controller.md#verify) </div> | <div style="width:200px; text-align:center;">    [VerifyRequest](controller.md#verifyrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**start**](controller.md#start) </div> | <div style="width:200px; text-align:center;">    [StartRequest](controller.md#startrequest)  </div> | <div style="width:200px; text-align:center;">   [UpdateInfo](controller.md#updateinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stop**](controller.md#stop) </div> | <div style="width:200px; text-align:center;">    [StopRequest](controller.md#stoprequest)  </div> | <div style="width:200px; text-align:center;">   [UpdateInfo](controller.md#updateinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**reboot**](controller.md#reboot) </div> | <div style="width:200px; text-align:center;">    [RebootRequest](controller.md#rebootrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

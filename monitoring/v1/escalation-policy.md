@@ -13,15 +13,25 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](escalation-policy.md#create)|   [CreateEscalationPolicyRequest](escalation-policy.md#createescalationpolicyrequest) |   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo) |  |
 | [**update**](escalation-policy.md#update)|   [UpdateEscalationPolicyRequest](escalation-policy.md#updateescalationpolicyrequest) |   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo) |  |
 | [**set_default**](escalation-policy.md#set_default)|   [EscalationPolicyRequest](escalation-policy.md#escalationpolicyrequest) |   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo) |  |
 | [**delete**](escalation-policy.md#delete)|   [EscalationPolicyRequest](escalation-policy.md#escalationpolicyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](escalation-policy.md#get)|   [GetEscalationPolicyRequest](escalation-policy.md#getescalationpolicyrequest) |   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo) |  |
 | [**list**](escalation-policy.md#list)|   [EscalationPolicyQuery](escalation-policy.md#escalationpolicyquery) |   [EscalationPoliciesInfo](escalation-policy.md#escalationpoliciesinfo) |  |
-| [**stat**](escalation-policy.md#stat)|   [EscalationPolicyStatQuery](escalation-policy.md#escalationpolicystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](escalation-policy.md#stat)|   [EscalationPolicyStatQuery](escalation-policy.md#escalationpolicystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](escalation-policy.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateEscalationPolicyRequest](escalation-policy.md#createescalationpolicyrequest)  </div> | <div style="width:200px; text-align:center;">   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](escalation-policy.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateEscalationPolicyRequest](escalation-policy.md#updateescalationpolicyrequest)  </div> | <div style="width:200px; text-align:center;">   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**set_default**](escalation-policy.md#set_default) </div> | <div style="width:200px; text-align:center;">    [EscalationPolicyRequest](escalation-policy.md#escalationpolicyrequest)  </div> | <div style="width:200px; text-align:center;">   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](escalation-policy.md#delete) </div> | <div style="width:200px; text-align:center;">    [EscalationPolicyRequest](escalation-policy.md#escalationpolicyrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](escalation-policy.md#get) </div> | <div style="width:200px; text-align:center;">    [GetEscalationPolicyRequest](escalation-policy.md#getescalationpolicyrequest)  </div> | <div style="width:200px; text-align:center;">   [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](escalation-policy.md#list) </div> | <div style="width:200px; text-align:center;">    [EscalationPolicyQuery](escalation-policy.md#escalationpolicyquery)  </div> | <div style="width:200px; text-align:center;">   [EscalationPoliciesInfo](escalation-policy.md#escalationpoliciesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](escalation-policy.md#stat) </div> | <div style="width:200px; text-align:center;">    [EscalationPolicyStatQuery](escalation-policy.md#escalationpolicystatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

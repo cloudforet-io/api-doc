@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](public-dashboard.md#create)|   [CreatePublicDashboardRequest](public-dashboard.md#createpublicdashboardrequest) |   [PublicDashboardInfo](public-dashboard.md#publicdashboardinfo) |  |
 | [**update**](public-dashboard.md#update)|   [UpdatePublicDashboardRequest](public-dashboard.md#updatepublicdashboardrequest) |   [PublicDashboardInfo](public-dashboard.md#publicdashboardinfo) |  |
 | [**delete**](public-dashboard.md#delete)|   [PublicDashboardRequest](public-dashboard.md#publicdashboardrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](public-dashboard.md#get)|   [GetPublicDashboardRequest](public-dashboard.md#getpublicdashboardrequest) |   [PublicDashboardInfo](public-dashboard.md#publicdashboardinfo) |  |
 | [**list**](public-dashboard.md#list)|   [PublicDashboardQuery](public-dashboard.md#publicdashboardquery) |   [PublicDashboardsInfo](public-dashboard.md#publicdashboardsinfo) |  |
-| [**stat**](public-dashboard.md#stat)|   [PublicDashboardStatQuery](public-dashboard.md#publicdashboardstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](public-dashboard.md#stat)|   [PublicDashboardStatQuery](public-dashboard.md#publicdashboardstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](public-dashboard.md#create) </div> | <div style="width:200px; text-align:center;">    [CreatePublicDashboardRequest](public-dashboard.md#createpublicdashboardrequest)  </div> | <div style="width:200px; text-align:center;">   [PublicDashboardInfo](public-dashboard.md#publicdashboardinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](public-dashboard.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdatePublicDashboardRequest](public-dashboard.md#updatepublicdashboardrequest)  </div> | <div style="width:200px; text-align:center;">   [PublicDashboardInfo](public-dashboard.md#publicdashboardinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](public-dashboard.md#delete) </div> | <div style="width:200px; text-align:center;">    [PublicDashboardRequest](public-dashboard.md#publicdashboardrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](public-dashboard.md#get) </div> | <div style="width:200px; text-align:center;">    [GetPublicDashboardRequest](public-dashboard.md#getpublicdashboardrequest)  </div> | <div style="width:200px; text-align:center;">   [PublicDashboardInfo](public-dashboard.md#publicdashboardinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](public-dashboard.md#list) </div> | <div style="width:200px; text-align:center;">    [PublicDashboardQuery](public-dashboard.md#publicdashboardquery)  </div> | <div style="width:200px; text-align:center;">   [PublicDashboardsInfo](public-dashboard.md#publicdashboardsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](public-dashboard.md#stat) </div> | <div style="width:200px; text-align:center;">    [PublicDashboardStatQuery](public-dashboard.md#publicdashboardstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

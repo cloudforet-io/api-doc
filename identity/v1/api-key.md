@@ -13,15 +13,25 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](api-key.md#create)|   [CreateAPIKeyRequest](api-key.md#createapikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
 | [**enable**](api-key.md#enable)|   [APIKeyRequest](api-key.md#apikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
 | [**disable**](api-key.md#disable)|   [APIKeyRequest](api-key.md#apikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
 | [**delete**](api-key.md#delete)|   [APIKeyRequest](api-key.md#apikeyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](api-key.md#get)|   [GetAPIKeyRequest](api-key.md#getapikeyrequest) |   [APIKeyInfo](api-key.md#apikeyinfo) |  |
 | [**list**](api-key.md#list)|   [APIKeyQuery](api-key.md#apikeyquery) |   [APIKeysInfo](api-key.md#apikeysinfo) |  |
-| [**stat**](api-key.md#stat)|   [APIKeyStatQuery](api-key.md#apikeystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](api-key.md#stat)|   [APIKeyStatQuery](api-key.md#apikeystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](api-key.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateAPIKeyRequest](api-key.md#createapikeyrequest)  </div> | <div style="width:200px; text-align:center;">   [APIKeyInfo](api-key.md#apikeyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](api-key.md#enable) </div> | <div style="width:200px; text-align:center;">    [APIKeyRequest](api-key.md#apikeyrequest)  </div> | <div style="width:200px; text-align:center;">   [APIKeyInfo](api-key.md#apikeyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](api-key.md#disable) </div> | <div style="width:200px; text-align:center;">    [APIKeyRequest](api-key.md#apikeyrequest)  </div> | <div style="width:200px; text-align:center;">   [APIKeyInfo](api-key.md#apikeyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](api-key.md#delete) </div> | <div style="width:200px; text-align:center;">    [APIKeyRequest](api-key.md#apikeyrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](api-key.md#get) </div> | <div style="width:200px; text-align:center;">    [GetAPIKeyRequest](api-key.md#getapikeyrequest)  </div> | <div style="width:200px; text-align:center;">   [APIKeyInfo](api-key.md#apikeyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](api-key.md#list) </div> | <div style="width:200px; text-align:center;">    [APIKeyQuery](api-key.md#apikeyquery)  </div> | <div style="width:200px; text-align:center;">   [APIKeysInfo](api-key.md#apikeysinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](api-key.md#stat) </div> | <div style="width:200px; text-align:center;">    [APIKeyStatQuery](api-key.md#apikeystatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

@@ -13,8 +13,8 @@ description: User API which allows member management within project, company, an
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](user.md#create)|   [CreateUserRequest](user.md#createuserrequest) |   [UserInfo](user.md#userinfo) |  |
 | [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) | Update user info by given user_id |
 | [**enable**](user.md#enable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |
@@ -24,7 +24,20 @@ description: User API which allows member management within project, company, an
 | [**list**](user.md#list)|   [UserQuery](user.md#userquery) |   [UsersInfo](user.md#usersinfo) |  |
 | [**stat**](user.md#stat)|   [UserStatQuery](user.md#userstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 | [**find**](user.md#find)|   [FindUserQuery](user.md#finduserquery) |   [FindUsersInfo](user.md#findusersinfo) |  |
-| [**sync**](user.md#sync)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  | 
+| [**sync**](user.md#sync)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](user.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateUserRequest](user.md#createuserrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](user.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateUserRequest](user.md#updateuserrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;"> Update user info by given user_id </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](user.md#enable) </div> | <div style="width:200px; text-align:center;">    [UserRequest](user.md#userrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](user.md#disable) </div> | <div style="width:200px; text-align:center;">    [UserRequest](user.md#userrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](user.md#delete) </div> | <div style="width:200px; text-align:center;">    [UserRequest](user.md#userrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](user.md#get) </div> | <div style="width:200px; text-align:center;">    [GetUserRequest](user.md#getuserrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](user.md#list) </div> | <div style="width:200px; text-align:center;">    [UserQuery](user.md#userquery)  </div> | <div style="width:200px; text-align:center;">   [UsersInfo](user.md#usersinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](user.md#stat) </div> | <div style="width:200px; text-align:center;">    [UserStatQuery](user.md#userstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**find**](user.md#find) </div> | <div style="width:200px; text-align:center;">    [FindUserQuery](user.md#finduserquery)  </div> | <div style="width:200px; text-align:center;">   [FindUsersInfo](user.md#findusersinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**sync**](user.md#sync) </div> | <div style="width:200px; text-align:center;">    [UserRequest](user.md#userrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

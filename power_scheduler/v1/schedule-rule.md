@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](schedule-rule.md#create)|   [CreateScheduleRuleRequest](schedule-rule.md#createschedulerulerequest) |   [RuleInfo](schedule-rule.md#ruleinfo) |  |
 | [**update**](schedule-rule.md#update)|   [UpdateScheduleRuleRequest](schedule-rule.md#updateschedulerulerequest) |   [RuleInfo](schedule-rule.md#ruleinfo) |  |
 | [**delete**](schedule-rule.md#delete)|   [ScheduleRuleRequest](schedule-rule.md#schedulerulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](schedule-rule.md#get)|   [GetScheduleRuleRequest](schedule-rule.md#getschedulerulerequest) |   [RuleInfo](schedule-rule.md#ruleinfo) |  |
 | [**list**](schedule-rule.md#list)|   [ScheduleRuleQuery](schedule-rule.md#schedulerulequery) |   [RulesInfo](schedule-rule.md#rulesinfo) |  |
-| [**stat**](schedule-rule.md#stat)|   [ScheduleRuleStatQuery](schedule-rule.md#schedulerulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](schedule-rule.md#stat)|   [ScheduleRuleStatQuery](schedule-rule.md#schedulerulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](schedule-rule.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateScheduleRuleRequest](schedule-rule.md#createschedulerulerequest)  </div> | <div style="width:200px; text-align:center;">   [RuleInfo](schedule-rule.md#ruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](schedule-rule.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateScheduleRuleRequest](schedule-rule.md#updateschedulerulerequest)  </div> | <div style="width:200px; text-align:center;">   [RuleInfo](schedule-rule.md#ruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](schedule-rule.md#delete) </div> | <div style="width:200px; text-align:center;">    [ScheduleRuleRequest](schedule-rule.md#schedulerulerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](schedule-rule.md#get) </div> | <div style="width:200px; text-align:center;">    [GetScheduleRuleRequest](schedule-rule.md#getschedulerulerequest)  </div> | <div style="width:200px; text-align:center;">   [RuleInfo](schedule-rule.md#ruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](schedule-rule.md#list) </div> | <div style="width:200px; text-align:center;">    [ScheduleRuleQuery](schedule-rule.md#schedulerulequery)  </div> | <div style="width:200px; text-align:center;">   [RulesInfo](schedule-rule.md#rulesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](schedule-rule.md#stat) </div> | <div style="width:200px; text-align:center;">    [ScheduleRuleStatQuery](schedule-rule.md#schedulerulestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

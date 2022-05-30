@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](provider.md#create)|   [CreateProviderRequest](provider.md#createproviderrequest) |   [ProviderInfo](provider.md#providerinfo) |  |
 | [**update**](provider.md#update)|   [UpdateProviderRequest](provider.md#updateproviderrequest) |   [ProviderInfo](provider.md#providerinfo) |  |
 | [**delete**](provider.md#delete)|   [ProviderRequest](provider.md#providerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](provider.md#get)|   [GetProviderRequest](provider.md#getproviderrequest) |   [ProviderInfo](provider.md#providerinfo) |  |
 | [**list**](provider.md#list)|   [ProviderQuery](provider.md#providerquery) |   [ProvidersInfo](provider.md#providersinfo) |  |
-| [**stat**](provider.md#stat)|   [ProviderStatQuery](provider.md#providerstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](provider.md#stat)|   [ProviderStatQuery](provider.md#providerstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](provider.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateProviderRequest](provider.md#createproviderrequest)  </div> | <div style="width:200px; text-align:center;">   [ProviderInfo](provider.md#providerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](provider.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateProviderRequest](provider.md#updateproviderrequest)  </div> | <div style="width:200px; text-align:center;">   [ProviderInfo](provider.md#providerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](provider.md#delete) </div> | <div style="width:200px; text-align:center;">    [ProviderRequest](provider.md#providerrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](provider.md#get) </div> | <div style="width:200px; text-align:center;">    [GetProviderRequest](provider.md#getproviderrequest)  </div> | <div style="width:200px; text-align:center;">   [ProviderInfo](provider.md#providerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](provider.md#list) </div> | <div style="width:200px; text-align:center;">    [ProviderQuery](provider.md#providerquery)  </div> | <div style="width:200px; text-align:center;">   [ProvidersInfo](provider.md#providersinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](provider.md#stat) </div> | <div style="width:200px; text-align:center;">    [ProviderStatQuery](provider.md#providerstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

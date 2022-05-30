@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](policy.md#create)|   [CreatePolicyRequest](policy.md#createpolicyrequest) |   [PolicyInfo](policy.md#policyinfo) |  |
 | [**update**](policy.md#update)|   [UpdatePolicyRequest](policy.md#updatepolicyrequest) |   [PolicyInfo](policy.md#policyinfo) |  |
 | [**delete**](policy.md#delete)|   [PolicyRequest](policy.md#policyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](policy.md#get)|   [GetRepositoryPolicyRequest](policy.md#getrepositorypolicyrequest) |   [PolicyInfo](policy.md#policyinfo) |  |
 | [**list**](policy.md#list)|   [PolicyQuery](policy.md#policyquery) |   [PoliciesInfo](policy.md#policiesinfo) |  |
-| [**stat**](policy.md#stat)|   [PolicyStatQuery](policy.md#policystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](policy.md#stat)|   [PolicyStatQuery](policy.md#policystatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](policy.md#create) </div> | <div style="width:200px; text-align:center;">    [CreatePolicyRequest](policy.md#createpolicyrequest)  </div> | <div style="width:200px; text-align:center;">   [PolicyInfo](policy.md#policyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](policy.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdatePolicyRequest](policy.md#updatepolicyrequest)  </div> | <div style="width:200px; text-align:center;">   [PolicyInfo](policy.md#policyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](policy.md#delete) </div> | <div style="width:200px; text-align:center;">    [PolicyRequest](policy.md#policyrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](policy.md#get) </div> | <div style="width:200px; text-align:center;">    [GetRepositoryPolicyRequest](policy.md#getrepositorypolicyrequest)  </div> | <div style="width:200px; text-align:center;">   [PolicyInfo](policy.md#policyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](policy.md#list) </div> | <div style="width:200px; text-align:center;">    [PolicyQuery](policy.md#policyquery)  </div> | <div style="width:200px; text-align:center;">   [PoliciesInfo](policy.md#policiesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](policy.md#stat) </div> | <div style="width:200px; text-align:center;">    [PolicyStatQuery](policy.md#policystatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

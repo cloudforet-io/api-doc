@@ -13,15 +13,25 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](cloud-service.md#create)|   [CreateServiceRequest](cloud-service.md#createservicerequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
 | [**update**](cloud-service.md#update)|   [UpdateCloudServiceRequest](cloud-service.md#updatecloudservicerequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
 | [**pin_data**](cloud-service.md#pin_data)|   [PinCloudServiceDataRequest](cloud-service.md#pincloudservicedatarequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
 | [**delete**](cloud-service.md#delete)|   [CloudServiceRequest](cloud-service.md#cloudservicerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](cloud-service.md#get)|   [GetCloudServiceRequest](cloud-service.md#getcloudservicerequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |  |
 | [**list**](cloud-service.md#list)|   [CloudServiceQuery](cloud-service.md#cloudservicequery) |   [CloudServicesInfo](cloud-service.md#cloudservicesinfo) |  |
-| [**stat**](cloud-service.md#stat)|   [CloudServiceStatQuery](cloud-service.md#cloudservicestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](cloud-service.md#stat)|   [CloudServiceStatQuery](cloud-service.md#cloudservicestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](cloud-service.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateServiceRequest](cloud-service.md#createservicerequest)  </div> | <div style="width:200px; text-align:center;">   [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](cloud-service.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateCloudServiceRequest](cloud-service.md#updatecloudservicerequest)  </div> | <div style="width:200px; text-align:center;">   [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**pin_data**](cloud-service.md#pin_data) </div> | <div style="width:200px; text-align:center;">    [PinCloudServiceDataRequest](cloud-service.md#pincloudservicedatarequest)  </div> | <div style="width:200px; text-align:center;">   [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](cloud-service.md#delete) </div> | <div style="width:200px; text-align:center;">    [CloudServiceRequest](cloud-service.md#cloudservicerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](cloud-service.md#get) </div> | <div style="width:200px; text-align:center;">    [GetCloudServiceRequest](cloud-service.md#getcloudservicerequest)  </div> | <div style="width:200px; text-align:center;">   [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](cloud-service.md#list) </div> | <div style="width:200px; text-align:center;">    [CloudServiceQuery](cloud-service.md#cloudservicequery)  </div> | <div style="width:200px; text-align:center;">   [CloudServicesInfo](cloud-service.md#cloudservicesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](cloud-service.md#stat) </div> | <div style="width:200px; text-align:center;">    [CloudServiceStatQuery](cloud-service.md#cloudservicestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

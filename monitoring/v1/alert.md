@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](alert.md#create)|   [CreateAlertRequest](alert.md#createalertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
 | [**update**](alert.md#update)|   [UpdateAlertRequest](alert.md#updatealertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
 | [**update_state**](alert.md#update_state)|   [UpdateAlertStateRequest](alert.md#updatealertstaterequest) |   [AlertInfo](alert.md#alertinfo) |  |
@@ -27,7 +27,23 @@ description:
 | [**delete**](alert.md#delete)|   [AlertRequest](alert.md#alertrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](alert.md#get)|   [GetAlertRequest](alert.md#getalertrequest) |   [AlertInfo](alert.md#alertinfo) |  |
 | [**list**](alert.md#list)|   [AlertQuery](alert.md#alertquery) |   [AlertsInfo](alert.md#alertsinfo) |  |
-| [**stat**](alert.md#stat)|   [AlertStatQuery](alert.md#alertstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](alert.md#stat)|   [AlertStatQuery](alert.md#alertstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](alert.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateAlertRequest](alert.md#createalertrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](alert.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateAlertRequest](alert.md#updatealertrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_state**](alert.md#update_state) </div> | <div style="width:200px; text-align:center;">    [UpdateAlertStateRequest](alert.md#updatealertstaterequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**merge**](alert.md#merge) </div> | <div style="width:200px; text-align:center;">    [MergeAlertRequest](alert.md#mergealertrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**snooze**](alert.md#snooze) </div> | <div style="width:200px; text-align:center;">    [SnoozeAlertRequest](alert.md#snoozealertrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**add_responder**](alert.md#add_responder) </div> | <div style="width:200px; text-align:center;">    [AlertResponderRequest](alert.md#alertresponderrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**remove_responder**](alert.md#remove_responder) </div> | <div style="width:200px; text-align:center;">    [AlertResponderRequest](alert.md#alertresponderrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**add_project_dependency**](alert.md#add_project_dependency) </div> | <div style="width:200px; text-align:center;">    [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**remove_project_dependency**](alert.md#remove_project_dependency) </div> | <div style="width:200px; text-align:center;">    [AlertProjectDependencyRequest](alert.md#alertprojectdependencyrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](alert.md#delete) </div> | <div style="width:200px; text-align:center;">    [AlertRequest](alert.md#alertrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](alert.md#get) </div> | <div style="width:200px; text-align:center;">    [GetAlertRequest](alert.md#getalertrequest)  </div> | <div style="width:200px; text-align:center;">   [AlertInfo](alert.md#alertinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](alert.md#list) </div> | <div style="width:200px; text-align:center;">    [AlertQuery](alert.md#alertquery)  </div> | <div style="width:200px; text-align:center;">   [AlertsInfo](alert.md#alertsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](alert.md#stat) </div> | <div style="width:200px; text-align:center;">    [AlertStatQuery](alert.md#alertstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

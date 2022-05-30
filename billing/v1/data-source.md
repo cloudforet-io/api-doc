@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**register**](data-source.md#register)|   [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
 | [**update**](data-source.md#update)|   [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
 | [**enable**](data-source.md#enable)|   [DataSourceRequest](data-source.md#datasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
@@ -23,7 +23,19 @@ description:
 | [**verify_plugin**](data-source.md#verify_plugin)|   [DataSourceRequest](data-source.md#datasourcerequest) |   [VerifyInfo](data-source.md#verifyinfo) |  |
 | [**get**](data-source.md#get)|   [GetDataSourceRequest](data-source.md#getdatasourcerequest) |   [DataSourceInfo](data-source.md#datasourceinfo) |  |
 | [**list**](data-source.md#list)|   [DataSourceQuery](data-source.md#datasourcequery) |   [DataSourcesInfo](data-source.md#datasourcesinfo) |  |
-| [**stat**](data-source.md#stat)|   [DataSourceStatQuery](data-source.md#datasourcestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](data-source.md#stat)|   [DataSourceStatQuery](data-source.md#datasourcestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**register**](data-source.md#register) </div> | <div style="width:200px; text-align:center;">    [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceInfo](data-source.md#datasourceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](data-source.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceInfo](data-source.md#datasourceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](data-source.md#enable) </div> | <div style="width:200px; text-align:center;">    [DataSourceRequest](data-source.md#datasourcerequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceInfo](data-source.md#datasourceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](data-source.md#disable) </div> | <div style="width:200px; text-align:center;">    [DataSourceRequest](data-source.md#datasourcerequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceInfo](data-source.md#datasourceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**deregister**](data-source.md#deregister) </div> | <div style="width:200px; text-align:center;">    [DataSourceRequest](data-source.md#datasourcerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify_plugin**](data-source.md#verify_plugin) </div> | <div style="width:200px; text-align:center;">    [DataSourceRequest](data-source.md#datasourcerequest)  </div> | <div style="width:200px; text-align:center;">   [VerifyInfo](data-source.md#verifyinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](data-source.md#get) </div> | <div style="width:200px; text-align:center;">    [GetDataSourceRequest](data-source.md#getdatasourcerequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceInfo](data-source.md#datasourceinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](data-source.md#list) </div> | <div style="width:200px; text-align:center;">    [DataSourceQuery](data-source.md#datasourcequery)  </div> | <div style="width:200px; text-align:center;">   [DataSourcesInfo](data-source.md#datasourcesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](data-source.md#stat) </div> | <div style="width:200px; text-align:center;">    [DataSourceStatQuery](data-source.md#datasourcestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](project-group.md#create)|   [CreateProjectGroupRequest](project-group.md#createprojectgrouprequest) |   [ProjectGroupInfo](project-group.md#projectgroupinfo) |  |
 | [**update**](project-group.md#update)|   [UpdateProjectGroupRequest](project-group.md#updateprojectgrouprequest) |   [ProjectGroupInfo](project-group.md#projectgroupinfo) |  |
 | [**delete**](project-group.md#delete)|   [ProjectGroupRequest](project-group.md#projectgrouprequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -25,7 +25,21 @@ description:
 | [**modify_member**](project-group.md#modify_member)|   [ModifyProjectGroupMemberRequest](project-group.md#modifyprojectgroupmemberrequest) |   [ProjectGroupRoleBindingInfo](project-group.md#projectgrouprolebindinginfo) |  |
 | [**remove_member**](project-group.md#remove_member)|   [RemoveProjectGroupMemberRequest](project-group.md#removeprojectgroupmemberrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**list_members**](project-group.md#list_members)|   [ProjectGroupMemberQuery](project-group.md#projectgroupmemberquery) |   [ProjectGroupRoleBindingsInfo](project-group.md#projectgrouprolebindingsinfo) |  |
-| [**list_projects**](project-group.md#list_projects)|   [ProjectGroupProjectQuery](project-group.md#projectgroupprojectquery) |   [ProjectGroupProjectsInfo](project-group.md#projectgroupprojectsinfo) |  | 
+| [**list_projects**](project-group.md#list_projects)|   [ProjectGroupProjectQuery](project-group.md#projectgroupprojectquery) |   [ProjectGroupProjectsInfo](project-group.md#projectgroupprojectsinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](project-group.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateProjectGroupRequest](project-group.md#createprojectgrouprequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectGroupInfo](project-group.md#projectgroupinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](project-group.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateProjectGroupRequest](project-group.md#updateprojectgrouprequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectGroupInfo](project-group.md#projectgroupinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](project-group.md#delete) </div> | <div style="width:200px; text-align:center;">    [ProjectGroupRequest](project-group.md#projectgrouprequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](project-group.md#get) </div> | <div style="width:200px; text-align:center;">    [GetProjectGroupRequest](project-group.md#getprojectgrouprequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectGroupInfo](project-group.md#projectgroupinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](project-group.md#list) </div> | <div style="width:200px; text-align:center;">    [ProjectGroupQuery](project-group.md#projectgroupquery)  </div> | <div style="width:200px; text-align:center;">   [ProjectGroupsInfo](project-group.md#projectgroupsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](project-group.md#stat) </div> | <div style="width:200px; text-align:center;">    [ProjectGroupStatQuery](project-group.md#projectgroupstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**add_member**](project-group.md#add_member) </div> | <div style="width:200px; text-align:center;">    [AddProjectGroupMemberRequest](project-group.md#addprojectgroupmemberrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectGroupRoleBindingInfo](project-group.md#projectgrouprolebindinginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**modify_member**](project-group.md#modify_member) </div> | <div style="width:200px; text-align:center;">    [ModifyProjectGroupMemberRequest](project-group.md#modifyprojectgroupmemberrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectGroupRoleBindingInfo](project-group.md#projectgrouprolebindinginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**remove_member**](project-group.md#remove_member) </div> | <div style="width:200px; text-align:center;">    [RemoveProjectGroupMemberRequest](project-group.md#removeprojectgroupmemberrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list_members**](project-group.md#list_members) </div> | <div style="width:200px; text-align:center;">    [ProjectGroupMemberQuery](project-group.md#projectgroupmemberquery)  </div> | <div style="width:200px; text-align:center;">   [ProjectGroupRoleBindingsInfo](project-group.md#projectgrouprolebindingsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list_projects**](project-group.md#list_projects) </div> | <div style="width:200px; text-align:center;">    [ProjectGroupProjectQuery](project-group.md#projectgroupprojectquery)  </div> | <div style="width:200px; text-align:center;">   [ProjectGroupProjectsInfo](project-group.md#projectgroupprojectsinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

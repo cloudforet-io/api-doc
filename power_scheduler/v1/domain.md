@@ -13,12 +13,19 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**enable**](domain.md#enable)|   [DomainRequest](domain.md#domainrequest) |   [DomainInfo](domain.md#domaininfo) |  |
 | [**disable**](domain.md#disable)|   [DomainRequest](domain.md#domainrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](domain.md#get)|   [DomainRequest](domain.md#domainrequest) |   [DomainInfo](domain.md#domaininfo) |  |
-| [**list**](domain.md#list)|   [DomainQuery](domain.md#domainquery) |   [DomainsInfo](domain.md#domainsinfo) |  | 
+| [**list**](domain.md#list)|   [DomainQuery](domain.md#domainquery) |   [DomainsInfo](domain.md#domainsinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**enable**](domain.md#enable) </div> | <div style="width:200px; text-align:center;">    [DomainRequest](domain.md#domainrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](domain.md#disable) </div> | <div style="width:200px; text-align:center;">    [DomainRequest](domain.md#domainrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](domain.md#get) </div> | <div style="width:200px; text-align:center;">    [DomainRequest](domain.md#domainrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainInfo](domain.md#domaininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](domain.md#list) </div> | <div style="width:200px; text-align:center;">    [DomainQuery](domain.md#domainquery)  </div> | <div style="width:200px; text-align:center;">   [DomainsInfo](domain.md#domainsinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

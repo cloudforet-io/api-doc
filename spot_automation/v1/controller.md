@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](controller.md#create)|   [CreateControllerRequest](controller.md#createcontrollerrequest) |   [ControllerInfo](controller.md#controllerinfo) |  |
 | [**update**](controller.md#update)|   [UpdateControllerRequest](controller.md#updatecontrollerrequest) |   [ControllerInfo](controller.md#controllerinfo) |  |
 | [**delete**](controller.md#delete)|   [ControllerRequest](controller.md#controllerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -23,7 +23,19 @@ description:
 | [**stat**](controller.md#stat)|   [ControllerStatQuery](controller.md#controllerstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
 | [**control**](controller.md#control)|   [ControlRequest](controller.md#controlrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**update_plugin**](controller.md#update_plugin)|   [UpdatePluginRequest](controller.md#updatepluginrequest) |   [ControllerInfo](controller.md#controllerinfo) |  |
-| [**verify_plugin**](controller.md#verify_plugin)|   [VerifyPluginRequest](controller.md#verifypluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
+| [**verify_plugin**](controller.md#verify_plugin)|   [VerifyPluginRequest](controller.md#verifypluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](controller.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateControllerRequest](controller.md#createcontrollerrequest)  </div> | <div style="width:200px; text-align:center;">   [ControllerInfo](controller.md#controllerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](controller.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateControllerRequest](controller.md#updatecontrollerrequest)  </div> | <div style="width:200px; text-align:center;">   [ControllerInfo](controller.md#controllerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](controller.md#delete) </div> | <div style="width:200px; text-align:center;">    [ControllerRequest](controller.md#controllerrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](controller.md#get) </div> | <div style="width:200px; text-align:center;">    [GetControllerRequest](controller.md#getcontrollerrequest)  </div> | <div style="width:200px; text-align:center;">   [ControllerInfo](controller.md#controllerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](controller.md#list) </div> | <div style="width:200px; text-align:center;">    [ControllerQuery](controller.md#controllerquery)  </div> | <div style="width:200px; text-align:center;">   [ControllersInfo](controller.md#controllersinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](controller.md#stat) </div> | <div style="width:200px; text-align:center;">    [ControllerStatQuery](controller.md#controllerstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**control**](controller.md#control) </div> | <div style="width:200px; text-align:center;">    [ControlRequest](controller.md#controlrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_plugin**](controller.md#update_plugin) </div> | <div style="width:200px; text-align:center;">    [UpdatePluginRequest](controller.md#updatepluginrequest)  </div> | <div style="width:200px; text-align:center;">   [ControllerInfo](controller.md#controllerinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify_plugin**](controller.md#verify_plugin) </div> | <div style="width:200px; text-align:center;">    [VerifyPluginRequest](controller.md#verifypluginrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

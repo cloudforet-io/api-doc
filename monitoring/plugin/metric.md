@@ -13,10 +13,15 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) |   [MetricsInfo](metric.md#metricsinfo) |  |
-| [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [MetricDataInfo](metric.md#metricdatainfo) |  | 
+| [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [MetricDataInfo](metric.md#metricdatainfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**list**](metric.md#list) </div> | <div style="width:200px; text-align:center;">    [MetricRequest](metric.md#metricrequest)  </div> | <div style="width:200px; text-align:center;">   [MetricsInfo](metric.md#metricsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get_data**](metric.md#get_data) </div> | <div style="width:200px; text-align:center;">    [MetricDataRequest](metric.md#metricdatarequest)  </div> | <div style="width:200px; text-align:center;">   [MetricDataInfo](metric.md#metricdatainfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

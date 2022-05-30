@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**publish**](supervisor.md#publish)|   [PublishSupervisorRequest](supervisor.md#publishsupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
 | [**register**](supervisor.md#register)|   [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
 | [**update**](supervisor.md#update)|   [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
@@ -25,7 +25,21 @@ description:
 | [**get**](supervisor.md#get)|   [GetSupervisorRequest](supervisor.md#getsupervisorrequest) |   [SupervisorInfo](supervisor.md#supervisorinfo) |  |
 | [**list**](supervisor.md#list)|   [SupervisorQuery](supervisor.md#supervisorquery) |   [SupervisorsInfo](supervisor.md#supervisorsinfo) |  |
 | [**stat**](supervisor.md#stat)|   [SupervisorStatQuery](supervisor.md#supervisorstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
-| [**list_plugins**](supervisor.md#list_plugins)|   [PluginQuery](supervisor.md#pluginquery) |   [PluginsInfo](supervisor.md#pluginsinfo) |  | 
+| [**list_plugins**](supervisor.md#list_plugins)|   [PluginQuery](supervisor.md#pluginquery) |   [PluginsInfo](supervisor.md#pluginsinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**publish**](supervisor.md#publish) </div> | <div style="width:200px; text-align:center;">    [PublishSupervisorRequest](supervisor.md#publishsupervisorrequest)  </div> | <div style="width:200px; text-align:center;">   [SupervisorInfo](supervisor.md#supervisorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**register**](supervisor.md#register) </div> | <div style="width:200px; text-align:center;">    [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest)  </div> | <div style="width:200px; text-align:center;">   [SupervisorInfo](supervisor.md#supervisorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](supervisor.md#update) </div> | <div style="width:200px; text-align:center;">    [RegisterSupervisorRequest](supervisor.md#registersupervisorrequest)  </div> | <div style="width:200px; text-align:center;">   [SupervisorInfo](supervisor.md#supervisorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**deregister**](supervisor.md#deregister) </div> | <div style="width:200px; text-align:center;">    [SupervisorRequest](supervisor.md#supervisorrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](supervisor.md#enable) </div> | <div style="width:200px; text-align:center;">    [SupervisorRequest](supervisor.md#supervisorrequest)  </div> | <div style="width:200px; text-align:center;">   [SupervisorInfo](supervisor.md#supervisorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](supervisor.md#disable) </div> | <div style="width:200px; text-align:center;">    [SupervisorRequest](supervisor.md#supervisorrequest)  </div> | <div style="width:200px; text-align:center;">   [SupervisorInfo](supervisor.md#supervisorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**recover_plugin**](supervisor.md#recover_plugin) </div> | <div style="width:200px; text-align:center;">    [RecoverPluginRequest](supervisor.md#recoverpluginrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](supervisor.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](supervisor.md#get) </div> | <div style="width:200px; text-align:center;">    [GetSupervisorRequest](supervisor.md#getsupervisorrequest)  </div> | <div style="width:200px; text-align:center;">   [SupervisorInfo](supervisor.md#supervisorinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](supervisor.md#list) </div> | <div style="width:200px; text-align:center;">    [SupervisorQuery](supervisor.md#supervisorquery)  </div> | <div style="width:200px; text-align:center;">   [SupervisorsInfo](supervisor.md#supervisorsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](supervisor.md#stat) </div> | <div style="width:200px; text-align:center;">    [SupervisorStatQuery](supervisor.md#supervisorstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list_plugins**](supervisor.md#list_plugins) </div> | <div style="width:200px; text-align:center;">    [PluginQuery](supervisor.md#pluginquery)  </div> | <div style="width:200px; text-align:center;">   [PluginsInfo](supervisor.md#pluginsinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

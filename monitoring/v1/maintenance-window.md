@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](maintenance-window.md#create)|   [CreateMaintenanceWindowRequest](maintenance-window.md#createmaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |  |
 | [**update**](maintenance-window.md#update)|   [UpdateMaintenanceWindowRequest](maintenance-window.md#updatemaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |  |
 | [**close**](maintenance-window.md#close)|   [MaintenanceWindowRequest](maintenance-window.md#maintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |  |
 | [**get**](maintenance-window.md#get)|   [GetMaintenanceWindowRequest](maintenance-window.md#getmaintenancewindowrequest) |   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo) |  |
 | [**list**](maintenance-window.md#list)|   [MaintenanceWindowQuery](maintenance-window.md#maintenancewindowquery) |   [MaintenanceWindowsInfo](maintenance-window.md#maintenancewindowsinfo) |  |
-| [**stat**](maintenance-window.md#stat)|   [MaintenanceWindowStatQuery](maintenance-window.md#maintenancewindowstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](maintenance-window.md#stat)|   [MaintenanceWindowStatQuery](maintenance-window.md#maintenancewindowstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](maintenance-window.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateMaintenanceWindowRequest](maintenance-window.md#createmaintenancewindowrequest)  </div> | <div style="width:200px; text-align:center;">   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](maintenance-window.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateMaintenanceWindowRequest](maintenance-window.md#updatemaintenancewindowrequest)  </div> | <div style="width:200px; text-align:center;">   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**close**](maintenance-window.md#close) </div> | <div style="width:200px; text-align:center;">    [MaintenanceWindowRequest](maintenance-window.md#maintenancewindowrequest)  </div> | <div style="width:200px; text-align:center;">   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](maintenance-window.md#get) </div> | <div style="width:200px; text-align:center;">    [GetMaintenanceWindowRequest](maintenance-window.md#getmaintenancewindowrequest)  </div> | <div style="width:200px; text-align:center;">   [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](maintenance-window.md#list) </div> | <div style="width:200px; text-align:center;">    [MaintenanceWindowQuery](maintenance-window.md#maintenancewindowquery)  </div> | <div style="width:200px; text-align:center;">   [MaintenanceWindowsInfo](maintenance-window.md#maintenancewindowsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](maintenance-window.md#stat) </div> | <div style="width:200px; text-align:center;">    [MaintenanceWindowStatQuery](maintenance-window.md#maintenancewindowstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

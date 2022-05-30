@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](project.md#create)|   [CreateProjectRequest](project.md#createprojectrequest) |   [ProjectInfo](project.md#projectinfo) |  |
 | [**update**](project.md#update)|   [UpdateProjectRequest](project.md#updateprojectrequest) |   [ProjectInfo](project.md#projectinfo) |  |
 | [**delete**](project.md#delete)|   [ProjectRequest](project.md#projectrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -24,7 +24,20 @@ description:
 | [**add_member**](project.md#add_member)|   [AddProjectMemberRequest](project.md#addprojectmemberrequest) |   [ProjectRoleBindingInfo](project.md#projectrolebindinginfo) |  |
 | [**modify_member**](project.md#modify_member)|   [ModifyProjectMemberRequest](project.md#modifyprojectmemberrequest) |   [ProjectRoleBindingInfo](project.md#projectrolebindinginfo) |  |
 | [**remove_member**](project.md#remove_member)|   [RemoveProjectMemberRequest](project.md#removeprojectmemberrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**list_members**](project.md#list_members)|   [ProjectMemberQuery](project.md#projectmemberquery) |   [ProjectRoleBindingsInfo](project.md#projectrolebindingsinfo) |  | 
+| [**list_members**](project.md#list_members)|   [ProjectMemberQuery](project.md#projectmemberquery) |   [ProjectRoleBindingsInfo](project.md#projectrolebindingsinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](project.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateProjectRequest](project.md#createprojectrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectInfo](project.md#projectinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](project.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateProjectRequest](project.md#updateprojectrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectInfo](project.md#projectinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](project.md#delete) </div> | <div style="width:200px; text-align:center;">    [ProjectRequest](project.md#projectrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](project.md#get) </div> | <div style="width:200px; text-align:center;">    [GetProjectRequest](project.md#getprojectrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectInfo](project.md#projectinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](project.md#list) </div> | <div style="width:200px; text-align:center;">    [ProjectQuery](project.md#projectquery)  </div> | <div style="width:200px; text-align:center;">   [ProjectsInfo](project.md#projectsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](project.md#stat) </div> | <div style="width:200px; text-align:center;">    [ProjectStatQuery](project.md#projectstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**add_member**](project.md#add_member) </div> | <div style="width:200px; text-align:center;">    [AddProjectMemberRequest](project.md#addprojectmemberrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectRoleBindingInfo](project.md#projectrolebindinginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**modify_member**](project.md#modify_member) </div> | <div style="width:200px; text-align:center;">    [ModifyProjectMemberRequest](project.md#modifyprojectmemberrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectRoleBindingInfo](project.md#projectrolebindinginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**remove_member**](project.md#remove_member) </div> | <div style="width:200px; text-align:center;">    [RemoveProjectMemberRequest](project.md#removeprojectmemberrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list_members**](project.md#list_members) </div> | <div style="width:200px; text-align:center;">    [ProjectMemberQuery](project.md#projectmemberquery)  </div> | <div style="width:200px; text-align:center;">   [ProjectRoleBindingsInfo](project.md#projectrolebindingsinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

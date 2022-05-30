@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](project-alert-config.md#create)|   [CreateProjectAlertConfigRequest](project-alert-config.md#createprojectalertconfigrequest) |   [ProjectAlertConfigInfo](project-alert-config.md#projectalertconfiginfo) |  |
 | [**update**](project-alert-config.md#update)|   [UpdateProjectAlertConfigRequest](project-alert-config.md#updateprojectalertconfigrequest) |   [ProjectAlertConfigInfo](project-alert-config.md#projectalertconfiginfo) |  |
 | [**delete**](project-alert-config.md#delete)|   [ProjectAlertConfigRequest](project-alert-config.md#projectalertconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](project-alert-config.md#get)|   [GetProjectAlertConfigRequest](project-alert-config.md#getprojectalertconfigrequest) |   [ProjectAlertConfigInfo](project-alert-config.md#projectalertconfiginfo) |  |
 | [**list**](project-alert-config.md#list)|   [ProjectAlertConfigQuery](project-alert-config.md#projectalertconfigquery) |   [ProjectAlertConfigsInfo](project-alert-config.md#projectalertconfigsinfo) |  |
-| [**stat**](project-alert-config.md#stat)|   [ProjectAlertConfigStatQuery](project-alert-config.md#projectalertconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](project-alert-config.md#stat)|   [ProjectAlertConfigStatQuery](project-alert-config.md#projectalertconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](project-alert-config.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateProjectAlertConfigRequest](project-alert-config.md#createprojectalertconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectAlertConfigInfo](project-alert-config.md#projectalertconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](project-alert-config.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateProjectAlertConfigRequest](project-alert-config.md#updateprojectalertconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectAlertConfigInfo](project-alert-config.md#projectalertconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](project-alert-config.md#delete) </div> | <div style="width:200px; text-align:center;">    [ProjectAlertConfigRequest](project-alert-config.md#projectalertconfigrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](project-alert-config.md#get) </div> | <div style="width:200px; text-align:center;">    [GetProjectAlertConfigRequest](project-alert-config.md#getprojectalertconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectAlertConfigInfo](project-alert-config.md#projectalertconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](project-alert-config.md#list) </div> | <div style="width:200px; text-align:center;">    [ProjectAlertConfigQuery](project-alert-config.md#projectalertconfigquery)  </div> | <div style="width:200px; text-align:center;">   [ProjectAlertConfigsInfo](project-alert-config.md#projectalertconfigsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](project-alert-config.md#stat) </div> | <div style="width:200px; text-align:center;">    [ProjectAlertConfigStatQuery](project-alert-config.md#projectalertconfigstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

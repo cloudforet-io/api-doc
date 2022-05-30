@@ -13,12 +13,19 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**init**](auth.md#init)|   [InitRequest](auth.md#initrequest) |   [PluginInfo](auth.md#plugininfo) |  |
 | [**verify**](auth.md#verify)|   [VerifyRequest](auth.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**find**](auth.md#find)|   [FindRequest](auth.md#findrequest) |   [UsersInfo](auth.md#usersinfo) |  |
-| [**login**](auth.md#login)|   [LoginRequest](auth.md#loginrequest) |   [UserInfo](auth.md#userinfo) |  | 
+| [**login**](auth.md#login)|   [LoginRequest](auth.md#loginrequest) |   [UserInfo](auth.md#userinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**init**](auth.md#init) </div> | <div style="width:200px; text-align:center;">    [InitRequest](auth.md#initrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](auth.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify**](auth.md#verify) </div> | <div style="width:200px; text-align:center;">    [VerifyRequest](auth.md#verifyrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**find**](auth.md#find) </div> | <div style="width:200px; text-align:center;">    [FindRequest](auth.md#findrequest)  </div> | <div style="width:200px; text-align:center;">   [UsersInfo](auth.md#usersinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**login**](auth.md#login) </div> | <div style="width:200px; text-align:center;">    [LoginRequest](auth.md#loginrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](auth.md#userinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

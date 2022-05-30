@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](webhook.md#create)|   [CreateWebhookRequest](webhook.md#createwebhookrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
 | [**update**](webhook.md#update)|   [UpdateWebhookRequest](webhook.md#updatewebhookrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
 | [**update_plugin**](webhook.md#update_plugin)|   [UpdateWebhookPluginRequest](webhook.md#updatewebhookpluginrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
@@ -24,7 +24,20 @@ description:
 | [**delete**](webhook.md#delete)|   [WebhookRequest](webhook.md#webhookrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](webhook.md#get)|   [GetWebhookRequest](webhook.md#getwebhookrequest) |   [WebhookInfo](webhook.md#webhookinfo) |  |
 | [**list**](webhook.md#list)|   [WebhookQuery](webhook.md#webhookquery) |   [WebhooksInfo](webhook.md#webhooksinfo) |  |
-| [**stat**](webhook.md#stat)|   [WebhookStatQuery](webhook.md#webhookstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](webhook.md#stat)|   [WebhookStatQuery](webhook.md#webhookstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](webhook.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateWebhookRequest](webhook.md#createwebhookrequest)  </div> | <div style="width:200px; text-align:center;">   [WebhookInfo](webhook.md#webhookinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](webhook.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateWebhookRequest](webhook.md#updatewebhookrequest)  </div> | <div style="width:200px; text-align:center;">   [WebhookInfo](webhook.md#webhookinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_plugin**](webhook.md#update_plugin) </div> | <div style="width:200px; text-align:center;">    [UpdateWebhookPluginRequest](webhook.md#updatewebhookpluginrequest)  </div> | <div style="width:200px; text-align:center;">   [WebhookInfo](webhook.md#webhookinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify_plugin**](webhook.md#verify_plugin) </div> | <div style="width:200px; text-align:center;">    [WebhookRequest](webhook.md#webhookrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](webhook.md#enable) </div> | <div style="width:200px; text-align:center;">    [WebhookRequest](webhook.md#webhookrequest)  </div> | <div style="width:200px; text-align:center;">   [WebhookInfo](webhook.md#webhookinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](webhook.md#disable) </div> | <div style="width:200px; text-align:center;">    [WebhookRequest](webhook.md#webhookrequest)  </div> | <div style="width:200px; text-align:center;">   [WebhookInfo](webhook.md#webhookinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](webhook.md#delete) </div> | <div style="width:200px; text-align:center;">    [WebhookRequest](webhook.md#webhookrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](webhook.md#get) </div> | <div style="width:200px; text-align:center;">    [GetWebhookRequest](webhook.md#getwebhookrequest)  </div> | <div style="width:200px; text-align:center;">   [WebhookInfo](webhook.md#webhookinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](webhook.md#list) </div> | <div style="width:200px; text-align:center;">    [WebhookQuery](webhook.md#webhookquery)  </div> | <div style="width:200px; text-align:center;">   [WebhooksInfo](webhook.md#webhooksinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](webhook.md#stat) </div> | <div style="width:200px; text-align:center;">    [WebhookStatQuery](webhook.md#webhookstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

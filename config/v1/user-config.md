@@ -13,15 +13,25 @@ description: UserConfig API which configure environments for user
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](user-config.md#create)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
 | [**update**](user-config.md#update)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
 | [**set**](user-config.md#set)|   [SetUserConfigRequest](user-config.md#setuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
 | [**delete**](user-config.md#delete)|   [UserConfigRequest](user-config.md#userconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](user-config.md#get)|   [GetUserConfigRequest](user-config.md#getuserconfigrequest) |   [UserConfigInfo](user-config.md#userconfiginfo) |  |
 | [**list**](user-config.md#list)|   [UserConfigQuery](user-config.md#userconfigquery) |   [UserConfigsInfo](user-config.md#userconfigsinfo) |  |
-| [**stat**](user-config.md#stat)|   [UserConfigStatQuery](user-config.md#userconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](user-config.md#stat)|   [UserConfigStatQuery](user-config.md#userconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](user-config.md#create) </div> | <div style="width:200px; text-align:center;">    [SetUserConfigRequest](user-config.md#setuserconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [UserConfigInfo](user-config.md#userconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](user-config.md#update) </div> | <div style="width:200px; text-align:center;">    [SetUserConfigRequest](user-config.md#setuserconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [UserConfigInfo](user-config.md#userconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**set**](user-config.md#set) </div> | <div style="width:200px; text-align:center;">    [SetUserConfigRequest](user-config.md#setuserconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [UserConfigInfo](user-config.md#userconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](user-config.md#delete) </div> | <div style="width:200px; text-align:center;">    [UserConfigRequest](user-config.md#userconfigrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](user-config.md#get) </div> | <div style="width:200px; text-align:center;">    [GetUserConfigRequest](user-config.md#getuserconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [UserConfigInfo](user-config.md#userconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](user-config.md#list) </div> | <div style="width:200px; text-align:center;">    [UserConfigQuery](user-config.md#userconfigquery)  </div> | <div style="width:200px; text-align:center;">   [UserConfigsInfo](user-config.md#userconfigsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](user-config.md#stat) </div> | <div style="width:200px; text-align:center;">    [UserConfigStatQuery](user-config.md#userconfigstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

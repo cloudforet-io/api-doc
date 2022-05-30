@@ -13,11 +13,17 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**init**](storage.md#init)|   [InitRequest](storage.md#initrequest) |   [PluginInfo](storage.md#plugininfo) |  |
 | [**verify**](storage.md#verify)|   [VerifyRequest](storage.md#verifyrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| [**export**](storage.md#export)|   [ExportRequest](storage.md#exportrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  | 
+| [**export**](storage.md#export)|   [ExportRequest](storage.md#exportrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**init**](storage.md#init) </div> | <div style="width:200px; text-align:center;">    [InitRequest](storage.md#initrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](storage.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify**](storage.md#verify) </div> | <div style="width:200px; text-align:center;">    [VerifyRequest](storage.md#verifyrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**export**](storage.md#export) </div> | <div style="width:200px; text-align:center;">    [ExportRequest](storage.md#exportrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

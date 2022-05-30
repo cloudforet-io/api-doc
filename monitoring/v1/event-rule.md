@@ -13,15 +13,25 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](event-rule.md#create)|   [CreateEventRuleRequest](event-rule.md#createeventrulerequest) |   [EventRuleInfo](event-rule.md#eventruleinfo) |  |
 | [**update**](event-rule.md#update)|   [UpdateEventRuleRequest](event-rule.md#updateeventrulerequest) |   [EventRuleInfo](event-rule.md#eventruleinfo) |  |
 | [**change_order**](event-rule.md#change_order)|   [ChangeEventRuleOrderRequest](event-rule.md#changeeventruleorderrequest) |   [EventRuleInfo](event-rule.md#eventruleinfo) |  |
 | [**delete**](event-rule.md#delete)|   [EventRuleRequest](event-rule.md#eventrulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](event-rule.md#get)|   [GetEventRuleRequest](event-rule.md#geteventrulerequest) |   [EventRuleInfo](event-rule.md#eventruleinfo) |  |
 | [**list**](event-rule.md#list)|   [EventRuleQuery](event-rule.md#eventrulequery) |   [EventRulesInfo](event-rule.md#eventrulesinfo) |  |
-| [**stat**](event-rule.md#stat)|   [EventRuleStatQuery](event-rule.md#eventrulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](event-rule.md#stat)|   [EventRuleStatQuery](event-rule.md#eventrulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](event-rule.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateEventRuleRequest](event-rule.md#createeventrulerequest)  </div> | <div style="width:200px; text-align:center;">   [EventRuleInfo](event-rule.md#eventruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](event-rule.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateEventRuleRequest](event-rule.md#updateeventrulerequest)  </div> | <div style="width:200px; text-align:center;">   [EventRuleInfo](event-rule.md#eventruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**change_order**](event-rule.md#change_order) </div> | <div style="width:200px; text-align:center;">    [ChangeEventRuleOrderRequest](event-rule.md#changeeventruleorderrequest)  </div> | <div style="width:200px; text-align:center;">   [EventRuleInfo](event-rule.md#eventruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](event-rule.md#delete) </div> | <div style="width:200px; text-align:center;">    [EventRuleRequest](event-rule.md#eventrulerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](event-rule.md#get) </div> | <div style="width:200px; text-align:center;">    [GetEventRuleRequest](event-rule.md#geteventrulerequest)  </div> | <div style="width:200px; text-align:center;">   [EventRuleInfo](event-rule.md#eventruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](event-rule.md#list) </div> | <div style="width:200px; text-align:center;">    [EventRuleQuery](event-rule.md#eventrulequery)  </div> | <div style="width:200px; text-align:center;">   [EventRulesInfo](event-rule.md#eventrulesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](event-rule.md#stat) </div> | <div style="width:200px; text-align:center;">    [EventRuleStatQuery](event-rule.md#eventrulestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

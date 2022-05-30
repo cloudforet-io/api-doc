@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](quota.md#create)|   [CreateQuotaRequest](quota.md#createquotarequest) |   [QuotaInfo](quota.md#quotainfo) | Creates a new Quota for Protocol. |
 | [**update**](quota.md#update)|   [UpdateQuotaRequest](quota.md#updatequotarequest) |   [QuotaInfo](quota.md#quotainfo) | Updates a exist Quota information. |
 | [**delete**](quota.md#delete)|   [QuotaRequest](quota.md#quotarequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete the Quota. |
 | [**get**](quota.md#get)|   [QuotaRequest](quota.md#quotarequest) |   [QuotaInfo](quota.md#quotainfo) | Gets a single Quota information. |
 | [**list**](quota.md#list)|   [QuotaQuery](quota.md#quotaquery) |   [QuotasInfo](quota.md#quotasinfo) | Lists the specified Quota information.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. |
-| [**stat**](quota.md#stat)|   [QuotaStatQuery](quota.md#quotastatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](quota.md#stat)|   [QuotaStatQuery](quota.md#quotastatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](quota.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateQuotaRequest](quota.md#createquotarequest)  </div> | <div style="width:200px; text-align:center;">   [QuotaInfo](quota.md#quotainfo)  </div> | <div style="width:400px;"> Creates a new Quota for Protocol. </div> |
+|<div style="width:70px; text-align:center;">  [**update**](quota.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateQuotaRequest](quota.md#updatequotarequest)  </div> | <div style="width:200px; text-align:center;">   [QuotaInfo](quota.md#quotainfo)  </div> | <div style="width:400px;"> Updates a exist Quota information. </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](quota.md#delete) </div> | <div style="width:200px; text-align:center;">    [QuotaRequest](quota.md#quotarequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete the Quota. </div> |
+|<div style="width:70px; text-align:center;">  [**get**](quota.md#get) </div> | <div style="width:200px; text-align:center;">    [QuotaRequest](quota.md#quotarequest)  </div> | <div style="width:200px; text-align:center;">   [QuotaInfo](quota.md#quotainfo)  </div> | <div style="width:400px;"> Gets a single Quota information. </div> |
+|<div style="width:70px; text-align:center;">  [**list**](quota.md#list) </div> | <div style="width:200px; text-align:center;">    [QuotaQuery](quota.md#quotaquery)  </div> | <div style="width:200px; text-align:center;">   [QuotasInfo](quota.md#quotasinfo)  </div> | <div style="width:400px;"> Lists the specified Quota information.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](quota.md#stat) </div> | <div style="width:200px; text-align:center;">    [QuotaStatQuery](quota.md#quotastatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

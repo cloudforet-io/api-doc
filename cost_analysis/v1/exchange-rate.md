@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**set**](exchange-rate.md#set)|   [SetExchangeRateRequest](exchange-rate.md#setexchangeraterequest) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  |
 | [**reset**](exchange-rate.md#reset)|   [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  |
 | [**enable**](exchange-rate.md#enable)|   [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  |
 | [**disable**](exchange-rate.md#disable)|   [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  |
 | [**get**](exchange-rate.md#get)|   [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo) |  |
-| [**list**](exchange-rate.md#list)|   [ExchangeRateQuery](exchange-rate.md#exchangeratequery) |   [ExchangeRatesInfo](exchange-rate.md#exchangeratesinfo) |  | 
+| [**list**](exchange-rate.md#list)|   [ExchangeRateQuery](exchange-rate.md#exchangeratequery) |   [ExchangeRatesInfo](exchange-rate.md#exchangeratesinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**set**](exchange-rate.md#set) </div> | <div style="width:200px; text-align:center;">    [SetExchangeRateRequest](exchange-rate.md#setexchangeraterequest)  </div> | <div style="width:200px; text-align:center;">   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**reset**](exchange-rate.md#reset) </div> | <div style="width:200px; text-align:center;">    [ExchangeRateRequest](exchange-rate.md#exchangeraterequest)  </div> | <div style="width:200px; text-align:center;">   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](exchange-rate.md#enable) </div> | <div style="width:200px; text-align:center;">    [ExchangeRateRequest](exchange-rate.md#exchangeraterequest)  </div> | <div style="width:200px; text-align:center;">   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](exchange-rate.md#disable) </div> | <div style="width:200px; text-align:center;">    [ExchangeRateRequest](exchange-rate.md#exchangeraterequest)  </div> | <div style="width:200px; text-align:center;">   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](exchange-rate.md#get) </div> | <div style="width:200px; text-align:center;">    [ExchangeRateRequest](exchange-rate.md#exchangeraterequest)  </div> | <div style="width:200px; text-align:center;">   [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](exchange-rate.md#list) </div> | <div style="width:200px; text-align:center;">    [ExchangeRateQuery](exchange-rate.md#exchangeratequery)  </div> | <div style="width:200px; text-align:center;">   [ExchangeRatesInfo](exchange-rate.md#exchangeratesinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](schedule.md#create)|   [CreateScheduleRequest](schedule.md#createschedulerequest) |   [ScheduleInfo](schedule.md#scheduleinfo) |  |
 | [**update**](schedule.md#update)|   [UpdateScheduleRequest](schedule.md#updateschedulerequest) |   [ScheduleInfo](schedule.md#scheduleinfo) |  |
 | [**enable**](schedule.md#enable)|   [ScheduleRequest](schedule.md#schedulerequest) |   [ScheduleInfo](schedule.md#scheduleinfo) |  |
@@ -25,7 +25,21 @@ description:
 | [**delete**](schedule.md#delete)|   [ScheduleRequest](schedule.md#schedulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](schedule.md#get)|   [GetScheduleRequest](schedule.md#getschedulerequest) |   [ScheduleInfo](schedule.md#scheduleinfo) |  |
 | [**list**](schedule.md#list)|   [ScheduleQuery](schedule.md#schedulequery) |   [SchedulesInfo](schedule.md#schedulesinfo) |  |
-| [**stat**](schedule.md#stat)|   [ScheduleStatQuery](schedule.md#schedulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](schedule.md#stat)|   [ScheduleStatQuery](schedule.md#schedulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](schedule.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateScheduleRequest](schedule.md#createschedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](schedule.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](schedule.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateScheduleRequest](schedule.md#updateschedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](schedule.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](schedule.md#enable) </div> | <div style="width:200px; text-align:center;">    [ScheduleRequest](schedule.md#schedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](schedule.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](schedule.md#disable) </div> | <div style="width:200px; text-align:center;">    [ScheduleRequest](schedule.md#schedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](schedule.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**append_resource_group**](schedule.md#append_resource_group) </div> | <div style="width:200px; text-align:center;">    [CreateResourceGroupRequest](schedule.md#createresourcegrouprequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](schedule.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_resource_group**](schedule.md#update_resource_group) </div> | <div style="width:200px; text-align:center;">    [ResourceGroupRequest](schedule.md#resourcegrouprequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](schedule.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**remove_resource_group**](schedule.md#remove_resource_group) </div> | <div style="width:200px; text-align:center;">    [ResourceGroupRequest](schedule.md#resourcegrouprequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](schedule.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](schedule.md#delete) </div> | <div style="width:200px; text-align:center;">    [ScheduleRequest](schedule.md#schedulerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](schedule.md#get) </div> | <div style="width:200px; text-align:center;">    [GetScheduleRequest](schedule.md#getschedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ScheduleInfo](schedule.md#scheduleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](schedule.md#list) </div> | <div style="width:200px; text-align:center;">    [ScheduleQuery](schedule.md#schedulequery)  </div> | <div style="width:200px; text-align:center;">   [SchedulesInfo](schedule.md#schedulesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](schedule.md#stat) </div> | <div style="width:200px; text-align:center;">    [ScheduleStatQuery](schedule.md#schedulestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

@@ -13,15 +13,25 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](data-source-rule.md#create)|   [CreateDataSourceRuleRequest](data-source-rule.md#createdatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |  |
 | [**update**](data-source-rule.md#update)|   [UpdateDataSourceRuleRequest](data-source-rule.md#updatedatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |  |
 | [**change_order**](data-source-rule.md#change_order)|   [ChangeDataSourceRuleOrderRequest](data-source-rule.md#changedatasourceruleorderrequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |  |
 | [**delete**](data-source-rule.md#delete)|   [DataSourceRuleRequest](data-source-rule.md#datasourcerulerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](data-source-rule.md#get)|   [GetDataSourceRuleRequest](data-source-rule.md#getdatasourcerulerequest) |   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo) |  |
 | [**list**](data-source-rule.md#list)|   [DataSourceRuleQuery](data-source-rule.md#datasourcerulequery) |   [DataSourceRulesInfo](data-source-rule.md#datasourcerulesinfo) |  |
-| [**stat**](data-source-rule.md#stat)|   [DataSourceRuleStatQuery](data-source-rule.md#datasourcerulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](data-source-rule.md#stat)|   [DataSourceRuleStatQuery](data-source-rule.md#datasourcerulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](data-source-rule.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateDataSourceRuleRequest](data-source-rule.md#createdatasourcerulerequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](data-source-rule.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateDataSourceRuleRequest](data-source-rule.md#updatedatasourcerulerequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**change_order**](data-source-rule.md#change_order) </div> | <div style="width:200px; text-align:center;">    [ChangeDataSourceRuleOrderRequest](data-source-rule.md#changedatasourceruleorderrequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](data-source-rule.md#delete) </div> | <div style="width:200px; text-align:center;">    [DataSourceRuleRequest](data-source-rule.md#datasourcerulerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](data-source-rule.md#get) </div> | <div style="width:200px; text-align:center;">    [GetDataSourceRuleRequest](data-source-rule.md#getdatasourcerulerequest)  </div> | <div style="width:200px; text-align:center;">   [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](data-source-rule.md#list) </div> | <div style="width:200px; text-align:center;">    [DataSourceRuleQuery](data-source-rule.md#datasourcerulequery)  </div> | <div style="width:200px; text-align:center;">   [DataSourceRulesInfo](data-source-rule.md#datasourcerulesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](data-source-rule.md#stat) </div> | <div style="width:200px; text-align:center;">    [DataSourceRuleStatQuery](data-source-rule.md#datasourcerulestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

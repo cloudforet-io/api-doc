@@ -13,14 +13,23 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](role-binding.md#create)|   [CreateRoleBindingRequest](role-binding.md#createrolebindingrequest) |   [RoleBindingInfo](role-binding.md#rolebindinginfo) |  |
 | [**update**](role-binding.md#update)|   [UpdateRoleBindingRequest](role-binding.md#updaterolebindingrequest) |   [RoleBindingInfo](role-binding.md#rolebindinginfo) |  |
 | [**delete**](role-binding.md#delete)|   [RoleBindingRequest](role-binding.md#rolebindingrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](role-binding.md#get)|   [GetRoleBindingRequest](role-binding.md#getrolebindingrequest) |   [RoleBindingInfo](role-binding.md#rolebindinginfo) |  |
 | [**list**](role-binding.md#list)|   [RoleBindingQuery](role-binding.md#rolebindingquery) |   [RoleBindingsInfo](role-binding.md#rolebindingsinfo) |  |
-| [**stat**](role-binding.md#stat)|   [RoleBindingStatQuery](role-binding.md#rolebindingstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](role-binding.md#stat)|   [RoleBindingStatQuery](role-binding.md#rolebindingstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](role-binding.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateRoleBindingRequest](role-binding.md#createrolebindingrequest)  </div> | <div style="width:200px; text-align:center;">   [RoleBindingInfo](role-binding.md#rolebindinginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](role-binding.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateRoleBindingRequest](role-binding.md#updaterolebindingrequest)  </div> | <div style="width:200px; text-align:center;">   [RoleBindingInfo](role-binding.md#rolebindinginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](role-binding.md#delete) </div> | <div style="width:200px; text-align:center;">    [RoleBindingRequest](role-binding.md#rolebindingrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](role-binding.md#get) </div> | <div style="width:200px; text-align:center;">    [GetRoleBindingRequest](role-binding.md#getrolebindingrequest)  </div> | <div style="width:200px; text-align:center;">   [RoleBindingInfo](role-binding.md#rolebindinginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](role-binding.md#list) </div> | <div style="width:200px; text-align:center;">    [RoleBindingQuery](role-binding.md#rolebindingquery)  </div> | <div style="width:200px; text-align:center;">   [RoleBindingsInfo](role-binding.md#rolebindingsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](role-binding.md#stat) </div> | <div style="width:200px; text-align:center;">    [RoleBindingStatQuery](role-binding.md#rolebindingstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

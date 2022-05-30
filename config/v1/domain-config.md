@@ -13,15 +13,25 @@ description: DomainConfig API which configure environments for domain
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](domain-config.md#create)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
 | [**update**](domain-config.md#update)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
 | [**set**](domain-config.md#set)|   [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
 | [**delete**](domain-config.md#delete)|   [DomainConfigRequest](domain-config.md#domainconfigrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](domain-config.md#get)|   [GetDomainConfigRequest](domain-config.md#getdomainconfigrequest) |   [DomainConfigInfo](domain-config.md#domainconfiginfo) |  |
 | [**list**](domain-config.md#list)|   [DomainConfigQuery](domain-config.md#domainconfigquery) |   [DomainConfigsInfo](domain-config.md#domainconfigsinfo) |  |
-| [**stat**](domain-config.md#stat)|   [DomainConfigStatQuery](domain-config.md#domainconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](domain-config.md#stat)|   [DomainConfigStatQuery](domain-config.md#domainconfigstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](domain-config.md#create) </div> | <div style="width:200px; text-align:center;">    [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainConfigInfo](domain-config.md#domainconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](domain-config.md#update) </div> | <div style="width:200px; text-align:center;">    [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainConfigInfo](domain-config.md#domainconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**set**](domain-config.md#set) </div> | <div style="width:200px; text-align:center;">    [SetDomainConfigRequest](domain-config.md#setdomainconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainConfigInfo](domain-config.md#domainconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](domain-config.md#delete) </div> | <div style="width:200px; text-align:center;">    [DomainConfigRequest](domain-config.md#domainconfigrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](domain-config.md#get) </div> | <div style="width:200px; text-align:center;">    [GetDomainConfigRequest](domain-config.md#getdomainconfigrequest)  </div> | <div style="width:200px; text-align:center;">   [DomainConfigInfo](domain-config.md#domainconfiginfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](domain-config.md#list) </div> | <div style="width:200px; text-align:center;">    [DomainConfigQuery](domain-config.md#domainconfigquery)  </div> | <div style="width:200px; text-align:center;">   [DomainConfigsInfo](domain-config.md#domainconfigsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](domain-config.md#stat) </div> | <div style="width:200px; text-align:center;">    [DomainConfigStatQuery](domain-config.md#domainconfigstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

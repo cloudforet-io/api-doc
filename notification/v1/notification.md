@@ -9,20 +9,31 @@ description:
 
 {% hint style="info" %}
 **Notification Methods:**
-
+desc: Notification service Methods
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
-| [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Creates a new Notification..A notification is a definition of an event to be delivered to the user.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user. |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+| [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Create a new Notification. |
 | [**push**](notification.md#push)|   [PushNotificationRequest](notification.md#pushnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Push a new Notification directly. |
 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete the Notification. |
 | [**delete_all**](notification.md#delete_all)|   [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete all Notifications. |
-| [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Change the notifications to read status.When the notification is created, the is_read value is False, and when the set_read method is used, the read state can be changed. |
+| [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Change the notifications to read status. |
 | [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) | Gets a single Notification. |
-| [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) | Lists the specified notifications.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. |
-| [**stat**](notification.md#stat)|   [NotificationStatQuery](notification.md#notificationstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) | Lists the specified notifications. |
+| [**stat**](notification.md#stat)|   [NotificationStatQuery](notification.md#notificationstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**create**](notification.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateNotificationRequest](notification.md#createnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Create a new Notification. </div> |
+|<div style="width:70px; text-align:center;">  [**push**](notification.md#push) </div> | <div style="width:200px; text-align:center;">    [PushNotificationRequest](notification.md#pushnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Push a new Notification directly. </div> |
+|<div style="width:70px; text-align:center;">  [**delete**](notification.md#delete) </div> | <div style="width:200px; text-align:center;">    [NotificationRequest](notification.md#notificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete the Notification. </div> |
+|<div style="width:70px; text-align:center;">  [**delete_all**](notification.md#delete_all) </div> | <div style="width:200px; text-align:center;">    [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete all Notifications. </div> |
+|<div style="width:70px; text-align:center;">  [**set_read**](notification.md#set_read) </div> | <div style="width:200px; text-align:center;">    [SetReadNotificationRequest](notification.md#setreadnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Change the notifications to read status. </div> |
+|<div style="width:70px; text-align:center;">  [**get**](notification.md#get) </div> | <div style="width:200px; text-align:center;">    [GetNotificationRequest](notification.md#getnotificationrequest)  </div> | <div style="width:200px; text-align:center;">   [NotificationInfo](notification.md#notificationinfo)  </div> | <div style="width:400px;"> Gets a single Notification. </div> |
+|<div style="width:70px; text-align:center;">  [**list**](notification.md#list) </div> | <div style="width:200px; text-align:center;">    [NotificationQuery](notification.md#notificationquery)  </div> | <div style="width:200px; text-align:center;">   [NotificationsInfo](notification.md#notificationsinfo)  </div> | <div style="width:400px;"> Lists the specified notifications. </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](notification.md#stat) </div> | <div style="width:200px; text-align:center;">    [NotificationStatQuery](notification.md#notificationstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  
@@ -30,12 +41,25 @@ description:
 > **POST** /notification/v1/notifications
 >
 
-> Creates a new Notification..A notification is a definition of an event to be delivered to the user.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user.
+> Create a new Notification.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateNotificationRequest](notification.md#createnotificationrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+None
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+None
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -50,6 +74,26 @@ description:
 | :--- | :--- |
 | Request | [PushNotificationRequest](notification.md#pushnotificationrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "domain_id": "xxxx-aws-abcd",
+    "tags": {
+        "env": "dev"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "domain_id": "xxxx-aws-abcd"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -64,6 +108,26 @@ description:
 | :--- | :--- |
 | Request | [NotificationRequest](notification.md#notificationrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "domain_id": "xxxx-aws-abcd",
+    "tags": {
+        "env": "dev"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "domain_id": "xxxx-aws-abcd"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -78,6 +142,19 @@ description:
 | :--- | :--- |
 | Request | [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+None
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+None
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -86,7 +163,7 @@ description:
 > **POST** /notification/v1/notifications/read
 >
 
-> Change the notifications to read status.When the notification is created, the is_read value is False, and when the set_read method is used, the read state can be changed.
+> Change the notifications to read status.
 
 | Type | Message |
 | :--- | :--- |
@@ -116,7 +193,7 @@ description:
 > **POST** /notification/v1/notifications/search
 
 
-> Lists the specified notifications.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.
+> Lists the specified notifications.
 
 | Type | Message |
 | :--- | :--- |

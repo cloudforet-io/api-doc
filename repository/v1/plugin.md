@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**register**](plugin.md#register)|   [CreatePluginRequest](plugin.md#createpluginrequest) |   [PluginInfo](plugin.md#plugininfo) |  |
 | [**update**](plugin.md#update)|   [UpdatePluginRequest](plugin.md#updatepluginrequest) |   [PluginInfo](plugin.md#plugininfo) |  |
 | [**deregister**](plugin.md#deregister)|   [PluginRequest](plugin.md#pluginrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
@@ -23,7 +23,19 @@ description:
 | [**get_versions**](plugin.md#get_versions)|   [RepositoryPluginRequest](plugin.md#repositorypluginrequest) |   [VersionsInfo](plugin.md#versionsinfo) |  |
 | [**get**](plugin.md#get)|   [GetRepositoryPluginRequest](plugin.md#getrepositorypluginrequest) |   [PluginInfo](plugin.md#plugininfo) |  |
 | [**list**](plugin.md#list)|   [PluginQuery](plugin.md#pluginquery) |   [PluginsInfo](plugin.md#pluginsinfo) |  |
-| [**stat**](plugin.md#stat)|   [PluginStatQuery](plugin.md#pluginstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](plugin.md#stat)|   [PluginStatQuery](plugin.md#pluginstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**register**](plugin.md#register) </div> | <div style="width:200px; text-align:center;">    [CreatePluginRequest](plugin.md#createpluginrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](plugin.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](plugin.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdatePluginRequest](plugin.md#updatepluginrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](plugin.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**deregister**](plugin.md#deregister) </div> | <div style="width:200px; text-align:center;">    [PluginRequest](plugin.md#pluginrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](plugin.md#enable) </div> | <div style="width:200px; text-align:center;">    [PluginRequest](plugin.md#pluginrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](plugin.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](plugin.md#disable) </div> | <div style="width:200px; text-align:center;">    [PluginRequest](plugin.md#pluginrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](plugin.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get_versions**](plugin.md#get_versions) </div> | <div style="width:200px; text-align:center;">    [RepositoryPluginRequest](plugin.md#repositorypluginrequest)  </div> | <div style="width:200px; text-align:center;">   [VersionsInfo](plugin.md#versionsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](plugin.md#get) </div> | <div style="width:200px; text-align:center;">    [GetRepositoryPluginRequest](plugin.md#getrepositorypluginrequest)  </div> | <div style="width:200px; text-align:center;">   [PluginInfo](plugin.md#plugininfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](plugin.md#list) </div> | <div style="width:200px; text-align:center;">    [PluginQuery](plugin.md#pluginquery)  </div> | <div style="width:200px; text-align:center;">   [PluginsInfo](plugin.md#pluginsinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](plugin.md#stat) </div> | <div style="width:200px; text-align:center;">    [PluginStatQuery](plugin.md#pluginstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  

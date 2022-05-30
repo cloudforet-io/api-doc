@@ -13,9 +13,13 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
-| [**parse**](event.md#parse)|   [ParseRequest](event.md#parserequest) |   [EventsInfo](event.md#eventsinfo) |  | 
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+| [**parse**](event.md#parse)|   [ParseRequest](event.md#parserequest) |   [EventsInfo](event.md#eventsinfo) |  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**parse**](event.md#parse) </div> | <div style="width:200px; text-align:center;">    [ParseRequest](event.md#parserequest)  </div> | <div style="width:200px; text-align:center;">   [EventsInfo](event.md#eventsinfo)  </div> | <div style="width:400px;">  </div> | 
  
 
  

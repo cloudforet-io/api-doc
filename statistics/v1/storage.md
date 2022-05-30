@@ -13,8 +13,8 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description |
-| :--- | :--- | :--- | :--- |
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
 | [**register**](storage.md#register)|   [RegisterStorageRequest](storage.md#registerstoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
 | [**update**](storage.md#update)|   [UpdateStorageRequest](storage.md#updatestoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
 | [**update_plugin**](storage.md#update_plugin)|   [UpdateStoragePluginRequest](storage.md#updatestoragepluginrequest) |   [StorageInfo](storage.md#storageinfo) |  |
@@ -24,7 +24,20 @@ description:
 | [**deregister**](storage.md#deregister)|   [StorageRequest](storage.md#storagerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
 | [**get**](storage.md#get)|   [GetStorageRequest](storage.md#getstoragerequest) |   [StorageInfo](storage.md#storageinfo) |  |
 | [**list**](storage.md#list)|   [StorageQuery](storage.md#storagequery) |   [StoragesInfo](storage.md#storagesinfo) |  |
-| [**stat**](storage.md#stat)|   [StorageStatQuery](storage.md#storagestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  | 
+| [**stat**](storage.md#stat)|   [StorageStatQuery](storage.md#storagestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
+
+| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :-----: | :--------: | :--------: | :-------------------- |
+|<div style="width:70px; text-align:center;">  [**register**](storage.md#register) </div> | <div style="width:200px; text-align:center;">    [RegisterStorageRequest](storage.md#registerstoragerequest)  </div> | <div style="width:200px; text-align:center;">   [StorageInfo](storage.md#storageinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update**](storage.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateStorageRequest](storage.md#updatestoragerequest)  </div> | <div style="width:200px; text-align:center;">   [StorageInfo](storage.md#storageinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**update_plugin**](storage.md#update_plugin) </div> | <div style="width:200px; text-align:center;">    [UpdateStoragePluginRequest](storage.md#updatestoragepluginrequest)  </div> | <div style="width:200px; text-align:center;">   [StorageInfo](storage.md#storageinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**verify_plugin**](storage.md#verify_plugin) </div> | <div style="width:200px; text-align:center;">    [StorageRequest](storage.md#storagerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**enable**](storage.md#enable) </div> | <div style="width:200px; text-align:center;">    [StorageRequest](storage.md#storagerequest)  </div> | <div style="width:200px; text-align:center;">   [StorageInfo](storage.md#storageinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**disable**](storage.md#disable) </div> | <div style="width:200px; text-align:center;">    [StorageRequest](storage.md#storagerequest)  </div> | <div style="width:200px; text-align:center;">   [StorageInfo](storage.md#storageinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**deregister**](storage.md#deregister) </div> | <div style="width:200px; text-align:center;">    [StorageRequest](storage.md#storagerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**get**](storage.md#get) </div> | <div style="width:200px; text-align:center;">    [GetStorageRequest](storage.md#getstoragerequest)  </div> | <div style="width:200px; text-align:center;">   [StorageInfo](storage.md#storageinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**list**](storage.md#list) </div> | <div style="width:200px; text-align:center;">    [StorageQuery](storage.md#storagequery)  </div> | <div style="width:200px; text-align:center;">   [StoragesInfo](storage.md#storagesinfo)  </div> | <div style="width:400px;">  </div> |
+|<div style="width:70px; text-align:center;">  [**stat**](storage.md#stat) </div> | <div style="width:200px; text-align:center;">    [StorageStatQuery](storage.md#storagestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
  
 
  
