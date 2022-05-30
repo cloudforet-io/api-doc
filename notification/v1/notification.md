@@ -1,5 +1,5 @@
 ---
-description: Notification is a service that delivers event information generated in SpaceONE to a project or user.Protocol is the definition of “in what way” when Notification is delivered through Channel. The created protocol delivers Notification to Project or User through Channel.Notification propagation is not possible with the protocol itself, and must be delivered by setting a channel.Channel is largely divided into Project Channel and User Channel.
+description: Notification is a service that delivers event information generated in SpaceONE to a project or user. Protocol is the definition of “in what way” when Notification is delivered through Channel. The created protocol delivers Notification to Project or User through Channel. Notification propagation is not possible with the protocol itself, and must be delivered by setting a channel. Channel is largely divided into Project Channel and User Channel.
 ---
 # Notification
 
@@ -30,11 +30,65 @@ description: Notification is a service that delivers event information generated
 > **POST** /notification/v1/notifications
 >
 
+> Create a new Notification. When a notification is created, it is propagatedthrough the channel of the project to which the notification belongs, and if an internal channel oruser channel is set, the notification is also propagated to the user.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateNotificationRequest](notification.md#createnotificationrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "resource_type": "identity.Project",
+    "resource_id": "resource-123456789012",
+    "topic": "monitoring.Alert",
+    "message": {
+        "title": "[Alerting] Not Running Pods 0:OK alert",
+        "description": "[spaceone-dev] Not Running Pods 0 is OK\n\nFailure level : WorkerNode\nPanel ... ",
+        "tags": {
+            "urgency": "LOW",
+            "resource_id": "pod",
+            "assignee": "cloudforet@mz.co.kr",
+            "created_at": "2022-01-01T17:12:45.990Z",
+            "state": "ACKNOWLEDGED",
+            "project_id": "project-123456789012"
+        }
+    },
+    "notification_type": "INFO",
+    "notification_level": "LV2",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "notification_id": "notification-123456789012",
+    "topic": "monitoring.Alert",
+    "message": {
+        "title": "[Alerting] Not Running Pods 0:OK alert",
+        "description": "[spaceone-dev] Not Running Pods 0 is OK\n\nFailure level : WorkerNode\nPanel ... ",
+        "tags": {
+            "urgency": "LOW",
+            "resource_id": "pod",
+            "assignee": "cloudforet@mz.co.kr",
+            "created_at": "2022-01-01T17:12:45.990Z",
+            "state": "ACKNOWLEDGED",
+            "project_id": "project-123456789012"
+        }
+    },
+    "notification_type": "INFO",
+    "notification_level": "LV2",
+    "is_read": true,
+    "user_id": "cloudforet@mz.co.kr",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T17:12:40.990Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
