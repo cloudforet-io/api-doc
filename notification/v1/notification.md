@@ -15,10 +15,10 @@ desc: Notification service Methods
 
 | Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Create a new Notification. |
+| [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Create a new Notification. When a notification is created, it is propagated through the channel of the project to which the notification belongs, and if an internal channel or user channel is set, the notification is also propagated to the user. |
 | [**push**](notification.md#push)|   [PushNotificationRequest](notification.md#pushnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Push a new Notification directly. |
 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete the Notification. |
-| [**delete_all**](notification.md#delete_all)|   [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete all Notifications. |
+| [**delete_all**](notification.md#delete_all)|   [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user. |
 | [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Change the notifications to read status. |
 | [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) | Gets a single Notification. |
 | [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) | Lists the specified notifications. |
@@ -26,10 +26,10 @@ desc: Notification service Methods
 
 | Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](notification.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateNotificationRequest](notification.md#createnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Create a new Notification. </div> |
+|<div style="width:70px; text-align:center;">  [**create**](notification.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateNotificationRequest](notification.md#createnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Create a new Notification. When a notification is created, it is propagated through the channel of the project to which the notification belongs, and if an internal channel or user channel is set, the notification is also propagated to the user. </div> |
 |<div style="width:70px; text-align:center;">  [**push**](notification.md#push) </div> | <div style="width:200px; text-align:center;">    [PushNotificationRequest](notification.md#pushnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Push a new Notification directly. </div> |
 |<div style="width:70px; text-align:center;">  [**delete**](notification.md#delete) </div> | <div style="width:200px; text-align:center;">    [NotificationRequest](notification.md#notificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete the Notification. </div> |
-|<div style="width:70px; text-align:center;">  [**delete_all**](notification.md#delete_all) </div> | <div style="width:200px; text-align:center;">    [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete all Notifications. </div> |
+|<div style="width:70px; text-align:center;">  [**delete_all**](notification.md#delete_all) </div> | <div style="width:200px; text-align:center;">    [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user. </div> |
 |<div style="width:70px; text-align:center;">  [**set_read**](notification.md#set_read) </div> | <div style="width:200px; text-align:center;">    [SetReadNotificationRequest](notification.md#setreadnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Change the notifications to read status. </div> |
 |<div style="width:70px; text-align:center;">  [**get**](notification.md#get) </div> | <div style="width:200px; text-align:center;">    [GetNotificationRequest](notification.md#getnotificationrequest)  </div> | <div style="width:200px; text-align:center;">   [NotificationInfo](notification.md#notificationinfo)  </div> | <div style="width:400px;"> Gets a single Notification. </div> |
 |<div style="width:70px; text-align:center;">  [**list**](notification.md#list) </div> | <div style="width:200px; text-align:center;">    [NotificationQuery](notification.md#notificationquery)  </div> | <div style="width:200px; text-align:center;">   [NotificationsInfo](notification.md#notificationsinfo)  </div> | <div style="width:400px;"> Lists the specified notifications. </div> |
@@ -41,7 +41,7 @@ desc: Notification service Methods
 > **POST** /notification/v1/notifications
 >
 
-> Create a new Notification.
+> Create a new Notification. When a notification is created, it is propagated through the channel of the project to which the notification belongs, and if an internal channel or user channel is set, the notification is also propagated to the user.
 
 | Type | Message |
 | :--- | :--- |
@@ -136,7 +136,7 @@ None
 > **POST** /notification/v1/notification/delete_all
 >
 
-> Delete all Notifications.
+> Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user.
 
 | Type | Message |
 | :--- | :--- |
@@ -145,13 +145,13 @@ None
 {% tabs %}
 {% tab title="Request Example" %}
 ```text
-None
+domain_id: xxxxx-aws-abcdtags:env: dev
 ```
 {% endtab %}
 
 {% tab title="Response Example" %}
 ```text
-None
+domain_id: xxxxx-aws-abcd
 ```
 {% endtab %}
 {% endtabs %}
