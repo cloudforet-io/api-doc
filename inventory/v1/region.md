@@ -13,7 +13,7 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](region.md#create)|   [CreateRegionRequest](region.md#createregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
 | [**update**](region.md#update)|   [UpdateRegionRequest](region.md#updateregionrequest) |   [RegionInfo](region.md#regioninfo) |  |
@@ -22,14 +22,53 @@ description:
 | [**list**](region.md#list)|   [RegionQuery](region.md#regionquery) |   [RegionsInfo](region.md#regionsinfo) |  |
 | [**stat**](region.md#stat)|   [RegionStatQuery](region.md#regionstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](region.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateRegionRequest](region.md#createregionrequest)  </div> | <div style="width:200px; text-align:center;">   [RegionInfo](region.md#regioninfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**update**](region.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateRegionRequest](region.md#updateregionrequest)  </div> | <div style="width:200px; text-align:center;">   [RegionInfo](region.md#regioninfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**delete**](region.md#delete) </div> | <div style="width:200px; text-align:center;">    [RegionRequest](region.md#regionrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**get**](region.md#get) </div> | <div style="width:200px; text-align:center;">    [GetRegionRequest](region.md#getregionrequest)  </div> | <div style="width:200px; text-align:center;">   [RegionInfo](region.md#regioninfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**list**](region.md#list) </div> | <div style="width:200px; text-align:center;">    [RegionQuery](region.md#regionquery)  </div> | <div style="width:200px; text-align:center;">   [RegionsInfo](region.md#regionsinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](region.md#stat) </div> | <div style="width:200px; text-align:center;">    [RegionStatQuery](region.md#regionstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateRegionRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegionInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateRegionRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegionInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegionRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetRegionRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegionInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegionQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegionsInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RegionStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  

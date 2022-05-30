@@ -13,7 +13,7 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](budget.md#create)|   [CreateBudgetRequest](budget.md#createbudgetrequest) |   [BudgetInfo](budget.md#budgetinfo) |  |
 | [**update**](budget.md#update)|   [UpdateBudgetRequest](budget.md#updatebudgetrequest) |   [BudgetInfo](budget.md#budgetinfo) |  |
@@ -23,15 +23,59 @@ description:
 | [**list**](budget.md#list)|   [BudgetQuery](budget.md#budgetquery) |   [BudgetsInfo](budget.md#budgetsinfo) |  |
 | [**stat**](budget.md#stat)|   [BudgetStatQuery](budget.md#budgetstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](budget.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateBudgetRequest](budget.md#createbudgetrequest)  </div> | <div style="width:200px; text-align:center;">   [BudgetInfo](budget.md#budgetinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**update**](budget.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateBudgetRequest](budget.md#updatebudgetrequest)  </div> | <div style="width:200px; text-align:center;">   [BudgetInfo](budget.md#budgetinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**set_notification**](budget.md#set_notification) </div> | <div style="width:200px; text-align:center;">    [SetBudgetNotificationRequest](budget.md#setbudgetnotificationrequest)  </div> | <div style="width:200px; text-align:center;">   [BudgetInfo](budget.md#budgetinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**delete**](budget.md#delete) </div> | <div style="width:200px; text-align:center;">    [BudgetRequest](budget.md#budgetrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**get**](budget.md#get) </div> | <div style="width:200px; text-align:center;">    [GetBudgetRequest](budget.md#getbudgetrequest)  </div> | <div style="width:200px; text-align:center;">   [BudgetInfo](budget.md#budgetinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**list**](budget.md#list) </div> | <div style="width:200px; text-align:center;">    [BudgetQuery](budget.md#budgetquery)  </div> | <div style="width:200px; text-align:center;">   [BudgetsInfo](budget.md#budgetsinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](budget.md#stat) </div> | <div style="width:200px; text-align:center;">    [BudgetStatQuery](budget.md#budgetstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateBudgetRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   BudgetInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateBudgetRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   BudgetInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">set_notification</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SetBudgetNotificationRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   BudgetInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   BudgetRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetBudgetRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   BudgetInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   BudgetQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   BudgetsInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   BudgetStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  
@@ -134,50 +178,50 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">budget_id</td>
+      <td style="text-align:left; width:100px;">budget_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">limit</td>
+      <td style="text-align:left; width:100px;">limit</td>
       <td style="text-align:left">float</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">planned_limits</td>
+      <td style="text-align:left; width:100px;">planned_limits</td>
       <td style="text-align:left"><a href="budget.md#plannedlimit">list of PlannedLimit</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">total_usage_usd_cost</td>
+      <td style="text-align:left; width:100px;">total_usage_usd_cost</td>
       <td style="text-align:left">float</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">cost_types</td>
+      <td style="text-align:left; width:100px;">cost_types</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">time_unit</td>
+      <td style="text-align:left; width:100px;">time_unit</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>TOTAL</li>
@@ -188,55 +232,55 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">start</td>
+      <td style="text-align:left; width:100px;">start</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">end</td>
+      <td style="text-align:left; width:100px;">end</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">notifications</td>
+      <td style="text-align:left; width:100px;">notifications</td>
       <td style="text-align:left"><a href="budget.md#budgetnotification">list of BudgetNotification</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">project_group_id</td>
+      <td style="text-align:left; width:100px;">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">updated_at</td>
+      <td style="text-align:left; width:100px;">updated_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -250,20 +294,20 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">threshold</td>
+      <td style="text-align:left; width:100px;">threshold</td>
       <td style="text-align:left">float</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">unit</td>
+      <td style="text-align:left; width:100px;">unit</td>
       <td style="text-align:left"><ul>
           	<li>UNIT_NONE</li>
           	<li>PERCENT</li>
@@ -273,7 +317,7 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">notification_type</td>
+      <td style="text-align:left; width:100px;">notification_type</td>
       <td style="text-align:left"><ul>
           	<li>NOTIFICATION_TYPE_NONE</li>
           	<li>CRITICAL</li>
@@ -291,7 +335,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -299,37 +343,37 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">query</td>
+      <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">budget_id</td>
+      <td style="text-align:left; width:100px;">budget_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">project_group_id</td>
+      <td style="text-align:left; width:100px;">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">time_unit</td>
+      <td style="text-align:left; width:100px;">time_unit</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>TOTAL</li>
@@ -340,7 +384,7 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
@@ -372,7 +416,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -380,31 +424,31 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">limit</td>
+      <td style="text-align:left; width:100px;">limit</td>
       <td style="text-align:left">float</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">planned_limits</td>
+      <td style="text-align:left; width:100px;">planned_limits</td>
       <td style="text-align:left"><a href="budget.md#plannedlimit">list of PlannedLimit</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">cost_types</td>
+      <td style="text-align:left; width:100px;">cost_types</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">time_unit</td>
+      <td style="text-align:left; width:100px;">time_unit</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>TOTAL</li>
@@ -415,43 +459,43 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">start</td>
+      <td style="text-align:left; width:100px;">start</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">end</td>
+      <td style="text-align:left; width:100px;">end</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">notifications</td>
+      <td style="text-align:left; width:100px;">notifications</td>
       <td style="text-align:left"><a href="budget.md#budgetnotification">list of BudgetNotification</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">project_group_id</td>
+      <td style="text-align:left; width:100px;">project_group_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>

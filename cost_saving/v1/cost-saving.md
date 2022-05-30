@@ -13,17 +13,41 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
 | [**record**](cost-saving.md#record)|   [RecordRequest](cost-saving.md#recordrequest) |   [RecordInfo](cost-saving.md#recordinfo) |  |
 | [**list**](cost-saving.md#list)|   [CostSavingQuery](cost-saving.md#costsavingquery) |   [CostSavingsInfo](cost-saving.md#costsavingsinfo) |  |
 | [**stat**](cost-saving.md#stat)|   [CostSavingStatQuery](cost-saving.md#costsavingstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**record**](cost-saving.md#record) </div> | <div style="width:200px; text-align:center;">    [RecordRequest](cost-saving.md#recordrequest)  </div> | <div style="width:200px; text-align:center;">   [RecordInfo](cost-saving.md#recordinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**list**](cost-saving.md#list) </div> | <div style="width:200px; text-align:center;">    [CostSavingQuery](cost-saving.md#costsavingquery)  </div> | <div style="width:200px; text-align:center;">   [CostSavingsInfo](cost-saving.md#costsavingsinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](cost-saving.md#stat) </div> | <div style="width:200px; text-align:center;">    [CostSavingStatQuery](cost-saving.md#costsavingstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">record</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RecordRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RecordInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CostSavingQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CostSavingsInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CostSavingStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  
@@ -117,26 +141,26 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">record_id</td>
+      <td style="text-align:left; width:100px;">record_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">resource_type</td>
+      <td style="text-align:left; width:100px;">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">saving_mode</td>
+      <td style="text-align:left; width:100px;">saving_mode</td>
       <td style="text-align:left"><ul>
           	<li>MODE_NONE</li>
           	<li>SAVING</li>
@@ -146,49 +170,49 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">calc_dimensions</td>
+      <td style="text-align:left; width:100px;">calc_dimensions</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">provider</td>
+      <td style="text-align:left; width:100px;">provider</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">region_code</td>
+      <td style="text-align:left; width:100px;">region_code</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">saving_service</td>
+      <td style="text-align:left; width:100px;">saving_service</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">saving_by</td>
+      <td style="text-align:left; width:100px;">saving_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -202,7 +226,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -210,13 +234,13 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">resource_type</td>
+      <td style="text-align:left; width:100px;">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">saving_mode</td>
+      <td style="text-align:left; width:100px;">saving_mode</td>
       <td style="text-align:left"><ul>
           	<li>MODE_NONE</li>
           	<li>SAVING</li>
@@ -226,43 +250,43 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">calc_dimensions</td>
+      <td style="text-align:left; width:100px;">calc_dimensions</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">saving_service</td>
+      <td style="text-align:left; width:100px;">saving_service</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">saving_by</td>
+      <td style="text-align:left; width:100px;">saving_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">region_code</td>
+      <td style="text-align:left; width:100px;">region_code</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">provider</td>
+      <td style="text-align:left; width:100px;">provider</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>

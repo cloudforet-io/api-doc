@@ -13,7 +13,7 @@ description: User API which allows member management within project, company, an
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](user.md#create)|   [CreateUserRequest](user.md#createuserrequest) |   [UserInfo](user.md#userinfo) |  |
 | [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) | Update user info by given user_id |
@@ -26,18 +26,77 @@ description: User API which allows member management within project, company, an
 | [**find**](user.md#find)|   [FindUserQuery](user.md#finduserquery) |   [FindUsersInfo](user.md#findusersinfo) |  |
 | [**sync**](user.md#sync)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](user.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateUserRequest](user.md#createuserrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**update**](user.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateUserRequest](user.md#updateuserrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;"> Update user info by given user_id </div> |
-|<div style="width:70px; text-align:center;">  [**enable**](user.md#enable) </div> | <div style="width:200px; text-align:center;">    [UserRequest](user.md#userrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**disable**](user.md#disable) </div> | <div style="width:200px; text-align:center;">    [UserRequest](user.md#userrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**delete**](user.md#delete) </div> | <div style="width:200px; text-align:center;">    [UserRequest](user.md#userrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**get**](user.md#get) </div> | <div style="width:200px; text-align:center;">    [GetUserRequest](user.md#getuserrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**list**](user.md#list) </div> | <div style="width:200px; text-align:center;">    [UserQuery](user.md#userquery)  </div> | <div style="width:200px; text-align:center;">   [UsersInfo](user.md#usersinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](user.md#stat) </div> | <div style="width:200px; text-align:center;">    [UserStatQuery](user.md#userstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**find**](user.md#find) </div> | <div style="width:200px; text-align:center;">    [FindUserQuery](user.md#finduserquery)  </div> | <div style="width:200px; text-align:center;">   [FindUsersInfo](user.md#findusersinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**sync**](user.md#sync) </div> | <div style="width:200px; text-align:center;">    [UserRequest](user.md#userrequest)  </div> | <div style="width:200px; text-align:center;">   [UserInfo](user.md#userinfo)  </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateUserRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateUserRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Update user info by given user_id</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">enable</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">disable</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetUserRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UsersInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">find</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   FindUserQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   FindUsersInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">sync</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  
@@ -232,7 +291,7 @@ description: User API which allows member management within project, company, an
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -240,31 +299,31 @@ description: User API which allows member management within project, company, an
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">user_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">password</td>
+      <td style="text-align:left; width:100px;">password</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">email</td>
+      <td style="text-align:left; width:100px;">email</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">user_type</td>
+      <td style="text-align:left; width:100px;">user_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE_USER_TYPE</li>
           	<li>USER</li>
@@ -274,7 +333,7 @@ description: User API which allows member management within project, company, an
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">backend</td>
+      <td style="text-align:left; width:100px;">backend</td>
       <td style="text-align:left"><ul>
           	<li>NONE_BACKEND</li>
           	<li>LOCAL</li>
@@ -284,25 +343,25 @@ description: User API which allows member management within project, company, an
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">language</td>
+      <td style="text-align:left; width:100px;">language</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">timezone</td>
+      <td style="text-align:left; width:100px;">timezone</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
@@ -361,26 +420,26 @@ description: User API which allows member management within project, company, an
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">user_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
@@ -391,13 +450,13 @@ description: User API which allows member management within project, company, an
 
    </tr>
     <tr>
-      <td style="text-align:left">email</td>
+      <td style="text-align:left; width:100px;">email</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">user_type</td>
+      <td style="text-align:left; width:100px;">user_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE_USER_TYPE</li>
           	<li>USER</li>
@@ -407,7 +466,7 @@ description: User API which allows member management within project, company, an
 
    </tr>
     <tr>
-      <td style="text-align:left">backend</td>
+      <td style="text-align:left; width:100px;">backend</td>
       <td style="text-align:left"><ul>
           	<li>NONE_BACKEND</li>
           	<li>LOCAL</li>
@@ -417,37 +476,37 @@ description: User API which allows member management within project, company, an
 
    </tr>
     <tr>
-      <td style="text-align:left">language</td>
+      <td style="text-align:left; width:100px;">language</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">timezone</td>
+      <td style="text-align:left; width:100px;">timezone</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">last_accessed_at</td>
+      <td style="text-align:left; width:100px;">last_accessed_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -461,7 +520,7 @@ description: User API which allows member management within project, company, an
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -469,37 +528,37 @@ description: User API which allows member management within project, company, an
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">query</td>
+      <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">user_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">email</td>
+      <td style="text-align:left; width:100px;">email</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">user_type</td>
+      <td style="text-align:left; width:100px;">user_type</td>
       <td style="text-align:left"><ul>
           	<li>NONE_USER_TYPE</li>
           	<li>USER</li>
@@ -509,7 +568,7 @@ description: User API which allows member management within project, company, an
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">backend</td>
+      <td style="text-align:left; width:100px;">backend</td>
       <td style="text-align:left"><ul>
           	<li>NONE_BACKEND</li>
           	<li>LOCAL</li>
@@ -519,7 +578,7 @@ description: User API which allows member management within project, company, an
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>

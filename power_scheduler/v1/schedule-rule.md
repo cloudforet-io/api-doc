@@ -13,7 +13,7 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](schedule-rule.md#create)|   [CreateScheduleRuleRequest](schedule-rule.md#createschedulerulerequest) |   [RuleInfo](schedule-rule.md#ruleinfo) |  |
 | [**update**](schedule-rule.md#update)|   [UpdateScheduleRuleRequest](schedule-rule.md#updateschedulerulerequest) |   [RuleInfo](schedule-rule.md#ruleinfo) |  |
@@ -22,14 +22,53 @@ description:
 | [**list**](schedule-rule.md#list)|   [ScheduleRuleQuery](schedule-rule.md#schedulerulequery) |   [RulesInfo](schedule-rule.md#rulesinfo) |  |
 | [**stat**](schedule-rule.md#stat)|   [ScheduleRuleStatQuery](schedule-rule.md#schedulerulestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](schedule-rule.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateScheduleRuleRequest](schedule-rule.md#createschedulerulerequest)  </div> | <div style="width:200px; text-align:center;">   [RuleInfo](schedule-rule.md#ruleinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**update**](schedule-rule.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateScheduleRuleRequest](schedule-rule.md#updateschedulerulerequest)  </div> | <div style="width:200px; text-align:center;">   [RuleInfo](schedule-rule.md#ruleinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**delete**](schedule-rule.md#delete) </div> | <div style="width:200px; text-align:center;">    [ScheduleRuleRequest](schedule-rule.md#schedulerulerequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**get**](schedule-rule.md#get) </div> | <div style="width:200px; text-align:center;">    [GetScheduleRuleRequest](schedule-rule.md#getschedulerulerequest)  </div> | <div style="width:200px; text-align:center;">   [RuleInfo](schedule-rule.md#ruleinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**list**](schedule-rule.md#list) </div> | <div style="width:200px; text-align:center;">    [ScheduleRuleQuery](schedule-rule.md#schedulerulequery)  </div> | <div style="width:200px; text-align:center;">   [RulesInfo](schedule-rule.md#rulesinfo)  </div> | <div style="width:400px;">  </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](schedule-rule.md#stat) </div> | <div style="width:200px; text-align:center;">    [ScheduleRuleStatQuery](schedule-rule.md#schedulerulestatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateScheduleRuleRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RuleInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateScheduleRuleRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RuleInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ScheduleRuleRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetScheduleRuleRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RuleInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ScheduleRuleQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   RulesInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ScheduleRuleStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  
@@ -119,7 +158,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -127,19 +166,19 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">schedule_id</td>
+      <td style="text-align:left; width:100px;">schedule_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>RULE_STATE_NONE</li>
           	<li>RUNNING</li>
@@ -149,7 +188,7 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">rule_type</td>
+      <td style="text-align:left; width:100px;">rule_type</td>
       <td style="text-align:left"><ul>
           	<li>RULE_TYPE_NONE</li>
           	<li>ROUTINE</li>
@@ -159,31 +198,31 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">rule</td>
+      <td style="text-align:left; width:100px;">rule</td>
       <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">priority</td>
+      <td style="text-align:left; width:100px;">priority</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">user_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
@@ -211,26 +250,26 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">schedule_rule_id</td>
+      <td style="text-align:left; width:100px;">schedule_rule_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>RULE_STATE_NONE</li>
           	<li>RUNNING</li>
@@ -240,7 +279,7 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">rule_type</td>
+      <td style="text-align:left; width:100px;">rule_type</td>
       <td style="text-align:left"><ul>
           	<li>RULE_TYPE_NONE</li>
           	<li>ROUTINE</li>
@@ -250,49 +289,49 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">rule</td>
+      <td style="text-align:left; width:100px;">rule</td>
       <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">priority</td>
+      <td style="text-align:left; width:100px;">priority</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">schedule_id</td>
+      <td style="text-align:left; width:100px;">schedule_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">created_by</td>
+      <td style="text-align:left; width:100px;">created_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -312,7 +351,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -320,37 +359,37 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">query</td>
+      <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">schedule_rule_id</td>
+      <td style="text-align:left; width:100px;">schedule_rule_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">schedule_id</td>
+      <td style="text-align:left; width:100px;">schedule_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">priority</td>
+      <td style="text-align:left; width:100px;">priority</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>RULE_STATE_NONE</li>
           	<li>RUNNING</li>
@@ -360,13 +399,13 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
@@ -392,7 +431,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -400,19 +439,19 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">schedule_rule_id</td>
+      <td style="text-align:left; width:100px;">schedule_rule_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>RULE_STATE_NONE</li>
           	<li>RUNNING</li>
@@ -422,19 +461,19 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">rule</td>
+      <td style="text-align:left; width:100px;">rule</td>
       <td style="text-align:left"><a href="schedule-rule.md#rule">list of Rule</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>

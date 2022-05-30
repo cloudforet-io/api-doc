@@ -13,7 +13,7 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](user-channel.md#create)|   [CreateUserChannelRequest](user-channel.md#createuserchannelrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) | Creates a new User Channel.User channel is the definition of the channel that delivers the notification to users when the notification is created.When creating a User Channel, one of the protocols must be selected, and an notification is dispatched through the selected protocol. |
 | [**update**](user-channel.md#update)|   [UpdateUserChannelRequest](user-channel.md#updateuserchannelrequest) |   [UserChannelInfo](user-channel.md#userchannelinfo) | Updates a User Channel information.Protocol that has already been set cannot be changed. Instead, the data required to be dispatched notification for user channel is can be updated. |
@@ -26,18 +26,77 @@ description:
 | [**list**](user-channel.md#list)|   [UserChannelQuery](user-channel.md#userchannelquery) |   [UserChannelsInfo](user-channel.md#userchannelsinfo) | Lists the specified User Channel.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. |
 | [**stat**](user-channel.md#stat)|   [UserChannelStatQuery](user-channel.md#userchannelstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](user-channel.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateUserChannelRequest](user-channel.md#createuserchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [UserChannelInfo](user-channel.md#userchannelinfo)  </div> | <div style="width:400px;"> Creates a new User Channel.User channel is the definition of the channel that delivers the notification to users when the notification is created.When creating a User Channel, one of the protocols must be selected, and an notification is dispatched through the selected protocol. </div> |
-|<div style="width:70px; text-align:center;">  [**update**](user-channel.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateUserChannelRequest](user-channel.md#updateuserchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [UserChannelInfo](user-channel.md#userchannelinfo)  </div> | <div style="width:400px;"> Updates a User Channel information.Protocol that has already been set cannot be changed. Instead, the data required to be dispatched notification for user channel is can be updated. </div> |
-|<div style="width:70px; text-align:center;">  [**set_schedule**](user-channel.md#set_schedule) </div> | <div style="width:200px; text-align:center;">    [UpdateUserChannelScheduleRequest](user-channel.md#updateuserchannelschedulerequest)  </div> | <div style="width:200px; text-align:center;">   [UserChannelInfo](user-channel.md#userchannelinfo)  </div> | <div style="width:400px;"> Schedule settings for user channels.When a notification is created, you can set the day and time you want to receive it through the schedule.When you set the day of the week in the schedule, you can receive a notification only on the set day of the week.If you also set the start time and end time with day of the week, you can receive a notification only at the set time on the set day of the week.If there is no schedule, notifications will be dispatched at all times through user channel. </div> |
-|<div style="width:70px; text-align:center;">  [**set_subscription**](user-channel.md#set_subscription) </div> | <div style="width:200px; text-align:center;">    [UpdateUserChannelSubscriptionRequest](user-channel.md#updateuserchannelsubscriptionrequest)  </div> | <div style="width:200px; text-align:center;">   [UserChannelInfo](user-channel.md#userchannelinfo)  </div> | <div style="width:400px;"> Subscription settings for user channelsIf the user channel have subscriptions, notification is dispatched only if the topic of the notification is the same as the one set in the subscriptions.If no subscriptions in user channel, notifications will be dispatched all. </div> |
-|<div style="width:70px; text-align:center;">  [**enable**](user-channel.md#enable) </div> | <div style="width:200px; text-align:center;">    [UserChannelRequest](user-channel.md#userchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [UserChannelInfo](user-channel.md#userchannelinfo)  </div> | <div style="width:400px;"> Enables a User Channel.If the disabled user channel is enabled, the user channel can be used again and the notification can be dispatched.Even if the user channel is enabled, if the protocol being used in the user channel is disabled, the notification is not dispatched. </div> |
-|<div style="width:70px; text-align:center;">  [**disable**](user-channel.md#disable) </div> | <div style="width:200px; text-align:center;">    [UserChannelRequest](user-channel.md#userchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [UserChannelInfo](user-channel.md#userchannelinfo)  </div> | <div style="width:400px;"> Disables a User Channel.If you disable the user channel, the notification will not be dispatched, even if they are created. </div> |
-|<div style="width:70px; text-align:center;">  [**delete**](user-channel.md#delete) </div> | <div style="width:200px; text-align:center;">    [UserChannelRequest](user-channel.md#userchannelrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete the User Channel. </div> |
-|<div style="width:70px; text-align:center;">  [**get**](user-channel.md#get) </div> | <div style="width:200px; text-align:center;">    [GetUserChannelRequest](user-channel.md#getuserchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [UserChannelInfo](user-channel.md#userchannelinfo)  </div> | <div style="width:400px;"> Gets a single User Channel. </div> |
-|<div style="width:70px; text-align:center;">  [**list**](user-channel.md#list) </div> | <div style="width:200px; text-align:center;">    [UserChannelQuery](user-channel.md#userchannelquery)  </div> | <div style="width:200px; text-align:center;">   [UserChannelsInfo](user-channel.md#userchannelsinfo)  </div> | <div style="width:400px;"> Lists the specified User Channel.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](user-channel.md#stat) </div> | <div style="width:200px; text-align:center;">    [UserChannelStatQuery](user-channel.md#userchannelstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateUserChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Creates a new User Channel.User channel is the definition of the channel that delivers the notification to users when the notification is created.When creating a User Channel, one of the protocols must be selected, and an notification is dispatched through the selected protocol.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateUserChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Updates a User Channel information.Protocol that has already been set cannot be changed. Instead, the data required to be dispatched notification for user channel is can be updated.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">set_schedule</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateUserChannelScheduleRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Schedule settings for user channels.When a notification is created, you can set the day and time you want to receive it through the schedule.When you set the day of the week in the schedule, you can receive a notification only on the set day of the week.If you also set the start time and end time with day of the week, you can receive a notification only at the set time on the set day of the week.If there is no schedule, notifications will be dispatched at all times through user channel.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">set_subscription</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateUserChannelSubscriptionRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Subscription settings for user channelsIf the user channel have subscriptions, notification is dispatched only if the topic of the notification is the same as the one set in the subscriptions.If no subscriptions in user channel, notifications will be dispatched all.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">enable</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Enables a User Channel.If the disabled user channel is enabled, the user channel can be used again and the notification can be dispatched.Even if the user channel is enabled, if the protocol being used in the user channel is disabled, the notification is not dispatched.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">disable</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Disables a User Channel.If you disable the user channel, the notification will not be dispatched, even if they are created.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Delete the User Channel.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetUserChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Gets a single User Channel.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelsInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Lists the specified User Channel.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UserChannelStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  
@@ -235,24 +294,24 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">user_channel_id</td>
+      <td style="text-align:left; width:100px;">user_channel_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The name of user channel</td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
@@ -261,58 +320,58 @@ description:
 <td style="text-align:left">The state of user channel. ENABLED or DISABLED only.</td>
    </tr>
     <tr>
-      <td style="text-align:left">data</td>
+      <td style="text-align:left; width:100px;">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The data for using user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">secret_id</td>
+      <td style="text-align:left; width:100px;">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of secret encrypted data in the security service</td>
 
    </tr>
     <tr>
-      <td style="text-align:left">is_subscribe</td>
+      <td style="text-align:left; width:100px;">is_subscribe</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">Indicates whether subscriptions will be used.</td>
    </tr>
     <tr>
-      <td style="text-align:left">subscriptions</td>
+      <td style="text-align:left; width:100px;">subscriptions</td>
       <td style="text-align:left">list of string</td>
 <td style="text-align:left">The topic list to subscription.</td>
    </tr>
     <tr>
-      <td style="text-align:left">is_scheduled</td>
+      <td style="text-align:left; width:100px;">is_scheduled</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">Indicates whether schedule will be used.</td>
    </tr>
     <tr>
-      <td style="text-align:left">schedule</td>
+      <td style="text-align:left; width:100px;">schedule</td>
       <td style="text-align:left"><a href="user-channel.md#userchannelschedule">UserChannelSchedule</a></td>
 <td style="text-align:left">Schedule for which you want to receive notifications through the user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The tags for user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">protocol_id</td>
+      <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of protocol set in the user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">user_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of user using the user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of domain.</td>
    </tr>
     <tr>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">User channel creation time.</td>
    </tr>
@@ -325,7 +384,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -333,25 +392,25 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">query</td>
+      <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
-      <td style="text-align:left">user_channel_id</td>
+      <td style="text-align:left; width:100px;">user_channel_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The name of user channel. It can have a maximum of 255 characters.</td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
@@ -361,25 +420,25 @@ description:
 <td style="text-align:left">The state of user channel. ENABLED or DISABLED only.</td>
    </tr>
     <tr>
-      <td style="text-align:left">secret_id</td>
+      <td style="text-align:left; width:100px;">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">protocol_id</td>
+      <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of protocol set in the user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">user_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of user using the user channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of domain.</td>
@@ -399,14 +458,14 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">day_of_week</td>
+      <td style="text-align:left; width:100px;">day_of_week</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>MON</li>
@@ -420,12 +479,12 @@ description:
 <td style="text-align:left">Day of the week to be notified.As a list type, only types that can be specified from MON to SUN can be set.</td>
    </tr>
     <tr>
-      <td style="text-align:left">start_hour</td>
+      <td style="text-align:left; width:100px;">start_hour</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left">Start time to receive notifications.Only integer type can be set, and 0 to 23 can be.</td>
    </tr>
     <tr>
-      <td style="text-align:left">end_hour</td>
+      <td style="text-align:left; width:100px;">end_hour</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left">End time to receive notifications.Only integer type can be set, and 1 to 24 can be.</td>
    </tr>

@@ -13,7 +13,7 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](project-channel.md#create)|   [CreateProjectChannelRequest](project-channel.md#createprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) | Creates a new Project Channel.Project channel is the definition of the channel that delivers the notification to the project when the notification is created.When creating a Project Channel, one of the protocols must be selected, and an notification is dispatched through the selected protocol. |
 | [**update**](project-channel.md#update)|   [UpdateProjectChannelRequest](project-channel.md#updateprojectchannelrequest) |   [ProjectChannelInfo](project-channel.md#projectchannelinfo) | Updates a Project Channel information.Protocol that has already been set cannot be changed. Instead, the data required to be dispatched notification for project channel is can be updated. |
@@ -26,18 +26,77 @@ description:
 | [**list**](project-channel.md#list)|   [ProjectChannelQuery](project-channel.md#projectchannelquery) |   [ProjectChannelsInfo](project-channel.md#projectchannelsinfo) | Lists the specified Project Channel.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. |
 | [**stat**](project-channel.md#stat)|   [ProjectChannelStatQuery](project-channel.md#projectchannelstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](project-channel.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateProjectChannelRequest](project-channel.md#createprojectchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectChannelInfo](project-channel.md#projectchannelinfo)  </div> | <div style="width:400px;"> Creates a new Project Channel.Project channel is the definition of the channel that delivers the notification to the project when the notification is created.When creating a Project Channel, one of the protocols must be selected, and an notification is dispatched through the selected protocol. </div> |
-|<div style="width:70px; text-align:center;">  [**update**](project-channel.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateProjectChannelRequest](project-channel.md#updateprojectchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectChannelInfo](project-channel.md#projectchannelinfo)  </div> | <div style="width:400px;"> Updates a Project Channel information.Protocol that has already been set cannot be changed. Instead, the data required to be dispatched notification for project channel is can be updated. </div> |
-|<div style="width:70px; text-align:center;">  [**set_schedule**](project-channel.md#set_schedule) </div> | <div style="width:200px; text-align:center;">    [UpdateProjectChannelScheduleRequest](project-channel.md#updateprojectchannelschedulerequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectChannelInfo](project-channel.md#projectchannelinfo)  </div> | <div style="width:400px;"> Schedule settings for project channels.When a notification is created, you can set the day and time you want to receive it through the schedule.When you set the day of the week in the schedule, you can receive a notification only on the set day of the week.If you also set the start time and end time with day of the week, you can receive a notification only at the set time on the set day of the week.If there is no schedule, notifications will be dispatched at all times through project channel. </div> |
-|<div style="width:70px; text-align:center;">  [**set_subscription**](project-channel.md#set_subscription) </div> | <div style="width:200px; text-align:center;">    [UpdateProjectChannelSubscriptionRequest](project-channel.md#updateprojectchannelsubscriptionrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectChannelInfo](project-channel.md#projectchannelinfo)  </div> | <div style="width:400px;"> Subscription settings for project channelsIf the project channel have subscriptions, notification is dispatched only if the topic of the notification is the same as the one set in the subscriptions.If no subscriptions in project channel, notifications will be dispatched all. </div> |
-|<div style="width:70px; text-align:center;">  [**enable**](project-channel.md#enable) </div> | <div style="width:200px; text-align:center;">    [ProjectChannelRequest](project-channel.md#projectchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectChannelInfo](project-channel.md#projectchannelinfo)  </div> | <div style="width:400px;"> Enables a Project Channel.If the disabled project channel is enabled, the project channel can be used again and the notification can be dispatched.Even if the project channel is enabled, if the protocol being used in the project channel is disabled, the notification is not dispatched. </div> |
-|<div style="width:70px; text-align:center;">  [**disable**](project-channel.md#disable) </div> | <div style="width:200px; text-align:center;">    [ProjectChannelRequest](project-channel.md#projectchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectChannelInfo](project-channel.md#projectchannelinfo)  </div> | <div style="width:400px;"> Disables a Project Channel.If you disable the project channel, the notification will not be dispatched, even if they are created. </div> |
-|<div style="width:70px; text-align:center;">  [**delete**](project-channel.md#delete) </div> | <div style="width:200px; text-align:center;">    [ProjectChannelRequest](project-channel.md#projectchannelrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete the Project Channel. </div> |
-|<div style="width:70px; text-align:center;">  [**get**](project-channel.md#get) </div> | <div style="width:200px; text-align:center;">    [GetProjectChannelRequest](project-channel.md#getprojectchannelrequest)  </div> | <div style="width:200px; text-align:center;">   [ProjectChannelInfo](project-channel.md#projectchannelinfo)  </div> | <div style="width:400px;"> Gets a single Project Channel. </div> |
-|<div style="width:70px; text-align:center;">  [**list**](project-channel.md#list) </div> | <div style="width:200px; text-align:center;">    [ProjectChannelQuery](project-channel.md#projectchannelquery)  </div> | <div style="width:200px; text-align:center;">   [ProjectChannelsInfo](project-channel.md#projectchannelsinfo)  </div> | <div style="width:400px;"> Lists the specified Project Channel.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](project-channel.md#stat) </div> | <div style="width:200px; text-align:center;">    [ProjectChannelStatQuery](project-channel.md#projectchannelstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateProjectChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Creates a new Project Channel.Project channel is the definition of the channel that delivers the notification to the project when the notification is created.When creating a Project Channel, one of the protocols must be selected, and an notification is dispatched through the selected protocol.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateProjectChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Updates a Project Channel information.Protocol that has already been set cannot be changed. Instead, the data required to be dispatched notification for project channel is can be updated.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">set_schedule</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateProjectChannelScheduleRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Schedule settings for project channels.When a notification is created, you can set the day and time you want to receive it through the schedule.When you set the day of the week in the schedule, you can receive a notification only on the set day of the week.If you also set the start time and end time with day of the week, you can receive a notification only at the set time on the set day of the week.If there is no schedule, notifications will be dispatched at all times through project channel.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">set_subscription</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateProjectChannelSubscriptionRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Subscription settings for project channelsIf the project channel have subscriptions, notification is dispatched only if the topic of the notification is the same as the one set in the subscriptions.If no subscriptions in project channel, notifications will be dispatched all.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">enable</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Enables a Project Channel.If the disabled project channel is enabled, the project channel can be used again and the notification can be dispatched.Even if the project channel is enabled, if the protocol being used in the project channel is disabled, the notification is not dispatched.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">disable</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Disables a Project Channel.If you disable the project channel, the notification will not be dispatched, even if they are created.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Delete the Project Channel.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetProjectChannelRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Gets a single Project Channel.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelsInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Lists the specified Project Channel.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProjectChannelStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  
@@ -188,7 +247,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -196,37 +255,37 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">protocol_id</td>
+      <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of protocol that will be set in project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The name of Project Channel. It can have a maximum of 255 characters.</td>
    </tr>
     <tr>
-      <td style="text-align:left">data</td>
+      <td style="text-align:left; width:100px;">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The data for using project channel.This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.In this case, the secret ID that is stored in the security service will be returned and the data value will be empty.if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.</td>
    </tr>
     <tr>
-      <td style="text-align:left">is_subscribe</td>
+      <td style="text-align:left; width:100px;">is_subscribe</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">Indicates whether subscriptions will be used.</td>
    </tr>
     <tr>
-      <td style="text-align:left">subscriptions</td>
+      <td style="text-align:left; width:100px;">subscriptions</td>
       <td style="text-align:left">list of string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">When using subscriptions, it indicates the topic list to subscription.If is_subscribe is set to false, this value is ignored.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left; width:100px;">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>LV1</li>
@@ -239,31 +298,31 @@ description:
 <td style="text-align:left">Set the level of notification.If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.</td>
    </tr>
     <tr>
-      <td style="text-align:left">is_scheduled</td>
+      <td style="text-align:left; width:100px;">is_scheduled</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">Indicates whether schedule will be used.</td>
    </tr>
     <tr>
-      <td style="text-align:left">schedule</td>
+      <td style="text-align:left; width:100px;">schedule</td>
       <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">Schedule for which you want to receive notifications through the project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The tags for project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of project to which the project channel belongs.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of domain.</td>
@@ -284,24 +343,24 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">project_channel_id</td>
+      <td style="text-align:left; width:100px;">project_channel_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The name of project channel</td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
@@ -310,28 +369,28 @@ description:
 <td style="text-align:left">The state of project channel. ENABLED or DISABLED only.</td>
    </tr>
     <tr>
-      <td style="text-align:left">data</td>
+      <td style="text-align:left; width:100px;">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The data for using project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">secret_id</td>
+      <td style="text-align:left; width:100px;">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of secret encrypted data in the security service</td>
 
    </tr>
     <tr>
-      <td style="text-align:left">is_subscribe</td>
+      <td style="text-align:left; width:100px;">is_subscribe</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">Indicates whether subscriptions will be used.</td>
    </tr>
     <tr>
-      <td style="text-align:left">subscriptions</td>
+      <td style="text-align:left; width:100px;">subscriptions</td>
       <td style="text-align:left">list of string</td>
 <td style="text-align:left">The topic list to subscription.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left; width:100px;">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>LV1</li>
@@ -343,37 +402,37 @@ description:
 <td style="text-align:left">Set the level of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">is_scheduled</td>
+      <td style="text-align:left; width:100px;">is_scheduled</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">Indicates whether schedule will be used.</td>
    </tr>
     <tr>
-      <td style="text-align:left">schedule</td>
+      <td style="text-align:left; width:100px;">schedule</td>
       <td style="text-align:left"><a href="project-channel.md#projectchannelschedule">ProjectChannelSchedule</a></td>
 <td style="text-align:left">Schedule for which you want to receive notifications through the project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The tags for project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">protocol_id</td>
+      <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of protocol set in the project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of project to which the project channel belongs.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of domain.</td>
    </tr>
     <tr>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">Project channel creation time.</td>
    </tr>
@@ -386,7 +445,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -394,25 +453,25 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">query</td>
+      <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
-      <td style="text-align:left">project_channel_id</td>
+      <td style="text-align:left; width:100px;">project_channel_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The name of project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
@@ -422,13 +481,13 @@ description:
 <td style="text-align:left">The state of project channel. ENABLED or DISABLED only.</td>
    </tr>
     <tr>
-      <td style="text-align:left">secret_id</td>
+      <td style="text-align:left; width:100px;">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left; width:100px;">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>LV1</li>
@@ -441,19 +500,19 @@ description:
 <td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">protocol_id</td>
+      <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of protocol set in the project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of project to which the project channel belongs.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of domain.</td>
@@ -473,14 +532,14 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">day_of_week</td>
+      <td style="text-align:left; width:100px;">day_of_week</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>MON</li>
@@ -494,12 +553,12 @@ description:
 <td style="text-align:left">Day of the week to be notified.As a list type, only types that can be specified from MON to SUN can be set.</td>
    </tr>
     <tr>
-      <td style="text-align:left">start_hour</td>
+      <td style="text-align:left; width:100px;">start_hour</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left">Start time to receive notifications.Only integer type can be set, and 0 to 23 can be.</td>
    </tr>
     <tr>
-      <td style="text-align:left">end_hour</td>
+      <td style="text-align:left; width:100px;">end_hour</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
 <td style="text-align:left">End time to receive notifications.Only integer type can be set, and 1 to 24 can be.</td>
    </tr>
@@ -524,7 +583,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -532,25 +591,25 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">project_channel_id</td>
+      <td style="text-align:left; width:100px;">project_channel_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The name of Project Channel. It can have a maximum of 255 characters.</td>
    </tr>
     <tr>
-      <td style="text-align:left">data</td>
+      <td style="text-align:left; width:100px;">data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The data for using project channel.This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.In this case, the secret ID that is stored in the security service will be returned and the data value will be empty.if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left; width:100px;">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>LV1</li>
@@ -563,13 +622,13 @@ description:
 <td style="text-align:left">Set the level of notification.If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.</td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The tags for project channel.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of domain.</td>

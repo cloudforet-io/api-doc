@@ -13,9 +13,9 @@ desc: Notification service Methods
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
-| [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Create a new Notification. When a notification is created, it is propagated through the channel of the project to which the notification belongs, and if an internal channel or user channel is set, the notification is also propagated to the user. |
+| [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Create a new Notification.When a notification is created,it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set,the notification is also propagated to the user. |
 | [**push**](notification.md#push)|   [PushNotificationRequest](notification.md#pushnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Push a new Notification directly. |
 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete the Notification. |
 | [**delete_all**](notification.md#delete_all)|   [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)| Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user. |
@@ -24,16 +24,65 @@ desc: Notification service Methods
 | [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) | Lists the specified notifications. |
 | [**stat**](notification.md#stat)|   [NotificationStatQuery](notification.md#notificationstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](notification.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateNotificationRequest](notification.md#createnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Create a new Notification. When a notification is created, it is propagated through the channel of the project to which the notification belongs, and if an internal channel or user channel is set, the notification is also propagated to the user. </div> |
-|<div style="width:70px; text-align:center;">  [**push**](notification.md#push) </div> | <div style="width:200px; text-align:center;">    [PushNotificationRequest](notification.md#pushnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Push a new Notification directly. </div> |
-|<div style="width:70px; text-align:center;">  [**delete**](notification.md#delete) </div> | <div style="width:200px; text-align:center;">    [NotificationRequest](notification.md#notificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete the Notification. </div> |
-|<div style="width:70px; text-align:center;">  [**delete_all**](notification.md#delete_all) </div> | <div style="width:200px; text-align:center;">    [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user. </div> |
-|<div style="width:70px; text-align:center;">  [**set_read**](notification.md#set_read) </div> | <div style="width:200px; text-align:center;">    [SetReadNotificationRequest](notification.md#setreadnotificationrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Change the notifications to read status. </div> |
-|<div style="width:70px; text-align:center;">  [**get**](notification.md#get) </div> | <div style="width:200px; text-align:center;">    [GetNotificationRequest](notification.md#getnotificationrequest)  </div> | <div style="width:200px; text-align:center;">   [NotificationInfo](notification.md#notificationinfo)  </div> | <div style="width:400px;"> Gets a single Notification. </div> |
-|<div style="width:70px; text-align:center;">  [**list**](notification.md#list) </div> | <div style="width:200px; text-align:center;">    [NotificationQuery](notification.md#notificationquery)  </div> | <div style="width:200px; text-align:center;">   [NotificationsInfo](notification.md#notificationsinfo)  </div> | <div style="width:400px;"> Lists the specified notifications. </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](notification.md#stat) </div> | <div style="width:200px; text-align:center;">    [NotificationStatQuery](notification.md#notificationstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateNotificationRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Create a new Notification.When a notification is created,it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set,the notification is also propagated to the user.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">push</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   PushNotificationRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Push a new Notification directly.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Delete the Notification.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete_all</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationDeleteAllRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Delete all Notifications.When a notification is created, it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set, the notification is also propagated to the user.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">set_read</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   SetReadNotificationRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Change the notifications to read status.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetNotificationRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Gets a single Notification.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationsInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Lists the specified notifications.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   NotificationStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  
@@ -41,7 +90,7 @@ desc: Notification service Methods
 > **POST** /notification/v1/notifications
 >
 
-> Create a new Notification. When a notification is created, it is propagated through the channel of the project to which the notification belongs, and if an internal channel or user channel is set, the notification is also propagated to the user.
+> Create a new Notification.When a notification is created,it is propagated through the channel of the project to which the notification belongs,and if an internal channel or user channel is set,the notification is also propagated to the user.
 
 | Type | Message |
 | :--- | :--- |
@@ -50,13 +99,20 @@ desc: Notification service Methods
 {% tabs %}
 {% tab title="Request Example" %}
 ```text
-None
+{
+    "domain_id": "xxxx-aws-abcd",
+    "tags": {
+        "env": "dev"
+    }
+}
 ```
 {% endtab %}
 
 {% tab title="Response Example" %}
 ```text
-None
+{
+    "domain_id": "xxxx-aws-abcd"
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -145,13 +201,20 @@ None
 {% tabs %}
 {% tab title="Request Example" %}
 ```text
-domain_id: xxxxx-aws-abcdtags:env: dev
+{
+    "domain_id": "xxxx-aws-abcd",
+    "tags": {
+        "env": "dev"
+    }
+}
 ```
 {% endtab %}
 
 {% tab title="Response Example" %}
 ```text
-domain_id: xxxxx-aws-abcd
+{
+    "domain_id": "xxxx-aws-abcd"
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -222,7 +285,7 @@ domain_id: xxxxx-aws-abcd
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -230,31 +293,31 @@ domain_id: xxxxx-aws-abcd
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">resource_type</td>
+      <td style="text-align:left; width:100px;">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The type of resource to which the notification is dispatched.Currently, only "identity.Project" or "identity.User" can be set.</td>
    </tr>
     <tr>
-      <td style="text-align:left">resource_id</td>
+      <td style="text-align:left; width:100px;">resource_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of the resource to which notifications are dispatched.If resource_type is "identity.Project", then resource_id requires a project ID values.If resource_type is "identity.User", then resource_id requires a user ID value.</td>
    </tr>
     <tr>
-      <td style="text-align:left">topic</td>
+      <td style="text-align:left; width:100px;">topic</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The topic of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">message</td>
+      <td style="text-align:left; width:100px;">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">This message is used for each protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_type</td>
+      <td style="text-align:left; width:100px;">notification_type</td>
       <td style="text-align:left"><ul>
           	<li>NOTIFICATION_TYPE_NONE</li>
           	<li>INFO</li>
@@ -266,7 +329,7 @@ domain_id: xxxxx-aws-abcd
 <td style="text-align:left">The type of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left; width:100px;">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ALL</li>
@@ -280,7 +343,7 @@ domain_id: xxxxx-aws-abcd
 <td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of domain.</td>
@@ -307,29 +370,29 @@ domain_id: xxxxx-aws-abcd
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">notification_id</td>
+      <td style="text-align:left; width:100px;">notification_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">topic</td>
+      <td style="text-align:left; width:100px;">topic</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The topic of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">message</td>
+      <td style="text-align:left; width:100px;">message</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The contents of notification.This message is used for each protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_type</td>
+      <td style="text-align:left; width:100px;">notification_type</td>
       <td style="text-align:left"><ul>
           	<li>NOTIFICATION_TYPE_NONE</li>
           	<li>INFO</li>
@@ -340,7 +403,7 @@ domain_id: xxxxx-aws-abcd
 <td style="text-align:left">The type of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left; width:100px;">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ALL</li>
@@ -353,22 +416,22 @@ domain_id: xxxxx-aws-abcd
 <td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">is_read</td>
+      <td style="text-align:left; width:100px;">is_read</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:left">Whether or not to check the notification.If notification has been returned at least once through the Get or List method, is_read is changed to True.</td>
    </tr>
     <tr>
-      <td style="text-align:left">user_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of user to whom the notification was dispatched.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of domain</td>
    </tr>
     <tr>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">Notification creation time.</td>
    </tr>
@@ -381,7 +444,7 @@ domain_id: xxxxx-aws-abcd
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -389,25 +452,25 @@ domain_id: xxxxx-aws-abcd
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">query</td>
+      <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_id</td>
+      <td style="text-align:left; width:100px;">notification_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">topic</td>
+      <td style="text-align:left; width:100px;">topic</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The topic of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_type</td>
+      <td style="text-align:left; width:100px;">notification_type</td>
       <td style="text-align:left"><ul>
           	<li>NOTIFICATION_TYPE_NONE</li>
           	<li>INFO</li>
@@ -419,7 +482,7 @@ domain_id: xxxxx-aws-abcd
 <td style="text-align:left">The type of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">notification_level</td>
+      <td style="text-align:left; width:100px;">notification_level</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ALL</li>
@@ -433,31 +496,31 @@ domain_id: xxxxx-aws-abcd
 <td style="text-align:left">The level of notification.</td>
    </tr>
     <tr>
-      <td style="text-align:left">is_read</td>
+      <td style="text-align:left; width:100px;">is_read</td>
       <td style="text-align:left">bool</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">Whether or not to check the notification.If is_read is False, the user has not checked the notification yet.</td>
    </tr>
     <tr>
-      <td style="text-align:left">parent_notification_id</td>
+      <td style="text-align:left; width:100px;">parent_notification_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of parent notification. Not used yet.</td>
    </tr>
     <tr>
-      <td style="text-align:left">project_id</td>
+      <td style="text-align:left; width:100px;">project_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The project ID to which the notification will be dispatched.</td>
    </tr>
     <tr>
-      <td style="text-align:left">user_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of user.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of domain.</td>

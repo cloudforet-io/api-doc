@@ -13,7 +13,7 @@ description:
 {%  endhint %}
 
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Method | Request | Response | Description |
 | :-----: | :--------: | :--------: | :-------------------- |
 | [**create**](protocol.md#create)|   [CreateProtocolRequest](protocol.md#createprotocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) | Creates a new Protocol.Protocol is the definition of which method to use when dispatching the Notifications through a Channel.When creating a protocol, you must specify the plugins provided from the repository, and you must also set the credentials to be set in the plugin if necessary. |
 | [**update**](protocol.md#update)|   [UpdateProtocolRequest](protocol.md#updateprotocolrequest) |   [ProtocolInfo](protocol.md#protocolinfo) | Updates a Protocol information.Update methods can update name, tags only. If you want to update plugin version or options, you can use update_plugin method. |
@@ -25,17 +25,71 @@ description:
 | [**list**](protocol.md#list)|   [ProtocolQuery](protocol.md#protocolquery) |   [ProtocolsInfo](protocol.md#protocolsinfo) | Lists the specified Protocols.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. |
 | [**stat**](protocol.md#stat)|   [ProtocolStatQuery](protocol.md#protocolstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |TEST
 
-| Method | Request | Response | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :-----: | :--------: | :--------: | :-------------------- |
-|<div style="width:70px; text-align:center;">  [**create**](protocol.md#create) </div> | <div style="width:200px; text-align:center;">    [CreateProtocolRequest](protocol.md#createprotocolrequest)  </div> | <div style="width:200px; text-align:center;">   [ProtocolInfo](protocol.md#protocolinfo)  </div> | <div style="width:400px;"> Creates a new Protocol.Protocol is the definition of which method to use when dispatching the Notifications through a Channel.When creating a protocol, you must specify the plugins provided from the repository, and you must also set the credentials to be set in the plugin if necessary. </div> |
-|<div style="width:70px; text-align:center;">  [**update**](protocol.md#update) </div> | <div style="width:200px; text-align:center;">    [UpdateProtocolRequest](protocol.md#updateprotocolrequest)  </div> | <div style="width:200px; text-align:center;">   [ProtocolInfo](protocol.md#protocolinfo)  </div> | <div style="width:400px;"> Updates a Protocol information.Update methods can update name, tags only. If you want to update plugin version or options, you can use update_plugin method. </div> |
-|<div style="width:70px; text-align:center;">  [**update_plugin**](protocol.md#update_plugin) </div> | <div style="width:200px; text-align:center;">    [UpdateProtocolPluginRequest](protocol.md#updateprotocolpluginrequest)  </div> | <div style="width:200px; text-align:center;">   [ProtocolInfo](protocol.md#protocolinfo)  </div> | <div style="width:400px;"> Updates a plugin for Protocol.This method is usually used when redeploying a deployed plugin container to a new version. </div> |
-|<div style="width:70px; text-align:center;">  [**enable**](protocol.md#enable) </div> | <div style="width:200px; text-align:center;">    [ProtocolRequest](protocol.md#protocolrequest)  </div> | <div style="width:200px; text-align:center;">   [ProtocolInfo](protocol.md#protocolinfo)  </div> | <div style="width:400px;"> Enables a Protocol.If the disabled Protocol is enabled, the Protocol can be used again and the notification can be dispatched. </div> |
-|<div style="width:70px; text-align:center;">  [**disable**](protocol.md#disable) </div> | <div style="width:200px; text-align:center;">    [ProtocolRequest](protocol.md#protocolrequest)  </div> | <div style="width:200px; text-align:center;">   [ProtocolInfo](protocol.md#protocolinfo)  </div> | <div style="width:400px;"> Disables a Protocol.If you disable the Protocol, the notification will not be dispatched, even if they are created. </div> |
-|<div style="width:70px; text-align:center;">  [**delete**](protocol.md#delete) </div> | <div style="width:200px; text-align:center;">    [ProtocolRequest](protocol.md#protocolrequest)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) </div> | <div style="width:400px;"> Delete the protocol.If there is even one channel using the protocol, it cannot be deleted. </div> |
-|<div style="width:70px; text-align:center;">  [**get**](protocol.md#get) </div> | <div style="width:200px; text-align:center;">    [GetProtocolRequest](protocol.md#getprotocolrequest)  </div> | <div style="width:200px; text-align:center;">   [ProtocolInfo](protocol.md#protocolinfo)  </div> | <div style="width:400px;"> Gets a single Protocol. </div> |
-|<div style="width:70px; text-align:center;">  [**list**](protocol.md#list) </div> | <div style="width:200px; text-align:center;">    [ProtocolQuery](protocol.md#protocolquery)  </div> | <div style="width:200px; text-align:center;">   [ProtocolsInfo](protocol.md#protocolsinfo)  </div> | <div style="width:400px;"> Lists the specified Protocols.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages. </div> |
-|<div style="width:70px; text-align:center;">  [**stat**](protocol.md#stat) </div> | <div style="width:200px; text-align:center;">    [ProtocolStatQuery](protocol.md#protocolstatquery)  </div> | <div style="width:200px; text-align:center;">  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) </div> | <div style="width:400px;">  </div> | 
+<table style="border-collapse: collapse; text-align: left; line-height: 1.5;">
+    <thead>
+    <tr>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Method</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Request</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Response</th>
+      <th scope="cols" style="padding: 10px; font-weight: bold; vertical-align: top; color: #369; border-bottom: 3px solid #036;">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">create</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   CreateProtocolRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Creates a new Protocol.Protocol is the definition of which method to use when dispatching the Notifications through a Channel.When creating a protocol, you must specify the plugins provided from the repository, and you must also set the credentials to be set in the plugin if necessary.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateProtocolRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Updates a Protocol information.Update methods can update name, tags only. If you want to update plugin version or options, you can use update_plugin method.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">update_plugin</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   UpdateProtocolPluginRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Updates a plugin for Protocol.This method is usually used when redeploying a deployed plugin container to a new version.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">enable</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Enables a Protocol.If the disabled Protocol is enabled, the Protocol can be used again and the notification can be dispatched.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">disable</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Disables a Protocol.If you disable the Protocol, the notification will not be dispatched, even if they are created.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">delete</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Empty </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Delete the protocol.If there is even one channel using the protocol, it cannot be deleted.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">get</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   GetProtocolRequest </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Gets a single Protocol.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">list</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolsInfo </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">Lists the specified Protocols.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.</td>
+    </tr>
+    <tr>
+      <th scope="row" style="width: 80px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc;">stat</th>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   ProtocolStatQuery </td>
+      <td style="width: 150px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;">   google.protobuf.Struct </td>
+      <td style="width: 400px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc;"></td>
+    </tr></tbody>
+</table> 
  
 
  
@@ -187,39 +241,39 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">plugin_id</td>
+      <td style="text-align:left; width:100px;">plugin_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of plugin set in the Protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">version</td>
+      <td style="text-align:left; width:100px;">version</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The version of plugin.</td>
    </tr>
     <tr>
-      <td style="text-align:left">options</td>
+      <td style="text-align:left; width:100px;">options</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The Options that contains information about using plugin.</td>
    </tr>
     <tr>
-      <td style="text-align:left">secret_id</td>
+      <td style="text-align:left; width:100px;">secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of the Secret containing encrypted data to be used in the plugin.</td>
    </tr>
     <tr>
-      <td style="text-align:left">metadata</td>
+      <td style="text-align:left; width:100px;">metadata</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The metadata of plugin. It includes schema for the data that must be set for the Channel when creating the Channel using a Protocol.The schema follows the JSON Schema format.</td>
    </tr>
     <tr>
-      <td style="text-align:left">upgrade_mode</td>
+      <td style="text-align:left; width:100px;">upgrade_mode</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>AUTO</li>
@@ -236,7 +290,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -244,37 +298,37 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">plugin_id</td>
+      <td style="text-align:left; width:100px;">plugin_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of plugin.</td>
    </tr>
     <tr>
-      <td style="text-align:left">version</td>
+      <td style="text-align:left; width:100px;">version</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The version of plugin.</td>
    </tr>
     <tr>
-      <td style="text-align:left">options</td>
+      <td style="text-align:left; width:100px;">options</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The Options that contains information about using plugin.</td>
    </tr>
     <tr>
-      <td style="text-align:left">secret_data</td>
+      <td style="text-align:left; width:100px;">secret_data</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The data for using plugin if necessary. This data is encrypted and stored in the Secret service.</td>
    </tr>
     <tr>
-      <td style="text-align:left">schema</td>
+      <td style="text-align:left; width:100px;">schema</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The name of schema.When the secret_data is stored in the Secret service, it can be set with schema if the schema is existed.The schema is provided through the Repository service.</td>
    </tr>
     <tr>
-      <td style="text-align:left">upgrade_mode</td>
+      <td style="text-align:left; width:100px;">upgrade_mode</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>AUTO</li>
@@ -292,24 +346,24 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">protocol_id</td>
+      <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of Protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The name of Protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
@@ -318,7 +372,7 @@ description:
 <td style="text-align:left">The state of Protocol.ENABLED or DISABLED only.</td>
    </tr>
     <tr>
-      <td style="text-align:left">protocol_type</td>
+      <td style="text-align:left; width:100px;">protocol_type</td>
       <td style="text-align:left"><ul>
           	<li>PROTOCOL_TYPE_NONE</li>
           	<li>INTERNAL</li>
@@ -328,32 +382,32 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left">resource_type</td>
+      <td style="text-align:left; width:100px;">resource_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">Resource type for Protocol. Currently only identity.Project or identity.User can be set.</td>
    </tr>
     <tr>
-      <td style="text-align:left">capability</td>
+      <td style="text-align:left; width:100px;">capability</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The capability information for the Protocol. It included supported schema for the Protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">plugin_info</td>
+      <td style="text-align:left; width:100px;">plugin_info</td>
       <td style="text-align:left"><a href="protocol.md#plugininfo">PluginInfo</a></td>
 <td style="text-align:left">the plugin information set in Protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">tags</td>
+      <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left">The tags for protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">The ID of domain to which the Protocol belongs.</td>
    </tr>
     <tr>
-      <td style="text-align:left">created_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left">Protocol creation time.</td>
    </tr>
@@ -366,7 +420,7 @@ description:
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
+      <th style="text-align:left; width:100px;">Field</th>
       <th style="text-align:left">Type</th>
       <th style="text-align:center">Required</th>
       <th style="text-align:left">Description</th>
@@ -374,25 +428,25 @@ description:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">query</td>
+      <td style="text-align:left; width:100px;">query</td>
       <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">Query format provided by SpaceONE. Please check the link for more information.</td>
    </tr>
     <tr>
-      <td style="text-align:left">protocol_id</td>
+      <td style="text-align:left; width:100px;">protocol_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The ID of Protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">name</td>
+      <td style="text-align:left; width:100px;">name</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:left">The name of Protocol.</td>
    </tr>
     <tr>
-      <td style="text-align:left">state</td>
+      <td style="text-align:left; width:100px;">state</td>
       <td style="text-align:left"><ul>
           	<li>NONE</li>
           	<li>ENABLED</li>
@@ -402,7 +456,7 @@ description:
 <td style="text-align:left">The state of Protocol. ENABLED or DISABLED only.</td>
    </tr>
     <tr>
-      <td style="text-align:left">protocol_type</td>
+      <td style="text-align:left; width:100px;">protocol_type</td>
       <td style="text-align:left"><ul>
           	<li>PROTOCOL_TYPE_NONE</li>
           	<li>INTERNAL</li>
@@ -412,7 +466,7 @@ description:
 <td style="text-align:left">The type of Protocol. INTERNAL or EXTERNAL only.</td>
    </tr>
     <tr>
-      <td style="text-align:left">domain_id</td>
+      <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:left">The ID of domain to which the Protocol belongs.</td>
