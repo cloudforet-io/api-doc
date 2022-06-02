@@ -131,7 +131,7 @@ description: Notification is a service that delivers event information generated
 > **DELETE** /notification/v1/notification/{notification_id}
 >
 
-> Delete the Notification. When a notification is created,\n it is propagated through the channel of the project to which the notification belongs,\n and if an internal channel or user channel is set,\n the notification is also propagated to the user.
+> Delete the Notification.
 
 | Type | Message |
 | :--- | :--- |
