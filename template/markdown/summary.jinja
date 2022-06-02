@@ -4,13 +4,6 @@
 {{format.title}} {%- if (format.url is defined) %}({{format.url}}){% endif %}
 {% endfor %}
 
-{% if managed_link is defined -%}
-## Reference Link
-
-{% for key, value in managed_link.items() -%}
-* [{{key}}]({{value}})
-{% endfor -%}
-{% endif %}
 {% if ((history.added_history is defined) or (history.origin_history is defined)) -%}
 ## Previous Versions
 
