@@ -108,7 +108,6 @@
 * [Secret](secret/README.md)
   * [V1](secret/v1/README.md)
     * [Secret](secret/v1/secret.md)
-    * [Secret Group](secret/v1/secret-group.md)
 * [Statistics](statistics/README.md)
   * [Plugin](statistics/plugin/README.md)
     * [Storage](statistics/plugin/storage.md)
