@@ -159,6 +159,7 @@ description:
 | cloud_service_group |string|✘| |
 | provider |string|✘| |
 | region_code |string|✘| |
+| ip_address |string|✘| |
 | resource_group_id |string|✘| |
 | project_id |string|✘| |
 | project_group_id |string|✘| |
