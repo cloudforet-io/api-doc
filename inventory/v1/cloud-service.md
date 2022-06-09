@@ -137,6 +137,7 @@ description:
 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference) | |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| ip_addresses |list of string | |
 | region_code |string | |
 | project_id |string | |
 | domain_id |string | |
@@ -199,6 +200,7 @@ description:
 | instance_type |string|✘| |
 | instance_size |float|✘| |
 | launched_at |string|✘| |
+| ip_addresses |list of string|✘| |
 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|✘| |
@@ -230,6 +232,7 @@ description:
 | instance_type |string|✘| |
 | instance_size |float|✘| |
 | launched_at |string|✘| |
+| ip_addresses |list of string|✘| |
 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference)|✘| |
