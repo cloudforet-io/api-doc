@@ -41,6 +41,12 @@ description:
 | page |[StatPage](resource.md#statpage)|✘| |
 | domain_id |string|✔| |
 
+### SortKey
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| key |string | |
+| desc |bool | |
+
 ### StatAggregate
 | Field | Type |  Description |
 | :--- | :--- | :--- |
@@ -130,8 +136,9 @@ description:
 ### StatAggregateSort
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| key |string|✔| |
+| key |string|✘| |
 | desc |bool|✘| |
+| keys |[list of SortKey](resource.md#sortkey)|✘| |
 
 ### StatPage
 | Field | Type | Required | Description |
