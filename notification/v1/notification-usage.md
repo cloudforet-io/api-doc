@@ -58,6 +58,7 @@ description:
 | usage_date |string | Usage Date.|
 | usage_month |string | Usage Month.|
 | count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | Usage count using actual notifications.|
+| fail_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | Fail count when dispatching notifications.|
 | domain_id |string | The ID of domain|
 
 ### NotificationUsageQuery
