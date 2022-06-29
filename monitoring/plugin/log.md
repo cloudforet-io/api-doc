@@ -47,7 +47,7 @@ description:
 ### LogsDataInfo
 | Field | Type |  Description |
 | :--- | :--- | :--- |
-| logs |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| logs |[list of google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### Sort
 | Field | Type |  Description |
