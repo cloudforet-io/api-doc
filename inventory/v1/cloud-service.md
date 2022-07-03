@@ -17,7 +17,6 @@ description:
 | :----- | :-------- | :-------- |
 | [**create**](cloud-service.md#create)|   [CreateServiceRequest](cloud-service.md#createservicerequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |
 | [**update**](cloud-service.md#update)|   [UpdateCloudServiceRequest](cloud-service.md#updatecloudservicerequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |
-| [**pin_data**](cloud-service.md#pin_data)|   [PinCloudServiceDataRequest](cloud-service.md#pincloudservicedatarequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |
 | [**delete**](cloud-service.md#delete)|   [CloudServiceRequest](cloud-service.md#cloudservicerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**get**](cloud-service.md#get)|   [GetCloudServiceRequest](cloud-service.md#getcloudservicerequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |
 | [**list**](cloud-service.md#list)|   [CloudServiceQuery](cloud-service.md#cloudservicequery) |   [CloudServicesInfo](cloud-service.md#cloudservicesinfo) |
@@ -46,19 +45,6 @@ description:
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateCloudServiceRequest](cloud-service.md#updatecloudservicerequest) |
-| Response |  [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  |
- 
- 
-
- 
-### pin_data
-> **PUT** /inventory/v1/cloud-service/{cloud_service_id}/pin-data
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [PinCloudServiceDataRequest](cloud-service.md#pincloudservicedatarequest) |
 | Response |  [CloudServiceInfo](cloud-service.md#cloudserviceinfo)  |
  
  

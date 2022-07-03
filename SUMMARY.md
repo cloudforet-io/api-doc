@@ -54,6 +54,7 @@
   * [Plugin](inventory/plugin/README.md)
     * [Collector](inventory/plugin/collector.md)
   * [V1](inventory/v1/README.md)
+    * [Change History](inventory/v1/change-history.md)
     * [Cloud Service](inventory/v1/cloud-service.md)
     * [Cloud Service Type](inventory/v1/cloud-service-type.md)
     * [Collector](inventory/v1/collector.md)
