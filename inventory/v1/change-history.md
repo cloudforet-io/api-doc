@@ -196,7 +196,7 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">updated_at</td>
+      <td style="text-align:left; width:100px;">created_at</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 

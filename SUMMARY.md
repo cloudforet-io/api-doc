@@ -60,6 +60,7 @@
     * [Collector](inventory/v1/collector.md)
     * [Job](inventory/v1/job.md)
     * [Job Task](inventory/v1/job-task.md)
+    * [Note](inventory/v1/note.md)
     * [Region](inventory/v1/region.md)
     * [Resource Group](inventory/v1/resource-group.md)
     * [Server](inventory/v1/server.md)
