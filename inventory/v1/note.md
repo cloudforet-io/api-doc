@@ -25,7 +25,7 @@ description:
 
  
 ### create
-> **POST** /monitoring/v1/notes
+> **POST** /inventory/v1/notes
 >
 
 
@@ -38,7 +38,7 @@ description:
 
  
 ### update
-> **PUT** /monitoring/v1/note/{note_id}
+> **PUT** /inventory/v1/note/{note_id}
 >
 
 
@@ -51,7 +51,7 @@ description:
 
  
 ### delete
-> **DELETE** /monitoring/v1/note/{note_id}
+> **DELETE** /inventory/v1/note/{note_id}
 >
 
 
@@ -64,7 +64,7 @@ description:
 
  
 ### get
-> **GET** /monitoring/v1/note/{note_id}
+> **GET** /inventory/v1/note/{note_id}
 >
 
 
@@ -77,9 +77,9 @@ description:
 
  
 ### list
-> **GET** /monitoring/v1/notes
+> **GET** /inventory/v1/notes
 >
-> **POST** /monitoring/v1/notes/search
+> **POST** /inventory/v1/notes/search
 
 
 
@@ -92,7 +92,7 @@ description:
 
  
 ### stat
-> **POST** /monitoring/v1/notes/stat
+> **POST** /inventory/v1/notes/stat
 >
 
 
@@ -109,7 +109,7 @@ description:
 ### CreateNoteRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| alert_id |string|✔| |
+| record_id |string|✔| |
 | note |string|✔| |
 | domain_id |string|✔| |
 
@@ -137,8 +137,8 @@ description:
 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
 | note_id |string|✘| |
 | record_id |string|✘| |
+| cloud_service_id |string|✘| |
 | created_by |string|✘| |
-| project_id |string|✘| |
 | domain_id |string|✘| |
 
 ### NoteRequest
@@ -162,6 +162,6 @@ description:
 ### UpdateNoteRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| recoard_id |string|✔| |
+| note_id |string|✔| |
 | note |string|✘| |
 | domain_id |string|✔| |
