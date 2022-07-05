@@ -172,6 +172,12 @@ description:
 
    </tr>
     <tr>
+      <td style="text-align:left; width:100px;">diff_count</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
       <td style="text-align:left; width:100px;">user_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
