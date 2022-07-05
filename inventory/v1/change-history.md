@@ -109,6 +109,12 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
+      <td style="text-align:left; width:100px;">updated_by</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✔</td>
@@ -126,11 +132,48 @@ description:
 | domain_id |string|✔| |
 
 ### RecordDiff
-| Field | Type |  Description |
-| :--- | :--- | :--- |
-| key |string | |
-| before |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
-| after |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left; width:100px;">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left; width:100px;">key</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">before</td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.Value</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">after</td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.Value</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">type</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE</li>
+          	<li>ADDED</li>
+          	<li>CHANGED</li>
+          	<li>DELETED</li>
+        </ul></td>
+<td style="text-align:left"></td>
+
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### RecordInfo
 <table>
@@ -191,6 +234,12 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">job_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">updated_by</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
