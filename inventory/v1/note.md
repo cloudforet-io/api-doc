@@ -124,10 +124,10 @@ description:
 | Field | Type |  Description |
 | :--- | :--- | :--- |
 | note_id |string | |
-| alert_id |string | |
+| record_id |string | |
+| cloud_service_id |string | |
 | note |string | |
 | created_by |string | |
-| project_id |string | |
 | domain_id |string | |
 | created_at |string | |
 
