@@ -21,9 +21,9 @@ description:
 
  
 ### list
-> **GET** /inventory/v1/change-history
+> **GET** /inventory/v1/cloud-service/{cloud_service_id}/change-history
 >
-> **POST** /inventory/v1/change-history/search
+> **POST** /inventory/v1/cloud-service/{cloud_service_id}/change-history/search
 
 
 
@@ -36,7 +36,7 @@ description:
 
  
 ### stat
-> **POST** /inventory/v1/change-history/stat
+> **POST** /inventory/v1/cloud-service/{cloud_service_id}/change-history/stat
 >
 
 
@@ -76,7 +76,7 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">cloud_service_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
+<td style="text-align:center">✔</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
@@ -130,6 +130,7 @@ description:
 | :--- | :--- | :---: | :--- |
 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
 | domain_id |string|✔| |
+| cloud_service_id |string|✔| |
 
 ### RecordDiff
 <table>
