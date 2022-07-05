@@ -130,7 +130,6 @@ description:
 | created_at |string | |
 | updated_at |string | |
 | deleted_at |string | |
-| launched_at |string | |
 
 ### CloudServiceQuery
 | Field | Type | Required | Description |
@@ -186,7 +185,6 @@ description:
 | account |string|✘| |
 | instance_type |string|✘| |
 | instance_size |float|✘| |
-| launched_at |string|✘| |
 | ip_addresses |list of string|✘| |
 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
@@ -218,7 +216,6 @@ description:
 | account |string|✘| |
 | instance_type |string|✘| |
 | instance_size |float|✘| |
-| launched_at |string|✘| |
 | ip_addresses |list of string|✘| |
 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
