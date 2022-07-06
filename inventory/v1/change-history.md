@@ -132,50 +132,6 @@ description:
 | domain_id |string|✔| |
 | cloud_service_id |string|✔| |
 
-### RecordDiff
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left; width:100px;">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left; width:100px;">key</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">before</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.Value</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">after</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.Value</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">type</td>
-      <td style="text-align:left"><ul>
-          	<li>NONE</li>
-          	<li>ADDED</li>
-          	<li>CHANGED</li>
-          	<li>DELETED</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-  </tbody>
-</table>
-
-
-
 ### RecordInfo
 <table>
   <thead>
@@ -211,14 +167,14 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">diff</td>
-      <td style="text-align:left"><a href="change-history.md#recorddiff">list of RecordDiff</a></td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">diff_count</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto">int32</a></td>
-<td style="text-align:left"></td>
+<td style="text-align:left">repeated RecordDiff diff = 4;</td>
 
    </tr>
     <tr>
