@@ -55,7 +55,7 @@ description:
 | :--- | :--- | :---: | :--- |
 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
-| resource |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| metric_query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | metric |string|✔| metric identifier in case of requested metric info is not a single.|
 | start |string|✔| |
 | end |string|✔| |
@@ -68,16 +68,16 @@ description:
 | :--- | :--- | :--- |
 | key |string | |
 | name |string | |
-| unit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| chart_type |string | |
-| chart_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| group |string | |
+| unit |string | |
+| metric_query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### MetricRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
-| resource |[google.protobuf.Value](https://developers.google.com/protocol-buffers/docs/reference/overview)|✔| |
+| query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | schema |string|✘| |
 
 ### MetricsInfo

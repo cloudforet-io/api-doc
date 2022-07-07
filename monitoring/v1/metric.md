@@ -52,15 +52,14 @@ description:
 | Field | Type |  Description |
 | :--- | :--- | :--- |
 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
-| resource_values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | domain_id |string | |
 
 ### MetricDataRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | data_source_id |string|✔| |
-| resource_type |string|✔| |
-| resources |list of string|✔| |
+| query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | metric |string|✔| |
 | start |string|✔| |
 | end |string|✔| |
@@ -73,15 +72,13 @@ description:
 | :--- | :--- | :--- |
 | key |string | |
 | name |string | |
-| unit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| chart_type |string | |
-| chart_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| unit |string | |
 
 ### MetricRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | data_source_id |string|✔| |
-| resource_type |string|✔| |
 | resources |list of string|✔| |
 | domain_id |string|✔| |
 

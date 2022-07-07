@@ -39,6 +39,7 @@ description:
 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | schema |string|✘| |
 | query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| keyword |string|✘| |
 | start |string|✔| |
 | end |string|✔| |
 | sort |[Sort](log.md#sort)|✘| |
