@@ -69,7 +69,7 @@ description:
 | key |string | |
 | name |string | |
 | group |string | |
-| unit |string | |
+| unit |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | metric_query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### MetricRequest
