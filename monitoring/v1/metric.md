@@ -15,21 +15,8 @@ description:
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [MetricDataInfo](metric.md#metricdatainfo) |
-| [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) |   [MetricsInfo](metric.md#metricsinfo) | 
- 
-
- 
-### get_data
-> **GET** /monitoring/v1/data-source/{data_source_id}/metric-data
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [MetricDataRequest](metric.md#metricdatarequest) |
-| Response |  [MetricDataInfo](metric.md#metricdatainfo)  |
- 
+| [**list**](metric.md#list)|   [MetricRequest](metric.md#metricrequest) |   [MetricsInfo](metric.md#metricsinfo) |
+| [**get_data**](metric.md#get_data)|   [MetricDataRequest](metric.md#metricdatarequest) |   [MetricDataInfo](metric.md#metricdatainfo) | 
  
 
  
@@ -42,6 +29,19 @@ description:
 | :--- | :--- |
 | Request | [MetricRequest](metric.md#metricrequest) |
 | Response |  [MetricsInfo](metric.md#metricsinfo)  |
+ 
+ 
+
+ 
+### get_data
+> **GET** /monitoring/v1/data-source/{data_source_id}/metric-data
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [MetricDataRequest](metric.md#metricdatarequest) |
+| Response |  [MetricDataInfo](metric.md#metricdatainfo)  |
 
 
 ## 
@@ -59,7 +59,7 @@ description:
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | data_source_id |string|✔| |
-| query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| metric_query |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | metric |string|✔| |
 | start |string|✔| |
 | end |string|✔| |
