@@ -37,7 +37,7 @@ description:
 ### LogDataInfo
 | Field | Type |  Description |
 | :--- | :--- | :--- |
-| logs |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| results |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
 | domain_id |string | |
 
 ### LogRequest
