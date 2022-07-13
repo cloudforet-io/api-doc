@@ -366,7 +366,6 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left; width:100px;">actions</td>
       <td style="text-align:left"><ul>
-          	<li>NONE_ACTION</li>
           	<li>UPDATE_PASSWORD</li>
         </ul></td>
 <td style="text-align:center">✔</td>
@@ -469,7 +468,6 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left; width:100px;">required_actions</td>
       <td style="text-align:left"><ul>
-          	<li>NONE_ACTION</li>
           	<li>UPDATE_PASSWORD</li>
         </ul></td>
 <td style="text-align:left"></td>
