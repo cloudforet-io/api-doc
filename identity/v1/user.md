@@ -17,6 +17,7 @@ description: User API which allows member management within project, company, an
 | :----- | :-------- | :-------- |
 | [**create**](user.md#create)|   [CreateUserRequest](user.md#createuserrequest) |   [UserInfo](user.md#userinfo) |
 | [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) |
+| [**set_required_actions**](user.md#set_required_actions)|   [SetRequiredActionsRequest](user.md#setrequiredactionsrequest) |   [UserInfo](user.md#userinfo) |
 | [**enable**](user.md#enable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |
 | [**disable**](user.md#disable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |
 | [**delete**](user.md#delete)|   [UserRequest](user.md#userrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
@@ -103,6 +104,19 @@ description: User API which allows member management within project, company, an
 ```
 {% endtab %}
 {% endtabs %}
+ 
+ 
+
+ 
+### set_required_actions
+> **POST** /identity/v1/users/set-required-actions
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [SetRequiredActionsRequest](user.md#setrequiredactionsrequest) |
+| Response |  [UserInfo](user.md#userinfo)  |
  
  
 
@@ -332,6 +346,43 @@ description: User API which allows member management within project, company, an
 | domain_id |string|✔| |
 | only |list of string|✘| |
 
+### SetRequiredActionsRequest
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left; width:100px;">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left; width:100px;">user_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">actions</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_ACTION</li>
+          	<li>UPDATE_PASSWORD</li>
+        </ul></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
+
 ### UpdateUserRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
@@ -412,6 +463,15 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left; width:100px;">timezone</td>
       <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">required_actions</td>
+      <td style="text-align:left"><ul>
+          	<li>NONE_ACTION</li>
+          	<li>UPDATE_PASSWORD</li>
+        </ul></td>
 <td style="text-align:left"></td>
 
    </tr>

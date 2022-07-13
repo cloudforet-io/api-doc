@@ -36,7 +36,7 @@ description:
 
  
 ### stat
-> **POST** /inventory/v1/cloud-service/{cloud_service_id}/change-history/stat
+> **POST** /inventory/v1/cloud-service/change-history/stat
 >
 
 
@@ -130,7 +130,6 @@ description:
 | :--- | :--- | :---: | :--- |
 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
 | domain_id |string|✔| |
-| cloud_service_id |string|✔| |
 
 ### RecordInfo
 <table>

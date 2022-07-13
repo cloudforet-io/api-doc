@@ -55,6 +55,8 @@ description:
 | credentials |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | user_type |string|✘| |
 | domain_id |string|✔| |
+| timeout |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| refresh_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
 
 ### TokenInfo
 | Field | Type |  Description |
