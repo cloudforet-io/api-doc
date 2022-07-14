@@ -48,7 +48,7 @@ description:
 | Field | Type |  Description |
 | :--- | :--- | :--- |
 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
-| resource_values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| values |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### MetricDataRequest
 | Field | Type | Required | Description |
