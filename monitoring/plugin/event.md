@@ -1,5 +1,5 @@
 ---
-description:  
+description: An Event is data created by an external monitoring system and collected by a Webhook plugin.
 ---
 # Event
 
@@ -21,6 +21,7 @@ description:
  
 ### parse
 
+> Parses a specific Event resource and transforms the resource from external data collected to data available in Cloudforet internally. The `parse` method standardizes all different data from external monitoring systems.
 
 | Type | Message |
 | :--- | :--- |

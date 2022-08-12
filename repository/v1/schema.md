@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Schema is a data structure used in all domains. For example, data forms of Google OAuth2 credentials or AWS access keys can be a Schema resource.
 ---
 # Schema
 
@@ -41,11 +41,47 @@ description:
 > **PUT** /repository/v1/schema/{schema}
 >
 
+> Updates a specific Schema. You can make changes in Schema settings, including `name`, `schema`, `labels`, and `tags`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateSchemaRequest](schema.md#updateschemarequest) |
 | Response |  [SchemaInfo](schema.md#schemainfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "slack_webhook_test",
+    "schema": {},
+    "labels": [],
+    "tags": {},
+    "domain_id": "domain-987654321098"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "name": "slack_webhook_test",
+    "service_type": "secret.credentials",
+    "schema": {},
+    "labels": [],
+    "tags": {
+        "description": "Slack Webhook"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Local",
+        "repository_type": "local"
+    },
+    "domain_id": "domain-987654321098",
+    "created_at": "2022-01-01T05:46:49.929Z",
+    "updated_at": "2022-01-01T05:46:49.929Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -54,11 +90,21 @@ description:
 > **DELETE** /repository/v1/schema/{schema}
 >
 
+> Deletes a specific Schema. You must specify the `name` of the Schema to delete, as the `name` is an identifier of Schema resources.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SchemaRequest](schema.md#schemarequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "slack_webhook"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +113,44 @@ description:
 > **GET** /repository/v1/schemas/{schema}
 >
 
+> Gets a specific Schema. You must specify the `name` of the Schema to get, as the `name` is an identifier of Schema resources. You can use the parameter `repository_id` to limit the scope of the method to a specific Repository.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetRepositorySchemaRequest](schema.md#getrepositoryschemarequest) |
 | Response |  [SchemaInfo](schema.md#schemainfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "slack_webhook",
+    "repository_id": "repo-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "name": "slack_webhook",
+    "service_type": "secret.credentials",
+    "schema": {},
+    "labels": [],
+    "tags": {
+        "description": "Slack Webhook"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Local",
+        "repository_type": "local"
+    },
+    "domain_id": "domain-987654321098",
+    "created_at": "2022-01-01T10:20:09.064Z",
+    "updated_at": "2022-01-01T10:20:09.064Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -82,11 +161,51 @@ description:
 > **POST** /repository/v1/schemas/search
 
 
+> Gets a list of all Schemas in a specific Repository. The parameter `repository_id` is used as an identifier of a Repository to get its list of Schemas. You can use a query to get a filtered list of Schemas.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SchemaQuery](schema.md#schemaquery) |
 | Response |  [SchemasInfo](schema.md#schemasinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "name": "slack_webhook",
+    "service_type": "secret.credentials",
+    "repository_id": "repo-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "name": "slack_webhook",
+            "service_type": "secret.credentials",
+            "schema": {},
+            "labels": [],
+            "tags": {
+                "description": "Slack Webhook"
+            },
+            "repository_info": {
+                "repository_id": "repo-123456789012",
+                "name": "Local",
+                "repository_type": "local"
+            },
+            "domain_id": "domain-987654321098",
+            "created_at": "2022-01-01T10:20:09.064Z",
+            "updated_at": "2022-01-01T10:20:09.064Z"
+        }
+    ],
+    "total_count": 1
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

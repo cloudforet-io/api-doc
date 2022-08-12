@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Secret is an external data, encrypted by CluodForet.
 ---
 # Secret
 
@@ -30,11 +30,44 @@ description:
 > **POST** /secret/v1/secrets
 >
 
+> Creates a new Secret. When creating the resource, external `data` is encrypted, and a `secret_id` is issued for data access by other microservices.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateSecretRequest](secret.md#createsecretrequest) |
 | Response |  [SecretInfo](secret.md#secretinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "aws-dev",
+    "data": "********",
+    "secret_type": "CREDENTIALS",
+    "schema": "aws_access_key",
+    "service_account_id": "sa-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "secret_id": "secret-123456789012",
+    "name": "aws-dev",
+    "secret_type": "CREDENTIALS",
+    "tags": {},
+    "schema": "aws_access_key",
+    "provider": "aws",
+    "service_account_id": "sa-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T06:10:14.851Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -56,11 +89,22 @@ description:
 > **DELETE** /secret/v1/secret/{secret_id}
 >
 
+> Deletes a specific Secret. You must specify the `secret_id` of the Secret to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SecretRequest](secret.md#secretrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "secret_id": "secret-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -69,11 +113,38 @@ description:
 > **PUT** /secret/v1/secret/{secret_id}/data
 >
 
+> Updates encrypted data of a specific Secret resource. For example, to change the parameter `data`, external data to encrypt, you can use `update_data` to create new encrypted data based on the changed `data` and store it in the Secret resource.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateSecretDataRequest](secret.md#updatesecretdatarequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "secret_id": "secret-123456789012",
+    "data": "********",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data": {
+        "encrypted_data": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "encrypted": true,
+    "encrypt_options": {
+        "encrypted_data_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "encrypt_algorithm": "CloudForet_DEFAULT"
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -82,11 +153,37 @@ description:
 > **GET** /secret/v1/secret/{secret_id}/data
 >
 
+> Gets a specific Secret. Prints detailed information about the Secret, including  `name`, `tags`, `schema`, and `provider`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SecretRequest](secret.md#secretrequest) |
 | Response |  [SecretDataInfo](secret.md#secretdatainfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "secret_id": "secret-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data": {
+        "encrypted_data": "xxxxxxxxxxxxxxxxxx"
+    },
+    "encrypted": true,
+    "encrypt_options": {
+        "encrypt_algorithm": "SPACEONE_DEFAULT",
+        "encrypted_data_key": "xxxxxx"
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -95,11 +192,39 @@ description:
 > **GET** /secret/v1/secret/{secret_id}
 >
 
+> Gets a specific Post. You must specify the `post_id` of the Post to get, and the `board_id` of the Board where the child Post to get belongs. Prints detailed information about the Post.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetSecretRequest](secret.md#getsecretrequest) |
 | Response |  [SecretInfo](secret.md#secretinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "secret_id": "secret-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "secret_id": "secret-123456789012",
+    "name": "aws-dev",
+    "secret_type": "CREDENTIALS",
+    "tags": {},
+    "schema": "aws_access_key",
+    "provider": "aws",
+    "service_account_id": "sa-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T06:10:14.851Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -110,11 +235,52 @@ description:
 > **POST** /secret/v1/secrets/search
 
 
+> Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SecretQuery](secret.md#secretquery) |
 | Response |  [SecretsInfo](secret.md#secretsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "secret_id": "secret-123456789012",
+            "name": "aws-dev",
+            "secret_type": "CREDENTIALS",
+            "tags": {},
+            "schema": "aws_access_key",
+            "provider": "aws",
+            "service_account_id": "sa-123456789012",
+            "project_id": "project-123456789012",
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T06:10:14.851Z"
+        },
+        {
+            "secret_id": "secret-987654321098",
+            "name": "plugin-credentials",
+            "secret_type": "CREDENTIALS",
+            "tags": {},
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T02:31:01.709Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

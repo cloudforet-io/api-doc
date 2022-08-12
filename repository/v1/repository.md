@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Repository is a repository storing data of deployable plugins.
 ---
 # Repository
 
@@ -28,11 +28,35 @@ description:
 > **POST** /repository/v1/repositories
 >
 
+> Registers a Repository. The parameter `name` can only include alphabets, numbers, and hyphens(-). The parameter `repository_type` can be either `local` or `remote`. The parameter `endpoint` is needed if the `repository_type` is `remote`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateRepositoryRequest](repository.md#createrepositoryrequest) |
 | Response |  [RepositoryInfo](repository.md#repositoryinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "Local",
+    "repository_type": "local",
+    "endpoint": "grpc+ssl://local-url:443"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "repository_id": "repo-123456789012",
+    "name": "Local",
+    "repository_type": "local",
+    "endpoint": "grpc+ssl://local-url:443",
+    "created_at": "2022-01-01T02:27:02.924Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -41,11 +65,34 @@ description:
 > **PUT** /repository/v1/repository/{repository_id}
 >
 
+> Updates a specific Repository registered. You must specify the `repository_id` of the Repository to update. You can make changes in Repository settings, including `name`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateRepositoryRequest](repository.md#updaterepositoryrequest) |
 | Response |  [RepositoryInfo](repository.md#repositoryinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "repository_id": "repo-123456789012",
+    "name": "Local-repo"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "repository_id": "repo-123456789012",
+    "name": "Local-repo",
+    "repository_type": "local",
+    "endpoint": "grpc+ssl://local-url:443",
+    "created_at": "2022-01-01T02:27:02.924Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -54,11 +101,21 @@ description:
 > **DELETE** /repository/v1/repository/{repository_id}
 >
 
+> Deregisters and deletes a specific Repository. You must specify the `repository_id` of the Repository to deregister.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [RepositoryRequest](repository.md#repositoryrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "repository_id": "repo-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +124,33 @@ description:
 > **GET** /repository/v1/repositories/{repository_id}
 >
 
+> Gets a specific Repository. Prints detailed information about the Repository, including  `name`, `repository_type`, and `endpoint`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetRepositoryRequest](repository.md#getrepositoryrequest) |
 | Response |  [RepositoryInfo](repository.md#repositoryinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "repository_id": "repo-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "repository_id": "repo-123456789012",
+    "name": "Local-repo",
+    "repository_type": "local",
+    "endpoint": "grpc+ssl://local-url:443",
+    "created_at": "2022-01-01T02:26:29.081Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

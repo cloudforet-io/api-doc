@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Metric is a monitoring metric data delivered from an external cloud service via a DataSource.
 ---
 # Metric
 
@@ -22,6 +22,7 @@ description:
  
 ### list
 
+> Gets a list of all Metrics from a specific cloud service. You can use the method to list up the Metrics to collect before using the `get_data` method to collect the Metrics.
 
 | Type | Message |
 | :--- | :--- |
@@ -33,6 +34,7 @@ description:
  
 ### get_data
 
+> Gets a Metric from a specific cloud service resource `instance`. By specifying the time period to collect the Metric, the Metric data value of the `instance` during the period is returned.
 
 | Type | Message |
 | :--- | :--- |

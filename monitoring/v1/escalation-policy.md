@@ -1,5 +1,5 @@
 ---
-description:  
+description: An EscalationPolicy is a set of rules to deliver an alert to assigned members.
 ---
 # Escalation policy
 
@@ -29,11 +29,59 @@ description:
 > **POST** /monitoring/v1/escalation-policies
 >
 
+> Creates a new EscalationPolicy. When creating an EscalationPolicy, if the project_id is assigned, the EscalationPolicy is applied to the Project with the same project_id. If an EscalationPolicy is set as a global policy, all Projects in the same domain can apply the policy.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateEscalationPolicyRequest](escalation-policy.md#createescalationpolicyrequest) |
 | Response |  [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "es-test",
+    "rules": [
+        {
+            "notification_level": "LV1",
+            "escalate_minutes": 30
+        },
+        {
+            "notification_level": "LV2",
+            "escalate_minutes": 30
+        }
+    ],
+    "repeat_count": 2,
+    "finish_condition": "ACKNOWLEDGED",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "escalation_policy_id": "ep-526e536fdca9",
+    "name": "es-test",
+    "rules": [
+        {
+            "notification_level": "LV1",
+            "escalate_minutes": 30
+        },
+        {
+            "notification_level": "LV2",
+            "escalate_minutes": 30
+        }
+    ],
+    "repeat_count": 2,
+    "finish_condition": "ACKNOWLEDGED",
+    "scope": "GLOBAL",
+    "tags": {},
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-21T09:22:45.340Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -42,11 +90,68 @@ description:
 > **PUT** /monitoring/v1/escalation-policy/{escalation_policy_id}
 >
 
+> Updates a specific EscalationPolicy. You can make changes in EscalationPolicy settings, including the name, the escalation process, and the number of iterations.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateEscalationPolicyRequest](escalation-policy.md#updateescalationpolicyrequest) |
 | Response |  [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "escalation_policy_id": "ep-526e536fdca9",
+    "name": "es-test2",
+    "rules": [
+        {
+            "notification_level": "LV1",
+            "escalate_minutes": 15
+        },
+        {
+            "notification_level": "LV2",
+            "escalate_minutes": 15
+        },
+        {
+            "notification_level": "LV3",
+            "escalate_minutes": 15
+        }
+    ],
+    "repeat_count": 1,
+    "finish_condition": "RESOLVED",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "escalation_policy_id": "ep-526e536fdca9",
+    "name": "es-test2",
+    "rules": [
+        {
+            "notification_level": "LV1",
+            "escalate_minutes": 15
+        },
+        {
+            "notification_level": "LV2",
+            "escalate_minutes": 15
+        },
+        {
+            "notification_level": "LV3",
+            "escalate_minutes": 15
+        }
+    ],
+    "repeat_count": 1,
+    "finish_condition": "RESOLVED",
+    "scope": "GLOBAL",
+    "tags": {},
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-21T09:22:45.340Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -55,11 +160,52 @@ description:
 > **PUT** /monitoring/v1/escalation-policy/{escalation_policy_id}/set-default
 >
 
+> Sets a specific EscalationPolicy as default. Only policies configured as global can be set as default. When a Project is created, even if you did not configure any policy to the Project, the default policy set by this api method is applied.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [EscalationPolicyRequest](escalation-policy.md#escalationpolicyrequest) |
 | Response |  [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "escalation_policy_id": "ep-526e536fdca9",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "escalation_policy_id": "ep-526e536fdca9",
+    "name": "es-test2",
+    "is_default": true,
+    "rules": [
+        {
+            "notification_level": "LV1",
+            "escalate_minutes": 15
+        },
+        {
+            "notification_level": "LV2",
+            "escalate_minutes": 15
+        },
+        {
+            "notification_level": "LV3",
+            "escalate_minutes": 15
+        }
+    ],
+    "repeat_count": 1,
+    "finish_condition": "RESOLVED",
+    "scope": "GLOBAL",
+    "tags": {},
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-21T09:22:45.340Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -68,11 +214,22 @@ description:
 > **DELETE** /monitoring/v1/escalation-policy/{escalation_policy_id}
 >
 
+> Deletes a specific EscalationPolicy. Deletes the EscalationPolicy with the escalation_policy_id from the deletion request.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [EscalationPolicyRequest](escalation-policy.md#escalationpolicyrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "escalation_policy_id": "ep-d75670166af4",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -81,11 +238,45 @@ description:
 > **GET** /monitoring/v1/escalation-policy/{escalation_policy_id}
 >
 
+> Gets a specific EscalationPolicy. Prints detailed information about the EscalationPolicy, including the name, rules, and termination conditions.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetEscalationPolicyRequest](escalation-policy.md#getescalationpolicyrequest) |
 | Response |  [EscalationPolicyInfo](escalation-policy.md#escalationpolicyinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "escalation_policy_id": "ep-d75670166af4",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "escalation_policy_id": "ep-d75670166af4",
+    "name": "0525-ms-test-2",
+    "rules": [
+        {
+            "notification_level": "LV2",
+            "escalate_minutes": 30
+        },
+        {
+            "notification_level": "LV2"
+        }
+    ],
+    "finish_condition": "ACKNOWLEDGED",
+    "scope": "GLOBAL",
+    "tags": {},
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-05-25T09:31:38.573Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -96,11 +287,64 @@ description:
 > **POST** /monitoring/v1/escalation-policies/search
 
 
+> Gets a list of all EscalationPolicies. You can use a query to get a filtered list of EscalationPolicies.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [EscalationPolicyQuery](escalation-policy.md#escalationpolicyquery) |
 | Response |  [EscalationPoliciesInfo](escalation-policy.md#escalationpoliciesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "escalation_policy_id": "ep-7c9745003372",
+            "name": "0525-ms-test-1",
+            "rules": [
+                {
+                    "notification_level": "LV1"
+                }
+            ],
+            "finish_condition": "ACKNOWLEDGED",
+            "scope": "GLOBAL",
+            "tags": {},
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-05-25T09:31:15.150Z"
+        },
+        {
+            "escalation_policy_id": "ep-d75670166af4",
+            "name": "0525-ms-test-2",
+            "rules": [
+                {
+                    "notification_level": "LV2",
+                    "escalate_minutes": 30
+                },
+                {
+                    "notification_level": "LV2"
+                }
+            ],
+            "finish_condition": "ACKNOWLEDGED",
+            "scope": "GLOBAL",
+            "tags": {},
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-05-25T09:31:38.573Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

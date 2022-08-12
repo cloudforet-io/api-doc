@@ -1,5 +1,5 @@
 ---
-description:  
+description: An Alert, a set of Events, is the smallest unit to manage incidents.
 ---
 # Alert
 
@@ -35,11 +35,48 @@ description:
 > **POST** /monitoring/v1/alerts
 >
 
+> Creates a new Alert. Alerts generated with `create` method are made in a manual way. Manually made Alerts can be used for Notifications.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateAlertRequest](alert.md#createalertrequest) |
 | Response |  [AlertInfo](alert.md#alertinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "title": "sample test",
+    "description": "This is a description of sample.",
+    "urgency": "HIGH",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "alert_number": 104053,
+    "alert_id": "alert-123456789012",
+    "title": "sample test",
+    "state": "TRIGGERED",
+    "description": "This is a description of sample.",
+    "urgency": "HIGH",
+    "severity": "NONE",
+    "escalation_step": 1,
+    "additional_info": {},
+    "triggered_by": "user1@email.com",
+    "escalation_policy_id": "ep-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T01:43:08.566Z",
+    "updated_at": "2022-01-01T01:43:08.566Z",
+    "escalated_at": "2022-01-01T01:43:54.464Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -48,11 +85,49 @@ description:
 > **PUT** /monitoring/v1/alert/{alert_id}
 >
 
+> Updates a specific Alert. You can make changes in Alert settings, including the `title`, `description`, `responder`, `state`, and `urgency`. The `responder` of the Alert is a User who is assigned to respond to the Alert.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateAlertRequest](alert.md#updatealertrequest) |
 | Response |  [AlertInfo](alert.md#alertinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "alert_id": "alert-123456789012",
+    "state": "ACKNOWLEDGED",
+    "urgency": "LOW",
+    "description": "[updating]This is a description of sample.",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "alert_number": 104053,
+    "alert_id": "alert-123456789012",
+    "title": "sample test",
+    "state": "ACKNOWLEDGED",
+    "description": "[updating]This is a description of sample. ",
+    "urgency": "LOW",
+    "severity": "NONE",
+    "escalation_step": 1,
+    "additional_info": {},
+    "triggered_by": "user1@email.com",
+    "escalation_policy_id": "ep-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T01:43:08.566Z",
+    "updated_at": "2022-01-01T01:43:08.566Z",
+    "acknowledged_at": "2022-01-01T01:48:52.799Z",
+    "escalated_at": "2022-01-01T01:43:54.464Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -100,11 +175,54 @@ description:
 > **POST** /monitoring/v1/alert/{alert_id}/responders
 >
 
+> Adds a responder who receives a Notification about an Alert.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [AlertResponderRequest](alert.md#alertresponderrequest) |
 | Response |  [AlertInfo](alert.md#alertinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "alert_id": "alert-123456789012",
+    "resource_type": "identity.User",
+    "resource_id": "user2@email.com",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "alert_number": 104053,
+    "alert_id": "alert-123456789012",
+    "title": "sample test",
+    "state": "ACKNOWLEDGED",
+    "description": "[updating]This is a description of sample. ",
+    "urgency": "LOW",
+    "severity": "NONE",
+    "escalation_step": 1,
+    "responders": [
+        {
+            "resource_type": "identity.User",
+            "resource_id": "user2@email.com"
+        }
+    ],
+    "additional_info": {},
+    "triggered_by": "user1@email.com",
+    "escalation_policy_id": "ep-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T01:43:08.566Z",
+    "updated_at": "2022-01-01T01:43:08.566Z",
+    "acknowledged_at": "2022-01-01T02:24:12.051Z",
+    "escalated_at": "2022-01-01T01:43:54.464Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -113,11 +231,48 @@ description:
 > **DELETE** /monitoring/v1/alert/{alert_id}/responders
 >
 
+> Deletes a responder who receives a Notification about an Alert.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [AlertResponderRequest](alert.md#alertresponderrequest) |
 | Response |  [AlertInfo](alert.md#alertinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "alert_id": "alert-123456789012",
+    "resource_type": "identity.User",
+    "resource_id": "user2@email.com",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "alert_number": 104053,
+    "alert_id": "alert-123456789012",
+    "title": "sample test",
+    "state": "ACKNOWLEDGED",
+    "description": "[updating]This is a description of sample. ",
+    "urgency": "LOW",
+    "severity": "NONE",
+    "escalation_step": 1,
+    "additional_info": {},
+    "triggered_by": "user1@email.com",
+    "escalation_policy_id": "ep-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T01:43:08.566Z",
+    "updated_at": "2022-01-01T01:43:08.566Z",
+    "acknowledged_at": "2022-01-01T01:48:52.799Z",
+    "escalated_at": "2022-01-01T01:43:54.464Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -152,11 +307,22 @@ description:
 > **DELETE** /monitoring/v1/alert/{alert_id}
 >
 
+> Deletes a specific Alert and remove it from the list of Alerts. You must specify the `alert_id` of the Alert to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [AlertRequest](alert.md#alertrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "alert_id": "alert-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -165,11 +331,46 @@ description:
 > **GET** /monitoring/v1/alert/{alert_id}
 >
 
+> Gets a specific Alert. Prints detailed information about the Alert.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetAlertRequest](alert.md#getalertrequest) |
 | Response |  [AlertInfo](alert.md#alertinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "alert_id": "alert-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "alert_number": 104053,
+    "alert_id": "alert-123456789012",
+    "title": "sample test",
+    "state": "ACKNOWLEDGED",
+    "description": "[updating]This is a description of sample. ",
+    "urgency": "LOW",
+    "severity": "NONE",
+    "escalation_step": 1,
+    "additional_info": {},
+    "triggered_by": "user1@email.com",
+    "escalation_policy_id": "ep-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T01:43:08.566Z",
+    "updated_at": "2022-01-01T01:43:08.566Z",
+    "acknowledged_at": "2022-01-01T01:48:52.799Z",
+    "escalated_at": "2022-01-01T01:43:54.464Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -180,11 +381,88 @@ description:
 > **POST** /monitoring/v1/alerts/search
 
 
+> Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [AlertQuery](alert.md#alertquery) |
 | Response |  [AlertsInfo](alert.md#alertsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "alert_number": 104057,
+            "alert_id": "alert-987654321098",
+            "title": "Notification of access to the bastion Host",
+            "state": "TRIGGERED",
+            "description": "SSH Access to stargate-dev from adm",
+            "urgency": "LOW",
+            "severity": "INFO",
+            "resource": {
+                "resource_id": "server-123456789012",
+                "resource_type": "inventory.Server",
+                "name": "stargate-dev"
+            },
+            "escalation_step": 1,
+            "escalation_ttl": 1,
+            "additional_info": {
+                "host": "[]",
+                "user": "user1"
+            },
+            "triggered_by": "webhook-123456789012",
+            "webhook_id": "webhook-123456789012",
+            "escalation_policy_id": "ep-123456789012",
+            "project_id": "project-123456789012",
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T02:46:35.934Z",
+            "updated_at": "2022-01-01T02:46:35.934Z",
+            "escalated_at": "2022-01-01T02:46:35.979Z"
+        },
+        {
+            "alert_number": 104056,
+            "alert_id": "alert-123456789999",
+            "title": "Notification of access to the bastion Host",
+            "state": "TRIGGERED",
+            "description": "SSH Access to stargate-dev from user3@email.com",
+            "urgency": "LOW",
+            "severity": "INFO",
+            "resource": {
+                "resource_id": "server-123456789012",
+                "resource_type": "inventory.Server",
+                "name": "stargate-dev"
+            },
+            "escalation_step": 1,
+            "escalation_ttl": 1,
+            "additional_info": {
+                "user": "user3@email.com",
+                "host": "['111.111.111.11']"
+            },
+            "triggered_by": "webhook-123456789012",
+            "webhook_id": "webhook-123456789012",
+            "escalation_policy_id": "ep-123456789012",
+            "project_id": "project-123456789012",
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T02:46:31.391Z",
+            "updated_at": "2022-01-01T02:46:31.391Z",
+            "escalated_at": "2022-01-01T02:46:31.553Z"
+        }
+    ],
+    "total_count": 21283
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

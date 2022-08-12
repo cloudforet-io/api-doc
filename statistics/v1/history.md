@@ -1,5 +1,5 @@
 ---
-description:  
+description: A History is a record of data collection based on a Schedule.
 ---
 # History
 
@@ -40,11 +40,58 @@ description:
 > **POST** /statistics/v1/history/query
 
 
+> Gets a list of all Histories. You can use a query to get a filtered list of Histories.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [QueryHistoryRequest](history.md#queryhistoryrequest) |
 | Response |  [HistoryInfo](history.md#historyinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "topic": "daily_cloud_service_summary",
+            "values": {
+                "label": "Storage",
+                "project_id": "project-f7111a9aa0c6",
+                "provider": "azure",
+                "value": 32213303296.0,
+                "cloud_service_group": "Compute",
+                "cloud_service_type": "Disk"
+            },
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-07-18T01:01:57.579Z"
+        },
+        {
+            "topic": "daily_cloud_service_summary",
+            "values": {
+                "cloud_service_type": "Bucket",
+                "cloud_service_group": "CloudStorage",
+                "label": "Storage",
+                "provider": "google_cloud",
+                "project_id": "project-4cd006b4993b",
+                "value": 401399880.0
+            },
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-07-18T01:01:57.579Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

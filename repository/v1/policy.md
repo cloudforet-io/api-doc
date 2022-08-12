@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Policy is a resource managing page access permissions. This resource can be used in all domains if it is defined in the `repository` microservice.
 ---
 # Policy
 
@@ -28,11 +28,51 @@ description:
 > **POST** /repository/v1/policies
 >
 
+> Creates a new Policy. The parameter `policy_id`, an identifier of Policy resources, can only include lowercase alphabets, numbers, and hyphens(-). The parameter `permissions` is a list type data describing page access permissions.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreatePolicyRequest](policy.md#createpolicyrequest) |
 | Response |  [PolicyInfo](policy.md#policyinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "policy_id": "policy-custom-full-acess",
+    "name": "Full Access",
+    "permissions": [
+        "*"
+    ],
+    "labels": [],
+    "tags": {},
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "policy_id": "policy-custom-full-acess",
+    "name": "Full Access",
+    "state": "ENABLED",
+    "permissions": [
+        "*"
+    ],
+    "labels": [],
+    "tags": {},
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Local",
+        "repository_type": "local"
+    },
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T06:45:04.582Z",
+    "updated_at": "2022-01-01T06:45:04.582Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -41,11 +81,51 @@ description:
 > **PUT** /repository/v1/policy/{policy}
 >
 
+> Updates a specific Policy. You can make changes in Policy settings, including `name`, `labels`, `tags`, and `permissions`. The parameter `policy_id` cannot be updated.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdatePolicyRequest](policy.md#updatepolicyrequest) |
 | Response |  [PolicyInfo](policy.md#policyinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "policy_id": "policy-custom-full-acess",
+    "name": "Full Access",
+    "permissions": [
+        "*"
+    ],
+    "labels": [],
+    "tags": {},
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "policy_id": "policy-custom-full-acess",
+    "name": "Full Access",
+    "state": "ENABLED",
+    "permissions": [
+        "*"
+    ],
+    "labels": [],
+    "tags": {},
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Local",
+        "repository_type": "local"
+    },
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T06:45:04.582Z",
+    "updated_at": "2022-01-01T06:45:04.582Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -54,11 +134,21 @@ description:
 > **DELETE** /repository/v1/policy/{policy}
 >
 
+> Deletes a specific Policy. You must specify the `policy_id` of the Policy to delete, as the `policy_id` is an identifier of Policy resources.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PolicyRequest](policy.md#policyrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "policy_id": "policy-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +157,45 @@ description:
 > **GET** /repository/v1/policies/{policy}
 >
 
+> Gets a specific Policy. You must specify the `policy_id` of the Policy to get, as the `policy_id` is an identifier of Policy resources. You can use the parameter `repository_id` to limit the scope of the method to a specific Repository.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetRepositoryPolicyRequest](policy.md#getrepositorypolicyrequest) |
 | Response |  [PolicyInfo](policy.md#policyinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "policy_id": "policy-123456789012",
+    "repository_id": "repo-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "policy_id": "policy-123456789012",
+    "name": "Full Access",
+    "state": "ENABLED",
+    "permissions": [
+        "*"
+    ],
+    "labels": [],
+    "tags": {},
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Local",
+        "repository_type": "local"
+    },
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T15:42:50.943Z",
+    "updated_at": "2022-01-01T15:42:50.943Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -82,11 +206,68 @@ description:
 > **POST** /repository/v1/policies/search
 
 
+> Gets a list of all Policies in a specific Repository. The parameter `repository_id` is used as an identifier of a Repository to get its list of Policies. You can use a query to get a filtered list of Policies.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PolicyQuery](policy.md#policyquery) |
 | Response |  [PoliciesInfo](policy.md#policiesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "repository_id": "repo-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "policy_id": "policy-123456789012",
+            "name": "Full Access",
+            "state": "ENABLED",
+            "permissions": [
+                "*"
+            ],
+            "labels": [],
+            "tags": {},
+            "repository_info": {
+                "repository_id": "repo-123456789012",
+                "name": "Local",
+                "repository_type": "local"
+            },
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T15:42:50.943Z",
+            "updated_at": "2022-01-01T15:42:50.943Z"
+        },
+        {
+            "policy_id": "policy-987654321098",
+            "name": "Identity Admin",
+            "state": "ENABLED",
+            "permissions": [
+                "identity.*"
+            ],
+            "labels": [],
+            "tags": {},
+            "repository_info": {
+                "repository_id": "repo-123456789012",
+                "name": "Local",
+                "repository_type": "local"
+            },
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T08:08:14.756Z",
+            "updated_at": "2022-01-01T08:08:14.756Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

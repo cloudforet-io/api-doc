@@ -1,5 +1,5 @@
 ---
-description:  
+description: A MaintenanceWindow is a resource snoozing Alerts during maintenance time.
 ---
 # Maintenance window
 
@@ -28,11 +28,47 @@ description:
 > **POST** /monitoring/v1/maintenance-windows
 >
 
+> Creates a new MaintenanceWindow. When creating a MaintenanceWindow, you can set the title and maintenance schedule of the MaintenanceWindow. From the `start_time` to the `end_time` specified by the schedule set in this method, alerts in the Projects linked with the MaintenanceWindow are ceased.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateMaintenanceWindowRequest](maintenance-window.md#createmaintenancewindowrequest) |
 | Response |  [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "title": "The dev server is under regular maintenance.",
+    "projects": [
+        "project-123456789012"
+    ],
+    "start_time": "2022-01-01T09:45:00.000Z",
+    "end_time": "2022-01-01T10:45:00.000Z",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "maintenance_window_id": "mw-123456789012",
+    "title": "The dev server is under regular maintenance.",
+    "state": "OPEN",
+    "start_time": "2022-01-01T09:45:00.000Z",
+    "end_time": "2022-01-01T10:45:00.000Z",
+    "tags": {},
+    "projects": [
+        "project-123456789012"
+    ],
+    "domain_id": "domain-123456789012",
+    "created_by": "user1@email.com",
+    "created_at": "2022-06-02T09:46:49.196Z",
+    "updated_at": "2022-06-02T09:46:49.196Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -41,11 +77,48 @@ description:
 > **PUT** /monitoring/v1/maintenance-window/{maintenance_window_id}
 >
 
+> Updates a specific MaintenanceWindow. You can make changes in MaintenanceWindow settings including, the `title` and the schedule.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateMaintenanceWindowRequest](maintenance-window.md#updatemaintenancewindowrequest) |
 | Response |  [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "maintenance_window_id": "mw-123456789012",
+    "title": "The dev server is under regular maintenance.",
+    "projects": [
+        "project-123456789012"
+    ],
+    "start_time": "2022-01-03T00:00:00.000Z",
+    "end_time": "2022-01-03T01:00:00.000Z",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "maintenance_window_id": "mw-123456789012",
+    "title": "The dev server is under regular maintenance.",
+    "state": "OPEN",
+    "start_time": "2022-06-03T00:00:00.000Z",
+    "end_time": "2022-06-03T01:00:00.000Z",
+    "tags": {},
+    "projects": [
+        "project-123456789012"
+    ],
+    "domain_id": "domain-123456789012",
+    "created_by": "user1@email.com",
+    "created_at": "2022-01-02T09:46:49.196Z",
+    "updated_at": "2022-01-02T09:46:49.196Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -54,11 +127,42 @@ description:
 > **PUT** /monitoring/v1/maintenance-window/{maintenance_window_id}/close
 >
 
+> Closes a MaintenanceWindow by changing the state of the MaintenanceWindow to `CLOSED` when the maintenance is completed. As the MaintenanceWindow is not deleted but closed, the maintenance history remains undeleted.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [MaintenanceWindowRequest](maintenance-window.md#maintenancewindowrequest) |
 | Response |  [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "maintenance_window_id": "mw-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "maintenance_window_id": "mw-123456789012",
+    "title": "The dev server is under regular maintenance.",
+    "state": "CLOSED",
+    "start_time": "2022-06-03T00:00:00.000Z",
+    "end_time": "2022-06-03T01:00:00.000Z",
+    "tags": {},
+    "projects": [
+        "project-123456789012"
+    ],
+    "domain_id": "domain-123456789012",
+    "created_by": "user1@email.com",
+    "created_at": "2022-01-02T09:46:49.196Z",
+    "updated_at": "2022-01-02T09:46:49.196Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +171,42 @@ description:
 > **GET** /monitoring/v1/maintenance-window/{maintenance_window_id}
 >
 
+> Gets a specific MaintenanceWindow. Prints detailed information about the MaintenanceWindow, including the title and the schedule.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetMaintenanceWindowRequest](maintenance-window.md#getmaintenancewindowrequest) |
 | Response |  [MaintenanceWindowInfo](maintenance-window.md#maintenancewindowinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "maintenance_window_id": "mw-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "maintenance_window_id": "mw-123456789012",
+    "title": "The dev server is under regular maintenance.",
+    "state": "OPEN",
+    "start_time": "2022-06-03T00:00:00.000Z",
+    "end_time": "2022-06-03T01:00:00.000Z",
+    "tags": {},
+    "projects": [
+        "project-123456789012"
+    ],
+    "domain_id": "domain-123456789012",
+    "created_by": "user1@email.com",
+    "created_at": "2022-01-02T09:46:49.196Z",
+    "updated_at": "2022-01-02T09:46:49.196Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -82,11 +217,62 @@ description:
 > **POST** /monitoring/v1/maintenance-windows/search
 
 
+> Gets a list of all MaintenanceWindows. You can use a query to get a filtered list of MaintenanceWindows.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [MaintenanceWindowQuery](maintenance-window.md#maintenancewindowquery) |
 | Response |  [MaintenanceWindowsInfo](maintenance-window.md#maintenancewindowsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "maintenance_window_id": "mw-123456789012",
+            "title": "The dev server is under regular maintenance.",
+            "state": "OPEN",
+            "start_time": "2022-06-03T00:00:00.000Z",
+            "end_time": "2022-06-03T01:00:00.000Z",
+            "tags": {},
+            "projects": [
+                "project-123456789012"
+            ],
+            "domain_id": "domain-123456789012",
+            "created_by": "user1@email.com",
+            "created_at": "2022-01-01T09:59:01.966Z",
+            "updated_at": "2022-01-01T09:59:01.966Z"
+        },
+        {
+            "maintenance_window_id": "mw-987654321098",
+            "title": "The prd server is under regular maintenance.",
+            "state": "OPEN",
+            "start_time": "2022-06-03T00:00:00.000Z",
+            "end_time": "2022-06-03T01:00:00.000Z",
+            "tags": {},
+            "projects": [
+                "project-123456789012"
+            ],
+            "domain_id": "domain-123456789012",
+            "created_by": "user2@email.com",
+            "created_at": "2022-01-02T09:57:28.999Z",
+            "updated_at": "2022-01-02T09:57:28.999Z"
+        }
+    ],
+    "total_count": 50
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

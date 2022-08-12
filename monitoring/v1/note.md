@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Note is a comment on an Event, and is used for incident management.
 ---
 # Note
 
@@ -28,11 +28,37 @@ description:
 > **POST** /monitoring/v1/notes
 >
 
+> Creates a new Note. You can create Notes for each Alert to record the information needed to manage the Alerts.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateNoteRequest](note.md#createnoterequest) |
 | Response |  [NoteInfo](note.md#noteinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "alert_id": "alert-160ce04f6908",
+    "note": "This is a description",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "note_id": "note-df107d31bf20",
+    "alert_id": "alert-160ce04f6908",
+    "note": "This is a description",
+    "created_by": "seolmin@mz.co.kr",
+    "project_id": "project-52a423012d5e",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-29T08:26:14.418Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -41,11 +67,37 @@ description:
 > **PUT** /monitoring/v1/note/{note_id}
 >
 
+> Updates a specific Note. You must specify the `note_id` for Note validation check. If the Note exists, it is updated.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateNoteRequest](note.md#updatenoterequest) |
 | Response |  [NoteInfo](note.md#noteinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "note_id": "note-df107d31bf20",
+    "note": "This is a test",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "note_id": "note-df107d31bf20",
+    "alert_id": "alert-160ce04f6908",
+    "note": "This is a test",
+    "created_by": "seolmin@mz.co.kr",
+    "project_id": "project-52a423012d5e",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-29T08:26:14.418Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -54,11 +106,22 @@ description:
 > **DELETE** /monitoring/v1/note/{note_id}
 >
 
+> Deletes a specific Note. You must specify the `note_id` of the Note to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NoteRequest](note.md#noterequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "note_id": "note-0bfac585bf5a",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +130,36 @@ description:
 > **GET** /monitoring/v1/note/{note_id}
 >
 
+> Gets a specific Note. You must specify the `note_id` and `domain_id`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetNoteRequest](note.md#getnoterequest) |
 | Response |  [NoteInfo](note.md#noteinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "note_id": "note-0bfac585bf5a",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "note_id": "note-0bfac585bf5a",
+    "alert_id": "alert-fbfd78e43df8",
+    "note": "test",
+    "created_by": "hykang@mz.co.kr",
+    "project_id": "project-52a423012d5e",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-23T09:52:42.251Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -82,11 +170,50 @@ description:
 > **POST** /monitoring/v1/notes/search
 
 
+> Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NoteQuery](note.md#notequery) |
 | Response |  [NotesInfo](note.md#notesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "note_id": "note-0597bd748be0",
+            "alert_id": "alert-fbfd78e43df8",
+            "note": "http://spaceone.org",
+            "created_by": "hykang@mz.co.kr",
+            "project_id": "project-52a423012d5e",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-23T09:58:23.838Z"
+        },
+        {
+            "note_id": "note-0bfac585bf5a",
+            "alert_id": "alert-fbfd78e43df8",
+            "note": "test",
+            "created_by": "hykang@mz.co.kr",
+            "project_id": "project-52a423012d5e",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-23T09:52:42.251Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

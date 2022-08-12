@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Plugin is a resource containing data of deployable plugins such as container image and registry URL.
 ---
 # Plugin
 
@@ -31,11 +31,118 @@ description:
 > **POST** /repository/v1/plugins
 >
 
+> Registers a Plugin. The parameter `registry_type`, meaning container registry type, can be either `DOCKER_HUB` or `AWS_PUBLIC_ECR`. The default value of the `registry_type` is `DOCKER_HUB`. The parameter `registry_url` is required if the `registry_type` is not `DOCKER_HUB`. The parameter `image` is limited to 40 characters.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreatePluginRequest](plugin.md#createpluginrequest) |
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "JIRA Issue notification",
+    "service_type": "notification.Procotol",
+    "image": "pyengine/plugin-jira-noti-protocol",
+    "registry_type": "DOCKER_HUB",
+    "registry_config": {},
+    "provider": "atlassian",
+    "capability": {
+        "supported_schema": [
+            "atlassian_jira"
+        ]
+    },
+    "template": {
+        "options": {
+            "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                    "project_id": {
+                        "type": "string",
+                        "title": "Project ID",
+                        "minLength": 4.0
+                    },
+                    "sa_name": {
+                        "title": "Service Account",
+                        "type": "string",
+                        "minLength": 4.0
+                    }
+                }
+            }
+        }
+    },
+    "labels": [
+        "jira",
+        "atlassian",
+        "notification"
+    ],
+    "tags": {
+        "description": "Atlassian JIRA Issue notification",
+        "icon": "https://icon-path/jira-icon.png"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "plugin_id": "plugin-jira-noti-protocol",
+    "name": "JIRA Issue notification",
+    "image": "pyengine/plugin-jira-noti-protocol",
+    "registry_url": "registry.hub.docker.com",
+    "state": "ENABLED",
+    "service_type": "notification.Procotol",
+    "provider": "atlassian",
+    "registry_type": "DOCKER_HUB",
+    "registry_config": {},
+    "capability": {
+        "supported_schema": [
+            "atlassian_jira"
+        ]
+    },
+    "template": {
+        "options": {
+            "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                    "project_id": {
+                        "type": "string",
+                        "title": "Project ID",
+                        "minLength": 4.0
+                    },
+                    "sa_name": {
+                        "title": "Service Account",
+                        "type": "string",
+                        "minLength": 4.0
+                    }
+                }
+            }
+        }
+    },
+    "labels": [
+        "jira",
+        "atlassian",
+        "notification"
+    ],
+    "tags": {
+        "description": "Atlassian JIRA Issue notification",
+        "icon": "https://icon-path/jira-icon.png"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Marketplace",
+        "repository_type": "remote"
+    },
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T08:02:38.094Z",
+    "updated_at": "2022-01-01T08:02:38.094Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -44,11 +151,114 @@ description:
 > **PUT** /repository/v1/plugin/{plugin_id}
 >
 
+> Updates a specific Plugin registered. A Plugin can be updated only if its Repository's `repository_type` is `local`. You can make changes in Plugin settings, including `template` and its options, `schema`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdatePluginRequest](plugin.md#updatepluginrequest) |
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "JIRA Issue notification",
+    "capability": {
+        "supported_schema": [
+            "atlassian_jira"
+        ]
+    },
+    "template": {
+        "options": {
+            "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                    "project_id": {
+                        "type": "string",
+                        "title": "Project ID",
+                        "minLength": 4.0
+                    },
+                    "sa_name": {
+                        "title": "Service Account",
+                        "type": "string",
+                        "minLength": 4.0
+                    }
+                }
+            }
+        }
+    },
+    "labels": [
+        "jira",
+        "atlassian",
+        "notification"
+    ],
+    "tags": {
+        "description": "Atlassian JIRA Issue notification",
+        "icon": "https://icon-path/jira-icon.png"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "plugin_id": "plugin-jira-noti-protocol",
+    "name": "JIRA Issue notification",
+    "image": "pyengine/plugin-jira-noti-protocol",
+    "registry_url": "registry.hub.docker.com",
+    "state": "ENABLED",
+    "service_type": "notification.Procotol",
+    "provider": "atlassian",
+    "registry_type": "DOCKER_HUB",
+    "registry_config": {},
+    "capability": {
+        "supported_schema": [
+            "atlassian_jira"
+        ]
+    },
+    "template": {
+        "options": {
+            "schema": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                    "project_id": {
+                        "type": "string",
+                        "title": "Project ID",
+                        "minLength": 4.0
+                    },
+                    "sa_name": {
+                        "title": "Service Account",
+                        "type": "string",
+                        "minLength": 4.0
+                    }
+                }
+            }
+        }
+    },
+    "labels": [
+        "jira",
+        "atlassian",
+        "notification"
+    ],
+    "tags": {
+        "description": "Atlassian JIRA Issue notification",
+        "spaceone:plugin_name": "plugin-jira-noti-protocol",
+        "icon": "https://icon-path/jira-icon.png"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Marketplace",
+        "repository_type": "remote"
+    },
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T08:02:38.094Z",
+    "updated_at": "2022-01-01T08:02:38.094Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -57,11 +267,51 @@ description:
 > **DELETE** /repository/v1/plugin/{plugin_id}
 >
 
+> Deregisters and deletes a specific Plugin. You must specify the `plugin_id` of the Plugin to deregister.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PluginRequest](plugin.md#pluginrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "name": "AWS SNS Webhook",
+    "image": "pyengine/plugin-aws-sns-mon-webhook",
+    "registry_url": "registry.hub.docker.com",
+    "state": "ENABLED",
+    "service_type": "monitoring.Webhook",
+    "registry_type": "DOCKER_HUB",
+    "registry_config": {},
+    "capability": {},
+    "template": {},
+    "labels": [],
+    "tags": {
+        "icon": "https://icon-path/Amazon-SNS.svg"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Marketplace",
+        "repository_type": "remote"
+    },
+    "domain_id": "domain-987654321098",
+    "created_at": "2022-01-01T08:14:23.175Z",
+    "updated_at": "2022-01-01T08:14:23.175Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -70,11 +320,51 @@ description:
 > **PUT** /repository/v1/plugin/{plugin_id}/enable
 >
 
+> Enables a specific Plugin. If the Plugin is enabled, the Plugin can be used as its parameter `state` becomes `ENABLED`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PluginRequest](plugin.md#pluginrequest) |
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "name": "AWS SNS Webhook",
+    "image": "pyengine/plugin-aws-sns-mon-webhook",
+    "registry_url": "registry.hub.docker.com",
+    "state": "ENABLED",
+    "service_type": "monitoring.Webhook",
+    "registry_type": "DOCKER_HUB",
+    "registry_config": {},
+    "capability": {},
+    "template": {},
+    "labels": [],
+    "tags": {
+        "icon": "https://icon-path/Amazon-SNS.svg"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Marketplace",
+        "repository_type": "remote"
+    },
+    "domain_id": "domain-987654321098",
+    "created_at": "2022-01-01T08:14:23.175Z",
+    "updated_at": "2022-01-01T08:14:23.175Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -83,11 +373,51 @@ description:
 > **PUT** /repository/v1/plugin/{plugin_id}/disable
 >
 
+> Disables a specific Plugin. If the Plugin is disabled, the Plugin cannot be used as its parameter `state` becomes `DISABLED`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PluginRequest](plugin.md#pluginrequest) |
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "name": "AWS SNS Webhook",
+    "image": "pyengine/plugin-aws-sns-mon-webhook",
+    "registry_url": "registry.hub.docker.com",
+    "state": "ENABLED",
+    "service_type": "monitoring.Webhook",
+    "registry_type": "DOCKER_HUB",
+    "registry_config": {},
+    "capability": {},
+    "template": {},
+    "labels": [],
+    "tags": {
+        "icon": "https://icon-path/Amazon-SNS.svg"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Marketplace",
+        "repository_type": "remote"
+    },
+    "domain_id": "domain-987654321098",
+    "created_at": "2022-01-01T08:14:23.175Z",
+    "updated_at": "2022-01-01T08:14:23.175Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -109,11 +439,51 @@ description:
 > **GET** /repository/v1/plugins/{plugin_id}
 >
 
+> Gets a specific Plugin. Prints detailed information about the Plugin, including  `image`, `registry_url`, and `state`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetRepositoryPluginRequest](plugin.md#getrepositorypluginrequest) |
 | Response |  [PluginInfo](plugin.md#plugininfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "name": "AWS SNS Webhook",
+    "image": "pyengine/plugin-aws-sns-mon-webhook",
+    "registry_url": "registry.hub.docker.com",
+    "state": "ENABLED",
+    "service_type": "monitoring.Webhook",
+    "registry_type": "DOCKER_HUB",
+    "registry_config": {},
+    "capability": {},
+    "template": {},
+    "labels": [],
+    "tags": {
+        "icon": "https://icon-url/Amazon-SNS.svg"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Marketplace",
+        "repository_type": "remote"
+    },
+    "domain_id": "domain-987654321098",
+    "created_at": "2021-06-14T08:14:23.175Z",
+    "updated_at": "2021-06-14T08:14:23.175Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

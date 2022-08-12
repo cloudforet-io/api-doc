@@ -1,5 +1,5 @@
 ---
-description:  
+description: A DataSource is a plugin instance receiving Metric and Log data from cloud services.
 ---
 # Data source
 
@@ -22,6 +22,7 @@ description:
  
 ### init
 
+> Initializes a specific DataSource. During initialization, the DataSource information to be passed to the DataSource user is delivered as `metadata`. DataSource information includes its name and version.
 
 | Type | Message |
 | :--- | :--- |
@@ -33,6 +34,7 @@ description:
  
 ### verify
 
+> Verifies a specific DataSource. You must specify the parameter `secret_data`, encrypted account data of the DataSource to validate.
 
 | Type | Message |
 | :--- | :--- |

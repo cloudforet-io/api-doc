@@ -1,5 +1,5 @@
 ---
-description:  
+description: An EventRule is a rule to transform the request data when an Event is generated.
 ---
 # Event rule
 
@@ -42,11 +42,72 @@ description:
 > **PUT** /monitoring/v1/event-rule/{event_rule_id}
 >
 
+> Changes a priority order between EventRules to apply. EventRules are filtered by the order configured.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateEventRuleRequest](event-rule.md#updateeventrulerequest) |
 | Response |  [EventRuleInfo](event-rule.md#eventruleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "event_rule_id": "er-123456789012",
+    "conditions": [
+        {
+            "key": "description",
+            "value": "ELB",
+            "operator": "contain"
+        }
+    ],
+    "conditions_policy": "ALL",
+    "actions": {
+        "change_assignee": "user2@email.com",
+        "change_urgency": "HIGH",
+        "change_project": "project-123456789012",
+        "add_additional_info": {
+            "type": "personal rule"
+        },
+        "no_notification": true
+    },
+    "options": {},
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "event_rule_id": "er-123456789012",
+    "order": 2,
+    "conditions": [
+        {
+            "key": "description",
+            "value": "ELB",
+            "operator": "contain"
+        }
+    ],
+    "conditions_policy": "ALL",
+    "actions": {
+        "change_assignee": "user2@email.com",
+        "change_urgency": "HIGH",
+        "change_project": "project-123456789012",
+        "add_additional_info": {
+            "type": "personal rule"
+        },
+        "no_notification": true
+    },
+    "options": {},
+    "scope": "PROJECT",
+    "project_id": "project-123456789012",
+    "tags": {},
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T06:02:31.517Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -55,11 +116,55 @@ description:
 > **PUT** /monitoring/v1/event-rule/{event_rule_id}/order
 >
 
+> Updates a specific EventRule. You can make changes in EventRule settings.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ChangeEventRuleOrderRequest](event-rule.md#changeeventruleorderrequest) |
 | Response |  [EventRuleInfo](event-rule.md#eventruleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "event_rule_id": "er-123456789012",
+    "order": 2,
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "event_rule_id": "er-123456789012",
+    "order": 2,
+    "conditions": [
+        {
+            "key": "description",
+            "value": "API",
+            "operator": "contain"
+        }
+    ],
+    "conditions_policy": "ALL",
+    "actions": {
+        "change_assignee": "user1@email.com",
+        "change_urgency": "LOW",
+        "change_project": "project-123456789012",
+        "add_additional_info": {
+            "type": "personal rule"
+        },
+        "no_notification": true
+    },
+    "options": {},
+    "scope": "PROJECT",
+    "project_id": "project-123456789012",
+    "tags": {},
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-02T06:02:31.517Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -68,11 +173,22 @@ description:
 > **DELETE** /monitoring/v1/event-rule/{event_rule_id}
 >
 
+> Deletes a specific EventRule. You must assign an EventRule resource to delete by specifying `event_rule_id`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [EventRuleRequest](event-rule.md#eventrulerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "event_rule_id": "er-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -81,11 +197,52 @@ description:
 > **GET** /monitoring/v1/event-rule/{event_rule_id}
 >
 
+> Gets a specific EventRule. Prints detailed information about the EventRule.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetEventRuleRequest](event-rule.md#geteventrulerequest) |
 | Response |  [EventRuleInfo](event-rule.md#eventruleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "event_rule_id": "er-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "event_rule_id": "er-123456789012",
+    "order": 2,
+    "conditions": [
+        {
+            "key": "title",
+            "value": "ELB",
+            "operator": "contain"
+        }
+    ],
+    "conditions_policy": "ALL",
+    "actions": {
+        "change_assignee": "user1@email.com",
+        "change_urgency": "LOW",
+        "change_project": "project-123456789012",
+        "add_additional_info": {},
+        "no_notification": true
+    },
+    "options": {},
+    "scope": "PROJECT",
+    "project_id": "project-123456789012",
+    "tags": {},
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T06:12:30.226Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -96,11 +253,81 @@ description:
 > **POST** /monitoring/v1/event-rules/search
 
 
+> Gets a list of all EventRules. You can use a query to get a filtered list of EventRules. For example, you can adjust the scope of the list to a certain Project or Domain.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [EventRuleQuery](event-rule.md#eventrulequery) |
 | Response |  [EventRulesInfo](event-rule.md#eventrulesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "event_rule_id": "er-123456789012",
+            "order": 1,
+            "conditions": [
+                {
+                    "key": "title",
+                    "value": "AWS",
+                    "operator": "contain"
+                }
+            ],
+            "conditions_policy": "ALL",
+            "actions": {
+                "change_assignee": "user2@email.com",
+                "change_urgency": "HIGH",
+                "add_additional_info": {},
+                "no_notification": true
+            },
+            "options": {},
+            "scope": "PROJECT",
+            "project_id": "project-123456789012",
+            "tags": {},
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T06:33:58.388Z"
+        },
+        {
+            "event_rule_id": "er-123456789012",
+            "order": 2,
+            "conditions": [
+                {
+                    "key": "title",
+                    "value": "ELB",
+                    "operator": "contain"
+                }
+            ],
+            "conditions_policy": "ALL",
+            "actions": {
+                "change_assignee": "user1@email.com",
+                "change_urgency": "LOW",
+                "change_project": "project-123456789012",
+                "add_additional_info": {},
+                "no_notification": true
+            },
+            "options": {},
+            "scope": "PROJECT",
+            "project_id": "project-123456789012",
+            "tags": {},
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T06:12:30.226Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

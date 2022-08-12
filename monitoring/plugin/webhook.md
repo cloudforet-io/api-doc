@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Webhook is a plugin receiving data from external monitoring systems.
 ---
 # Webhook
 
@@ -22,6 +22,7 @@ description:
  
 ### init
 
+> Verifies a specific Webhook. You must specify the parameter `secret_data`, encrypted account data of the Webhook to validate.
 
 | Type | Message |
 | :--- | :--- |
@@ -33,6 +34,7 @@ description:
  
 ### verify
 
+> Initializes a specific Webhook. During initialization, the Webhook information to be passed to the Webhook user is delivered as `metadata`. Webhook information includes its name and version.
 
 | Type | Message |
 | :--- | :--- |
