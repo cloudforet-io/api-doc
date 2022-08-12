@@ -139,25 +139,12 @@ description: A Post is a message published on a Board. It also provides notifica
 > **POST** /board/v1/board/{board_id}/post/{post_id}/send-notification
 >
 
-> None
+> Not Implemented
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SendNotificationRequest](post.md#sendnotificationrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
-{% tabs %}
-{% tab title="Request Example" %}
-```text
-
-```
-{% endtab %}
-
-{% tab title="Response Example" %}
-```text
-
-```
-{% endtab %}
-{% endtabs %}
  
  
 
@@ -166,11 +153,23 @@ description: A Post is a message published on a Board. It also provides notifica
 > **DELETE** /board/v1/board/{board_id}/post/{post_id}
 >
 
+> Deletes a specific Post. You must specify the `post_id` of the Post to delete, and the `board_id` of the Board where the child Post to delete belongs.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PostRequest](post.md#postrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "board_id": "board-b9aa34e65c60",
+    "post_id": "post-2118473ce15e",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -229,11 +228,65 @@ description: A Post is a message published on a Board. It also provides notifica
 > **POST** /board/v1/board/{board_id}/posts/search
 
 
+> Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PostQuery](post.md#postquery) |
 | Response |  [PostsInfo](post.md#postsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "board_id": "board-b9aa34e65c60",
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "board_id": "board-b9aa34e65c60",
+            "post_id": "post-2118473ce15e",
+            "category": "spaceone",
+            "title": "title2",
+            "contents": "this is contents2.",
+            "options": {
+                "is_popup": false,
+                "is_pinned": true
+            },
+            "view_count": 3,
+            "writer": "seolmin2",
+            "scope": "DOMAIN",
+            "domain_id": "domain-58010aa2e451",
+            "user_id": "user1@email.com",
+            "created_at": "2022-06-13T01:06:23.732Z",
+            "updated_at": "2022-06-13T01:06:23.732Z"
+        },
+        {
+            "board_id": "board-b9aa34e65c60",
+            "post_id": "post-532ae1191233",
+            "category": "flower",
+            "title": "\uc791\uc5c5\uacf5\uc9c0",
+            "contents": "This is description",
+            "options": {
+                "is_pinned": true,
+                "is_popup": true
+            },
+            "writer": "\uad8c\uc124\ubbfc",
+            "user_id": "supervisor",
+            "created_at": "2022-06-10T07:01:44.384Z",
+            "updated_at": "2022-06-10T07:01:44.384Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

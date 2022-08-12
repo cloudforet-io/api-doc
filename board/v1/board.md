@@ -87,7 +87,13 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 {% tabs %}
 {% tab title="Request Example" %}
 ```text
->{"board_id": "board-123456789012","name": "system notice","tags": {"b": "c"}}
+{
+    "board_id": "board-123456789012",
+    "name": "system notice",
+    "tags": {
+        "b": "c"
+    }
+}
 ```
 {% endtab %}
 
@@ -130,11 +136,21 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 > **DELETE** /board/v1/board/{board_id}
 >
 
+> Deletes a specific Board with `SYSTEM` permission. You can delete a Board regardless of the presence of Posts created under the Board.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [BoardRequest](board.md#boardrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "board_id": "board-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -158,11 +174,50 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 > **POST** /board/v1/boards/search
 
 
+> Gets a list of all Boards. You can use a query to get a filtered list of Boards.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [BoardQuery](board.md#boardquery) |
 | Response |  [BoardsInfo](board.md#boardsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+>{"query": {}}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "board_id": "board-123456789012",
+            "name": "dev-notice",
+            "categories": [
+                "flower",
+                "school",
+                "spaceone"
+            ],
+            "tags": {
+                "b": "c"
+            },
+            "created_at": "2022-01-01T05:16:08.549Z"
+        },
+        {
+            "board_id": "board-987654321098",
+            "name": "notice",
+            "tags": {
+                "a": "b"
+            },
+            "created_at": "2022-01-01T05:24:19.758Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

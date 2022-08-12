@@ -1,5 +1,5 @@
 ---
-description:  
+description: A DataSource is a plugin instance collecting `metric` and `log` data from Cloudforet.
 ---
 # Data source
 
@@ -32,11 +32,25 @@ description:
 > **POST** /monitoring/v1/data-sources
 >
 
+> Registers a DataSource with information of the plugin to use. Information of the plugin includes `version`, `provider`, `upgrade_mode`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -45,11 +59,25 @@ description:
 > **PUT** /monitoring/v1/data-source/{data_source_id}
 >
 
+> Updates a specific DataSource. You can make changes in DataSource settings, including `name` and `tags`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -58,11 +86,25 @@ description:
 > **PUT** /monitoring/v1/data-source/{data_source_id}/enable
 >
 
+> Enables a specific DataSource. By enabling a DataSource, you can communicate with an external cloud service via the plugin.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRequest](data-source.md#datasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -71,11 +113,25 @@ description:
 > **PUT** /monitoring/v1/data-source/{data_source_id}/disable
 >
 
+> Disables a specific DataSource. By disabling a DataSource, you can block communication with an external cloud service via the plugin.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRequest](data-source.md#datasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -84,11 +140,25 @@ description:
 > **DELETE** /monitoring/v1/data-source/{data_source_id}
 >
 
+> Deregisters and deletes a specific DataSource. You must specify the `data_source_id` of the DataSource to deregister.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRequest](data-source.md#datasourcerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -97,11 +167,25 @@ description:
 > **PUT** /monitoring/v1/data-source/{data_source_id}/plugin
 >
 
+> Updates the plugin of a specific DataSource. This method resets the plugin data in the DataSource to update the `metadata`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateDataSourcePluginRequest](data-source.md#updatedatasourcepluginrequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -110,11 +194,25 @@ description:
 > **PUT** /monitoring/v1/data-source/{data_source_id}/plugin/verify
 >
 
+> Verifies the plugin of a specific DataSource. This method validates the plugin data, `version` and `endpoint`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRequest](data-source.md#datasourcerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -123,11 +221,25 @@ description:
 > **GET** /monitoring/v1/data-source/{data_source_id}
 >
 
+> Gets a specific DataSource. Prints detailed information about the DataSource, including `name`, `state`, and `plugin_info`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetDataSourceRequest](data-source.md#getdatasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -138,11 +250,25 @@ description:
 > **POST** /monitoring/v1/data-sources/search
 
 
+> Gets a list of all DataSources. You can use a query to get a filtered list of DataSources.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceQuery](data-source.md#datasourcequery) |
 | Response |  [DataSourcesInfo](data-source.md#datasourcesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
  
  
 
