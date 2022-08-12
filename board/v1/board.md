@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Board is a bulletin-board-type resource for posting notices and announcements in Cloudforet.
 ---
 # Board
 
@@ -29,11 +29,47 @@ description:
 > **POST** /board/v1/boards
 >
 
+> Creates a new Board with SYSTEM permission. The `name` of the board is only required. You can add one or more `categories` representing the Board's attributes.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateBoardRequest](board.md#createboardrequest) |
 | Response |  [BoardInfo](board.md#boardinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "notice",
+    "categories": [
+        "admin",
+        "developer",
+        "devops"
+    ],
+    "tags": {
+        "a": "b"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "board_id": "board-123456789012",
+    "name": "notice",
+    "categories": [
+        "admin",
+        "developer",
+        "devops"
+    ],
+    "tags": {
+        "a": "b"
+    },
+    "created_at": "2022-01-01T06:47:27.759Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -42,11 +78,37 @@ description:
 > **PUT** /board/v1/board/{board_id}
 >
 
+> Updates a specific Board with SYSTEM permission. You can make changes in Board settings, including `name` and `tags`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateBoardRequest](board.md#updateboardrequest) |
 | Response |  [BoardInfo](board.md#boardinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+>{"board_id": "board-123456789012","name": "system notice","tags": {"b": "c"}}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "board_id": "board-123456789012",
+    "name": "system notice",
+    "categories": [
+        "admin",
+        "developer",
+        "devops"
+    ],
+    "tags": {
+        "b": "c"
+    },
+    "created_at": "2022-01-01T06:47:27.759Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
