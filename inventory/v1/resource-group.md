@@ -1,5 +1,5 @@
 ---
-description:  
+description: A ResourceGroup is a group of `resource`s from various `provider`s.
 ---
 # Resource group
 
@@ -28,11 +28,88 @@ description:
 > **POST** /inventory/v1/resource-groups
 >
 
+> Creates a new ResourceGroup. You can integrate `resource`s from different `provider`s by specifying the cloud resources to be grouped in the `resources` parameter.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateResourceGroupRequest](resource-group.md#createresourcegrouprequest) |
 | Response |  [ResourceGroupInfo](resource-group.md#resourcegroupinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "azure-group-1",
+    "resources": [
+        {
+            "resource_type": "inventory.Server?provider=azure&cloud_service_group=Compute&cloud_service_type=VirtualMachine",
+            "filter": [
+                {
+                    "o": "eq",
+                    "k": "provider",
+                    "v": "azure"
+                },
+                {
+                    "o": "eq",
+                    "k": "cloud_service_group",
+                    "v": "Compute"
+                },
+                {
+                    "o": "eq",
+                    "k": "cloud_service_type",
+                    "v": "VirtualMachine"
+                }
+            ]
+        }
+    ],
+    "options": {
+        "raw_filter": []
+    },
+    "tags": {
+        "a": "b"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "resource_group_id": "rsc-grp-7d46a1fc7738",
+    "name": "azure-group-1",
+    "resources": [
+        {
+            "resource_type": "inventory.Server?provider=azure&cloud_service_group=Compute&cloud_service_type=VirtualMachine",
+            "filter": [
+                {
+                    "k": "provider",
+                    "v": "azure",
+                    "o": "eq"
+                },
+                {
+                    "k": "cloud_service_group",
+                    "v": "Compute",
+                    "o": "eq"
+                },
+                {
+                    "k": "cloud_service_type",
+                    "v": "VirtualMachine",
+                    "o": "eq"
+                }
+            ]
+        }
+    ],
+    "options": {
+        "raw_filter": []
+    },
+    "tags": {
+        "a": "b"
+    },
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-23T01:50:33.152Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -41,11 +118,87 @@ description:
 > **PUT** /inventory/v1/resource-group/{resource_group_id}
 >
 
+> Updates a specific ResourceGroup. You can make changes in ResourceGroup settings, including `name`, `tags`, and grouped resources in the ResourceGroup.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateResourceGroupRequest](resource-group.md#updateresourcegrouprequest) |
 | Response |  [ResourceGroupInfo](resource-group.md#resourcegroupinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "resource_group_id": "rsc-grp-7d46a1fc7738",
+    "name": "azure-grp-test2",
+    "resources": [
+        {
+            "resource_type": "inventory.Server?provider=azure&cloud_service_group=Compute&cloud_service_type=VirtualMachine",
+            "filter": [
+                {
+                    "k": "provider",
+                    "v": "azure",
+                    "o": "eq"
+                },
+                {
+                    "o": "eq",
+                    "k": "cloud_service_group",
+                    "v": "Compute"
+                },
+                {
+                    "v": "VirtualMachine",
+                    "k": "cloud_service_type",
+                    "o": "eq"
+                }
+            ]
+        }
+    ],
+    "options": {},
+    "tags": {
+        "b": "c"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "resource_group_id": "rsc-grp-7d46a1fc7738",
+    "name": "azure-grp-test2",
+    "resources": [
+        {
+            "resource_type": "inventory.Server?provider=azure&cloud_service_group=Compute&cloud_service_type=VirtualMachine",
+            "filter": [
+                {
+                    "k": "provider",
+                    "v": "azure",
+                    "o": "eq"
+                },
+                {
+                    "k": "cloud_service_group",
+                    "v": "Compute",
+                    "o": "eq"
+                },
+                {
+                    "k": "cloud_service_type",
+                    "v": "VirtualMachine",
+                    "o": "eq"
+                }
+            ]
+        }
+    ],
+    "options": {
+        "raw_filter": []
+    },
+    "tags": {
+        "a": "b"
+    },
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-23T01:50:33.152Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

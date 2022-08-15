@@ -21,11 +21,25 @@ description:
  
 ### get_tasks
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetTasksRequest](job.md#gettasksrequest) |
 | Response |  [TasksInfo](job.md#tasksinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
 
 
 ## 

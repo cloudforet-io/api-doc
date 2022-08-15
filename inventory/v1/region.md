@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Region is a resource storing regional information from each cloud service provider. Regional data stored by the resource includes the latitude and longitude of the region.
 ---
 # Region
 
@@ -54,11 +54,21 @@ description:
 > **DELETE** /inventory/v1/region/{region_id}
 >
 
+> Deletes a specific Region. You must specify the `region_id` of the Region to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [RegionRequest](region.md#regionrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "region_id": "region-e41deed3c939"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +77,41 @@ description:
 > **GET** /inventory/v1/region/{region_id}
 >
 
+> Gets a specific Region. Prints detailed information about the Region, including `name`, `region_code`, and a location coordinate.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetRegionRequest](region.md#getregionrequest) |
 | Response |  [RegionInfo](region.md#regioninfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "region_id": "region-f803eb00b567"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "region_id": "region-f803eb00b567",
+    "name": "Asia Pacific (Seoul)",
+    "region_key": "aws.ap-northeast-2",
+    "region_code": "ap-northeast-2",
+    "provider": "aws",
+    "tags": {
+        "latitude": "6.34545",
+        "continent": "asia_pacific",
+        "longitude": "5.6433213"
+    },
+    "domain_id": "domain-x1b3c34v432",
+    "created_at": "2022-03-21T09:08:31.961Z",
+    "updated_at": "2022-06-17T00:07:35.749Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

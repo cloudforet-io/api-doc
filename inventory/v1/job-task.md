@@ -1,5 +1,5 @@
 ---
-description:  
+description: A JobTask is a unit for collecting external cloud resources. The resource belongs to a specific service account.
 ---
 # Job task
 
@@ -26,11 +26,59 @@ description:
 > **POST** /inventory/v1/job-tasks/search
 
 
+> Gets a list of all JobTasks in a specific Job. You can use a query to get a filtered list of JobTasks.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [JobTaskQuery](job-task.md#jobtaskquery) |
 | Response |  [JobTasksInfo](job-task.md#jobtasksinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "job_task_id": "job_task-69b301d0fbfc",
+            "status": "SUCCESS",
+            "updated_count": 55,
+            "job_id": "job-587a3d3b4db3",
+            "secret_id": "secret-957e407bfc15",
+            "provider": "aws",
+            "service_account_id": "sa-a41ff4765671",
+            "project_id": "project-77dffd3f7cd3",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-17T08:00:00.680Z",
+            "started_at": "2022-06-17T08:00:00.914Z",
+            "finished_at": "2022-06-17T08:05:48.933Z"
+        },
+        {
+            "job_task_id": "job_task-c5077338cf23",
+            "status": "SUCCESS",
+            "updated_count": 1921,
+            "job_id": "job-587a3d3b4db3",
+            "secret_id": "secret-1cd7417c1889",
+            "provider": "aws",
+            "service_account_id": "sa-5e186fcc7c91",
+            "project_id": "project-18655561c535",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-17T08:00:00.582Z",
+            "started_at": "2022-06-17T08:00:00.814Z",
+            "finished_at": "2022-06-17T08:07:31.995Z"
+        }
+    ],
+    "total_count": 4839
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

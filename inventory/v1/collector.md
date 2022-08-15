@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Collector is a plugin instance collecting cloud resources. A Collector can collect the resource data manually or by a pre-set schedule.
 ---
 # Collector
 
@@ -38,11 +38,91 @@ description:
 > **POST** /inventory/v1/collectors
 >
 
+> Creates a new Collector with information of the plugin to use. Information of the plugin includes `version`, `provider`, and `upgrade_mode`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateCollectorRequest](collector.md#createcollectorrequest) |
 | Response |  [CollectorInfo](collector.md#collectorinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "AWS Collector",
+    "plugin_info": {
+        "plugin_id": "plugin-30d21ef75a5d",
+        "version": "1.13.13",
+        "options": {},
+        "provider": "aws",
+        "metadata": {
+            "filter_format": [],
+            "supported_schedules": [
+                "hours"
+            ],
+            "supported_resource_type": [
+                "inventory.CloudService",
+                "inventory.CloudServiceType",
+                "inventory.Region"
+            ],
+            "supported_features": [
+                "garbage_collection"
+            ]
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "priority": 1,
+    "tags": {
+        "type": "test"
+    },
+    "is_public": true
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "collector_id": "collector-2c0847644f39",
+    "name": "AWS Collector",
+    "state": "ENABLED",
+    "plugin_info": {
+        "plugin_id": "plugin-30d21ef75a5d",
+        "version": "1.13.13",
+        "options": {},
+        "provider": "aws",
+        "metadata": {
+            "supported_schedules": [
+                "hours"
+            ],
+            "supported_resource_type": [
+                "inventory.CloudService",
+                "inventory.CloudServiceType",
+                "inventory.Region"
+            ],
+            "filter_format": [],
+            "supported_features": [
+                "garbage_collection"
+            ]
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "priority": 1,
+    "tags": {
+        "type": "test"
+    },
+    "created_at": "2022-06-17T06:33:27.195Z",
+    "domain_id": "domain-58010aa2e451",
+    "provider": "aws",
+    "capability": {
+        "supported_schema": [
+            "aws_access_key"
+        ]
+    },
+    "is_public": true
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -51,11 +131,76 @@ description:
 > **PUT** /inventory/v1/collector/{collector_id}
 >
 
+> Updates a specific Collector. You can make changes in Collector settings, including `name` and `tags`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateCollectorRequest](collector.md#updatecollectorrequest) |
 | Response |  [CollectorInfo](collector.md#collectorinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "collector_id": "collector-2c0847644f39",
+    "name": "New AWS Collector",
+    "plugin_info": {
+        "plugin_id": "plugin-30d21ef75a5d",
+        "version": "1.14.0",
+        "provider": "aws",
+        "upgrade_mode": "MANUAL"
+    },
+    "priority": 10,
+    "tags": {
+        "a": "b"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "collector_id": "collector-2c0847644f39",
+    "name": "New AWS Collector",
+    "state": "ENABLED",
+    "plugin_info": {
+        "plugin_id": "plugin-30d21ef75a5d",
+        "version": "1.14.0",
+        "options": {},
+        "provider": "aws",
+        "metadata": {
+            "supported_schedules": [
+                "hours"
+            ],
+            "supported_resource_type": [
+                "inventory.CloudService",
+                "inventory.CloudServiceType",
+                "inventory.Region"
+            ],
+            "filter_format": [],
+            "supported_features": [
+                "garbage_collection"
+            ]
+        },
+        "upgrade_mode": "MANUAL"
+    },
+    "priority": 10,
+    "tags": {
+        "a": "b"
+    },
+    "created_at": "2022-06-17T06:33:27.195Z",
+    "domain_id": "domain-58010aa2e451",
+    "provider": "aws",
+    "capability": {
+        "supported_schema": [
+            "aws_access_key"
+        ]
+    },
+    "is_public": true
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -64,11 +209,25 @@ description:
 > **PUT** /inventory/v1/collector/{collector_id}/plugin
 >
 
+> Updates the plugin of a specific Collector. This method resets the plugin data in the Collector to update the `metadata`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdatePluginRequest](collector.md#updatepluginrequest) |
 | Response |  [CollectorInfo](collector.md#collectorinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -77,11 +236,25 @@ description:
 > **POST** /inventory/v1/collector/{collector_id}/plugin/verify
 >
 
+> Verifies the plugin of a specific Collector. This method validates the plugin data, `version` and `endpoint`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [VerifyPluginRequest](collector.md#verifypluginrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -90,11 +263,25 @@ description:
 > **DELETE** /inventory/v1/collector/{collector_id}
 >
 
+> Deletes a specific Collector. You must specify the `collector_id` of the Collector to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CollectorRequest](collector.md#collectorrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -116,11 +303,64 @@ description:
 > **PUT** /inventory/v1/collector/{collector_id}/enable
 >
 
+> Enables a specific Collector. By enabling a Collector, you can communicate with a plugin used for collection.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CollectorRequest](collector.md#collectorrequest) |
 | Response |  [CollectorInfo](collector.md#collectorinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "collector_id": "collector-f2e4e9cc7f21"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "collector_id": "collector-f2e4e9cc7f21",
+    "name": "AWS Cloud Service Collector",
+    "state": "ENABLED",
+    "plugin_info": {
+        "plugin_id": "plugin-30d21ef75a5d",
+        "version": "1.14.10",
+        "options": {},
+        "provider": "aws",
+        "metadata": {
+            "supported_schedules": [
+                "hours"
+            ],
+            "filter_format": [],
+            "supported_resource_type": [
+                "inventory.CloudService",
+                "inventory.CloudServiceType",
+                "inventory.Region"
+            ],
+            "supported_features": [
+                "garbage_collection"
+            ]
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "priority": 10,
+    "tags": {},
+    "provider": "aws",
+    "capability": {
+        "supported_schema": [
+            "aws_access_key"
+        ]
+    },
+    "is_public": true,
+    "created_at": "2021-03-08T06:49:27.876Z",
+    "last_collected_at": "2022-06-17T06:00:07.162Z",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -129,11 +369,64 @@ description:
 > **PUT** /inventory/v1/collector/{collector_id}/disable
 >
 
+> Disables a specific Collector. By disabling a Collector, you cannot communicate with a plugin used for collection.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CollectorRequest](collector.md#collectorrequest) |
 | Response |  [CollectorInfo](collector.md#collectorinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "collector_id": "collector-f2e4e9cc7f21"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "collector_id": "collector-f2e4e9cc7f21",
+    "name": "AWS Cloud Service Collector",
+    "state": "ENABLED",
+    "plugin_info": {
+        "plugin_id": "plugin-30d21ef75a5d",
+        "version": "1.14.10",
+        "options": {},
+        "provider": "aws",
+        "metadata": {
+            "supported_schedules": [
+                "hours"
+            ],
+            "filter_format": [],
+            "supported_resource_type": [
+                "inventory.CloudService",
+                "inventory.CloudServiceType",
+                "inventory.Region"
+            ],
+            "supported_features": [
+                "garbage_collection"
+            ]
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "priority": 10,
+    "tags": {},
+    "provider": "aws",
+    "capability": {
+        "supported_schema": [
+            "aws_access_key"
+        ]
+    },
+    "is_public": true,
+    "created_at": "2021-03-08T06:49:27.876Z",
+    "last_collected_at": "2022-06-17T06:00:07.162Z",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -144,11 +437,83 @@ description:
 > **POST** /inventory/v1/collectors/search
 
 
+> Gets a list of all Collectors. You can use a query to get a filtered list of Collectors.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CollectorQuery](collector.md#collectorquery) |
 | Response |  [CollectorsInfo](collector.md#collectorsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "job_id": "job-3b124006c2d2",
+            "status": "SUCCESS",
+            "filter": {},
+            "total_tasks": 2,
+            "collector_info": {
+                "collector_id": "collector-accd02663b3d",
+                "name": "openstack-collector",
+                "state": "ENABLED",
+                "plugin_info": {
+                    "plugin_id": "plugin-openstack-inven-collector",
+                    "version": "0.4.2.20220616.134758"
+                },
+                "provider": "openstack",
+                "capability": {
+                    "supported_schema": [
+                        "openstack_credentials"
+                    ]
+                },
+                "is_public": true
+            },
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-17T08:00:01.225Z",
+            "updated_at": "2022-06-17T08:00:01.225Z",
+            "finished_at": "2022-06-17T08:00:15.197Z"
+        },
+        {
+            "job_id": "job-587a3d3b4db3",
+            "status": "SUCCESS",
+            "filter": {},
+            "total_tasks": 3,
+            "collector_info": {
+                "collector_id": "collector-2c0847644f39",
+                "name": "AWS stat-kwon Collector",
+                "state": "ENABLED",
+                "plugin_info": {
+                    "plugin_id": "plugin-30d21ef75a5d",
+                    "version": "1.13.13.20220610.143142"
+                },
+                "provider": "aws",
+                "capability": {
+                    "supported_schema": [
+                        "aws_access_key"
+                    ]
+                },
+                "is_public": true
+            },
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-17T08:00:00.407Z",
+            "updated_at": "2022-06-17T08:00:00.407Z",
+            "finished_at": "2022-06-17T08:07:32.023Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -170,11 +535,25 @@ description:
 > **POST** /inventory/v1/collector/{collector_id}/collect
 >
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CollectRequest](collector.md#collectrequest) |
 | Response |  [JobInfo](collector.md#jobinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -183,11 +562,91 @@ description:
 > **POST** /inventory/v1/collector/{collector_id}/schedule
 >
 
+> Adds a schedule to a specific Collector. When specifying the time to collect, the schedule is assigned in units of one hour.The specified schedule is applied every day.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateScheduleRequest](collector.md#createschedulerequest) |
 | Response |  [ScheduleInfo](collector.md#scheduleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "collector_id": "collector-2c0847644f39",
+    "name": "regular collection",
+    "schedule": {
+        "hours": [
+            16,
+            18,
+            20,
+            22,
+            0
+        ]
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "schedule_id": "sched-dfb2f6ef84bc",
+    "name": "regular collection",
+    "collect_mode": "ALL",
+    "schedule": {
+        "hours": [
+            16,
+            18,
+            20,
+            22,
+            0
+        ]
+    },
+    "created_at": "2022-06-17T07:12:07.374Z",
+    "collector_info": {
+        "collector_id": "collector-2c0847644f39",
+        "name": "AWS stat-kwon Collector",
+        "state": "ENABLED",
+        "plugin_info": {
+            "plugin_id": "plugin-30d21ef75a5d",
+            "version": "1.13.13.20220610.143142",
+            "options": {},
+            "provider": "aws",
+            "metadata": {
+                "supported_resource_type": [
+                    "inventory.CloudService",
+                    "inventory.CloudServiceType",
+                    "inventory.Region"
+                ],
+                "supported_features": [
+                    "garbage_collection"
+                ],
+                "filter_format": [],
+                "supported_schedules": [
+                    "hours"
+                ]
+            },
+            "upgrade_mode": "MANUAL"
+        },
+        "priority": 10,
+        "tags": {
+            "a": "b"
+        },
+        "created_at": "2022-06-17T06:33:27.195Z",
+        "domain_id": "domain-58010aa2e451",
+        "provider": "aws",
+        "capability": {
+            "supported_schema": [
+                "aws_access_key"
+            ]
+        },
+        "is_public": true
+    },
+    "filter": {}
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -222,11 +681,22 @@ description:
 > **DELETE** /inventory/v1/collector/{collector_id}/schedule/{schedule_id}
 >
 
+> Deletes a specific schedule of the Collector. You must specify the `schedule_id` of the schedule to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DeleteScheduleRequest](collector.md#deleteschedulerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "schedule_id": "sched-dfb2f6ef84bc",
+    "collector_id": "collector-2c0847644f39"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -237,11 +707,90 @@ description:
 > **POST** /inventory/v1/collector/{collector_id}/schedules/search
 
 
+> Gets a list of all schedules set in a specific Collector. You must specify the `collector_id` of the Collector to get the schedule from.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ScheduleQuery](collector.md#schedulequery) |
 | Response |  [SchedulesInfo](collector.md#schedulesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "collector_id": "collector-f2e4e9cc7f21"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "schedule_id": "sched-572819cabe90",
+            "name": "daily",
+            "collect_mode": "ALL",
+            "schedule": {
+                "hours": [
+                    15,
+                    16,
+                    18,
+                    21,
+                    0,
+                    3,
+                    4,
+                    6,
+                    9,
+                    12
+                ]
+            },
+            "created_at": "2021-03-13T14:32:46.137Z",
+            "collector_info": {
+                "collector_id": "collector-f2e4e9cc7f21",
+                "name": "AWS Cloud Service Collector",
+                "state": "ENABLED",
+                "plugin_info": {
+                    "plugin_id": "plugin-30d21ef75a5d",
+                    "version": "1.13.13.20220610.143142",
+                    "options": {},
+                    "provider": "aws",
+                    "metadata": {
+                        "supported_features": [
+                            "garbage_collection"
+                        ],
+                        "supported_schedules": [
+                            "hours"
+                        ],
+                        "filter_format": [],
+                        "supported_resource_type": [
+                            "inventory.CloudService",
+                            "inventory.CloudServiceType",
+                            "inventory.Region"
+                        ]
+                    },
+                    "upgrade_mode": "AUTO"
+                },
+                "priority": 10,
+                "tags": {},
+                "created_at": "2021-03-08T06:49:27.876Z",
+                "last_collected_at": "2022-06-17T06:00:07.162Z",
+                "domain_id": "domain-58010aa2e451",
+                "provider": "aws",
+                "capability": {
+                    "supported_schema": [
+                        "aws_access_key"
+                    ]
+                },
+                "is_public": true
+            },
+            "filter": {}
+        }
+    ],
+    "total_count": 1
+}
+```
+{% endtab %}
+{% endtabs %}
 
 
 ## 

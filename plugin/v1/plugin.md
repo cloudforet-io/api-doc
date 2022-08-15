@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Plugin is a resource managing endpoints of the plugin instances deployed. If there is a plugin instance that does not work properly, the Plugin requests the Supervisor to redeploy the instance.
 ---
 # Plugin
 
@@ -24,7 +24,6 @@ description:
 > **POST** /plugin/v1/plugin/{plugin_id}/get-endpoint
 >
 
-> Retrieve plugins end points.
 
 | Type | Message |
 | :--- | :--- |
@@ -38,7 +37,6 @@ description:
 > **PUT** /plugin/v1/plugin/{plugin_id}/notify-failure
 >
 
-> send a notification if it has failed.
 
 | Type | Message |
 | :--- | :--- |

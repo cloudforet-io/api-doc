@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Quota is a limit on protocol usage for a day or a month. You can manage the use of the protocol with a Quota.
 ---
 # Quota
 
@@ -28,7 +28,6 @@ description:
 > **POST** /notification/v1/quotas
 >
 
-> Creates a new Quota for Protocol.
 
 | Type | Message |
 | :--- | :--- |
@@ -42,7 +41,6 @@ description:
 > **PUT** /notification/v1/quota/{quota_id}
 >
 
-> Updates a exist Quota information.
 
 | Type | Message |
 | :--- | :--- |
@@ -56,12 +54,21 @@ description:
 > **DELETE** /notification/v1/quota/{quota_id}
 >
 
-> Delete the Quota.
+> Deletes a specific Quota. The default Quota set in the Config will be applied to the Protocol you deleted the Quota of.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [QuotaRequest](quota.md#quotarequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "quota_id": "quota-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -70,12 +77,35 @@ description:
 > **GET** /notification/v1/quota/{quota_id}
 >
 
-> Gets a single Quota information.
+> Gets a specific Quota. Prints detailed information about the Quota, including the `limit` and the Protocol limited by the Quota.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [QuotaRequest](quota.md#quotarequest) |
 | Response |  [QuotaInfo](quota.md#quotainfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "quota_id": "quota-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "quota_id": "quota-123456789012",
+    "protocol_id": "protocol-123456789012",
+    "limit": {
+        "day": 10.0,
+        "month": 15.0
+    },
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -86,12 +116,49 @@ description:
 > **POST** /notification/v1/quotas/search
 
 
-> Lists the specified Quota information.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.
+> Gets a list of all Quotas. You can use a query to get a filtered list of Quotas.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [QuotaQuery](quota.md#quotaquery) |
 | Response |  [QuotasInfo](quota.md#quotasinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "quota_id": "quota-123456789012",
+            "protocol_id": "protocol-123456789012",
+            "limit": {
+                "day": 10.0,
+                "month": 15.0
+            },
+            "domain_id": "domain-123456789012"
+        },
+        {
+            "quota_id": "quota-987654321098",
+            "protocol_id": "protocol-987654321098",
+            "limit": {
+                "day": 5.0,
+                "month": 7.0
+            },
+            "domain_id": "domain-123456789012"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

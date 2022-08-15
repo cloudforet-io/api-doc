@@ -1,5 +1,5 @@
 ---
-description:  
+description: A ProjectChannel is a destination  where Notifications are delivered. Notifications are generated via the Protocol set by each Project.
 ---
 # Project channel
 
@@ -32,12 +32,61 @@ description:
 > **POST** /notification/v1/project-channels
 >
 
-> Creates a new Project Channel.Project channel is the definition of the channel that delivers the notification to the project when the notification is created.When creating a Project Channel, one of the protocols must be selected, and an notification is dispatched through the selected protocol.
+> Creates a new ProjectChannel. ProjectChannel is a channel that delivers a Notification to the Project when the Notification is created. When creating a ProjectChannel, one Protocol must be selected, and a Notification is dispatched via the selected Protocol.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateProjectChannelRequest](project-channel.md#createprojectchannelrequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-ab94ea7d574e",
+    "name": "sms-test",
+    "data": {
+        "phone_number": "01011112222"
+    },
+    "is_subscribe": true,
+    "subscriptions": [
+        "monitoring.Alert"
+    ],
+    "notification_level": "LV1",
+    "is_scheduled": true,
+    "schedule": {
+        "day_of_week": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+        ],
+        "end_hour": 9
+    },
+    "project_id": "project-52a423012d5e"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "project_channel_id": "project-ch-488df94d026d",
+    "name": "sms-test",
+    "state": "ENABLED",
+    "data": {
+        "phone_number": "01011112222"
+    },
+    "notification_level": "LV1",
+    "tags": {},
+    "protocol_id": "protocol-ab94ea7d574e",
+    "project_id": "project-aa723eed3d69",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-13T07:35:28.305Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -46,12 +95,50 @@ description:
 > **PUT** /notification/v1/project-channel/{project_channel_id}
 >
 
-> Updates a Project Channel information.Protocol that has already been set cannot be changed. Instead, the data required to be dispatched notification for project channel is can be updated.
+> Updates a specific ProjectChannel. A ProjectChannel that has already been configured cannot be changed. Instead, the data required for dispatching Notifications to a ProjectChannel can be updated.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateProjectChannelRequest](project-channel.md#updateprojectchannelrequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "project_channel_id": "project-ch-488df94d026d",
+    "name": "sms2-test",
+    "data": {
+        "phone_number": "01033334444"
+    },
+    "notification_level": "LV2",
+    "tags": {
+        "a": "b"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "project_channel_id": "project-ch-488df94d026d",
+    "name": "sms2-test",
+    "state": "ENABLED",
+    "data": {
+        "phone_number": "01033334444"
+    },
+    "notification_level": "LV2",
+    "tags": {
+        "a": "b"
+    },
+    "protocol_id": "protocol-ab94ea7d574e",
+    "project_id": "project-aa723eed3d69",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-13T07:35:28.305Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -60,12 +147,60 @@ description:
 > **PUT** /notification/v1/project-channel/{project_channel_id}/schedule
 >
 
-> Schedule settings for project channels.When a notification is created, you can set the day and time you want to receive it through the schedule.When you set the day of the week in the schedule, you can receive a notification only on the set day of the week.If you also set the start time and end time with day of the week, you can receive a notification only at the set time on the set day of the week.If there is no schedule, notifications will be dispatched at all times through project channel.
+> Sets a schedule for a ProjectChannel. A schedule defines the time to receive a Notification. When a Notification is created, you can set the day of the week and time you want to receive it. When you set the day of the week, you can receive a notification only on the day of the week you set. If you also set the start time and end time with the day of the week, you can receive a Notification only at the scheduled time on the day of the week you set. If there is no schedule set in a ProjectChannel, Notifications will be dispatched at all times via the ProjectChannel.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateProjectChannelScheduleRequest](project-channel.md#updateprojectchannelschedulerequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "project_channel_id": "project-ch-488df94d026d",
+    "is_scheduled": true,
+    "schedule": {
+        "day_of_week": [
+            "MON",
+            "WED",
+            "FRI"
+        ],
+        "end_hour": 9
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "project_channel_id": "project-ch-488df94d026d",
+    "name": "sms2-test",
+    "state": "ENABLED",
+    "data": {
+        "phone_number": "01033334444"
+    },
+    "notification_level": "LV2",
+    "is_scheduled": true,
+    "schedule": {
+        "day_of_week": [
+            "MON",
+            "WED",
+            "FRI"
+        ],
+        "end_hour": 9
+    },
+    "tags": {
+        "a": "b"
+    },
+    "protocol_id": "protocol-ab94ea7d574e",
+    "project_id": "project-aa723eed3d69",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-13T07:35:28.305Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -74,7 +209,6 @@ description:
 > **PUT** /notification/v1/project-channel/{project_channel_id}/subscription
 >
 
-> Subscription settings for project channelsIf the project channel have subscriptions, notification is dispatched only if the topic of the notification is the same as the one set in the subscriptions.If no subscriptions in project channel, notifications will be dispatched all.
 
 | Type | Message |
 | :--- | :--- |
@@ -88,12 +222,21 @@ description:
 > **PUT** /notification/v1/project-channel/{project_channel_id}/enable
 >
 
-> Enables a Project Channel.If the disabled project channel is enabled, the project channel can be used again and the notification can be dispatched.Even if the project channel is enabled, if the protocol being used in the project channel is disabled, the notification is not dispatched.
+> Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectChannel can be used and the Notification can be dispatched. Even if a ProjectChannel is enabled, if the Protocol used in the ProjectChannel is disabled, the Notification is not dispatched.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ProjectChannelRequest](project-channel.md#projectchannelrequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "project_channel_id": "project-ch-ffdb1d6cc774"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -102,12 +245,21 @@ description:
 > **PUT** /notification/v1/project-channel/{project_channel_id}/disable
 >
 
-> Disables a Project Channel.If you disable the project channel, the notification will not be dispatched, even if they are created.
+> Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notification is not dispatched, even if it is created.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ProjectChannelRequest](project-channel.md#projectchannelrequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "project_channel_id": "project-ch-ffdb1d6cc774"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -116,12 +268,21 @@ description:
 > **DELETE** /notification/v1/project-channel/{project_channel_id}
 >
 
-> Delete the Project Channel.
+> Deletes a specific ProjectChannel.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ProjectChannelRequest](project-channel.md#projectchannelrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "project_channel_id": "project-ch-ffdb1d6cc774"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -130,12 +291,40 @@ description:
 > **GET** /notification/v1/project-channel/{project_channel_id}
 >
 
-> Gets a single Project Channel.
+> Gets a specific ProjectChannel. Prints detailed information about the ProjectChannel.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetProjectChannelRequest](project-channel.md#getprojectchannelrequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "project_channel_id": "project-ch-ffdb1d6cc774"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "project_channel_id": "project-ch-ffdb1d6cc774",
+    "name": "personal_email",
+    "state": "ENABLED",
+    "data": {
+        "email": "user1@cloudforet.io"
+    },
+    "notification_level": "LV1",
+    "tags": {},
+    "protocol_id": "protocol-e000a677ebdb",
+    "project_id": "project-52a423012d5e",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-20T04:40:21.264Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -146,12 +335,67 @@ description:
 > **POST** /notification/v1/project-channels/search
 
 
-> Lists the specified Project Channel.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.
+> Gets a list of all ProjectChannels. You can use a query to get a filtered list of ProjectChannels.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ProjectChannelQuery](project-channel.md#projectchannelquery) |
 | Response |  [ProjectChannelsInfo](project-channel.md#projectchannelsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {
+        "filter": [
+            {
+                "key": "state",
+                "value": "ENABLED",
+                "operator": "eq"
+            }
+        ]
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "project_channel_id": "project-ch-473efcfde4b1",
+            "name": "Email Groups",
+            "state": "ENABLED",
+            "data": {
+                "email": "sykim1@cloudforet.io, sykim2@cloudforet.io"
+            },
+            "notification_level": "LV1",
+            "tags": {},
+            "protocol_id": "protocol-e000a677ebdb",
+            "project_id": "project-28cf4f2e6645",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-04-18T01:22:01.182Z"
+        },
+        {
+            "project_channel_id": "project-ch-98845ba0f975",
+            "name": "Song Email",
+            "state": "ENABLED",
+            "data": {
+                "email": "sykim@mz.co.kr"
+            },
+            "notification_level": "LV1",
+            "tags": {},
+            "protocol_id": "protocol-e000a677ebdb",
+            "project_id": "project-28cf4f2e6645",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-04-18T01:17:40.741Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

@@ -1,5 +1,5 @@
 ---
-description: Notification is a service that delivers event information generated in SpaceONE to a project or user. Protocol is the definition of “in what way” when Notification is delivered through Channel. The created protocol delivers Notification to Project or User through Channel. Notification propagation is not possible with the protocol itself, and must be delivered by setting a channel. Channel is largely divided into Project Channel and User Channel.
+description: A Notification is a service that delivers event data generated in Cloudforet to a Project or User.
 ---
 # Notification
 
@@ -30,7 +30,7 @@ description: Notification is a service that delivers event information generated
 > **POST** /notification/v1/notifications
 >
 
-> Create a new Notification. When a notification is created, it is propagatedthrough the channel of the project to which the notification belongs, and if an internal channel oruser channel is set, the notification is also propagated to the user.
+> Creates a new Notification. When a Notification is created, it is delivered to a UserChannel or a ProjectChannel depending on the parameter `resource_type`. If a Notification is delivered to a UserChannel, the `resource_type` is `identity.User`, and if a Notification is delivered to a ProjectChannel, the `resource_type` is `identity.Project`.
 
 | Type | Message |
 | :--- | :--- |
@@ -49,15 +49,14 @@ description: Notification is a service that delivers event information generated
         "tags": {
             "urgency": "LOW",
             "resource_id": "pod",
-            "assignee": "cloudforet@mz.co.kr",
+            "assignee": "user1@email.com",
             "created_at": "2022-01-01T17:12:45.990Z",
             "state": "ACKNOWLEDGED",
             "project_id": "project-123456789012"
         }
     },
     "notification_type": "INFO",
-    "notification_level": "LV2",
-    "domain_id": "domain-123456789012"
+    "notification_level": "LV2"
 }
 ```
 {% endtab %}
@@ -73,7 +72,7 @@ description: Notification is a service that delivers event information generated
         "tags": {
             "urgency": "LOW",
             "resource_id": "pod",
-            "assignee": "cloudforet@mz.co.kr",
+            "assignee": "user1@email.com",
             "created_at": "2022-01-01T17:12:45.990Z",
             "state": "ACKNOWLEDGED",
             "project_id": "project-123456789012"
@@ -82,7 +81,7 @@ description: Notification is a service that delivers event information generated
     "notification_type": "INFO",
     "notification_level": "LV2",
     "is_read": true,
-    "user_id": "cloudforet@mz.co.kr",
+    "user_id": "Cloudforet@mz.co.kr",
     "domain_id": "domain-123456789012",
     "created_at": "2022-01-01T17:12:40.990Z"
 }
@@ -97,7 +96,7 @@ description: Notification is a service that delivers event information generated
 > **POST** /notification/v1/notifications/push
 >
 
-> Push a new Notification directly.When a notification is created, it is propagated through the channel of the project to which the notification belongs, and if an internal channel or user channel is set, the notification is also propagated to the user.
+> Manually raises a Notification. A Notification is raised with a message to be sent using a valid specific Protocol, and data used for a specific Protocol such as a phone number.
 
 | Type | Message |
 | :--- | :--- |
@@ -107,18 +106,32 @@ description: Notification is a service that delivers event information generated
 {% tab title="Request Example" %}
 ```text
 {
-    "domain_id": "xxxx-aws-abcd",
-    "tags": {
-        "env": "dev"
+    "protocol_id": "protocol-fb30cb6c28d6",
+    "data": {
+        "phone_number": "01012345678"
+    },
+    "message": {
+        "tags": [
+            {
+                "key": "project_id",
+                "value": "project-xxxx"
+            },
+            {
+                "key": "project_name",
+                "value": "Test Project"
+            },
+            {
+                "key": "resource_id",
+                "value": "server-yyyyy"
+            },
+            {
+                "key": "resource_name",
+                "value": "web-server-001"
+            }
+        ],
+        "description": "This is Sample Message",
+        "title": "Sample"
     }
-}
-```
-{% endtab %}
-
-{% tab title="Response Example" %}
-```text
-{
-    "domain_id": "xxxx-aws-abcd"
 }
 ```
 {% endtab %}
@@ -131,32 +144,11 @@ description: Notification is a service that delivers event information generated
 > **DELETE** /notification/v1/notification/{notification_id}
 >
 
-> Delete the Notification.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NotificationRequest](notification.md#notificationrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
-{% tabs %}
-{% tab title="Request Example" %}
-```text
-{
-    "domain_id": "xxxx-aws-abcd",
-    "tags": {
-        "env": "dev"
-    }
-}
-```
-{% endtab %}
-
-{% tab title="Response Example" %}
-```text
-{
-    "domain_id": "xxxx-aws-abcd"
-}
-```
-{% endtab %}
-{% endtabs %}
  
  
 
@@ -165,32 +157,11 @@ description: Notification is a service that delivers event information generated
 > **POST** /notification/v1/notification/delete_all
 >
 
-> Delete all Notifications. `When a notification is created,` `it is propagated through the channel of the project to which the notification belongs,` `and if an internal channel or user channel is set,` `the notification is also propagated to the user.`
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
-{% tabs %}
-{% tab title="Request Example" %}
-```text
-{
-    "domain_id": "xxxx-aws-abcd",
-    "tags": {
-        "env": "dev"
-    }
-}
-```
-{% endtab %}
-
-{% tab title="Response Example" %}
-```text
-{
-    "domain_id": "xxxx-aws-abcd"
-}
-```
-{% endtab %}
-{% endtabs %}
  
  
 
@@ -199,7 +170,6 @@ description: Notification is a service that delivers event information generated
 > **POST** /notification/v1/notifications/read
 >
 
-> Change the notifications to read status.
 
 | Type | Message |
 | :--- | :--- |
@@ -213,12 +183,48 @@ description: Notification is a service that delivers event information generated
 > **GET** /notification/v1/notification/{notification_id}
 >
 
-> Gets a single Notification.
+> Gets a specific Notification. Prints detailed information about the Notification, including not only the message contents(`title`, `description`) but also related data such as created time and urgency.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetNotificationRequest](notification.md#getnotificationrequest) |
 | Response |  [NotificationInfo](notification.md#notificationinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "notification_id": "notification-4025c1b61225"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "notification_id": "notification-4025c1b61225",
+    "topic": "monitoring.Alert",
+    "message": {
+        "tags": {
+            "project_id": "project-18655561c535",
+            "created_at": null,
+            "urgency": "LOW",
+            "state": "TRIGGERED",
+            "resource_id": "AWS/NetworkELB",
+            "resource_name": "[Asia Pacific (Seoul)]:[AWS/NetworkELB]: net/af83f347171a044af46453ebb34c8225/743a23562a96c595"
+        },
+        "title": "[Asia Pacific (Seoul)]: NLB-TCP_Target_Reset_Count-Alert",
+        "description": "Threshold Crossed: 1 out of the last 1 datapoints [200.0 (25/06/21 06:38:00)] was not greater than the threshold (200.0)"
+    },
+    "notification_type": "INFO",
+    "notification_level": "ALL",
+    "is_read": true,
+    "user_id": "user1@spaceone.dev",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2021-06-25T06:42:05.867Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -229,7 +235,6 @@ description: Notification is a service that delivers event information generated
 > **POST** /notification/v1/notifications/search
 
 
-> Lists the specified notifications.
 
 | Type | Message |
 | :--- | :--- |

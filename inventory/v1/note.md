@@ -28,11 +28,25 @@ description:
 > **POST** /inventory/v1/notes
 >
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateNoteRequest](note.md#createnoterequest) |
 | Response |  [NoteInfo](note.md#noteinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -41,11 +55,25 @@ description:
 > **PUT** /inventory/v1/note/{note_id}
 >
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateNoteRequest](note.md#updatenoterequest) |
 | Response |  [NoteInfo](note.md#noteinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -54,11 +82,25 @@ description:
 > **DELETE** /inventory/v1/note/{note_id}
 >
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NoteRequest](note.md#noterequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +109,25 @@ description:
 > **GET** /inventory/v1/note/{note_id}
 >
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetNoteRequest](note.md#getnoterequest) |
 | Response |  [NoteInfo](note.md#noteinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -82,11 +138,25 @@ description:
 > **POST** /inventory/v1/notes/search
 
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NoteQuery](note.md#notequery) |
 | Response |  [NotesInfo](note.md#notesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

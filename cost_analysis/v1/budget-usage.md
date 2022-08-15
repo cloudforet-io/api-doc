@@ -1,5 +1,5 @@
 ---
-description:  
+description: A BudgetUsage is a resource mainly composed of two metrics: the actual cost usage, and the budget limit.
 ---
 # Budget usage
 
@@ -26,11 +26,49 @@ description:
 > **POST** /cost-analysis/v1/budget/{budget_id}/usage/search
 
 
+> Gets a list of all BudgetUsages. You can use a query to get a filtered list of BudgetUsages.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [BudgetUsageQuery](budget-usage.md#budgetusagequery) |
 | Response |  [BudgetUsagesInfo](budget-usage.md#budgetusagesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "budget_id": "budget-abb377eb9e8b",
+            "name": "Cloudforet-Budget3",
+            "date": "2022-01",
+            "usd_cost": 7671.164,
+            "limit": 10000.0,
+            "domain_id": "domain-58010aa2e451",
+            "updated_at": "2022-07-19T04:26:08.099Z"
+        },
+        {
+            "budget_id": "budget-abb377eb9e8b",
+            "name": "Cloudforet-Budget3",
+            "date": "2022-02",
+            "usd_cost": 5931.771,
+            "limit": 11000.0,
+            "domain_id": "domain-58010aa2e451",
+            "updated_at": "2022-07-19T04:26:08.105Z"
+        }
+    ],
+    "total_count": 12
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

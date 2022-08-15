@@ -21,11 +21,25 @@ description:
  
 ### get_data
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetDataRequest](cost.md#getdatarequest) |
 | Response |  [CostsInfo](cost.md#costsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
 
 
 ## 

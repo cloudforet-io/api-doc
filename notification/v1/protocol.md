@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Protocol defines the method to use when dispatching Notifications via a channel.
 ---
 # Protocol
 
@@ -31,12 +31,101 @@ description:
 > **POST** /notification/v1/protocols
 >
 
-> Creates a new Protocol.Protocol is the definition of which method to use when dispatching the Notifications through a Channel.When creating a protocol, you must specify the plugins provided from the repository, and you must also set the credentials to be set in the plugin if necessary.
+> Creates a new Protocol. When creating a protocol, you must specify the plugins provided from the repository, and you must also set the credentials to be set in the plugin if necessary.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateProtocolRequest](protocol.md#createprotocolrequest) |
 | Response |  [ProtocolInfo](protocol.md#protocolinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "Email",
+    "plugin_info": {
+        "plugin_id": "plugin-email-noti-protocol",
+        "version": "1.0.1",
+        "options": {},
+        "secret_id": "secret-123546789012",
+        "metadata": {
+            "data": {
+                "schema": {
+                    "properties": {
+                        "email": {
+                            "pattern": "^[\\W]*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4}[\\W]*,{1}[\\W]*)*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4})[\\W]*$",
+                            "examples": [
+                                "user1@test.com, user2@test.com"
+                            ],
+                            "minLength": 10.0,
+                            "description": "Email address to receive notifications",
+                            "type": "string",
+                            "title": "Email Address"
+                        }
+                    },
+                    "required": [
+                        "email"
+                    ],
+                    "type": "object"
+                }
+            },
+            "data_type": "PLAIN_TEXT"
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "tags": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "protocol_id": "protocol-123546789012",
+    "name": "Email",
+    "state": "ENABLED",
+    "protocol_type": "EXTERNAL",
+    "capability": {
+        "supported_schema": [
+            "email_smtp"
+        ]
+    },
+    "plugin_info": {
+        "plugin_id": "plugin-email-noti-protocol",
+        "version": "1.0.1",
+        "options": {},
+        "secret_id": "secret-123546789012",
+        "metadata": {
+            "data": {
+                "schema": {
+                    "properties": {
+                        "email": {
+                            "pattern": "^[\\W]*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4}[\\W]*,{1}[\\W]*)*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4})[\\W]*$",
+                            "examples": [
+                                "user1@test.com, user2@test.com"
+                            ],
+                            "minLength": 10.0,
+                            "description": "Email address to receive notifications",
+                            "type": "string",
+                            "title": "Email Address"
+                        }
+                    },
+                    "required": [
+                        "email"
+                    ],
+                    "type": "object"
+                }
+            },
+            "data_type": "PLAIN_TEXT"
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "tags": {},
+    "domain_id": "domain-123546789012",
+    "created_at": "2022-01-01T07:55:57.043Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -45,12 +134,76 @@ description:
 > **PUT** /notification/v1/protocol/{protocol_id}
 >
 
-> Updates a Protocol information.Update methods can update name, tags only. If you want to update plugin version or options, you can use update_plugin method.
+> Updates a specific Protocol. The method `update` can update the name and tags only. If you want to update the plugin version or options, you can use `update_plugin` method.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateProtocolRequest](protocol.md#updateprotocolrequest) |
 | Response |  [ProtocolInfo](protocol.md#protocolinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-123456789012",
+    "name": "Email-test",
+    "tags": {
+        "type": "test"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "protocol_id": "protocol-123546789012",
+    "name": "Email-test",
+    "state": "ENABLED",
+    "protocol_type": "EXTERNAL",
+    "capability": {
+        "supported_schema": [
+            "email_smtp"
+        ]
+    },
+    "plugin_info": {
+        "plugin_id": "plugin-email-noti-protocol",
+        "version": "1.0.1",
+        "options": {},
+        "secret_id": "secret-123546789012",
+        "metadata": {
+            "data": {
+                "schema": {
+                    "properties": {
+                        "email": {
+                            "pattern": "^[\\W]*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4}[\\W]*,{1}[\\W]*)*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4})[\\W]*$",
+                            "examples": [
+                                "user1@test.com, user2@test.com"
+                            ],
+                            "minLength": 10.0,
+                            "description": "Email address to receive notifications",
+                            "type": "string",
+                            "title": "Email Address"
+                        }
+                    },
+                    "required": [
+                        "email"
+                    ],
+                    "type": "object"
+                }
+            },
+            "data_type": "PLAIN_TEXT"
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-123546789012",
+    "created_at": "2022-01-01T07:55:57.043Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -59,7 +212,6 @@ description:
 > **PUT** /notification/v1/protocol/{protocol_id}/plugin
 >
 
-> Updates a plugin for Protocol.This method is usually used when redeploying a deployed plugin container to a new version.
 
 | Type | Message |
 | :--- | :--- |
@@ -73,12 +225,72 @@ description:
 > **PUT** /notification/v1/protocol/{protocol_id}/enable
 >
 
-> Enables a Protocol.If the disabled Protocol is enabled, the Protocol can be used again and the notification can be dispatched.
+> Enables a specific Protocol. If the Protocol is enabled, the Protocol can be used and the Notification can be dispatched.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ProtocolRequest](protocol.md#protocolrequest) |
 | Response |  [ProtocolInfo](protocol.md#protocolinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "protocol_id": "protocol-123546789012",
+    "name": "Email-test",
+    "state": "ENABLED",
+    "protocol_type": "EXTERNAL",
+    "capability": {
+        "supported_schema": [
+            "email_smtp"
+        ]
+    },
+    "plugin_info": {
+        "plugin_id": "plugin-email-noti-protocol",
+        "version": "1.0.2",
+        "options": {},
+        "secret_id": "secret-123546789012",
+        "metadata": {
+            "data": {
+                "schema": {
+                    "properties": {
+                        "email": {
+                            "pattern": "^[\\W]*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4}[\\W]*,{1}[\\W]*)*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4})[\\W]*$",
+                            "examples": [
+                                "user1@test.com, user2@test.com"
+                            ],
+                            "minLength": 10.0,
+                            "description": "Email address to receive notifications",
+                            "type": "string",
+                            "title": "Email Address"
+                        }
+                    },
+                    "required": [
+                        "email"
+                    ],
+                    "type": "object"
+                }
+            },
+            "data_type": "PLAIN_TEXT"
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-123546789012",
+    "created_at": "2022-01-01T07:55:57.043Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -87,12 +299,72 @@ description:
 > **PUT** /notification/v1/protocol/{protocol_id}/disable
 >
 
-> Disables a Protocol.If you disable the Protocol, the notification will not be dispatched, even if they are created.
+> Disables a specific Protocol. If a Protocol is disabled, the Notification will not be dispatched, even if it is created.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ProtocolRequest](protocol.md#protocolrequest) |
 | Response |  [ProtocolInfo](protocol.md#protocolinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "protocol_id": "protocol-123546789012",
+    "name": "Email-test",
+    "state": "DISABLED",
+    "protocol_type": "EXTERNAL",
+    "capability": {
+        "supported_schema": [
+            "email_smtp"
+        ]
+    },
+    "plugin_info": {
+        "plugin_id": "plugin-email-noti-protocol",
+        "version": "1.0.2",
+        "options": {},
+        "secret_id": "secret-123546789012",
+        "metadata": {
+            "data": {
+                "schema": {
+                    "properties": {
+                        "email": {
+                            "pattern": "^[\\W]*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4}[\\W]*,{1}[\\W]*)*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4})[\\W]*$",
+                            "examples": [
+                                "user1@test.com, user2@test.com"
+                            ],
+                            "minLength": 10.0,
+                            "description": "Email address to receive notifications",
+                            "type": "string",
+                            "title": "Email Address"
+                        }
+                    },
+                    "required": [
+                        "email"
+                    ],
+                    "type": "object"
+                }
+            },
+            "data_type": "PLAIN_TEXT"
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-123546789012",
+    "created_at": "2022-01-01T07:55:57.043Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -101,12 +373,21 @@ description:
 > **DELETE** /notification/v1/protocol/{protocol_id}
 >
 
-> Delete the protocol.If there is even one channel using the protocol, it cannot be deleted.
+> Deletes a specific Protocol. If there exists a channel using the Protocol, it cannot be deleted.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ProtocolRequest](protocol.md#protocolrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -115,12 +396,72 @@ description:
 > **GET** /notification/v1/protocol/{protocol_id}
 >
 
-> Gets a single Protocol.
+> Gets a specific Protocol. Prints detailed information about the Protocol.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetProtocolRequest](protocol.md#getprotocolrequest) |
 | Response |  [ProtocolInfo](protocol.md#protocolinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "protocol_id": "protocol-123546789012",
+    "name": "Email-test",
+    "state": "DISABLED",
+    "protocol_type": "EXTERNAL",
+    "capability": {
+        "supported_schema": [
+            "email_smtp"
+        ]
+    },
+    "plugin_info": {
+        "plugin_id": "plugin-email-noti-protocol",
+        "version": "1.0.2",
+        "options": {},
+        "secret_id": "secret-123546789012",
+        "metadata": {
+            "data": {
+                "schema": {
+                    "properties": {
+                        "email": {
+                            "pattern": "^[\\W]*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4}[\\W]*,{1}[\\W]*)*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4})[\\W]*$",
+                            "examples": [
+                                "user1@test.com, user2@test.com"
+                            ],
+                            "minLength": 10.0,
+                            "description": "Email address to receive notifications",
+                            "type": "string",
+                            "title": "Email Address"
+                        }
+                    },
+                    "required": [
+                        "email"
+                    ],
+                    "type": "object"
+                }
+            },
+            "data_type": "PLAIN_TEXT"
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-123546789012",
+    "created_at": "2022-01-01T07:55:57.043Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -131,7 +472,6 @@ description:
 > **POST** /notification/v1/protocols/search
 
 
-> Lists the specified Protocols.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.
 
 | Type | Message |
 | :--- | :--- |

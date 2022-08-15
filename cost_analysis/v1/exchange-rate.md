@@ -1,5 +1,5 @@
 ---
-description:  
+description: An ExchangeRate is a resource defining the exchange rate of currencies. This resource can set a custom exchange rate for a specific domain, separately from the exchange rate of the default domain set in `config`.
 ---
 # Exchange rate
 
@@ -28,11 +28,33 @@ description:
 > **POST** /cost-analysis/v1/exchange-rate/{currency}/set
 >
 
+> Overrides a value of a specific ExchangeRate. This method is used to change the ExchangeRate in a specific domain. You can set the `currency` and `rate` of the resource.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SetExchangeRateRequest](exchange-rate.md#setexchangeraterequest) |
 | Response |  [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "currency": "KRW",
+    "rate": 1300
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "currency": "KRW",
+    "rate": 1300.0,
+    "state": "ENABLED",
+    "is_default": true
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -54,11 +76,25 @@ description:
 > **POST** /cost-analysis/v1/exchange-rate/{currency}/enable
 >
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |
 | Response |  [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +103,25 @@ description:
 > **POST** /cost-analysis/v1/exchange-rate/{currency}/disable
 >
 
+> ''
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |
 | Response |  [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -80,11 +130,33 @@ description:
 > **GET** /cost-analysis/v1/exchange-rate/{currency}
 >
 
+> Gets a specific ExchangeRate. Prints detailed information about the ExchangeRate, including  `currency` and `rate`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |
 | Response |  [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "currency": "KRW"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "currency": "KRW",
+    "rate": 1242.7,
+    "state": "ENABLED",
+    "is_default": true,
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -95,11 +167,43 @@ description:
 > **POST** /cost-analysis/v1/exchange-rates/search
 
 
+> Gets a list of all ExchangeRates. You can use a query to get a filtered list of ExchangeRates.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ExchangeRateQuery](exchange-rate.md#exchangeratequery) |
 | Response |  [ExchangeRatesInfo](exchange-rate.md#exchangeratesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "currency": "JPY",
+            "rate": 129.8,
+            "state": "ENABLED",
+            "is_default": true,
+            "domain_id": "domain-58010aa2e451"
+        },
+        {
+            "currency": "KRW",
+            "rate": 1242.7,
+            "state": "ENABLED",
+            "is_default": true,
+            "domain_id": "domain-58010aa2e451"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
 
 
 ## 

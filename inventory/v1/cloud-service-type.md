@@ -1,5 +1,5 @@
 ---
-description:  
+description: A CloudServiceType is a classification with hierarchical information of `CloudService`. A CloudServiceType provides information about which `group` a specific `Resource` belongs to and which `Services` are in it.
 ---
 # Cloud service type
 
@@ -54,11 +54,21 @@ description:
 > **DELETE** /inventory/v1/cloud-service-type/{cloud_service_type_id}
 >
 
+> Deletes a specific CloudServiceType. You must specify the `cloud_service_type_id` of the CloudServiceType to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CloudServiceTypeRequest](cloud-service-type.md#cloudservicetyperequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "cloud_service_type_id": "cloud-svc-type-27dd73ac89f8"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -67,11 +77,47 @@ description:
 > **GET** /inventory/v1/cloud-service-type/{cloud_service_type_id}
 >
 
+> Gets a specific CloudServiceType. Prints detailed information about the CloudServiceType.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetCloudServiceTypeRequest](cloud-service-type.md#getcloudservicetyperequest) |
 | Response |  [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "cloud_service_type_id": "cloud-svc-type-27dd73ac89f8"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "cloud_service_type_id": "cloud-svc-type-27dd73ac89f8",
+    "name": "API-TEST",
+    "provider": "aws",
+    "group": "APIGateway",
+    "cloud_service_type_key": "aws.APIGateway.API-TEST",
+    "service_code": "AmazonApi",
+    "is_primary": true,
+    "is_major": true,
+    "resource_type": "inventory.CloudService",
+    "metadata": {},
+    "tags": {
+        "b": "c"
+    },
+    "labels": [
+        "Networking2"
+    ],
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-22T01:38:16.301Z",
+    "updated_at": "2022-06-22T02:12:11.184Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

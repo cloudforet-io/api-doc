@@ -1,5 +1,5 @@
 ---
-description:  
+description: A UserChannel is a destination where Notifications are delivered. Notifications are generated via the Protocol set by each User.
 ---
 # User channel
 
@@ -32,12 +32,44 @@ description:
 > **POST** /notification/v1/user-channels
 >
 
-> Creates a new User Channel.User channel is the definition of the channel that delivers the notification to users when the notification is created.When creating a User Channel, one of the protocols must be selected, and an notification is dispatched through the selected protocol.
+> Creates a new UserChannel. A UserChannel is a channel that delivers a Notification to users when the Notification is created. When creating a UserChannel, one Protocol must be selected, and an Notification is dispatched via the selected Protocol.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateUserChannelRequest](user-channel.md#createuserchannelrequest) |
 | Response |  [UserChannelInfo](user-channel.md#userchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-123456789012",
+    "name": "Email",
+    "data": {
+        "email": "user1@email.com"
+    },
+    "user_id": "user1@email.com",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012",
+    "name": "Email",
+    "state": "ENABLED",
+    "data": {
+        "email": "user1@email.com"
+    },
+    "protocol_id": "protocol-123456789012",
+    "user_id": "user1@email.com",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T08:28:49.108Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -46,12 +78,48 @@ description:
 > **PUT** /notification/v1/user-channel/{user_channel_id}
 >
 
-> Updates a User Channel information.Protocol that has already been set cannot be changed. Instead, the data required to be dispatched notification for user channel is can be updated.
+> Updates a specific UserChannel. A UserChannel that has already been configured cannot be changed. Instead, the data required for dispatching Notifications to a UserChannel can be updated.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateUserChannelRequest](user-channel.md#updateuserchannelrequest) |
 | Response |  [UserChannelInfo](user-channel.md#userchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012",
+    "name": "Email2",
+    "data": {
+        "email": "user1@gmail.com"
+    },
+    "tags": {
+        "type": "test"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012",
+    "name": "Email2",
+    "state": "ENABLED",
+    "data": {
+        "email": "user1@gmail.com"
+    },
+    "protocol_id": "protocol-123456789012",
+    "user_id": "user1@email.com",
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T08:28:49.108Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -60,12 +128,61 @@ description:
 > **PUT** /notification/v1/user-channel/{user_channel_id}/schedule
 >
 
-> Schedule settings for user channels.When a notification is created, you can set the day and time you want to receive it through the schedule.When you set the day of the week in the schedule, you can receive a notification only on the set day of the week.If you also set the start time and end time with day of the week, you can receive a notification only at the set time on the set day of the week.If there is no schedule, notifications will be dispatched at all times through user channel.
+> Sets a schedule for a UserChannel. A schedule defines the time to receive a Notification. When a Notification is created, you can set the day of the week and time you want to receive it. When you set the day of the week, you can receive a notification only on the day of the week you set. If you also set the start time and end time with the day of the week, you can receive a Notification only at the scheduled time on the day of the week you set. If there is no schedule set in a UserChannel, Notifications will be dispatched at all times via the UserChannel.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateUserChannelScheduleRequest](user-channel.md#updateuserchannelschedulerequest) |
 | Response |  [UserChannelInfo](user-channel.md#userchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "user_channel_id": "user-ch-28097e8d5d59",
+    "is_scheduled": true,
+    "schedule": {
+        "day_of_week": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+        ],
+        "end_hour": 9
+    },
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "user_channel_id": "user-ch-28097e8d5d59",
+    "name": "my-email",
+    "state": "ENABLED",
+    "data": {
+        "email": "seolmin@mz.co.kr"
+    },
+    "is_scheduled": true,
+    "schedule": {
+        "day_of_week": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+        ],
+        "end_hour": 9
+    },
+    "protocol_id": "protocol-e000a677ebdb",
+    "user_id": "user1@cloudforet.io",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-03T08:28:49.108Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -74,12 +191,58 @@ description:
 > **PUT** /notification/v1/user-channel/{user_channel_id}/subscription
 >
 
-> Subscription settings for user channelsIf the user channel have subscriptions, notification is dispatched only if the topic of the notification is the same as the one set in the subscriptions.If no subscriptions in user channel, notifications will be dispatched all.
+> Sets a subscription for a UserChannel. A subscription is a topic for channels to subscribe to and get notified about. If a UserChannel has subscriptions, a Notification is dispatched only if the topic of the Notification is the same as the one set in the subscriptions. If there is no subscription in a UserChannel, all Notifications will be dispatched.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateUserChannelSubscriptionRequest](user-channel.md#updateuserchannelsubscriptionrequest) |
 | Response |  [UserChannelInfo](user-channel.md#userchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "user_channel_id": "user-ch-28097e8d5d59",
+    "is_subscribe": true,
+    "subscriptions": [
+        "monitoring.Alert"
+    ],
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "user_channel_id": "user-ch-28097e8d5d59",
+    "name": "my-email",
+    "state": "ENABLED",
+    "data": {
+        "email": "user1@cloudforet.io"
+    },
+    "is_subscribe": true,
+    "subscriptions": [
+        "monitoring.Alert"
+    ],
+    "is_scheduled": true,
+    "schedule": {
+        "day_of_week": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+        ],
+        "end_hour": 9
+    },
+    "protocol_id": "protocol-e000a677ebdb",
+    "user_id": "user1@cloudforet.io",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-03T08:28:49.108Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -88,12 +251,38 @@ description:
 > **PUT** /notification/v1/user-channel/{user_channel_id}/enable
 >
 
-> Enables a User Channel.If the disabled user channel is enabled, the user channel can be used again and the notification can be dispatched.Even if the user channel is enabled, if the protocol being used in the user channel is disabled, the notification is not dispatched.
+> Enables a specific UserChannel. If a UserChannel is enabled, the UserChannel can be used and the Notification can be dispatched. Even if a UserChannel is enabled, if the Protocol used in the UserChannel is disabled, the Notification is not dispatched.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UserChannelRequest](user-channel.md#userchannelrequest) |
 | Response |  [UserChannelInfo](user-channel.md#userchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012",
+    "name": "Email",
+    "state": "ENABLED",
+    "data": {
+        "email": "user1@email.com"
+    },
+    "protocol_id": "protocol-123456789012",
+    "user_id": "user1@email.com",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T08:28:49.108Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -102,12 +291,38 @@ description:
 > **PUT** /notification/v1/user-channel/{user_channel_id}/disable
 >
 
-> Disables a User Channel.If you disable the user channel, the notification will not be dispatched, even if they are created.
+> Disables a specific UserChannel. If a UserChannel is disabled, the Notification is not dispatched, even if it is created.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UserChannelRequest](user-channel.md#userchannelrequest) |
 | Response |  [UserChannelInfo](user-channel.md#userchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012",
+    "name": "Email",
+    "state": "DISABLED",
+    "data": {
+        "email": "user1@email.com"
+    },
+    "protocol_id": "protocol-123456789012",
+    "user_id": "user1@email.com",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T08:28:49.108Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -116,7 +331,6 @@ description:
 > **DELETE** /notification/v1/user-channel/{user_channel_id}
 >
 
-> Delete the User Channel.
 
 | Type | Message |
 | :--- | :--- |
@@ -130,7 +344,6 @@ description:
 > **GET** /notification/v1/user-channel/{user_channel_id}
 >
 
-> Gets a single User Channel.
 
 | Type | Message |
 | :--- | :--- |
@@ -146,12 +359,67 @@ description:
 > **POST** /notification/v1/user-channels/search
 
 
-> Lists the specified User Channel.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.
+> Gets a list of all UserChannels. You can use a query to get a filtered list of UserChannels.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UserChannelQuery](user-channel.md#userchannelquery) |
 | Response |  [UserChannelsInfo](user-channel.md#userchannelsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "user_channel_id": "user-ch-123456789012",
+            "name": "Email",
+            "state": "ENABLED",
+            "data": {
+                "email": "user1@email.com"
+            },
+            "protocol_id": "protocol-123456789012",
+            "user_id": "user1@email.com",
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T08:28:49.108Z"
+        },
+        {
+            "user_channel_id": "user-ch-98765432109",
+            "name": "Email",
+            "state": "ENABLED",
+            "data": {
+                "email": "user2@email.com"
+            },
+            "is_scheduled": true,
+            "schedule": {
+                "day_of_week": [
+                    "MON",
+                    "TUE",
+                    "WED",
+                    "THU",
+                    "FRI"
+                ],
+                "start_hour": 3,
+                "end_hour": 23
+            },
+            "protocol_id": "protocol-123456789012",
+            "user_id": "user2@email.com",
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T06:45:57.260Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Collector is a plugin collecting data of external infrastructure resources.
 ---
 # Collector
 
@@ -23,33 +23,75 @@ description:
  
 ### init
 
+> Initializes a specific Collector. During initialization, the Collector information to be passed to the Collector user is delivered as `metadata`. Collector information includes its name and version.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [InitRequest](collector.md#initrequest) |
 | Response |  [PluginInfo](collector.md#plugininfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
  
 ### verify
 
+> Verifies a specific Collector. You must specify the parameter `secret_data`, encrypted account data of the Collector to validate.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [VerifyRequest](collector.md#verifyrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
  
 ### collect
 
+> Collects data of external infrastructure resources by a specific Collector.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CollectRequest](collector.md#collectrequest) |
 | Response |  [ResourceInfo](collector.md#resourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
 
 
 ## 

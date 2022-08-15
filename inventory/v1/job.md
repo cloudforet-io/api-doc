@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Job is an act of collecting external cloud resources through plugins.
 ---
 # Job
 
@@ -26,11 +26,83 @@ description:
 > **POST** /inventory/v1/jobs/search
 
 
+> Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [JobsQuery](job.md#jobsquery) |
 | Response |  [JobsInfo](job.md#jobsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "job_id": "job-3b124006c2d2",
+            "status": "SUCCESS",
+            "filter": {},
+            "total_tasks": 2,
+            "collector_info": {
+                "collector_id": "collector-accd02663b3d",
+                "name": "openstack-collector",
+                "state": "ENABLED",
+                "plugin_info": {
+                    "plugin_id": "plugin-openstack-inven-collector",
+                    "version": "0.4.2.20220616.134758"
+                },
+                "provider": "openstack",
+                "capability": {
+                    "supported_schema": [
+                        "openstack_credentials"
+                    ]
+                },
+                "is_public": true
+            },
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-17T08:00:01.225Z",
+            "updated_at": "2022-06-17T08:00:01.225Z",
+            "finished_at": "2022-06-17T08:00:15.197Z"
+        },
+        {
+            "job_id": "job-587a3d3b4db3",
+            "status": "SUCCESS",
+            "filter": {},
+            "total_tasks": 3,
+            "collector_info": {
+                "collector_id": "collector-2c0847644f39",
+                "name": "AWS stat-kwon Collector",
+                "state": "ENABLED",
+                "plugin_info": {
+                    "plugin_id": "plugin-30d21ef75a5d",
+                    "version": "1.13.13.20220610.143142"
+                },
+                "provider": "aws",
+                "capability": {
+                    "supported_schema": [
+                        "aws_access_key"
+                    ]
+                },
+                "is_public": true
+            },
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-17T08:00:00.407Z",
+            "updated_at": "2022-06-17T08:00:00.407Z",
+            "finished_at": "2022-06-17T08:07:32.023Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

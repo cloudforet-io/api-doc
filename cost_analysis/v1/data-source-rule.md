@@ -1,5 +1,5 @@
 ---
-description:  
+description: A DataSourceRule is a resource filtering the raw data from the DataSource. The Cost resource is created after the raw data is filtered by the DataSourceRule.
 ---
 # Data source rule
 
@@ -29,11 +29,63 @@ description:
 > **POST** /cost-analysis/v1/data_source_rules
 >
 
+> Creates a new DataSourceRule. When creating the resource, this method can apply two types of conditions: mapping projects where the cost incurred to the Cost, and mapping cloud service accounts to the Cost. By adjusting the `condition_policy` parameter, the DataSourceRule can be applied when all conditions are met, applied when any of the conditions are met, or always applied regardless of whether the conditions are met.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateDataSourceRuleRequest](data-source-rule.md#createdatasourcerulerequest) |
 | Response |  [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "match_service_account_test",
+    "conditions_policy": "ALWAYS",
+    "actions": {
+        "match_service_account": {
+            "source": "account",
+            "target": "data.project_id"
+        }
+    },
+    "options": {
+        "stop_processing": true
+    },
+    "tags": {
+        "b": "c",
+        "a": "b"
+    },
+    "data_source_id": "ds-c96609f5afeb"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_rule_id": "rule-c8055231e212",
+    "name": "match_service_account_test",
+    "order": 2,
+    "conditions_policy": "ALWAYS",
+    "actions": {
+        "match_service_account": {
+            "source": "account",
+            "target": "data.project_id"
+        }
+    },
+    "options": {
+        "stop_processing": true
+    },
+    "tags": {
+        "a": "b",
+        "b": "c"
+    },
+    "data_source_id": "ds-c96609f5afeb",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T10:13:28.335Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -55,11 +107,49 @@ description:
 > **PUT** /cost-analysis/v1/data_source_rule/{data_source_rule_id}/order
 >
 
+> Changes the priority order of the DataSourceRules to apply. If there are multiple DataSourceRules applied in a specific service account, the priority order of the resources is requried. This method changes the priority order to apply DataSourceRules.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ChangeDataSourceRuleOrderRequest](data-source-rule.md#changedatasourceruleorderrequest) |
 | Response |  [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_rule_id": "rule-c8055231e212",
+    "order": 2
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_rule_id": "rule-c8055231e212",
+    "name": "match_service_account_test",
+    "order": 2,
+    "conditions_policy": "ALWAYS",
+    "actions": {
+        "match_service_account": {
+            "source": "account",
+            "target": "data.project_id"
+        }
+    },
+    "options": {
+        "stop_processing": true
+    },
+    "tags": {
+        "a": "b",
+        "b": "c"
+    },
+    "data_source_id": "ds-c96609f5afeb",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T10:13:28.335Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -68,11 +158,21 @@ description:
 > **DELETE** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
 >
 
+> Deletes a specific DataSourceRule. You must specify the `data_source_rule_id` of the DataSourceRule to delete. If the parameter `is_default` is `true`, only `Admin` type User can use this method.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRuleRequest](data-source-rule.md#datasourcerulerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_rule_id": "rule-22fab02f6b51"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -81,11 +181,45 @@ description:
 > **GET** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
 >
 
+> Gets a specific DataSourceRule. Prints detailed information about the DataSourceRule, including  `conditions_policy` and conditions applied to DataSources.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetDataSourceRuleRequest](data-source-rule.md#getdatasourcerulerequest) |
 | Response |  [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_rule_id": "rule-22fab02f6b51"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_rule_id": "rule-22fab02f6b51",
+    "name": "match_service_account",
+    "order": 1,
+    "conditions_policy": "ALWAYS",
+    "actions": {
+        "match_service_account": {
+            "source": "account",
+            "target": "data.project_id"
+        }
+    },
+    "options": {
+        "stop_processing": true
+    },
+    "tags": {},
+    "data_source_id": "ds-c96609f5afeb",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-05-25T16:01:51.858Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -96,11 +230,69 @@ description:
 > **POST** /cost-analysis/v1/data_source_rules/search
 
 
+> Gets a list of all DataSourceRules. You can use a query to get a filtered list of DataSourceRules.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRuleQuery](data-source-rule.md#datasourcerulequery) |
 | Response |  [DataSourceRulesInfo](data-source-rule.md#datasourcerulesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "data_source_rule_id": "rule-22fab02f6b51",
+            "name": "match_service_account",
+            "order": 1,
+            "conditions_policy": "ALWAYS",
+            "actions": {
+                "match_service_account": {
+                    "source": "account",
+                    "target": "data.project_id"
+                }
+            },
+            "options": {
+                "stop_processing": true
+            },
+            "tags": {},
+            "data_source_id": "ds-c96609f5afeb",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-05-25T16:01:51.858Z"
+        },
+        {
+            "data_source_rule_id": "rule-188d366e9817",
+            "name": "match_service_account",
+            "order": 1,
+            "conditions_policy": "ALWAYS",
+            "actions": {
+                "match_service_account": {
+                    "source": "account",
+                    "target": "data.account_id"
+                }
+            },
+            "options": {
+                "stop_processing": true
+            },
+            "tags": {},
+            "data_source_id": "ds-fcba92ca73b1",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-06-03T16:00:54.099Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

@@ -1,5 +1,5 @@
 ---
-description:  
+description: A NotificationUsage is a resource indicating daily Protocol usage. The limit set by the resource Quota is applied based on the NotificationUsage.
 ---
 # Notification usage
 
@@ -26,12 +26,45 @@ description:
 > **POST** /notification/v1/notification-usages/search
 
 
-> Lists for the Notification usage information.Can search information using the query format provided by SpaceONE.Detailed information about Query format can be checked in the Search Query pages.
+> Gets a list of all NotificationUsages. You can use a query to get a filtered list of Notification Usages.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NotificationUsageQuery](notification-usage.md#notificationusagequery) |
 | Response |  [NotificationUsagesInfo](notification-usage.md#notificationusagesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "protocol_id": "protocol-123456789012",
+            "usage_date": "08",
+            "usage_month": "2022-05",
+            "count": 2,
+            "domain_id": "domain-123456789012"
+        },
+        {
+            "protocol_id": "protocol-123456789012",
+            "usage_date": "18",
+            "usage_month": "2022-05",
+            "count": 7,
+            "domain_id": "domain-123456789012"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

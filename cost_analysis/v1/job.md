@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Job is an act of collecting external cost data through plugins. The data to collect is defined in a plugin.
 ---
 # Job
 
@@ -26,11 +26,46 @@ description:
 > **POST** /cost-analysis/v1/job/{job_id}/cancel
 >
 
+> Cancels a specific Job. You can manually cease a Job in run with this method.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [JobRequest](job.md#jobrequest) |
 | Response |  [JobInfo](job.md#jobinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "job_id": "job-07994c7c9021"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "job_id": "job-07994c7c9021",
+    "status": "CANCELED",
+    "options": {
+        "no_preload_cache": false,
+        "start": "2021-01-01T00:00:00Z"
+    },
+    "total_tasks": 2,
+    "remained_tasks": 2,
+    "data_source_id": "ds-fcba92ca73b1",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-04-02T09:17:44.031Z",
+    "updated_at": "2022-04-02T09:19:47.715Z",
+    "finished_at": "2022-04-02T09:19:47.715Z",
+    "changed": [
+        {
+            "start": "2021-01-01T00:00:00.000Z"
+        }
+    ]
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -39,11 +74,45 @@ description:
 > **GET** /cost-analysis/v1/job/{job_id}
 >
 
+> Gets a specific Job. Prints detailed information about the Job, including the plugin used, operation time, and `status`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetJobRequest](job.md#getjobrequest) |
 | Response |  [JobInfo](job.md#jobinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "job_id": "job-85cf2c385252"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "job_id": "job-85cf2c385252",
+    "status": "SUCCESS",
+    "options": {
+        "no_preload_cache": false,
+        "start": null
+    },
+    "total_tasks": 1,
+    "data_source_id": "ds-c96609f5afeb",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-17T16:00:08.254Z",
+    "updated_at": "2022-07-17T16:01:30.637Z",
+    "finished_at": "2022-07-17T16:01:30.637Z",
+    "changed": [
+        {
+            "start": "2022-07-01T00:00:00.000Z"
+        }
+    ]
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -54,11 +123,69 @@ description:
 > **POST** /cost-analysis/v1/jobs/search
 
 
+> Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [JobQuery](job.md#jobquery) |
 | Response |  [JobsInfo](job.md#jobsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "job_id": "job-85cf2c385252",
+            "status": "SUCCESS",
+            "options": {
+                "start": null,
+                "no_preload_cache": false
+            },
+            "total_tasks": 1,
+            "data_source_id": "ds-c96609f5afeb",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-07-17T16:00:08.254Z",
+            "updated_at": "2022-07-17T16:01:30.637Z",
+            "finished_at": "2022-07-17T16:01:30.637Z",
+            "changed": [
+                {
+                    "start": "2022-07-01T00:00:00.000Z"
+                }
+            ]
+        },
+        {
+            "job_id": "job-6b6765f757a9",
+            "status": "SUCCESS",
+            "options": {
+                "start": null,
+                "no_preload_cache": false
+            },
+            "total_tasks": 2,
+            "data_source_id": "ds-fcba92ca73b1",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-07-17T16:00:05.077Z",
+            "updated_at": "2022-07-17T16:01:28.206Z",
+            "finished_at": "2022-07-17T16:01:28.206Z",
+            "changed": [
+                {
+                    "start": "2022-07-01T00:00:00.000Z"
+                }
+            ]
+        }
+    ],
+    "total_count": 372
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

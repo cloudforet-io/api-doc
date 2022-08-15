@@ -1,5 +1,5 @@
 ---
-description:  
+description: A Protocol is a plugin instance defining how a User receives data from Cloudforet.
 ---
 # Protocol
 
@@ -22,24 +22,50 @@ description:
  
 ### init
 
-> Initialized when protocol plugin is created first.When this method is executed, plugin return the metadata required when the plug-in is executed.
+> Initializes a specific Protocol. During initialization, the Protocol information to be passed to the Protocol user is delivered as `metadata`. Protocol information includes its name and version.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [InitRequest](protocol.md#initrequest) |
 | Response |  [PluginInfo](protocol.md#plugininfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "options": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "metadata": {}
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
  
 ### verify
 
-> A method that proves whether the plugin can be running.If there is no return value, it means that normal execution is possible.
+> Verifies if a specific Protocol is a valid plugin instance.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PluginVerifyRequest](protocol.md#pluginverifyrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "options": {}
+}
+```
+{% endtab %}
+{% endtabs %}
 
 
 ## 

@@ -1,5 +1,5 @@
 ---
-description:  
+description: A DataSource is a plugin instance collecting external cost data. External cost data consists of `raw data` and the plugin information used for collection.
 ---
 # Data source
 
@@ -33,11 +33,96 @@ description:
 > **POST** /cost-analysis/v1/data-sources
 >
 
+> Registers a DataSource with information of the plugin to use. Information of the plugin includes `version`, `provider`, and `upgrade_mode`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [RegisterDataSourceRequest](data-source.md#registerdatasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "AWS HyperBilling Data Source test",
+    "data_source_type": "EXTERNAL",
+    "plugin_info": {
+        "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+        "version": "1.0.4",
+        "options": {},
+        "metadata": {
+            "data_source_rules": [
+                {
+                    "conditions_policy": "ALWAYS",
+                    "options": {
+                        "stop_processing": true
+                    },
+                    "actions": {
+                        "match_service_account": {
+                            "source": "account",
+                            "target": "data.account_id"
+                        }
+                    },
+                    "conditions": [],
+                    "tags": {},
+                    "name": "match_service_account"
+                }
+            ]
+        },
+        "secret_id": "secret-ca134639483",
+        "upgrade_mode": "AUTO"
+    },
+    "tags": {
+        "a": "b"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789",
+    "name": "AWS HyperBilling Data Source test",
+    "state": "ENABLED",
+    "data_source_type": "EXTERNAL",
+    "plugin_info": {
+        "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+        "version": "1.0.4",
+        "options": {},
+        "metadata": {
+            "data_source_rules": [
+                {
+                    "options": {
+                        "stop_processing": true
+                    },
+                    "actions": {
+                        "match_service_account": {
+                            "source": "account",
+                            "target": "data.account_id"
+                        }
+                    },
+                    "domain_id": "domain-58010aa2e451",
+                    "conditions": [],
+                    "name": "match_service_account",
+                    "tags": {},
+                    "data_source_id": "ds-085d1e872789",
+                    "conditions_policy": "ALWAYS"
+                }
+            ]
+        },
+        "secret_id": "secret-ca134639483",
+        "upgrade_mode": "AUTO"
+    },
+    "template": {},
+    "tags": {
+        "a": "b"
+    },
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T10:58:36.080Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -46,11 +131,68 @@ description:
 > **PUT** /cost-analysis/v1/data-source/{data_source_id}
 >
 
+> Updates a specific DataSource. You can make changes in DataSource settings, including `name` and `tags`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateDataSourceRequest](data-source.md#updatedatasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789",
+    "name": "AWS HyperBilling Data Source test2",
+    "tags": {
+        "type": "test"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789",
+    "name": "AWS HyperBilling Data Source test2",
+    "state": "ENABLED",
+    "data_source_type": "EXTERNAL",
+    "plugin_info": {
+        "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+        "version": "1.0.4",
+        "options": {},
+        "metadata": {
+            "data_source_rules": [
+                {
+                    "tags": {},
+                    "name": "match_service_account",
+                    "conditions_policy": "ALWAYS",
+                    "actions": {
+                        "match_service_account": {
+                            "target": "data.account_id",
+                            "source": "account"
+                        }
+                    },
+                    "options": {
+                        "stop_processing": true
+                    },
+                    "conditions": []
+                }
+            ]
+        },
+        "secret_id": "secret-dca385e85a27",
+        "upgrade_mode": "AUTO"
+    },
+    "template": {},
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T10:58:36.080Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -59,11 +201,67 @@ description:
 > **PUT** /cost-analysis/v1/data-source/{data_source_id}/plugin
 >
 
+> Updates the plugin of a specific DataSource. This method resets the plugin data in the DataSource to update the `metadata`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateDataSourcePluginRequest](data-source.md#updatedatasourcepluginrequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789",
+    "version": "1.0.4",
+    "options": {},
+    "upgrade_mode": "AUTO"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789",
+    "name": "AWS HyperBilling Data Source test2",
+    "state": "DISABLED",
+    "data_source_type": "EXTERNAL",
+    "plugin_info": {
+        "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+        "version": "1.0.4",
+        "options": {},
+        "metadata": {
+            "data_source_rules": [
+                {
+                    "tags": {},
+                    "actions": {
+                        "match_service_account": {
+                            "source": "account",
+                            "target": "data.account_id"
+                        }
+                    },
+                    "options": {
+                        "stop_processing": true
+                    },
+                    "conditions_policy": "ALWAYS",
+                    "name": "match_service_account",
+                    "conditions": []
+                }
+            ]
+        },
+        "secret_id": "secret-dca385e85a27",
+        "upgrade_mode": "AUTO"
+    },
+    "template": {},
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T10:58:36.080Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -72,11 +270,21 @@ description:
 > **POST** /cost-analysis/v1/data-source/{data_source_id}/plugin/verify
 >
 
+> Verifies the plugin of a specific DataSource. This method validates the plugin data, `version` and `endpoint`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRequest](data-source.md#datasourcerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -85,11 +293,64 @@ description:
 > **PUT** /cost-analysis/v1/data-source/{data_source_id}/enable
 >
 
+> Enables a specific DataSource. By enabling a DataSource, you can communicate with an external cloud service via the plugin.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRequest](data-source.md#datasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789",
+    "name": "AWS HyperBilling Data Source test2",
+    "state": "ENABLED",
+    "data_source_type": "EXTERNAL",
+    "plugin_info": {
+        "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+        "version": "1.0.4",
+        "options": {},
+        "metadata": {
+            "data_source_rules": [
+                {
+                    "actions": {
+                        "match_service_account": {
+                            "target": "data.account_id",
+                            "source": "account"
+                        }
+                    },
+                    "conditions_policy": "ALWAYS",
+                    "conditions": [],
+                    "options": {
+                        "stop_processing": true
+                    },
+                    "name": "match_service_account",
+                    "tags": {}
+                }
+            ]
+        },
+        "secret_id": "secret-dca385e85a27",
+        "upgrade_mode": "AUTO"
+    },
+    "template": {},
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T10:58:36.080Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -98,11 +359,64 @@ description:
 > **PUT** /cost-analysis/v1/data-source/{data_source_id}/disable
 >
 
+> Disables a specific DataSource. By disabling a DataSource, you can block communication with an external cloud service via the plugin.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRequest](data-source.md#datasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789",
+    "name": "AWS HyperBilling Data Source test2",
+    "state": "DISABLED",
+    "data_source_type": "EXTERNAL",
+    "plugin_info": {
+        "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+        "version": "1.0.4",
+        "options": {},
+        "metadata": {
+            "data_source_rules": [
+                {
+                    "name": "match_service_account",
+                    "options": {
+                        "stop_processing": true
+                    },
+                    "conditions_policy": "ALWAYS",
+                    "conditions": [],
+                    "actions": {
+                        "match_service_account": {
+                            "source": "account",
+                            "target": "data.account_id"
+                        }
+                    },
+                    "tags": {}
+                }
+            ]
+        },
+        "secret_id": "secret-dca385e85a27",
+        "upgrade_mode": "AUTO"
+    },
+    "template": {},
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T10:58:36.080Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -111,11 +425,21 @@ description:
 > **DELETE** /cost-analysis/v1/data-source/{data_source_id}
 >
 
+> Deregisters and deletes a specific DataSource. You must specify the `data_source_id` of the DataSource to deregister.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceRequest](data-source.md#datasourcerequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_id": "ds-085d1e872789"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -124,11 +448,45 @@ description:
 > **POST** /cost-analysis/v1/data-source/{data_source_id}/sync
 >
 
+> Manually runs a specific DataSource to collect the cost data. This method is to get up-to-date cost data.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SyncDataSourceRequest](data-source.md#syncdatasourcerequest) |
 | Response | JobInfo |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_id": "ds-c96609f5afeb"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "job_id": "job-ba2598167785",
+    "status": "IN_PROGRESS",
+    "options": {
+        "no_preload_cache": false,
+        "start": null
+    },
+    "total_tasks": 1,
+    "remained_tasks": 1,
+    "data_source_id": "ds-c96609f5afeb",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T11:16:59.923Z",
+    "updated_at": "2022-07-19T11:16:59.923Z",
+    "changed": [
+        {
+            "start": "2022-07-01T00:00:00.000Z"
+        }
+    ]
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -137,11 +495,65 @@ description:
 > **GET** /cost-analysis/v1/data-source/{data_source_id}
 >
 
+> Gets a specific DataSource. Prints detailed information about the DataSource, including `name`, `state`, and `plugin_info`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetDataSourceRequest](data-source.md#getdatasourcerequest) |
 | Response |  [DataSourceInfo](data-source.md#datasourceinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_id": "ds-fcba92ca73b1"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_id": "ds-fcba92ca73b1",
+    "name": "AWS HyperBilling Data Source",
+    "state": "ENABLED",
+    "data_source_type": "EXTERNAL",
+    "plugin_info": {
+        "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+        "version": "1.0.4",
+        "options": {},
+        "metadata": {
+            "data_source_rules": [
+                {
+                    "conditions_policy": "ALWAYS",
+                    "options": {
+                        "stop_processing": true
+                    },
+                    "tags": {},
+                    "conditions": [],
+                    "name": "match_service_account",
+                    "actions": {
+                        "match_service_account": {
+                            "source": "account",
+                            "target": "data.account_id"
+                        }
+                    }
+                }
+            ]
+        },
+        "secret_id": "secret-dca385e85a27",
+        "upgrade_mode": "AUTO"
+    },
+    "template": {},
+    "tags": {
+        "a": "b"
+    },
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-03-30T02:21:28.756Z",
+    "last_synchronized_at": "2022-07-17T16:00:05.077Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -152,11 +564,107 @@ description:
 > **POST** /cost-analysis/v1/data-sources/search
 
 
+> Gets a list of all DataSources. You can use a query to get a filtered list of DataSources.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [DataSourceQuery](data-source.md#datasourcequery) |
 | Response |  [DataSourcesInfo](data-source.md#datasourcesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "data_source_id": "ds-fcba92ca73b1",
+            "name": "AWS HyperBilling Data Source",
+            "state": "ENABLED",
+            "data_source_type": "EXTERNAL",
+            "plugin_info": {
+                "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+                "version": "1.0.4",
+                "options": {},
+                "metadata": {
+                    "data_source_rules": [
+                        {
+                            "name": "match_service_account",
+                            "conditions": [],
+                            "actions": {
+                                "match_service_account": {
+                                    "source": "account",
+                                    "target": "data.account_id"
+                                }
+                            },
+                            "conditions_policy": "ALWAYS",
+                            "tags": {},
+                            "options": {
+                                "stop_processing": true
+                            }
+                        }
+                    ]
+                },
+                "secret_id": "secret-dca385e85a27",
+                "upgrade_mode": "AUTO"
+            },
+            "template": {},
+            "tags": {
+                "a": "b"
+            },
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-03-30T02:21:28.756Z",
+            "last_synchronized_at": "2022-07-17T16:00:05.077Z"
+        },
+        {
+            "data_source_id": "ds-c96609f5afeb",
+            "name": "MZC HyperBilling Data Source",
+            "state": "ENABLED",
+            "data_source_type": "EXTERNAL",
+            "plugin_info": {
+                "plugin_id": "plugin-mzc-hyperbilling-cost-datasource",
+                "version": "1.0.3",
+                "options": {},
+                "metadata": {
+                    "data_source_rules": [
+                        {
+                            "conditions": [],
+                            "options": {
+                                "stop_processing": true
+                            },
+                            "conditions_policy": "ALWAYS",
+                            "name": "match_service_account",
+                            "tags": {},
+                            "actions": {
+                                "match_service_account": {
+                                    "source": "account",
+                                    "target": "data.project_id"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "secret_id": "secret-354d142229e5",
+                "upgrade_mode": "AUTO"
+            },
+            "template": {},
+            "tags": {},
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2022-04-13T05:34:54.223Z",
+            "last_synchronized_at": "2022-07-17T16:00:08.254Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
