@@ -157,11 +157,25 @@ description: A Notification is a service that delivers event data generated in C
 > **POST** /notification/v1/notification/delete_all
 >
 
+> Delete multiple Notifications. You must specify `notifications` of the list of Notifications to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "notifications": [
+        "notification-4025c1b61225",
+        "notification-13hk3fh32534",
+        "notification-4kth40jth5jy"
+    ]
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -341,7 +355,8 @@ description: A Notification is a service that delivers event data generated in C
 ### NotificationDeleteAllRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| users |list of string|✔| ID list of users to be deleted|
+| notifications |list of string|✔| ID list of users to be deleted|
+| user_id |string|| |
 | domain_id |string|| |
 
 ### NotificationInfo
