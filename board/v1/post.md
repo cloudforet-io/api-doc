@@ -315,6 +315,7 @@ description: A Post is a message published on a Board. It also provides notifica
 | contents |string|✔| |
 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | writer |string|✘| |
+| files |list of string|✘| |
 | domain_id |string|✘| |
 
 ### GetPostRequest
@@ -389,6 +390,12 @@ description: A Post is a message published on a Board. It also provides notifica
           	<li>SYSTEM</li>
           	<li>DOMAIN</li>
         </ul></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">files</td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -475,4 +482,5 @@ description: A Post is a message published on a Board. It also provides notifica
 | contents |string|✘| |
 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | writer |string|✘| |
+| files |list of string|✘| |
 | domain_id |string|✘| |
