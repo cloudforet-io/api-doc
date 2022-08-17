@@ -18,7 +18,6 @@ description: A Notification is a service that delivers event data generated in C
 | [**create**](notification.md#create)|   [CreateNotificationRequest](notification.md#createnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**push**](notification.md#push)|   [PushNotificationRequest](notification.md#pushnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**delete**](notification.md#delete)|   [NotificationRequest](notification.md#notificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
-| [**delete_all**](notification.md#delete_all)|   [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**set_read**](notification.md#set_read)|   [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**get**](notification.md#get)|   [GetNotificationRequest](notification.md#getnotificationrequest) |   [NotificationInfo](notification.md#notificationinfo) |
 | [**list**](notification.md#list)|   [NotificationQuery](notification.md#notificationquery) |   [NotificationsInfo](notification.md#notificationsinfo) |
@@ -141,27 +140,14 @@ description: A Notification is a service that delivers event data generated in C
 
  
 ### delete
-> **DELETE** /notification/v1/notification/{notification_id}
+> **DELETE** /notification/v1/notification/{notifications}
 >
 
+> Deletes multiple Notifications. You must specify `notifications` of the list of Notifications to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NotificationRequest](notification.md#notificationrequest) |
-| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
- 
- 
-
- 
-### delete_all
-> **POST** /notification/v1/notification/delete_all
->
-
-> Delete multiple Notifications. You must specify `notifications` of the list of Notifications to delete.
-
-| Type | Message |
-| :--- | :--- |
-| Request | [NotificationDeleteAllRequest](notification.md#notificationdeleteallrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
 {% tabs %}
 {% tab title="Request Example" %}
