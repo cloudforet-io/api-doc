@@ -338,13 +338,6 @@ description: A Notification is a service that delivers event data generated in C
 | domain_id |string|✔| The ID of domain.|
 | only |list of string|✘| The list of the notification information column you want to be returned. It must be specified in the NotificationInfo.|
 
-### NotificationDeleteAllRequest
-| Field | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| notifications |list of string|✔| ID list of users to be deleted|
-| user_id |string|| |
-| domain_id |string|| |
-
 ### NotificationInfo
 <table>
   <thead>
@@ -512,7 +505,7 @@ description: A Notification is a service that delivers event data generated in C
 ### NotificationRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| notification_id |string|✔| The ID of Notification.|
+| notifications |list of string|✔| ID list of Notifications.|
 | domain_id |string|✔| The ID of domain.|
 
 ### NotificationStatQuery
