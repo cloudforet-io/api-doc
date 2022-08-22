@@ -57,6 +57,7 @@ description: A Post is a message published on a Board. It also provides notifica
 {
     "board_id": "board-123456789012",
     "post_id": "post-123456789012",
+    "post_type": "INTERNAL",
     "category": "developer",
     "title": "title",
     "contents": "This is contents.",
@@ -113,6 +114,7 @@ description: A Post is a message published on a Board. It also provides notifica
 {
     "board_id": "board-123456789012",
     "post_id": "post-123456789012",
+    "post_type": "INTERNAL",
     "category": "developer",
     "title": "title2",
     "contents": "this is contents2.",
@@ -200,6 +202,7 @@ description: A Post is a message published on a Board. It also provides notifica
 {
     "board_id": "board-b9aa34e65c60",
     "post_id": "post-2118473ce15e",
+    "post_type": "INTERNAL",
     "category": "flower",
     "title": "title",
     "contents": "this is contents.",
@@ -251,6 +254,7 @@ description: A Post is a message published on a Board. It also provides notifica
         {
             "board_id": "board-b9aa34e65c60",
             "post_id": "post-2118473ce15e",
+            "post_type": "INTERNAL",
             "category": "spaceone",
             "title": "title2",
             "contents": "this is contents2.",
@@ -269,6 +273,7 @@ description: A Post is a message published on a Board. It also provides notifica
         {
             "board_id": "board-b9aa34e65c60",
             "post_id": "post-532ae1191233",
+            "post_type": "INTERNAL",
             "category": "flower",
             "title": "\uc791\uc5c5\uacf5\uc9c0",
             "contents": "This is description",
@@ -277,6 +282,7 @@ description: A Post is a message published on a Board. It also provides notifica
                 "is_popup": true
             },
             "writer": "\uad8c\uc124\ubbfc",
+            "scope": "PUBLIC",
             "user_id": "supervisor",
             "created_at": "2022-06-10T07:01:44.384Z",
             "updated_at": "2022-06-10T07:01:44.384Z"
@@ -349,6 +355,16 @@ description: A Post is a message published on a Board. It also provides notifica
 
    </tr>
     <tr>
+      <td style="text-align:left; width:100px;">post_type</td>
+      <td style="text-align:left"><ul>
+          	<li>POST_TYPE_NONE</li>
+          	<li>SYSTEM</li>
+          	<li>INTERNAL</li>
+        </ul></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
       <td style="text-align:left; width:100px;">category</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
@@ -387,7 +403,8 @@ description: A Post is a message published on a Board. It also provides notifica
     <tr>
       <td style="text-align:left; width:100px;">scope</td>
       <td style="text-align:left"><ul>
-          	<li>SYSTEM</li>
+          	<li>SCOPE_NONE</li>
+          	<li>PUBLIC</li>
           	<li>DOMAIN</li>
         </ul></td>
 <td style="text-align:left"></td>
@@ -435,16 +452,88 @@ description: A Post is a message published on a Board. It also provides notifica
 
 
 ### PostQuery
-| Field | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| board_id |string|✔| |
-| post_id |string|✘| |
-| category |string|✘| |
-| writer |string|✘| |
-| user_id |string|✘| |
-| user_domain_id |string|✘| |
-| domain_id |string|✘| |
-| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left; width:100px;">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left; width:100px;">board_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">post_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">post_type</td>
+      <td style="text-align:left"><ul>
+          	<li>POST_TYPE_NONE</li>
+          	<li>SYSTEM</li>
+          	<li>INTERNAL</li>
+        </ul></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">category</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">writer</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">scope</td>
+      <td style="text-align:left"><ul>
+          	<li>SCOPE_NONE</li>
+          	<li>PUBLIC</li>
+          	<li>DOMAIN</li>
+        </ul></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">user_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">user_domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">query</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query">spaceone.api.core.v1.Query</a></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### PostRequest
 | Field | Type | Required | Description |

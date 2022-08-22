@@ -56,6 +56,9 @@ description:
           	<li>DOMAIN</li>
           	<li>PROJECT</li>
           	<li>USER</li>
+          	<li>PUBLIC</li>
+          	<li>PUBLIC_OR_DOMAIN</li>
+          	<li>DOMAIN_OR_PROJECT</li>
         </ul></td>
 <td style="text-align:left"></td>
 
