@@ -220,7 +220,7 @@
           "methods": [
             {
               "name": "get_plugin_endpoint",
-              "description": "desc: Gets the `endpoint` of a specific plugin instance. A Plugin returns only a single `endpoint` by determining `labels` and `priority`. If the requested plugin instance is already deployed, the `endpoint` is returned. If not, the `endpoint` is returned after deploying the plugin instance.\nnote: ''\nrequest_example: \u003e-\n{\n\"plugin_id\": \"plugin-aws-sns-mon-webhook\",\n\"version\": \"1.2.2\"\n}\nresponse_example: \u003e-\n{\n\"endpoint\": \"grpc://endpoint-url:50051\"\n}",
+              "description": "desc: Gets the `endpoint` of a specific plugin instance. A Plugin returns only a single `endpoint` by determining `labels` and `priority`. If the requested plugin instance is already deployed, the `endpoint` is returned. If not, the `endpoint` is returned after deploying the plugin instance.\nrequest_example: \u003e-\n{\n\"plugin_id\": \"plugin-aws-sns-mon-webhook\",\n\"version\": \"1.2.2\"\n}\nresponse_example: \u003e-\n{\n\"endpoint\": \"grpc://endpoint-url:50051\"\n}",
               "requestType": "PluginEndpointRequest",
               "requestLongType": "PluginEndpointRequest",
               "requestFullType": "spaceone.api.plugin.v1.PluginEndpointRequest",
