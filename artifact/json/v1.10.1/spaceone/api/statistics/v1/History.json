@@ -249,7 +249,7 @@
           "methods": [
             {
               "name": "create",
-              "description": "desc: Creates a new History. Gets a Schedule as an input and creates a History as an output. You can use this method to manually run a specific Schedule.\nrequest_example: \u003e-\n{\n\"schedule_id\": \"sch-b1d8be347bed\",\n\"domain_id\": \"domain-58010aa2e451\"\n}\nresponse_example: \u003e-",
+              "description": "desc: Creates a new History. Gets a Schedule as an input and creates a History as an output. You can use this method to manually run a specific Schedule.\nrequest_example: \u003e-\n{\n\"schedule_id\": \"sch-b1d8be347bed\",\n\"domain_id\": \"domain-58010aa2e451\"\n}",
               "requestType": "CreateHistoryRequest",
               "requestLongType": "CreateHistoryRequest",
               "requestFullType": "spaceone.api.statistics.v1.CreateHistoryRequest",
