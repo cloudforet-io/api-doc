@@ -565,7 +565,7 @@
             },
             {
               "name": "list",
-              "description": "desc: Gets a list of all Repositories regardless of `domain`. You can use a query to get a filtered list of Repositories.\nrequest_example: \u003e-\n{\n\"query\": {},\n\"repository_id\": \"repo-123456789012\",\n}\nresponse_example: \u003e-\n{\n\"results\": [\n{\n\"repository_id\": \"repo-123456789012\",\n\"name\": \"Local-repo\",\n\"repository_type\": \"local\",\n\"endpoint\": \"grpc+ssl://local-url:443\",\n\"created_at\": \"2022-01-01T02:26:29.081Z\"\n}\n],\n\"total_count\": 1\n}",
+              "description": "desc: Gets a list of all Repositories regardless of `domain`. You can use a query to get a filtered list of Repositories.\nrequest_example: \u003e-\n{\n\"query\": {},\n\"repository_id\": \"repo-123456789012\"\n}\nresponse_example: \u003e-\n{\n\"results\": [\n{\n\"repository_id\": \"repo-123456789012\",\n\"name\": \"Local-repo\",\n\"repository_type\": \"local\",\n\"endpoint\": \"grpc+ssl://local-url:443\",\n\"created_at\": \"2022-01-01T02:26:29.081Z\"\n}\n],\n\"total_count\": 1\n}",
               "requestType": "RepositoryQuery",
               "requestLongType": "RepositoryQuery",
               "requestFullType": "spaceone.api.repository.v1.RepositoryQuery",

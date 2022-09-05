@@ -1454,7 +1454,7 @@
             },
             {
               "name": "update_state",
-              "description": "desc: Updates the state of an Alert via callback URL by creating a temporary `access_key` while generating a Notification about the Alert.\nrequest_example: \u003e-\n{\n\"alert_id\": \"alert-123456789012\",\n\"access_key\": \"1q2w3e4r5t6y7u8i9o0p\"\n\"domain_id\": \"domain-123456789012\"\n}",
+              "description": "desc: Updates the state of an Alert via callback URL by creating a temporary `access_key` while generating a Notification about the Alert.\nrequest_example: \u003e-\n{\n\"alert_id\": \"alert-123456789012\",\n\"access_key\": \"1q2w3e4r5t6y7u8i9o0p\",\n\"domain_id\": \"domain-123456789012\"\n}",
               "requestType": "UpdateAlertStateRequest",
               "requestLongType": "UpdateAlertStateRequest",
               "requestFullType": "spaceone.api.monitoring.v1.UpdateAlertStateRequest",

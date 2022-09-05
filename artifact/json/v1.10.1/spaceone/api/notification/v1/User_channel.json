@@ -1076,7 +1076,7 @@
             },
             {
               "name": "delete",
-              "description": "desc: Deletes a specific UserChannel. You must specify the `user_channel_id` of the UserChannel to delete.\nrequest_example: \u003e-\n{\n\"user_channel_id\": \"user-ch-123456789012\",\n}",
+              "description": "desc: Deletes a specific UserChannel. You must specify the `user_channel_id` of the UserChannel to delete.\nrequest_example: \u003e-\n{\n\"user_channel_id\": \"user-ch-123456789012\"\n}",
               "requestType": "UserChannelRequest",
               "requestLongType": "UserChannelRequest",
               "requestFullType": "spaceone.api.notification.v1.UserChannelRequest",
@@ -1098,7 +1098,7 @@
             },
             {
               "name": "get",
-              "description": "desc: Gets a specific UserChannel. Prints detailed information about the UserChannel, including the Protocol configured and the Notification settings.\nrequest_example: \u003e-\n{\n\"user_channel_id\": \"user-ch-123456789012\",\n}\nresponse_example: \u003e-\n{\n\"user_channel_id\": \"user-ch-123456789012\",\n\"name\": \"Email\",\n\"state\": \"ENABLED\",\n\"data\": {\n\"email\": \"user1@email.com\"\n},\n\"protocol_id\": \"protocol-123456789012\",\n\"user_id\": \"user1@email.com\",\n\"domain_id\": \"domain-123456789012\",\n\"created_at\": \"2022-01-01T08:28:49.108Z\"\n}",
+              "description": "desc: Gets a specific UserChannel. Prints detailed information about the UserChannel, including the Protocol configured and the Notification settings.\nrequest_example: \u003e-\n{\n\"user_channel_id\": \"user-ch-123456789012\"\n}\nresponse_example: \u003e-\n{\n\"user_channel_id\": \"user-ch-123456789012\",\n\"name\": \"Email\",\n\"state\": \"ENABLED\",\n\"data\": {\n\"email\": \"user1@email.com\"\n},\n\"protocol_id\": \"protocol-123456789012\",\n\"user_id\": \"user1@email.com\",\n\"domain_id\": \"domain-123456789012\",\n\"created_at\": \"2022-01-01T08:28:49.108Z\"\n}",
               "requestType": "GetUserChannelRequest",
               "requestLongType": "GetUserChannelRequest",
               "requestFullType": "spaceone.api.notification.v1.GetUserChannelRequest",

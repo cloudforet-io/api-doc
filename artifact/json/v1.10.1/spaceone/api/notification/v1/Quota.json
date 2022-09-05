@@ -345,7 +345,7 @@
           "methods": [
             {
               "name": "create",
-              "description": "desc: Creates a new Quota limiting the use of a selected Protocol for a day or a month. If the parameter `limit` has no value, it will be deemed unlimited. If a Protocol has not set a Quota, the default Quota set in the Config will be applied.\nrequest_example: \u003e-\n{\n\"protocol_id\": \"protocol-123456789012\",\n\"limit\": {\n\"day\": 5.0,\n\"month\": 7.0\n},\n}\nresponse_example: \u003e-\n{\n\"quota_id\": \"quota-123456789012\",\n\"protocol_id\": \"protocol-123456789012\",\n\"limit\": {\n\"day\": 5.0,\n\"month\": 7.0\n},\n\"domain_id\": \"domain-123456789012\"\n}",
+              "description": "desc: Creates a new Quota limiting the use of a selected Protocol for a day or a month. If the parameter `limit` has no value, it will be deemed unlimited. If a Protocol has not set a Quota, the default Quota set in the Config will be applied.\nrequest_example: \u003e-\n{\n\"protocol_id\": \"protocol-123456789012\",\n\"limit\": {\n\"day\": 5.0,\n\"month\": 7.0\n}\n}\nresponse_example: \u003e-\n{\n\"quota_id\": \"quota-123456789012\",\n\"protocol_id\": \"protocol-123456789012\",\n\"limit\": {\n\"day\": 5.0,\n\"month\": 7.0\n},\n\"domain_id\": \"domain-123456789012\"\n}",
               "requestType": "CreateQuotaRequest",
               "requestLongType": "CreateQuotaRequest",
               "requestFullType": "spaceone.api.notification.v1.CreateQuotaRequest",
@@ -367,7 +367,7 @@
             },
             {
               "name": "update",
-              "description": "desc: Updates a specific Quota. You can make changes in Quota `limit`, managing the use of the Protocol.\nrequest_example: \u003e-\n{\n\"quota_id\": \"quota-123456789012\",\n\"limit\": {\n\"day\": 10.0,\n\"month\": 15.0\n},\n}\nresponse_example: \u003e-\n{\n\"quota_id\": \"quota-123456789012\",\n\"protocol_id\": \"protocol-123456789012\",\n\"limit\": {\n\"day\": 10.0,\n\"month\": 15.0\n},\n\"domain_id\": \"domain-123456789012\"\n}",
+              "description": "desc: Updates a specific Quota. You can make changes in Quota `limit`, managing the use of the Protocol.\nrequest_example: \u003e-\n{\n\"quota_id\": \"quota-123456789012\",\n\"limit\": {\n\"day\": 10.0,\n\"month\": 15.0\n}\n}\nresponse_example: \u003e-\n{\n\"quota_id\": \"quota-123456789012\",\n\"protocol_id\": \"protocol-123456789012\",\n\"limit\": {\n\"day\": 10.0,\n\"month\": 15.0\n},\n\"domain_id\": \"domain-123456789012\"\n}",
               "requestType": "UpdateQuotaRequest",
               "requestLongType": "UpdateQuotaRequest",
               "requestFullType": "spaceone.api.notification.v1.UpdateQuotaRequest",

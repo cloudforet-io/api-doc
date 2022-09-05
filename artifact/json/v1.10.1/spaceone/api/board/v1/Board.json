@@ -437,7 +437,7 @@
             },
             {
               "name": "set_categories",
-              "description": "desc: Adds or changes `categories` of a specific Board with SYSTEM permission. A change in `categories` of a Board does not affect the `category` of the child Posts.\nrequest_example: \u003e-\n{\n\"board_id\": \"board-123456789012\",\n\"categories\": [\"Developer\", \"SRE\", \"Devops\"]\n}\nresponse_example: \u003e-\n{\n\"board_id\": \"board-123456789012\",\n\"name\": \"dev-notice\",\n\"categories\": [\n\"Developer\",\n\"SRE\",\n\"Devops\",\n],\n\"tags\": {\n\"b\": \"c\"\n},\n\"created_at\": \"2022-01-01T05:24:19.758Z\"\n}",
+              "description": "desc: Adds or changes `categories` of a specific Board with SYSTEM permission. A change in `categories` of a Board does not affect the `category` of the child Posts.\nrequest_example: \u003e-\n{\n\"board_id\": \"board-123456789012\",\n\"categories\": [\"Developer\", \"SRE\", \"Devops\"]\n}\nresponse_example: \u003e-\n{\n\"board_id\": \"board-123456789012\",\n\"name\": \"dev-notice\",\n\"categories\": [\n\"Developer\",\n\"SRE\",\n\"Devops\"\n],\n\"tags\": {\n\"b\": \"c\"\n},\n\"created_at\": \"2022-01-01T05:24:19.758Z\"\n}",
               "requestType": "SetBoardCategoriesRequest",
               "requestLongType": "SetBoardCategoriesRequest",
               "requestFullType": "spaceone.api.board.v1.SetBoardCategoriesRequest",
@@ -481,7 +481,7 @@
             },
             {
               "name": "get",
-              "description": "desc: Gets a specific Board. You must specify the `board_id` of the Board to get. Prints detailed information about the Board, including `name`, `categories`.\nrequest_example: \u003e-\n{\n\"board_id\": \"board-123456789012\"\n}\nresponse_example: \u003e-\n{\n\"board_id\": \"board-123456789012\",\n\"name\": \"dev-notice\",\n\"categories\": [\n\"Developer\",\n\"SRE\",\n\"Devops\",\n],\n\"tags\": {\n\"b\": \"c\"\n},\n\"created_at\": \"2022-01-01T05:24:19.758Z\"\n}",
+              "description": "desc: Gets a specific Board. You must specify the `board_id` of the Board to get. Prints detailed information about the Board, including `name`, `categories`.\nrequest_example: \u003e-\n{\n\"board_id\": \"board-123456789012\"\n}\nresponse_example: \u003e-\n{\n\"board_id\": \"board-123456789012\",\n\"name\": \"dev-notice\",\n\"categories\": [\n\"Developer\",\n\"SRE\",\n\"Devops\"\n],\n\"tags\": {\n\"b\": \"c\"\n},\n\"created_at\": \"2022-01-01T05:24:19.758Z\"\n}",
               "requestType": "GetBoardRequest",
               "requestLongType": "GetBoardRequest",
               "requestFullType": "spaceone.api.board.v1.GetBoardRequest",
@@ -503,7 +503,7 @@
             },
             {
               "name": "list",
-              "description": "desc: Gets a list of all Boards. You can use a query to get a filtered list of Boards.\nrequest_example: \u003e\n{\n\"query\": {}\n}\nresponse_example: \u003e-\n{\n\"results\": [\n{\n\"board_id\": \"board-123456789012\",\n\"name\": \"dev-notice\",\n\"categories\": [\n\"flower\",\n\"school\",\n\"spaceone\"\n],\n\"tags\": {\n\"b\": \"c\"\n},\n\"created_at\": \"2022-01-01T05:16:08.549Z\"\n},\n{\n\"board_id\": \"board-987654321098\",\n\"name\": \"notice\",\n\"tags\": {\n\"a\": \"b\"\n},\n\"created_at\": \"2022-01-01T05:24:19.758Z\"\n}\n],\n\"total_count\": 2\n}",
+              "description": "desc: Gets a list of all Boards. You can use a query to get a filtered list of Boards.\nrequest_example: \u003e-\n{\n\"query\": {}\n}\nresponse_example: \u003e-\n{\n\"results\": [\n{\n\"board_id\": \"board-123456789012\",\n\"name\": \"dev-notice\",\n\"categories\": [\n\"flower\",\n\"school\",\n\"spaceone\"\n],\n\"tags\": {\n\"b\": \"c\"\n},\n\"created_at\": \"2022-01-01T05:16:08.549Z\"\n},\n{\n\"board_id\": \"board-987654321098\",\n\"name\": \"notice\",\n\"tags\": {\n\"a\": \"b\"\n},\n\"created_at\": \"2022-01-01T05:24:19.758Z\"\n}\n],\n\"total_count\": 2\n}",
               "requestType": "BoardQuery",
               "requestLongType": "BoardQuery",
               "requestFullType": "spaceone.api.board.v1.BoardQuery",
