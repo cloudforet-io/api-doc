@@ -28,11 +28,39 @@ description: A Quota is a limit on protocol usage for a day or a month. You can 
 > **POST** /notification/v1/quotas
 >
 
+> Creates a new Quota limiting the use of a selected Protocol for a day or a month. If the parameter `limit` has no value, it will be deemed unlimited. If a Protocol has not set a Quota, the default Quota set in the Config will be applied.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateQuotaRequest](quota.md#createquotarequest) |
 | Response |  [QuotaInfo](quota.md#quotainfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-123456789012",
+    "limit": {
+        "day": 5.0,
+        "month": 7.0
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "quota_id": "quota-123456789012",
+    "protocol_id": "protocol-123456789012",
+    "limit": {
+        "day": 5.0,
+        "month": 7.0
+    },
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -41,11 +69,39 @@ description: A Quota is a limit on protocol usage for a day or a month. You can 
 > **PUT** /notification/v1/quota/{quota_id}
 >
 
+> Updates a specific Quota. You can make changes in Quota `limit`, managing the use of the Protocol.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateQuotaRequest](quota.md#updatequotarequest) |
 | Response |  [QuotaInfo](quota.md#quotainfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "quota_id": "quota-123456789012",
+    "limit": {
+        "day": 10.0,
+        "month": 15.0
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "quota_id": "quota-123456789012",
+    "protocol_id": "protocol-123456789012",
+    "limit": {
+        "day": 10.0,
+        "month": 15.0
+    },
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

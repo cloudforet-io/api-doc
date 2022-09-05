@@ -63,11 +63,33 @@ description: An ExchangeRate is a resource defining the exchange rate of currenc
 > **POST** /cost-analysis/v1/exchange-rate/{currency}/reset
 >
 
+> Resets a value of a specific ExchangeRate and changes the ExchangeRate to the ExchangeRate of the `default` domain.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ExchangeRateRequest](exchange-rate.md#exchangeraterequest) |
 | Response |  [ExchangeRateInfo](exchange-rate.md#exchangerateinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "currency": "KRW"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "currency": "KRW",
+    "rate": 1242.7,
+    "state": "ENABLED",
+    "is_default": true,
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

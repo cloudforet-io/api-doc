@@ -28,11 +28,60 @@ description: A CloudServiceType is a classification with hierarchical informatio
 > **POST** /inventory/v1/cloud-service-types
 >
 
+> Creates a new CloudServiceType. You must specify the `name`, `provider`, and `group` parameters to create a CloudServiceType. One or several CloudServiceTypes exist in a specific `group`, and each CloudServiceType is identified by the `name` parameter.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateCloudServiceTypeRequest](cloud-service-type.md#createcloudservicetyperequest) |
 | Response |  [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "API-TEST",
+    "provider": "aws",
+    "group": "APIGateway",
+    "service_code": "AmazonApiGateway",
+    "is_primary": true,
+    "is_major": true,
+    "resource_type": "inventory.CloudService",
+    "metadata": {},
+    "labels": [
+        "Networking"
+    ],
+    "tags": {
+        "a": "b"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "cloud_service_type_id": "cloud-svc-type-27dd73ac89f8",
+    "name": "API-TEST",
+    "provider": "aws",
+    "group": "APIGateway",
+    "cloud_service_type_key": "aws.APIGateway.API-TEST",
+    "service_code": "AmazonApiGateway",
+    "is_primary": true,
+    "is_major": true,
+    "resource_type": "inventory.CloudService",
+    "metadata": {},
+    "tags": {
+        "a": "b"
+    },
+    "labels": [
+        "Networking"
+    ],
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-22T01:38:16.301Z",
+    "updated_at": "2022-06-22T01:38:16.301Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -41,11 +90,55 @@ description: A CloudServiceType is a classification with hierarchical informatio
 > **PUT** /inventory/v1/cloud-service-type/{cloud_service_type_id}
 >
 
+> Updates a specific CloudServiceType. You can make changes in CloudServiceType settings, except for `name`, `provider` and `group`. In particular, you can set the CloudServiceType's priority in a `group`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateCloudServiceTypeRequest](cloud-service-type.md#updatecloudservicetyperequest) |
 | Response |  [CloudServiceTypeInfo](cloud-service-type.md#cloudservicetypeinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "cloud_service_type_id": "cloud-svc-type-27dd73ac89f8",
+    "service_code": "AmazonApi",
+    "metadata": {},
+    "labels": [
+        "Networking2"
+    ],
+    "tags": {
+        "b": "c"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "cloud_service_type_id": "cloud-svc-type-27dd73ac89f8",
+    "name": "API-TEST",
+    "provider": "aws",
+    "group": "APIGateway",
+    "cloud_service_type_key": "aws.APIGateway.API-TEST",
+    "service_code": "AmazonApi",
+    "is_primary": true,
+    "is_major": true,
+    "resource_type": "inventory.CloudService",
+    "metadata": {},
+    "tags": {
+        "b": "c"
+    },
+    "labels": [
+        "Networking2"
+    ],
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-22T01:38:16.301Z",
+    "updated_at": "2022-06-22T02:12:11.184Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -128,11 +221,80 @@ description: A CloudServiceType is a classification with hierarchical informatio
 > **POST** /inventory/v1/cloud-service-types/search
 
 
+> Gets a list of all CloudServiceTypes. You can use a query to get a filtered list of CloudServiceTypes.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CloudServiceTypeQuery](cloud-service-type.md#cloudservicetypequery) |
 | Response |  [CloudServiceTypesInfo](cloud-service-type.md#cloudservicetypesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {
+        "filter": [
+            {
+                "key": "provider",
+                "value": "aws",
+                "operator": "eq"
+            }
+        ]
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "cloud_service_type_id": "cloud-svc-type-7e1c113b39ff",
+            "name": "API",
+            "provider": "aws",
+            "group": "APIGateway",
+            "cloud_service_type_key": "aws.APIGateway.API",
+            "service_code": "AmazonApiGateway",
+            "is_primary": true,
+            "is_major": true,
+            "resource_type": "inventory.CloudService",
+            "metadata": {},
+            "tags": {
+                "spaceone:icon": "https://spaceone.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/aws/Amazon-API-Gateway.svg"
+            },
+            "labels": [
+                "Networking"
+            ],
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2021-06-03T02:29:32.690Z",
+            "updated_at": "2022-06-22T00:04:45.477Z"
+        },
+        {
+            "cloud_service_type_id": "cloud-svc-type-64a0de601371",
+            "name": "Certificate",
+            "provider": "aws",
+            "group": "CertificateManager",
+            "cloud_service_type_key": "aws.CertificateManager.Certificate",
+            "service_code": "AWSCertificateManager",
+            "is_primary": true,
+            "resource_type": "inventory.CloudService",
+            "metadata": {},
+            "tags": {
+                "spaceone:icon": "https://spaceone.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/aws/AWS-Certificate-Manager.svg"
+            },
+            "labels": [
+                "Security"
+            ],
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2021-06-03T02:29:53.052Z",
+            "updated_at": "2022-06-22T00:05:41.252Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

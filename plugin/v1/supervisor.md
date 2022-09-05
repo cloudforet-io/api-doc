@@ -260,11 +260,29 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 > **POST** /plugin/v1/supervisor/{supervisor_id}/plugin/{plugin_id}/recover
 >
 
+> Recovers a specific plugin instance in a specific Supervisor. Changes the `state` of the Supervisor to `RE-PROVISIONING`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [RecoverPluginRequest](supervisor.md#recoverpluginrequest) |
 | Response |  [PluginInfo](supervisor.md#plugininfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "supervisor_id": "supervisor-a4c287cba676",
+    "plugin_id": "plugin-api-direct-mon-webhook",
+    "version": "1.1.0"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

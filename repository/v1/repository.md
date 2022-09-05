@@ -161,11 +161,39 @@ description: A Repository is a repository storing data of deployable plugins.
 > **POST** /repository/v1/repositories/search
 
 
+> Gets a list of all Repositories regardless of `domain`. You can use a query to get a filtered list of Repositories.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [RepositoryQuery](repository.md#repositoryquery) |
 | Response |  [RepositoriesInfo](repository.md#repositoriesinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "repository_id": "repo-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "repository_id": "repo-123456789012",
+            "name": "Local-repo",
+            "repository_type": "local",
+            "endpoint": "grpc+ssl://local-url:443",
+            "created_at": "2022-01-01T02:26:29.081Z"
+        }
+    ],
+    "total_count": 1
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

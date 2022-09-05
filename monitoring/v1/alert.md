@@ -136,11 +136,23 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 > **POST** /monitoring/v1/alert/{alert_id}/{access_key}/{state}
 >
 
+> Updates the state of an Alert via callback URL by creating a temporary `access_key` while generating a Notification about the Alert.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateAlertStateRequest](alert.md#updatealertstaterequest) |
 | Response |  [AlertInfo](alert.md#alertinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "alert_id": "alert-123456789012",
+    "access_key": "1q2w3e4r5t6y7u8i9o0p",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

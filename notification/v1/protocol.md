@@ -212,11 +212,74 @@ description: A Protocol defines the method to use when dispatching Notifications
 > **PUT** /notification/v1/protocol/{protocol_id}/plugin
 >
 
+> Updates a plugin for a Protocol. It is usually used when redeploying a plugin to a new version.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateProtocolPluginRequest](protocol.md#updateprotocolpluginrequest) |
 | Response |  [ProtocolInfo](protocol.md#protocolinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "protocol_id": "protocol-123456789012",
+    "version": "1.0.2",
+    "options": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "protocol_id": "protocol-123546789012",
+    "name": "Email-test",
+    "state": "ENABLED",
+    "protocol_type": "EXTERNAL",
+    "capability": {
+        "supported_schema": [
+            "email_smtp"
+        ]
+    },
+    "plugin_info": {
+        "plugin_id": "plugin-email-noti-protocol",
+        "version": "1.0.2",
+        "options": {},
+        "secret_id": "secret-123546789012",
+        "metadata": {
+            "data": {
+                "schema": {
+                    "properties": {
+                        "email": {
+                            "pattern": "^[\\W]*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4}[\\W]*,{1}[\\W]*)*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4})[\\W]*$",
+                            "examples": [
+                                "user1@test.com, user2@test.com"
+                            ],
+                            "minLength": 10.0,
+                            "description": "Email address to receive notifications",
+                            "type": "string",
+                            "title": "Email Address"
+                        }
+                    },
+                    "required": [
+                        "email"
+                    ],
+                    "type": "object"
+                }
+            },
+            "data_type": "PLAIN_TEXT"
+        },
+        "upgrade_mode": "AUTO"
+    },
+    "tags": {
+        "type": "test"
+    },
+    "domain_id": "domain-123546789012",
+    "created_at": "2022-01-01T07:55:57.043Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -472,11 +535,75 @@ description: A Protocol defines the method to use when dispatching Notifications
 > **POST** /notification/v1/protocols/search
 
 
+> Gets a list of Protocols. You can use a query to get a filtered list of Protocols.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ProtocolQuery](protocol.md#protocolquery) |
 | Response |  [ProtocolsInfo](protocol.md#protocolsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "protocol_id": "protocol-123456789012",
+            "name": "Email",
+            "state": "ENABLED",
+            "protocol_type": "EXTERNAL",
+            "capability": {
+                "supported_schema": [
+                    "email_smtp"
+                ]
+            },
+            "plugin_info": {
+                "plugin_id": "plugin-email-noti-protocol",
+                "version": "1.0.1",
+                "options": {},
+                "secret_id": "secret-123456789012",
+                "metadata": {
+                    "data_type": "PLAIN_TEXT",
+                    "data": {
+                        "schema": {
+                            "properties": {
+                                "email": {
+                                    "pattern": "^[\\W]*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4}[\\W]*,{1}[\\W]*)*([\\w+\\-.%]+@[\\w\\-.]+\\.[A-Za-z]{2,4})[\\W]*$",
+                                    "examples": [
+                                        "user1@test.com, user2@test.com"
+                                    ],
+                                    "minLength": 10.0,
+                                    "description": "Email address to receive notifications",
+                                    "type": "string",
+                                    "title": "Email Address"
+                                }
+                            },
+                            "required": [
+                                "email"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                },
+                "upgrade_mode": "AUTO"
+            },
+            "tags": {},
+            "domain_id": "domain-123456789012",
+            "created_at": "2022-01-01T07:55:57.043Z"
+        }
+    ],
+    "total_count": 1
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

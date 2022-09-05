@@ -24,11 +24,30 @@ description: A Plugin is a resource managing endpoints of the plugin instances d
 > **POST** /plugin/v1/plugin/{plugin_id}/get-endpoint
 >
 
+> Gets the `endpoint` of a specific plugin instance. A Plugin returns only a single `endpoint` by determining `labels` and `priority`. If the requested plugin instance is already deployed, the `endpoint` is returned. If not, the `endpoint` is returned after deploying the plugin instance.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PluginEndpointRequest](plugin.md#pluginendpointrequest) |
 | Response |  [PluginEndpoint](plugin.md#pluginendpoint)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "version": "1.2.2"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "endpoint": "grpc://endpoint-url:50051"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

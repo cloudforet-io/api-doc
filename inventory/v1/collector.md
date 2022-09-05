@@ -290,11 +290,21 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 > **GET** /inventory/v1/collector/{collector_id}
 >
 
+> Gets a specific Collector. Prints detailed information about the Collector, including its state, basic information, and the plugin information used for cloud resource collection.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetCollectorRequest](collector.md#getcollectorrequest) |
 | Response |  [CollectorInfo](collector.md#collectorinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "collector_id": "collector-f2e4e9cc7f21"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -655,11 +665,82 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 > **GET** /inventory/v1/collector/{collector_id}/schedule/{schedule_id}
 >
 
+> Gets a specific schedule set in a specific Collector. You must specify the `collector_id` of the Collector and the `schedule_id` of the schedule.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ScheduleRequest](collector.md#schedulerequest) |
 | Response |  [ScheduleInfo](collector.md#scheduleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "collector_id": "collector-2c0847644f39",
+    "schedule_id": "sched-dfb2f6ef84bc"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "schedule_id": "sched-dfb2f6ef84bc",
+    "name": "regular collection",
+    "collect_mode": "ALL",
+    "schedule": {
+        "hours": [
+            16,
+            18,
+            20,
+            22,
+            0
+        ]
+    },
+    "created_at": "2022-06-17T07:12:07.374Z",
+    "collector_info": {
+        "collector_id": "collector-2c0847644f39",
+        "name": "AWS stat-kwon Collector",
+        "state": "ENABLED",
+        "plugin_info": {
+            "plugin_id": "plugin-30d21ef75a5d",
+            "version": "1.13.13.20220610.143142",
+            "options": {},
+            "provider": "aws",
+            "metadata": {
+                "supported_features": [
+                    "garbage_collection"
+                ],
+                "filter_format": [],
+                "supported_schedules": [
+                    "hours"
+                ],
+                "supported_resource_type": [
+                    "inventory.CloudService",
+                    "inventory.CloudServiceType",
+                    "inventory.Region"
+                ]
+            },
+            "upgrade_mode": "MANUAL"
+        },
+        "priority": 10,
+        "tags": {
+            "a": "b"
+        },
+        "created_at": "2022-06-17T06:33:27.195Z",
+        "domain_id": "domain-58010aa2e451",
+        "provider": "aws",
+        "capability": {
+            "supported_schema": [
+                "aws_access_key"
+            ]
+        },
+        "is_public": true
+    },
+    "filter": {}
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -668,11 +749,95 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 > **POST** /inventory/v1/collector/{collector_id}/schedule/{schedule_id}
 >
 
+> Updates a specific schedule of the Collector. You can make changes in schedule settings, including `name` and collection time.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateScheduleRequest](collector.md#updateschedulerequest) |
 | Response |  [ScheduleInfo](collector.md#scheduleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "schedule_id": "sched-dfb2f6ef84bc",
+    "collector_id": "collector-2c0847644f39",
+    "name": "regular collection",
+    "collect_mode": "ALL",
+    "schedule": {
+        "hours": [
+            2,
+            4,
+            6,
+            8,
+            0
+        ]
+    },
+    "filter": {}
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "schedule_id": "sched-dfb2f6ef84bc",
+    "name": "regular collection",
+    "collect_mode": "ALL",
+    "schedule": {
+        "hours": [
+            2,
+            4,
+            6,
+            8,
+            0
+        ]
+    },
+    "created_at": "2022-06-17T07:12:07.374Z",
+    "collector_info": {
+        "collector_id": "collector-2c0847644f39",
+        "name": "AWS stat-kwon Collector",
+        "state": "ENABLED",
+        "plugin_info": {
+            "plugin_id": "plugin-30d21ef75a5d",
+            "version": "1.13.13.20220610.143142",
+            "options": {},
+            "provider": "aws",
+            "metadata": {
+                "supported_features": [
+                    "garbage_collection"
+                ],
+                "supported_schedules": [
+                    "hours"
+                ],
+                "supported_resource_type": [
+                    "inventory.CloudService",
+                    "inventory.CloudServiceType",
+                    "inventory.Region"
+                ],
+                "filter_format": []
+            },
+            "upgrade_mode": "MANUAL"
+        },
+        "priority": 10,
+        "tags": {
+            "a": "b"
+        },
+        "created_at": "2022-06-17T06:33:27.195Z",
+        "last_collected_at": "2022-06-17T08:00:00.793Z",
+        "domain_id": "domain-58010aa2e451",
+        "provider": "aws",
+        "capability": {
+            "supported_schema": [
+                "aws_access_key"
+            ]
+        },
+        "is_public": true
+    },
+    "filter": {}
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

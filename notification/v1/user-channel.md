@@ -331,11 +331,21 @@ description: A UserChannel is a destination where Notifications are delivered. N
 > **DELETE** /notification/v1/user-channel/{user_channel_id}
 >
 
+> Deletes a specific UserChannel. You must specify the `user_channel_id` of the UserChannel to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UserChannelRequest](user-channel.md#userchannelrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -344,11 +354,38 @@ description: A UserChannel is a destination where Notifications are delivered. N
 > **GET** /notification/v1/user-channel/{user_channel_id}
 >
 
+> Gets a specific UserChannel. Prints detailed information about the UserChannel, including the Protocol configured and the Notification settings.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetUserChannelRequest](user-channel.md#getuserchannelrequest) |
 | Response |  [UserChannelInfo](user-channel.md#userchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "user_channel_id": "user-ch-123456789012",
+    "name": "Email",
+    "state": "ENABLED",
+    "data": {
+        "email": "user1@email.com"
+    },
+    "protocol_id": "protocol-123456789012",
+    "user_id": "user1@email.com",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T08:28:49.108Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

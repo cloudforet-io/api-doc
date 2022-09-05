@@ -170,11 +170,24 @@ description: A Notification is a service that delivers event data generated in C
 > **POST** /notification/v1/notifications/read
 >
 
+> Marks a Notification as read. When a Notification is raised and if the Notification has been acknowledged, it can be marked as read with the method.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SetReadNotificationRequest](notification.md#setreadnotificationrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "notifications": [
+        "notification-6c548a37ee77",
+        "notification-4j3jt9384fnf"
+    ]
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -235,11 +248,83 @@ description: A Notification is a service that delivers event data generated in C
 > **POST** /notification/v1/notifications/search
 
 
+> Gets a list of all Notifications. You can use a query to get a filtered list of Notifications.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [NotificationQuery](notification.md#notificationquery) |
 | Response |  [NotificationsInfo](notification.md#notificationsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {
+        "filter": [
+            {
+                "key": "notification_type",
+                "value": "INFO",
+                "operator": "eq"
+            }
+        ]
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "notification_id": "notification-9f1476af11b7",
+            "topic": "monitoring.Alert",
+            "message": {
+                "tags": {
+                    "state": "ACKNOWLEDGED",
+                    "resource_id": "pod",
+                    "project_id": "project-18655561c535",
+                    "urgency": "LOW",
+                    "created_at": null,
+                    "assignee": "yuda@test.co"
+                },
+                "title": "[Alerting] Not Running Pods 0:OK alert",
+                "description": "[cloudone-dev-v1-eks-cluster] Not Running Pods 0 is OK"
+            },
+            "notification_type": "INFO",
+            "notification_level": "LV2",
+            "is_read": true,
+            "user_id": "user33@spaceone.dev",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2021-06-21T17:13:39.570Z"
+        },
+        {
+            "notification_id": "notification-4025c1b61225",
+            "topic": "monitoring.Alert",
+            "message": {
+                "title": "[Asia Pacific (Seoul)]: NLB-TCP_Target_Reset_Count-Alert",
+                "description": "Threshold Crossed: 1 out of the last 1 datapoints [200.0 (25/06/21 06:38:00)] was not greater than the threshold (200.0)",
+                "tags": {
+                    "resource_id": "AWS/NetworkELB",
+                    "resource_name": "[Asia Pacific (Seoul)]:[AWS/NetworkELB]: net/dfsbvs/advdr32rwqdsvzc",
+                    "created_at": null,
+                    "state": "TRIGGERED",
+                    "project_id": "project-18655561c535",
+                    "urgency": "LOW"
+                }
+            },
+            "notification_type": "INFO",
+            "notification_level": "ALL",
+            "is_read": true,
+            "user_id": "user1@cloudforet.io",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2021-06-25T06:42:05.867Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

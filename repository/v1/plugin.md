@@ -426,11 +426,37 @@ description: A Plugin is a resource containing data of deployable plugins such a
 > **GET** /repository/v1/plugins/{plugin_id}/versions
 >
 
+> Gets all version data of a specific Plugin from its Repository. The parameter `plugin_id` is used as an identifier of a Plugin to get version data.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [RepositoryPluginRequest](plugin.md#repositorypluginrequest) |
 | Response |  [VersionsInfo](plugin.md#versionsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "total_count": 1,
+    "results": [
+        "1.2.2",
+        "1.2.1.20220429.104002",
+        "1.2.1.20220422.161421",
+        "1.2.1.20220411.113807",
+        "1.2.1"
+    ]
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -494,11 +520,78 @@ description: A Plugin is a resource containing data of deployable plugins such a
 > **POST** /repository/v1/plugins/search
 
 
+> Gets a list of all Plugins registered in a specific Repository. The parameter `repository_id` is used as an identifier of a Repository to get its list of Plugins. You can use a query to get a filtered list of Plugins.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [PluginQuery](plugin.md#pluginquery) |
 | Response |  [PluginsInfo](plugin.md#pluginsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {},
+    "repository_id": "repo-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "plugin_id": "plugin-api-direct-mon-webhook",
+            "name": "API Direct Webhook",
+            "image": "pyengine/plugin-api-direct-mon-webhook",
+            "registry_url": "registry.hub.docker.com",
+            "state": "ENABLED",
+            "service_type": "monitoring.Webhook",
+            "registry_type": "DOCKER_HUB",
+            "registry_config": {},
+            "capability": {},
+            "template": {},
+            "labels": [],
+            "tags": {
+                "icon": "https://icon-url/icon.svg"
+            },
+            "repository_info": {
+                "repository_id": "repo-123456789012",
+                "name": "Marketplace",
+                "repository_type": "remote"
+            },
+            "domain_id": "domain-987654321098",
+            "created_at": "2022-01-01T03:25:10.408Z",
+            "updated_at": "2022-01-01T03:25:10.408Z"
+        },
+        {
+            "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+            "name": "AWS HyperBilling Cost Analysis Data Source",
+            "image": "pyengine/plugin-aws-hyperbilling-cost-datasource",
+            "registry_url": "registry.hub.docker.com",
+            "state": "ENABLED",
+            "service_type": "cost_analysis.DataSoruce",
+            "registry_type": "DOCKER_HUB",
+            "registry_config": {},
+            "capability": {},
+            "template": {},
+            "labels": [],
+            "tags": {},
+            "repository_info": {
+                "repository_id": "repo-123456789012",
+                "name": "Marketplace",
+                "repository_type": "remote"
+            },
+            "domain_id": "domain-987654321098",
+            "created_at": "2022-01-01T04:56:55.082Z",
+            "updated_at": "2022-01-01T04:56:55.082Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

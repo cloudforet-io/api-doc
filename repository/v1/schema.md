@@ -28,11 +28,50 @@ description: A Schema is a data structure used in all domains. For example, data
 > **POST** /repository/v1/schemas
 >
 
+> Creates a new Schema. You must specify the parameters: `service_type`, `name`, and `schema`(data structure). With the parameter `domain_id`, you can choose whether you will create a Schema in `Local` or externally. The Schema created includes `repository_info`, information about where the resource is managed.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateSchemaRequest](schema.md#createschemarequest) |
 | Response |  [SchemaInfo](schema.md#schemainfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "name": "slack_webhook",
+    "service_type": "secret.credentials",
+    "schema": {},
+    "labels": [],
+    "tags": {
+        "description": "Slack Webhook"
+    },
+    "domain_id": "domain-987654321098"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "name": "slack_webhook",
+    "service_type": "secret.credentials",
+    "schema": {},
+    "labels": [],
+    "tags": {
+        "description": "Slack Webhook"
+    },
+    "repository_info": {
+        "repository_id": "repo-123456789012",
+        "name": "Local",
+        "repository_type": "local"
+    },
+    "domain_id": "domain-987654321098",
+    "created_at": "2022-01-01T05:46:49.929Z",
+    "updated_at": "2022-01-01T05:46:49.929Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

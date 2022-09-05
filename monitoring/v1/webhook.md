@@ -132,11 +132,48 @@ description: A Webhook is a plugin instance receiving data from external monitor
 > **PUT** /monitoring/v1/webhook/{webhook_id}/plugin
 >
 
+> Updates the plugin of a specific DataSource. You can change the `version` of the plugin and select the `upgrade_mode` among `AUTO`, `MANUAL`, and `NONE`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateWebhookPluginRequest](webhook.md#updatewebhookpluginrequest) |
 | Response |  [WebhookInfo](webhook.md#webhookinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "plugin_id": "plugin-aws-sns-mon-webhook",
+    "version": "1.2.2",
+    "options": {},
+    "metadata": {},
+    "upgrade_mode": "AUTO"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "webhook_id": "webhook-123456789012",
+    "name": "AWS-SNS-Webhook",
+    "state": "ENABLED",
+    "access_key": "1234567890121234567890121234",
+    "webhook_url": "https://monitoring-webhook.dev.spaceone.dev/monitoring/v1/webhook/webhook-123456789012/1234567890121234567890121234/events",
+    "capability": {},
+    "plugin_info": {
+        "plugin_id": "plugin-aws-sns-mon-webhook",
+        "version": "1.2.2",
+        "options": {},
+        "metadata": {},
+        "upgrade_mode": "AUTO"
+    },
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T09:13:16.723Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

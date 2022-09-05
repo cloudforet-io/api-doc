@@ -209,11 +209,59 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 > **PUT** /notification/v1/project-channel/{project_channel_id}/subscription
 >
 
+> Sets a subscription for a ProjectChannel. A subscription is a topic for channels to subscribe to and get notified about. If a ProjectChannel has subscriptions, a Notification is dispatched only if the topic of the Notification is the same as the one set in the subscriptions. If there is no subscription in a ProjectChannel, all Notifications will be dispatched.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateProjectChannelSubscriptionRequest](project-channel.md#updateprojectchannelsubscriptionrequest) |
 | Response |  [ProjectChannelInfo](project-channel.md#projectchannelinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "project_channel_id": "project-ch-cff007433a23",
+    "is_subscribe": true,
+    "subscriptions": [
+        "monitoring.Alert"
+    ]
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "project_channel_id": "project-ch-cff007433a23",
+    "name": "sms-test",
+    "state": "ENABLED",
+    "data": {
+        "phone_number": "01033334444"
+    },
+    "is_subscribe": true,
+    "subscriptions": [
+        "monitoring.Alert"
+    ],
+    "notification_level": "LV1",
+    "is_scheduled": true,
+    "schedule": {
+        "day_of_week": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+        ],
+        "end_hour": 9
+    },
+    "tags": {},
+    "protocol_id": "protocol-ab94ea7d574e",
+    "project_id": "project-52a423012d5e",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-06-20T06:03:09.177Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

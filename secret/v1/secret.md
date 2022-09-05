@@ -76,11 +76,47 @@ description: A Secret is an external data, encrypted by CluodForet.
 > **PUT** /secret/v1/secret/{secret_id}
 >
 
+> Updates a specific Secret. You can make changes in Secret settings, including `name` and`tags`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateSecretRequest](secret.md#updatesecretrequest) |
 | Response |  [SecretInfo](secret.md#secretinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "secret_id": "secret-123456789012",
+    "name": "aws-dev2",
+    "tags": {
+        "a": "b"
+    },
+    "project_id": "project-123456789012",
+    "release_project": true,
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "secret_id": "secret-123456789012",
+    "name": "aws-dev2",
+    "secret_type": "CREDENTIALS",
+    "tags": {
+        "a": "b"
+    },
+    "schema": "aws_access_key",
+    "provider": "aws",
+    "service_account_id": "sa-123456789012",
+    "project_id": "",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T06:10:14.851Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

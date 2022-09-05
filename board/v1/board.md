@@ -123,11 +123,44 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 > **PUT** /board/v1/board/{board_id}/set-categories
 >
 
+> Adds or changes `categories` of a specific Board with SYSTEM permission. A change in `categories` of a Board does not affect the `category` of the child Posts.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [SetBoardCategoriesRequest](board.md#setboardcategoriesrequest) |
 | Response |  [BoardInfo](board.md#boardinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "board_id": "board-123456789012",
+    "categories": [
+        "Developer",
+        "SRE",
+        "Devops"
+    ]
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "board_id": "board-123456789012",
+    "name": "dev-notice",
+    "categories": [
+        "Developer",
+        "SRE",
+        "Devops"
+    ],
+    "tags": {
+        "b": "c"
+    },
+    "created_at": "2022-01-01T05:24:19.758Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -159,11 +192,39 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 > **GET** /board/v1/board/{board_id}
 >
 
+> Gets a specific Board. You must specify the `board_id` of the Board to get. Prints detailed information about the Board, including `name`, `categories`.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetBoardRequest](board.md#getboardrequest) |
 | Response |  [BoardInfo](board.md#boardinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "board_id": "board-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "board_id": "board-123456789012",
+    "name": "dev-notice",
+    "categories": [
+        "Developer",
+        "SRE",
+        "Devops"
+    ],
+    "tags": {
+        "b": "c"
+    },
+    "created_at": "2022-01-01T05:24:19.758Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -183,7 +244,9 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 {% tabs %}
 {% tab title="Request Example" %}
 ```text
->{"query": {}}
+{
+    "query": {}
+}
 ```
 {% endtab %}
 

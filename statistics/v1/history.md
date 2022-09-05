@@ -25,11 +25,22 @@ description: A History is a record of data collection based on a Schedule.
 > **POST** /statistics/v1/history
 >
 
+> Creates a new History. Gets a Schedule as an input and creates a History as an output. You can use this method to manually run a specific Schedule.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateHistoryRequest](history.md#createhistoryrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "schedule_id": "sch-b1d8be347bed",
+    "domain_id": "domain-58010aa2e451"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

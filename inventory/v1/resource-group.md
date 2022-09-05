@@ -207,11 +207,21 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 > **DELETE** /inventory/v1/resource-group/{resource_group_id}
 >
 
+> Deletes a specific ResourceGroup. You must specify the `resource_group_id` of the ResourceGroup to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ResourceGroupRequest](resource-group.md#resourcegrouprequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "resource_group_id": "rsc-grp-aa3c4ca465b2"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -220,11 +230,60 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 > **GET** /inventory/v1/resource-group/{resource_group_id}
 >
 
+> Gets a specific ResourceGroup. Prints detailed information about the ResourceGroup, including the information of the grouped cloud resources.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetResourceGroupRequest](resource-group.md#getresourcegrouprequest) |
 | Response |  [ResourceGroupInfo](resource-group.md#resourcegroupinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "resource_group_id": "rsc-grp-aa3c4ca465b2"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "resource_group_id": "rsc-grp-aa3c4ca465b2",
+    "name": "stset",
+    "resources": [
+        {
+            "resource_type": "inventory.Server?provider=aws&cloud_service_group=EC2&cloud_service_type=Instance",
+            "filter": [
+                {
+                    "k": "provider",
+                    "o": "eq",
+                    "v": "aws"
+                },
+                {
+                    "v": "EC2",
+                    "k": "cloud_service_group",
+                    "o": "eq"
+                },
+                {
+                    "o": "eq",
+                    "k": "cloud_service_type",
+                    "v": "Instance"
+                }
+            ],
+            "keyword": "test"
+        }
+    ],
+    "options": {
+        "raw_filter": []
+    },
+    "tags": {},
+    "project_id": "project-18655561c535",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2021-06-01T10:23:20.537Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -235,11 +294,113 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 > **POST** /inventory/v1/resource-groups/search
 
 
+> Gets a list of all ResourceGroups. You can use a query to get a filtered list of ResourceGroups.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [ResourceGroupQuery](resource-group.md#resourcegroupquery) |
 | Response |  [ResourceGroupsInfo](resource-group.md#resourcegroupsinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "query": {
+        "filter": [
+            {
+                "key": "name",
+                "value": [
+                    "azure-vmss-group",
+                    "stset"
+                ],
+                "operator": "in"
+            }
+        ]
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "results": [
+        {
+            "resource_group_id": "rsc-grp-4c86e071e0f0",
+            "name": "azure-vmss-group",
+            "resources": [
+                {
+                    "resource_type": "inventory.CloudService?provider=azure&cloud_service_group=Compute&cloud_service_type=VmScaleSet",
+                    "filter": [
+                        {
+                            "k": "provider",
+                            "v": "azure",
+                            "o": "eq"
+                        },
+                        {
+                            "v": "Compute",
+                            "k": "cloud_service_group",
+                            "o": "eq"
+                        },
+                        {
+                            "k": "cloud_service_type",
+                            "v": "VmScaleSet",
+                            "o": "eq"
+                        }
+                    ]
+                }
+            ],
+            "options": {
+                "raw_filter": []
+            },
+            "tags": {},
+            "project_id": "project-9074eea97d7e",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2021-04-23T03:23:40.037Z"
+        },
+        {
+            "resource_group_id": "rsc-grp-aa3c4ca465b2",
+            "name": "stset",
+            "resources": [
+                {
+                    "resource_type": "inventory.Server?provider=aws&cloud_service_group=EC2&cloud_service_type=Instance",
+                    "filter": [
+                        {
+                            "k": "provider",
+                            "v": "aws",
+                            "o": "eq"
+                        },
+                        {
+                            "v": "EC2",
+                            "k": "cloud_service_group",
+                            "o": "eq"
+                        },
+                        {
+                            "k": "cloud_service_type",
+                            "v": "Instance",
+                            "o": "eq"
+                        }
+                    ],
+                    "keyword": "test"
+                }
+            ],
+            "options": {
+                "raw_filter": [
+                    [
+                        "test"
+                    ]
+                ]
+            },
+            "tags": {},
+            "project_id": "project-18655561c535",
+            "domain_id": "domain-58010aa2e451",
+            "created_at": "2021-06-01T10:23:20.537Z"
+        }
+    ],
+    "total_count": 2
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

@@ -29,11 +29,72 @@ description: An EventRule is a rule to transform the request data when an Event 
 > **POST** /monitoring/v1/event-rules
 >
 
+> Creates a new EventRule. You can filter the Events to apply the EventRule by setting the input parameter `Conditions`. The method can change the Events' assignee or Project.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [CreateEventRuleRequest](event-rule.md#createeventrulerequest) |
 | Response |  [EventRuleInfo](event-rule.md#eventruleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "conditions": [
+        {
+            "key": "description",
+            "value": "API",
+            "operator": "contain"
+        }
+    ],
+    "conditions_policy": "ALL",
+    "actions": {
+        "change_assignee": "user1@email.com",
+        "change_urgency": "LOW",
+        "change_project": "project-123456789012",
+        "add_additional_info": {
+            "type": "personal rule"
+        },
+        "no_notification": true
+    },
+    "options": {},
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "event_rule_id": "er-123456789012",
+    "order": 1,
+    "conditions": [
+        {
+            "key": "description",
+            "value": "API",
+            "operator": "contain"
+        }
+    ],
+    "conditions_policy": "ALL",
+    "actions": {
+        "change_assignee": "user1@email.com",
+        "change_urgency": "LOW",
+        "change_project": "project-123456789012",
+        "add_additional_info": {
+            "type": "personal rule"
+        },
+        "no_notification": true
+    },
+    "options": {},
+    "scope": "PROJECT",
+    "project_id": "project-123456789012",
+    "tags": {},
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-02T06:02:31.517Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

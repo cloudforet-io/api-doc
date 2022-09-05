@@ -94,11 +94,63 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 > **PUT** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
 >
 
+> Updates a specific DataSourceRule. You can make changes in DataSourceRule settings, including filtering conditions. If the parameter `is_default` is `true`, only `Admin` type User can use this method.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [UpdateDataSourceRuleRequest](data-source-rule.md#updatedatasourcerulerequest) |
 | Response |  [DataSourceRuleInfo](data-source-rule.md#datasourceruleinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "data_source_rule_id": "rule-c8055231e212",
+    "name": "match_service_account_test",
+    "conditions_policy": "ALWAYS",
+    "actions": {
+        "match_service_account": {
+            "source": "account",
+            "target": "data.project_id"
+        }
+    },
+    "options": {
+        "stop_processing": true
+    },
+    "tags": {
+        "b": "c",
+        "a": "b"
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "data_source_rule_id": "rule-c8055231e212",
+    "name": "match_service_account_test",
+    "order": 2,
+    "conditions_policy": "ALWAYS",
+    "actions": {
+        "match_service_account": {
+            "source": "account",
+            "target": "data.project_id"
+        }
+    },
+    "options": {
+        "stop_processing": true
+    },
+    "tags": {
+        "a": "b",
+        "b": "c"
+    },
+    "data_source_id": "ds-c96609f5afeb",
+    "domain_id": "domain-58010aa2e451",
+    "created_at": "2022-07-19T10:13:28.335Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
