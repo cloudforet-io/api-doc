@@ -1,5 +1,5 @@
 ---
-description: A BudgetUsage is a resource mainly composed of two metrics: the actual cost usage, and the budget limit.
+description:  
 ---
 # Budget usage
 
