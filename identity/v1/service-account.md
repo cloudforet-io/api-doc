@@ -114,6 +114,8 @@ description:
 | provider |string|✔| |
 | project_id |string|✘| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| service_account_type |string|✔| |
+| trusted_service_account_id |string|✘| |
 | domain_id |string|✔| |
 
 ### GetServiceAccountRequest
@@ -128,9 +130,12 @@ description:
 | :--- | :--- | :--- |
 | service_account_id |string | |
 | name |string | |
+| service_account_type |string | |
 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | provider |string | |
+| trusted_service_account_id |string | |
 | project_info |[ProjectInfo](service-account.md#projectinfo) | |
+| scope |string | |
 | domain_id |string | |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | created_at |string | |
@@ -141,8 +146,11 @@ description:
 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
 | service_account_id |string|✘| |
 | name |string|✘| |
+| service_account_type |string|✘| |
 | provider |string|✘| |
+| trusted_service_account_id |string|✘| |
 | project_id |string|✘| |
+| scope |string|✘| |
 | domain_id |string|✘| |
 
 ### ServiceAccountRequest
@@ -172,4 +180,3 @@ description:
 | project_id |string|✘| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | domain_id |string|✔| |
-| release_project |bool|✘| |
