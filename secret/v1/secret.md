@@ -1,5 +1,5 @@
 ---
-description: A Secret is an external data, encrypted by CluodForet.
+description: A Secret is an external data, encrypted by CloudForet.
 ---
 # Secret
 
@@ -393,6 +393,12 @@ description: A Secret is an external data, encrypted by CluodForet.
 <td style="text-align:left"></td>
    </tr>
     <tr>
+      <td style="text-align:left; width:100px;">trusted_secret_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✔</td>
@@ -449,12 +455,6 @@ description: A Secret is an external data, encrypted by CluodForet.
 
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">secret_groups</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
@@ -480,6 +480,12 @@ description: A Secret is an external data, encrypted by CluodForet.
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">project_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">trusted_secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -540,12 +546,6 @@ description: A Secret is an external data, encrypted by CluodForet.
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">secret_group_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
       <td style="text-align:left; width:100px;">schema</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✘</td>
@@ -564,8 +564,8 @@ description: A Secret is an external data, encrypted by CluodForet.
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">include_secret_group</td>
-      <td style="text-align:left">bool</td>
+      <td style="text-align:left; width:100px;">trusted_service_account_id</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
