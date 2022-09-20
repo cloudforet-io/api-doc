@@ -564,7 +564,7 @@ description: A Secret is an external data, encrypted by CloudForet.
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">trusted_service_account_id</td>
+      <td style="text-align:left; width:100px;">trusted_secret_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
