@@ -53,10 +53,10 @@ description:
 ### CloudServiceTagInfo
 | Field | Type |  Description |
 | :--- | :--- | :--- |
-| tag_id |string | |
 | cloud_service_id |string | |
 | key |string | |
 | value |string | |
+| type |string | |
 | provider |string | |
 | project_id |string | |
 | domain_id |string | |
@@ -68,6 +68,7 @@ description:
 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
 | cloud_service_id |string|✘| |
 | key |string|✘| |
+| type |string|✘| |
 | provider |string|✘| |
 | project_id |string|✘| |
 | domain_id |string|✔| |
