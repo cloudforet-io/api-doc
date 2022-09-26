@@ -179,4 +179,5 @@ description:
 | data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | project_id |string|✘| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| trusted_service_account_id |string|✘| |
 | domain_id |string|✔| |
