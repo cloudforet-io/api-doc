@@ -180,4 +180,5 @@ description:
 | project_id |string|✘| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | trusted_service_account_id |string|✘| |
+| release_trusted_service_account |bool|✘| |
 | domain_id |string|✔| |
