@@ -164,8 +164,8 @@ description:
       <td style="text-align:left; width:100px;">scope</td>
       <td style="text-align:left"><ul>
           	<li>SCOPE_NONE</li>
-          	<li>GLOBAL</li>
-          	<li>PROJECT</li>
+          	<li>PUBLIC</li>
+          	<li>DOMAIN</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -278,8 +278,8 @@ description:
       <td style="text-align:left; width:100px;">scope</td>
       <td style="text-align:left"><ul>
           	<li>SCOPE_NONE</li>
-          	<li>GLOBAL</li>
-          	<li>PROJECT</li>
+          	<li>PUBLIC</li>
+          	<li>DOMAIN</li>
         </ul></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
