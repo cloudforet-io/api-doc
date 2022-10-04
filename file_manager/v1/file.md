@@ -126,8 +126,7 @@ description:
 | name |string|✔| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | reference |[FileReference](file.md#filereference)|✘| |
-| project_id |string|✘| |
-| domain_id |string|✔| |
+| domain_id |string|✘| |
 
 ### FileInfo
 <table>
@@ -208,7 +207,13 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">project_id</td>
+      <td style="text-align:left; width:100px;">user_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">user_domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
@@ -298,7 +303,7 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">project_id</td>
+      <td style="text-align:left; width:100px;">user_domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
@@ -306,7 +311,7 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
-<td style="text-align:center">✔</td>
+<td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
   </tbody>
@@ -324,7 +329,7 @@ description:
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | file_id |string|✔| |
-| domain_id |string|✔| |
+| domain_id |string|✘| |
 
 ### FileStatQuery
 | Field | Type | Required | Description |
@@ -342,7 +347,7 @@ description:
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | file_id |string|✔| |
-| domain_id |string|✔| |
+| domain_id |string|✘| |
 | only |list of string|✘| |
 
 ### UpdateFileRequest
@@ -351,5 +356,4 @@ description:
 | file_id |string|✔| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | reference |[FileReference](file.md#filereference)|✘| |
-| project_id |string|✘| |
-| domain_id |string|✔| |
+| domain_id |string|✘| |
