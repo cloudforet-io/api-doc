@@ -60,6 +60,7 @@ description:
 | schema |string|✘| |
 | start |string|✘| |
 | last_synchronized_at |string|✘| |
+| domain_id |string|✔| |
 
 ### TaskInfo
 | Field | Type |  Description |

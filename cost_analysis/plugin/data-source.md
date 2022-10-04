@@ -76,6 +76,7 @@ description:
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| domain_id |string|✔| |
 
 ### PluginInfo
 | Field | Type |  Description |
@@ -88,3 +89,4 @@ description:
 | options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | secret_data |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
 | schema |string|✘| |
+| domain_id |string|✔| |
