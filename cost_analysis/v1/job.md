@@ -210,6 +210,7 @@ description: A Job is an act of collecting external cost data through plugins. T
 | :--- | :--- | :--- |
 | start |string | |
 | end |string | |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### GetJobRequest
 | Field | Type | Required | Description |
