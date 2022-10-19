@@ -51,6 +51,7 @@ description:
 | :--- | :--- | :--- |
 | start |string | |
 | end |string | |
+| filter |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### GetTasksRequest
 | Field | Type | Required | Description |
