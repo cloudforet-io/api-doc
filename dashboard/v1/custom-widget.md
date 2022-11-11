@@ -1,0 +1,180 @@
+---
+description: description of dashboard
+---
+# Custom widget
+
+>  **Package : spaceone.api.dashboard.v1**
+
+## CustomWidget
+
+{% hint style="info" %}
+**CustomWidget Methods:**
+
+{%  endhint %}
+
+
+| Method | Request | Response |
+| :----- | :-------- | :-------- |
+| [**create**](custom-widget.md#create)|   [CreateCustomWidgetRequest](custom-widget.md#createcustomwidgetrequest) |   [CustomWidgetInfo](custom-widget.md#customwidgetinfo) |
+| [**update**](custom-widget.md#update)|   [UpdateCustomWidgetRequest](custom-widget.md#updatecustomwidgetrequest) |   [CustomWidgetInfo](custom-widget.md#customwidgetinfo) |
+| [**delete**](custom-widget.md#delete)|   [CustomWidgetRequest](custom-widget.md#customwidgetrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](custom-widget.md#get)|   [GetCustomWidgetRequest](custom-widget.md#getcustomwidgetrequest) |   [CustomWidgetInfo](custom-widget.md#customwidgetinfo) |
+| [**list**](custom-widget.md#list)|   [CustomWidgetQuery](custom-widget.md#customwidgetquery) |   [CustomWidgetInfo](custom-widget.md#customwidgetinfo) |
+| [**stat**](custom-widget.md#stat)|   [CustomWidgetStatQuery](custom-widget.md#customwidgetstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
+ 
+
+ 
+### create
+> **POST** /dashboard/v1/custom-widgets
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [CreateCustomWidgetRequest](custom-widget.md#createcustomwidgetrequest) |
+| Response |  [CustomWidgetInfo](custom-widget.md#customwidgetinfo)  |
+ 
+ 
+
+ 
+### update
+> **PUT** /dashboard/v1/custom-widget/{custom_widget_id}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [UpdateCustomWidgetRequest](custom-widget.md#updatecustomwidgetrequest) |
+| Response |  [CustomWidgetInfo](custom-widget.md#customwidgetinfo)  |
+ 
+ 
+
+ 
+### delete
+> **DELETE** /dashboard/v1/custom-widget/{custom_widget_id}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [CustomWidgetRequest](custom-widget.md#customwidgetrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+ 
+ 
+
+ 
+### get
+> **GET** /dashboard/v1/custom-widget/{custom_widget_id}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [GetCustomWidgetRequest](custom-widget.md#getcustomwidgetrequest) |
+| Response |  [CustomWidgetInfo](custom-widget.md#customwidgetinfo)  |
+ 
+ 
+
+ 
+### list
+> **GET** /dashboard/v1/custom-widgets
+>
+> **POST** /dashboard/v1/custom-widgets/search
+
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [CustomWidgetQuery](custom-widget.md#customwidgetquery) |
+| Response |  [CustomWidgetInfo](custom-widget.md#customwidgetinfo)  |
+ 
+ 
+
+ 
+### stat
+> **POST** /dashboard/v1/custom-widgets/stat
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [CustomWidgetStatQuery](custom-widget.md#customwidgetstatquery) |
+| Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
+
+
+## 
+
+## Message
+
+### CreateCustomWidgetRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| widget_name |string|✔| |
+| title |string|✔| |
+| widget_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✔| |
+| inherit_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
+
+### CustomWidgetInfo
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| custom_widget_id |string | |
+| widget_name |string | |
+| title |string | |
+| version |string | |
+| widget_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| inherit_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| user_id |string | |
+| domain_id |string | |
+| created_at |string | |
+| updated_at |string | |
+
+### CustomWidgetQuery
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
+| custom_widget_id |string|✘| |
+| widget_name |string|✘| |
+| title |string|✘| |
+| user_id |string|✘| |
+| domain_id |string|✔| |
+
+### CustomWidgetRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| custom_widget_id |string|✔| |
+| domain_id |string|✔| |
+
+### CustomWidgetStatQuery
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
+| domain_id |string|✔| |
+
+### CustomWidgetsInfo
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| results |[list of CustomWidgetInfo](custom-widget.md#customwidgetinfo) | |
+| total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+
+### GetCustomWidgetRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| custom_widget_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
+
+### UpdateCustomWidgetRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| custom_widget_id |string|✔| |
+| title |string|✘| |
+| widget_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| inherit_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✔| |
