@@ -15,8 +15,36 @@ description: A Job is an act of collecting external cloud resources through plug
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
+| [**delete**](job.md#delete)|   [JobRequest](job.md#jobrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](job.md#get)|   [GetJobRequest](job.md#getjobrequest) |  JobInfo|
 | [**list**](job.md#list)|   [JobsQuery](job.md#jobsquery) |   [JobsInfo](job.md#jobsinfo) |
 | [**stat**](job.md#stat)|   [JobStatQuery](job.md#jobstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
+ 
+
+ 
+### delete
+> **DELETE** /inventory/v1/job/{job_id}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [JobRequest](job.md#jobrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+ 
+ 
+
+ 
+### get
+> **GET** /inventory/v1/job/{job_id}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [GetJobRequest](job.md#getjobrequest) |
+| Response | JobInfo |
+ 
  
 
  
@@ -121,6 +149,19 @@ description: A Job is an act of collecting external cloud resources through plug
 ## 
 
 ## Message
+
+### GetJobRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| job_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
+
+### JobRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| job_id |string|✔| |
+| domain_id |string|✔| |
 
 ### JobStatQuery
 | Field | Type | Required | Description |

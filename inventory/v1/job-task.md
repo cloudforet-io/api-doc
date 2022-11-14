@@ -15,8 +15,36 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
+| [**delete**](job-task.md#delete)|   [JobTaskRequest](job-task.md#jobtaskrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**get**](job-task.md#get)|   [GetJobTaskRequest](job-task.md#getjobtaskrequest) |   [JobTaskInfo](job-task.md#jobtaskinfo) |
 | [**list**](job-task.md#list)|   [JobTaskQuery](job-task.md#jobtaskquery) |   [JobTasksInfo](job-task.md#jobtasksinfo) |
 | [**stat**](job-task.md#stat)|   [JobTaskStatQuery](job-task.md#jobtaskstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
+ 
+
+ 
+### delete
+> **DELETE** /inventory/v1/job-task/{job_task_id}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [JobTaskRequest](job-task.md#jobtaskrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+ 
+ 
+
+ 
+### get
+> **GET** /inventory/v1/job-task/{job_task_id}
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [GetJobTaskRequest](job-task.md#getjobtaskrequest) |
+| Response |  [JobTaskInfo](job-task.md#jobtaskinfo)  |
+ 
  
 
  
@@ -97,6 +125,13 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 ## 
 
 ## Message
+
+### GetJobTaskRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| job_task_id |string|✔| |
+| domain_id |string|✔| |
+| only |list of string|✘| |
 
 ### JobTaskInfo
 <table>
@@ -298,6 +333,12 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 </table>
 
 
+
+### JobTaskRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| job_task_id |string|✔| |
+| domain_id |string|✔| |
 
 ### JobTaskStatQuery
 | Field | Type | Required | Description |
