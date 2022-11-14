@@ -26,11 +26,22 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 > **DELETE** /inventory/v1/job-task/{job_task_id}
 >
 
+> Deletes a specific JobTask. You must specify the `job_task_id` of the JobTask to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [JobTaskRequest](job-task.md#jobtaskrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "job_task_id": "job-task-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -39,11 +50,56 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 > **GET** /inventory/v1/job-task/{job_task_id}
 >
 
+> Gets a specific JobTask. Prints detailed information about the JobTask, including its state, updated or failure counts, and error log.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetJobTaskRequest](job-task.md#getjobtaskrequest) |
 | Response |  [JobTaskInfo](job-task.md#jobtaskinfo)  |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "job_task_id": "job-task-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "job_task_id": "job-task-123456789012",
+    "status": "FAILURE",
+    "updated_count": 199,
+    "failure_count": 1,
+    "errors": [
+        {
+            "error_code": "ERROR_PLUGIN",
+            "message": "{\"tags\": [\"Could not interpret the value as a list\"]}",
+            "additional": {
+                "domain_id": "domain-123456789012",
+                "resource_id": "eventarc-us-central1-function",
+                "resource_type": "inventory.CloudService",
+                "cloud_service_group": "Pub/Sub",
+                "cloud_service_type": "Subscription",
+                "provider": "google_cloud"
+            }
+        }
+    ],
+    "job_id": "job-123456789012",
+    "secret_id": "secret-123456789012",
+    "provider": "google_cloud",
+    "service_account_id": "sa-123456789012",
+    "project_id": "project-123456789012",
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T11:00:02.588Z",
+    "started_at": "2022-01-01T11:00:02.819Z",
+    "finished_at": "2022-01-01T11:00:34.398Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 

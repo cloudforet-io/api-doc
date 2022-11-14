@@ -26,11 +26,22 @@ description: A Job is an act of collecting external cloud resources through plug
 > **DELETE** /inventory/v1/job/{job_id}
 >
 
+> Deletes a specific Job. You must specify the `job_id` of the Job to delete.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [JobRequest](job.md#jobrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "job_id": "job-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
@@ -39,11 +50,49 @@ description: A Job is an act of collecting external cloud resources through plug
 > **GET** /inventory/v1/job/{job_id}
 >
 
+> Gets a specific Job. Prints detailed information about the Job, including its state, total tasks, and collector info.
 
 | Type | Message |
 | :--- | :--- |
 | Request | [GetJobRequest](job.md#getjobrequest) |
 | Response | JobInfo |
+{% tabs %}
+{% tab title="Request Example" %}
+```text
+{
+    "job_id": "job-123456789012",
+    "domain_id": "domain-123456789012"
+}
+```
+{% endtab %}
+
+{% tab title="Response Example" %}
+```text
+{
+    "job_id": "job-123456789012",
+    "status": "ERROR",
+    "filter": {},
+    "total_tasks": 2,
+    "collector_info": {
+        "collector_id": "collector-123456789012",
+        "name": "Jenkins Collector",
+        "state": "ENABLED",
+        "plugin_info": {
+            "plugin_id": "plugin-jenkins-inven-collector",
+            "version": "0.1.1"
+        },
+        "provider": "jenkins",
+        "capability": {},
+        "is_public": true
+    },
+    "domain_id": "domain-123456789012",
+    "created_at": "2022-01-01T10:00:01.389Z",
+    "updated_at": "2022-01-01T10:00:01.389Z",
+    "finished_at": "2022-01-01T10:02:11.270Z"
+}
+```
+{% endtab %}
+{% endtabs %}
  
  
 
