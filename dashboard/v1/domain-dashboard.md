@@ -165,17 +165,84 @@ description: description of dashboard
 ## Message
 
 ### CreateDomainDashboardRequest
-| Field | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| name |string|✔| |
-| layouts |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
-| dashboard_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
-| settings |[DomainDashboardSettings](domain-dashboard.md#domaindashboardsettings)|✘| |
-| dashboard_options_schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
-| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
-| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
-| user_id |string|✘| |
-| domain_id |string|✔| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left; width:100px;">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left; width:100px;">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">viewers</td>
+      <td style="text-align:left"><ul>
+          	<li>VIEWERS_NONE</li>
+          	<li>PUBLIC</li>
+          	<li>PRIVATE</li>
+        </ul></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">layouts</td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">dashboard_options</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">settings</td>
+      <td style="text-align:left"><a href="domain-dashboard.md#domaindashboardsettings">DomainDashboardSettings</a></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">dashboard_options_schema</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">labels</td>
+      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">tags</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">user_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### DomainDashboardCurrency
 | Field | Type |  Description |
@@ -210,11 +277,11 @@ description: description of dashboard
 
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">scope</td>
+      <td style="text-align:left; width:100px;">viewers</td>
       <td style="text-align:left"><ul>
-          	<li>SCOPE_NONE</li>
-          	<li>DOMAIN</li>
-          	<li>USER</li>
+          	<li>VIEWERS_NONE</li>
+          	<li>PUBLIC</li>
+          	<li>PRIVATE</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -320,11 +387,11 @@ description: description of dashboard
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">scope</td>
+      <td style="text-align:left; width:100px;">viewers</td>
       <td style="text-align:left"><ul>
-          	<li>SCOPE_NONE</li>
-          	<li>DOMAIN</li>
-          	<li>USER</li>
+          	<li>VIEWERS_NONE</li>
+          	<li>PUBLIC</li>
+          	<li>PRIVATE</li>
         </ul></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
