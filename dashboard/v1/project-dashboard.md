@@ -234,12 +234,6 @@ description: description of dashboard
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">user_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:center">✔</td>
