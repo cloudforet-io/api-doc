@@ -117,6 +117,15 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
     "tags": {
         "a": "b"
     },
+    "cost_tag_keys": [
+        "Name",
+        "Environment",
+        "Role",
+        "Service"
+    ],
+    "cost_additional_info_keys": [
+        "raw_usage_type"
+    ],
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -187,6 +196,15 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
     "tags": {
         "type": "test"
     },
+    "cost_tag_keys": [
+        "Name",
+        "Environment",
+        "Role",
+        "Service"
+    ],
+    "cost_additional_info_keys": [
+        "raw_usage_type"
+    ],
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -256,6 +274,15 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
     "tags": {
         "type": "test"
     },
+    "cost_tag_keys": [
+        "Name",
+        "Environment",
+        "Role",
+        "Service"
+    ],
+    "cost_additional_info_keys": [
+        "raw_usage_type"
+    ],
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -345,6 +372,15 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
     "tags": {
         "type": "test"
     },
+    "cost_tag_keys": [
+        "Name",
+        "Environment",
+        "Role",
+        "Service"
+    ],
+    "cost_additional_info_keys": [
+        "raw_usage_type"
+    ],
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -411,6 +447,15 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
     "tags": {
         "type": "test"
     },
+    "cost_tag_keys": [
+        "Name",
+        "Environment",
+        "Role",
+        "Service"
+    ],
+    "cost_additional_info_keys": [
+        "raw_usage_type"
+    ],
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -547,6 +592,15 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
     "tags": {
         "a": "b"
     },
+    "cost_tag_keys": [
+        "Name",
+        "Environment",
+        "Role",
+        "Service"
+    ],
+    "cost_additional_info_keys": [
+        "raw_usage_type"
+    ],
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-03-30T02:21:28.756Z",
     "last_synchronized_at": "2022-07-17T16:00:05.077Z"
@@ -618,6 +672,15 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
             "tags": {
                 "a": "b"
             },
+            "cost_tag_keys": [
+                "Name",
+                "Environment",
+                "Role",
+                "Service"
+            ],
+            "cost_additional_info_keys": [
+                "raw_usage_type"
+            ],
             "domain_id": "domain-58010aa2e451",
             "created_at": "2022-03-30T02:21:28.756Z",
             "last_synchronized_at": "2022-07-17T16:00:05.077Z"
@@ -655,6 +718,8 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
             },
             "template": {},
             "tags": {},
+            "cost_tag_keys": [],
+            "cost_additional_info_keys": [],
             "domain_id": "domain-58010aa2e451",
             "created_at": "2022-04-13T05:34:54.223Z",
             "last_synchronized_at": "2022-07-17T16:00:08.254Z"
@@ -747,6 +812,18 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
     <tr>
       <td style="text-align:left; width:100px;">tags</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">cost_tag_keys</td>
+      <td style="text-align:left">list of string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">cost_additional_info_keys</td>
+      <td style="text-align:left">list of string</td>
 <td style="text-align:left"></td>
 
    </tr>
