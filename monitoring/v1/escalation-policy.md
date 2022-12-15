@@ -74,7 +74,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
     ],
     "repeat_count": 2,
     "finish_condition": "ACKNOWLEDGED",
-    "scope": "GLOBAL",
+    "scope": "DOMAIN",
     "tags": {},
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-06-21T09:22:45.340Z"
@@ -144,7 +144,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
     ],
     "repeat_count": 1,
     "finish_condition": "RESOLVED",
-    "scope": "GLOBAL",
+    "scope": "DOMAIN",
     "tags": {},
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-06-21T09:22:45.340Z"
@@ -198,7 +198,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
     ],
     "repeat_count": 1,
     "finish_condition": "RESOLVED",
-    "scope": "GLOBAL",
+    "scope": "DOMAIN",
     "tags": {},
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-06-21T09:22:45.340Z"
@@ -269,7 +269,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
         }
     ],
     "finish_condition": "ACKNOWLEDGED",
-    "scope": "GLOBAL",
+    "scope": "DOMAIN",
     "tags": {},
     "domain_id": "domain-58010aa2e451",
     "created_at": "2022-05-25T09:31:38.573Z"
@@ -316,7 +316,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
                 }
             ],
             "finish_condition": "ACKNOWLEDGED",
-            "scope": "GLOBAL",
+            "scope": "DOMAIN",
             "tags": {},
             "domain_id": "domain-58010aa2e451",
             "created_at": "2022-05-25T09:31:15.150Z"
@@ -334,7 +334,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
                 }
             ],
             "finish_condition": "ACKNOWLEDGED",
-            "scope": "GLOBAL",
+            "scope": "DOMAIN",
             "tags": {},
             "domain_id": "domain-58010aa2e451",
             "created_at": "2022-05-25T09:31:38.573Z"
@@ -486,7 +486,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
       <td style="text-align:left; width:100px;">scope</td>
       <td style="text-align:left"><ul>
           	<li>SCOPE_NONE</li>
-          	<li>GLOBAL</li>
+          	<li>DOMAIN</li>
           	<li>PROJECT</li>
         </ul></td>
 <td style="text-align:left"></td>
@@ -570,7 +570,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
       <td style="text-align:left; width:100px;">scope</td>
       <td style="text-align:left"><ul>
           	<li>SCOPE_NONE</li>
-          	<li>GLOBAL</li>
+          	<li>DOMAIN</li>
           	<li>PROJECT</li>
         </ul></td>
 <td style="text-align:center">✘</td>
