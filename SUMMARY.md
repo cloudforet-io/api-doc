@@ -72,7 +72,6 @@
     * [Note](inventory/v1/note.md)
     * [Region](inventory/v1/region.md)
     * [Resource Group](inventory/v1/resource-group.md)
-    * [Server](inventory/v1/server.md)
 * [Monitoring](monitoring/README.md)
   * [Plugin](monitoring/plugin/README.md)
     * [Data Source](monitoring/plugin/data-source.md)

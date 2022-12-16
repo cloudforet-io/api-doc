@@ -87,6 +87,16 @@ description:
 | :--- | :--- | :--- |
 | path |string | |
 
+### AnalyzeQuery
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| group_by |list of string | |
+| field_group |list of string | |
+| filter |[list of Filter](query.md#filter) | |
+| page |[Page](query.md#page) | |
+| sort |[list of SortKey](query.md#sortkey) | |
+| fields |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+
 ### Filter
 | Field | Type |  Description |
 | :--- | :--- | :--- |
@@ -148,3 +158,77 @@ description:
 | page |[Page](query.md#page) | |
 | distinct |string | |
 | keyword |string | |
+
+### TimeSeriesAnalyzeQuery
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left; width:100px;">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left; width:100px;">granularity</td>
+      <td style="text-align:left"><ul>
+          	<li>GRANULARITY_NONE</li>
+          	<li>DAILY</li>
+          	<li>MONTHLY</li>
+          	<li>ACCUMULATED</li>
+        </ul></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">start</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">end</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">group_by</td>
+      <td style="text-align:left">list of string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">field_group</td>
+      <td style="text-align:left">list of string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">filter</td>
+      <td style="text-align:left"><a href="query.md#filter">list of Filter</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">page</td>
+      <td style="text-align:left"><a href="query.md#page">Page</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">sort</td>
+      <td style="text-align:left"><a href="query.md#sortkey">list of SortKey</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">fields</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+  </tbody>
+</table>
+
+

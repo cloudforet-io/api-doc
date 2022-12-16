@@ -16,6 +16,7 @@ description:
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**list**](budget-usage.md#list)|   [BudgetUsageQuery](budget-usage.md#budgetusagequery) |   [BudgetUsagesInfo](budget-usage.md#budgetusagesinfo) |
+| [**analyze**](budget-usage.md#analyze)|   [BudgetUsageAnalyzeQuery](budget-usage.md#budgetusageanalyzequery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|
 | [**stat**](budget-usage.md#stat)|   [BudgetUsageStatQuery](budget-usage.md#budgetusagestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
@@ -73,6 +74,19 @@ description:
  
 
  
+### analyze
+> **POST** /cost-analysis/v1/budget/{budget_id}/usage/analyze
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [BudgetUsageAnalyzeQuery](budget-usage.md#budgetusageanalyzequery) |
+| Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
+ 
+ 
+
+ 
 ### stat
 > **POST** /cost-analysis/v1/budget/{budget_id}/usage/stat
 >
@@ -87,6 +101,12 @@ description:
 ## 
 
 ## Message
+
+### BudgetUsageAnalyzeQuery
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |spaceone.api.core.v1.TimeSeriesAnalyzeQuery|✔| |
+| domain_id |string|✔| |
 
 ### BudgetUsageInfo
 | Field | Type |  Description |

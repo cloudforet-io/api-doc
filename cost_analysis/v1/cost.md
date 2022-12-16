@@ -20,6 +20,7 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 | [**get**](cost.md#get)|   [GetCostRequest](cost.md#getcostrequest) |   [CostInfo](cost.md#costinfo) |
 | [**list**](cost.md#list)|   [CostQuery](cost.md#costquery) |   [CostsInfo](cost.md#costsinfo) |
 | [**analyze**](cost.md#analyze)|   [CostAnalyzeQuery](cost.md#costanalyzequery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|
+| [**analyze_v2**](cost.md#analyze_v2)|   [CostAnalyzeV2Query](cost.md#costanalyzev2query) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|
 | [**stat**](cost.md#stat)|   [CostStatQuery](cost.md#coststatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
@@ -297,6 +298,19 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
  
 
  
+### analyze_v2
+> **POST** /cost-analysis/v1/costs/analyze-v2
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [CostAnalyzeV2Query](cost.md#costanalyzev2query) |
+| Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
+ 
+ 
+
+ 
 ### stat
 > **POST** /cost-analysis/v1/costs/stat
 >
@@ -399,6 +413,12 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 </table>
 
 
+
+### CostAnalyzeV2Query
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |spaceone.api.core.v1.TimeSeriesAnalyzeQuery|✔| |
+| domain_id |string|✔| |
 
 ### CostInfo
 | Field | Type |  Description |
