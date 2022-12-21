@@ -204,7 +204,7 @@ description: description of dashboard
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">dashboard_options</td>
+      <td style="text-align:left; width:100px;">variables</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
@@ -216,7 +216,7 @@ description: description of dashboard
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">dashboard_options_schema</td>
+      <td style="text-align:left; width:100px;">variables_schema</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
@@ -320,7 +320,7 @@ description: description of dashboard
 
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">dashboard_options</td>
+      <td style="text-align:left; width:100px;">variables</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
@@ -332,7 +332,7 @@ description: description of dashboard
 
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">dashboard_options_schema</td>
+      <td style="text-align:left; width:100px;">variables_schema</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
@@ -465,9 +465,9 @@ description: description of dashboard
 | version |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 | latest |bool | |
 | layouts |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
-| dashboard_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| variables |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | settings |[ProjectDashboardSettings](project-dashboard.md#projectdashboardsettings) | |
-| dashboard_options_schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| variables_schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | domain_id |string | |
 | created_at |string | |
 
@@ -504,9 +504,9 @@ description: description of dashboard
 | project_dashboard_id |string|✔| |
 | name |string|✘| |
 | layouts |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
-| dashboard_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| variables |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | settings |[ProjectDashboardSettings](project-dashboard.md#projectdashboardsettings)|✘| |
-| dashboard_options_schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| variables_schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | domain_id |string|✔| |
