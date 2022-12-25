@@ -93,6 +93,7 @@ description:
 | group_by |list of string | |
 | field_group |list of string | |
 | filter |[list of Filter](query.md#filter) | |
+| filter_or |[list of Filter](query.md#filter) | |
 | page |[Page](query.md#page) | |
 | sort |[list of SortKey](query.md#sortkey) | |
 | fields |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
@@ -206,6 +207,12 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">filter</td>
+      <td style="text-align:left"><a href="query.md#filter">list of Filter</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">filter_or</td>
       <td style="text-align:left"><a href="query.md#filter">list of Filter</a></td>
 <td style="text-align:left"></td>
 
