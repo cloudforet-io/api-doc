@@ -652,6 +652,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
           	<li>NONE_REGISTRY_TYPE</li>
           	<li>DOCKER_HUB</li>
           	<li>AWS_PUBLIC_ECR</li>
+          	<li>HARBOR</li>
         </ul></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
@@ -773,6 +774,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
           	<li>NONE_REGISTRY_TYPE</li>
           	<li>DOCKER_HUB</li>
           	<li>AWS_PUBLIC_ECR</li>
+          	<li>HARBOR</li>
         </ul></td>
 <td style="text-align:left"></td>
 
@@ -911,6 +913,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
           	<li>NONE_REGISTRY_TYPE</li>
           	<li>DOCKER_HUB</li>
           	<li>AWS_PUBLIC_ECR</li>
+          	<li>HARBOR</li>
         </ul></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
