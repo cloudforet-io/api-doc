@@ -502,6 +502,12 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 <td style="text-align:left"></td>
 
    </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
   </tbody>
 </table>
 
