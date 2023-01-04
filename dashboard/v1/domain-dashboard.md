@@ -205,7 +205,7 @@ description: description of dashboard
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">settings</td>
-      <td style="text-align:left"><a href="domain-dashboard.md#domaindashboardsettings">DomainDashboardSettings</a></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
@@ -237,16 +237,6 @@ description: description of dashboard
 </table>
 
 
-
-### DomainDashboardCurrency
-| Field | Type |  Description |
-| :--- | :--- | :--- |
-| enabled |bool | |
-
-### DomainDashboardDateRange
-| Field | Type |  Description |
-| :--- | :--- | :--- |
-| enabled |bool | |
 
 ### DomainDashboardInfo
 <table>
@@ -300,7 +290,7 @@ description: description of dashboard
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">settings</td>
-      <td style="text-align:left"><a href="domain-dashboard.md#domaindashboardsettings">DomainDashboardSettings</a></td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -413,12 +403,6 @@ description: description of dashboard
 | domain_dashboard_id |string|✔| |
 | domain_id |string|✔| |
 
-### DomainDashboardSettings
-| Field | Type |  Description |
-| :--- | :--- | :--- |
-| date_range |[DomainDashboardDateRange](domain-dashboard.md#domaindashboarddaterange) | |
-| currency |[DomainDashboardCurrency](domain-dashboard.md#domaindashboardcurrency) | |
-
 ### DomainDashboardStatQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
@@ -433,7 +417,7 @@ description: description of dashboard
 | latest |bool | |
 | layouts |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
 | variables |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| settings |[DomainDashboardSettings](domain-dashboard.md#domaindashboardsettings) | |
+| settings |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | variables_schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | domain_id |string | |
 | created_at |string | |
@@ -487,7 +471,7 @@ description: description of dashboard
 | name |string|✘| |
 | layouts |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
 | variables |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
-| settings |[DomainDashboardSettings](domain-dashboard.md#domaindashboardsettings)|✘| |
+| settings |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | variables_schema |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
