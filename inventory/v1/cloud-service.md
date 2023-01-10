@@ -503,7 +503,8 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 | metadata |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | reference |[CloudServiceReference](cloud-service.md#cloudservicereference) | |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-| collection_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| tag_keys |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| collection_info |[list of CollectionInfo](cloud-service.md#collectioninfo) | |
 | ip_addresses |list of string | |
 | region_code |string | |
 | project_id |string | |
@@ -555,6 +556,15 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 | :--- | :--- | :--- |
 | results |[list of CloudServiceInfo](cloud-service.md#cloudserviceinfo) | |
 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+
+### CollectionInfo
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| provider |string | |
+| service_account_id |string | |
+| secret_id |string | |
+| collector_id |string | |
+| last_collected_at |string | |
 
 ### CreateServiceRequest
 | Field | Type | Required | Description |
