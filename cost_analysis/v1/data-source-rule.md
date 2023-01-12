@@ -519,7 +519,7 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">data_source_type</td>
+      <td style="text-align:left; width:100px;">rule_type</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
