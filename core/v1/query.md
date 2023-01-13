@@ -98,6 +98,7 @@ description:
 | sort |[list of SortKey](query.md#sortkey) | |
 | fields |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 | select |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| keyword |string | |
 
 ### Filter
 | Field | Type |  Description |
@@ -239,6 +240,12 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">select</td>
       <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">keyword</td>
+      <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
 
    </tr>

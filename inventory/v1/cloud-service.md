@@ -20,6 +20,7 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 | [**delete**](cloud-service.md#delete)|   [CloudServiceRequest](cloud-service.md#cloudservicerequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**get**](cloud-service.md#get)|   [GetCloudServiceRequest](cloud-service.md#getcloudservicerequest) |   [CloudServiceInfo](cloud-service.md#cloudserviceinfo) |
 | [**list**](cloud-service.md#list)|   [CloudServiceQuery](cloud-service.md#cloudservicequery) |   [CloudServicesInfo](cloud-service.md#cloudservicesinfo) |
+| [**analyze**](cloud-service.md#analyze)|   [CloudServiceAnalyzeQuery](cloud-service.md#cloudserviceanalyzequery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|
 | [**stat**](cloud-service.md#stat)|   [CloudServiceStatQuery](cloud-service.md#cloudservicestatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
  
 
@@ -472,6 +473,19 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
  
 
  
+### analyze
+> **POST** /inventory/v1/cloud-services/analyze
+>
+
+
+| Type | Message |
+| :--- | :--- |
+| Request | [CloudServiceAnalyzeQuery](cloud-service.md#cloudserviceanalyzequery) |
+| Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
+ 
+ 
+
+ 
 ### stat
 > **POST** /inventory/v1/cloud-services/stat
 >
@@ -486,6 +500,12 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 ## 
 
 ## Message
+
+### CloudServiceAnalyzeQuery
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |spaceone.api.core.v1.AnalyzeQuery|✔| |
+| domain_id |string|✔| |
 
 ### CloudServiceInfo
 | Field | Type |  Description |
@@ -549,7 +569,6 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 | :--- | :--- | :---: | :--- |
 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
 | domain_id |string|✔| |
-| resource_group_id |string|✘| |
 
 ### CloudServicesInfo
 | Field | Type |  Description |
