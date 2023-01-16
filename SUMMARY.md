@@ -66,6 +66,7 @@
     * [Cloud Service](inventory/v1/cloud-service.md)
     * [Cloud Service Type](inventory/v1/cloud-service-type.md)
     * [Collector](inventory/v1/collector.md)
+    * [Collector Rule](inventory/v1/collector-rule.md)
     * [Job](inventory/v1/job.md)
     * [Job Task](inventory/v1/job-task.md)
     * [Note](inventory/v1/note.md)
