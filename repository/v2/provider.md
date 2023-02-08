@@ -144,7 +144,8 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">sync_mode</td>
       <td style="text-align:left"><ul>
-          	<li>SYNC_MODE_NONE</li>
+          	<li>UNDEFINED</li>
+          	<li>NONE</li>
           	<li>MANUAL</li>
           	<li>AUTOMATIC</li>
         </ul></td>
@@ -248,7 +249,8 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">sync_mode</td>
       <td style="text-align:left"><ul>
-          	<li>SYNC_MODE_NONE</li>
+          	<li>UNDEFINED</li>
+          	<li>NONE</li>
           	<li>MANUAL</li>
           	<li>AUTOMATIC</li>
         </ul></td>
@@ -294,12 +296,6 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">reference_url</td>
       <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">metadata</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -385,7 +381,8 @@ description:
     <tr>
       <td style="text-align:left; width:100px;">sync_mode</td>
       <td style="text-align:left"><ul>
-          	<li>SYNC_MODE_NONE</li>
+          	<li>UNDEFINED</li>
+          	<li>NONE</li>
           	<li>MANUAL</li>
           	<li>AUTOMATIC</li>
         </ul></td>
