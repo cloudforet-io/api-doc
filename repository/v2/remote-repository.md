@@ -5,10 +5,10 @@ description:
 
 >  **Package : spaceone.api.repository.v2**
 
-## RemoteRpository
+## RemoteRepository
 
 {% hint style="info" %}
-**RemoteRpository Methods:**
+**RemoteRepository Methods:**
 
 {%  endhint %}
 
