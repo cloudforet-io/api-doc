@@ -20,8 +20,7 @@ description:
 | [**sync**](provider.md#sync)|   [ProviderRequest](provider.md#providerrequest) |   [ProviderInfo](provider.md#providerinfo) |
 | [**delete**](provider.md#delete)|   [ProviderRequest](provider.md#providerrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**get**](provider.md#get)|   [GetProviderRequest](provider.md#getproviderrequest) |   [ProviderInfo](provider.md#providerinfo) |
-| [**list**](provider.md#list)|   [ProviderQuery](provider.md#providerquery) |   [ProvidersInfo](provider.md#providersinfo) |
-| [**stat**](provider.md#stat)|   [ProviderStatQuery](provider.md#providerstatquery) |  [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)| 
+| [**list**](provider.md#list)|   [ProviderQuery](provider.md#providerquery) |   [ProvidersInfo](provider.md#providersinfo) | 
  
 
  
@@ -99,19 +98,6 @@ description:
 | :--- | :--- |
 | Request | [ProviderQuery](provider.md#providerquery) |
 | Response |  [ProvidersInfo](provider.md#providersinfo)  |
- 
- 
-
- 
-### stat
-> **POST** /repository/v2/provider/stat
->
-
-
-| Type | Message |
-| :--- | :--- |
-| Request | [ProviderStatQuery](provider.md#providerstatquery) |
-| Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
 
 
 ## 
@@ -189,8 +175,8 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">reference_url</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left; width:100px;">reference</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
@@ -294,8 +280,8 @@ description:
 
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">reference_url</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left; width:100px;">reference</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -329,25 +315,61 @@ description:
 
 
 ### ProviderQuery
-| Field | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✘| |
-| provider |string|✘| |
-| name |string|✘| |
-| sync_options |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
-| domain_id |string|✘| |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left; width:100px;">Field</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:center">Required</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left; width:100px;">query</td>
+      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">provider</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">name</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">sync_mode</td>
+      <td style="text-align:left"><ul>
+          	<li>UNDEFINED</li>
+          	<li>NONE</li>
+          	<li>MANUAL</li>
+          	<li>AUTOMATIC</li>
+        </ul></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">domain_id</td>
+      <td style="text-align:left">string</td>
+<td style="text-align:center">✘</td>
+<td style="text-align:left"></td>
+   </tr>
+  </tbody>
+</table>
+
+
 
 ### ProviderRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | provider |string|✔| |
 | domain_id |string|✘| |
-
-### ProviderStatQuery
-| Field | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✔| |
-| domain_id |string|✔| |
 
 ### ProvidersInfo
 | Field | Type |  Description |
@@ -426,8 +448,8 @@ description:
 <td style="text-align:left"></td>
    </tr>
     <tr>
-      <td style="text-align:left; width:100px;">reference_url</td>
-      <td style="text-align:left">string</td>
+      <td style="text-align:left; width:100px;">reference</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
