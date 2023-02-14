@@ -142,18 +142,6 @@
           "extensions": [],
           "fields": [
             {
-              "name": "query",
-              "description": "is_required: false",
-              "label": "",
-              "type": "Query",
-              "longType": "spaceone.api.core.v1.Query",
-              "fullType": "spaceone.api.core.v1.Query",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
               "name": "name",
               "description": "is_required: false",
               "label": "",

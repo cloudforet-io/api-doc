@@ -159,12 +159,12 @@
               "defaultValue": ""
             },
             {
-              "name": "reference_url",
+              "name": "reference",
               "description": "is_required: false",
               "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -375,12 +375,12 @@
               "defaultValue": ""
             },
             {
-              "name": "reference_url",
+              "name": "reference",
               "description": "",
               "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -483,12 +483,12 @@
               "defaultValue": ""
             },
             {
-              "name": "sync_options",
+              "name": "sync_mode",
               "description": "is_required: false",
               "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
+              "type": "SyncMode",
+              "longType": "SyncMode",
+              "fullType": "spaceone.api.repository.v2.SyncMode",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -533,42 +533,6 @@
             {
               "name": "domain_id",
               "description": "is_required: false",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "ProviderStatQuery",
-          "longName": "ProviderStatQuery",
-          "fullName": "spaceone.api.repository.v2.ProviderStatQuery",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "query",
-              "description": "is_required: true",
-              "label": "",
-              "type": "StatisticsQuery",
-              "longType": "spaceone.api.core.v1.StatisticsQuery",
-              "fullType": "spaceone.api.core.v1.StatisticsQuery",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "domain_id",
-              "description": "is_required: true",
               "label": "",
               "type": "string",
               "longType": "string",
@@ -735,12 +699,12 @@
               "defaultValue": ""
             },
             {
-              "name": "reference_url",
+              "name": "reference",
               "description": "is_required: false",
               "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -919,28 +883,6 @@
                     {
                       "method": "POST",
                       "pattern": "/repository/v2/providers/list"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "stat",
-              "description": "",
-              "requestType": "ProviderStatQuery",
-              "requestLongType": "ProviderStatQuery",
-              "requestFullType": "spaceone.api.repository.v2.ProviderStatQuery",
-              "requestStreaming": false,
-              "responseType": "Struct",
-              "responseLongType": ".google.protobuf.Struct",
-              "responseFullType": "google.protobuf.Struct",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/repository/v2/provider/stat"
                     }
                   ]
                 }
