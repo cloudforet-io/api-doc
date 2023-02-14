@@ -26,7 +26,7 @@ description: A CollectorRule is a cloud service resource filtering the raw data 
 
  
 ### create
-> **POST** /inventory/v1/collector_rules
+> **POST** /inventory/v1/collector-rule/create
 >
 
 > Creates a new CollectorRule. When creating the cloud service, this method can apply two types of conditions: mapping projects where the cloud service incurred to the Cloud Service, and mapping cloud service accounts to the Cloud Service. By adjusting the `condition_policy` parameter, the CollectorRule can be applied when all conditions are met, applied when any of the conditions are met, or always applied regardless of whether the conditions are met.
@@ -91,7 +91,7 @@ description: A CollectorRule is a cloud service resource filtering the raw data 
 
  
 ### update
-> **PUT** /inventory/v1/collector_rule/{collector_rule_id}
+> **POST** /inventory/v1/collector-rule/update
 >
 
 > Updates a specific CollectorRule. You can make changes in CollectorRule settings, including filtering conditions.
@@ -156,7 +156,7 @@ description: A CollectorRule is a cloud service resource filtering the raw data 
 
  
 ### change_order
-> **PUT** /inventory/v1/collector_rule/{collector_rule_id}/order
+> **POST** /inventory/v1/collector-rule/change-order
 >
 
 > Changes the priority order of the CollectorRules to apply. If there are multiple CollectorRules applied in a specific service account, the priority order of the resources is required. This method changes the priority order to apply CollectorRules.
@@ -207,7 +207,7 @@ description: A CollectorRule is a cloud service resource filtering the raw data 
 
  
 ### delete
-> **DELETE** /inventory/v1/collector_rule/{collector_rule_id}
+> **POST** /inventory/v1/collector-rule/delete
 >
 
 
@@ -220,7 +220,7 @@ description: A CollectorRule is a cloud service resource filtering the raw data 
 
  
 ### get
-> **GET** /inventory/v1/collector_rule/{collector_rule_id}
+> **POST** /inventory/v1/collector-rule/get
 >
 
 
@@ -233,10 +233,8 @@ description: A CollectorRule is a cloud service resource filtering the raw data 
 
  
 ### list
-> **GET** /inventory/v1/collector_rules
+> **POST** /inventory/v1/collector-rules/list
 >
-> **POST** /inventory/v1/collector_rules/search
-
 
 > Gets a list of all CollectorRules. You can use a query to get a filtered list of CollectorRules.
 
@@ -306,7 +304,7 @@ description: A CollectorRule is a cloud service resource filtering the raw data 
 
  
 ### stat
-> **POST** /inventory/v1/collector_rules/stat
+> **POST** /inventory/v1/collector-rules/stat
 >
 
 

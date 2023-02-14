@@ -21,10 +21,8 @@ description:
 
  
 ### list
-> **GET** /inventory/v1/cloud-service/{cloud_service_id}/change-history
+> **POST** /inventory/v1/change-history/list
 >
-> **POST** /inventory/v1/cloud-service/{cloud_service_id}/change-history/search
-
 
 
 | Type | Message |
@@ -36,7 +34,7 @@ description:
 
  
 ### stat
-> **POST** /inventory/v1/cloud-service/change-history/stat
+> **POST** /inventory/v1/change-history/stat
 >
 
 

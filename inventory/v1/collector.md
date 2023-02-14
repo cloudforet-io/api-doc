@@ -35,7 +35,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### create
-> **POST** /inventory/v1/collectors
+> **POST** /inventory/v1/collector/create
 >
 
 > Creates a new Collector with information of the plugin to use. Information of the plugin includes `version`, `provider`, and `upgrade_mode`.
@@ -128,7 +128,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### update
-> **PUT** /inventory/v1/collector/{collector_id}
+> **POST** /inventory/v1/collector/update
 >
 
 > Updates a specific Collector. You can make changes in Collector settings, including `name` and `tags`.
@@ -206,7 +206,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### update_plugin
-> **PUT** /inventory/v1/collector/{collector_id}/plugin
+> **POST** /inventory/v1/collector/update-plugin
 >
 
 > Updates the plugin of a specific Collector. This method resets the plugin data in the Collector to update the `metadata`.
@@ -233,7 +233,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### verify_plugin
-> **POST** /inventory/v1/collector/{collector_id}/plugin/verify
+> **POST** /inventory/v1/collector/verify-plugin
 >
 
 > Verifies the plugin of a specific Collector. This method validates the plugin data, `version` and `endpoint`.
@@ -260,7 +260,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### delete
-> **DELETE** /inventory/v1/collector/{collector_id}
+> **POST** /inventory/v1/collector/delete
 >
 
 > Deletes a specific Collector. You must specify the `collector_id` of the Collector to delete.
@@ -287,7 +287,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### get
-> **GET** /inventory/v1/collector/{collector_id}
+> **POST** /inventory/v1/collector/get
 >
 
 > Gets a specific Collector. Prints detailed information about the Collector, including its state, basic information, and the plugin information used for cloud resource collection.
@@ -310,7 +310,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### enable
-> **PUT** /inventory/v1/collector/{collector_id}/enable
+> **POST** /inventory/v1/collector/enable
 >
 
 > Enables a specific Collector. By enabling a Collector, you can communicate with a plugin used for collection.
@@ -376,7 +376,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### disable
-> **PUT** /inventory/v1/collector/{collector_id}/disable
+> **POST** /inventory/v1/collector/disable
 >
 
 > Disables a specific Collector. By disabling a Collector, you cannot communicate with a plugin used for collection.
@@ -442,10 +442,8 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### list
-> **GET** /inventory/v1/collectors
+> **POST** /inventory/v1/collector/list
 >
-> **POST** /inventory/v1/collectors/search
-
 
 > Gets a list of all Collectors. You can use a query to get a filtered list of Collectors.
 
@@ -529,7 +527,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### stat
-> **POST** /inventory/v1/collectors/stat
+> **POST** /inventory/v1/collector/stat
 >
 
 
@@ -542,7 +540,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### collect
-> **POST** /inventory/v1/collector/{collector_id}/collect
+> **POST** /inventory/v1/collector/collect
 >
 
 > ''
@@ -569,7 +567,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### add_schedule
-> **POST** /inventory/v1/collector/{collector_id}/schedule
+> **POST** /inventory/v1/collector/add_schedule
 >
 
 > Adds a schedule to a specific Collector. When specifying the time to collect, the schedule is assigned in units of one hour.The specified schedule is applied every day.
@@ -662,7 +660,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### get_schedule
-> **GET** /inventory/v1/collector/{collector_id}/schedule/{schedule_id}
+> **POST** /inventory/v1/collector/get-schedule
 >
 
 > Gets a specific schedule set in a specific Collector. You must specify the `collector_id` of the Collector and the `schedule_id` of the schedule.
@@ -746,7 +744,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### update_schedule
-> **POST** /inventory/v1/collector/{collector_id}/schedule/{schedule_id}
+> **POST** /inventory/v1/collector/update-schedule
 >
 
 > Updates a specific schedule of the Collector. You can make changes in schedule settings, including `name` and collection time.
@@ -843,7 +841,7 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### delete_schedule
-> **DELETE** /inventory/v1/collector/{collector_id}/schedule/{schedule_id}
+> **POST** /inventory/v1/collector/delete-schedule
 >
 
 > Deletes a specific schedule of the Collector. You must specify the `schedule_id` of the schedule to delete.
@@ -867,10 +865,8 @@ description: A Collector is a plugin instance collecting cloud resources. A Coll
 
  
 ### list_schedules
-> **GET** /inventory/v1/collector/{collector_id}/schedules
+> **POST** /inventory/v1/collector/list_schedules
 >
-> **POST** /inventory/v1/collector/{collector_id}/schedules/search
-
 
 > Gets a list of all schedules set in a specific Collector. You must specify the `collector_id` of the Collector to get the schedule from.
 

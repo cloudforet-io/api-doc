@@ -25,7 +25,7 @@ description: A CloudServiceType is a classification with hierarchical informatio
 
  
 ### create
-> **POST** /inventory/v1/cloud-service-types
+> **POST** /inventory/v1/cloud-service-type/create
 >
 
 > Creates a new CloudServiceType. You must specify the `name`, `provider`, and `group` parameters to create a CloudServiceType. One or several CloudServiceTypes exist in a specific `group`, and each CloudServiceType is identified by the `name` parameter.
@@ -87,7 +87,7 @@ description: A CloudServiceType is a classification with hierarchical informatio
 
  
 ### update
-> **PUT** /inventory/v1/cloud-service-type/{cloud_service_type_id}
+> **POST** /inventory/v1/cloud-service-type/update
 >
 
 > Updates a specific CloudServiceType. You can make changes in CloudServiceType settings, except for `name`, `provider` and `group`. In particular, you can set the CloudServiceType's priority in a `group`.
@@ -144,7 +144,7 @@ description: A CloudServiceType is a classification with hierarchical informatio
 
  
 ### delete
-> **DELETE** /inventory/v1/cloud-service-type/{cloud_service_type_id}
+> **POST** /inventory/v1/cloud-service-type/delete
 >
 
 > Deletes a specific CloudServiceType. You must specify the `cloud_service_type_id` of the CloudServiceType to delete.
@@ -167,7 +167,7 @@ description: A CloudServiceType is a classification with hierarchical informatio
 
  
 ### get
-> **GET** /inventory/v1/cloud-service-type/{cloud_service_type_id}
+> **POST** /inventory/v1/cloud-service-type/get
 >
 
 > Gets a specific CloudServiceType. Prints detailed information about the CloudServiceType.
@@ -216,10 +216,8 @@ description: A CloudServiceType is a classification with hierarchical informatio
 
  
 ### list
-> **GET** /inventory/v1/cloud-service-types
+> **POST** /inventory/v1/cloud-service-type/list
 >
-> **POST** /inventory/v1/cloud-service-types/search
-
 
 > Gets a list of all CloudServiceTypes. You can use a query to get a filtered list of CloudServiceTypes.
 
@@ -300,7 +298,7 @@ description: A CloudServiceType is a classification with hierarchical informatio
 
  
 ### stat
-> **POST** /inventory/v1/cloud-service-types/stat
+> **POST** /inventory/v1/cloud-service-type/stat
 >
 
 

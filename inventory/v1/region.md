@@ -25,7 +25,7 @@ description: A Region is a resource storing regional information from each cloud
 
  
 ### create
-> **POST** /inventory/v1/regions
+> **POST** /inventory/v1/region/create
 >
 
 > Creates a new Region. As the parameter `region_key`, which is automatically created when a Region is created, is in a form of `{provider}.{region_code}`, it is unique regardless of providers. You can also specify the latitude, longitude, and continent information in `tags`.
@@ -75,7 +75,7 @@ description: A Region is a resource storing regional information from each cloud
 
  
 ### update
-> **PUT** /inventory/v1/region/{region_id}
+> **POST** /inventory/v1/region/update
 >
 
 > Updates a specific Region. You can make changes in Region settings, including `name` and `tags`. The `tags` contain the continent, latitude, and longitude.
@@ -124,7 +124,7 @@ description: A Region is a resource storing regional information from each cloud
 
  
 ### delete
-> **DELETE** /inventory/v1/region/{region_id}
+> **POST** /inventory/v1/region/delete
 >
 
 > Deletes a specific Region. You must specify the `region_id` of the Region to delete.
@@ -147,7 +147,7 @@ description: A Region is a resource storing regional information from each cloud
 
  
 ### get
-> **GET** /inventory/v1/region/{region_id}
+> **POST** /inventory/v1/region/get
 >
 
 > Gets a specific Region. Prints detailed information about the Region, including `name`, `region_code`, and a location coordinate.
@@ -190,10 +190,8 @@ description: A Region is a resource storing regional information from each cloud
 
  
 ### list
-> **GET** /inventory/v1/regions
+> **POST** /inventory/v1/region/list
 >
-> **POST** /inventory/v1/regions/search
-
 
 > Gets a list of all Regions. You can use a query to get a filtered list of Regions.
 
@@ -263,7 +261,7 @@ description: A Region is a resource storing regional information from each cloud
 
  
 ### stat
-> **POST** /inventory/v1/regions/stat
+> **POST** /inventory/v1/region/stat
 >
 
 

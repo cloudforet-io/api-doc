@@ -26,7 +26,7 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 
  
 ### create
-> **POST** /inventory/v1/cloud-services
+> **POST** inventory/v1/cloud-service/create
 >
 
 > Creates a new CloudService. A CloudService instance is created based on data including the `resource`'s attribute values. When creating, the classification information defined by CloudServiceType is also needed. The created CloudService has collection information which is the collection history for the `resource` by plugin.
@@ -157,7 +157,7 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 
  
 ### update
-> **PUT** /inventory/v1/cloud-service/{cloud_service_id}
+> **POST** inventory/v1/cloud-service/update
 >
 
 > Updates a specific CloudService. You can make changes in CloudService settings, except for the classification system of CloudService and the information about the `resource` attribute value.
@@ -256,7 +256,7 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 
  
 ### delete
-> **DELETE** /inventory/v1/cloud-service/{cloud_service_id}
+> **POST** inventory/v1/cloud-service/delete
 >
 
 > Deletes a specific CloudService. You must specify the `cloud_service_id` of the CloudService to delete.
@@ -279,7 +279,7 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 
  
 ### get
-> **GET** /inventory/v1/cloud-service/{cloud_service_id}
+> **POST** inventory/v1/cloud-service/get
 >
 
 > Gets a specific CloudService. Prints detailed information about the CloudService, including its state, classification information, and attribute values.
@@ -369,10 +369,8 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 
  
 ### list
-> **GET** /inventory/v1/cloud-services
+> **POST** /inventory/v1/cloud-service/list
 >
-> **POST** /inventory/v1/cloud-services/search
-
 
 > Gets a list of all CloudServices. You can use a query to get a filtered list of CloudServices.
 
@@ -474,7 +472,7 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 
  
 ### analyze
-> **POST** /inventory/v1/cloud-services/analyze
+> **POST** /inventory/v1/cloud-service/analyze
 >
 
 
@@ -487,7 +485,7 @@ description: A CloudService is data of an `instance` of a `resource`. A CloudSer
 
  
 ### stat
-> **POST** /inventory/v1/cloud-services/stat
+> **POST** /inventory/v1/cloud-service/stat
 >
 
 

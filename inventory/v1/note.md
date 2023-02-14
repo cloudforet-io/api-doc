@@ -25,7 +25,7 @@ description:
 
  
 ### create
-> **POST** /inventory/v1/notes
+> **POST** /inventory/v1/note/create
 >
 
 > ''
@@ -52,7 +52,7 @@ description:
 
  
 ### update
-> **PUT** /inventory/v1/note/{note_id}
+> **POST** /inventory/v1/note/update
 >
 
 > ''
@@ -79,7 +79,7 @@ description:
 
  
 ### delete
-> **DELETE** /inventory/v1/note/{note_id}
+> **POST** /inventory/v1/note/delete
 >
 
 > ''
@@ -106,7 +106,7 @@ description:
 
  
 ### get
-> **GET** /inventory/v1/note/{note_id}
+> **POST** /inventory/v1/note/get
 >
 
 > ''
@@ -133,10 +133,8 @@ description:
 
  
 ### list
-> **GET** /inventory/v1/notes
+> **POST** /inventory/v1/note/list
 >
-> **POST** /inventory/v1/notes/search
-
 
 > ''
 
@@ -162,7 +160,7 @@ description:
 
  
 ### stat
-> **POST** /inventory/v1/notes/stat
+> **POST** /inventory/v1/note/stat
 >
 
 

@@ -23,7 +23,7 @@ description: A Job is an act of collecting external cloud resources through plug
 
  
 ### delete
-> **DELETE** /inventory/v1/job/{job_id}
+> **POST** /inventory/v1/job/delete
 >
 
 > Deletes a specific Job. You must specify the `job_id` of the Job to delete.
@@ -47,7 +47,7 @@ description: A Job is an act of collecting external cloud resources through plug
 
  
 ### get
-> **GET** /inventory/v1/job/{job_id}
+> **POST** /inventory/v1/job/get
 >
 
 > Gets a specific Job. Prints detailed information about the Job, including its state, total tasks, and collector info.
@@ -98,10 +98,8 @@ description: A Job is an act of collecting external cloud resources through plug
 
  
 ### list
-> **GET** /inventory/v1/jobs
+> **POST** /inventory/v1/job/list
 >
-> **POST** /inventory/v1/jobs/search
-
 
 > Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
@@ -185,7 +183,7 @@ description: A Job is an act of collecting external cloud resources through plug
 
  
 ### stat
-> **POST** /inventory/v1/jobs/stat
+> **POST** /inventory/v1/job/stat
 >
 
 

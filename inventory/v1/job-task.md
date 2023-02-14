@@ -23,7 +23,7 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 
  
 ### delete
-> **DELETE** /inventory/v1/job-task/{job_task_id}
+> **POST** /inventory/v1/job-task/delete
 >
 
 > Deletes a specific JobTask. You must specify the `job_task_id` of the JobTask to delete.
@@ -47,7 +47,7 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 
  
 ### get
-> **GET** /inventory/v1/job-task/{job_task_id}
+> **POST** /inventory/v1/job-task/get
 >
 
 > Gets a specific JobTask. Prints detailed information about the JobTask, including its state, updated or failure counts, and error log.
@@ -105,10 +105,8 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 
  
 ### list
-> **GET** /inventory/v1/job-tasks
+> **POST** /inventory/v1/job-task/list
 >
-> **POST** /inventory/v1/job-tasks/search
-
 
 > Gets a list of all JobTasks in a specific Job. You can use a query to get a filtered list of JobTasks.
 
@@ -168,7 +166,7 @@ description: A JobTask is a unit for collecting external cloud resources. The re
 
  
 ### stat
-> **POST** /inventory/v1/job-tasks/stat
+> **POST** /inventory/v1/job-task/stat
 >
 
 

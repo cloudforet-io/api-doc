@@ -25,7 +25,7 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 
  
 ### create
-> **POST** /inventory/v1/resource-groups
+> **POST** /inventory/v1/resource-group/create
 >
 
 > Creates a new ResourceGroup. You can integrate `resource`s from different `provider`s by specifying the cloud resources to be grouped in the `resources` parameter.
@@ -115,7 +115,7 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 
  
 ### update
-> **PUT** /inventory/v1/resource-group/{resource_group_id}
+> **POST** /inventory/v1/resource-group/update
 >
 
 > Updates a specific ResourceGroup. You can make changes in ResourceGroup settings, including `name`, `tags`, and grouped resources in the ResourceGroup.
@@ -204,7 +204,7 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 
  
 ### delete
-> **DELETE** /inventory/v1/resource-group/{resource_group_id}
+> **POST** /inventory/v1/resource-group/delete
 >
 
 > Deletes a specific ResourceGroup. You must specify the `resource_group_id` of the ResourceGroup to delete.
@@ -227,7 +227,7 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 
  
 ### get
-> **GET** /inventory/v1/resource-group/{resource_group_id}
+> **POST** /inventory/v1/resource-group/get
 >
 
 > Gets a specific ResourceGroup. Prints detailed information about the ResourceGroup, including the information of the grouped cloud resources.
@@ -289,10 +289,8 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 
  
 ### list
-> **GET** /inventory/v1/resource-groups
+> **POST** /inventory/v1/resource-group/list
 >
-> **POST** /inventory/v1/resource-groups/search
-
 
 > Gets a list of all ResourceGroups. You can use a query to get a filtered list of ResourceGroups.
 
@@ -406,7 +404,7 @@ description: A ResourceGroup is a group of `resource`s from various `provider`s.
 
  
 ### stat
-> **POST** /inventory/v1/resource-groups/stat
+> **POST** /inventory/v1/resource-group/stat
 >
 
 
