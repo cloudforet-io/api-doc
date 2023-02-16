@@ -21,10 +21,8 @@ description: A NotificationUsage is a resource indicating daily Protocol usage. 
 
  
 ### list
-> **GET** /notification/v1/notification-usages
+> **POST** /notification/v1/notification-usage/list
 >
-> **POST** /notification/v1/notification-usages/search
-
 
 > Gets a list of all NotificationUsages. You can use a query to get a filtered list of Notification Usages.
 
@@ -70,7 +68,7 @@ description: A NotificationUsage is a resource indicating daily Protocol usage. 
 
  
 ### stat
-> **POST** /notification/v1/notification-usages/stat
+> **POST** /notification/v1/notification-usage/stat
 >
 
 

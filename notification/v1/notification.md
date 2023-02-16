@@ -26,7 +26,7 @@ description: A Notification is a service that delivers event data generated in C
 
  
 ### create
-> **POST** /notification/v1/notifications
+> **POST** /notification/v1/notification/create
 >
 
 > Creates a new Notification. When a Notification is created, it is delivered to a UserChannel or a ProjectChannel depending on the parameter `resource_type`. If a Notification is delivered to a UserChannel, the `resource_type` is `identity.User`, and if a Notification is delivered to a ProjectChannel, the `resource_type` is `identity.Project`.
@@ -92,7 +92,7 @@ description: A Notification is a service that delivers event data generated in C
 
  
 ### push
-> **POST** /notification/v1/notifications/push
+> **POST** /notification/v1/notification/push
 >
 
 > Manually raises a Notification. A Notification is raised with a message to be sent using a valid specific Protocol, and data used for a specific Protocol such as a phone number.
@@ -140,7 +140,7 @@ description: A Notification is a service that delivers event data generated in C
 
  
 ### delete
-> **DELETE** /notification/v1/notification/{notifications}
+> **POST** /notification/v1/notification/delete
 >
 
 > Deletes multiple Notifications. You must specify `notifications` of the list of Notifications to delete.
@@ -167,7 +167,7 @@ description: A Notification is a service that delivers event data generated in C
 
  
 ### set_read
-> **POST** /notification/v1/notifications/read
+> **POST** /notification/v1/notification/set-read
 >
 
 > Marks a Notification as read. When a Notification is raised and if the Notification has been acknowledged, it can be marked as read with the method.
@@ -193,7 +193,7 @@ description: A Notification is a service that delivers event data generated in C
 
  
 ### get
-> **GET** /notification/v1/notification/{notification_id}
+> **POST** /notification/v1/notification/get
 >
 
 > Gets a specific Notification. Prints detailed information about the Notification, including not only the message contents(`title`, `description`) but also related data such as created time and urgency.
@@ -243,10 +243,8 @@ description: A Notification is a service that delivers event data generated in C
 
  
 ### list
-> **GET** /notification/v1/notifications
+> **POST** /notification/v1/notification/list
 >
-> **POST** /notification/v1/notifications/search
-
 
 > Gets a list of all Notifications. You can use a query to get a filtered list of Notifications.
 
@@ -330,7 +328,7 @@ description: A Notification is a service that delivers event data generated in C
 
  
 ### stat
-> **POST** /notification/v1/notifications/stat
+> **POST** /notification/v1/notification/stat
 >
 
 

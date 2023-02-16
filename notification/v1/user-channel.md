@@ -29,7 +29,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### create
-> **POST** /notification/v1/user-channels
+> **POST** /notification/v1/user-channel/create
 >
 
 > Creates a new UserChannel. A UserChannel is a channel that delivers a Notification to users when the Notification is created. When creating a UserChannel, one Protocol must be selected, and an Notification is dispatched via the selected Protocol.
@@ -75,7 +75,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### update
-> **PUT** /notification/v1/user-channel/{user_channel_id}
+> **POST** /notification/v1/user-channel/update
 >
 
 > Updates a specific UserChannel. A UserChannel that has already been configured cannot be changed. Instead, the data required for dispatching Notifications to a UserChannel can be updated.
@@ -125,7 +125,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### set_schedule
-> **PUT** /notification/v1/user-channel/{user_channel_id}/schedule
+> **POST** /notification/v1/user-channel/set-schedule
 >
 
 > Sets a schedule for a UserChannel. A schedule defines the time to receive a Notification. When a Notification is created, you can set the day of the week and time you want to receive it. When you set the day of the week, you can receive a notification only on the day of the week you set. If you also set the start time and end time with the day of the week, you can receive a Notification only at the scheduled time on the day of the week you set. If there is no schedule set in a UserChannel, Notifications will be dispatched at all times via the UserChannel.
@@ -188,7 +188,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### set_subscription
-> **PUT** /notification/v1/user-channel/{user_channel_id}/subscription
+> **POST** /notification/v1/user-channel/set-subscription
 >
 
 > Sets a subscription for a UserChannel. A subscription is a topic for channels to subscribe to and get notified about. If a UserChannel has subscriptions, a Notification is dispatched only if the topic of the Notification is the same as the one set in the subscriptions. If there is no subscription in a UserChannel, all Notifications will be dispatched.
@@ -248,7 +248,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### enable
-> **PUT** /notification/v1/user-channel/{user_channel_id}/enable
+> **POST** /notification/v1/user-channel/enable
 >
 
 > Enables a specific UserChannel. If a UserChannel is enabled, the UserChannel can be used and the Notification can be dispatched. Even if a UserChannel is enabled, if the Protocol used in the UserChannel is disabled, the Notification is not dispatched.
@@ -288,7 +288,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### disable
-> **PUT** /notification/v1/user-channel/{user_channel_id}/disable
+> **POST** /notification/v1/user-channel/disable
 >
 
 > Disables a specific UserChannel. If a UserChannel is disabled, the Notification is not dispatched, even if it is created.
@@ -328,7 +328,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### delete
-> **DELETE** /notification/v1/user-channel/{user_channel_id}
+> **POST** /notification/v1/user-channel/delete
 >
 
 > Deletes a specific UserChannel. You must specify the `user_channel_id` of the UserChannel to delete.
@@ -351,7 +351,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### get
-> **GET** /notification/v1/user-channel/{user_channel_id}
+> **POST** /notification/v1/user-channel/get
 >
 
 > Gets a specific UserChannel. Prints detailed information about the UserChannel, including the Protocol configured and the Notification settings.
@@ -391,10 +391,8 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### list
-> **GET** /notification/v1/user-channels
+> **POST** /notification/v1/user-channel/list
 >
-> **POST** /notification/v1/user-channels/search
-
 
 > Gets a list of all UserChannels. You can use a query to get a filtered list of UserChannels.
 
@@ -462,7 +460,7 @@ description: A UserChannel is a destination where Notifications are delivered. N
 
  
 ### stat
-> **POST** /notification/v1/user-channels/stat
+> **POST** /notification/v1/user-channel/stat
 >
 
 

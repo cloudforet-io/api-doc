@@ -25,7 +25,7 @@ description: A Quota is a limit on protocol usage for a day or a month. You can 
 
  
 ### create
-> **POST** /notification/v1/quotas
+> **POST** /notification/v1/quota/create
 >
 
 > Creates a new Quota limiting the use of a selected Protocol for a day or a month. If the parameter `limit` has no value, it will be deemed unlimited. If a Protocol has not set a Quota, the default Quota set in the Config will be applied.
@@ -66,7 +66,7 @@ description: A Quota is a limit on protocol usage for a day or a month. You can 
 
  
 ### update
-> **PUT** /notification/v1/quota/{quota_id}
+> **POST** /notification/v1/quota/update
 >
 
 > Updates a specific Quota. You can make changes in Quota `limit`, managing the use of the Protocol.
@@ -107,7 +107,7 @@ description: A Quota is a limit on protocol usage for a day or a month. You can 
 
  
 ### delete
-> **DELETE** /notification/v1/quota/{quota_id}
+> **POST** /notification/v1/quota/delete
 >
 
 > Deletes a specific Quota. The default Quota set in the Config will be applied to the Protocol you deleted the Quota of.
@@ -130,7 +130,7 @@ description: A Quota is a limit on protocol usage for a day or a month. You can 
 
  
 ### get
-> **GET** /notification/v1/quota/{quota_id}
+> **POST** /notification/v1/quota/get
 >
 
 > Gets a specific Quota. Prints detailed information about the Quota, including the `limit` and the Protocol limited by the Quota.
@@ -167,10 +167,8 @@ description: A Quota is a limit on protocol usage for a day or a month. You can 
 
  
 ### list
-> **GET** /notification/v1/quotas
+> **POST** /notification/v1/quota/list
 >
-> **POST** /notification/v1/quotas/search
-
 
 > Gets a list of all Quotas. You can use a query to get a filtered list of Quotas.
 
@@ -220,7 +218,7 @@ description: A Quota is a limit on protocol usage for a day or a month. You can 
 
  
 ### stat
-> **POST** /notification/v1/quotas/stat
+> **POST** /notification/v1/quota/stat
 >
 
 

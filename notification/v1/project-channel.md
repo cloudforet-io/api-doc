@@ -29,7 +29,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### create
-> **POST** /notification/v1/project-channels
+> **POST** /notification/v1/project-channel/create
 >
 
 > Creates a new ProjectChannel. ProjectChannel is a channel that delivers a Notification to the Project when the Notification is created. When creating a ProjectChannel, one Protocol must be selected, and a Notification is dispatched via the selected Protocol.
@@ -92,7 +92,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### update
-> **PUT** /notification/v1/project-channel/{project_channel_id}
+> **PUT** /notification/v1/project-channel/update
 >
 
 > Updates a specific ProjectChannel. A ProjectChannel that has already been configured cannot be changed. Instead, the data required for dispatching Notifications to a ProjectChannel can be updated.
@@ -144,7 +144,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### set_schedule
-> **PUT** /notification/v1/project-channel/{project_channel_id}/schedule
+> **POST** /notification/v1/project-channel/set-schedule
 >
 
 > Sets a schedule for a ProjectChannel. A schedule defines the time to receive a Notification. When a Notification is created, you can set the day of the week and time you want to receive it. When you set the day of the week, you can receive a notification only on the day of the week you set. If you also set the start time and end time with the day of the week, you can receive a Notification only at the scheduled time on the day of the week you set. If there is no schedule set in a ProjectChannel, Notifications will be dispatched at all times via the ProjectChannel.
@@ -206,7 +206,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### set_subscription
-> **PUT** /notification/v1/project-channel/{project_channel_id}/subscription
+> **POST** /notification/v1/project-channel/set-subscription
 >
 
 > Sets a subscription for a ProjectChannel. A subscription is a topic for channels to subscribe to and get notified about. If a ProjectChannel has subscriptions, a Notification is dispatched only if the topic of the Notification is the same as the one set in the subscriptions. If there is no subscription in a ProjectChannel, all Notifications will be dispatched.
@@ -267,7 +267,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### enable
-> **PUT** /notification/v1/project-channel/{project_channel_id}/enable
+> **POST** /notification/v1/project-channel/enable
 >
 
 > Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectChannel can be used and the Notification can be dispatched. Even if a ProjectChannel is enabled, if the Protocol used in the ProjectChannel is disabled, the Notification is not dispatched.
@@ -290,7 +290,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### disable
-> **PUT** /notification/v1/project-channel/{project_channel_id}/disable
+> **POST** /notification/v1/project-channel/disable
 >
 
 > Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notification is not dispatched, even if it is created.
@@ -313,7 +313,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### delete
-> **DELETE** /notification/v1/project-channel/{project_channel_id}
+> **POST** /notification/v1/project-channel/delete
 >
 
 > Deletes a specific ProjectChannel.
@@ -336,7 +336,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### get
-> **GET** /notification/v1/project-channel/{project_channel_id}
+> **POST** /notification/v1/project-channel/get
 >
 
 > Gets a specific ProjectChannel. Prints detailed information about the ProjectChannel.
@@ -378,10 +378,8 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### list
-> **GET** /notification/v1/project-channels
+> **POST** /notification/v1/project-channel/list
 >
-> **POST** /notification/v1/project-channels/search
-
 
 > Gets a list of all ProjectChannels. You can use a query to get a filtered list of ProjectChannels.
 
@@ -449,7 +447,7 @@ description: A ProjectChannel is a destination  where Notifications are delivere
 
  
 ### stat
-> **POST** /notification/v1/project-channels/stat
+> **POST** /notification/v1/project-channel/stat
 >
 
 

@@ -28,7 +28,7 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### create
-> **POST** /notification/v1/protocols
+> **POST** notification/v1/protocol/create
 >
 
 > Creates a new Protocol. When creating a protocol, you must specify the plugins provided from the repository, and you must also set the credentials to be set in the plugin if necessary.
@@ -131,7 +131,7 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### update
-> **PUT** /notification/v1/protocol/{protocol_id}
+> **POST** notification/v1/protocol/update
 >
 
 > Updates a specific Protocol. The method `update` can update the name and tags only. If you want to update the plugin version or options, you can use `update_plugin` method.
@@ -209,7 +209,7 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### update_plugin
-> **PUT** /notification/v1/protocol/{protocol_id}/plugin
+> **POST** notification/v1/protocol/update-plugin
 >
 
 > Updates a plugin for a Protocol. It is usually used when redeploying a plugin to a new version.
@@ -285,7 +285,7 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### enable
-> **PUT** /notification/v1/protocol/{protocol_id}/enable
+> **POST** notification/v1/protocol/enable
 >
 
 > Enables a specific Protocol. If the Protocol is enabled, the Protocol can be used and the Notification can be dispatched.
@@ -359,7 +359,7 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### disable
-> **PUT** /notification/v1/protocol/{protocol_id}/disable
+> **POST** notification/v1/protocol/disable
 >
 
 > Disables a specific Protocol. If a Protocol is disabled, the Notification will not be dispatched, even if it is created.
@@ -433,7 +433,7 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### delete
-> **DELETE** /notification/v1/protocol/{protocol_id}
+> **POST** notification/v1/protocol/delete
 >
 
 > Deletes a specific Protocol. If there exists a channel using the Protocol, it cannot be deleted.
@@ -456,7 +456,7 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### get
-> **GET** /notification/v1/protocol/{protocol_id}
+> **POST** notification/v1/protocol/get
 >
 
 > Gets a specific Protocol. Prints detailed information about the Protocol.
@@ -530,10 +530,8 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### list
-> **GET** /notification/v1/protocols
+> **POST** notification/v1/protocol/list
 >
-> **POST** /notification/v1/protocols/search
-
 
 > Gets a list of Protocols. You can use a query to get a filtered list of Protocols.
 
@@ -609,7 +607,7 @@ description: A Protocol defines the method to use when dispatching Notifications
 
  
 ### stat
-> **POST** /notification/v1/protocols/stat
+> **POST** notification/v1/protocol/stat
 >
 
 
