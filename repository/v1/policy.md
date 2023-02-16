@@ -25,7 +25,7 @@ description: A Policy is a resource managing page access permissions. This resou
 
  
 ### create
-> **POST** /repository/v1/policies
+> **POST** /repository/v1/policy/create
 >
 
 > Creates a new Policy. The parameter `policy_id`, an identifier of Policy resources, can only include lowercase alphabets, numbers, and hyphens(-). The parameter `permissions` is a list type data describing page access permissions.
@@ -78,7 +78,7 @@ description: A Policy is a resource managing page access permissions. This resou
 
  
 ### update
-> **PUT** /repository/v1/policy/{policy}
+> **POST** /repository/v1/policy/update
 >
 
 > Updates a specific Policy. You can make changes in Policy settings, including `name`, `labels`, `tags`, and `permissions`. The parameter `policy_id` cannot be updated.
@@ -131,7 +131,7 @@ description: A Policy is a resource managing page access permissions. This resou
 
  
 ### delete
-> **DELETE** /repository/v1/policy/{policy}
+> **POST** /repository/v1/policy/delete
 >
 
 > Deletes a specific Policy. You must specify the `policy_id` of the Policy to delete, as the `policy_id` is an identifier of Policy resources.
@@ -154,7 +154,7 @@ description: A Policy is a resource managing page access permissions. This resou
 
  
 ### get
-> **GET** /repository/v1/policies/{policy}
+> **POST** /repository/v1/policy/get
 >
 
 > Gets a specific Policy. You must specify the `policy_id` of the Policy to get, as the `policy_id` is an identifier of Policy resources. You can use the parameter `repository_id` to limit the scope of the method to a specific Repository.
@@ -201,10 +201,8 @@ description: A Policy is a resource managing page access permissions. This resou
 
  
 ### list
-> **GET** /repository/v1/policies
+> **POST** /repository/v1/policy/list
 >
-> **POST** /repository/v1/policies/search
-
 
 > Gets a list of all Policies in a specific Repository. The parameter `repository_id` is used as an identifier of a Repository to get its list of Policies. You can use a query to get a filtered list of Policies.
 
@@ -273,7 +271,7 @@ description: A Policy is a resource managing page access permissions. This resou
 
  
 ### stat
-> **POST** /repository/v1/policies/stat
+> **POST** /repository/v1/policy/stat
 >
 
 

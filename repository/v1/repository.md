@@ -25,7 +25,7 @@ description: A Repository is a repository storing data of deployable plugins.
 
  
 ### register
-> **POST** /repository/v1/repositories
+> **POST** /repository/v1/repository/register
 >
 
 > Registers a Repository. The parameter `name` can only include alphabets, numbers, and hyphens(-). The parameter `repository_type` can be either `local` or `remote`. The parameter `endpoint` is needed if the `repository_type` is `remote`.
@@ -62,7 +62,7 @@ description: A Repository is a repository storing data of deployable plugins.
 
  
 ### update
-> **PUT** /repository/v1/repository/{repository_id}
+> **POST** /repository/v1/repository/update
 >
 
 > Updates a specific Repository registered. You must specify the `repository_id` of the Repository to update. You can make changes in Repository settings, including `name`.
@@ -98,7 +98,7 @@ description: A Repository is a repository storing data of deployable plugins.
 
  
 ### deregister
-> **DELETE** /repository/v1/repository/{repository_id}
+> **POST** /repository/v1/repository/deregister
 >
 
 > Deregisters and deletes a specific Repository. You must specify the `repository_id` of the Repository to deregister.
@@ -121,7 +121,7 @@ description: A Repository is a repository storing data of deployable plugins.
 
  
 ### get
-> **GET** /repository/v1/repositories/{repository_id}
+> **POST** /repository/v1/repository/get
 >
 
 > Gets a specific Repository. Prints detailed information about the Repository, including  `name`, `repository_type`, and `endpoint`.
@@ -156,10 +156,8 @@ description: A Repository is a repository storing data of deployable plugins.
 
  
 ### list
-> **GET** /repository/v1/repositories
+> **POST** /repository/v1/repository/list
 >
-> **POST** /repository/v1/repositories/search
-
 
 > Gets a list of all Repositories regardless of `domain`. You can use a query to get a filtered list of Repositories.
 
@@ -199,7 +197,7 @@ description: A Repository is a repository storing data of deployable plugins.
 
  
 ### stat
-> **POST** /repository/v1/repositories/stat
+> **POST** /repository/v1/repository/stat
 >
 
 

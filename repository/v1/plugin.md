@@ -28,7 +28,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### register
-> **POST** /repository/v1/plugins
+> **POST** repository/v1/plugin/register
 >
 
 > Registers a Plugin. The parameter `registry_type`, meaning container registry type, can be either `DOCKER_HUB` or `AWS_PUBLIC_ECR`. The default value of the `registry_type` is `DOCKER_HUB`. The parameter `registry_url` is required if the `registry_type` is not `DOCKER_HUB`. The parameter `image` is limited to 40 characters.
@@ -148,7 +148,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### update
-> **PUT** /repository/v1/plugin/{plugin_id}
+> **POST** repository/v1/plugin/update
 >
 
 > Updates a specific Plugin registered. A Plugin can be updated only if its Repository's `repository_type` is `local`. You can make changes in Plugin settings, including `template` and its options, `schema`.
@@ -264,7 +264,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### deregister
-> **DELETE** /repository/v1/plugin/{plugin_id}
+> **POST** repository/v1/plugin/deregister
 >
 
 > Deregisters and deletes a specific Plugin. You must specify the `plugin_id` of the Plugin to deregister.
@@ -317,7 +317,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### enable
-> **PUT** /repository/v1/plugin/{plugin_id}/enable
+> **POST** repository/v1/plugin/enable
 >
 
 > Enables a specific Plugin. If the Plugin is enabled, the Plugin can be used as its parameter `state` becomes `ENABLED`.
@@ -370,7 +370,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### disable
-> **PUT** /repository/v1/plugin/{plugin_id}/disable
+> **POST** repository/v1/plugin/disable
 >
 
 > Disables a specific Plugin. If the Plugin is disabled, the Plugin cannot be used as its parameter `state` becomes `DISABLED`.
@@ -423,7 +423,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### get_versions
-> **GET** /repository/v1/plugins/{plugin_id}/versions
+> **POST** repository/v1/plugin/get-versions
 >
 
 > Gets all version data of a specific Plugin from its Repository. The parameter `plugin_id` is used as an identifier of a Plugin to get version data.
@@ -462,7 +462,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### get
-> **GET** /repository/v1/plugins/{plugin_id}
+> **POST** repository/v1/plugin/get
 >
 
 > Gets a specific Plugin. Prints detailed information about the Plugin, including  `image`, `registry_url`, and `state`.
@@ -515,10 +515,8 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### list
-> **GET** /repository/v1/plugins
+> **POST** repository/v1/plugin/list
 >
-> **POST** /repository/v1/plugins/search
-
 
 > Gets a list of all Plugins registered in a specific Repository. The parameter `repository_id` is used as an identifier of a Repository to get its list of Plugins. You can use a query to get a filtered list of Plugins.
 
@@ -597,7 +595,7 @@ description: A Plugin is a resource containing data of deployable plugins such a
 
  
 ### stat
-> **POST** /repository/v1/plugins/stat
+> **POST** repository/v1/plugin/stat
 >
 
 

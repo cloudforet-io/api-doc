@@ -25,7 +25,7 @@ description: A Schema is a data structure used in all domains. For example, data
 
  
 ### create
-> **POST** /repository/v1/schemas
+> **POST** /repository/v1/schema/create
 >
 
 > Creates a new Schema. You must specify the parameters: `service_type`, `name`, and `schema`(data structure). With the parameter `domain_id`, you can choose whether you will create a Schema in `Local` or externally. The Schema created includes `repository_info`, information about where the resource is managed.
@@ -77,7 +77,7 @@ description: A Schema is a data structure used in all domains. For example, data
 
  
 ### update
-> **PUT** /repository/v1/schema/{schema}
+> **POST** /repository/v1/schema/update
 >
 
 > Updates a specific Schema. You can make changes in Schema settings, including `name`, `schema`, `labels`, and `tags`.
@@ -126,7 +126,7 @@ description: A Schema is a data structure used in all domains. For example, data
 
  
 ### delete
-> **DELETE** /repository/v1/schema/{schema}
+> **POST** /repository/v1/schema/delete
 >
 
 > Deletes a specific Schema. You must specify the `name` of the Schema to delete, as the `name` is an identifier of Schema resources.
@@ -149,7 +149,7 @@ description: A Schema is a data structure used in all domains. For example, data
 
  
 ### get
-> **GET** /repository/v1/schemas/{schema}
+> **POST** /repository/v1/schema/get
 >
 
 > Gets a specific Schema. You must specify the `name` of the Schema to get, as the `name` is an identifier of Schema resources. You can use the parameter `repository_id` to limit the scope of the method to a specific Repository.
@@ -195,10 +195,8 @@ description: A Schema is a data structure used in all domains. For example, data
 
  
 ### list
-> **GET** /repository/v1/schemas
+> **POST** /repository/v1/schema/list
 >
-> **POST** /repository/v1/schemas/search
-
 
 > Gets a list of all Schemas in a specific Repository. The parameter `repository_id` is used as an identifier of a Repository to get its list of Schemas. You can use a query to get a filtered list of Schemas.
 
@@ -250,7 +248,7 @@ description: A Schema is a data structure used in all domains. For example, data
 
  
 ### stat
-> **POST** /repository/v1/schemas/stat
+> **POST** /repository/v1/schema/stat
 >
 
 
