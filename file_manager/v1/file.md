@@ -26,7 +26,7 @@ description:
 
  
 ### add
-> **POST** /file-manager/v1/files
+> **POST** /file-manager/v1/file/add
 >
 
 
@@ -39,7 +39,7 @@ description:
 
  
 ### update
-> **PUT** /file-manager/v1/file/{file_id}
+> **POST** /file-manager/v1/file/update
 >
 
 
@@ -52,7 +52,7 @@ description:
 
  
 ### delete
-> **DELETE** /file-manager/v1/file/{file_id}
+> **POST** /file-manager/v1/file/delete
 >
 
 
@@ -65,7 +65,7 @@ description:
 
  
 ### get_download_url
-> **GET** /file-manager/v1/file/{file_id}/download-url
+> **POST** /file-manager/v1/file/get-download-url
 >
 
 
@@ -78,7 +78,7 @@ description:
 
  
 ### get
-> **GET** /file-manager/v1/file/{file_id}
+> **POST** /file-manager/v1/file/get
 >
 
 
@@ -91,10 +91,8 @@ description:
 
  
 ### list
-> **GET** /file-manager/v1/files
+> **POST** /file-manager/v1/file/list
 >
-> **POST** /file-manager/v1/files/search
-
 
 
 | Type | Message |
@@ -106,7 +104,7 @@ description:
 
  
 ### stat
-> **POST** /file-manager/v1/files/stat
+> **POST** /file-manager/v1/file/stat
 >
 
 
