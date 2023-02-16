@@ -29,7 +29,7 @@ description: description of dashboard
 
  
 ### create
-> **POST** /dashboard/v1/project-dashboards
+> **POST** /dashboard/v1/project-dashboard/create
 >
 
 
@@ -42,7 +42,7 @@ description: description of dashboard
 
  
 ### update
-> **PUT** /dashboard/v1/project-dashboard/{project_dashboard_id}
+> **POST** /dashboard/v1/project-dashboard/update
 >
 
 
@@ -55,7 +55,7 @@ description: description of dashboard
 
  
 ### delete
-> **DELETE** /dashboard/v1/project-dashboard/{project_dashboard_id}
+> **POST** /dashboard/v1/project-dashboard/delete
 >
 
 
@@ -68,7 +68,7 @@ description: description of dashboard
 
  
 ### get
-> **GET** /dashboard/v1/project-dashboard/{project_dashboard_id}
+> **POST** /dashboard/v1/project-dashboard/get
 >
 
 
@@ -81,7 +81,7 @@ description: description of dashboard
 
  
 ### delete_version
-> **DELETE** /dashboard/v1/project-dashboard/{project_dashboard_id}/version/{version}
+> **POST** /dashboard/v1/project-dashboard/delete-version
 >
 
 
@@ -94,7 +94,7 @@ description: description of dashboard
 
  
 ### revert_version
-> **POST** /dashboard/v1/project-dashboard/{project_dashboard_id}/version/{version}/revert
+> **POST** /dashboard/v1/project-dashboard/revert-version
 >
 
 
@@ -107,7 +107,7 @@ description: description of dashboard
 
  
 ### get_version
-> **GET** /dashboard/v1/project-dashboard/{project_dashboard_id}/version/{version}
+> **POST** /dashboard/v1/project-dashboard/get-version
 >
 
 
@@ -120,10 +120,8 @@ description: description of dashboard
 
  
 ### list_versions
-> **GET** /dashboard/v1/project-dashboard/{project_dashboard_id}/versions
+> **POST** /dashboard/v1/project-dashboard/list-versions
 >
-> **POST** /dashboard/v1/project-dashboard/{project_dashboard_id}/versions/search
-
 
 
 | Type | Message |
@@ -135,10 +133,8 @@ description: description of dashboard
 
  
 ### list
-> **GET** /dashboard/v1/project-dashboards
+> **POST** /dashboard/v1/project-dashboard/list
 >
-> **POST** /dashboard/v1/project-dashboards/search
-
 
 
 | Type | Message |
@@ -150,7 +146,7 @@ description: description of dashboard
 
  
 ### stat
-> **POST** /dashboard/v1/project-dashboards/stat
+> **POST** /dashboard/v1/project-dashboard/stat
 >
 
 

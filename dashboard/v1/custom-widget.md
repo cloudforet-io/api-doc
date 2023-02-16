@@ -25,7 +25,7 @@ description: description of dashboard
 
  
 ### create
-> **POST** /dashboard/v1/custom-widgets
+> **POST** /dashboard/v1/custom-widget/create
 >
 
 
@@ -38,7 +38,7 @@ description: description of dashboard
 
  
 ### update
-> **PUT** /dashboard/v1/custom-widget/{custom_widget_id}
+> **POST** /dashboard/v1/custom-widget/update
 >
 
 
@@ -51,7 +51,7 @@ description: description of dashboard
 
  
 ### delete
-> **DELETE** /dashboard/v1/custom-widget/{custom_widget_id}
+> **POST** /dashboard/v1/custom-widget/delete
 >
 
 
@@ -64,7 +64,7 @@ description: description of dashboard
 
  
 ### get
-> **GET** /dashboard/v1/custom-widget/{custom_widget_id}
+> **POST** /dashboard/v1/custom-widget/get
 >
 
 
@@ -77,10 +77,8 @@ description: description of dashboard
 
  
 ### list
-> **GET** /dashboard/v1/custom-widgets
+> **POST** /dashboard/v1/custom-widget/list
 >
-> **POST** /dashboard/v1/custom-widgets/search
-
 
 
 | Type | Message |
@@ -92,7 +90,7 @@ description: description of dashboard
 
  
 ### stat
-> **POST** /dashboard/v1/custom-widgets/stat
+> **POST** /dashboard/v1/custom-widget/stat
 >
 
 
