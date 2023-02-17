@@ -21,7 +21,7 @@ description: A Plugin is a resource managing endpoints of the plugin instances d
 
  
 ### get_plugin_endpoint
-> **POST** /plugin/v1/plugin/{plugin_id}/get-endpoint
+> **POST** /plugin/v1/plugin/get-plugin-endpoint
 >
 
 > Gets the `endpoint` of a specific plugin instance. A Plugin returns only a single `endpoint` by determining `labels` and `priority`. If the requested plugin instance is already deployed, the `endpoint` is returned. If not, the `endpoint` is returned after deploying the plugin instance.
@@ -53,7 +53,7 @@ description: A Plugin is a resource managing endpoints of the plugin instances d
 
  
 ### notify_failure
-> **PUT** /plugin/v1/plugin/{plugin_id}/notify-failure
+> **POST** /plugin/v1/plugin/notify-failure
 >
 
 

@@ -30,7 +30,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### publish
-> **POST** /plugin/v1/supervisors
+> **POST** /plugin/v1/supervisor/publish
 >
 
 > Creates a new Supervisor. Only Users with the `MANAGED` permission can set the Supervisor `public`. The Supervisor manages the lifecycle of plugin instances by the Supervisor's state. When a Supervisor is created, the state of the resource is `PENDING`. If the state remains the same for 5 minutes, the state is changed to `DISCONNECTED`.
@@ -75,7 +75,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### register
-> **POST** /plugin/v1/supervisor/{supervisor_id}/register
+> **POST** /plugin/v1/supervisor/register
 >
 
 > Registers a specific Supervisor. You must specify the `supervisor_id` of the Supervisor to register. The `state` of the Supervisor changes from `PENDING` to `ENABLED`.
@@ -102,7 +102,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### update
-> **PUT** /plugin/v1/supervisor/{supervisor_id}
+> **POST** /plugin/v1/supervisor/update
 >
 
 > Updates a specific Supervisor. You can make changes in Supervisor settings, including `labels`, `tags`, and the `bool` type parameter `is_public`.
@@ -154,7 +154,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### deregister
-> **DELETE** /plugin/v1/supervisor/{supervisor_id}/register
+> **POST** /plugin/v1/supervisor/deregister
 >
 
 > Deregisters and deletes a specific Supervisor. You must specify the `supervisor_id` of the Supervisor to deregister.
@@ -177,7 +177,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### enable
-> **PUT** /plugin/v1/supervisor/{supervisor_id}/enable
+> **POST** /plugin/v1/supervisor/enable
 >
 
 > Enables a specific Supervisor. By changing the `state` parameter to `ENABLED`, the Supervisor can deploy or delete the `pod` of the plugin instance.
@@ -217,7 +217,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### disable
-> **PUT** /plugin/v1/supervisor/{supervisor_id}/disable
+> **POST** /plugin/v1/supervisor/disable
 >
 
 > Disables a specific Supervisor. By changing the `state` parameter to `DISABLED`, the Supervisor cannot deploy or delete the `pod` of the plugin instance.
@@ -257,7 +257,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### recover_plugin
-> **POST** /plugin/v1/supervisor/{supervisor_id}/plugin/{plugin_id}/recover
+> **POST** /plugin/v1/supervisor/recover-plugin
 >
 
 > Recovers a specific plugin instance in a specific Supervisor. Changes the `state` of the Supervisor to `RE-PROVISIONING`.
@@ -288,7 +288,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### get
-> **GET** /plugin/v1/supervisor/{supervisor_id}
+> **POST** /plugin/v1/supervisor/get
 >
 
 
@@ -301,10 +301,8 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### list
-> **GET** /plugin/v1/supervisors
+> **POST** /plugin/v1/supervisor/list
 >
-> **POST** /plugin/v1/supervisors/search
-
 
 > Gets a list of all Supervisors. You can use a query to get a filtered list of Supervisors.
 
@@ -358,7 +356,7 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### stat
-> **POST** /plugin/v1/supervisors/stat
+> **POST** /plugin/v1/supervisor/stat
 >
 
 
@@ -371,10 +369,8 @@ description: A Supervisor is a resource managing the lifecycle of the plugin ins
 
  
 ### list_plugins
-> **GET** /plugin/v1/supervisor/{supervisor_id}/plugins
+> **POST** /plugin/v1/supervisor/list-plugins
 >
-> **POST** /plugin/v1/supervisor/{supervisor_id}/plugins/search
-
 
 > Gets a list of all plugin instances regardless of Supervisors. Prints detailed information about the plugin instances, including `version`, `state`, and the relevant Supervisor.
 
