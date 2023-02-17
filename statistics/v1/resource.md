@@ -20,7 +20,7 @@ description: A Resource is a resource used for analysis on all microservices use
 
  
 ### stat
-> **POST** /statistics/v1/resources/stat
+> **POST** statistics/v1/resource/stat
 >
 
 > Enables data preprocessing of different services. Although limited, it is possible to create not only basic queries but also data suitable for users' needs, such as joins between two tables created by the query, handling missing values, and sorting.

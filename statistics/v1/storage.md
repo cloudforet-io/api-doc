@@ -29,7 +29,7 @@ description:
 
  
 ### register
-> **POST** /statistics/v1/storages
+> **POST** /statistics/v1/storage/register
 >
 
 
@@ -42,7 +42,7 @@ description:
 
  
 ### update
-> **PUT** /statistics/v1/storage/{storage_id}
+> **POST** /statistics/v1/storage/update
 >
 
 
@@ -55,7 +55,7 @@ description:
 
  
 ### update_plugin
-> **PUT** /spot-automation/v1/storage/{storage_id}/plugin
+> **POST** /statistics/v1/storage/update-plugin
 >
 
 
@@ -68,7 +68,7 @@ description:
 
  
 ### verify_plugin
-> **POST** /spot-automation/v1/storage/{storage_id}/plugin/verify
+> **POST** /statistics/v1/storage/verify-plugin
 >
 
 
@@ -81,7 +81,7 @@ description:
 
  
 ### enable
-> **PUT** /statistics/v1/storage/{schedule_id}/enable
+> **POST** /statistics/v1/storage/enable
 >
 
 
@@ -94,7 +94,7 @@ description:
 
  
 ### disable
-> **PUT** /statistics/v1/storage/{schedule_id}/disable
+> **POST** /statistics/v1/storage/disable
 >
 
 
@@ -107,7 +107,7 @@ description:
 
  
 ### deregister
-> **DELETE** /statistics/v1/storage/{schedule_id}
+> **POST** /statistics/v1/storage/deregister
 >
 
 
@@ -120,7 +120,7 @@ description:
 
  
 ### get
-> **GET** /statistics/v1/storage/{schedule_id}
+> **POST** /statistics/v1/storage/get
 >
 
 
@@ -133,10 +133,8 @@ description:
 
  
 ### list
-> **GET** /statistics/v1/storages
+> **POST** /statistics/v1/storage/list
 >
-> **POST** /statistics/v1/storages/search
-
 
 
 | Type | Message |
@@ -148,7 +146,7 @@ description:
 
  
 ### stat
-> **POST** /statistics/v1/storages/stat
+> **POST** /statistics/v1/storage/stat
 >
 
 

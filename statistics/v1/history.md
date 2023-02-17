@@ -22,7 +22,7 @@ description: A History is a record of data collection based on a Schedule.
 
  
 ### create
-> **POST** /statistics/v1/history
+> **POST** /statistics/v1/history/create
 >
 
 > Creates a new History. Gets a Schedule as an input and creates a History as an output. You can use this method to manually run a specific Schedule.
@@ -46,10 +46,8 @@ description: A History is a record of data collection based on a Schedule.
 
  
 ### list
-> **GET** /statistics/v1/history
+> **POST** /statistics/v1/history/list
 >
-> **POST** /statistics/v1/history/query
-
 
 > Gets a list of all Histories. You can use a query to get a filtered list of Histories.
 

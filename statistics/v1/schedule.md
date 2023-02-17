@@ -27,7 +27,7 @@ description: A Schedule is a time schedule of when a User will use a query.
 
  
 ### add
-> **POST** /statistics/v1/schedules
+> **POST** statistics/v1/schedule/add
 >
 
 > Adds a new Schedule. When creating, `topic` and queries to be used should be specified. The time interval of the Schedule should be also specified to run queries repeatedly. The run set by Schedule starts every hour on the hour.
@@ -907,7 +907,7 @@ description: A Schedule is a time schedule of when a User will use a query.
 
  
 ### update
-> **PUT** /statistics/v1/schedule/{schedule_id}
+> **POST** /statistics/schedule/update
 >
 
 > Updates a specific Schedule. You can make changes in Schedule settings, including time intervals.
@@ -1375,7 +1375,7 @@ description: A Schedule is a time schedule of when a User will use a query.
 
  
 ### enable
-> **PUT** /statistics/v1/schedule/{schedule_id}/enable
+> **POST** /statistics/v1/schedule/enable
 >
 
 > Enables a specific Schedule. If a Schedule is enabled, the query usage will be scheduled by the time interval specified.
@@ -1835,7 +1835,7 @@ description: A Schedule is a time schedule of when a User will use a query.
 
  
 ### disable
-> **PUT** /statistics/v1/schedule/{schedule_id}/disable
+> **POST** /statistics/v1/schedule/disable
 >
 
 > Disables a specific Schedule. If a Schedule is disabled, the query usage will not be scheduled.
@@ -2295,7 +2295,7 @@ description: A Schedule is a time schedule of when a User will use a query.
 
  
 ### delete
-> **DELETE** /statistics/v1/schedule/{schedule_id}
+> **POST** /statistics/v1/schedule/delete
 >
 
 > Deletes a specific Schedule. You must specify the `schedule_id` of the Schedule to delete.
@@ -2319,7 +2319,7 @@ description: A Schedule is a time schedule of when a User will use a query.
 
  
 ### get
-> **GET** /statistics/v1/schedule/{schedule_id}
+> **POST** statistics/v1/schedule/get
 >
 
 > Gets a specific Schedule. Prints detailed information about the Schedule, including the schedule interval and `state`.
@@ -2777,10 +2777,8 @@ description: A Schedule is a time schedule of when a User will use a query.
 
  
 ### list
-> **GET** /statistics/v1/schedules
+> **POST** /statistics/v1/schedule/list
 >
-> **POST** /statistics/v1/schedules/search
-
 
 > Gets a list of all Schedules. You can use a query to get a filtered list of Schedules.
 
@@ -3242,7 +3240,7 @@ description: A Schedule is a time schedule of when a User will use a query.
 
  
 ### stat
-> **POST** /statistics/v1/schedules/stat
+> **POST** /statistics/v1/schedule/stat
 >
 
 
