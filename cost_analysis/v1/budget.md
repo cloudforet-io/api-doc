@@ -26,7 +26,7 @@ description: A Budget is a planned amount of cost expenditure for reduction and 
 
  
 ### create
-> **POST** /cost-analysis/v1/budgets
+> **POST** /cost-analysis/v1/budget/create
 >
 
 > Creates a new Budget. When creating a Budget, it should be set for a specific ProjectGroup or Project. The budgeted amount and date of the `planned_limits` should be specified on a monthly or yearly basis.
@@ -172,7 +172,7 @@ description: A Budget is a planned amount of cost expenditure for reduction and 
 
  
 ### update
-> **PUT** /cost-analysis/v1/budget/{budget_id}
+> **POST** /cost-analysis/v1/budget/update
 >
 
 > Updates a specific Budget. You can make changes in the budgeted amount of the time period specified while creating the resource.
@@ -294,7 +294,7 @@ description: A Budget is a planned amount of cost expenditure for reduction and 
 
  
 ### set_notification
-> **PUT** /cost-analysis/v1/budget/{budget_id}/notification
+> **POST** /cost-analysis/v1/budget/set-notification
 >
 
 > Sets a notification on a specific Budget. Sets a threshold on the budget, and if the cost exceeds the threshold, a notification is raised.
@@ -359,7 +359,7 @@ description: A Budget is a planned amount of cost expenditure for reduction and 
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/budget/{budget_id}
+> **POST** /cost-analysis/v1/budget/delete
 >
 
 > Deletes a specific Budget. You must specify the `budget_id` of the Budget to delete.
@@ -382,7 +382,7 @@ description: A Budget is a planned amount of cost expenditure for reduction and 
 
  
 ### get
-> **GET** /cost-analysis/v1/budget/{budget_id}
+> **POST** /cost-analysis/v1/budget/get
 >
 
 > Gets a specific Budget. Prints detailed information about the Budget, including `planned_limits` of the project group or project for the pre-defined period.
@@ -474,10 +474,8 @@ description: A Budget is a planned amount of cost expenditure for reduction and 
 
  
 ### list
-> **GET** /cost-analysis/v1/budgets
+> **POST** /cost-analysis/v1/budget/list
 >
-> **POST** /cost-analysis/v1/budgets/search
-
 
 > Gets a list of all Budgets. You can use a query to get a filtered list of Budgets.
 
@@ -573,7 +571,7 @@ description: A Budget is a planned amount of cost expenditure for reduction and 
 
  
 ### stat
-> **POST** /cost-analysis/v1/budgets/stat
+> **POST** /cost-analysis/v1/budget/stat
 >
 
 

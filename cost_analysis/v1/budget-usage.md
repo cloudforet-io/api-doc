@@ -22,10 +22,8 @@ description:
 
  
 ### list
-> **GET** /cost-analysis/v1/budget/{budget_id}/usage
+> **POST** /cost-analysis/v1/budget-usage/list
 >
-> **POST** /cost-analysis/v1/budget/{budget_id}/usage/search
-
 
 > Gets a list of all BudgetUsages. You can use a query to get a filtered list of BudgetUsages.
 
@@ -75,7 +73,7 @@ description:
 
  
 ### analyze
-> **POST** /cost-analysis/v1/budget/{budget_id}/usage/analyze
+> **POST** /cost-analysis/v1/budget-usage/analyze
 >
 
 
@@ -88,7 +86,7 @@ description:
 
  
 ### stat
-> **POST** /cost-analysis/v1/budget/{budget_id}/usage/stat
+> **POST** /cost-analysis/v1/budget-usage/stat
 >
 
 

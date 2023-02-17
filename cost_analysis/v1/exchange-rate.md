@@ -25,7 +25,7 @@ description: An ExchangeRate is a resource defining the exchange rate of currenc
 
  
 ### set
-> **POST** /cost-analysis/v1/exchange-rate/{currency}/set
+> **POST** /cost-analysis/v1/exchange-rate/set
 >
 
 > Overrides a value of a specific ExchangeRate. This method is used to change the ExchangeRate in a specific domain. You can set the `currency` and `rate` of the resource.
@@ -60,7 +60,7 @@ description: An ExchangeRate is a resource defining the exchange rate of currenc
 
  
 ### reset
-> **POST** /cost-analysis/v1/exchange-rate/{currency}/reset
+> **POST** /cost-analysis/v1/exchange-rate/reset
 >
 
 > Resets a value of a specific ExchangeRate and changes the ExchangeRate to the ExchangeRate of the `default` domain.
@@ -95,7 +95,7 @@ description: An ExchangeRate is a resource defining the exchange rate of currenc
 
  
 ### enable
-> **POST** /cost-analysis/v1/exchange-rate/{currency}/enable
+> **POST** /cost-analysis/v1/exchange-rate/enable
 >
 
 > ''
@@ -122,7 +122,7 @@ description: An ExchangeRate is a resource defining the exchange rate of currenc
 
  
 ### disable
-> **POST** /cost-analysis/v1/exchange-rate/{currency}/disable
+> **POST** /cost-analysis/v1/exchange-rate/disable
 >
 
 > ''
@@ -149,7 +149,7 @@ description: An ExchangeRate is a resource defining the exchange rate of currenc
 
  
 ### get
-> **GET** /cost-analysis/v1/exchange-rate/{currency}
+> **POST** /cost-analysis/v1/exchange-rate/get
 >
 
 > Gets a specific ExchangeRate. Prints detailed information about the ExchangeRate, including  `currency` and `rate`.
@@ -184,10 +184,8 @@ description: An ExchangeRate is a resource defining the exchange rate of currenc
 
  
 ### list
-> **GET** /cost-analysis/v1/exchange-rates
+> **POST** /cost-analysis/v1/exchange-rate/list
 >
-> **POST** /cost-analysis/v1/exchange-rates/search
-
 
 > Gets a list of all ExchangeRates. You can use a query to get a filtered list of ExchangeRates.
 

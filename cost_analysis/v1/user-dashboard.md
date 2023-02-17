@@ -25,7 +25,7 @@ description: A UserDashboard is a cost data dashboard customized with a combinat
 
  
 ### create
-> **POST** /cost-analysis/v1/user-dashboards
+> **POST** cost-analysis/v1/user-dashboard/create
 >
 
 > Creates a new UserDashboard. Users can use the dashboard in `private`. In addition to the widgets provided by Cloudforet by default, Users can use widgets through the CustomWidget resource to create a UserDashboard that suits their needs.
@@ -144,7 +144,7 @@ description: A UserDashboard is a cost data dashboard customized with a combinat
 
  
 ### update
-> **PUT** /cost-analysis/v1/user-dashboard/{user_dashboard_id}
+> **POST** cost-analysis/v1/user-dashboard/update
 >
 
 > Updates a specific UserDashboard. You can make changes in widgets, including default widgets and CustomWidegets.
@@ -262,7 +262,7 @@ description: A UserDashboard is a cost data dashboard customized with a combinat
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/user-dashboard/{user_dashboard_id}
+> **POST** cost-analysis/v1/user-dashboard/delete
 >
 
 > Deletes a specific UserDashboard. You must specify the `user_dashboard_id` of the UserDashboard to delete.
@@ -285,7 +285,7 @@ description: A UserDashboard is a cost data dashboard customized with a combinat
 
  
 ### get
-> **GET** /cost-analysis/v1/user-dashboard/{user_dashboard_id}
+> **POST** cost-analysis/v1/user-dashboard/get
 >
 
 > Gets a specific UserDashboard. Prints detailed information about the UserDashboard, including widegts used.
@@ -363,10 +363,8 @@ description: A UserDashboard is a cost data dashboard customized with a combinat
 
  
 ### list
-> **GET** /cost-analysis/v1/user-dashboards
+> **POST** cost-analysis/v1/user-dashboard/list
 >
-> **POST** /cost-analysis/v1/user-dashboards/search
-
 
 > Gets a list of all UserDashboards. You can use a query to get a filtered list of UserDashboards.
 
@@ -496,7 +494,7 @@ description: A UserDashboard is a cost data dashboard customized with a combinat
 
  
 ### stat
-> **POST** /cost-analysis/v1/user-dashboards/stat
+> **POST** cost-analysis/v1/user-dashboard/stat
 >
 
 

@@ -25,7 +25,7 @@ description: A PublicDashboard is a cost data dashboard provided to all users by
 
  
 ### create
-> **POST** /cost-analysis/v1/public-dashboards
+> **POST** cost-analysis/v1/public-dashboard/create
 >
 
 > Creates a new PublicDashboard. This method is used for creating the default dashboard . `Admin` type Users can use the method to add a new dashboard with customized widgets.
@@ -143,7 +143,7 @@ description: A PublicDashboard is a cost data dashboard provided to all users by
 
  
 ### update
-> **PUT** /cost-analysis/v1/public-dashboard/{public_dashboard_id}
+> **POST** cost-analysis/v1/public-dashboard/update
 >
 
 > Updates a specific PublicDashboard. Changes the widgets of the PublicDashboard with default widgets and customized widgets. Only `Admin` type Users can use the method.
@@ -260,7 +260,7 @@ description: A PublicDashboard is a cost data dashboard provided to all users by
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/public-dashboard/{public_dashboard_id}
+> **POST** cost-analysis/v1/public-dashboard/delete
 >
 
 > Deletes a specific PublicDashboard. You must specify the `public_dashboard_id` of the PublicDashboard to delete.
@@ -283,7 +283,7 @@ description: A PublicDashboard is a cost data dashboard provided to all users by
 
  
 ### get
-> **GET** /cost-analysis/v1/public-dashboard/{public_dashboard_id}
+> **POST** cost-analysis/v1/public-dashboard/get
 >
 
 > Gets a specific PublicDashboard. Prints detailed information about the PublicDashboard, including `custom_layouts` and `period_type`.
@@ -364,10 +364,8 @@ description: A PublicDashboard is a cost data dashboard provided to all users by
 
  
 ### list
-> **GET** /cost-analysis/v1/public-dashboards
+> **POST** /cost-analysis/v1/public-dashboard/list
 >
-> **POST** /cost-analysis/v1/public-dashboards/search
-
 
 > Gets a list of all PublicDashboards. You can use a query to get a filtered list of PublicDashboards.
 
@@ -554,7 +552,7 @@ description: A PublicDashboard is a cost data dashboard provided to all users by
 
  
 ### stat
-> **POST** /cost-analysis/v1/public-dashboards/stat
+> **POST** /cost-analysis/v1/public-dashboard/stat
 >
 
 

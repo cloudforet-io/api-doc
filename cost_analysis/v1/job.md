@@ -23,7 +23,7 @@ description: A Job is an act of collecting external cost data through plugins. T
 
  
 ### cancel
-> **POST** /cost-analysis/v1/job/{job_id}/cancel
+> **POST** /cost-analysis/v1/job/cancel
 >
 
 > Cancels a specific Job. You can manually cease a Job in run with this method.
@@ -71,7 +71,7 @@ description: A Job is an act of collecting external cost data through plugins. T
 
  
 ### get
-> **GET** /cost-analysis/v1/job/{job_id}
+> **POST** /cost-analysis/v1/job/get
 >
 
 > Gets a specific Job. Prints detailed information about the Job, including the plugin used, operation time, and `status`.
@@ -118,10 +118,8 @@ description: A Job is an act of collecting external cost data through plugins. T
 
  
 ### list
-> **GET** /cost-analysis/v1/jobs
+> **POST** /cost-analysis/v1/job/list
 >
-> **POST** /cost-analysis/v1/jobs/search
-
 
 > Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
@@ -191,7 +189,7 @@ description: A Job is an act of collecting external cost data through plugins. T
 
  
 ### stat
-> **POST** /cost-analysis/v1/jobs/stat
+> **POST** /cost-analysis/v1/job/stat
 >
 
 

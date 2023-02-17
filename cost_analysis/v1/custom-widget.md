@@ -25,7 +25,7 @@ description: A CustomWidget is a widget created by a CostQuerySet a User defined
 
  
 ### create
-> **POST** /cost-analysis/v1/custom-widgets
+> **POST** /cost-analysis/v1/custom-widget/create
 >
 
 > Creates a new CustomWidget. Based on the queries of the CostQuerySet the User made, a widget is created with the default template Cloudforet provides.
@@ -78,7 +78,7 @@ description: A CustomWidget is a widget created by a CostQuerySet a User defined
 
  
 ### update
-> **PUT** /cost-analysis/v1/custom-widget/{widget_id}
+> **POST** /cost-analysis/v1/custom-widget/update
 >
 
 > Updates a specific CustomWidget. You can make changes in CustomWidget settings, including `chart_type` and queries.
@@ -137,7 +137,7 @@ description: A CustomWidget is a widget created by a CostQuerySet a User defined
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/custom-widget/{widget_id}
+> **POST** /cost-analysis/v1/custom-widget/delete
 >
 
 > Deletes a specific CustomWidget. You must specify the `custom_widget_id` of the CustomWidget to delete.
@@ -160,7 +160,7 @@ description: A CustomWidget is a widget created by a CostQuerySet a User defined
 
  
 ### get
-> **GET** /cost-analysis/v1/custom-widget/{widget_id}
+> **POST** /cost-analysis/v1/custom-widget/get
 >
 
 > Gets a specific CustomWidget. Prints detailed information about the CustomWidget, including `chart_type` and queries.
@@ -205,10 +205,8 @@ description: A CustomWidget is a widget created by a CostQuerySet a User defined
 
  
 ### list
-> **GET** /cost-analysis/v1/custom-widgets
+> **POST** /cost-analysis/v1/custom-widget/list
 >
-> **POST** /cost-analysis/v1/custom-widgets/search
-
 
 > Gets a list of all CustomWidgets. You can use a query to get a filtered list of CustomWidgets.
 
@@ -274,7 +272,7 @@ description: A CustomWidget is a widget created by a CostQuerySet a User defined
 
  
 ### stat
-> **POST** /cost-analysis/v1/custom-widgets/stat
+> **POST** /cost-analysis/v1/custom-widget/stat
 >
 
 

@@ -26,7 +26,7 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 
  
 ### create
-> **POST** /cost-analysis/v1/data_source_rules
+> **POST** /cost-analysis/v1/data-source-rule/create
 >
 
 > Creates a new DataSourceRule. When creating the resource, this method can apply two types of conditions: mapping projects where the cost incurred to the Cost, and mapping cloud service accounts to the Cost. By adjusting the `condition_policy` parameter, the DataSourceRule can be applied when all conditions are met, applied when any of the conditions are met, or always applied regardless of whether the conditions are met.
@@ -91,7 +91,7 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 
  
 ### update
-> **PUT** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
+> **POST** /cost-analysis/v1/data-source-rule/update
 >
 
 > Updates a specific DataSourceRule. You can make changes in DataSourceRule settings, including filtering conditions. If the parameter `is_default` is `true`, only `Admin` type User can use this method.
@@ -156,7 +156,7 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 
  
 ### change_order
-> **PUT** /cost-analysis/v1/data_source_rule/{data_source_rule_id}/order
+> **POST** /cost-analysis/v1/data-source-rule/change-order
 >
 
 > Changes the priority order of the DataSourceRules to apply. If there are multiple DataSourceRules applied in a specific service account, the priority order of the resources is requried. This method changes the priority order to apply DataSourceRules.
@@ -207,7 +207,7 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
+> **POST** /cost-analysis/v1/data-source-rule/delete
 >
 
 > Deletes a specific DataSourceRule. You must specify the `data_source_rule_id` of the DataSourceRule to delete. If the parameter `is_default` is `true`, only `Admin` type User can use this method.
@@ -230,7 +230,7 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 
  
 ### get
-> **GET** /cost-analysis/v1/data_source_rule/{data_source_rule_id}
+> **POST** /cost-analysis/v1/data-source-rule/get
 >
 
 > Gets a specific DataSourceRule. Prints detailed information about the DataSourceRule, including  `conditions_policy` and conditions applied to DataSources.
@@ -277,10 +277,8 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 
  
 ### list
-> **GET** /cost-analysis/v1/data_source_rules
+> **POST** /cost-analysis/v1/data-source-rule/list
 >
-> **POST** /cost-analysis/v1/data_source_rules/search
-
 
 > Gets a list of all DataSourceRules. You can use a query to get a filtered list of DataSourceRules.
 
@@ -350,7 +348,7 @@ description: A DataSourceRule is a resource filtering the raw data from the Data
 
  
 ### stat
-> **POST** /cost-analysis/v1/data_source_rules/stat
+> **POST** /cost-analysis/v1/data-source-rule/stat
 >
 
 

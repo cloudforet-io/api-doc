@@ -26,7 +26,7 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 
  
 ### create
-> **POST** /cost-analysis/v1/costs
+> **POST** /cost-analysis/v1/cost/create
 >
 
 > Creates a new Cost. When creating a Cost, if the parameter `provider` is not entered, the default value of the parameter will be the provider information of the DataSource which collected the raw data of the Cost from the provider. The parameter `billed_at` is the data of when the cost is billed. While the DataSource collects the cost data, if the `billed_at` data does not exist, the value will be replaced with the `created_at` data indicating when the Cost is created. If the cost data collected is based on USD, the Cost is created without the currency exchange.
@@ -86,7 +86,7 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/cost/{cost_id}
+> **POST** /cost-analysis/v1/cost/delete
 >
 
 > Deletes a specific Cost. You must specify the `cost_id` of the Cost to delete.
@@ -109,7 +109,7 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 
  
 ### get
-> **GET** /cost-analysis/v1/cost/{cost_id}
+> **POST** /cost-analysis/v1/cost/get
 >
 
 > Gets a specific Cost. Prints detailed information about the Cost, including  `region_code` and `account`.
@@ -157,10 +157,8 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 
  
 ### list
-> **GET** /cost-analysis/v1/costs
+> **POST** /cost-analysis/v1/cost/list
 >
-> **POST** /cost-analysis/v1/costs/search
-
 
 > Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 
@@ -231,7 +229,7 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 
  
 ### analyze
-> **POST** /cost-analysis/v1/costs/analyze
+> **POST** /cost-analysis/v1/cost/analyze
 >
 
 > Gets the Cost information of specific `product`s based on the time granularity: `DAILY`, `MONTHLY`, or `ACCUMULATED`. For `DAILY` granularity, this method can get the Cost data of at most 31 days. For `MONTHLY` or `ACCUMULATED` granularity, this method can get the Cost data of at most 12 months.
@@ -299,7 +297,7 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 
  
 ### analyze_v2
-> **POST** /cost-analysis/v1/costs/analyze-v2
+> **POST** /cost-analysis/v1/cost/analyze-v2
 >
 
 
@@ -312,7 +310,7 @@ description: A Cost is a resource of raw cost data collected by the cost_analysi
 
  
 ### stat
-> **POST** /cost-analysis/v1/costs/stat
+> **POST** /cost-analysis/v1/cost/stat
 >
 
 

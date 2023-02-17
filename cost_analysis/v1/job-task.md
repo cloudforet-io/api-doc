@@ -22,7 +22,7 @@ description: A JobTask is a task unit subdividing a Job. The division criteria a
 
  
 ### get
-> **GET** /cost-analysis/v1/job-task/{job_task_id}
+> **POST** /cost-analysis/v1/job-task/get
 >
 
 > Gets a specific JobTask. Prints detailed information about the JobTask, including the relevant resources: DataSource and Job. The criteria used for dividing a Job into JobTasks can be found in the DataSource used, but the total count of divided JobTasks can be found by this method.
@@ -66,10 +66,8 @@ description: A JobTask is a task unit subdividing a Job. The division criteria a
 
  
 ### list
-> **GET** /cost-analysis/v1/job-tasks
+> **POST** /cost-analysis/v1/job-task/list
 >
-> **POST** /cost-analysis/v1/job-tasks/search
-
 
 > Gets a list of all JobTasks. You can use a query to get a filtered list of JobTasks.
 
@@ -133,7 +131,7 @@ description: A JobTask is a task unit subdividing a Job. The division criteria a
 
  
 ### stat
-> **POST** /cost-analysis/v1/job-tasks/stat
+> **POST** /cost-analysis/v1/job-task/stat
 >
 
 

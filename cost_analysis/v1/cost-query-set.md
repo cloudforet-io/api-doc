@@ -25,7 +25,7 @@ description: A CostQuerySet is a set of saved queries a User frequently uses as 
 
  
 ### create
-> **POST** /cost-analysis/v1/cost-query-sets
+> **POST** /cost-analysis/v1/cost-query-set/create
 >
 
 > Creates a new CostQuerySet. You can make your own custom query that meets your needs, and input it as an `option` parameter of the resource. Queries such as `group_by` and `granularity` are provided by default.
@@ -92,7 +92,7 @@ description: A CostQuerySet is a set of saved queries a User frequently uses as 
 
  
 ### update
-> **PUT** /cost-analysis/v1/cost-query-set/{cost_query_set_id}
+> **POST** /cost-analysis/v1/cost-query-set/update
 >
 
 > Updates a specific CostQuerySet. You can make changes in the details of queries.
@@ -161,7 +161,7 @@ description: A CostQuerySet is a set of saved queries a User frequently uses as 
 
  
 ### delete
-> **DELETE** /cost-analysis/v1/cost-query-set/{cost_query_set_id}
+> **POST** /cost-analysis/v1/cost-query-set/delete
 >
 
 > Deletes a specific CostQuerySet. You must specify the `cost_query_set_id` of the CostQuerySet to delete.
@@ -184,7 +184,7 @@ description: A CostQuerySet is a set of saved queries a User frequently uses as 
 
  
 ### get
-> **GET** /cost-analysis/v1/cost-query-set/{cost_query_set_id}
+> **POST** /cost-analysis/v1/cost-query-set/get
 >
 
 > Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet, including the details of queries.
@@ -234,10 +234,8 @@ description: A CostQuerySet is a set of saved queries a User frequently uses as 
 
  
 ### list
-> **GET** /cost-analysis/v1/cost-query-sets
+> **POST** /cost-analysis/v1/cost-query-sets/list
 >
-> **POST** /cost-analysis/v1/cost-query-sets/search
-
 
 > Gets a list of all CostQuerySets. You can use a query to get a filtered list of CostQuerySets.
 

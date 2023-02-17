@@ -30,7 +30,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### register
-> **POST** /cost-analysis/v1/data-sources
+> **POST** /cost-analysis/v1/data-source/register
 >
 
 > Registers a DataSource with information of the plugin to use. Information of the plugin includes `version`, `provider`, and `upgrade_mode`.
@@ -137,7 +137,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### update
-> **PUT** /cost-analysis/v1/data-source/{data_source_id}
+> **POST** /cost-analysis/v1/data-source/update
 >
 
 > Updates a specific DataSource. You can make changes in DataSource settings, including `name` and `tags`.
@@ -216,7 +216,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### update_plugin
-> **PUT** /cost-analysis/v1/data-source/{data_source_id}/plugin
+> **POST** /cost-analysis/v1/data-source/update-plugin
 >
 
 > Updates the plugin of a specific DataSource. This method resets the plugin data in the DataSource to update the `metadata`.
@@ -294,7 +294,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### verify_plugin
-> **POST** /cost-analysis/v1/data-source/{data_source_id}/plugin/verify
+> **POST** /cost-analysis/v1/data-source/verify-plugin
 >
 
 > Verifies the plugin of a specific DataSource. This method validates the plugin data, `version` and `endpoint`.
@@ -317,7 +317,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### enable
-> **PUT** /cost-analysis/v1/data-source/{data_source_id}/enable
+> **POST** /cost-analysis/v1/data-source/enable
 >
 
 > Enables a specific DataSource. By enabling a DataSource, you can communicate with an external cloud service via the plugin.
@@ -392,7 +392,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### disable
-> **PUT** /cost-analysis/v1/data-source/{data_source_id}/disable
+> **POST** /cost-analysis/v1/data-source/disable
 >
 
 > Disables a specific DataSource. By disabling a DataSource, you can block communication with an external cloud service via the plugin.
@@ -467,7 +467,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### deregister
-> **DELETE** /cost-analysis/v1/data-source/{data_source_id}
+> **POST** /cost-analysis/v1/data-source/deregister
 >
 
 > Deregisters and deletes a specific DataSource. You must specify the `data_source_id` of the DataSource to deregister.
@@ -490,7 +490,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### sync
-> **POST** /cost-analysis/v1/data-source/{data_source_id}/sync
+> **POST** /cost-analysis/v1/data-source/sync
 >
 
 > Manually runs a specific DataSource to collect the cost data. This method is to get up-to-date cost data.
@@ -537,7 +537,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### get
-> **GET** /cost-analysis/v1/data-source/{data_source_id}
+> **POST** /cost-analysis/v1/data-source/get
 >
 
 > Gets a specific DataSource. Prints detailed information about the DataSource, including `name`, `state`, and `plugin_info`.
@@ -613,10 +613,8 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### list
-> **GET** /cost-analysis/v1/data-sources
+> **POST** /cost-analysis/v1/data-source/list
 >
-> **POST** /cost-analysis/v1/data-sources/search
-
 
 > Gets a list of all DataSources. You can use a query to get a filtered list of DataSources.
 
@@ -735,7 +733,7 @@ description: A DataSource is a plugin instance collecting external cost data. Ex
 
  
 ### stat
-> **POST** /cost-analysis/v1/data-sources/stat
+> **POST** /cost-analysis/v1/data-source/stat
 >
 
 
