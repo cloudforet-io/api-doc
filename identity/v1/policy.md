@@ -25,7 +25,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/policies
+> **POST** /identity/v1/policy/create
 >
 
 
@@ -38,7 +38,7 @@ description:
 
  
 ### update
-> **PUT** /identity/v1/policy/{policy_id}
+> **PUT** /identity/v1/policy/update
 >
 
 
@@ -51,7 +51,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/policy/{policy_id}
+> **POST** /identity/v1/policy/delete
 >
 
 
@@ -64,7 +64,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/policy/{policy_id}
+> **POST** /identity/v1/policy/get
 >
 
 
@@ -77,10 +77,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/policies
+> **POST** /identity/v1/policy/list
 >
-> **POST** /identity/v1/policies/search
-
 
 
 | Type | Message |

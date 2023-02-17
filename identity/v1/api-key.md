@@ -26,7 +26,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/api-keys
+> **POST** /identity/v1/api-key/create
 >
 
 
@@ -39,7 +39,7 @@ description:
 
  
 ### enable
-> **PUT** /identity/v1/api-key/{api_key_id}/enable
+> **POST** /identity/v1/api-key/enable
 >
 
 
@@ -52,7 +52,7 @@ description:
 
  
 ### disable
-> **PUT** /identity/v1/api-key/{api_key_id}/disable
+> **POST** /identity/v1/api-key/disable
 >
 
 
@@ -65,7 +65,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/api-key/{api_key_id}
+> **POST** /identity/v1/api-key/delete
 >
 
 
@@ -78,7 +78,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/api-key/{api_key_id}
+> **POST** /identity/v1/api-key/get
 >
 
 
@@ -91,10 +91,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/api-keys
+> **POST** /identity/v1/api-key/list
 >
-> **POST** /identity/v1/api-keys/search
-
 
 
 | Type | Message |
@@ -106,7 +104,7 @@ description:
 
  
 ### stat
-> **POST** /identity/v1/api-keys/stat
+> **POST** /identity/v1/api-key/stat
 >
 
 

@@ -31,7 +31,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/domains
+> **POST** /identity/v1/domain/create
 >
 
 
@@ -44,7 +44,7 @@ description:
 
  
 ### update
-> **PUT** /identity/v1/domain/{domain_id}
+> **POST** /identity/v1/domain/update
 >
 
 
@@ -57,7 +57,7 @@ description:
 
  
 ### change_auth_plugin
-> **PUT** /identity/v1/domain/{domain_id}/change_auth_plugin
+> **POST** /identity/v1/domain/change-auth-plugin
 >
 
 
@@ -70,7 +70,7 @@ description:
 
  
 ### update_plugin
-> **PUT** /identity/v1/domain/{domain_id}/plugin
+> **POST** /identity/v1/domain/update-plugin
 >
 
 
@@ -83,7 +83,7 @@ description:
 
  
 ### verify_plugin
-> **POST** /identity/v1/domain/{domain_id}/plugin/verify
+> **POST** /identity/v1/domain/verify-plugin
 >
 
 
@@ -96,7 +96,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/domain/{domain_id}
+> **POST** /identity/v1/domain/delete
 >
 
 
@@ -109,7 +109,7 @@ description:
 
  
 ### enable
-> **PUT** /identity/v1/domain/{domain_id}
+> **POST** /identity/v1/domain/enable
 >
 
 
@@ -122,7 +122,7 @@ description:
 
  
 ### disable
-> **PUT** /identity/v1/domain/{domain_id}
+> **POST** /identity/v1/domain/disable
 >
 
 
@@ -135,7 +135,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/domain/{domain_id}
+> **POST** /identity/v1/domain/get
 >
 
 
@@ -148,10 +148,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/domains
+> **POST** /identity/v1/domain/list
 >
-> **POST** /identity/v1/domains/search
-
 
 
 | Type | Message |
@@ -163,7 +161,7 @@ description:
 
  
 ### stat
-> **POST** /identity/v1/domains/stat
+> **POST** /identity/v1/domain/stat
 >
 
 
@@ -176,6 +174,8 @@ description:
 
  
 ### get_public_key
+> **POST** /identity/v1/domain/get-public-key
+>
 
 
 | Type | Message |

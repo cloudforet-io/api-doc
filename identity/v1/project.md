@@ -29,7 +29,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/projects
+> **POST** /identity/v1/project/create
 >
 
 
@@ -42,7 +42,7 @@ description:
 
  
 ### update
-> **PUT** /identity/v1/project/{project_id}
+> **POST** /identity/v1/project/update
 >
 
 
@@ -55,7 +55,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/project/{project_id}
+> **POST** /identity/v1/project/delete
 >
 
 
@@ -68,7 +68,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/project/{project_id}
+> **POST** /identity/v1/project/get
 >
 
 
@@ -81,10 +81,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/projects
+> **POST** /identity/v1/project/list
 >
-> **POST** /identity/v1/projects/search
-
 
 
 | Type | Message |
@@ -96,7 +94,7 @@ description:
 
  
 ### stat
-> **POST** /identity/v1/projects/stat
+> **POST** /identity/v1/project/stat
 >
 
 
@@ -109,7 +107,7 @@ description:
 
  
 ### add_member
-> **POST** /identity/v1/project/{project_id}/members
+> **POST** /identity/v1/project/add-member
 >
 
 
@@ -122,7 +120,7 @@ description:
 
  
 ### modify_member
-> **PUT** /identity/v1/project/{project_id}/member/{user_id}
+> **POST** /identity/v1/project/modify-member
 >
 
 
@@ -135,7 +133,7 @@ description:
 
  
 ### remove_member
-> **DELETE** /identity/v1/project/{project_id}/member/{user_id}
+> **POST** /identity/v1/project/remove-member
 >
 
 
@@ -148,10 +146,8 @@ description:
 
  
 ### list_members
-> **GET** /identity/v1/project/{project_id}/members
+> **POST** /identity/v1/project/list-members
 >
-> **POST** /identity/v1/project/{project_id}/members/search
-
 
 
 | Type | Message |

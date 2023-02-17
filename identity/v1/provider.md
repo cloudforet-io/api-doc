@@ -25,7 +25,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/providers
+> **POST** /identity/v1/provider/create
 >
 
 
@@ -38,7 +38,7 @@ description:
 
  
 ### update
-> **PUT** /identity/v1/provider/{provider_id}
+> **POST** /identity/v1/provider/update
 >
 
 
@@ -51,7 +51,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/provider/{provider_id}
+> **POST** /identity/v1/provider/delete
 >
 
 
@@ -64,7 +64,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/provider/{provider_id}
+> **POST** /identity/v1/provider/get
 >
 
 
@@ -77,10 +77,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/providers
+> **POST** /identity/v1/provider/list
 >
-> **POST** /identity/v1/providers/search
-
 
 
 | Type | Message |
@@ -92,7 +90,7 @@ description:
 
  
 ### stat
-> **POST** /identity/v1/providers/stat
+> **POST** /identity/v1/provider/stat
 >
 
 

@@ -25,7 +25,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/roles
+> **POST** /identity/v1/role/create
 >
 
 
@@ -38,7 +38,7 @@ description:
 
  
 ### update
-> **PUT** /identity/v1/roles/{role_id}
+> **POST** /identity/v1/role/update
 >
 
 
@@ -51,7 +51,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/roles/{role_id}
+> **POST** /identity/v1/role/delete
 >
 
 
@@ -64,7 +64,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/roles/{role_id}
+> **POST** /identity/v1/role/get
 >
 
 
@@ -77,10 +77,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/roles
+> **POST** /identity/v1/role/list
 >
-> **POST** /identity/v1/roles/search
-
 
 
 | Type | Message |
@@ -92,7 +90,7 @@ description:
 
  
 ### stat
-> **POST** /identity/v1/roles/stat
+> **POST** /identity/v1/role/stat
 >
 
 

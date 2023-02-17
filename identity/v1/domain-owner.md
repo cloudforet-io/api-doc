@@ -23,7 +23,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/domain/{domain_id}/owner
+> **POST** /identity/v1/domain-owner/create
 >
 
 
@@ -36,7 +36,7 @@ description:
 
  
 ### update
-> **PUT**  /identity/v1/domain/{domain_id}/owner
+> **POST** /identity/v1/domain-owner/update
 >
 
 
@@ -49,7 +49,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/domain/{domain_id}/owner
+> **POST** /identity/v1/domain-owner/delete
 >
 
 
@@ -62,7 +62,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/domain/{domain_id}/owner
+> **POST** /identity/v1/domain-owner/get
 >
 
 

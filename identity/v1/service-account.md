@@ -25,7 +25,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/service-accounts
+> **POST** /identity/v1/service-account/create
 >
 
 
@@ -38,7 +38,7 @@ description:
 
  
 ### update
-> **PUT** /identity/v1/service-account/{service_account_id}
+> **POST** /identity/v1/service-account/update
 >
 
 
@@ -51,7 +51,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/service-account/{service_account_id}
+> **POST** /identity/v1/service-account/delete
 >
 
 
@@ -64,7 +64,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/service-account/{service_account_id}
+> **POST** /identity/v1/service-account/get
 >
 
 
@@ -77,10 +77,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/service-accounts
+> **POST** /identity/v1/service-accounts/list
 >
-> **POST** /identity/v1/service-accounts/search
-
 
 
 | Type | Message |

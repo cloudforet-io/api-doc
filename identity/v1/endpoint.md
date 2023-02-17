@@ -20,10 +20,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/endpoints
+> **POST** /identity/v1/endpoint/list
 >
-> **POST** /identity/v1/endpoints/search
-
 
 
 | Type | Message |

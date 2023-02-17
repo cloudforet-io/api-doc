@@ -30,7 +30,7 @@ description: User API which allows member management within project, company, an
 
  
 ### create
-> **POST** /identity/v1/users
+> **POST** /identity/v1/user/create
 >
 
 
@@ -43,7 +43,7 @@ description: User API which allows member management within project, company, an
 
  
 ### update
-> **PUT** /identity/v1/users
+> **POST** identity/v1/user/update
 >
 
 > Update user info by given user_id
@@ -109,7 +109,7 @@ description: User API which allows member management within project, company, an
 
  
 ### set_required_actions
-> **POST** /identity/v1/users/set-required-actions
+> **POST** identity/v1/user/set-required-actions
 >
 
 
@@ -122,7 +122,7 @@ description: User API which allows member management within project, company, an
 
  
 ### enable
-> **PUT** /identity/v1/user/{user_id}/enable
+> **POST** /identity/v1/user/enable
 >
 
 
@@ -135,7 +135,7 @@ description: User API which allows member management within project, company, an
 
  
 ### disable
-> **PUT** /identity/v1/user/{user_id}/disable
+> **POST** /identity/v1/user/disable
 >
 
 
@@ -148,7 +148,7 @@ description: User API which allows member management within project, company, an
 
  
 ### delete
-> **DELETE** /identity/v1/users
+> **POST** /identity/v1/user/delete
 >
 
 
@@ -161,7 +161,7 @@ description: User API which allows member management within project, company, an
 
  
 ### get
-> **GET** /identity/v1/user/{user_id}
+> **POST** /identity/v1/user/get
 >
 
 
@@ -174,10 +174,8 @@ description: User API which allows member management within project, company, an
 
  
 ### list
-> **GET** /identity/v1/users
+> **POST** /identity/v1/user/list
 >
-> **POST** /identity/v1/users/search
-
 
 
 | Type | Message |
@@ -189,7 +187,7 @@ description: User API which allows member management within project, company, an
 
  
 ### stat
-> **POST** /identity/v1/users/stat
+> **POST** /identity/v1/user/stat
 >
 
 
@@ -215,7 +213,7 @@ description: User API which allows member management within project, company, an
 
  
 ### sync
-> **POST** /identity/v1/users/sync
+> **POST** /identity/v1/user/sync
 >
 
 

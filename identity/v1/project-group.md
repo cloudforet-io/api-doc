@@ -30,7 +30,7 @@ description:
 
  
 ### create
-> **POST** /identity/v1/project-groups
+> **POST** /identity/v1/project-group/create
 >
 
 
@@ -43,7 +43,7 @@ description:
 
  
 ### update
-> **PUT** /identity/v1/project-group/{project_group_id}
+> **PUT** /identity/v1/project-group/update
 >
 
 
@@ -56,7 +56,7 @@ description:
 
  
 ### delete
-> **DELETE** /identity/v1/project-group/{project_id}
+> **POST** /identity/v1/project-group/delete
 >
 
 
@@ -69,7 +69,7 @@ description:
 
  
 ### get
-> **GET** /identity/v1/project-group/{project_group_id}
+> **POST** /identity/v1/project-group/get
 >
 
 
@@ -82,10 +82,8 @@ description:
 
  
 ### list
-> **GET** /identity/v1/project-groups
+> **POST** /identity/v1/project-group/list
 >
-> **POST** /identity/v1/project-groups/search
-
 
 
 | Type | Message |
@@ -97,7 +95,7 @@ description:
 
  
 ### stat
-> **POST** /identity/v1/project-groups/stat
+> **POST** /identity/v1/project-group/stat
 >
 
 
@@ -110,7 +108,7 @@ description:
 
  
 ### add_member
-> **POST** /identity/v1/project-group/{project_group_id}/members
+> **POST** /identity/v1/project-group/add-member
 >
 
 
@@ -123,7 +121,7 @@ description:
 
  
 ### modify_member
-> **PUT** /identity/v1/project-group/{project_group_id}/member/{user_id}
+> **POST** /identity/v1/project-group/modify-member
 >
 
 
@@ -136,7 +134,7 @@ description:
 
  
 ### remove_member
-> **DELETE** /identity/v1/project-group/{project_group_id}/member/{user_id}
+> **POST** /identity/v1/project-group/remove-member
 >
 
 
@@ -149,10 +147,8 @@ description:
 
  
 ### list_members
-> **GET** /identity/v1/project-group/{project_group_id}/members
+> **POST** /identity/v1/project-group/list-members
 >
-> **POST** /identity/v1/project-group/{project_id}/members/search
-
 
 
 | Type | Message |
@@ -164,10 +160,8 @@ description:
 
  
 ### list_projects
-> **GET** /identity/v1/project-group/{project_group_id}/projects
+> **POST** /identity/v1/project-group/list-projects
 >
-> **POST** /identity/v1/project-group/{project_id}/projects/search
-
 
 
 | Type | Message |
