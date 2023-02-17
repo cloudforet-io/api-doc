@@ -27,7 +27,7 @@ description:
 
  
 ### create
-> **POST** /secret/v1/secret-groups
+> **POST** /secret/v1/secret-group/create
 >
 
 
@@ -40,7 +40,7 @@ description:
 
  
 ### update
-> **PUT** /secret/v1/secret-group/{secret_group_id}
+> **POST** /secret/v1/secret-group/update
 >
 
 
@@ -53,7 +53,7 @@ description:
 
  
 ### add_secret
-> **POST** /secret/v1/secret-group/{secret_group_id}/secrets
+> **POST** /secret/v1/secret-group/add-secret
 >
 
 
@@ -66,7 +66,7 @@ description:
 
  
 ### remove_secret
-> **DELETE** /secret/v1/secret-group/{secret_group_id}/secret/{secret_id}
+> **POST** /secret/v1/secret-group/remove-secret
 >
 
 
@@ -79,7 +79,7 @@ description:
 
  
 ### delete
-> **DELETE** /secret/v1/secret-group/{secret_group_id}
+> **POST** /secret/v1/secret-group/delete
 >
 
 
@@ -92,7 +92,7 @@ description:
 
  
 ### get
-> **GET** /secret/v1/secret-group/{secret_group_id}
+> **POST** /secret/v1/secret-group/get
 >
 
 
@@ -105,10 +105,8 @@ description:
 
  
 ### list
-> **GET** /secret/v1/secret-groups
+> **POST** /secret/v1/secret-group/list
 >
-> **POST** /secret/v1/secret-groups/search
-
 
 
 | Type | Message |
@@ -120,7 +118,7 @@ description:
 
  
 ### stat
-> **POST** /secret/v1/secret-groups/stat
+> **POST** /secret/v1/secret-group/stat
 >
 
 

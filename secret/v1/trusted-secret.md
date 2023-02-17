@@ -26,7 +26,7 @@ description: A Trusted Secret is an external data, encrypted by CloudForet.
 
  
 ### create
-> **POST** /secret/v1/trusted-secrets
+> **POST** /secret/v1/trusted-secret/create
 >
 
 > Creates a new Trusted Secret. When creating the resource, external `data` is encrypted, and a `trusted_secret_id` is issued for data access by other microservices.
@@ -69,7 +69,7 @@ description: A Trusted Secret is an external data, encrypted by CloudForet.
 
  
 ### update
-> **PUT** /secret/v1/trusted-secret/{trusted_secret_id}
+> **POST** /secret/v1/trusted-secret/update
 >
 
 > Updates a specific Secret. You can make changes in Secret settings, including `name` and`tags`.
@@ -114,7 +114,7 @@ description: A Trusted Secret is an external data, encrypted by CloudForet.
 
  
 ### delete
-> **DELETE** /secret/v1/trusted-secret/{trusted_secret_id}
+> **POST** /secret/v1/trusted-secret/delete
 >
 
 > Deletes a specific Secret. You must specify the `secret_id` of the Secret to delete.
@@ -138,7 +138,7 @@ description: A Trusted Secret is an external data, encrypted by CloudForet.
 
  
 ### update_data
-> **PUT** /secret/v1/trusted-secret/{trusted_secret_id}/data
+> **POST** /secret/v1/trusted-secret/update-data
 >
 
 > Updates encrypted data of a specific Secret resource. For example, to change the parameter `data`, external data to encrypt, you can use `update_data` to create new encrypted data based on the changed `data` and store it in the Secret resource.
@@ -178,7 +178,7 @@ description: A Trusted Secret is an external data, encrypted by CloudForet.
 
  
 ### get
-> **GET** /secret/v1/trusted-secret/{trusted_secret_id}
+> **POST** /secret/v1/trusted-secret/get
 >
 
 > Gets a specific Post. You must specify the `post_id` of the Post to get, and the `board_id` of the Board where the child Post to get belongs. Prints detailed information about the Post.
@@ -217,10 +217,8 @@ description: A Trusted Secret is an external data, encrypted by CloudForet.
 
  
 ### list
-> **GET** /secret/v1/trusted-secrets
+> **POST** /secret/v1/trusted-secret/list
 >
-> **POST** /secret/v1/trusted-secrets/search
-
 
 > Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
@@ -270,7 +268,7 @@ description: A Trusted Secret is an external data, encrypted by CloudForet.
 
  
 ### stat
-> **POST** /secret/v1/trusted-secrets/stat
+> **POST** /secret/v1/trusted-secret/stat
 >
 
 

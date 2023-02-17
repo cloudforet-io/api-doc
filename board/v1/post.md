@@ -26,7 +26,7 @@ description: A Post is a message published on a Board. It also provides notifica
 
  
 ### create
-> **POST** /board/v1/board/{board_id}/posts
+> **POST** /board/v1/board/create
 >
 
 > Creates a new Post under a specific Board. You must specify the `board_id`, `title`, and `contents`. The parameter `category` is not required but can be set in the scope of `categories` specified in the parent Board. You can make the new Post pinned or pop up by adjusting the parameters.
@@ -81,7 +81,7 @@ description: A Post is a message published on a Board. It also provides notifica
 
  
 ### update
-> **PUT** /board/v1/board/{board_id}/post/{post_id}
+> **POST** /board/v1/board/update
 >
 
 > Updates a specific Post. You can make changes in Post settings, except `board_id`, `post_id`, and `domain_id`.
@@ -138,7 +138,7 @@ description: A Post is a message published on a Board. It also provides notifica
 
  
 ### send_notification
-> **POST** /board/v1/board/{board_id}/post/{post_id}/send-notification
+> **POST** /board/v1/board/send-notification
 >
 
 > Not Implemented
@@ -152,7 +152,7 @@ description: A Post is a message published on a Board. It also provides notifica
 
  
 ### delete
-> **DELETE** /board/v1/board/{board_id}/post/{post_id}
+> **POST** /board/v1/board/delete
 >
 
 > Deletes a specific Post. You must specify the `post_id` of the Post to delete, and the `board_id` of the Board where the child Post to delete belongs.
@@ -177,7 +177,7 @@ description: A Post is a message published on a Board. It also provides notifica
 
  
 ### get
-> **GET** /board/v1/board/{board_id}/post/{post_id}
+> **POST** /board/v1/board/get
 >
 
 > Gets a specific Post. You must specify the `post_id` of the Post to get, and the `board_id` of the Board where the child Post to get belongs. Prints detailed information about the Post.
@@ -226,10 +226,8 @@ description: A Post is a message published on a Board. It also provides notifica
 
  
 ### list
-> **GET** /board/v1/board/{board_id}/posts
+> **POST** /board/v1/board/list
 >
-> **POST** /board/v1/board/{board_id}/posts/search
-
 
 > Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
@@ -298,7 +296,7 @@ description: A Post is a message published on a Board. It also provides notifica
 
  
 ### stat
-> **POST** /board/v1/board/{board_id}/posts/stat
+> **POST** /board/v1/board/stat
 >
 
 

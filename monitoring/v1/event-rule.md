@@ -26,7 +26,7 @@ description: An EventRule is a rule to transform the request data when an Event 
 
  
 ### create
-> **POST** /monitoring/v1/event-rules
+> **POST** /monitoring/v1/event-rule/create
 >
 
 > Creates a new EventRule. You can filter the Events to apply the EventRule by setting the input parameter `Conditions`. The method can change the Events' assignee or Project.
@@ -100,7 +100,7 @@ description: An EventRule is a rule to transform the request data when an Event 
 
  
 ### update
-> **PUT** /monitoring/v1/event-rule/{event_rule_id}
+> **POST** /monitoring/v1/event-rule/update
 >
 
 > Changes a priority order between EventRules to apply. EventRules are filtered by the order configured.
@@ -174,7 +174,7 @@ description: An EventRule is a rule to transform the request data when an Event 
 
  
 ### change_order
-> **PUT** /monitoring/v1/event-rule/{event_rule_id}/order
+> **POST** /monitoring/v1/event-rule/change-order
 >
 
 > Updates a specific EventRule. You can make changes in EventRule settings.
@@ -231,7 +231,7 @@ description: An EventRule is a rule to transform the request data when an Event 
 
  
 ### delete
-> **DELETE** /monitoring/v1/event-rule/{event_rule_id}
+> **POST** /monitoring/v1/event-rule/delete
 >
 
 > Deletes a specific EventRule. You must assign an EventRule resource to delete by specifying `event_rule_id`.
@@ -255,7 +255,7 @@ description: An EventRule is a rule to transform the request data when an Event 
 
  
 ### get
-> **GET** /monitoring/v1/event-rule/{event_rule_id}
+> **POST** /monitoring/v1/event-rule/get
 >
 
 > Gets a specific EventRule. Prints detailed information about the EventRule.
@@ -309,10 +309,8 @@ description: An EventRule is a rule to transform the request data when an Event 
 
  
 ### list
-> **GET** /monitoring/v1/event-rules
+> **POST** /monitoring/v1/event-rule/list
 >
-> **POST** /monitoring/v1/event-rules/search
-
 
 > Gets a list of all EventRules. You can use a query to get a filtered list of EventRules. For example, you can adjust the scope of the list to a certain Project or Domain.
 
@@ -394,7 +392,7 @@ description: An EventRule is a rule to transform the request data when an Event 
 
  
 ### stat
-> **POST** /monitoring/v1/event-rules/stat
+> **POST** /monitoring/v1/event-rule/stat
 >
 
 

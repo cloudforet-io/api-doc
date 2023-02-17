@@ -27,7 +27,7 @@ description: A Secret is an external data, encrypted by CloudForet.
 
  
 ### create
-> **POST** /secret/v1/secrets
+> **POST** /secret/v1/secret/create
 >
 
 > Creates a new Secret. When creating the resource, external `data` is encrypted, and a `secret_id` is issued for data access by other microservices.
@@ -73,7 +73,7 @@ description: A Secret is an external data, encrypted by CloudForet.
 
  
 ### update
-> **PUT** /secret/v1/secret/{secret_id}
+> **POST** /secret/v1/secret/update
 >
 
 > Updates a specific Secret. You can make changes in Secret settings, including `name` and`tags`.
@@ -122,7 +122,7 @@ description: A Secret is an external data, encrypted by CloudForet.
 
  
 ### delete
-> **DELETE** /secret/v1/secret/{secret_id}
+> **POST** /secret/v1/secret/delete
 >
 
 > Deletes a specific Secret. You must specify the `secret_id` of the Secret to delete.
@@ -146,7 +146,7 @@ description: A Secret is an external data, encrypted by CloudForet.
 
  
 ### update_data
-> **PUT** /secret/v1/secret/{secret_id}/data
+> **POST** /secret/v1/secret/update-data
 >
 
 > Updates encrypted data of a specific Secret resource. For example, to change the parameter `data`, external data to encrypt, you can use `update_data` to create new encrypted data based on the changed `data` and store it in the Secret resource.
@@ -186,7 +186,7 @@ description: A Secret is an external data, encrypted by CloudForet.
 
  
 ### get_data
-> **GET** /secret/v1/secret/{secret_id}/data
+> **POST** /secret/v1/secret/get-data
 >
 
 > Gets a specific Secret. Prints detailed information about the Secret, including  `name`, `tags`, `schema`, and `provider`.
@@ -225,7 +225,7 @@ description: A Secret is an external data, encrypted by CloudForet.
 
  
 ### get
-> **GET** /secret/v1/secret/{secret_id}
+> **POST** /secret/v1/secret/get
 >
 
 > Gets a specific Post. You must specify the `post_id` of the Post to get, and the `board_id` of the Board where the child Post to get belongs. Prints detailed information about the Post.
@@ -266,10 +266,8 @@ description: A Secret is an external data, encrypted by CloudForet.
 
  
 ### list
-> **GET** /secret/v1/secrets
+> **POST** /secret/v1/secret/list
 >
-> **POST** /secret/v1/secrets/search
-
 
 > Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
@@ -322,7 +320,7 @@ description: A Secret is an external data, encrypted by CloudForet.
 
  
 ### stat
-> **POST** /secret/v1/secrets/stat
+> **POST** /secret/v1/secret/stat
 >
 
 

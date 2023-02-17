@@ -104,6 +104,11 @@ description:
 
 ## Message
 
+### Capability
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| trusted_service_account |string | |
+
 ### CreateProviderRequest
 <table>
   <thead>
@@ -140,7 +145,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">sync_options</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#syncoptions">SyncOptions</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
@@ -158,7 +163,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">capability</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#capability">Capability</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
@@ -245,7 +250,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">sync_options</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#syncoptions">SyncOptions</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -263,7 +268,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">capability</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#capability">Capability</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -377,6 +382,12 @@ description:
 | results |[list of ProviderInfo](provider.md#providerinfo) | |
 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
+### SyncOptions
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| source_type |string | |
+| source |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+
 ### UpdateProviderRequest
 <table>
   <thead>
@@ -413,7 +424,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">sync_options</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#syncoptions">SyncOptions</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
@@ -431,7 +442,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">capability</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#capability">Capability</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>

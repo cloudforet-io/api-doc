@@ -29,7 +29,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### register
-> **POST** /monitoring/v1/data-sources
+> **POST** /monitoring/v1/data-source/register
 >
 
 > Registers a DataSource with information of the plugin to use. Information of the plugin includes `version`, `provider`, `upgrade_mode`.
@@ -125,7 +125,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### update
-> **PUT** /monitoring/v1/data-source/{data_source_id}
+> **POST** /monitoring/v1/data-source/update
 >
 
 > Updates a specific DataSource. You can make changes in DataSource settings, including `name` and `tags`.
@@ -200,7 +200,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### enable
-> **PUT** /monitoring/v1/data-source/{data_source_id}/enable
+> **POST** /monitoring/v1/data-source/enable
 >
 
 > Enables a specific DataSource. By enabling a DataSource, you can communicate with an external cloud service via the plugin.
@@ -271,7 +271,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### disable
-> **PUT** /monitoring/v1/data-source/{data_source_id}/disable
+> **POST** /monitoring/v1/data-source/disable
 >
 
 > Disables a specific DataSource. By disabling a DataSource, you can block communication with an external cloud service via the plugin.
@@ -342,7 +342,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### deregister
-> **DELETE** /monitoring/v1/data-source/{data_source_id}
+> **POST** /monitoring/v1/data-source/deregister
 >
 
 > Deregisters and deletes a specific DataSource. You must specify the `data_source_id` of the DataSource to deregister.
@@ -366,7 +366,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### update_plugin
-> **PUT** /monitoring/v1/data-source/{data_source_id}/plugin
+> **POST** /monitoring/v1/data-source/update-plugin
 >
 
 > Updates the plugin of a specific DataSource. This method resets the plugin data in the DataSource to update the `metadata`.
@@ -440,7 +440,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### verify_plugin
-> **PUT** /monitoring/v1/data-source/{data_source_id}/plugin/verify
+> **POST** /monitoring/v1/data-source/verify-plugin
 >
 
 > Verifies the plugin of a specific DataSource. This method validates the plugin data, `version` and `endpoint`.
@@ -464,7 +464,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### get
-> **GET** /monitoring/v1/data-source/{data_source_id}
+> **POST** /monitoring/v1/data-source/get
 >
 
 > Gets a specific DataSource. Prints detailed information about the DataSource, including `name`, `state`, and `plugin_info`.
@@ -527,10 +527,8 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### list
-> **GET** /monitoring/v1/data-sources
+> **POST** /monitoring/v1/data-source/list
 >
-> **POST** /monitoring/v1/data-sources/search
-
 
 > Gets a list of all DataSources. You can use a query to get a filtered list of DataSources.
 
@@ -597,7 +595,7 @@ description: A DataSource is a plugin instance collecting `metric` and `log` dat
 
  
 ### stat
-> **POST** /monitoring/v1/data-sources/stat
+> **POST** /monitoring/v1/data-source/stat
 >
 
 

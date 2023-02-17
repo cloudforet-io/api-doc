@@ -20,7 +20,7 @@ description:
 
  
 ### list
-> **GET** /monitoring/v1/data-source/{data_source_id}/logs
+> **POST** /monitoring/v1/log/list
 >
 
 

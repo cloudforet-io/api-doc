@@ -25,7 +25,7 @@ description: A Note is a comment on an Event, and is used for incident managemen
 
  
 ### create
-> **POST** /monitoring/v1/notes
+> **POST** /monitoring/v1/note/create
 >
 
 > Creates a new Note. You can create Notes for each Alert to record the information needed to manage the Alerts.
@@ -64,7 +64,7 @@ description: A Note is a comment on an Event, and is used for incident managemen
 
  
 ### update
-> **PUT** /monitoring/v1/note/{note_id}
+> **POST** /monitoring/v1/note/update
 >
 
 > Updates a specific Note. You must specify the `note_id` for Note validation check. If the Note exists, it is updated.
@@ -103,7 +103,7 @@ description: A Note is a comment on an Event, and is used for incident managemen
 
  
 ### delete
-> **DELETE** /monitoring/v1/note/{note_id}
+> **POST** /monitoring/v1/note/delete
 >
 
 > Deletes a specific Note. You must specify the `note_id` of the Note to delete.
@@ -127,7 +127,7 @@ description: A Note is a comment on an Event, and is used for incident managemen
 
  
 ### get
-> **GET** /monitoring/v1/note/{note_id}
+> **POST** /monitoring/v1/note/get
 >
 
 > Gets a specific Note. You must specify the `note_id` and `domain_id`.
@@ -165,10 +165,8 @@ description: A Note is a comment on an Event, and is used for incident managemen
 
  
 ### list
-> **GET** /monitoring/v1/notes
+> **POST** /monitoring/v1/note/list
 >
-> **POST** /monitoring/v1/notes/search
-
 
 > Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
@@ -219,7 +217,7 @@ description: A Note is a comment on an Event, and is used for incident managemen
 
  
 ### stat
-> **POST** /monitoring/v1/notes/stat
+> **POST** /monitoring/v1/note/stat
 >
 
 

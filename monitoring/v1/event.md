@@ -23,7 +23,7 @@ description: An Event is an alarm raised by an external monitoring system and co
 
  
 ### create
-> **POST** /monitoring/v1/webhook/{webhook_id}/{access_key}/events
+> **POST** /monitoring/v1/event/create
 >
 
 > Creates a new Event. The Event creation process starts with validation checking whether the input data is from a webhook or not. After the input data is validated, the data is processed and used to create the Event.
@@ -37,7 +37,7 @@ description: An Event is an alarm raised by an external monitoring system and co
 
  
 ### get
-> **GET** /monitoring/v1/event/{event_id}
+> **POST** /monitoring/v1/event/get
 >
 
 > Gets a specific Event matching the input parameters, `event_id` and `domain_id`. Prints detailed information about the Event.
@@ -104,10 +104,8 @@ description: An Event is an alarm raised by an external monitoring system and co
 
  
 ### list
-> **GET** /monitoring/v1/events
+> **POST** /monitoring/v1/event/list
 >
-> **POST** /monitoring/v1/events/search
-
 
 > Gets a list of all Events. You must specify the `domain_id`. You can use a query to get a filtered list of Events.
 
@@ -218,7 +216,7 @@ description: An Event is an alarm raised by an external monitoring system and co
 
  
 ### stat
-> **POST** /monitoring/v1/events/stat
+> **POST** /monitoring/v1/event/stat
 >
 
 

@@ -26,7 +26,7 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 
  
 ### create
-> **POST** /board/v1/boards
+> **POST** /board/v1/board/create
 >
 
 > Creates a new Board with SYSTEM permission. The `name` of the board is only required. You can add one or more `categories` representing the Board's attributes.
@@ -75,7 +75,7 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 
  
 ### update
-> **PUT** /board/v1/board/{board_id}
+> **POST** /board/v1/board/update
 >
 
 > Updates a specific Board with SYSTEM permission. You can make changes in Board settings, including `name` and `tags`.
@@ -120,7 +120,7 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 
  
 ### set_categories
-> **PUT** /board/v1/board/{board_id}/set-categories
+> **POST** /board/v1/board/set-categories
 >
 
 > Adds or changes `categories` of a specific Board with SYSTEM permission. A change in `categories` of a Board does not affect the `category` of the child Posts.
@@ -166,7 +166,7 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 
  
 ### delete
-> **DELETE** /board/v1/board/{board_id}
+> **POST** /board/v1/board/delete
 >
 
 > Deletes a specific Board with `SYSTEM` permission. You can delete a Board regardless of the presence of Posts created under the Board.
@@ -189,7 +189,7 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 
  
 ### get
-> **GET** /board/v1/board/{board_id}
+> **POST** /board/v1/board/get
 >
 
 > Gets a specific Board. You must specify the `board_id` of the Board to get. Prints detailed information about the Board, including `name`, `categories`.
@@ -230,10 +230,8 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 
  
 ### list
-> **GET** /board/v1/boards
+> **POST** /board/v1/board/list
 >
-> **POST** /board/v1/boards/search
-
 
 > Gets a list of all Boards. You can use a query to get a filtered list of Boards.
 
@@ -286,7 +284,7 @@ description: A Board is a bulletin-board-type resource for posting notices and a
 
  
 ### stat
-> **POST** /board/v1/boards/stat
+> **POST** /board/v1/board/stat
 >
 
 

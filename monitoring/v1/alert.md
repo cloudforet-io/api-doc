@@ -32,7 +32,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### create
-> **POST** /monitoring/v1/alerts
+> **POST** /monitoring/v1/alert/create
 >
 
 > Creates a new Alert. Alerts generated with `create` method are made in a manual way. Manually made Alerts can be used for Notifications.
@@ -82,7 +82,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### update
-> **PUT** /monitoring/v1/alert/{alert_id}
+> **POST** /monitoring/v1/alert/update
 >
 
 > Updates a specific Alert. You can make changes in Alert settings, including the `title`, `description`, `responder`, `state`, and `urgency`. The `responder` of the Alert is a User who is assigned to respond to the Alert.
@@ -133,7 +133,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### update_state
-> **POST** /monitoring/v1/alert/{alert_id}/{access_key}/{state}
+> **POST** /monitoring/v1/alert/update-state
 >
 
 > Updates the state of an Alert via callback URL by creating a temporary `access_key` while generating a Notification about the Alert.
@@ -158,7 +158,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### merge
-> **POST** /monitoring/v1/alerts/merge
+> **POST** /monitoring/v1/alert/merge
 >
 
 
@@ -171,7 +171,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### snooze
-> **POST** /monitoring/v1/alert/{alert_id}/snooze
+> **POST** /monitoring/v1/alert/snooze
 >
 
 
@@ -184,7 +184,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### add_responder
-> **POST** /monitoring/v1/alert/{alert_id}/responders
+> **POST** /monitoring/v1/alert/add-responder
 >
 
 > Adds a responder who receives a Notification about an Alert.
@@ -240,7 +240,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### remove_responder
-> **DELETE** /monitoring/v1/alert/{alert_id}/responders
+> **POST** /monitoring/v1/alert/remove-responder
 >
 
 > Deletes a responder who receives a Notification about an Alert.
@@ -290,7 +290,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### add_project_dependency
-> **POST** /monitoring/v1/alert/{alert_id}/project-dependencies
+> **POST** /monitoring/v1/alert/add-project-dependency
 >
 
 
@@ -303,7 +303,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### remove_project_dependency
-> **DELETE** /monitoring/v1/alert/{alert_id}/project-dependency/{project_id}
+> **POST** /monitoring/v1/alert/remove-project-dependency
 >
 
 
@@ -316,7 +316,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### delete
-> **DELETE** /monitoring/v1/alert/{alert_id}
+> **POST** /monitoring/v1/alert/delete
 >
 
 > Deletes a specific Alert and remove it from the list of Alerts. You must specify the `alert_id` of the Alert to delete.
@@ -340,7 +340,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### get
-> **GET** /monitoring/v1/alert/{alert_id}
+> **POST** /monitoring/v1/alert/get
 >
 
 > Gets a specific Alert. Prints detailed information about the Alert.
@@ -388,10 +388,8 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### list
-> **GET** /monitoring/v1/alerts
+> **POST** /monitoring/v1/alert/list
 >
-> **POST** /monitoring/v1/alerts/search
-
 
 > Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 
@@ -480,7 +478,7 @@ description: An Alert, a set of Events, is the smallest unit to manage incidents
 
  
 ### stat
-> **POST** /monitoring/v1/alerts/stat
+> **POST** /monitoring/v1/alert/stat
 >
 
 

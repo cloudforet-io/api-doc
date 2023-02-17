@@ -25,7 +25,7 @@ description: A MaintenanceWindow is a resource snoozing Alerts during maintenanc
 
  
 ### create
-> **POST** /monitoring/v1/maintenance-windows
+> **POST** /monitoring/v1/maintenance-window/create
 >
 
 > Creates a new MaintenanceWindow. When creating a MaintenanceWindow, you can set the title and maintenance schedule of the MaintenanceWindow. From the `start_time` to the `end_time` specified by the schedule set in this method, alerts in the Projects linked with the MaintenanceWindow are ceased.
@@ -74,7 +74,7 @@ description: A MaintenanceWindow is a resource snoozing Alerts during maintenanc
 
  
 ### update
-> **PUT** /monitoring/v1/maintenance-window/{maintenance_window_id}
+> **POST** /monitoring/v1/maintenance-window/update
 >
 
 > Updates a specific MaintenanceWindow. You can make changes in MaintenanceWindow settings including, the `title` and the schedule.
@@ -124,7 +124,7 @@ description: A MaintenanceWindow is a resource snoozing Alerts during maintenanc
 
  
 ### close
-> **PUT** /monitoring/v1/maintenance-window/{maintenance_window_id}/close
+> **POST** /monitoring/v1/maintenance-window/close
 >
 
 > Closes a MaintenanceWindow by changing the state of the MaintenanceWindow to `CLOSED` when the maintenance is completed. As the MaintenanceWindow is not deleted but closed, the maintenance history remains undeleted.
@@ -168,7 +168,7 @@ description: A MaintenanceWindow is a resource snoozing Alerts during maintenanc
 
  
 ### get
-> **GET** /monitoring/v1/maintenance-window/{maintenance_window_id}
+> **POST** /monitoring/v1/maintenance-window/get
 >
 
 > Gets a specific MaintenanceWindow. Prints detailed information about the MaintenanceWindow, including the title and the schedule.
@@ -212,10 +212,8 @@ description: A MaintenanceWindow is a resource snoozing Alerts during maintenanc
 
  
 ### list
-> **GET** /monitoring/v1/maintenance-windows
+> **POST** /monitoring/v1/maintenance-window/list
 >
-> **POST** /monitoring/v1/maintenance-windows/search
-
 
 > Gets a list of all MaintenanceWindows. You can use a query to get a filtered list of MaintenanceWindows.
 
@@ -278,7 +276,7 @@ description: A MaintenanceWindow is a resource snoozing Alerts during maintenanc
 
  
 ### stat
-> **POST** /monitoring/v1/maintenance-windows/stat
+> **POST** /monitoring/v1/maintenance-window/stat
 >
 
 

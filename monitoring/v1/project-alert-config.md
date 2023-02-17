@@ -25,7 +25,7 @@ description: A ProjectAlertConfig is a resource to set the alert policies for a 
 
  
 ### create
-> **POST** /monitoring/v1/project-alert-configs
+> **POST** /monitoring/v1/project-alert-config/create
 >
 
 > Creates a new ProjectAlertConfig in a specific Project. When creating a ProjectAlertConfig, validation of the Project is preceded. After the validation is done, ProjectAlertConfig enables EscalationPolicy to be set in the Project, or enables `enum` type `recovery_mode` and `notification_urgency` to be set through the `options` parameter.  The parameter `recovery_mode` is for changing the state of the Alert to `resolved` if the external monitoring solution sends the resolved Alert. The parameter `notification_urgency` is used to choose whether you will get all Alerts or only urgent ones.
@@ -72,7 +72,7 @@ description: A ProjectAlertConfig is a resource to set the alert policies for a 
 
  
 ### update
-> **PUT** /monitoring/v1/project-alert-config/{project_alert_config_id}
+> **POST** /monitoring/v1/project-alert-config/update
 >
 
 > Updates a specific ProjectAlertConfig. You can make changes in ProjectAlertConfig settings, including the EscalationPolicy to apply. You can also change `notification_urgency` and `recovery_mode` by modifying the `options` parameter.
@@ -120,7 +120,7 @@ description: A ProjectAlertConfig is a resource to set the alert policies for a 
 
  
 ### delete
-> **DELETE** /monitoring/v1/project-alert-config/{project_alert_config_id}
+> **POST** /monitoring/v1/project-alert-config/delete
 >
 
 > Deletes a specific ProjectAlertConfig. Deletes alert configuration data in a Project.
@@ -144,7 +144,7 @@ description: A ProjectAlertConfig is a resource to set the alert policies for a 
 
  
 ### get
-> **GET** /monitoring/v1/project-alert-config/{project_alert_config_id}
+> **POST** /monitoring/v1/project-alert-config/get
 >
 
 > Gets a specific ProjectAlertConfig. Prints detailed information about the ProjectAlertConfig, including EscalationPolicy, recovery mode, and notification urgency.
@@ -187,10 +187,8 @@ description: A ProjectAlertConfig is a resource to set the alert policies for a 
 
  
 ### list
-> **GET** /monitoring/v1/project-alert-configs
+> **POST** /monitoring/v1/project-alert-config/list
 >
-> **POST** /monitoring/v1/project-alert-configs/search
-
 
 > Gets a list of all ProjectAlertConfigs from all projects configured in the same domain. You can use a query to get a filtered list of ProjectAlertConfigs.
 
@@ -250,7 +248,7 @@ description: A ProjectAlertConfig is a resource to set the alert policies for a 
 
  
 ### stat
-> **POST** /monitoring/v1/project-alert-configs/stat
+> **POST** /monitoring/v1/project-alert-config/stat
 >
 
 

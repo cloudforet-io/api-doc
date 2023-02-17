@@ -21,7 +21,7 @@ description: A Metric is a monitoring metric of a specific cloud service deliver
 
  
 ### list
-> **GET** /monitoring/v1/data-source/{data_source_id}/metrics
+> **POST** /monitoring/v1/metric/list
 >
 
 > Gets a list of all Metrics of one or more specified Resources. The parameter `resources` is a list of Resources from which to get a list of Metrics collected.
@@ -103,7 +103,7 @@ description: A Metric is a monitoring metric of a specific cloud service deliver
 
  
 ### get_data
-> **GET** /monitoring/v1/data-source/{data_source_id}/metric-data
+> **POST** /monitoring/v1/metric/get-data
 >
 
 > Gets data of a single Metric. You must specify the parameter `metric` to get data of. You can specify the `period` to get data for.

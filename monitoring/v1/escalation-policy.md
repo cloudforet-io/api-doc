@@ -26,7 +26,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
 
  
 ### create
-> **POST** /monitoring/v1/escalation-policies
+> **POST** /monitoring/v1/escalation-policy/create
 >
 
 > Creates a new EscalationPolicy. When creating an EscalationPolicy, if the project_id is assigned, the EscalationPolicy is applied to the Project with the same project_id. If an EscalationPolicy is set as a global policy, all Projects in the same domain can apply the policy.
@@ -87,7 +87,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
 
  
 ### update
-> **PUT** /monitoring/v1/escalation-policy/{escalation_policy_id}
+> **POST** /monitoring/v1/escalation-policy/update
 >
 
 > Updates a specific EscalationPolicy. You can make changes in EscalationPolicy settings, including the name, the escalation process, and the number of iterations.
@@ -157,7 +157,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
 
  
 ### set_default
-> **PUT** /monitoring/v1/escalation-policy/{escalation_policy_id}/set-default
+> **POST** /monitoring/v1/escalation-policy/set-default
 >
 
 > Sets a specific EscalationPolicy as default. Only policies configured as global can be set as default. When a Project is created, even if you did not configure any policy to the Project, the default policy set by this api method is applied.
@@ -211,7 +211,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
 
  
 ### delete
-> **DELETE** /monitoring/v1/escalation-policy/{escalation_policy_id}
+> **POST** /monitoring/v1/escalation-policy/delete
 >
 
 > Deletes a specific EscalationPolicy. Deletes the EscalationPolicy with the escalation_policy_id from the deletion request.
@@ -235,7 +235,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
 
  
 ### get
-> **GET** /monitoring/v1/escalation-policy/{escalation_policy_id}
+> **POST** /monitoring/v1/escalation-policy/get
 >
 
 > Gets a specific EscalationPolicy. Prints detailed information about the EscalationPolicy, including the name, rules, and termination conditions.
@@ -282,10 +282,8 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
 
  
 ### list
-> **GET** /monitoring/v1/escalation-policies
+> **POST** /monitoring/v1/escalation-policy/list
 >
-> **POST** /monitoring/v1/escalation-policies/search
-
 
 > Gets a list of all EscalationPolicies. You can use a query to get a filtered list of EscalationPolicies.
 
@@ -350,7 +348,7 @@ description: An EscalationPolicy is a set of rules to deliver an alert to assign
 
  
 ### stat
-> **POST** /monitoring/v1/escalation-policies/stat
+> **POST** /monitoring/v1/escalation-policy/stat
 >
 
 
