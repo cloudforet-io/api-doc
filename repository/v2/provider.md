@@ -151,13 +151,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">description</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#description">list of Description</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">schema</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#schema">list of Schema</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
@@ -181,7 +181,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">reference</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#reference">list of Reference</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
@@ -207,6 +207,12 @@ description:
 </table>
 
 
+
+### Description
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| resource_type |string | |
+| body |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
 ### GetProviderRequest
 | Field | Type | Required | Description |
@@ -256,13 +262,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">description</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#description">list of Description</a></td>
 <td style="text-align:left"></td>
 
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">schema</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#schema">list of Schema</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -286,7 +292,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">reference</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#reference">list of Reference</a></td>
 <td style="text-align:left"></td>
 
    </tr>
@@ -382,6 +388,19 @@ description:
 | results |[list of ProviderInfo](provider.md#providerinfo) | |
 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
 
+### Reference
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| resource_type |string | |
+| link |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+
+### Schema
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| resource_type |string | |
+| secret_type |string | |
+| schema_id |string | |
+
 ### SyncOptions
 | Field | Type |  Description |
 | :--- | :--- | :--- |
@@ -430,13 +449,13 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">description</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#description">list of Description</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">schema</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#schema">list of Schema</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
@@ -460,7 +479,7 @@ description:
    </tr>
     <tr>
       <td style="text-align:left; width:100px;">reference</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+      <td style="text-align:left"><a href="provider.md#reference">list of Reference</a></td>
 <td style="text-align:center">✘</td>
 <td style="text-align:left"></td>
    </tr>
