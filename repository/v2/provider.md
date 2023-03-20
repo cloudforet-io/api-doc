@@ -309,6 +309,12 @@ description:
 
    </tr>
     <tr>
+      <td style="text-align:left; width:100px;">remote_repository</td>
+      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
 <td style="text-align:left"></td>
