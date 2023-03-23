@@ -18,7 +18,7 @@ description: User API which allows member management within project, company, an
 | [**create**](user.md#create)|   [CreateUserRequest](user.md#createuserrequest) |   [UserInfo](user.md#userinfo) |
 | [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) |
 | [**verify_email**](user.md#verify_email)|   [VerifyEmailRequest](user.md#verifyemailrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
-| [**reset_password**](user.md#reset_password)|   [ResetPasswordRequest](user.md#resetpasswordrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**reset_password**](user.md#reset_password)|   [UserRequest](user.md#userrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**set_required_actions**](user.md#set_required_actions)|   [SetRequiredActionsRequest](user.md#setrequiredactionsrequest) |   [UserInfo](user.md#userinfo) |
 | [**enable**](user.md#enable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |
 | [**disable**](user.md#disable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |
@@ -130,7 +130,7 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [ResetPasswordRequest](user.md#resetpasswordrequest) |
+| Request | [UserRequest](user.md#userrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
@@ -372,12 +372,6 @@ description: User API which allows member management within project, company, an
 | domain_id |string|✔| |
 | only |list of string|✘| |
 
-### ResetPasswordRequest
-| Field | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| user_id |string|✔| |
-| domain_id |string|✔| |
-
 ### SetRequiredActionsRequest
 <table>
   <thead>
@@ -526,6 +520,12 @@ description: User API which allows member management within project, company, an
     <tr>
       <td style="text-align:left; width:100px;">domain_id</td>
       <td style="text-align:left">string</td>
+<td style="text-align:left"></td>
+
+   </tr>
+    <tr>
+      <td style="text-align:left; width:100px;">email_verified</td>
+      <td style="text-align:left">bool</td>
 <td style="text-align:left"></td>
 
    </tr>
