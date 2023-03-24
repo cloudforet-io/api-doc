@@ -273,7 +273,7 @@ description: User API which allows member management within project, company, an
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | user_id |string|✔| |
-| verify_token |string|✔| |
+| verify_code |string|✔| |
 | domain_id |string|✔| |
 
 ### CreateUserRequest
