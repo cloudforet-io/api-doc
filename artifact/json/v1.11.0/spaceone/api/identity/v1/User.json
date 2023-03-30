@@ -278,7 +278,7 @@
               "defaultValue": ""
             },
             {
-              "name": "send_email",
+              "name": "reset_password",
               "description": "is_required: false",
               "label": "",
               "type": "bool",
