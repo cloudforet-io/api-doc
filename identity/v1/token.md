@@ -57,6 +57,7 @@ description:
 | domain_id |string|✔| |
 | timeout |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
 | refresh_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto)|✘| |
+| verify_code |string|✘| |
 
 ### TokenInfo
 | Field | Type |  Description |
