@@ -17,8 +17,8 @@ description: User API which allows member management within project, company, an
 | :----- | :-------- | :-------- |
 | [**create**](user.md#create)|   [CreateUserRequest](user.md#createuserrequest) |   [UserInfo](user.md#userinfo) |
 | [**update**](user.md#update)|   [UpdateUserRequest](user.md#updateuserrequest) |   [UserInfo](user.md#userinfo) |
-| [**verify_email**](user.md#verify_email)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |
-| [**confirm_email**](user.md#confirm_email)|   [ConfirmEmailRequest](user.md#confirmemailrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**verify_email**](user.md#verify_email)|   [VerifyEmailRequest](user.md#verifyemailrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
+| [**confirm_email**](user.md#confirm_email)|   [ConfirmEmailRequest](user.md#confirmemailrequest) |   [UserInfo](user.md#userinfo) |
 | [**reset_password**](user.md#reset_password)|   [UserRequest](user.md#userrequest) |  [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|
 | [**set_required_actions**](user.md#set_required_actions)|   [SetRequiredActionsRequest](user.md#setrequiredactionsrequest) |   [UserInfo](user.md#userinfo) |
 | [**enable**](user.md#enable)|   [UserRequest](user.md#userrequest) |   [UserInfo](user.md#userinfo) |
@@ -118,8 +118,8 @@ description: User API which allows member management within project, company, an
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UserRequest](user.md#userrequest) |
-| Response |  [UserInfo](user.md#userinfo)  |
+| Request | [VerifyEmailRequest](user.md#verifyemailrequest) |
+| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
  
  
 
@@ -132,7 +132,7 @@ description: User API which allows member management within project, company, an
 | Type | Message |
 | :--- | :--- |
 | Request | [ConfirmEmailRequest](user.md#confirmemailrequest) |
-| Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
+| Response |  [UserInfo](user.md#userinfo)  |
  
  
 
@@ -637,7 +637,6 @@ description: User API which allows member management within project, company, an
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | user_id |string|✔| |
-| email |string|✘| |
 | domain_id |string|✔| |
 
 ### UserStatQuery
@@ -651,3 +650,10 @@ description: User API which allows member management within project, company, an
 | :--- | :--- | :--- |
 | results |[list of UserInfo](user.md#userinfo) | |
 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | |
+
+### VerifyEmailRequest
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| user_id |string|✔| |
+| email |string|✘| |
+| domain_id |string|✔| |
