@@ -446,6 +446,7 @@ description: User API which allows member management within project, company, an
 | timezone |string|✘| |
 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
 | domain_id |string|✔| |
+| reset_password |bool|✘| |
 
 ### UserInfo
 <table>
