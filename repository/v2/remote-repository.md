@@ -66,6 +66,7 @@ description:
 | description |string | |
 | endpoint |string | |
 | version |string | |
+| domain_id |string | |
 
 ### RemoteRepositoryQuery
 | Field | Type | Required | Description |

@@ -110,103 +110,21 @@ description:
 | trusted_service_account |string | |
 
 ### CreateProviderRequest
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left; width:100px;">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:center">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left; width:100px;">provider</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">sync_mode</td>
-      <td style="text-align:left"><ul>
-          	<li>UNDEFINED</li>
-          	<li>NONE</li>
-          	<li>MANUAL</li>
-          	<li>AUTOMATIC</li>
-        </ul></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">sync_options</td>
-      <td style="text-align:left"><a href="provider.md#syncoptions">SyncOptions</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">description</td>
-      <td style="text-align:left"><a href="provider.md#description">list of Description</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">schema</td>
-      <td style="text-align:left"><a href="provider.md#schema">list of Schema</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">capability</td>
-      <td style="text-align:left"><a href="provider.md#capability">Capability</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">color</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">icon</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">reference</td>
-      <td style="text-align:left"><a href="provider.md#reference">list of Reference</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">labels</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| provider |string|✔| |
+| name |string|✔| |
+| sync_mode |[SyncMode](provider.md#syncmode)|✘| |
+| sync_options |[SyncOptions](provider.md#syncoptions)|✘| |
+| description |[list of Description](provider.md#description)|✘| |
+| schema |[list of ProviderSchema](provider.md#providerschema)|✘| |
+| capability |[Capability](provider.md#capability)|✘| |
+| color |string|✘| |
+| icon |string|✘| |
+| reference |[list of Reference](provider.md#reference)|✘| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✘| |
 
 ### Description
 | Field | Type |  Description |
@@ -222,177 +140,46 @@ description:
 | domain_id |string|✘| |
 
 ### ProviderInfo
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left; width:100px;">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left; width:100px;">provider</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">sync_mode</td>
-      <td style="text-align:left"><ul>
-          	<li>UNDEFINED</li>
-          	<li>NONE</li>
-          	<li>MANUAL</li>
-          	<li>AUTOMATIC</li>
-        </ul></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">sync_options</td>
-      <td style="text-align:left"><a href="provider.md#syncoptions">SyncOptions</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">description</td>
-      <td style="text-align:left"><a href="provider.md#description">list of Description</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">schema</td>
-      <td style="text-align:left"><a href="provider.md#schema">list of Schema</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">capability</td>
-      <td style="text-align:left"><a href="provider.md#capability">Capability</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">color</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">icon</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">reference</td>
-      <td style="text-align:left"><a href="provider.md#reference">list of Reference</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">labels</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">remote_repository</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">created_at</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:left"></td>
-
-   </tr>
-  </tbody>
-</table>
-
-
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| provider |string | |
+| name |string | |
+| sync_mode |[SyncMode](provider.md#syncmode) | |
+| sync_options |[SyncOptions](provider.md#syncoptions) | |
+| description |[list of Description](provider.md#description) | |
+| schema |[list of ProviderSchema](provider.md#providerschema) | |
+| capability |[Capability](provider.md#capability) | |
+| color |string | |
+| icon |string | |
+| reference |[list of Reference](provider.md#reference) | |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview) | |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| remote_repository |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
+| domain_id |string | |
+| created_at |string | |
 
 ### ProviderQuery
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left; width:100px;">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:center">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left; width:100px;">query</td>
-      <td style="text-align:left"><a href="https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query">spaceone.api.core.v1.StatisticsQuery</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">provider</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">sync_mode</td>
-      <td style="text-align:left"><ul>
-          	<li>UNDEFINED</li>
-          	<li>NONE</li>
-          	<li>MANUAL</li>
-          	<li>AUTOMATIC</li>
-        </ul></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">remote_repository_name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✘| |
+| provider |string|✘| |
+| name |string|✘| |
+| sync_mode |[SyncMode](provider.md#syncmode)|✘| |
+| remote_repository_name |string|✘| |
+| domain_id |string|✘| |
 
 ### ProviderRequest
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
 | provider |string|✔| |
 | domain_id |string|✘| |
+
+### ProviderSchema
+| Field | Type |  Description |
+| :--- | :--- | :--- |
+| resource_type |string | |
+| secret_type |string | |
+| schema_id |string | |
 
 ### ProvidersInfo
 | Field | Type |  Description |
@@ -406,114 +193,19 @@ description:
 | resource_type |string | |
 | link |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
 
-### Schema
-| Field | Type |  Description |
-| :--- | :--- | :--- |
-| resource_type |string | |
-| secret_type |string | |
-| schema_id |string | |
-
-### SyncOptions
-| Field | Type |  Description |
-| :--- | :--- | :--- |
-| source_type |string | |
-| source |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | |
-
 ### UpdateProviderRequest
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left; width:100px;">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:center">Required</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left; width:100px;">provider</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">name</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">sync_mode</td>
-      <td style="text-align:left"><ul>
-          	<li>UNDEFINED</li>
-          	<li>NONE</li>
-          	<li>MANUAL</li>
-          	<li>AUTOMATIC</li>
-        </ul></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">sync_options</td>
-      <td style="text-align:left"><a href="provider.md#syncoptions">SyncOptions</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">description</td>
-      <td style="text-align:left"><a href="provider.md#description">list of Description</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">schema</td>
-      <td style="text-align:left"><a href="provider.md#schema">list of Schema</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">capability</td>
-      <td style="text-align:left"><a href="provider.md#capability">Capability</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">color</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">icon</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">reference</td>
-      <td style="text-align:left"><a href="provider.md#reference">list of Reference</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">labels</td>
-      <td style="text-align:left"><a href="https://developers.google.com/protocol-buffers/docs/reference/overview">google.protobuf.ListValue</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">tags</td>
-      <td style="text-align:left"><a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a></td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-    <tr>
-      <td style="text-align:left; width:100px;">domain_id</td>
-      <td style="text-align:left">string</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:left"></td>
-   </tr>
-  </tbody>
-</table>
-
-
+| Field | Type | Required | Description |
+| :--- | :--- | :---: | :--- |
+| provider |string|✔| |
+| name |string|✘| |
+| sync_mode |[SyncMode](provider.md#syncmode)|✘| |
+| sync_options |[SyncOptions](provider.md#syncoptions)|✘| |
+| description |[list of Description](provider.md#description)|✘| |
+| schema |[list of ProviderSchema](provider.md#providerschema)|✘| |
+| capability |[Capability](provider.md#capability)|✘| |
+| color |string|✘| |
+| icon |string|✘| |
+| reference |[list of Reference](provider.md#reference)|✘| |
+| labels |[google.protobuf.ListValue](https://developers.google.com/protocol-buffers/docs/reference/overview)|✘| |
+| tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|✘| |
+| domain_id |string|✘| |
