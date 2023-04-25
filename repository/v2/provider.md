@@ -161,7 +161,7 @@ description:
 ### ProviderQuery
 | Field | Type | Required | Description |
 | :--- | :--- | :---: | :--- |
-| query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query)|✘| |
+| query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query)|✘| |
 | provider |string|✘| |
 | name |string|✘| |
 | sync_mode |[SyncMode](provider.md#syncmode)|✘| |

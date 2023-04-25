@@ -657,4 +657,5 @@ description: User API which allows member management within project, company, an
 | :--- | :--- | :---: | :--- |
 | user_id |string|✔| |
 | email |string|✘| |
+| force |bool|✘| |
 | domain_id |string|✔| |
