@@ -1,0 +1,107 @@
+---
+title: "{{title}}"
+linkTitle: "{{title}}"
+weight: 3
+bookFlatSection: true
+---
+# [{{title}}](#{{title}})
+{{ file.description }}
+
+
+>  **Package : {{file.package}}**
+
+<br>
+<br>
+
+## {{title}}
+
+{% for title, value in rpcs.items() %}
+**{{title}} Methods:**
+
+
+| Method | Request | Response |
+| :----- | :-------- | :-------- |
+    {%- for rpc in value %}
+| [**{{rpc.name}}**](./{{title}}#{{rpc.name}}) | [{{rpc.requestType}}]({{title}}#{{rpc.requestType.lower()}}) | [{{rpc.responseType}}](./{{title}}#{{rpc.responseType.lower()}}) |
+    {%- endfor %}
+{%- endfor %}
+
+
+{% for title, value in rpcs.items() %}
+    {% for rpc in value %}
+<br>
+
+### {{rpc.name }}
+{% if rpc['options'] is defined %}
+> **{{rpc['options']['google.api.http']['rules'][0]['method']}}** {{rpc['options']['google.api.http']['rules'][0]['pattern']}}
+>
+{% endif %}
+
+{% if rpc.get(description) -%}
+> {{rpc['description']}}
+{% endif %}
+
+{% raw %} {{< tabs "{% endraw%} {{rpc.name}} {% raw %}" >}}{%- endraw %}
+
+{% if messages.get(rpc.requestType).description %}
+{%- raw %} {{< tab "Request Example" >}} {%- endraw %}
+{% if messages.get(rpc.requestType) %}
+
+
+[{{ rpc.requestType }}](./{{title}}#{{rpc.requestType.lower()}})
+
+{% for field in messages.get(rpc.requestType).get('sorted_field') -%}
+* **{{ field.name }}** ({{ field.type }}) {% if field.required == 'Required' %} `Required` {% endif %}
+{% if field.description %}
+  *{{ field.description }}*
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% raw %}{{< highlight json >}}{%- endraw %}
+{{messages[rpc.requestType].description}}
+{% raw %}{{< /highlight >}}{%- endraw %}
+{% raw %}{{< /tab >}}{%- endraw %}
+{% endif %}
+
+{% if messages.get(rpc.responseType).description %}
+{%- raw %} {{< tab "Response Example" >}} {%- endraw %}
+{% if messages.get(rpc.responseType) %}
+[{{ rpc.responseType }}](#{{rpc.responseType.upper()}})
+{% for field in messages.get(rpc.responseType).get('sorted_field') -%}
+
+* **{{ field.name }}** ({{ field.type }}) {% if field.required == 'Required' %} `Required` {% endif %}
+{% if field.description %}
+  {{ field.description }}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% raw %}{{< highlight json >}}{%- endraw %}
+{{messages[rpc.responseType].description}}
+{% raw %}{{< /highlight >}}{%- endraw %}
+{% raw %}{{< /tab >}}{%- endraw %}
+
+{% endif %}
+{% raw %}{{< /tabs >}}{% endraw %}
+
+    {%+ endfor %}
+{% endfor %}
+
+<br>
+<br>
+
+## Message
+
+
+{% for msg in messages.values() %}
+### {{msg.name}}
+
+    {%- for field in msg.sorted_field %}
+* **{{ field.name }}** ({{ field.type }}) {% if field.required == 'Required' %} `Required` {% endif %}
+{% if field.description %}
+  *{{ field.description }}*
+{% endif %}
+    {% endfor -%}
+<br>
+{% endfor %}
