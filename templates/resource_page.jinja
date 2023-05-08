@@ -12,10 +12,13 @@ bookFlatSection: true
 
 <br>
 <br>
+˚
+## {{title}}˚
+{%+ if services[0] +%}
+{{services[0].description}}
+{%+ endif +%}
 
-## {{title}}
-
-{% for title, value in rpcs.items() %}
+{% for title, value in rpcs.items() %˚}
 **{{title}} Methods:**
 
 
@@ -32,6 +35,10 @@ bookFlatSection: true
 <br>
 
 ### {{rpc.name }}
+{% if rpc['description'] is defined %}
+{{rpc['description']}}
+{% endif %}
+
 {% if rpc['options'] is defined %}
 > **{{rpc['options']['google.api.http']['rules'][0]['method']}}** {{rpc['options']['google.api.http']['rules'][0]['pattern']}}
 >
@@ -41,6 +48,7 @@ bookFlatSection: true
 > {{rpc['description']}}
 {% endif %}
 
+{% if messages.get(rpc.requestType).description or messages.get(rpc.responseType).description %}
 {% raw %} {{< tabs "{% endraw%} {{rpc.name}} {% raw %}" >}}{%- endraw %}
 
 {% if messages.get(rpc.requestType).description %}
@@ -84,6 +92,7 @@ bookFlatSection: true
 
 {% endif %}
 {% raw %}{{< /tabs >}}{% endraw %}
+{% endif %}
 
     {%+ endfor %}
 {% endfor %}
