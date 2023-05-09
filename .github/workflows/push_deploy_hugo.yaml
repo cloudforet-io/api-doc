@@ -15,6 +15,9 @@ on:
         required: true
         default: 'master'
 
+env:
+  SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -54,10 +57,12 @@ jobs:
           pip install setuptools wheel twine
           pip install PyYAML
           pip install Jinja2
+
       - name: Generate markdown files
         run: |
           cd bin
           python markdown.py
+
       - name: Push artifacts to origin master
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -72,8 +77,10 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass-embedded
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -83,8 +90,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
+
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -95,6 +104,7 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -119,3 +129,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+  notification:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack
+        if: always()
+        uses: 8398a7/action-slack@v3.15.0
+        with:
+          status: ${{job.status}}
+          fields: repo,message,commit,author,action,ref,workflow,job
+          author_name: Github Action Slack
