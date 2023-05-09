@@ -225,9 +225,7 @@ Adds or changes `categories` of a specific Board with SYSTEM permission. A chang
 * **board_id** (string)  `Required` 
 
 
-* **categories** (string)  `Required` 
-
-  *+optioanl*
+* **categories** (string) 
 
 
 
@@ -580,9 +578,7 @@ Gets a list of all Boards. You can use a query to get a filtered list of Boards.
 * **board_id** (string)  `Required` 
 
     
-* **categories** (string)  `Required` 
-
-  *+optioanl*
+* **categories** (string) 
 
     <br>
 

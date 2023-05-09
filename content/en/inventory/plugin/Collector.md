@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Collector](#Collector)
-desc: A Collector is a plugin collecting data of external infrastructure resources.
+A Collector is a plugin collecting data of external infrastructure resources.
 
 
 >  **Package : spaceone.api.inventory.plugin**
@@ -35,21 +35,52 @@ desc: A Collector is a plugin collecting data of external infrastructure resourc
 
 ### init
 
-desc: Initializes a specific Collector. During initialization, the Collector information to be passed to the Collector user is delivered as `metadata`. Collector information includes its name and version.
-request_example: >-
+Initializes a specific Collector. During initialization, the Collector information to be passed to the Collector user is delivered as `metadata`. Collector information includes its name and version.
+
+
+
+
+
+
+
+ {{< tabs " init " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[InitRequest](./Collector#initrequest)
+
+* **options** (Struct)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
 {
 
 }
-response_example: >-
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[PluginInfo](#PLUGININFO)
+* **metadata** (Struct)  `Required` 
+
+
+
+{{< highlight json >}}
 {
 
 }
+{{< /highlight >}}
+{{< /tab >}}
 
 
-
-
-
-
+{{< /tabs >}}
 
 
     
@@ -57,21 +88,41 @@ response_example: >-
 
 ### verify
 
-desc: Verifies a specific Collector. You must specify the parameter `secret_data`, encrypted account data of the Collector to validate.
-request_example: >-
+Verifies a specific Collector. You must specify the parameter `secret_data`, encrypted account data of the Collector to validate.
+
+
+
+
+
+
+
+ {{< tabs " verify " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[VerifyRequest](./Collector#verifyrequest)
+
+* **options** (Struct)  `Required` 
+
+
+* **secret_data** (Struct)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
 {
 
 }
-response_example: >-
-{
-
-}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 
-
-
-
+{{< /tabs >}}
 
 
     
@@ -79,21 +130,44 @@ response_example: >-
 
 ### collect
 
-desc: Collects data of external infrastructure resources by a specific Collector.
-request_example: >-
+Collects data of external infrastructure resources by a specific Collector.
+
+
+
+
+
+
+
+ {{< tabs " collect " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CollectRequest](./Collector#collectrequest)
+
+* **options** (Struct)  `Required` 
+
+
+* **secret_data** (Struct)  `Required` 
+
+
+* **filter** (Struct)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
 {
 
 }
-response_example: >-
-{
-
-}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 
-
-
-
+{{< /tabs >}}
 
 
     
@@ -109,17 +183,11 @@ response_example: >-
 ### CollectRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **filter** (Struct)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -130,8 +198,6 @@ response_example: >-
 
 ### InitRequest
 * **options** (Struct)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -163,11 +229,7 @@ response_example: >-
 ### VerifyRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
 
     <br>

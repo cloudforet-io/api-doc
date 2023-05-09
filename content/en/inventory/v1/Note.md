@@ -38,15 +38,7 @@ bookFlatSection: true
 
 ### create
 
-desc: ''
-request_example: >-
-{
 
-}
-response_example: >-
-{
-
-}
 
 
 
@@ -57,21 +49,76 @@ response_example: >-
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateNoteRequest](./Note#createnoterequest)
+
+* **record_id** (string)  `Required` 
+
+  *is_required: true*
+
+
+* **note** (string)  `Required` 
+
+  *is_required: true*
+
+
+* **domain_id** (string)  `Required` 
+
+  *is_required: true*
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[NoteInfo](#NOTEINFO)
+* **note_id** (string)  `Required` 
+
+* **record_id** (string)  `Required` 
+
+* **cloud_service_id** (string)  `Required` 
+
+* **note** (string)  `Required` 
+
+* **created_by** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update
 
-desc: ''
-request_example: >-
-{
 
-}
-response_example: >-
-{
-
-}
 
 
 
@@ -82,21 +129,76 @@ response_example: >-
 
 
 
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateNoteRequest](./Note#updatenoterequest)
+
+* **note_id** (string)  `Required` 
+
+  *is_required: true*
+
+
+* **note** (string)  `Required` 
+
+  *is_required: false*
+
+
+* **domain_id** (string)  `Required` 
+
+  *is_required: true*
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[NoteInfo](#NOTEINFO)
+* **note_id** (string)  `Required` 
+
+* **record_id** (string)  `Required` 
+
+* **cloud_service_id** (string)  `Required` 
+
+* **note** (string)  `Required` 
+
+* **created_by** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### delete
 
-desc: ''
-request_example: >-
-{
 
-}
-response_example: >-
-{
-
-}
 
 
 
@@ -107,21 +209,45 @@ response_example: >-
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[NoteRequest](./Note#noterequest)
+
+* **note_id** (string)  `Required` 
+
+  *is_required: true*
+
+
+* **domain_id** (string)  `Required` 
+
+  *is_required: true*
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get
 
-desc: ''
-request_example: >-
-{
 
-}
-response_example: >-
-{
-
-}
 
 
 
@@ -132,21 +258,76 @@ response_example: >-
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GetNoteRequest](./Note#getnoterequest)
+
+* **note_id** (string)  `Required` 
+
+  *is_required: true*
+
+
+* **domain_id** (string)  `Required` 
+
+  *is_required: true*
+
+
+* **only** (string)  `Required` 
+
+  *is_required: false*
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[NoteInfo](#NOTEINFO)
+* **note_id** (string)  `Required` 
+
+* **record_id** (string)  `Required` 
+
+* **cloud_service_id** (string)  `Required` 
+
+* **note** (string)  `Required` 
+
+* **created_by** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### list
 
-desc: ''
-request_example: >-
-{
 
-}
-response_example: >-
-{
-
-}
 
 
 
@@ -156,6 +337,58 @@ response_example: >-
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[NoteQuery](./Note#notequery)
+
+* **query** (Query)  `Required` 
+
+  *is_required: false*
+
+
+* **note_id** (string)  `Required` 
+
+  *is_required: false*
+
+
+* **record_id** (string)  `Required` 
+
+  *is_required: false*
+
+
+* **cloud_service_id** (string)  `Required` 
+
+  *is_required: false*
+
+
+* **created_by** (string)  `Required` 
+
+  *is_required: false*
+
+
+* **domain_id** (string)  `Required` 
+
+  *is_required: false*
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     

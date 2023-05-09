@@ -82,61 +82,39 @@ bookFlatSection: true
     <br>
 
 ### ChangeHistoryQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
 * **cloud_service_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **action** (RecordAction)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **collector_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **job_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **updated_by** (string)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **action** (RecordAction) 
+
+    
+* **user_id** (string) 
+
+    
+* **collector_id** (string) 
+
+    
+* **job_id** (string) 
+
+    
+* **updated_by** (string) 
 
     <br>
 
 ### ChangeHistoryStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **cloud_service_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
