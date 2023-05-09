@@ -166,22 +166,14 @@ bookFlatSection: true
 ### CreateFileRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
+    
+* **tags** (Struct) 
 
     
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
+* **reference** (FileReference) 
 
     
-* **reference** (FileReference)  `Required` 
-
-  *is_required: false*
-
-    
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
@@ -230,54 +222,34 @@ bookFlatSection: true
     <br>
 
 ### FileQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
+* **query** (Query) 
 
     
-* **file_id** (string)  `Required` 
-
-  *is_required: false*
+* **file_id** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **name** (string) 
 
     
-* **state** (FileState)  `Required` 
-
-  *is_required: false*
+* **state** (FileState) 
 
     
-* **scope** (FileScope)  `Required` 
-
-  *is_required: false*
+* **scope** (FileScope) 
 
     
-* **file_type** (string)  `Required` 
-
-  *is_required: false*
+* **file_type** (string) 
 
     
-* **resource_type** (string)  `Required` 
-
-  *is_required: false*
+* **resource_type** (string) 
 
     
-* **resource_id** (string)  `Required` 
-
-  *is_required: false*
+* **resource_id** (string) 
 
     
-* **user_domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **user_domain_id** (string) 
 
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
@@ -292,24 +264,16 @@ bookFlatSection: true
 ### FileRequest
 * **file_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
 ### FileStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -324,38 +288,24 @@ bookFlatSection: true
 ### GetFileRequest
 * **file_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **domain_id** (string) 
 
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### UpdateFileRequest
 * **file_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **tags** (Struct) 
 
     
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
+* **reference** (FileReference) 
 
     
-* **reference** (FileReference)  `Required` 
-
-  *is_required: false*
-
-    
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
