@@ -29,6 +29,11 @@ jobs:
           ref: ${{ env.BRANCH }}
           token: ${{ secrets.PAT_TOKEN }}
 
+      - name: Generate markdown files
+        run: |
+          cd bin
+          python markdown.py
+
       - name: tagging
         run: |
           git config user.email admin@cloudforet.io
