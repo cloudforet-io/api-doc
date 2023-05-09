@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Domain_config](#Domain_config)
-desc: DomainConfig API which configure environments for domain
+DomainConfig API which configure environments for domain
 
 
 >  **Package : spaceone.api.config.v1**
@@ -184,43 +184,29 @@ desc: DomainConfig API which configure environments for domain
     <br>
 
 ### DomainConfigQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **name** (string) 
 
     <br>
 
 ### DomainConfigRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### DomainConfigStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -235,38 +221,24 @@ desc: DomainConfig API which configure environments for domain
 ### GetDomainConfigRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### SetDomainConfigRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **data** (Struct)  `Required` 
-
-  *is_required: true*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **tags** (Struct) 
 
     <br>

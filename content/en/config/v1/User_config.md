@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [User_config](#User_config)
-desc: UserConfig API which configure environments for user
+UserConfig API which configure environments for user
 
 
 >  **Package : spaceone.api.config.v1**
@@ -166,39 +166,25 @@ desc: UserConfig API which configure environments for user
 ### GetUserConfigRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### SetUserConfigRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **data** (Struct)  `Required` 
-
-  *is_required: true*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **tags** (Struct) 
 
     <br>
 
@@ -226,48 +212,32 @@ desc: UserConfig API which configure environments for user
     <br>
 
 ### UserConfigQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **name** (string) 
+
+    
+* **user_id** (string) 
 
     <br>
 
 ### UserConfigRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### UserConfigStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
