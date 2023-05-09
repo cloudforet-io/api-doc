@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Project_dashboard](#Project_dashboard)
-desc: description of dashboard
+description of dashboard
 
 
 >  **Package : spaceone.api.dashboard.v1**
@@ -220,91 +220,57 @@ desc: description of dashboard
 ### CreateProjectDashboardRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **name** (string)  `Required` 
-
-  *is_required: true*
 
     
 * **viewers** (Viewers)  `Required` 
 
-  *is_required: true*
-
-    
-* **layouts** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **variables** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **settings** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **variables_schema** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **layouts** (ListValue) 
+
+    
+* **variables** (Struct) 
+
+    
+* **settings** (Struct) 
+
+    
+* **variables_schema** (Struct) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetProjectDashboardRequest
 * **project_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### GetProjectDashboardVersionRequest
 * **project_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **version** (int32)  `Required` 
-
-  *is_required: true*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -356,63 +322,41 @@ desc: description of dashboard
     <br>
 
 ### ProjectDashboardQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_dashboard_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **viewers** (Viewers)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **project_dashboard_id** (string) 
+
+    
+* **project_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **viewers** (Viewers) 
+
+    
+* **user_id** (string) 
 
     <br>
 
 ### ProjectDashboardRequest
 * **project_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### ProjectDashboardStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -446,41 +390,27 @@ desc: description of dashboard
     <br>
 
 ### ProjectDashboardVersionQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
 * **project_dashboard_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **version** (int32)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **version** (int32) 
 
     <br>
 
 ### ProjectDashboardVersionRequest
 * **project_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **version** (int32)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -503,46 +433,28 @@ desc: description of dashboard
 ### UpdateProjectDashboardRequest
 * **project_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **layouts** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **variables** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **settings** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **variables_schema** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **layouts** (ListValue) 
+
+    
+* **variables** (Struct) 
+
+    
+* **settings** (Struct) 
+
+    
+* **variables_schema** (Struct) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>

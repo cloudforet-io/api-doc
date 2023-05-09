@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Custom_widget](#Custom_widget)
-desc: description of dashboard
+description of dashboard
 
 
 >  **Package : spaceone.api.dashboard.v1**
@@ -148,42 +148,26 @@ desc: description of dashboard
 ### CreateCustomWidgetRequest
 * **widget_name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **title** (string)  `Required` 
-
-  *is_required: true*
 
     
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
-    
-* **settings** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **inherit_options** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **settings** (Struct) 
+
+    
+* **inherit_options** (Struct) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
@@ -229,58 +213,38 @@ desc: description of dashboard
     <br>
 
 ### CustomWidgetQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **custom_widget_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **widget_name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **title** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **custom_widget_id** (string) 
+
+    
+* **widget_name** (string) 
+
+    
+* **title** (string) 
+
+    
+* **user_id** (string) 
 
     <br>
 
 ### CustomWidgetRequest
 * **custom_widget_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### CustomWidgetStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -295,58 +259,36 @@ desc: description of dashboard
 ### GetCustomWidgetRequest
 * **custom_widget_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### UpdateCustomWidgetRequest
 * **custom_widget_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **title** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **options** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **settings** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **inherit_options** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **title** (string) 
+
+    
+* **options** (Struct) 
+
+    
+* **settings** (Struct) 
+
+    
+* **inherit_options** (Struct) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>

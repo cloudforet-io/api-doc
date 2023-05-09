@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Domain_dashboard](#Domain_dashboard)
-desc: description of dashboard
+description of dashboard
 
 
 >  **Package : spaceone.api.dashboard.v1**
@@ -46,7 +46,7 @@ desc: description of dashboard
 
 
 
-> **POST** /dashboard/v1/domain-dashboards
+> **POST** /dashboard/v1/domain-dashboard/create
 >
 
 
@@ -63,7 +63,7 @@ desc: description of dashboard
 
 
 
-> **PUT** /dashboard/v1/domain-dashboard/{domain_dashboard_id}
+> **POST** /dashboard/v1/domain-dashboard/update
 >
 
 
@@ -80,7 +80,7 @@ desc: description of dashboard
 
 
 
-> **DELETE** /dashboard/v1/domain-dashboard/{domain_dashboard_id}
+> **POST** /dashboard/v1/domain-dashboard/delete
 >
 
 
@@ -97,7 +97,7 @@ desc: description of dashboard
 
 
 
-> **GET** /dashboard/v1/domain-dashboard/{domain_dashboard_id}
+> **POST** /dashboard/v1/domain-dashboard/get
 >
 
 
@@ -114,7 +114,7 @@ desc: description of dashboard
 
 
 
-> **DELETE** /dashboard/v1/domain-dashboard/{domain_dashboard_id}/version/{version}
+> **POST** /dashboard/v1/domain-dashboard/delete-version
 >
 
 
@@ -131,7 +131,7 @@ desc: description of dashboard
 
 
 
-> **POST** /dashboard/v1/domain-dashboard/{domain_dashboard_id}/version/{version}/revert
+> **POST** /dashboard/v1/domain-dashboard/revert-version
 >
 
 
@@ -148,7 +148,7 @@ desc: description of dashboard
 
 
 
-> **GET** /dashboard/v1/domain-dashboard/{domain_dashboard_id}/version/{version}
+> **POST** /dashboard/v1/domain-dashboard/get-version
 >
 
 
@@ -165,7 +165,7 @@ desc: description of dashboard
 
 
 
-> **GET** /dashboard/v1/domain-dashboard/{domain_dashboard_id}/versions
+> **POST** /dashboard/v1/domain-dashboard/list-versions
 >
 
 
@@ -182,7 +182,7 @@ desc: description of dashboard
 
 
 
-> **GET** /dashboard/v1/domain-dashboards
+> **POST** /dashboard/v1/domain-dashboard/list
 >
 
 
@@ -199,7 +199,7 @@ desc: description of dashboard
 
 
 
-> **POST** /dashboard/v1/domain-dashboards/stat
+> **POST** /dashboard/v1/domain-dashboard/stat
 >
 
 
@@ -220,47 +220,29 @@ desc: description of dashboard
 ### CreateDomainDashboardRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **viewers** (Viewers)  `Required` 
-
-  *is_required: true*
-
-    
-* **layouts** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **variables** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **settings** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **variables_schema** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **layouts** (ListValue) 
+
+    
+* **variables** (Struct) 
+
+    
+* **settings** (Struct) 
+
+    
+* **variables_schema** (Struct) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
@@ -309,58 +291,38 @@ desc: description of dashboard
     <br>
 
 ### DomainDashboardQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **domain_dashboard_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **viewers** (Viewers)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **domain_dashboard_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **viewers** (Viewers) 
+
+    
+* **user_id** (string) 
 
     <br>
 
 ### DomainDashboardRequest
 * **domain_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### DomainDashboardStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -394,41 +356,27 @@ desc: description of dashboard
     <br>
 
 ### DomainDashboardVersionQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_dashboard_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **version** (int32)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **version** (int32) 
 
     <br>
 
 ### DomainDashboardVersionRequest
 * **domain_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **version** (int32)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -451,85 +399,53 @@ desc: description of dashboard
 ### GetDomainDashboardRequest
 * **domain_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### GetDomainDashboardVersionRequest
 * **domain_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **version** (int32)  `Required` 
-
-  *is_required: true*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### UpdateDomainDashboardRequest
 * **domain_dashboard_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **layouts** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **variables** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **settings** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **variables_schema** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **layouts** (ListValue) 
+
+    
+* **variables** (Struct) 
+
+    
+* **settings** (Struct) 
+
+    
+* **variables_schema** (Struct) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>
