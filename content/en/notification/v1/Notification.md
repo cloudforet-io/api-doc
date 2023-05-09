@@ -16,6 +16,9 @@ desc: A Notification is a service that delivers event data generated in Cloudfor
 ## Notification
 
 
+
+
+
 **Notification Methods:**
 
 
@@ -36,23 +39,98 @@ desc: A Notification is a service that delivers event data generated in Cloudfor
 
 ### create
 
+desc: Creates a new Notification. When a Notification is created, it is delivered to a UserChannel or a ProjectChannel depending on the parameter `resource_type`. If a Notification is delivered to a UserChannel, the `resource_type` is `identity.User`, and if a Notification is delivered to a ProjectChannel, the `resource_type` is `identity.Project`.
+request_example: >-
+{
+"resource_type": "identity.Project",
+"resource_id": "resource-123456789012",
+"topic": "monitoring.Alert",
+"message": {
+"title": "[Alerting] Not Running Pods 0:OK alert",
+"description": "[spaceone-dev] Not Running Pods 0 is OK\n\nFailure level : WorkerNode\nPanel ... ",
+"tags": {
+"urgency": "LOW",
+"resource_id": "pod",
+"assignee": "user1@email.com",
+"created_at": "2022-01-01T17:12:45.990Z",
+"state": "ACKNOWLEDGED",
+"project_id": "project-123456789012"
+}
+},
+"notification_type": "INFO",
+"notification_level": "LV2"
+}
+response_example: >-
+{
+"notification_id": "notification-123456789012",
+"topic": "monitoring.Alert",
+"message": {
+"title": "[Alerting] Not Running Pods 0:OK alert",
+"description": "[spaceone-dev] Not Running Pods 0 is OK\n\nFailure level : WorkerNode\nPanel ... ",
+"tags": {
+"urgency": "LOW",
+"resource_id": "pod",
+"assignee": "user1@email.com",
+"created_at": "2022-01-01T17:12:45.990Z",
+"state": "ACKNOWLEDGED",
+"project_id": "project-123456789012"
+}
+},
+"notification_type": "INFO",
+"notification_level": "LV2",
+"is_read": true,
+"user_id": "Cloudforet@mz.co.kr",
+"domain_id": "domain-123456789012",
+"created_at": "2022-01-01T17:12:40.990Z"
+}
+
+
+
 > **POST** /notification/v1/notification/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### push
+
+desc: Manually raises a Notification. A Notification is raised with a message to be sent using a valid specific Protocol, and data used for a specific Protocol such as a phone number.
+request_example: >-
+{
+"protocol_id": "protocol-fb30cb6c28d6",
+"data": {
+"phone_number": "01012345678"
+},
+"message": {
+"tags": [
+{
+"key": "project_id",
+"value": "project-xxxx"
+},
+{
+"key": "project_name",
+"value": "Test Project"
+},
+{
+"key": "resource_id",
+"value": "server-yyyyy"
+},
+{
+"key": "resource_name",
+"value": "web-server-001"
+}
+],
+"description": "This is Sample Message",
+"title": "Sample"
+}
+}
+
+
 
 > **POST** /notification/v1/notification/push
 >
@@ -60,17 +138,24 @@ desc: A Notification is a service that delivers event data generated in Cloudfor
 
 
 
- {{< tabs " push " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+desc: Deletes multiple Notifications. You must specify `notifications` of the list of Notifications to delete.
+request_example: >-
+{
+"notifications": [
+"notification-4025c1b61225",
+"notification-13hk3fh32534",
+"notification-4kth40jth5jy"
+]
+}
+
+
 
 > **POST** /notification/v1/notification/delete
 >
@@ -78,17 +163,23 @@ desc: A Notification is a service that delivers event data generated in Cloudfor
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### set_read
+
+desc: Marks a Notification as read. When a Notification is raised and if the Notification has been acknowledged, it can be marked as read with the method.
+request_example: >-
+{
+"notifications": [
+"notification-6c548a37ee77",
+"notification-4j3jt9384fnf"
+]
+}
+
+
 
 > **POST** /notification/v1/notification/set-read
 >
@@ -96,17 +187,43 @@ desc: A Notification is a service that delivers event data generated in Cloudfor
 
 
 
- {{< tabs " set_read " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+desc: Gets a specific Notification. Prints detailed information about the Notification, including not only the message contents(`title`, `description`) but also related data such as created time and urgency.
+request_example: >-
+{
+"notification_id": "notification-4025c1b61225"
+}
+response_example: >-
+{
+"notification_id": "notification-4025c1b61225",
+"topic": "monitoring.Alert",
+"message": {
+"tags": {
+"project_id": "project-18655561c535",
+"created_at": null,
+"urgency": "LOW",
+"state": "TRIGGERED",
+"resource_id": "AWS/NetworkELB",
+"resource_name": "[Asia Pacific (Seoul)]:[AWS/NetworkELB]: net/af83f347171a044af46453ebb34c8225/743a23562a96c595"
+},
+"title": "[Asia Pacific (Seoul)]: NLB-TCP_Target_Reset_Count-Alert",
+"description": "Threshold Crossed: 1 out of the last 1 datapoints [200.0 (25/06/21 06:38:00)] was not greater than the threshold (200.0)"
+},
+"notification_type": "INFO",
+"notification_level": "ALL",
+"is_read": true,
+"user_id": "user1@spaceone.dev",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2021-06-25T06:42:05.867Z"
+}
+
+
 
 > **POST** /notification/v1/notification/get
 >
@@ -114,17 +231,78 @@ desc: A Notification is a service that delivers event data generated in Cloudfor
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+desc: Gets a list of all Notifications. You can use a query to get a filtered list of Notifications.
+request_example: >-
+{
+"query": {
+"filter": [
+{
+"key": "notification_type",
+"value": "INFO",
+"operator": "eq"
+}
+]
+}
+}
+response_example: >-
+{
+"results": [
+{
+"notification_id": "notification-9f1476af11b7",
+"topic": "monitoring.Alert",
+"message": {
+"tags": {
+"state": "ACKNOWLEDGED",
+"resource_id": "pod",
+"project_id": "project-18655561c535",
+"urgency": "LOW",
+"created_at": null,
+"assignee": "yuda@test.co"
+},
+"title": "[Alerting] Not Running Pods 0:OK alert",
+"description": "[cloudone-dev-v1-eks-cluster] Not Running Pods 0 is OK"
+},
+"notification_type": "INFO",
+"notification_level": "LV2",
+"is_read": true,
+"user_id": "user33@spaceone.dev",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2021-06-21T17:13:39.570Z"
+},
+{
+"notification_id": "notification-4025c1b61225",
+"topic": "monitoring.Alert",
+"message": {
+"title": "[Asia Pacific (Seoul)]: NLB-TCP_Target_Reset_Count-Alert",
+"description": "Threshold Crossed: 1 out of the last 1 datapoints [200.0 (25/06/21 06:38:00)] was not greater than the threshold (200.0)",
+"tags": {
+"resource_id": "AWS/NetworkELB",
+"resource_name": "[Asia Pacific (Seoul)]:[AWS/NetworkELB]: net/dfsbvs/advdr32rwqdsvzc",
+"created_at": null,
+"state": "TRIGGERED",
+"project_id": "project-18655561c535",
+"urgency": "LOW"
+}
+},
+"notification_type": "INFO",
+"notification_level": "ALL",
+"is_read": true,
+"user_id": "user1@cloudforet.io",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2021-06-25T06:42:05.867Z"
+}
+],
+"total_count": 2
+}
+
+
 
 > **POST** /notification/v1/notification/list
 >
@@ -132,17 +310,16 @@ desc: A Notification is a service that delivers event data generated in Cloudfor
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /notification/v1/notification/stat
 >
@@ -150,12 +327,7 @@ desc: A Notification is a service that delivers event data generated in Cloudfor
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

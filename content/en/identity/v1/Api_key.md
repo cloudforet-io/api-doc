@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Api_key
 
 
+
+
+
 **APIKey Methods:**
 
 
@@ -36,23 +39,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /identity/v1/api-key/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### enable
+
+
+
+
 
 > **POST** /identity/v1/api-key/enable
 >
@@ -60,17 +66,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " enable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### disable
+
+
+
+
 
 > **POST** /identity/v1/api-key/disable
 >
@@ -78,17 +83,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " disable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /identity/v1/api-key/delete
 >
@@ -96,17 +100,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /identity/v1/api-key/get
 >
@@ -114,17 +117,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /identity/v1/api-key/list
 >
@@ -132,17 +134,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /identity/v1/api-key/stat
 >
@@ -150,12 +151,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

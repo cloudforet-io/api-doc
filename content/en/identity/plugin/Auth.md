@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Auth
 
 
+
+
+
 **Auth Methods:**
 
 
@@ -36,12 +39,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " init " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 <br>
@@ -51,12 +53,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " verify " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 <br>
@@ -66,12 +67,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " find " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 <br>
@@ -81,12 +81,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " login " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 

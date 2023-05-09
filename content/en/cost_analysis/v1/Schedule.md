@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Schedule
 
 
+
+
+
 **Schedule Methods:**
 
 
@@ -37,23 +40,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /cost-analysis/v1/schedule/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /cost-analysis/v1/schedule/update
 >
@@ -61,17 +67,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### enable
+
+
+
+
 
 > **POST** /cost-analysis/v1/schedule/enable
 >
@@ -79,17 +84,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " enable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### disable
+
+
+
+
 
 > **POST** /cost-analysis/v1/schedule/disable
 >
@@ -97,17 +101,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " disable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /cost-analysis/v1/schedule/delete
 >
@@ -115,17 +118,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /cost-analysis/v1/schedule/get
 >
@@ -133,17 +135,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /cost-analysis/v1/schedule/list
 >
@@ -151,17 +152,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /cost-analysis/v1/schedule/stat
 >
@@ -169,12 +169,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 
@@ -187,51 +182,33 @@ bookFlatSection: true
 
 
 ### CreateScheduleRequest
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **schedule** (Scheduled)  `Required` 
-
-  *is_required: true*
-
-    
-* **options** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **data_source_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **options** (Struct) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetScheduleRequest
 * **schedule_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -268,58 +245,38 @@ bookFlatSection: true
     <br>
 
 ### ScheduleQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **schedule_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **state** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **data_source_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **schedule_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **state** (string) 
+
+    
+* **data_source_id** (string) 
 
     <br>
 
 ### ScheduleRequest
 * **schedule_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### ScheduleStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -348,31 +305,19 @@ bookFlatSection: true
 ### UpdateScheduleRequest
 * **schedule_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **schedule** (Scheduled)  `Required` 
-
-  *is_required: false*
-
-    
-* **options** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **schedule** (Scheduled) 
+
+    
+* **options** (Struct) 
+
+    
+* **tags** (Struct) 
 
     <br>

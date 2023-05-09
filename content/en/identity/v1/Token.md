@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Token
 
 
+
+
+
 **Token Methods:**
 
 
@@ -31,23 +34,26 @@ bookFlatSection: true
 
 ### issue
 
+
+
+
+
 > **POST** /identity/v1/token/issue
 >
 
 
 
 
- {{< tabs " issue " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### refresh
+
+
+
+
 
 > **POST** /identity/v1/token/refresh
 >
@@ -55,12 +61,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " refresh " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

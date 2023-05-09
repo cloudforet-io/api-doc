@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Board](#Board)
-desc: A Board is a bulletin-board-type resource for posting notices and announcements in Cloudforet.
+A Board is a bulletin-board-type resource for posting notices and announcements in Cloudforet.
 
 
 >  **Package : spaceone.api.board.v1**
@@ -14,6 +14,9 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 <br>
 
 ## Board
+
+
+
 
 
 **Board Methods:**
@@ -36,23 +39,91 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 
 ### create
 
+Creates a new Board with SYSTEM permission. The `name` of the board is only required. You can add one or more `categories` representing the Board's attributes.
+
+
+
 > **POST** /board/v1/board/create
 >
 
 
 
 
+
  {{< tabs " create " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[CreateBoardRequest](./Board#createboardrequest)
+
+* **name** (string)  `Required` 
+
+
+* **categories** (string) 
+
+
+* **tags** (Struct) 
+
+
+
+
+
+{{< highlight json >}}
+{
+  "name": "notice",
+  "categories": ["admin", "developer", "devops"],
+  "tags": {"a": "b"}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[BoardInfo](#BOARDINFO)
+* **board_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **categories** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "board_id": "board-123456789012",
+     "name": "notice",
+     "categories": [
+         "admin",
+         "developer",
+         "devops"
+     ],
+     "tags": {
+         "a": "b"
+     },
+     "created_at": "2022-01-01T06:47:27.759Z"
+ }
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 <br>
 
 ### update
+
+Updates a specific Board with SYSTEM permission. You can make changes in Board settings, including `name` and `tags`.
+
+
 
 > **POST** /board/v1/board/update
 >
@@ -60,17 +131,81 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 
 
 
+
  {{< tabs " update " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[UpdateBoardRequest](./Board#updateboardrequest)
+
+* **board_id** (string)  `Required` 
+
+
+* **name** (string) 
+
+
+* **tags** (Struct) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "board_id": "board-123456789012",
+   "name": "system notice",
+   "tags": {"b": "c"}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[BoardInfo](#BOARDINFO)
+* **board_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **categories** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "board_id": "board-123456789012",
+     "name": "notice",
+     "categories": [
+         "admin",
+         "developer",
+         "devops"
+     ],
+     "tags": {
+         "a": "b"
+     },
+     "created_at": "2022-01-01T06:47:27.759Z"
+ }
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 <br>
 
 ### set_categories
+
+Adds or changes `categories` of a specific Board with SYSTEM permission. A change in `categories` of a Board does not affect the `category` of the child Posts.
+
+
 
 > **POST** /board/v1/board/set-categories
 >
@@ -78,17 +213,79 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 
 
 
+
  {{< tabs " set_categories " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[SetBoardCategoriesRequest](./Board#setboardcategoriesrequest)
+
+* **board_id** (string)  `Required` 
+
+
+* **categories** (string)  `Required` 
+
+  *+optioanl*
+
+
+
+
+
+{{< highlight json >}}
+{
+   "board_id": "board-123456789012",
+   "categories": ["Developer", "SRE", "Devops"]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[BoardInfo](#BOARDINFO)
+* **board_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **categories** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "board_id": "board-123456789012",
+     "name": "notice",
+     "categories": [
+         "admin",
+         "developer",
+         "devops"
+     ],
+     "tags": {
+         "a": "b"
+     },
+     "created_at": "2022-01-01T06:47:27.759Z"
+ }
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 <br>
 
 ### delete
+
+Deletes a specific Board with `SYSTEM` permission. You can delete a Board regardless of the presence of Posts created under the Board.
+
+
 
 > **POST** /board/v1/board/delete
 >
@@ -96,17 +293,41 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 
 
 
+
  {{< tabs " delete " >}}
 
+ {{< tab "Request Example" >}}
+
+
+
+[BoardRequest](./Board#boardrequest)
+
+* **board_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "board_id": "board-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 
 {{< /tabs >}}
 
+
     
 <br>
 
 ### get
+
+Gets a specific Board. You must specify the `board_id` of the Board to get. Prints detailed information about the Board, including `name`, `categories`.
+
+
 
 > **POST** /board/v1/board/get
 >
@@ -114,17 +335,76 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 
 
 
+
  {{< tabs " get " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[GetBoardRequest](./Board#getboardrequest)
+
+* **board_id** (string)  `Required` 
+
+
+* **only** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "board_id": "board-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[BoardInfo](#BOARDINFO)
+* **board_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **categories** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "board_id": "board-123456789012",
+     "name": "notice",
+     "categories": [
+         "admin",
+         "developer",
+         "devops"
+     ],
+     "tags": {
+         "a": "b"
+     },
+     "created_at": "2022-01-01T06:47:27.759Z"
+ }
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 <br>
 
 ### list
+
+Gets a list of all Boards. You can use a query to get a filtered list of Boards.
+
+
 
 > **POST** /board/v1/board/list
 >
@@ -132,17 +412,86 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 
 
 
+
  {{< tabs " list " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[BoardQuery](./Board#boardquery)
+
+* **board_id** (string) 
+
+
+* **name** (string) 
+
+
+* **query** (Query) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[BoardsInfo](#BOARDSINFO)
+* **results** (BoardInfo)  `Required` 
+
+* **total_count** (int32)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "results": [
+         {
+             "board_id": "board-123456789012",
+             "name": "dev-notice",
+             "categories": [
+                 "flower",
+                 "school",
+                 "spaceone"
+             ],
+             "tags": {
+                 "b": "c"
+             },
+             "created_at": "2022-01-01T05:16:08.549Z"
+         },
+         {
+             "board_id": "board-987654321098",
+             "name": "notice",
+             "tags": {
+                 "a": "b"
+             },
+             "created_at": "2022-01-01T05:24:19.758Z"
+         }
+     ],
+     "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /board/v1/board/stat
 >
@@ -150,12 +499,7 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 
@@ -185,33 +529,23 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
     <br>
 
 ### BoardQuery
-* **board_id** (string)  `Required` 
-
-  *is_required: false*
+* **board_id** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **name** (string) 
 
     
-* **query** (Query)  `Required` 
-
-  *is_required: false*
+* **query** (Query) 
 
     <br>
 
 ### BoardRequest
 * **board_id** (string)  `Required` 
 
-  *is_required: true*
-
     <br>
 
 ### BoardStatQuery
 * **query** (StatisticsQuery)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -226,57 +560,39 @@ desc: A Board is a bulletin-board-type resource for posting notices and announce
 ### CreateBoardRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
+    
+* **categories** (string) 
 
     
-* **categories** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
+* **tags** (Struct) 
 
     <br>
 
 ### GetBoardRequest
 * **board_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### SetBoardCategoriesRequest
 * **board_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **categories** (string)  `Required` 
 
-  *is_required: false*
+  *+optioanl*
 
     <br>
 
 ### UpdateBoardRequest
 * **board_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
+* **tags** (Struct) 
 
     <br>

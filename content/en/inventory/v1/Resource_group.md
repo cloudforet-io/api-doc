@@ -16,6 +16,9 @@ desc: A ResourceGroup is a group of `resource`s from various `provider`s.
 ## Resource_group
 
 
+
+
+
 **ResourceGroup Methods:**
 
 
@@ -35,23 +38,135 @@ desc: A ResourceGroup is a group of `resource`s from various `provider`s.
 
 ### create
 
+desc: Creates a new ResourceGroup. You can integrate `resource`s from different `provider`s by specifying the cloud resources to be grouped in the `resources` parameter.
+request_example: >-
+{
+"name": "azure-group-1",
+"resources": [
+{
+"resource_type": "inventory.Server?provider=azure&cloud_service_group=Compute&cloud_service_type=VirtualMachine",
+"filter": [
+{"o": "eq", "k": "provider", "v": "azure"},
+{"o": "eq", "k": "cloud_service_group", "v": "Compute"},
+{"o": "eq", "k": "cloud_service_type", "v": "VirtualMachine"}
+]
+}
+],
+"options": {
+"raw_filter": []
+},
+"tags": {
+"a": "b"
+}
+}
+response_example: >-
+{
+"resource_group_id": "rsc-grp-7d46a1fc7738",
+"name": "azure-group-1",
+"resources": [
+{
+"resource_type": "inventory.Server?provider=azure&cloud_service_group=Compute&cloud_service_type=VirtualMachine",
+"filter": [
+{
+"k": "provider",
+"v": "azure",
+"o": "eq"
+},
+{
+"k": "cloud_service_group",
+"v": "Compute",
+"o": "eq"
+},
+{
+"k": "cloud_service_type",
+"v": "VirtualMachine",
+"o": "eq"
+}
+]
+}
+],
+"options": {
+"raw_filter": []
+},
+"tags": {
+"a": "b"
+},
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-23T01:50:33.152Z"
+}
+
+
+
 > **POST** /inventory/v1/resource-group/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+desc: Updates a specific ResourceGroup. You can make changes in ResourceGroup settings, including `name`, `tags`, and grouped resources in the ResourceGroup.
+request_example: >-
+{
+"resource_group_id": "rsc-grp-7d46a1fc7738",
+"name": "azure-grp-test2",
+"resources": [
+{
+"resource_type": "inventory.Server?provider=azure&cloud_service_group=Compute&cloud_service_type=VirtualMachine",
+"filter": [
+{"k": "provider", "v": "azure", "o": "eq"},
+{"o": "eq", "k": "cloud_service_group", "v": "Compute"},
+{"v": "VirtualMachine", "k": "cloud_service_type", "o": "eq"}
+]
+}
+],
+"options": {},
+"tags": {
+"b": "c"
+}
+}
+response_example: >-
+{
+"resource_group_id": "rsc-grp-7d46a1fc7738",
+"name": "azure-grp-test2",
+"resources": [
+{
+"resource_type": "inventory.Server?provider=azure&cloud_service_group=Compute&cloud_service_type=VirtualMachine",
+"filter": [
+{
+"k": "provider",
+"v": "azure",
+"o": "eq"
+},
+{
+"k": "cloud_service_group",
+"v": "Compute",
+"o": "eq"
+},
+{
+"k": "cloud_service_type",
+"v": "VirtualMachine",
+"o": "eq"
+}
+]
+}
+],
+"options": {
+"raw_filter": []
+},
+"tags": {
+"a": "b"
+},
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-23T01:50:33.152Z"
+}
+
+
 
 > **POST** /inventory/v1/resource-group/update
 >
@@ -59,17 +174,20 @@ desc: A ResourceGroup is a group of `resource`s from various `provider`s.
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+desc: Deletes a specific ResourceGroup. You must specify the `resource_group_id` of the ResourceGroup to delete.
+request_example: >-
+{
+"resource_group_id": "rsc-grp-aa3c4ca465b2"
+}
+
+
 
 > **POST** /inventory/v1/resource-group/delete
 >
@@ -77,17 +195,55 @@ desc: A ResourceGroup is a group of `resource`s from various `provider`s.
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+desc: Gets a specific ResourceGroup. Prints detailed information about the ResourceGroup, including the information of the grouped cloud resources.
+request_example: >-
+{
+"resource_group_id": "rsc-grp-aa3c4ca465b2"
+}
+response_example: >-
+{
+"resource_group_id": "rsc-grp-aa3c4ca465b2",
+"name": "stset",
+"resources": [
+{
+"resource_type": "inventory.Server?provider=aws&cloud_service_group=EC2&cloud_service_type=Instance",
+"filter": [
+{
+"k": "provider",
+"o": "eq",
+"v": "aws"
+},
+{
+"v": "EC2",
+"k": "cloud_service_group",
+"o": "eq"
+},
+{
+"o": "eq",
+"k": "cloud_service_type",
+"v": "Instance"
+}
+],
+"keyword": "test"
+}
+],
+"options": {
+"raw_filter": []
+},
+"tags": {},
+"project_id": "project-18655561c535",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2021-06-01T10:23:20.537Z"
+}
+
+
 
 > **POST** /inventory/v1/resource-group/get
 >
@@ -95,17 +251,108 @@ desc: A ResourceGroup is a group of `resource`s from various `provider`s.
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+desc: Gets a list of all ResourceGroups. You can use a query to get a filtered list of ResourceGroups.
+request_example: >-
+{
+"query": {
+"filter": [
+{
+"key": "name",
+"value": [
+"azure-vmss-group",
+"stset"
+],
+"operator": "in"
+}
+]
+}
+}
+response_example: >-
+{
+"results": [
+{
+"resource_group_id": "rsc-grp-4c86e071e0f0",
+"name": "azure-vmss-group",
+"resources": [
+{
+"resource_type": "inventory.CloudService?provider=azure&cloud_service_group=Compute&cloud_service_type=VmScaleSet",
+"filter": [
+{
+"k": "provider",
+"v": "azure",
+"o": "eq"
+},
+{
+"v": "Compute",
+"k": "cloud_service_group",
+"o": "eq"
+},
+{
+"k": "cloud_service_type",
+"v": "VmScaleSet",
+"o": "eq"
+}
+]
+}
+],
+"options": {
+"raw_filter": []
+},
+"tags": {},
+"project_id": "project-9074eea97d7e",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2021-04-23T03:23:40.037Z"
+},
+{
+"resource_group_id": "rsc-grp-aa3c4ca465b2",
+"name": "stset",
+"resources": [
+{
+"resource_type": "inventory.Server?provider=aws&cloud_service_group=EC2&cloud_service_type=Instance",
+"filter": [
+{
+"k": "provider",
+"v": "aws",
+"o": "eq"
+},
+{
+"v": "EC2",
+"k": "cloud_service_group",
+"o": "eq"
+},
+{
+"k": "cloud_service_type",
+"v": "Instance",
+"o": "eq"
+}
+],
+"keyword": "test"
+}
+],
+"options": {
+"raw_filter": [
+[
+"test"
+]
+]
+},
+"tags": {},
+"project_id": "project-18655561c535",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2021-06-01T10:23:20.537Z"
+}
+],
+"total_count": 2
+}
+
+
 
 > **POST** /inventory/v1/resource-group/list
 >
@@ -113,17 +360,16 @@ desc: A ResourceGroup is a group of `resource`s from various `provider`s.
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /inventory/v1/resource-group/stat
 >
@@ -131,12 +377,7 @@ desc: A ResourceGroup is a group of `resource`s from various `provider`s.
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Remote_repository
 
 
+
+
+
 **RemoteRepository Methods:**
 
 
@@ -31,23 +34,26 @@ bookFlatSection: true
 
 ### get
 
+
+
+
+
 > **POST** /repository/v2/remote-repository/get
 >
 
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /repository/v2/remote-repository/list
 >
@@ -55,12 +61,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

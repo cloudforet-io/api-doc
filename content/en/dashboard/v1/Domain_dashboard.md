@@ -16,6 +16,9 @@ desc: description of dashboard
 ## Domain_dashboard
 
 
+
+
+
 **DomainDashboard Methods:**
 
 
@@ -39,23 +42,26 @@ desc: description of dashboard
 
 ### create
 
+
+
+
+
 > **POST** /dashboard/v1/domain-dashboards
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **PUT** /dashboard/v1/domain-dashboard/{domain_dashboard_id}
 >
@@ -63,17 +69,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **DELETE** /dashboard/v1/domain-dashboard/{domain_dashboard_id}
 >
@@ -81,17 +86,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **GET** /dashboard/v1/domain-dashboard/{domain_dashboard_id}
 >
@@ -99,17 +103,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete_version
+
+
+
+
 
 > **DELETE** /dashboard/v1/domain-dashboard/{domain_dashboard_id}/version/{version}
 >
@@ -117,17 +120,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " delete_version " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### revert_version
+
+
+
+
 
 > **POST** /dashboard/v1/domain-dashboard/{domain_dashboard_id}/version/{version}/revert
 >
@@ -135,17 +137,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " revert_version " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get_version
+
+
+
+
 
 > **GET** /dashboard/v1/domain-dashboard/{domain_dashboard_id}/version/{version}
 >
@@ -153,17 +154,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " get_version " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list_versions
+
+
+
+
 
 > **GET** /dashboard/v1/domain-dashboard/{domain_dashboard_id}/versions
 >
@@ -171,17 +171,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " list_versions " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **GET** /dashboard/v1/domain-dashboards
 >
@@ -189,17 +188,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /dashboard/v1/domain-dashboards/stat
 >
@@ -207,12 +205,7 @@ desc: description of dashboard
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

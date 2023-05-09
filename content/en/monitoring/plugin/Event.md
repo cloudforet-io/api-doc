@@ -16,6 +16,9 @@ desc: An Event is data created by an external monitoring system and collected by
 ## Event
 
 
+
+
+
 **Event Methods:**
 
 
@@ -30,15 +33,14 @@ desc: An Event is data created by an external monitoring system and collected by
 
 ### parse
 
+desc: Parses a specific Event resource and transforms the resource from external data collected to data available in Cloudforet internally. The `parse` method standardizes all different data from external monitoring systems.
 
 
 
- {{< tabs " parse " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 

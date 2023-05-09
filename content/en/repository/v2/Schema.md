@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Schema
 
 
+
+
+
 **Schema Methods:**
 
 
@@ -36,23 +39,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /repository/v2/schema/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /repository/v2/schema/update
 >
@@ -60,17 +66,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### sync
+
+
+
+
 
 > **POST** /repository/v2/schema/sync
 >
@@ -78,17 +83,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " sync " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /repository/v2/schema/delete
 >
@@ -96,17 +100,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /repository/v2/schema/get
 >
@@ -114,17 +117,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /repository/v2/schema/list
 >
@@ -132,17 +134,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /repository/v2/schema/stat
 >
@@ -150,12 +151,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

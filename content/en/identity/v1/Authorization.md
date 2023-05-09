@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Authorization
 
 
+
+
+
 **Authorization Methods:**
 
 
@@ -30,18 +33,17 @@ bookFlatSection: true
 
 ### verify
 
+
+
+
+
 > **POST** /identity/v1/authorization/verify
 >
 
 
 
 
- {{< tabs " verify " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

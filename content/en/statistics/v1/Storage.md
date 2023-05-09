@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Storage
 
 
+
+
+
 **Storage Methods:**
 
 
@@ -39,23 +42,26 @@ bookFlatSection: true
 
 ### register
 
+
+
+
+
 > **POST** /statistics/v1/storage/register
 >
 
 
 
 
- {{< tabs " register " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /statistics/v1/storage/update
 >
@@ -63,17 +69,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update_plugin
+
+
+
+
 
 > **POST** /statistics/v1/storage/update-plugin
 >
@@ -81,17 +86,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update_plugin " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### verify_plugin
+
+
+
+
 
 > **POST** /statistics/v1/storage/verify-plugin
 >
@@ -99,17 +103,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " verify_plugin " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### enable
+
+
+
+
 
 > **POST** /statistics/v1/storage/enable
 >
@@ -117,17 +120,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " enable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### disable
+
+
+
+
 
 > **POST** /statistics/v1/storage/disable
 >
@@ -135,17 +137,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " disable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### deregister
+
+
+
+
 
 > **POST** /statistics/v1/storage/deregister
 >
@@ -153,17 +154,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " deregister " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /statistics/v1/storage/get
 >
@@ -171,17 +171,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /statistics/v1/storage/list
 >
@@ -189,17 +188,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /statistics/v1/storage/stat
 >
@@ -207,12 +205,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

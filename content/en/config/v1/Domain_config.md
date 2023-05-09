@@ -16,6 +16,9 @@ desc: DomainConfig API which configure environments for domain
 ## Domain_config
 
 
+
+
+
 **DomainConfig Methods:**
 
 
@@ -36,23 +39,26 @@ desc: DomainConfig API which configure environments for domain
 
 ### create
 
+
+
+
+
 > **POST** /config/v1/domain-config/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /config/v1/domain-config/update
 >
@@ -60,17 +66,16 @@ desc: DomainConfig API which configure environments for domain
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### set
+
+
+
+
 
 > **POST** /config/v1/domain-config/set
 >
@@ -78,17 +83,16 @@ desc: DomainConfig API which configure environments for domain
 
 
 
- {{< tabs " set " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /config/v1/domain-config/delete
 >
@@ -96,17 +100,16 @@ desc: DomainConfig API which configure environments for domain
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /config/v1/domain-config/get
 >
@@ -114,17 +117,16 @@ desc: DomainConfig API which configure environments for domain
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /config/v1/domain-config/list
 >
@@ -132,17 +134,16 @@ desc: DomainConfig API which configure environments for domain
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /config/v1/domain-config/stat
 >
@@ -150,12 +151,7 @@ desc: DomainConfig API which configure environments for domain
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

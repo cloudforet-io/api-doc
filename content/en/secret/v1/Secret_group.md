@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Secret_group
 
 
+
+
+
 **SecretGroup Methods:**
 
 
@@ -37,23 +40,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /secret/v1/secret-group/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /secret/v1/secret-group/update
 >
@@ -61,17 +67,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### add_secret
+
+
+
+
 
 > **POST** /secret/v1/secret-group/add-secret
 >
@@ -79,17 +84,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " add_secret " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### remove_secret
+
+
+
+
 
 > **POST** /secret/v1/secret-group/remove-secret
 >
@@ -97,17 +101,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " remove_secret " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /secret/v1/secret-group/delete
 >
@@ -115,17 +118,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /secret/v1/secret-group/get
 >
@@ -133,17 +135,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /secret/v1/secret-group/list
 >
@@ -151,17 +152,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /secret/v1/secret-group/stat
 >
@@ -169,12 +169,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

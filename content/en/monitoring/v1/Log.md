@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Log
 
 
+
+
+
 **Log Methods:**
 
 
@@ -30,18 +33,17 @@ bookFlatSection: true
 
 ### list
 
+
+
+
+
 > **POST** /monitoring/v1/log/list
 >
 
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

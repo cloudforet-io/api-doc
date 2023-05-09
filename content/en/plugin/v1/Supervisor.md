@@ -16,6 +16,9 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 ## Supervisor
 
 
+
+
+
 **Supervisor Methods:**
 
 
@@ -40,23 +43,58 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 ### publish
 
+desc: Creates a new Supervisor. Only Users with the `MANAGED` permission can set the Supervisor `public`. The Supervisor manages the lifecycle of plugin instances by the Supervisor's state. When a Supervisor is created, the state of the resource is `PENDING`. If the state remains the same for 5 minutes, the state is changed to `DISCONNECTED`.
+note: ''
+request_example: >-
+{
+"name": "test",
+"hostname": "dev-test2",
+"secret_key": "xxxxx",
+"tags": {
+"a": "b"
+}
+}
+response_example: >-
+{
+"supervisor_id": "supervisor-525982f2ae9a",
+"name": "test",
+"hostname": "dev-test2",
+"state": "ENABLED",
+"domain_id": "domain-1c5a6b8181ad",
+"tags": {
+"a": "b"
+},
+"labels": {},
+"created_at": "2022-01-15T05:42:02.999Z"
+}
+
+
+
 > **POST** /plugin/v1/supervisor/publish
 >
 
 
 
 
- {{< tabs " publish " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### register
+
+desc: Registers a specific Supervisor. You must specify the `supervisor_id` of the Supervisor to register. The `state` of the Supervisor changes from `PENDING` to `ENABLED`.
+note: ''
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
+
+
 
 > **POST** /plugin/v1/supervisor/register
 >
@@ -64,17 +102,46 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " register " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+desc: Updates a specific Supervisor. You can make changes in Supervisor settings, including `labels`, `tags`, and the `bool` type parameter `is_public`.
+note: ''
+request_example: >-
+{
+"supervisor_id": "supervisor-525982f2ae9a",
+"is_public": true,
+"priority": 10,
+"labels": {
+"a": "b"
+},
+"tags": {
+"c": "d"
+},
+"domain_id": "domain-1c5a6b8181ad"
+}
+response_example: >-
+{
+"supervisor_id": "supervisor-525982f2ae9a",
+"name": "test",
+"hostname": "dev-test2",
+"state": "ENABLED",
+"is_public": true,
+"domain_id": "domain-1c5a6b8181ad",
+"tags": {
+"a": "b"
+},
+"labels": {
+"c": "d"
+},
+"created_at": "2022-06-15T05:42:02.999Z"
+}
+
+
 
 > **POST** /plugin/v1/supervisor/update
 >
@@ -82,17 +149,21 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### deregister
+
+desc: Deregisters and deletes a specific Supervisor. You must specify the `supervisor_id` of the Supervisor to deregister.
+note: ''
+request_example: >-
+{
+"supervisor_id": "supervisor-d73011256d55"
+}
+
+
 
 > **POST** /plugin/v1/supervisor/deregister
 >
@@ -100,17 +171,34 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " deregister " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### enable
+
+desc: Enables a specific Supervisor. By changing the `state` parameter to `ENABLED`, the Supervisor can deploy or delete the `pod` of the plugin instance.
+note: ''
+request_example: >-
+{
+"supervisor_id": "supervisor-d73011256d55"
+}
+response_example: >-
+{
+"supervisor_id": "supervisor-d73011256d55",
+"name": "test-in-plugins",
+"hostname": "dev-test3",
+"state": "ENABLED",
+"domain_id": "domain-1c5a6b8181ad",
+"tags": {
+"a": "b"
+},
+"labels": {},
+"created_at": "2022-06-15T06:27:51.904Z"
+}
+
+
 
 > **POST** /plugin/v1/supervisor/enable
 >
@@ -118,17 +206,34 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " enable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### disable
+
+desc: Disables a specific Supervisor. By changing the `state` parameter to `DISABLED`, the Supervisor cannot deploy or delete the `pod` of the plugin instance.
+note: ''
+request_example: >-
+{
+"supervisor_id": "supervisor-d73011256d55"
+}
+response_example: >-
+{
+"supervisor_id": "supervisor-d73011256d55",
+"name": "test-in-plugins",
+"hostname": "dev-test3",
+"state": "DISABLED",
+"domain_id": "domain-1c5a6b8181ad",
+"tags": {
+"a": "b"
+},
+"labels": {},
+"created_at": "2022-06-15T06:27:51.904Z"
+}
+
+
 
 > **POST** /plugin/v1/supervisor/disable
 >
@@ -136,17 +241,27 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " disable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### recover_plugin
+
+desc: Recovers a specific plugin instance in a specific Supervisor. Changes the `state` of the Supervisor to `RE-PROVISIONING`.
+note: ''
+request_example: >-
+{
+"supervisor_id": "supervisor-a4c287cba676",
+"plugin_id": "plugin-api-direct-mon-webhook",
+"version": "1.1.0"
+}
+response_example: >-
+{
+
+}
+
+
 
 > **POST** /plugin/v1/supervisor/recover-plugin
 >
@@ -154,17 +269,16 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " recover_plugin " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /plugin/v1/supervisor/get
 >
@@ -172,17 +286,49 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+desc: Gets a list of all Supervisors. You can use a query to get a filtered list of Supervisors.
+note: ''
+request_example: >-
+{
+"query": {}
+}
+response_example: >-
+{
+"results": [
+{
+"supervisor_id": "supervisor-3a091f899539",
+"name": "root",
+"hostname": "dev-supervisor.svc.cluster.local",
+"state": "ENABLED",
+"is_public": true,
+"domain_id": "domain-1c5a6b8181ad",
+"labels": {},
+"created_at": "2020-05-12T00:24:48.250Z"
+},
+{
+"supervisor_id": "supervisor-a4c287cba676",
+"name": "test",
+"hostname": "dev-test",
+"state": "ENABLED",
+"domain_id": "domain-1c5a6b8181ad",
+"tags": {
+"a": "b"
+},
+"labels": {},
+"created_at": "2022-06-15T05:39:15.886Z"
+}
+],
+"total_count": 2
+}
+
+
 
 > **POST** /plugin/v1/supervisor/list
 >
@@ -190,17 +336,16 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /plugin/v1/supervisor/stat
 >
@@ -208,17 +353,51 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list_plugins
+
+desc: Gets a list of all plugin instances regardless of Supervisors. Prints detailed information about the plugin instances, including `version`, `state`, and the relevant Supervisor.
+note: ''
+request_example: >-
+{
+"query": {}
+}
+response_example: >-
+{
+"results": [
+{
+"plugin_id": "plugin-openstack-inven-collector",
+"version": "0.4.1.20220609.122832",
+"state": "ACTIVE",
+"endpoint": "grpc://plugin-openstack-inven-collector-vbnnsoszfjsneiqz.dev-supervisor.svc.cluster.local:50051",
+"supervisor_id": "supervisor-3a091f899539",
+"supervisor_name": "root",
+"managed": true,
+"endpoints": [
+"grpc://172.16.16.234:50051"
+]
+},
+{
+"plugin_id": "plugin-zabbix-mon-webhook",
+"version": "1.0",
+"state": "ACTIVE",
+"endpoint": "grpc://plugin-zabbix-mon-webhook-dgqqfqsqidieeuk.dev-supervisor.svc.cluster.local:50051",
+"supervisor_id": "supervisor-3a091f899539",
+"supervisor_name": "root",
+"managed": true,
+"endpoints": [
+"grpc://172.16.16.130:50051"
+]
+}
+],
+"total_count": 2
+}
+
+
 
 > **POST** /plugin/v1/supervisor/list-plugins
 >
@@ -226,12 +405,7 @@ desc: A Supervisor is a resource managing the lifecycle of the plugin instances 
 
 
 
- {{< tabs " list_plugins " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

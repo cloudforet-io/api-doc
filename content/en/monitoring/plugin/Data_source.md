@@ -16,6 +16,9 @@ desc: A DataSource is a plugin instance receiving Metric and Log data from cloud
 ## Data_source
 
 
+
+
+
 **DataSource Methods:**
 
 
@@ -31,30 +34,28 @@ desc: A DataSource is a plugin instance receiving Metric and Log data from cloud
 
 ### init
 
+desc: Initializes a specific DataSource. During initialization, the DataSource information to be passed to the DataSource user is delivered as `metadata`. DataSource information includes its name and version.
 
 
 
- {{< tabs " init " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 <br>
 
 ### verify
 
+desc: Verifies a specific DataSource. You must specify the parameter `secret_data`, encrypted account data of the DataSource to validate.
 
 
 
- {{< tabs " verify " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 

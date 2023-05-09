@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Server_info
 
 
+
+
+
 **ServerInfo Methods:**
 
 
@@ -33,12 +36,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " get_version " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 

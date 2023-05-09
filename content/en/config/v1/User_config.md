@@ -16,6 +16,9 @@ desc: UserConfig API which configure environments for user
 ## User_config
 
 
+
+
+
 **UserConfig Methods:**
 
 
@@ -36,23 +39,26 @@ desc: UserConfig API which configure environments for user
 
 ### create
 
+
+
+
+
 > **POST** /config/v1/user-config/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /config/v1/user-config/update
 >
@@ -60,17 +66,16 @@ desc: UserConfig API which configure environments for user
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### set
+
+
+
+
 
 > **POST** /config/v1/user-config/set
 >
@@ -78,17 +83,16 @@ desc: UserConfig API which configure environments for user
 
 
 
- {{< tabs " set " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /config/v1/user-config/delete
 >
@@ -96,17 +100,16 @@ desc: UserConfig API which configure environments for user
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /config/v1/user-config/get
 >
@@ -114,17 +117,16 @@ desc: UserConfig API which configure environments for user
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /config/v1/user-config/list
 >
@@ -132,17 +134,16 @@ desc: UserConfig API which configure environments for user
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /config/v1/user-config/stat
 >
@@ -150,12 +151,7 @@ desc: UserConfig API which configure environments for user
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

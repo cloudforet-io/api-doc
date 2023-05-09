@@ -16,6 +16,9 @@ desc: A Repository is a repository storing data of deployable plugins.
 ## Repository
 
 
+
+
+
 **Repository Methods:**
 
 
@@ -35,23 +38,53 @@ desc: A Repository is a repository storing data of deployable plugins.
 
 ### register
 
+desc: Registers a Repository. The parameter `name` can only include alphabets, numbers, and hyphens(-). The parameter `repository_type` can be either `local` or `remote`. The parameter `endpoint` is needed if the `repository_type` is `remote`.
+request_example: >-
+{
+"name": "Local",
+"repository_type": "local",
+"endpoint": "grpc+ssl://local-url:443"
+}
+response_example: >-
+{
+"repository_id": "repo-123456789012",
+"name": "Local",
+"repository_type": "local",
+"endpoint": "grpc+ssl://local-url:443",
+"created_at": "2022-01-01T02:27:02.924Z"
+}
+
+
+
 > **POST** /repository/v1/repository/register
 >
 
 
 
 
- {{< tabs " register " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+desc: Updates a specific Repository registered. You must specify the `repository_id` of the Repository to update. You can make changes in Repository settings, including `name`.
+request_example: >-
+{
+"repository_id": "repo-123456789012",
+"name": "Local-repo"
+}
+response_example: >-
+{
+"repository_id": "repo-123456789012",
+"name": "Local-repo",
+"repository_type": "local",
+"endpoint": "grpc+ssl://local-url:443",
+"created_at": "2022-01-01T02:27:02.924Z"
+}
+
+
 
 > **POST** /repository/v1/repository/update
 >
@@ -59,17 +92,20 @@ desc: A Repository is a repository storing data of deployable plugins.
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### deregister
+
+desc: Deregisters and deletes a specific Repository. You must specify the `repository_id` of the Repository to deregister.
+request_example: >-
+{
+"repository_id": "repo-123456789012"
+}
+
+
 
 > **POST** /repository/v1/repository/deregister
 >
@@ -77,17 +113,28 @@ desc: A Repository is a repository storing data of deployable plugins.
 
 
 
- {{< tabs " deregister " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+desc: Gets a specific Repository. Prints detailed information about the Repository, including  `name`, `repository_type`, and `endpoint`.
+request_example: >-
+{
+"repository_id": "repo-123456789012"
+}
+response_example: >-
+{
+"repository_id": "repo-123456789012",
+"name": "Local-repo",
+"repository_type": "local",
+"endpoint": "grpc+ssl://local-url:443",
+"created_at": "2022-01-01T02:26:29.081Z"
+}
+
+
 
 > **POST** /repository/v1/repository/get
 >
@@ -95,17 +142,34 @@ desc: A Repository is a repository storing data of deployable plugins.
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+desc: Gets a list of all Repositories regardless of `domain`. You can use a query to get a filtered list of Repositories.
+request_example: >-
+{
+"query": {},
+"repository_id": "repo-123456789012"
+}
+response_example: >-
+{
+"results": [
+{
+"repository_id": "repo-123456789012",
+"name": "Local-repo",
+"repository_type": "local",
+"endpoint": "grpc+ssl://local-url:443",
+"created_at": "2022-01-01T02:26:29.081Z"
+}
+],
+"total_count": 1
+}
+
+
 
 > **POST** /repository/v1/repository/list
 >
@@ -113,17 +177,16 @@ desc: A Repository is a repository storing data of deployable plugins.
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /repository/v1/repository/stat
 >
@@ -131,12 +194,7 @@ desc: A Repository is a repository storing data of deployable plugins.
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

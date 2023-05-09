@@ -16,6 +16,9 @@ desc: A CloudService is data of an `instance` of a `resource`. A CloudService fo
 ## Cloud_service
 
 
+
+
+
 **CloudService Methods:**
 
 
@@ -36,23 +39,210 @@ desc: A CloudService is data of an `instance` of a `resource`. A CloudService fo
 
 ### create
 
+desc: Creates a new CloudService. A CloudService instance is created based on data including the `resource`'s attribute values. When creating, the classification information defined by CloudServiceType is also needed. The created CloudService has collection information which is the collection history for the `resource` by plugin.
+request_example: >-
+{
+"cloud_service_type": "Key",
+"provider": "aws",
+"cloud_service_group": "KMS",
+"name": "cloud_service_test",
+"account": "251340636361",
+"launched_at": "2020-08-03T15:00:54.000Z",
+"ip_addresses": [],
+"data": {
+"alias_arn": null,
+"origin": "AWS_KMS",
+"cloudwatch": {
+"region_name": "ap-northeast-1",
+"namespace": "AWS/KMS",
+"dimensions": [
+{
+"Value": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"Name": "KeyId"
+}
+]
+},
+"aws_account_id": "251340636361",
+"creation_date": "2020-07-09T09:39:03.097000+0000",
+"encryption_algorithms": [
+"SYMMETRIC_DEFAULT"
+],
+"key_usage": "ENCRYPT_DECRYPT",
+"key_id": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_type_path": "defaultKeys",
+"key_rotated": false,
+"description": "Default master key that protects my Secrets Manager data when no other key is defined",
+"key_state": "Enabled",
+"customer_master_key_spec": "SYMMETRIC_DEFAULT",
+"enabled": true,
+"arn": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_manager": "AWS"
+},
+"metadata": {},
+"reference": {
+"resource_id": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"external_link": "https://console.aws.amazon.com/kms/home?region=ap-northeast-1#/kms/defaultKeys/0drda5e1-c40f-45d7-a647-xxxxxxx/"
+},
+"tags": {
+"a": "b"
+},
+"region_code": "ap-northeast-1"
+}
+response_example: >-
+{
+"cloud_service_id": "cloud-svc-c00f38a173e1",
+"name": "cloud_service_test",
+"state": "ACTIVE",
+"account": "251340636361",
+"cloud_service_type": "Key",
+"cloud_service_group": "KMS",
+"provider": "aws",
+"data": {
+"alias_arn": null,
+"origin": "AWS_KMS",
+"cloudwatch": {
+"region_name": "ap-northeast-1",
+"namespace": "AWS/KMS",
+"dimensions": [
+{
+"Value": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"Name": "KeyId"
+}
+]
+},
+"aws_account_id": "251340636361",
+"creation_date": "2020-07-09T09:39:03.097000+0000",
+"encryption_algorithms": [
+"SYMMETRIC_DEFAULT"
+],
+"key_usage": "ENCRYPT_DECRYPT",
+"key_id": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_type_path": "defaultKeys",
+"key_rotated": false,
+"description": "Default master key that protects my Secrets Manager data when no other key is defined",
+"key_state": "Enabled",
+"customer_master_key_spec": "SYMMETRIC_DEFAULT",
+"enabled": true,
+"arn": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_manager": "AWS"
+},
+"metadata": {
+"manual": {}
+},
+"reference": {
+"resource_id": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"external_link": "https://console.aws.amazon.com/kms/home?region=ap-northeast-1#/kms/defaultKeys/0drda5e1-c40f-45d7-a647-xxxxxxx/"
+},
+"tags": {
+"a": "b"
+},
+"collection_info": {
+"collectors": [],
+"service_accounts": [],
+"secrets": []
+},
+"ip_addresses": [],
+"region_code": "ap-northeast-1",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-22T06:38:48.989Z",
+"updated_at": "2022-06-22T06:38:48.989Z",
+"launched_at": "2020-08-03T15:00:54.000Z"
+}
+
+
+
 > **POST** /inventory/v1/cloud-service/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+desc: Updates a specific CloudService. You can make changes in CloudService settings, except for the classification system of CloudService and the information about the `resource` attribute value.
+request_example: >-
+{
+"cloud_service_id": "cloud-svc-c00f38a173e1",
+"name": "cloud_service_test2",
+"ip_addresses": [
+"1.1.1.1",
+"2.2.2.2"
+],
+"tags": {
+"description": "spaceone"
+},
+"region_code": "ap-northeast-2"
+}
+response_example: >-
+{
+"cloud_service_id": "cloud-svc-c00f38a173e1",
+"name": "cloud_service_test2",
+"state": "ACTIVE",
+"account": "251340636361",
+"cloud_service_type": "Key",
+"cloud_service_group": "KMS",
+"provider": "aws",
+"data": {
+"alias_arn": null,
+"origin": "AWS_KMS",
+"cloudwatch": {
+"region_name": "ap-northeast-1",
+"namespace": "AWS/KMS",
+"dimensions": [
+{
+"Value": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"Name": "KeyId"
+}
+]
+},
+"aws_account_id": "251340636361",
+"creation_date": "2020-07-09T09:39:03.097000+0000",
+"encryption_algorithms": [
+"SYMMETRIC_DEFAULT"
+],
+"key_usage": "ENCRYPT_DECRYPT",
+"key_id": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_type_path": "defaultKeys",
+"key_rotated": false,
+"description": "Default master key that protects my Secrets Manager data when no other key is defined",
+"key_state": "Enabled",
+"customer_master_key_spec": "SYMMETRIC_DEFAULT",
+"enabled": true,
+"arn": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_manager": "AWS"
+},
+"metadata": {
+"manual": {}
+},
+"reference": {
+"resource_id": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"external_link": "https://console.aws.amazon.com/kms/home?region=ap-northeast-1#/kms/defaultKeys/0drda5e1-c40f-45d7-a647-xxxxxxx/"
+},
+"tags": {
+"description": "spaceone"
+},
+"collection_info": {
+"collectors": [],
+"service_accounts": [],
+"secrets": []
+},
+"ip_addresses": [
+"1.1.1.1",
+"2.2.2.2"
+],
+"region_code": "ap-northeast-1",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-22T06:38:48.989Z",
+"updated_at": "2022-06-22T06:38:48.989Z",
+"launched_at": "2020-08-03T15:00:54.000Z"
+}
+
+
 
 > **POST** /inventory/v1/cloud-service/update
 >
@@ -60,17 +250,20 @@ desc: A CloudService is data of an `instance` of a `resource`. A CloudService fo
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+desc: Deletes a specific CloudService. You must specify the `cloud_service_id` of the CloudService to delete.
+request_example: >-
+{
+"cloud_service_id": "cloud-svc-fea2b0d32141"
+}
+
+
 
 > **POST** /inventory/v1/cloud-service/delete
 >
@@ -78,17 +271,83 @@ desc: A CloudService is data of an `instance` of a `resource`. A CloudService fo
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+desc: Gets a specific CloudService. Prints detailed information about the CloudService, including its state, classification information, and attribute values.
+request_example: >-
+{
+"cloud_service_id": "cloud-svc-fea2b0d32141"
+}
+response_example: >-
+{
+"cloud_service_id": "cloud-svc-c00f38a173e1",
+"name": "cloud_service_test2",
+"state": "ACTIVE",
+"account": "251340636361",
+"cloud_service_type": "Key",
+"cloud_service_group": "KMS",
+"provider": "aws",
+"data": {
+"alias_arn": null,
+"origin": "AWS_KMS",
+"cloudwatch": {
+"region_name": "ap-northeast-1",
+"namespace": "AWS/KMS",
+"dimensions": [
+{
+"Value": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"Name": "KeyId"
+}
+]
+},
+"aws_account_id": "251340636361",
+"creation_date": "2020-07-09T09:39:03.097000+0000",
+"encryption_algorithms": [
+"SYMMETRIC_DEFAULT"
+],
+"key_usage": "ENCRYPT_DECRYPT",
+"key_id": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_type_path": "defaultKeys",
+"key_rotated": false,
+"description": "Default master key that protects my Secrets Manager data when no other key is defined",
+"key_state": "Enabled",
+"customer_master_key_spec": "SYMMETRIC_DEFAULT",
+"enabled": true,
+"arn": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_manager": "AWS"
+},
+"metadata": {
+"manual": {}
+},
+"reference": {
+"resource_id": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"external_link": "https://console.aws.amazon.com/kms/home?region=ap-northeast-1#/kms/defaultKeys/0drda5e1-c40f-45d7-a647-xxxxxxx/"
+},
+"tags": {
+"description": "spaceone"
+},
+"collection_info": {
+"collectors": [],
+"service_accounts": [],
+"secrets": []
+},
+"ip_addresses": [
+"1.1.1.1",
+"2.2.2.2"
+],
+"region_code": "ap-northeast-1",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-22T06:38:48.989Z",
+"updated_at": "2022-06-22T06:38:48.989Z",
+"launched_at": "2020-08-03T15:00:54.000Z"
+}
+
+
 
 > **POST** /inventory/v1/cloud-service/get
 >
@@ -96,17 +355,94 @@ desc: A CloudService is data of an `instance` of a `resource`. A CloudService fo
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+desc: Gets a list of all CloudServices. You can use a query to get a filtered list of CloudServices.
+request_example: >-
+{
+"query": {
+"filter": [
+{
+"key": "cloud_service_type",
+"value": "Key",
+"operator": "eq"
+}
+]
+}
+}
+response_example: >-
+{
+"results": [{
+"cloud_service_id": "cloud-svc-c00f38a173e1",
+"name": "cloud_service_test2",
+"state": "ACTIVE",
+"account": "251340636361",
+"cloud_service_type": "Key",
+"cloud_service_group": "KMS",
+"provider": "aws",
+"data": {
+"alias_arn": null,
+"origin": "AWS_KMS",
+"cloudwatch": {
+"region_name": "ap-northeast-1",
+"namespace": "AWS/KMS",
+"dimensions": [
+{
+"Value": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"Name": "KeyId"
+}
+]
+},
+"aws_account_id": "251340636361",
+"creation_date": "2020-07-09T09:39:03.097000+0000",
+"encryption_algorithms": [
+"SYMMETRIC_DEFAULT"
+],
+"key_usage": "ENCRYPT_DECRYPT",
+"key_id": "0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_type_path": "defaultKeys",
+"key_rotated": false,
+"description": "Default master key that protects my Secrets Manager data when no other key is defined",
+"key_state": "Enabled",
+"customer_master_key_spec": "SYMMETRIC_DEFAULT",
+"enabled": true,
+"arn": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"key_manager": "AWS"
+},
+"metadata": {
+"manual": {}
+},
+"reference": {
+"resource_id": "arn:aws:kms:ap-northeast-1:251340636361:key/0drda5e1-c40f-45d7-a647-xxxxxxx",
+"external_link": "https://console.aws.amazon.com/kms/home?region=ap-northeast-1#/kms/defaultKeys/0drda5e1-c40f-45d7-a647-xxxxxxx/"
+},
+"tags": {
+"description": "spaceone"
+},
+"collection_info": {
+"collectors": [],
+"service_accounts": [],
+"secrets": []
+},
+"ip_addresses": [
+"1.1.1.1",
+"2.2.2.2"
+],
+"region_code": "ap-northeast-1",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-22T06:38:48.989Z",
+"updated_at": "2022-06-22T06:38:48.989Z",
+"launched_at": "2020-08-03T15:00:54.000Z"
+}],
+"total_count": 1
+}
+
+
 
 > **POST** /inventory/v1/cloud-service/list
 >
@@ -114,17 +450,16 @@ desc: A CloudService is data of an `instance` of a `resource`. A CloudService fo
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### analyze
+
+
+
+
 
 > **POST** /inventory/v1/cloud-service/analyze
 >
@@ -132,17 +467,16 @@ desc: A CloudService is data of an `instance` of a `resource`. A CloudService fo
 
 
 
- {{< tabs " analyze " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /inventory/v1/cloud-service/stat
 >
@@ -150,12 +484,7 @@ desc: A CloudService is data of an `instance` of a `resource`. A CloudService fo
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

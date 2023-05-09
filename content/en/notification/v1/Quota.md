@@ -16,6 +16,9 @@ desc: A Quota is a limit on protocol usage for a day or a month. You can manage 
 ## Quota
 
 
+
+
+
 **Quota Methods:**
 
 
@@ -35,23 +38,62 @@ desc: A Quota is a limit on protocol usage for a day or a month. You can manage 
 
 ### create
 
+desc: Creates a new Quota limiting the use of a selected Protocol for a day or a month. If the parameter `limit` has no value, it will be deemed unlimited. If a Protocol has not set a Quota, the default Quota set in the Config will be applied.
+request_example: >-
+{
+"protocol_id": "protocol-123456789012",
+"limit": {
+"day": 5.0,
+"month": 7.0
+}
+}
+response_example: >-
+{
+"quota_id": "quota-123456789012",
+"protocol_id": "protocol-123456789012",
+"limit": {
+"day": 5.0,
+"month": 7.0
+},
+"domain_id": "domain-123456789012"
+}
+
+
+
 > **POST** /notification/v1/quota/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+desc: Updates a specific Quota. You can make changes in Quota `limit`, managing the use of the Protocol.
+request_example: >-
+{
+"quota_id": "quota-123456789012",
+"limit": {
+"day": 10.0,
+"month": 15.0
+}
+}
+response_example: >-
+{
+"quota_id": "quota-123456789012",
+"protocol_id": "protocol-123456789012",
+"limit": {
+"day": 10.0,
+"month": 15.0
+},
+"domain_id": "domain-123456789012"
+}
+
+
 
 > **POST** /notification/v1/quota/update
 >
@@ -59,17 +101,20 @@ desc: A Quota is a limit on protocol usage for a day or a month. You can manage 
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+desc: Deletes a specific Quota. The default Quota set in the Config will be applied to the Protocol you deleted the Quota of.
+request_example: >-
+{
+"quota_id": "quota-123456789012"
+}
+
+
 
 > **POST** /notification/v1/quota/delete
 >
@@ -77,17 +122,30 @@ desc: A Quota is a limit on protocol usage for a day or a month. You can manage 
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+desc: Gets a specific Quota. Prints detailed information about the Quota, including the `limit` and the Protocol limited by the Quota.
+request_example: >-
+{
+"quota_id": "quota-123456789012"
+}
+response_example: >-
+{
+"quota_id": "quota-123456789012",
+"protocol_id": "protocol-123456789012",
+"limit": {
+"day": 10.0,
+"month": 15.0
+},
+"domain_id": "domain-123456789012"
+}
+
+
 
 > **POST** /notification/v1/quota/get
 >
@@ -95,17 +153,44 @@ desc: A Quota is a limit on protocol usage for a day or a month. You can manage 
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+desc: Gets a list of all Quotas. You can use a query to get a filtered list of Quotas.
+request_example: >-
+{
+"query": {}
+}
+response_example: >-
+{
+"results": [
+{
+"quota_id": "quota-123456789012",
+"protocol_id": "protocol-123456789012",
+"limit": {
+"day": 10.0,
+"month": 15.0
+},
+"domain_id": "domain-123456789012"
+},
+{
+"quota_id": "quota-987654321098",
+"protocol_id": "protocol-987654321098",
+"limit": {
+"day": 5.0,
+"month": 7.0
+},
+"domain_id": "domain-123456789012"
+}
+],
+"total_count": 2
+}
+
+
 
 > **POST** /notification/v1/quota/list
 >
@@ -113,17 +198,16 @@ desc: A Quota is a limit on protocol usage for a day or a month. You can manage 
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /notification/v1/quota/stat
 >
@@ -131,12 +215,7 @@ desc: A Quota is a limit on protocol usage for a day or a month. You can manage 
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

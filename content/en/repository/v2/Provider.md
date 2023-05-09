@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Provider
 
 
+
+
+
 **Provider Methods:**
 
 
@@ -35,23 +38,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /repository/v2/provider/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /repository/v2/provider/update
 >
@@ -59,17 +65,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### sync
+
+
+
+
 
 > **POST** /repository/v2/provider/sync
 >
@@ -77,17 +82,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " sync " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /repository/v2/provider/delete
 >
@@ -95,17 +99,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /repository/v2/provider/get
 >
@@ -113,17 +116,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /repository/v2/providers/list
 >
@@ -131,12 +133,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

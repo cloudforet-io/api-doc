@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Project
 
 
+
+
+
 **Project Methods:**
 
 
@@ -39,23 +42,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /identity/v1/project/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /identity/v1/project/update
 >
@@ -63,17 +69,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /identity/v1/project/delete
 >
@@ -81,17 +86,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /identity/v1/project/get
 >
@@ -99,17 +103,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /identity/v1/project/list
 >
@@ -117,17 +120,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /identity/v1/project/stat
 >
@@ -135,17 +137,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### add_member
+
+
+
+
 
 > **POST** /identity/v1/project/add-member
 >
@@ -153,17 +154,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " add_member " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### modify_member
+
+
+
+
 
 > **POST** /identity/v1/project/modify-member
 >
@@ -171,17 +171,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " modify_member " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### remove_member
+
+
+
+
 
 > **POST** /identity/v1/project/remove-member
 >
@@ -189,17 +188,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " remove_member " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list_members
+
+
+
+
 
 > **POST** /identity/v1/project/list-members
 >
@@ -207,12 +205,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " list_members " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

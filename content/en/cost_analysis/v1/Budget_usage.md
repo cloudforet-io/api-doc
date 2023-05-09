@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Budget_usage
 
 
+
+
+
 **BudgetUsage Methods:**
 
 
@@ -32,23 +35,99 @@ bookFlatSection: true
 
 ### list
 
+Gets a list of all BudgetUsages. You can use a query to get a filtered list of BudgetUsages.
+
+
+
 > **POST** /cost-analysis/v1/budget-usage/list
 >
 
 
 
 
+
  {{< tabs " list " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[BudgetUsageQuery](./BudgetUsage#budgetusagequery)
+
+* **domain_id** (string)  `Required` 
+
+
+* **query** (Query) 
+
+
+* **budget_id** (string) 
+
+
+* **name** (string) 
+
+
+* **date** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[BudgetUsagesInfo](#BUDGETUSAGESINFO)
+* **results** (BudgetUsageInfo)  `Required` 
+
+* **total_count** (int32)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+       "results": [
+           {
+               "budget_id": "budget-abb377eb9e8b",
+               "name": "Cloudforet-Budget3",
+               "date": "2022-01",
+               "usd_cost": 7671.164,
+               "limit": 10000.0,
+               "domain_id": "domain-58010aa2e451",
+               "updated_at": "2022-07-19T04:26:08.099Z"
+           },
+           {
+               "budget_id": "budget-abb377eb9e8b",
+               "name": "Cloudforet-Budget3",
+               "date": "2022-02",
+               "usd_cost": 5931.771,
+               "limit": 11000.0,
+               "domain_id": "domain-58010aa2e451",
+               "updated_at": "2022-07-19T04:26:08.105Z"
+           }
+       ],
+       "total_count": 12
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 <br>
 
 ### analyze
+
+
+
+
 
 > **POST** /cost-analysis/v1/budget-usage/analyze
 >
@@ -56,17 +135,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " analyze " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /cost-analysis/v1/budget-usage/stat
 >
@@ -74,12 +152,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 
@@ -94,12 +167,8 @@ bookFlatSection: true
 ### BudgetUsageAnalyzeQuery
 * **query** (TimeSeriesAnalyzeQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -130,41 +199,27 @@ bookFlatSection: true
     <br>
 
 ### BudgetUsageQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **budget_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **date** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **budget_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **date** (string) 
 
     <br>
 
 ### BudgetUsageStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 

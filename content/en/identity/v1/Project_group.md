@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Project_group
 
 
+
+
+
 **ProjectGroup Methods:**
 
 
@@ -40,23 +43,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /identity/v1/project-group/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **PUT** /identity/v1/project-group/update
 >
@@ -64,17 +70,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /identity/v1/project-group/delete
 >
@@ -82,17 +87,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /identity/v1/project-group/get
 >
@@ -100,17 +104,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /identity/v1/project-group/list
 >
@@ -118,17 +121,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /identity/v1/project-group/stat
 >
@@ -136,17 +138,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### add_member
+
+
+
+
 
 > **POST** /identity/v1/project-group/add-member
 >
@@ -154,17 +155,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " add_member " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### modify_member
+
+
+
+
 
 > **POST** /identity/v1/project-group/modify-member
 >
@@ -172,17 +172,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " modify_member " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### remove_member
+
+
+
+
 
 > **POST** /identity/v1/project-group/remove-member
 >
@@ -190,17 +189,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " remove_member " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list_members
+
+
+
+
 
 > **POST** /identity/v1/project-group/list-members
 >
@@ -208,17 +206,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list_members " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list_projects
+
+
+
+
 
 > **POST** /identity/v1/project-group/list-projects
 >
@@ -226,12 +223,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " list_projects " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

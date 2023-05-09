@@ -16,6 +16,9 @@ desc: A Protocol is a plugin instance defining how a User receives data from Clo
 ## Protocol
 
 
+
+
+
 **Protocol Methods:**
 
 
@@ -31,30 +34,40 @@ desc: A Protocol is a plugin instance defining how a User receives data from Clo
 
 ### init
 
+desc: Initializes a specific Protocol. During initialization, the Protocol information to be passed to the Protocol user is delivered as `metadata`. Protocol information includes its name and version.
+request_example: >-
+{
+"options": {}
+}
+response_example: >-
+{
+"metadata": {}
+}
 
 
 
- {{< tabs " init " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 <br>
 
 ### verify
 
+desc: Verifies if a specific Protocol is a valid plugin instance.
+request_example: >-
+{
+"options": {}
+}
 
 
 
- {{< tabs " verify " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 

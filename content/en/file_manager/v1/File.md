@@ -16,6 +16,9 @@ bookFlatSection: true
 ## File
 
 
+
+
+
 **File Methods:**
 
 
@@ -36,23 +39,26 @@ bookFlatSection: true
 
 ### add
 
+
+
+
+
 > **POST** /file-manager/v1/file/add
 >
 
 
 
 
- {{< tabs " add " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /file-manager/v1/file/update
 >
@@ -60,17 +66,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /file-manager/v1/file/delete
 >
@@ -78,17 +83,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get_download_url
+
+
+
+
 
 > **POST** /file-manager/v1/file/get-download-url
 >
@@ -96,17 +100,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get_download_url " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /file-manager/v1/file/get
 >
@@ -114,17 +117,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /file-manager/v1/file/list
 >
@@ -132,17 +134,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /file-manager/v1/file/stat
 >
@@ -150,12 +151,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

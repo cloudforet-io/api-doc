@@ -16,6 +16,9 @@ desc: description of dashboard
 ## Custom_widget
 
 
+
+
+
 **CustomWidget Methods:**
 
 
@@ -35,23 +38,26 @@ desc: description of dashboard
 
 ### create
 
+
+
+
+
 > **POST** /dashboard/v1/custom-widget/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /dashboard/v1/custom-widget/update
 >
@@ -59,17 +65,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /dashboard/v1/custom-widget/delete
 >
@@ -77,17 +82,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /dashboard/v1/custom-widget/get
 >
@@ -95,17 +99,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /dashboard/v1/custom-widget/list
 >
@@ -113,17 +116,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /dashboard/v1/custom-widget/stat
 >
@@ -131,12 +133,7 @@ desc: description of dashboard
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

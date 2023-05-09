@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Policy
 
 
+
+
+
 **Policy Methods:**
 
 
@@ -35,23 +38,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /identity/v1/policy/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **PUT** /identity/v1/policy/update
 >
@@ -59,17 +65,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /identity/v1/policy/delete
 >
@@ -77,17 +82,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /identity/v1/policy/get
 >
@@ -95,17 +99,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /identity/v1/policy/list
 >
@@ -113,17 +116,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /identity/v1/policies/stat
 >
@@ -131,12 +133,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

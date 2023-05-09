@@ -16,6 +16,9 @@ desc: A Plugin is a resource managing endpoints of the plugin instances deployed
 ## Plugin
 
 
+
+
+
 **Plugin Methods:**
 
 
@@ -31,23 +34,35 @@ desc: A Plugin is a resource managing endpoints of the plugin instances deployed
 
 ### get_plugin_endpoint
 
+desc: Gets the `endpoint` of a specific plugin instance. A Plugin returns only a single `endpoint` by determining `labels` and `priority`. If the requested plugin instance is already deployed, the `endpoint` is returned. If not, the `endpoint` is returned after deploying the plugin instance.
+request_example: >-
+{
+"plugin_id": "plugin-aws-sns-mon-webhook",
+"version": "1.2.2"
+}
+response_example: >-
+{
+"endpoint": "grpc://endpoint-url:50051"
+}
+
+
+
 > **POST** /plugin/v1/plugin/get-plugin-endpoint
 >
 
 
 
 
- {{< tabs " get_plugin_endpoint " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### notify_failure
+
+
+
+
 
 > **POST** /plugin/v1/plugin/notify-failure
 >
@@ -55,12 +70,7 @@ desc: A Plugin is a resource managing endpoints of the plugin instances deployed
 
 
 
- {{< tabs " notify_failure " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

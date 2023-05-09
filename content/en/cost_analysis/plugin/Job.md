@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Job
 
 
+
+
+
 **Job Methods:**
 
 
@@ -33,12 +36,67 @@ bookFlatSection: true
 
 
 
+
+
+
+
+
  {{< tabs " get_tasks " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[GetTasksRequest](./Job#gettasksrequest)
+
+* **options** (Struct)  `Required` 
+
+
+* **secret_data** (Struct)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **schema** (string) 
+
+
+* **start** (string) 
+
+
+* **last_synchronized_at** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[TasksInfo](#TASKSINFO)
+* **tasks** (TaskInfo)  `Required` 
+
+* **changed** (ChangedInfo)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 
@@ -64,32 +122,20 @@ bookFlatSection: true
 ### GetTasksRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **start** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **last_synchronized_at** (string)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **schema** (string) 
+
+    
+* **start** (string) 
+
+    
+* **last_synchronized_at** (string) 
 
     <br>
 

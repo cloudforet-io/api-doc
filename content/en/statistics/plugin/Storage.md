@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Storage
 
 
+
+
+
 **Storage Methods:**
 
 
@@ -35,12 +38,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " init " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 <br>
@@ -50,12 +52,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " verify " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 <br>
@@ -65,12 +66,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " export " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 

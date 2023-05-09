@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Endpoint
 
 
+
+
+
 **Endpoint Methods:**
 
 
@@ -30,18 +33,17 @@ bookFlatSection: true
 
 ### list
 
+
+
+
+
 > **POST** /identity/v1/endpoint/list
 >
 
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

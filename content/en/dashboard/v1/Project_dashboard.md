@@ -16,6 +16,9 @@ desc: description of dashboard
 ## Project_dashboard
 
 
+
+
+
 **ProjectDashboard Methods:**
 
 
@@ -39,23 +42,26 @@ desc: description of dashboard
 
 ### create
 
+
+
+
+
 > **POST** /dashboard/v1/project-dashboard/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/update
 >
@@ -63,17 +69,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/delete
 >
@@ -81,17 +86,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/get
 >
@@ -99,17 +103,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete_version
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/delete-version
 >
@@ -117,17 +120,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " delete_version " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### revert_version
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/revert-version
 >
@@ -135,17 +137,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " revert_version " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get_version
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/get-version
 >
@@ -153,17 +154,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " get_version " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list_versions
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/list-versions
 >
@@ -171,17 +171,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " list_versions " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/list
 >
@@ -189,17 +188,16 @@ desc: description of dashboard
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /dashboard/v1/project-dashboard/stat
 >
@@ -207,12 +205,7 @@ desc: description of dashboard
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

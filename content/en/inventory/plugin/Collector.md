@@ -16,6 +16,9 @@ desc: A Collector is a plugin collecting data of external infrastructure resourc
 ## Collector
 
 
+
+
+
 **Collector Methods:**
 
 
@@ -32,45 +35,66 @@ desc: A Collector is a plugin collecting data of external infrastructure resourc
 
 ### init
 
+desc: Initializes a specific Collector. During initialization, the Collector information to be passed to the Collector user is delivered as `metadata`. Collector information includes its name and version.
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
 
 
 
- {{< tabs " init " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 <br>
 
 ### verify
 
+desc: Verifies a specific Collector. You must specify the parameter `secret_data`, encrypted account data of the Collector to validate.
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
 
 
 
- {{< tabs " verify " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 <br>
 
 ### collect
 
+desc: Collects data of external infrastructure resources by a specific Collector.
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
 
 
 
- {{< tabs " collect " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 

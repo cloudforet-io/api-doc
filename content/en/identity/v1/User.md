@@ -17,6 +17,9 @@ note: Administrator must register User first.
 ## User
 
 
+
+
+
 **User Methods:**
 
 
@@ -44,23 +47,64 @@ note: Administrator must register User first.
 
 ### create
 
+
+
+
+
 > **POST** /identity/v1/user/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+desc: Update user info by given user_id
+note:
+request_example: >-
+{
+"user_id": "dkang@mz.co.kr",
+"tags": [{
+"key": "user1",
+"value": "Reuters"
+}, {
+"key": "user2",
+"value": "Bloomberg"
+}],
+"domain_id": "{{DOMAIN_ID}}"
+}
+response_example: >-
+{
+"user_id": "dkang@mz.co.kr",
+"name": "Dong Yoo kang",
+"state": "ENABLED",
+"email": "dkang@mz.co.kr",
+"language": "en",
+"timezone": "UTC",
+"tags": [{
+"key": "user1",
+"value": "Reuters"
+}, {
+"key": "user2",
+"value": "Bloomberg"
+}],
+"last_accessed_at": {
+"seconds": "1593161630",
+"nanos": 79000000
+},
+"created_at": {
+"seconds": "1593161630",
+"nanos": 79000000
+},
+"domain_id": "domain-fd6e23a5ae36"
+}
+
+
 
 > **POST** /identity/v1/user/update
 >
@@ -68,17 +112,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### verify_email
+
+
+
+
 
 > **POST** /identity/v1/user/verify-email
 >
@@ -86,17 +129,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " verify_email " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### confirm_email
+
+
+
+
 
 > **POST** /identity/v1/user/confirm-email
 >
@@ -104,17 +146,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " confirm_email " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### reset_password
+
+
+
+
 
 > **POST** /identity/v1/user/reset-password
 >
@@ -122,17 +163,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " reset_password " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### set_required_actions
+
+
+
+
 
 > **POST** /identity/v1/user/set-required-actions
 >
@@ -140,17 +180,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " set_required_actions " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### enable
+
+
+
+
 
 > **POST** /identity/v1/user/enable
 >
@@ -158,17 +197,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " enable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### disable
+
+
+
+
 
 > **POST** /identity/v1/user/disable
 >
@@ -176,17 +214,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " disable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /identity/v1/user/delete
 >
@@ -194,17 +231,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /identity/v1/user/get
 >
@@ -212,17 +248,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /identity/v1/user/list
 >
@@ -230,17 +265,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /identity/v1/user/stat
 >
@@ -248,17 +282,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### find
+
+
+
+
 
 > **POST** /identity/v1/users/find
 >
@@ -266,17 +299,16 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " find " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### sync
+
+
+
+
 
 > **POST** /identity/v1/user/sync
 >
@@ -284,12 +316,7 @@ note: Administrator must register User first.
 
 
 
- {{< tabs " sync " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

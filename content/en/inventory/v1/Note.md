@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Note
 
 
+
+
+
 **Note Methods:**
 
 
@@ -35,23 +38,42 @@ bookFlatSection: true
 
 ### create
 
+desc: ''
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
+
+
+
 > **POST** /inventory/v1/note/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+desc: ''
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
+
+
 
 > **POST** /inventory/v1/note/update
 >
@@ -59,17 +81,24 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+desc: ''
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
+
+
 
 > **POST** /inventory/v1/note/delete
 >
@@ -77,17 +106,24 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+desc: ''
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
+
+
 
 > **POST** /inventory/v1/note/get
 >
@@ -95,17 +131,24 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+desc: ''
+request_example: >-
+{
+
+}
+response_example: >-
+{
+
+}
+
+
 
 > **POST** /inventory/v1/note/list
 >
@@ -113,17 +156,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /inventory/v1/note/stat
 >
@@ -131,12 +173,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

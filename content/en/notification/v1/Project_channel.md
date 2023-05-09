@@ -16,6 +16,9 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 ## Project_channel
 
 
+
+
+
 **ProjectChannel Methods:**
 
 
@@ -39,23 +42,93 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 ### create
 
+desc: Creates a new ProjectChannel. ProjectChannel is a channel that delivers a Notification to the Project when the Notification is created. When creating a ProjectChannel, one Protocol must be selected, and a Notification is dispatched via the selected Protocol.
+request_example: >-
+{
+"protocol_id": "protocol-ab94ea7d574e",
+"name": "sms-test",
+"data": {
+"phone_number": "01011112222"
+},
+"is_subscribe": true,
+"subscriptions": ["monitoring.Alert"],
+"notification_level": "LV1",
+"is_scheduled": true,
+"schedule": {
+"day_of_week": [
+"MON",
+"TUE",
+"WED",
+"THU",
+"FRI"
+],
+"end_hour": 9
+},
+"project_id": "project-52a423012d5e"
+}
+response_example: >-
+{
+"project_channel_id": "project-ch-488df94d026d",
+"name": "sms-test",
+"state": "ENABLED",
+"data": {
+"phone_number": "01011112222"
+},
+"notification_level": "LV1",
+"tags": {},
+"protocol_id": "protocol-ab94ea7d574e",
+"project_id": "project-aa723eed3d69",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-13T07:35:28.305Z"
+}
+
+
+
 > **POST** /notification/v1/project-channel/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+desc: Updates a specific ProjectChannel. A ProjectChannel that has already been configured cannot be changed. Instead, the data required for dispatching Notifications to a ProjectChannel can be updated.
+request_example: >-
+{
+"project_channel_id": "project-ch-488df94d026d",
+"name": "sms2-test",
+"data": {
+"phone_number": "01033334444"
+},
+"notification_level": "LV2",
+"tags": {
+"a": "b"
+}
+}
+response_example: >-
+{
+"project_channel_id": "project-ch-488df94d026d",
+"name": "sms2-test",
+"state": "ENABLED",
+"data": {
+"phone_number": "01033334444"
+},
+"notification_level": "LV2",
+"tags": {
+"a": "b"
+},
+"protocol_id": "protocol-ab94ea7d574e",
+"project_id": "project-aa723eed3d69",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-13T07:35:28.305Z"
+}
+
+
 
 > **PUT** /notification/v1/project-channel/update
 >
@@ -63,17 +136,55 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### set_schedule
+
+desc: Sets a schedule for a ProjectChannel. A schedule defines the time to receive a Notification. When a Notification is created, you can set the day of the week and time you want to receive it. When you set the day of the week, you can receive a notification only on the day of the week you set. If you also set the start time and end time with the day of the week, you can receive a Notification only at the scheduled time on the day of the week you set. If there is no schedule set in a ProjectChannel, Notifications will be dispatched at all times via the ProjectChannel.
+request_example: >-
+{
+"project_channel_id": "project-ch-488df94d026d",
+"is_scheduled": true,
+"schedule": {
+"day_of_week": [
+"MON",
+"WED",
+"FRI"
+],
+"end_hour": 9
+}
+}
+response_example: >-
+{
+"project_channel_id": "project-ch-488df94d026d",
+"name": "sms2-test",
+"state": "ENABLED",
+"data": {
+"phone_number": "01033334444"
+},
+"notification_level": "LV2",
+"is_scheduled": true,
+"schedule": {
+"day_of_week": [
+"MON",
+"WED",
+"FRI"
+],
+"end_hour": 9
+},
+"tags": {
+"a": "b"
+},
+"protocol_id": "protocol-ab94ea7d574e",
+"project_id": "project-aa723eed3d69",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-13T07:35:28.305Z"
+}
+
+
 
 > **POST** /notification/v1/project-channel/set-schedule
 >
@@ -81,17 +192,54 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " set_schedule " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### set_subscription
+
+desc: Sets a subscription for a ProjectChannel. A subscription is a topic for channels to subscribe to and get notified about. If a ProjectChannel has subscriptions, a Notification is dispatched only if the topic of the Notification is the same as the one set in the subscriptions. If there is no subscription in a ProjectChannel, all Notifications will be dispatched.
+request_example: >-
+{
+"project_channel_id": "project-ch-cff007433a23",
+"is_subscribe": true,
+"subscriptions": [
+"monitoring.Alert"
+]
+}
+response_example: >-
+{
+"project_channel_id": "project-ch-cff007433a23",
+"name": "sms-test",
+"state": "ENABLED",
+"data": {
+"phone_number": "01033334444"
+},
+"is_subscribe": true,
+"subscriptions": [
+"monitoring.Alert"
+],
+"notification_level": "LV1",
+"is_scheduled": true,
+"schedule": {
+"day_of_week": [
+"MON",
+"TUE",
+"WED",
+"THU",
+"FRI"
+],
+"end_hour": 9
+},
+"tags": {},
+"protocol_id": "protocol-ab94ea7d574e",
+"project_id": "project-52a423012d5e",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-20T06:03:09.177Z"
+}
+
+
 
 > **POST** /notification/v1/project-channel/set-subscription
 >
@@ -99,17 +247,20 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " set_subscription " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### enable
+
+desc: Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectChannel can be used and the Notification can be dispatched. Even if a ProjectChannel is enabled, if the Protocol used in the ProjectChannel is disabled, the Notification is not dispatched.
+request_example: >-
+{
+"project_channel_id": "project-ch-ffdb1d6cc774"
+}
+
+
 
 > **POST** /notification/v1/project-channel/enable
 >
@@ -117,17 +268,20 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " enable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### disable
+
+desc: Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notification is not dispatched, even if it is created.
+request_example: >-
+{
+"project_channel_id": "project-ch-ffdb1d6cc774"
+}
+
+
 
 > **POST** /notification/v1/project-channel/disable
 >
@@ -135,17 +289,20 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " disable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+desc: Deletes a specific ProjectChannel.
+request_example: >-
+{
+"project_channel_id": "project-ch-ffdb1d6cc774"
+}
+
+
 
 > **POST** /notification/v1/project-channel/delete
 >
@@ -153,17 +310,35 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+desc: Gets a specific ProjectChannel. Prints detailed information about the ProjectChannel.
+request_example: >-
+{
+"project_channel_id": "project-ch-ffdb1d6cc774"
+}
+response_example: >-
+{
+"project_channel_id": "project-ch-ffdb1d6cc774",
+"name": "personal_email",
+"state": "ENABLED",
+"data": {
+"email": "user1@cloudforet.io"
+},
+"notification_level": "LV1",
+"tags": {},
+"protocol_id": "protocol-e000a677ebdb",
+"project_id": "project-52a423012d5e",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-06-20T04:40:21.264Z"
+}
+
+
 
 > **POST** /notification/v1/project-channel/get
 >
@@ -171,17 +346,62 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+desc: Gets a list of all ProjectChannels. You can use a query to get a filtered list of ProjectChannels.
+request_example: >-
+{
+"query": {
+"filter": [
+{
+"key": "state",
+"value": "ENABLED",
+"operator": "eq"
+}
+]
+}
+}
+response_example: >-
+{
+"results": [
+{
+"project_channel_id": "project-ch-473efcfde4b1",
+"name": "Email Groups",
+"state": "ENABLED",
+"data": {
+"email": "sykim1@cloudforet.io, sykim2@cloudforet.io"
+},
+"notification_level": "LV1",
+"tags": {},
+"protocol_id": "protocol-e000a677ebdb",
+"project_id": "project-28cf4f2e6645",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-04-18T01:22:01.182Z"
+},
+{
+"project_channel_id": "project-ch-98845ba0f975",
+"name": "Song Email",
+"state": "ENABLED",
+"data": {
+"email": "sykim@mz.co.kr"
+},
+"notification_level": "LV1",
+"tags": {},
+"protocol_id": "protocol-e000a677ebdb",
+"project_id": "project-28cf4f2e6645",
+"domain_id": "domain-58010aa2e451",
+"created_at": "2022-04-18T01:17:40.741Z"
+}
+],
+"total_count": 2
+}
+
+
 
 > **POST** /notification/v1/project-channel/list
 >
@@ -189,17 +409,16 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /notification/v1/project-channel/stat
 >
@@ -207,12 +426,7 @@ desc: A ProjectChannel is a destination  where Notifications are delivered. Noti
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

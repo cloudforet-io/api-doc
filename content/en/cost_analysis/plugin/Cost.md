@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Cost
 
 
+
+
+
 **Cost Methods:**
 
 
@@ -33,12 +36,62 @@ bookFlatSection: true
 
 
 
+
+
+
+
+
  {{< tabs " get_data " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[GetDataRequest](./Cost#getdatarequest)
+
+* **options** (Struct)  `Required` 
+
+
+* **secret_data** (Struct)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **schema** (string) 
+
+
+* **task_options** (Struct) 
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[CostsInfo](#COSTSINFO)
+* **results** (CostInfo)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 
@@ -102,26 +155,16 @@ bookFlatSection: true
 ### GetDataRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **task_options** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **schema** (string) 
+
+    
+* **task_options** (Struct) 
 
     <br>

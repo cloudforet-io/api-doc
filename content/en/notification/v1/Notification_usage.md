@@ -16,6 +16,9 @@ desc: A NotificationUsage is a resource indicating daily Protocol usage. The lim
 ## Notification_usage
 
 
+
+
+
 **NotificationUsage Methods:**
 
 
@@ -31,23 +34,50 @@ desc: A NotificationUsage is a resource indicating daily Protocol usage. The lim
 
 ### list
 
+desc: Gets a list of all NotificationUsages. You can use a query to get a filtered list of Notification Usages.
+request_example: >-
+{
+"query": {}
+}
+response_example: >-
+{
+"results": [
+{
+"protocol_id": "protocol-123456789012",
+"usage_date": "08",
+"usage_month": "2022-05",
+"count": 2,
+"domain_id": "domain-123456789012"
+},
+{
+"protocol_id": "protocol-123456789012",
+"usage_date": "18",
+"usage_month": "2022-05",
+"count": 7,
+"domain_id": "domain-123456789012"
+}
+],
+"total_count": 2
+}
+
+
+
 > **POST** /notification/v1/notification-usage/list
 >
 
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /notification/v1/notification-usage/stat
 >
@@ -55,12 +85,7 @@ desc: A NotificationUsage is a resource indicating daily Protocol usage. The lim
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

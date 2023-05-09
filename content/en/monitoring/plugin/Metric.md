@@ -16,6 +16,9 @@ desc: A Metric is a monitoring metric data delivered from an external cloud serv
 ## Metric
 
 
+
+
+
 **Metric Methods:**
 
 
@@ -31,30 +34,28 @@ desc: A Metric is a monitoring metric data delivered from an external cloud serv
 
 ### list
 
+desc: Gets a list of all Metrics from a specific cloud service. You can use the method to list up the Metrics to collect before using the `get_data` method to collect the Metrics.
 
 
 
- {{< tabs " list " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 <br>
 
 ### get_data
 
+desc: Gets a Metric from a specific cloud service resource `instance`. By specifying the time period to collect the Metric, the Metric data value of the `instance` during the period is returned.
 
 
 
- {{< tabs " get_data " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 

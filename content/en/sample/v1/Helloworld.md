@@ -15,6 +15,9 @@ bookFlatSection: true
 
 ## Helloworld
 
+desc: The greeting service definition.
+
+
 
 **HelloWorld Methods:**
 
@@ -29,6 +32,11 @@ bookFlatSection: true
 <br>
 
 ### say_hello
+
+desc: Sends a greeting
+
+
+
 
 
 
@@ -69,6 +77,7 @@ desc: The response message containing the greetings
 
 
 {{< /tabs >}}
+
 
     
 

@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Domain
 
 
+
+
+
 **Domain Methods:**
 
 
@@ -41,23 +44,26 @@ bookFlatSection: true
 
 ### create
 
+
+
+
+
 > **POST** /identity/v1/domain/create
 >
 
 
 
 
- {{< tabs " create " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update
+
+
+
+
 
 > **POST** /identity/v1/domain/update
 >
@@ -65,17 +71,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### change_auth_plugin
+
+
+
+
 
 > **POST** /identity/v1/domain/change-auth-plugin
 >
@@ -83,17 +88,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " change_auth_plugin " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### update_plugin
+
+
+
+
 
 > **POST** /identity/v1/domain/update-plugin
 >
@@ -101,17 +105,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " update_plugin " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### verify_plugin
+
+
+
+
 
 > **POST** /identity/v1/domain/verify-plugin
 >
@@ -119,17 +122,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " verify_plugin " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### delete
+
+
+
+
 
 > **POST** /identity/v1/domain/delete
 >
@@ -137,17 +139,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " delete " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### enable
+
+
+
+
 
 > **POST** /identity/v1/domain/enable
 >
@@ -155,17 +156,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " enable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### disable
+
+
+
+
 
 > **POST** /identity/v1/domain/disable
 >
@@ -173,17 +173,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " disable " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get
+
+
+
+
 
 > **POST** /identity/v1/domain/get
 >
@@ -191,17 +190,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " get " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### list
+
+
+
+
 
 > **POST** /identity/v1/domain/list
 >
@@ -209,17 +207,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /identity/v1/domain/stat
 >
@@ -227,17 +224,16 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### get_public_key
+
+
+
+
 
 > **POST** /identity/v1/domain/get-public-key
 >
@@ -245,12 +241,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " get_public_key " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 

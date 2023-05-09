@@ -16,6 +16,9 @@ desc: A Webhook is a plugin receiving data from external monitoring systems.
 ## Webhook
 
 
+
+
+
 **Webhook Methods:**
 
 
@@ -31,30 +34,28 @@ desc: A Webhook is a plugin receiving data from external monitoring systems.
 
 ### init
 
+desc: Verifies a specific Webhook. You must specify the parameter `secret_data`, encrypted account data of the Webhook to validate.
 
 
 
- {{< tabs " init " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 <br>
 
 ### verify
 
+desc: Initializes a specific Webhook. During initialization, the Webhook information to be passed to the Webhook user is delivered as `metadata`. Webhook information includes its name and version.
 
 
 
- {{< tabs " verify " >}}
 
 
 
 
-{{< /tabs >}}
 
     
 

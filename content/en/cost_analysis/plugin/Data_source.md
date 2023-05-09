@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Data_source
 
 
+
+
+
 **DataSource Methods:**
 
 
@@ -34,12 +37,53 @@ bookFlatSection: true
 
 
 
+
+
+
+
+
  {{< tabs " init " >}}
 
+ {{< tab "Request Example" >}}
 
+
+
+[InitRequest](./DataSource#initrequest)
+
+* **options** (Struct)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[PluginInfo](#PLUGININFO)
+* **metadata** (Struct)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
+
 
     
 <br>
@@ -49,12 +93,11 @@ bookFlatSection: true
 
 
 
- {{< tabs " verify " >}}
 
 
 
 
-{{< /tabs >}}
+
 
     
 
@@ -69,12 +112,8 @@ bookFlatSection: true
 ### InitRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -86,21 +125,13 @@ bookFlatSection: true
 ### PluginVerifyRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **schema** (string) 
 
     <br>

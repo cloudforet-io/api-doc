@@ -16,6 +16,9 @@ bookFlatSection: true
 ## Change_history
 
 
+
+
+
 **ChangeHistory Methods:**
 
 
@@ -31,23 +34,26 @@ bookFlatSection: true
 
 ### list
 
+
+
+
+
 > **POST** /inventory/v1/change-history/list
 >
 
 
 
 
- {{< tabs " list " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 <br>
 
 ### stat
+
+
+
+
 
 > **POST** /inventory/v1/change-history/stat
 >
@@ -55,12 +61,7 @@ bookFlatSection: true
 
 
 
- {{< tabs " stat " >}}
 
-
-
-
-{{< /tabs >}}
 
     
 
