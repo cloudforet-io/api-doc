@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'content/en/**'
+      - 'dist/json/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -62,6 +62,7 @@ jobs:
 
       - name: Generate markdown files
         run: |
+          sudo rm -rf content/en
           cd bin
           python markdown.py
 
