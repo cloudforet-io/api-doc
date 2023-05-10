@@ -15,7 +15,7 @@ bookFlatSection: true
 
 ## Helloworld
 
-desc: The greeting service definition.
+The greeting service definition.
 
 
 
@@ -33,7 +33,7 @@ desc: The greeting service definition.
 
 ### say_hello
 
-desc: Sends a greeting
+Sends a greeting
 
 
 
@@ -51,14 +51,12 @@ desc: Sends a greeting
 
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
 
 
 
 
 {{< highlight json >}}
-desc: The request message containing the user's name.
+The request message containing the user's name.
 {{< /highlight >}}
 {{< /tab >}}
 
@@ -71,7 +69,7 @@ desc: The request message containing the user's name.
 
 
 {{< highlight json >}}
-desc: The response message containing the greetings
+The response message containing the greetings
 {{< /highlight >}}
 {{< /tab >}}
 
@@ -96,7 +94,5 @@ desc: The response message containing the greetings
 
 ### HelloRequest
 * **name** (string)  `Required` 
-
-  *is_required: true*
 
     <br>

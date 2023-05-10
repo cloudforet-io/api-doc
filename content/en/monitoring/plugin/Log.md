@@ -55,47 +55,29 @@ bookFlatSection: true
 ### LogRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
 
     
 * **query** (Struct)  `Required` 
 
-  *is_required: true*
-
-    
-* **keyword** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **start** (string)  `Required` 
-
-  *is_required: true*
 
     
 * **end** (string)  `Required` 
 
-  *is_required: true*
+    
+* **schema** (string) 
 
     
-* **sort** (Sort)  `Required` 
-
-  *is_required: false*
+* **keyword** (string) 
 
     
-* **limit** (int32)  `Required` 
+* **sort** (Sort) 
 
-  *is_required: false*
+    
+* **limit** (int32) 
 
     <br>
 

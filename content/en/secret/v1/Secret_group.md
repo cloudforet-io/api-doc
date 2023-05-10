@@ -184,34 +184,22 @@ bookFlatSection: true
 ### CreateSecretGroupRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetSecretGroupRequest
 * **secret_group_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -233,41 +221,27 @@ bookFlatSection: true
     <br>
 
 ### SecretGroupQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **secret_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **secret_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **secret_group_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **secret_id** (string) 
 
     <br>
 
 ### SecretGroupRequest
 * **secret_group_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -285,29 +259,19 @@ bookFlatSection: true
 ### SecretGroupSecretRequest
 * **secret_group_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### SecretGroupStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -322,21 +286,13 @@ bookFlatSection: true
 ### UpdateSecretGroupRequest
 * **secret_group_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **tags** (Struct) 
 
     <br>

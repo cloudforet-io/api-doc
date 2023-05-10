@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Event](#Event)
-desc: An Event is data created by an external monitoring system and collected by a Webhook plugin.
+An Event is data created by an external monitoring system and collected by a Webhook plugin.
 
 
 >  **Package : spaceone.api.monitoring.plugin**
@@ -33,7 +33,7 @@ desc: An Event is data created by an external monitoring system and collected by
 
 ### parse
 
-desc: Parses a specific Event resource and transforms the resource from external data collected to data available in Cloudforet internally. The `parse` method standardizes all different data from external monitoring systems.
+Parses a specific Event resource and transforms the resource from external data collected to data available in Cloudforet internally. The `parse` method standardizes all different data from external monitoring systems.
 
 
 
@@ -98,12 +98,9 @@ desc: Parses a specific Event resource and transforms the resource from external
 ### ParseRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **data** (Struct)  `Required` 
 
-  *is_required: true
-desc: Unpredictable data format that comes from Webhook*
+  *Unpredictable data format that comes from Webhook*
 
     <br>

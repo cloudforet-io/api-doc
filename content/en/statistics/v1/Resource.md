@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Resource](#Resource)
-desc: A Resource is a resource used for analysis on all microservices used in Cloudforet.
+A Resource is a resource used for analysis on all microservices used in Cloudforet.
 
 
 >  **Package : spaceone.api.statistics.v1**
@@ -33,150 +33,7 @@ desc: A Resource is a resource used for analysis on all microservices used in Cl
 
 ### stat
 
-desc: Enables data preprocessing of different services. Although limited, it is possible to create not only basic queries but also data suitable for users' needs, such as joins between two tables created by the query, handling missing values, and sorting.
-request_example: >-
-{
-"aggregate": [
-{"query": {"resource_type": "inventory.CloudServiceType",
-"query": {
-"filter": [{"k": "labels", "v": ["Server"], "o": "in"},
-{"k": "is_primary", "v": true, "o": "eq"}], "aggregate": [{
-"group": {
-"keys": [
-{
-"key": "cloud_service_type_id",
-"name": "cloud_service_type_id"},
-{
-"key": "name",
-"name": "cloud_service_type"},
-{
-"key": "group",
-"name": "cloud_service_group"},
-{
-"key": "provider",
-"name": "provider"},
-{
-"key": "cloud_service_type_id",
-"name": "cloud_service_type_id"}],
-"fields": [
-{
-"key": "tags",
-"name": "tags",
-"operator": "first"},
-{
-"key": "labels",
-"name": "labels",
-"operator": "first"}]}}]}}},
-{"join": {"resource_type": "inventory.CloudService", "query": {"filter": [
-{"k": "ref_cloud_service_type.cloud_service_type_id",
-"v": ["cloud-svc-type-58c926b19aca", "cloud-svc-type-c7e5bc38d911",
-"cloud-svc-type-8dd4d7a13b95", "cloud-svc-type-719e705cb529",
-"cloud-svc-type-50bd62cf6e0e"], "o": "in"}], "aggregate": [{"group": {
-"keys": [{"key": "cloud_service_type", "name": "cloud_service_type"},
-{"key": "cloud_service_group", "name": "cloud_service_group"},
-{"key": "provider", "name": "provider"}],
-"fields": [{"name": "count", "operator": "count"}]}}]},
-"keys": ["cloud_service_type", "cloud_service_group", "provider"]}},
-{"fill_na": {"data": {"count": 0.0}}}, {"formula": {"query": "count > 0"}},
-{"sort": {"key": "count", "desc": true}}],
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"total_count": 5.0,
-"results": [
-{
-"labels": [
-"Compute",
-"Server"
-],
-"cloud_service_type_id": "cloud-svc-type-58c926b19aca",
-"cloud_service_type": "Instance",
-"count": 44.0,
-"tags": [
-{
-"key": "spaceone:icon",
-"value": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/aws-ec2.svg"
-}
-],
-"provider": "aws",
-"cloud_service_group": "EC2"
-},
-{
-"tags": [
-{
-"key": "spaceone:icon",
-"value": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/openstack/openstack_compute.svg"
-},
-{
-"key": "spaceone:display_name",
-"value": "Instance"
-}
-],
-"cloud_service_group": "Compute",
-"cloud_service_type": "Instance",
-"provider": "openstack",
-"count": 12.0,
-"labels": [
-"Compute",
-"Server"
-],
-"cloud_service_type_id": "cloud-svc-type-50bd62cf6e0e"
-},
-{
-"cloud_service_type": "Node",
-"count": 8.0,
-"provider": "kubernetes",
-"cloud_service_type_id": "cloud-svc-type-719e705cb529",
-"cloud_service_group": "Cluster",
-"tags": [
-{
-"value": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/kubernetes/node.svg",
-"key": "spaceone:icon"
-}
-],
-"labels": [
-"Compute",
-"Server",
-"Container"
-]
-},
-{
-"cloud_service_type_id": "cloud-svc-type-8dd4d7a13b95",
-"cloud_service_type": "Instance",
-"cloud_service_group": "ComputeEngine",
-"labels": [
-"Compute",
-"Server"
-],
-"tags": [
-{
-"key": "spaceone:icon",
-"value": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/google_cloud/Compute_Engine.svg"
-}
-],
-"count": 5.0,
-"provider": "google_cloud"
-},
-{
-"tags": [
-{
-"value": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/azure-vm.svg",
-"key": "spaceone:icon"
-}
-],
-"cloud_service_type": "VirtualMachine",
-"cloud_service_group": "Compute",
-"count": 2.0,
-"provider": "azure",
-"cloud_service_type_id": "cloud-svc-type-c7e5bc38d911",
-"labels": [
-"Compute",
-"Server"
-]
-}
-]
-}
+Enables data preprocessing of different services. Although limited, it is possible to create not only basic queries but also data suitable for users' needs, such as joins between two tables created by the query, handling missing values, and sorting.
 
 
 
@@ -186,6 +43,80 @@ response_example: >-
 
 
 
+
+ {{< tabs " stat " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ResourceStatRequest](./Resource#resourcestatrequest)
+
+* **aggregate** (StatAggregate)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **page** (StatPage) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "aggregate": [
+       {"query": {"resource_type": "inventory.CloudServiceType",
+                  "query": {
+                      "filter": [{"k": "labels", "v": ["Server"], "o": "in"},
+                                 {"k": "is_primary", "v": true, "o": "eq"}], "aggregate": [{
+                          "group": {
+                              "keys": [
+                                  {
+                                      "key": "cloud_service_type_id",
+                                      "name": "cloud_service_type_id"},
+                                  {
+                                      "key": "name",
+                                      "name": "cloud_service_type"},
+                                  {
+                                      "key": "group",
+                                      "name": "cloud_service_group"},
+                                  {
+                                      "key": "provider",
+                                      "name": "provider"},
+                                  {
+                                      "key": "cloud_service_type_id",
+                                      "name": "cloud_service_type_id"}],
+                              "fields": [
+                                  {
+                                      "key": "tags",
+                                      "name": "tags",
+                                      "operator": "first"},
+                                  {
+                                      "key": "labels",
+                                      "name": "labels",
+                                      "operator": "first"}]}}]}}},
+       {"join": {"resource_type": "inventory.CloudService", "query": {"filter": [
+           {"k": "ref_cloud_service_type.cloud_service_type_id",
+            "v": ["cloud-svc-type-58c926b19aca", "cloud-svc-type-c7e5bc38d911",
+                  "cloud-svc-type-8dd4d7a13b95", "cloud-svc-type-719e705cb529",
+                  "cloud-svc-type-50bd62cf6e0e"], "o": "in"}], "aggregate": [{"group": {
+           "keys": [{"key": "cloud_service_type", "name": "cloud_service_type"},
+                    {"key": "cloud_service_group", "name": "cloud_service_group"},
+                    {"key": "provider", "name": "provider"}],
+           "fields": [{"name": "count", "operator": "count"}]}}]},
+                 "keys": ["cloud_service_type", "cloud_service_group", "provider"]}},
+       {"fill_na": {"data": {"count": 0.0}}}, {"formula": {"query": "count > 0"}},
+       {"sort": {"key": "count", "desc": true}}],
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -201,17 +132,11 @@ response_example: >-
 ### ResourceStatRequest
 * **aggregate** (StatAggregate)  `Required` 
 
-  *is_required: true*
-
-    
-* **page** (StatPage)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **page** (StatPage) 
 
     <br>
 
@@ -246,24 +171,16 @@ response_example: >-
 ### StatAggregateConcat
 * **resource_type** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
-* **extend_data** (Struct)  `Required` 
-
-  *is_required: false*
+* **extend_data** (Struct) 
 
     <br>
 
 ### StatAggregateFillNA
 * **data** (Struct)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -278,72 +195,46 @@ response_example: >-
 ### StatAggregateJoin
 * **resource_type** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
+    
+* **extend_data** (Struct) 
 
     
-* **extend_data** (Struct)  `Required` 
-
-  *is_required: false*
+* **type** (JoinType) 
 
     
-* **type** (JoinType)  `Required` 
-
-  *is_required: false*
-
-    
-* **keys** (string)  `Required` 
-
-  *is_required: false*
+* **keys** (string) 
 
     <br>
 
 ### StatAggregateQuery
 * **resource_type** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
-* **extend_data** (Struct)  `Required` 
-
-  *is_required: false*
+* **extend_data** (Struct) 
 
     <br>
 
 ### StatAggregateSort
-* **key** (string)  `Required` 
-
-  *is_required: false*
+* **key** (string) 
 
     
-* **desc** (bool)  `Required` 
-
-  *is_required: false*
+* **desc** (bool) 
 
     
-* **keys** (SortKey)  `Required` 
-
-  *is_required: false*
+* **keys** (SortKey) 
 
     <br>
 
 ### StatPage
-* **start** (uint32)  `Required` 
-
-  *is_required: false*
-
-    
 * **limit** (uint32)  `Required` 
 
-  *is_required: true*
+    
+* **start** (uint32) 
 
     <br>

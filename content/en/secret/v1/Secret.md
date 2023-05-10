@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Secret](#Secret)
-desc: A Secret is an external data, encrypted by CloudForet.
+A Secret is an external data, encrypted by CloudForet.
 
 
 >  **Package : spaceone.api.secret.v1**
@@ -40,30 +40,7 @@ desc: A Secret is an external data, encrypted by CloudForet.
 
 ### create
 
-desc: Creates a new Secret. When creating the resource, external `data` is encrypted, and a `secret_id` is issued for data access by other microservices.
-request_example: >-
-{
-"name": "aws-dev",
-"data": "********",
-"secret_type": "CREDENTIALS",
-"schema": "aws_access_key",
-"service_account_id": "sa-123456789012",
-"project_id": "project-123456789012",
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"secret_id": "secret-123456789012",
-"name": "aws-dev",
-"secret_type": "CREDENTIALS",
-"tags": {},
-"schema": "aws_access_key",
-"provider": "aws",
-"service_account_id": "sa-123456789012",
-"project_id": "project-123456789012",
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T06:10:14.851Z"
-}
+Creates a new Secret. When creating the resource, external `data` is encrypted, and a `secret_id` is issued for data access by other microservices.
 
 
 
@@ -74,35 +51,111 @@ response_example: >-
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateSecretRequest](./Secret#createsecretrequest)
+
+* **name** (string)  `Required` 
+
+
+* **data** (Struct)  `Required` 
+
+
+* **secret_type** (SecretType)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **tags** (Struct) 
+
+
+* **schema** (string) 
+
+
+* **service_account_id** (string) 
+
+
+* **project_id** (string) 
+
+
+* **trusted_secret_id** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "name": "aws-dev",
+   "data": "********",
+   "secret_type": "CREDENTIALS",
+   "schema": "aws_access_key",
+   "service_account_id": "sa-123456789012",
+   "project_id": "project-123456789012",
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[SecretInfo](#SECRETINFO)
+* **secret_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **secret_type** (SecretType)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **schema** (string)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **service_account_id** (string)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **trusted_secret_id** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev",
+   "secret_type": "CREDENTIALS",
+   "tags": {},
+   "schema": "aws_access_key",
+   "provider": "aws",
+   "service_account_id": "sa-123456789012",
+   "project_id": "project-123456789012",
+   "domain_id": "domain-123456789012",
+   "created_at": "2022-01-01T06:10:14.851Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update
 
-desc: Updates a specific Secret. You can make changes in Secret settings, including `name` and`tags`.
-request_example: >-
-{
-"secret_id": "secret-123456789012",
-"name": "aws-dev2",
-"tags": { "a": "b"},
-"project_id": "project-123456789012",
-"release_project": true,
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"secret_id": "secret-123456789012",
-"name": "aws-dev2",
-"secret_type": "CREDENTIALS",
-"tags": { "a": "b"},
-"schema": "aws_access_key",
-"provider": "aws",
-"service_account_id": "sa-123456789012",
-"project_id": "",
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T06:10:14.851Z"
-}
+Updates a specific Secret. You can make changes in Secret settings, including `name` and`tags`.
 
 
 
@@ -113,18 +166,101 @@ response_example: >-
 
 
 
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateSecretRequest](./Secret#updatesecretrequest)
+
+* **secret_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **name** (string) 
+
+
+* **tags** (Struct) 
+
+
+* **project_id** (string) 
+
+
+* **release_project** (bool) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev2",
+   "tags": { "a": "b"},
+   "project_id": "project-123456789012",
+   "release_project": true,
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[SecretInfo](#SECRETINFO)
+* **secret_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **secret_type** (SecretType)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **schema** (string)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **service_account_id** (string)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **trusted_secret_id** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev",
+   "secret_type": "CREDENTIALS",
+   "tags": {},
+   "schema": "aws_access_key",
+   "provider": "aws",
+   "service_account_id": "sa-123456789012",
+   "project_id": "project-123456789012",
+   "domain_id": "domain-123456789012",
+   "created_at": "2022-01-01T06:10:14.851Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### delete
 
-desc: Deletes a specific Secret. You must specify the `secret_id` of the Secret to delete.
-request_example: >-
-{
-"secret_id": "secret-123456789012",
-"domain_id": "domain-123456789012"
-}
+Deletes a specific Secret. You must specify the `secret_id` of the Secret to delete.
 
 
 
@@ -135,30 +271,42 @@ request_example: >-
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[SecretRequest](./Secret#secretrequest)
+
+* **secret_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update_data
 
-desc: Updates encrypted data of a specific Secret resource. For example, to change the parameter `data`, external data to encrypt, you can use `update_data` to create new encrypted data based on the changed `data` and store it in the Secret resource.
-request_example: >-
-{
-"secret_id": "secret-123456789012",
-"data": "********",
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"data": {
-"encrypted_data": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-},
-"encrypted": true,
-"encrypt_options": {
-"encrypted_data_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-"encrypt_algorithm": "CloudForet_DEFAULT"
-}
-}
+Updates encrypted data of a specific Secret resource. For example, to change the parameter `data`, external data to encrypt, you can use `update_data` to create new encrypted data based on the changed `data` and store it in the Secret resource.
 
 
 
@@ -169,29 +317,49 @@ response_example: >-
 
 
 
+ {{< tabs " update_data " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateSecretDataRequest](./Secret#updatesecretdatarequest)
+
+* **secret_id** (string)  `Required` 
+
+
+* **data** (Struct)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **schema** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+    "data": "********",
+    "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get_data
 
-desc: Gets a specific Secret. Prints detailed information about the Secret, including  `name`, `tags`, `schema`, and `provider`.
-request_example: >-
-{
-"secret_id": "secret-123456789012",
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"data": {
-"encrypted_data": "xxxxxxxxxxxxxxxxxx"
-},
-"encrypted": true,
-"encrypt_options": {
-"encrypt_algorithm": "SPACEONE_DEFAULT",
-"encrypted_data_key": "xxxxxx"
-}
-}
+Gets a specific Secret. Prints detailed information about the Secret, including  `name`, `tags`, `schema`, and `provider`.
 
 
 
@@ -202,31 +370,42 @@ response_example: >-
 
 
 
+ {{< tabs " get_data " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[SecretRequest](./Secret#secretrequest)
+
+* **secret_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get
 
-desc: Gets a specific Post. You must specify the `post_id` of the Post to get, and the `board_id` of the Board where the child Post to get belongs. Prints detailed information about the Post.
-request_example: >-
-{
-"secret_id": "secret-123456789012",
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"secret_id": "secret-123456789012",
-"name": "aws-dev",
-"secret_type": "CREDENTIALS",
-"tags": {},
-"schema": "aws_access_key",
-"provider": "aws",
-"service_account_id": "sa-123456789012",
-"project_id": "project-123456789012",
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T06:10:14.851Z"
-}
+Gets a specific Post. You must specify the `post_id` of the Post to get, and the `board_id` of the Board where the child Post to get belongs. Prints detailed information about the Post.
 
 
 
@@ -237,44 +416,88 @@ response_example: >-
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GetSecretRequest](./Secret#getsecretrequest)
+
+* **secret_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **only** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[SecretInfo](#SECRETINFO)
+* **secret_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **secret_type** (SecretType)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **schema** (string)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **service_account_id** (string)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **trusted_secret_id** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev",
+   "secret_type": "CREDENTIALS",
+   "tags": {},
+   "schema": "aws_access_key",
+   "provider": "aws",
+   "service_account_id": "sa-123456789012",
+   "project_id": "project-123456789012",
+   "domain_id": "domain-123456789012",
+   "created_at": "2022-01-01T06:10:14.851Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### list
 
-desc: Gets a list of all Posts. You can use a query to get a filtered list of Posts.
-request_example: >-
-{
-"query": {},
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"results": [
-{
-"secret_id": "secret-123456789012",
-"name": "aws-dev",
-"secret_type": "CREDENTIALS",
-"tags": {},
-"schema": "aws_access_key",
-"provider": "aws",
-"service_account_id": "sa-123456789012",
-"project_id": "project-123456789012",
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T06:10:14.851Z"
-},
-{
-"secret_id": "secret-987654321098",
-"name": "plugin-credentials",
-"secret_type": "CREDENTIALS",
-"tags": {},
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T02:31:01.709Z"
-}
-],
-"total_count": 2
-}
+Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 
@@ -284,6 +507,94 @@ response_example: >-
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[SecretQuery](./Secret#secretquery)
+
+* **domain_id** (string)  `Required` 
+
+
+* **query** (Query) 
+
+
+* **secret_id** (string) 
+
+
+* **name** (string) 
+
+
+* **secret_type** (SecretType) 
+
+
+* **schema** (string) 
+
+
+* **provider** (string) 
+
+
+* **service_account_id** (string) 
+
+
+* **trusted_secret_id** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {},
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[SecretsInfo](#SECRETSINFO)
+* **results** (SecretInfo)  `Required` 
+
+* **total_count** (int32)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "results": [
+       {
+          "secret_id": "secret-123456789012",
+          "name": "aws-dev",
+          "secret_type": "CREDENTIALS",
+          "tags": {},
+          "schema": "aws_access_key",
+          "provider": "aws",
+          "service_account_id": "sa-123456789012",
+          "project_id": "project-123456789012",
+          "domain_id": "domain-123456789012",
+          "created_at": "2022-01-01T06:10:14.851Z"
+       },
+       {
+           "secret_id": "secret-987654321098",
+           "name": "plugin-credentials",
+           "secret_type": "CREDENTIALS",
+           "tags": {},
+           "domain_id": "domain-123456789012",
+           "created_at": "2022-01-01T02:31:01.709Z"
+       }
+   ],
+   "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -316,64 +627,40 @@ response_example: >-
 ### CreateSecretRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **data** (Struct)  `Required` 
-
-  *is_required: true*
 
     
 * **secret_type** (SecretType)  `Required` 
 
-  *is_required: true*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **service_account_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **trusted_secret_id** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **tags** (Struct) 
+
+    
+* **schema** (string) 
+
+    
+* **service_account_id** (string) 
+
+    
+* **project_id** (string) 
+
+    
+* **trusted_secret_id** (string) 
 
     <br>
 
 ### GetSecretRequest
 * **secret_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -424,73 +711,47 @@ response_example: >-
     <br>
 
 ### SecretQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **secret_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **secret_type** (SecretType)  `Required` 
-
-  *is_required: false*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **provider** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **service_account_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **trusted_secret_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **secret_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **secret_type** (SecretType) 
+
+    
+* **schema** (string) 
+
+    
+* **provider** (string) 
+
+    
+* **service_account_id** (string) 
+
+    
+* **trusted_secret_id** (string) 
 
     <br>
 
 ### SecretRequest
 * **secret_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### SecretStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -505,53 +766,33 @@ response_example: >-
 ### UpdateSecretDataRequest
 * **secret_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **data** (Struct)  `Required` 
-
-  *is_required: true*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **schema** (string)  `Required` 
-
-  *is_required: false*
+* **schema** (string) 
 
     <br>
 
 ### UpdateSecretRequest
 * **secret_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
 
     
-* **release_project** (bool)  `Required` 
+* **tags** (Struct) 
 
-  *is_required: false*
+    
+* **project_id** (string) 
+
+    
+* **release_project** (bool) 
 
     <br>

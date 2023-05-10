@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Quota](#Quota)
-desc: A Quota is a limit on protocol usage for a day or a month. You can manage the use of the protocol with a Quota.
+A Quota is a limit on protocol usage for a day or a month. You can manage the use of the protocol with a Quota.
 
 
 >  **Package : spaceone.api.notification.v1**
@@ -38,25 +38,7 @@ desc: A Quota is a limit on protocol usage for a day or a month. You can manage 
 
 ### create
 
-desc: Creates a new Quota limiting the use of a selected Protocol for a day or a month. If the parameter `limit` has no value, it will be deemed unlimited. If a Protocol has not set a Quota, the default Quota set in the Config will be applied.
-request_example: >-
-{
-"protocol_id": "protocol-123456789012",
-"limit": {
-"day": 5.0,
-"month": 7.0
-}
-}
-response_example: >-
-{
-"quota_id": "quota-123456789012",
-"protocol_id": "protocol-123456789012",
-"limit": {
-"day": 5.0,
-"month": 7.0
-},
-"domain_id": "domain-123456789012"
-}
+Creates a new Quota limiting the use of a selected Protocol for a day or a month. If the parameter `limit` has no value, it will be deemed unlimited. If a Protocol has not set a Quota, the default Quota set in the Config will be applied.
 
 
 
@@ -67,31 +49,86 @@ response_example: >-
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateQuotaRequest](./Quota#createquotarequest)
+
+* **protocol_id** (string)  `Required` 
+
+
+* **limit** (Struct)  `Required` 
+
+  *The information about Quota limitation.*
+
+
+* **domain_id** (string)  `Required` 
+
+  *The ID of domain.*
+
+
+
+
+
+{{< highlight json >}}
+{
+   "protocol_id": "protocol-123456789012",
+   "limit": {
+       "day": 5.0,
+       "month": 7.0
+   }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[QuotaInfo](#QUOTAINFO)
+* **quota_id** (string)  `Required` 
+
+  The ID of Quota.
+
+* **protocol_id** (string)  `Required` 
+
+  The ID of Protocol.
+
+* **limit** (Struct)  `Required` 
+
+  The information about Quota limitation.
+
+* **domain_id** (string)  `Required` 
+
+  The ID of domain
+
+
+
+{{< highlight json >}}
+{
+   "quota_id": "quota-123456789012",
+   "protocol_id": "protocol-123456789012",
+   "limit": {
+       "day": 5.0,
+       "month": 7.0
+   },
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update
 
-desc: Updates a specific Quota. You can make changes in Quota `limit`, managing the use of the Protocol.
-request_example: >-
-{
-"quota_id": "quota-123456789012",
-"limit": {
-"day": 10.0,
-"month": 15.0
-}
-}
-response_example: >-
-{
-"quota_id": "quota-123456789012",
-"protocol_id": "protocol-123456789012",
-"limit": {
-"day": 10.0,
-"month": 15.0
-},
-"domain_id": "domain-123456789012"
-}
+Updates a specific Quota. You can make changes in Quota `limit`, managing the use of the Protocol.
 
 
 
@@ -102,17 +139,86 @@ response_example: >-
 
 
 
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateQuotaRequest](./Quota#updatequotarequest)
+
+* **quota_id** (string)  `Required` 
+
+  *The ID of Quota.*
+
+
+* **limit** (Struct)  `Required` 
+
+  *The information about Quota limitation.*
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "quota_id": "quota-123456789012",
+   "limit": {
+       "day": 10.0,
+       "month": 15.0
+   }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[QuotaInfo](#QUOTAINFO)
+* **quota_id** (string)  `Required` 
+
+  The ID of Quota.
+
+* **protocol_id** (string)  `Required` 
+
+  The ID of Protocol.
+
+* **limit** (Struct)  `Required` 
+
+  The information about Quota limitation.
+
+* **domain_id** (string)  `Required` 
+
+  The ID of domain
+
+
+
+{{< highlight json >}}
+{
+   "quota_id": "quota-123456789012",
+   "protocol_id": "protocol-123456789012",
+   "limit": {
+       "day": 5.0,
+       "month": 7.0
+   },
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### delete
 
-desc: Deletes a specific Quota. The default Quota set in the Config will be applied to the Protocol you deleted the Quota of.
-request_example: >-
-{
-"quota_id": "quota-123456789012"
-}
+Deletes a specific Quota. The default Quota set in the Config will be applied to the Protocol you deleted the Quota of.
 
 
 
@@ -123,27 +229,45 @@ request_example: >-
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[QuotaRequest](./Quota#quotarequest)
+
+* **quota_id** (string)  `Required` 
+
+  *The ID of Quota.*
+
+
+* **domain_id** (string)  `Required` 
+
+  *The ID of domain.*
+
+
+
+
+
+{{< highlight json >}}
+{
+   "quota_id": "quota-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get
 
-desc: Gets a specific Quota. Prints detailed information about the Quota, including the `limit` and the Protocol limited by the Quota.
-request_example: >-
-{
-"quota_id": "quota-123456789012"
-}
-response_example: >-
-{
-"quota_id": "quota-123456789012",
-"protocol_id": "protocol-123456789012",
-"limit": {
-"day": 10.0,
-"month": 15.0
-},
-"domain_id": "domain-123456789012"
-}
+Gets a specific Quota. Prints detailed information about the Quota, including the `limit` and the Protocol limited by the Quota.
 
 
 
@@ -154,41 +278,79 @@ response_example: >-
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[QuotaRequest](./Quota#quotarequest)
+
+* **quota_id** (string)  `Required` 
+
+  *The ID of Quota.*
+
+
+* **domain_id** (string)  `Required` 
+
+  *The ID of domain.*
+
+
+
+
+
+{{< highlight json >}}
+{
+   "quota_id": "quota-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[QuotaInfo](#QUOTAINFO)
+* **quota_id** (string)  `Required` 
+
+  The ID of Quota.
+
+* **protocol_id** (string)  `Required` 
+
+  The ID of Protocol.
+
+* **limit** (Struct)  `Required` 
+
+  The information about Quota limitation.
+
+* **domain_id** (string)  `Required` 
+
+  The ID of domain
+
+
+
+{{< highlight json >}}
+{
+   "quota_id": "quota-123456789012",
+   "protocol_id": "protocol-123456789012",
+   "limit": {
+       "day": 5.0,
+       "month": 7.0
+   },
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### list
 
-desc: Gets a list of all Quotas. You can use a query to get a filtered list of Quotas.
-request_example: >-
-{
-"query": {}
-}
-response_example: >-
-{
-"results": [
-{
-"quota_id": "quota-123456789012",
-"protocol_id": "protocol-123456789012",
-"limit": {
-"day": 10.0,
-"month": 15.0
-},
-"domain_id": "domain-123456789012"
-},
-{
-"quota_id": "quota-987654321098",
-"protocol_id": "protocol-987654321098",
-"limit": {
-"day": 5.0,
-"month": 7.0
-},
-"domain_id": "domain-123456789012"
-}
-],
-"total_count": 2
-}
+Gets a list of all Quotas. You can use a query to get a filtered list of Quotas.
 
 
 
@@ -198,6 +360,88 @@ response_example: >-
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[QuotaQuery](./Quota#quotaquery)
+
+* **domain_id** (string)  `Required` 
+
+  *The ID of domain.*
+
+
+* **query** (Query) 
+
+  *Query format provided by SpaceONE. Please check the link for more information.*
+
+
+* **quota_id** (string) 
+
+  *The ID of Quota.*
+
+
+* **protocol_id** (string) 
+
+  *The ID of Protocol.*
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[QuotasInfo](#QUOTASINFO)
+* **results** (QuotaInfo)  `Required` 
+
+  List of queried Quota.
+
+* **total_count** (int32)  `Required` 
+
+  Total counts of queried Quota.
+
+
+
+{{< highlight json >}}
+{
+   "results": [
+       {
+           "quota_id": "quota-123456789012",
+           "protocol_id": "protocol-123456789012",
+           "limit": {
+               "day": 10.0,
+               "month": 15.0
+           },
+           "domain_id": "domain-123456789012"
+       },
+       {
+           "quota_id": "quota-987654321098",
+           "protocol_id": "protocol-987654321098",
+           "limit": {
+               "day": 5.0,
+               "month": 7.0
+           },
+           "domain_id": "domain-123456789012"
+       }
+   ],
+   "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -230,125 +474,109 @@ response_example: >-
 ### CreateQuotaRequest
 * **protocol_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **limit** (Struct)  `Required` 
 
-  *is_required: true
-desc: The information about Quota limitation.*
+  *The information about Quota limitation.*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true
-desc: The ID of domain.*
+  *The ID of domain.*
 
     <br>
 
 ### QuotaInfo
 * **quota_id** (string)  `Required` 
 
-  *desc: The ID of Quota.*
+  *The ID of Quota.*
 
     
 * **protocol_id** (string)  `Required` 
 
-  *desc: The ID of Protocol.*
+  *The ID of Protocol.*
 
     
 * **limit** (Struct)  `Required` 
 
-  *desc: The information about Quota limitation.*
+  *The information about Quota limitation.*
 
     
 * **domain_id** (string)  `Required` 
 
-  *desc: The ID of domain*
+  *The ID of domain*
 
     <br>
 
 ### QuotaQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false
-desc: Query format provided by SpaceONE. Please check the link for more information.*
-
-    
-* **quota_id** (string)  `Required` 
-
-  *is_required: false
-desc: The ID of Quota.*
-
-    
-* **protocol_id** (string)  `Required` 
-
-  *is_required: false
-desc: The ID of Protocol.*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true
-desc: The ID of domain.*
+  *The ID of domain.*
+
+    
+* **query** (Query) 
+
+  *Query format provided by SpaceONE. Please check the link for more information.*
+
+    
+* **quota_id** (string) 
+
+  *The ID of Quota.*
+
+    
+* **protocol_id** (string) 
+
+  *The ID of Protocol.*
 
     <br>
 
 ### QuotaRequest
 * **quota_id** (string)  `Required` 
 
-  *is_required: true
-desc: The ID of Quota.*
+  *The ID of Quota.*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true
-desc: The ID of domain.*
+  *The ID of domain.*
 
     <br>
 
 ### QuotaStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true
-desc: Statistics Query format provided by SpaceONE. Please check the link for more information.*
+  *Statistics Query format provided by SpaceONE. Please check the link for more information.*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true
-desc: The ID of domain.*
+  *The ID of domain.*
 
     <br>
 
 ### QuotasInfo
 * **results** (QuotaInfo)  `Required` 
 
-  *desc: List of queried Quota.*
+  *List of queried Quota.*
 
     
 * **total_count** (int32)  `Required` 
 
-  *desc: Total counts of queried Quota.*
+  *Total counts of queried Quota.*
 
     <br>
 
 ### UpdateQuotaRequest
 * **quota_id** (string)  `Required` 
 
-  *is_required: true
-desc: The ID of Quota.*
+  *The ID of Quota.*
 
     
 * **limit** (Struct)  `Required` 
 
-  *is_required: true
-desc: The information about Quota limitation.*
+  *The information about Quota limitation.*
 
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>

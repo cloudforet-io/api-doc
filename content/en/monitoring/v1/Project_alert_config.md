@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Project_alert_config](#Project_alert_config)
-desc: A ProjectAlertConfig is a resource to set the alert policies for a Project.
+A ProjectAlertConfig is a resource to set the alert policies for a Project.
 
 
 >  **Package : spaceone.api.monitoring.v1**
@@ -38,31 +38,7 @@ desc: A ProjectAlertConfig is a resource to set the alert policies for a Project
 
 ### create
 
-desc: Creates a new ProjectAlertConfig in a specific Project. When creating a ProjectAlertConfig, validation of the Project is preceded. After the validation is done, ProjectAlertConfig enables EscalationPolicy to be set in the Project, or enables `enum` type `recovery_mode` and `notification_urgency` to be set through the `options` parameter.  The parameter `recovery_mode` is for changing the state of the Alert to `resolved` if the external monitoring solution sends the resolved Alert. The parameter `notification_urgency` is used to choose whether you will get all Alerts or only urgent ones.
-request_example: >-
-{
-"project_id": "project-dee2a81d4859",
-"escalation_policy_id": "ep-b441abe04ca9",
-"options": {
-"notification_urgency": "ALL",
-"recovery_mode": "AUTO"
-},
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"project_id": "project-dee2a81d4859",
-"options": {
-"notification_urgency": "ALL",
-"recovery_mode": "AUTO"
-},
-"escalation_policy_info": {
-"escalation_policy_id": "ep-b441abe04ca9",
-"name": "Global New Policy"
-},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-06-27T05:12:22.998Z"
-}
+Creates a new ProjectAlertConfig in a specific Project. When creating a ProjectAlertConfig, validation of the Project is preceded. After the validation is done, ProjectAlertConfig enables EscalationPolicy to be set in the Project, or enables `enum` type `recovery_mode` and `notification_urgency` to be set through the `options` parameter.  The parameter `recovery_mode` is for changing the state of the Alert to `resolved` if the external monitoring solution sends the resolved Alert. The parameter `notification_urgency` is used to choose whether you will get all Alerts or only urgent ones.
 
 
 
@@ -73,38 +49,85 @@ response_example: >-
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateProjectAlertConfigRequest](./ProjectAlertConfig#createprojectalertconfigrequest)
+
+* **project_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **escalation_policy_id** (string) 
+
+
+* **options** (AlertOptions) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "project_id": "project-dee2a81d4859",
+   "escalation_policy_id": "ep-b441abe04ca9",
+   "options": {
+       "notification_urgency": "ALL",
+       "recovery_mode": "AUTO"
+   },
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectAlertConfigInfo](#PROJECTALERTCONFIGINFO)
+* **project_id** (string)  `Required` 
+
+* **options** (AlertOptions)  `Required` 
+
+* **escalation_policy_info** (EscalationPolicyInfo)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_id": "project-dee2a81d4859",
+   "options": {
+       "notification_urgency": "ALL",
+       "recovery_mode": "AUTO"
+   },
+   "escalation_policy_info": {
+       "escalation_policy_id": "ep-b441abe04ca9",
+       "name": "Global New Policy"
+   },
+   "domain_id": "domain-58010aa2e451",
+   "created_at": "2022-06-27T05:12:22.998Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update
 
-desc: Updates a specific ProjectAlertConfig. You can make changes in ProjectAlertConfig settings, including the EscalationPolicy to apply. You can also change `notification_urgency` and `recovery_mode` by modifying the `options` parameter.
-request_example: >-
-{
-"project_id": "project-dee2a81d4859",
-"escalation_policy_id": "ep-4ee42a9b2d96",
-"options": {
-"notification_urgency": "ALL",
-"recovery_mode": "MANUAL"
-},
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"project_id": "project-dee2a81d4859",
-"options": {
-"notification_urgency": "ALL",
-"recovery_mode": "MANUAL"
-},
-"escalation_policy_info": {
-"escalation_policy_id": "ep-4ee42a9b2d96",
-"name": "HAHA",
-"is_default": true
-},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-06-27T05:15:02.697Z"
-}
+Updates a specific ProjectAlertConfig. You can make changes in ProjectAlertConfig settings, including the EscalationPolicy to apply. You can also change `notification_urgency` and `recovery_mode` by modifying the `options` parameter.
 
 
 
@@ -115,18 +138,85 @@ response_example: >-
 
 
 
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateProjectAlertConfigRequest](./ProjectAlertConfig#updateprojectalertconfigrequest)
+
+* **project_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **escalation_policy_id** (string) 
+
+
+* **options** (AlertOptions) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "project_id": "project-dee2a81d4859",
+   "escalation_policy_id": "ep-4ee42a9b2d96",
+   "options": {
+       "notification_urgency": "ALL",
+       "recovery_mode": "MANUAL"
+   },
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectAlertConfigInfo](#PROJECTALERTCONFIGINFO)
+* **project_id** (string)  `Required` 
+
+* **options** (AlertOptions)  `Required` 
+
+* **escalation_policy_info** (EscalationPolicyInfo)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_id": "project-dee2a81d4859",
+   "options": {
+       "notification_urgency": "ALL",
+       "recovery_mode": "AUTO"
+   },
+   "escalation_policy_info": {
+       "escalation_policy_id": "ep-b441abe04ca9",
+       "name": "Global New Policy"
+   },
+   "domain_id": "domain-58010aa2e451",
+   "created_at": "2022-06-27T05:12:22.998Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### delete
 
-desc: Deletes a specific ProjectAlertConfig. Deletes alert configuration data in a Project.
-request_example: >-
-{
-"project_id": "project-dee2a81d4859",
-"domain_id": "domain-58010aa2e451"
-}
+Deletes a specific ProjectAlertConfig. Deletes alert configuration data in a Project.
 
 
 
@@ -137,33 +227,42 @@ request_example: >-
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProjectAlertConfigRequest](./ProjectAlertConfig#projectalertconfigrequest)
+
+* **project_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "project_id": "project-dee2a81d4859",
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get
 
-desc: Gets a specific ProjectAlertConfig. Prints detailed information about the ProjectAlertConfig, including EscalationPolicy, recovery mode, and notification urgency.
-request_example: >-
-{
-"project_id": "project-430bf6ab1e6d",
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"project_id": "project-430bf6ab1e6d",
-"options": {
-"notification_urgency": "ALL",
-"recovery_mode": "AUTO"
-},
-"escalation_policy_info": {
-"escalation_policy_id": "ep-4ee42a9b2d96",
-"name": "HAHA",
-"is_default": true
-},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-05-03T08:17:11.715Z"
-}
+Gets a specific ProjectAlertConfig. Prints detailed information about the ProjectAlertConfig, including EscalationPolicy, recovery mode, and notification urgency.
 
 
 
@@ -174,51 +273,77 @@ response_example: >-
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GetProjectAlertConfigRequest](./ProjectAlertConfig#getprojectalertconfigrequest)
+
+* **project_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **only** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "project_id": "project-430bf6ab1e6d",
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectAlertConfigInfo](#PROJECTALERTCONFIGINFO)
+* **project_id** (string)  `Required` 
+
+* **options** (AlertOptions)  `Required` 
+
+* **escalation_policy_info** (EscalationPolicyInfo)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_id": "project-dee2a81d4859",
+   "options": {
+       "notification_urgency": "ALL",
+       "recovery_mode": "AUTO"
+   },
+   "escalation_policy_info": {
+       "escalation_policy_id": "ep-b441abe04ca9",
+       "name": "Global New Policy"
+   },
+   "domain_id": "domain-58010aa2e451",
+   "created_at": "2022-06-27T05:12:22.998Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### list
 
-desc: Gets a list of all ProjectAlertConfigs from all projects configured in the same domain. You can use a query to get a filtered list of ProjectAlertConfigs.
-request_example: >-
-{
-"query": {},
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"results": [
-{
-"project_id": "project-18655561c535",
-"options": {
-"notification_urgency": "ALL",
-"recovery_mode": "MANUAL"
-},
-"escalation_policy_info": {
-"escalation_policy_id": "ep-4ee42a9b2d96",
-"name": "HAHA",
-"is_default": true
-},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-05-17T02:09:19.839Z"
-},
-{
-"project_id": "project-9074eea97d7e",
-"options": {
-"notification_urgency": "ALL",
-"recovery_mode": "MANUAL"
-},
-"escalation_policy_info": {
-"escalation_policy_id": "ep-b441abe04ca9",
-"name": "Global New Policy"
-},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2021-06-24T02:50:50.535Z"
-}
-],
-"total_count": 2
-}
+Gets a list of all ProjectAlertConfigs from all projects configured in the same domain. You can use a query to get a filtered list of ProjectAlertConfigs.
 
 
 
@@ -228,6 +353,86 @@ response_example: >-
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProjectAlertConfigQuery](./ProjectAlertConfig#projectalertconfigquery)
+
+* **domain_id** (string)  `Required` 
+
+
+* **query** (Query) 
+
+
+* **project_id** (string) 
+
+
+* **escalation_policy_id** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {},
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectAlertConfigsInfo](#PROJECTALERTCONFIGSINFO)
+* **results** (ProjectAlertConfigInfo)  `Required` 
+
+* **total_count** (int32)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "results": [
+       {
+           "project_id": "project-18655561c535",
+           "options": {
+               "notification_urgency": "ALL",
+               "recovery_mode": "MANUAL"
+           },
+           "escalation_policy_info": {
+               "escalation_policy_id": "ep-4ee42a9b2d96",
+               "name": "HAHA",
+               "is_default": true
+           },
+           "domain_id": "domain-58010aa2e451",
+           "created_at": "2022-05-17T02:09:19.839Z"
+       },
+       {
+           "project_id": "project-9074eea97d7e",
+           "options": {
+               "notification_urgency": "ALL",
+               "recovery_mode": "MANUAL"
+           },
+           "escalation_policy_info": {
+               "escalation_policy_id": "ep-b441abe04ca9",
+               "name": "Global New Policy"
+           },
+           "domain_id": "domain-58010aa2e451",
+           "created_at": "2021-06-24T02:50:50.535Z"
+       }
+   ],
+   "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -268,39 +473,25 @@ response_example: >-
 ### CreateProjectAlertConfigRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **escalation_policy_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **options** (AlertOptions)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **escalation_policy_id** (string) 
+
+    
+* **options** (AlertOptions) 
 
     <br>
 
 ### GetProjectAlertConfigRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -322,48 +513,32 @@ response_example: >-
     <br>
 
 ### ProjectAlertConfigQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **escalation_policy_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **project_id** (string) 
+
+    
+* **escalation_policy_id** (string) 
 
     <br>
 
 ### ProjectAlertConfigRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### ProjectAlertConfigStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -378,21 +553,13 @@ response_example: >-
 ### UpdateProjectAlertConfigRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **escalation_policy_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **options** (AlertOptions)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **escalation_policy_id** (string) 
+
+    
+* **options** (AlertOptions) 
 
     <br>

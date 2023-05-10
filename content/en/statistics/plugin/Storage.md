@@ -85,29 +85,19 @@ bookFlatSection: true
 ### ExportRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
 
     
 * **data** (Struct)  `Required` 
 
-  *is_required: true*
+    
+* **schema** (string) 
 
     <br>
 
 ### InitRequest
 * **options** (Struct)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -119,16 +109,10 @@ bookFlatSection: true
 ### VerifyRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **secret_data** (Struct)  `Required` 
 
-  *is_required: true*
+    
+* **schema** (string) 
 
     <br>

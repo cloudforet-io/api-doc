@@ -166,59 +166,37 @@ bookFlatSection: true
 ### CreateSchemaRequest
 * **schema_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **name** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **sync_mode** (SyncMode)  `Required` 
-
-  *is_required: false*
-
-    
-* **sync_options** (SyncOptions)  `Required` 
-
-  *is_required: false*
 
     
 * **schema** (Struct)  `Required` 
 
-  *is_required: true*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **sync_mode** (SyncMode) 
+
+    
+* **sync_options** (SyncOptions) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetSchemaRequest
 * **schema_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **only** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **only** (string) 
 
     <br>
 
@@ -255,58 +233,38 @@ bookFlatSection: true
     <br>
 
 ### SchemaQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **schema_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **sync_mode** (SyncMode)  `Required` 
-
-  *is_required: false*
-
-    
-* **remote_repository_name** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **schema_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **sync_mode** (SyncMode) 
+
+    
+* **remote_repository_name** (string) 
 
     <br>
 
 ### SchemaRequest
 * **schema_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### SchemaStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -321,41 +279,27 @@ bookFlatSection: true
 ### UpdateSchemaRequest
 * **schema_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **sync_mode** (SyncMode)  `Required` 
-
-  *is_required: false*
-
-    
-* **sync_options** (SyncOptions)  `Required` 
-
-  *is_required: false*
-
     
 * **schema** (Struct)  `Required` 
 
   *is_required: flase*
 
     
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **sync_mode** (SyncMode) 
+
+    
+* **sync_options** (SyncOptions) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>

@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Notification_usage](#Notification_usage)
-desc: A NotificationUsage is a resource indicating daily Protocol usage. The limit set by the resource Quota is applied based on the NotificationUsage.
+A NotificationUsage is a resource indicating daily Protocol usage. The limit set by the resource Quota is applied based on the NotificationUsage.
 
 
 >  **Package : spaceone.api.notification.v1**
@@ -34,31 +34,7 @@ desc: A NotificationUsage is a resource indicating daily Protocol usage. The lim
 
 ### list
 
-desc: Gets a list of all NotificationUsages. You can use a query to get a filtered list of Notification Usages.
-request_example: >-
-{
-"query": {}
-}
-response_example: >-
-{
-"results": [
-{
-"protocol_id": "protocol-123456789012",
-"usage_date": "08",
-"usage_month": "2022-05",
-"count": 2,
-"domain_id": "domain-123456789012"
-},
-{
-"protocol_id": "protocol-123456789012",
-"usage_date": "18",
-"usage_month": "2022-05",
-"count": 7,
-"domain_id": "domain-123456789012"
-}
-],
-"total_count": 2
-}
+Gets a list of all NotificationUsages. You can use a query to get a filtered list of Notification Usages.
 
 
 
@@ -68,6 +44,79 @@ response_example: >-
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[NotificationUsageQuery](./NotificationUsage#notificationusagequery)
+
+* **domain_id** (string)  `Required` 
+
+  *The ID of domain.*
+
+
+* **query** (Query) 
+
+  *Query format provided by SpaceONE. Please check the link for more information.*
+
+
+* **protocol_id** (string) 
+
+  *The ID of Protocol.*
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[NotificationUsagesInfo](#NOTIFICATIONUSAGESINFO)
+* **results** (NotificationUsageInfo)  `Required` 
+
+  List of queried Notification Usage.
+
+* **total_count** (int32)  `Required` 
+
+  Total counts of queried Notification Usage.
+
+
+
+{{< highlight json >}}
+{
+   "results": [
+       {
+           "protocol_id": "protocol-123456789012",
+           "usage_date": "08",
+           "usage_month": "2022-05",
+           "count": 2,
+           "domain_id": "domain-123456789012"
+       },
+       {
+           "protocol_id": "protocol-123456789012",
+           "usage_date": "18",
+           "usage_month": "2022-05",
+           "count": 7,
+           "domain_id": "domain-123456789012"
+       }
+   ],
+   "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -100,77 +149,72 @@ response_example: >-
 ### NotificationUsageInfo
 * **protocol_id** (string)  `Required` 
 
-  *desc: The ID of Protocol.*
+  *The ID of Protocol.*
 
     
 * **usage_date** (string)  `Required` 
 
-  *desc: Usage Date.*
+  *Usage Date.*
 
     
 * **usage_month** (string)  `Required` 
 
-  *desc: Usage Month.*
+  *Usage Month.*
 
     
 * **count** (int32)  `Required` 
 
-  *desc: Usage count using actual notifications.*
+  *Usage count using actual notifications.*
 
     
 * **fail_count** (int32)  `Required` 
 
-  *desc: Fail count when dispatching notifications.*
+  *Fail count when dispatching notifications.*
 
     
 * **domain_id** (string)  `Required` 
 
-  *desc: The ID of domain*
+  *The ID of domain*
 
     <br>
 
 ### NotificationUsageQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false
-desc: Query format provided by SpaceONE. Please check the link for more information.*
-
-    
-* **protocol_id** (string)  `Required` 
-
-  *is_required: false
-desc: The ID of Protocol.*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true
-desc: The ID of domain.*
+  *The ID of domain.*
+
+    
+* **query** (Query) 
+
+  *Query format provided by SpaceONE. Please check the link for more information.*
+
+    
+* **protocol_id** (string) 
+
+  *The ID of Protocol.*
 
     <br>
 
 ### NotificationUsageStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true
-desc: Statistics Query format provided by SpaceONE. Please check the link for more information.*
+  *Statistics Query format provided by SpaceONE. Please check the link for more information.*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true
-desc: The ID of domain.*
+  *The ID of domain.*
 
     <br>
 
 ### NotificationUsagesInfo
 * **results** (NotificationUsageInfo)  `Required` 
 
-  *desc: List of queried Notification Usage.*
+  *List of queried Notification Usage.*
 
     
 * **total_count** (int32)  `Required` 
 
-  *desc: Total counts of queried Notification Usage.*
+  *Total counts of queried Notification Usage.*
 
     <br>

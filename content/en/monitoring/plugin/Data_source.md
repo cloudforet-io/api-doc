@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Data_source](#Data_source)
-desc: A DataSource is a plugin instance receiving Metric and Log data from cloud services.
+
 
 
 >  **Package : spaceone.api.monitoring.plugin**
@@ -34,7 +34,7 @@ desc: A DataSource is a plugin instance receiving Metric and Log data from cloud
 
 ### init
 
-desc: Initializes a specific DataSource. During initialization, the DataSource information to be passed to the DataSource user is delivered as `metadata`. DataSource information includes its name and version.
+Initializes a specific DataSource. During initialization, the DataSource information to be passed to the DataSource user is delivered as `metadata`. DataSource information includes its name and version.
 
 
 
@@ -48,7 +48,7 @@ desc: Initializes a specific DataSource. During initialization, the DataSource i
 
 ### verify
 
-desc: Verifies a specific DataSource. You must specify the parameter `secret_data`, encrypted account data of the DataSource to validate.
+Verifies a specific DataSource. You must specify the parameter `secret_data`, encrypted account data of the DataSource to validate.
 
 
 
@@ -70,8 +70,6 @@ desc: Verifies a specific DataSource. You must specify the parameter `secret_dat
 ### InitRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     <br>
 
 ### PluginInfo
@@ -82,16 +80,10 @@ desc: Verifies a specific DataSource. You must specify the parameter `secret_dat
 ### PluginVerifyRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
 
-  *is_required: true*
-
     
-* **schema** (string)  `Required` 
-
-  *is_required: false*
+* **schema** (string) 
 
     <br>

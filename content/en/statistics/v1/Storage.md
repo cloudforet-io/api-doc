@@ -220,17 +220,11 @@ bookFlatSection: true
 ### GetStorageRequest
 * **storage_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -271,27 +265,17 @@ bookFlatSection: true
 ### RegisterStorageRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **plugin_info** (PluginRequest)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **user_id** (string)  `Required` 
-
-  *is_required: true*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **plugin_info** (PluginRequest) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
@@ -328,58 +312,38 @@ bookFlatSection: true
     <br>
 
 ### StorageQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **storage_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **state** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **storage_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **state** (string) 
+
+    
+* **user_id** (string) 
 
     <br>
 
 ### StorageRequest
 * **storage_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### StorageStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -394,48 +358,30 @@ bookFlatSection: true
 ### UpdateStoragePluginRequest
 * **storage_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **version** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **options** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **secret_data** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **version** (string) 
+
+    
+* **options** (Struct) 
+
+    
+* **secret_data** (Struct) 
 
     <br>
 
 ### UpdateStorageRequest
 * **storage_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **tags** (Struct) 
 
     <br>

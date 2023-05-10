@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Event_rule](#Event_rule)
-desc: An EventRule is a rule to transform the request data when an Event is generated.
+An EventRule is a rule to transform the request data when an Event is generated.
 
 
 >  **Package : spaceone.api.monitoring.v1**
@@ -39,48 +39,7 @@ desc: An EventRule is a rule to transform the request data when an Event is gene
 
 ### create
 
-desc: Creates a new EventRule. You can filter the Events to apply the EventRule by setting the input parameter `Conditions`. The method can change the Events' assignee or Project.
-request_example: >-
-{
-"conditions": [{"key": "description", "value": "API", "operator": "contain"}],
-"conditions_policy": "ALL",
-"actions": {"change_assignee": "user1@email.com",
-"change_urgency": "LOW",
-"change_project": "project-123456789012",
-"add_additional_info": {"type": "personal rule"},
-"no_notification": true},
-"options": {},
-"project_id": "project-123456789012",
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"event_rule_id": "er-123456789012",
-"order": 1,
-"conditions": [
-{
-"key": "description",
-"value": "API",
-"operator": "contain"
-}
-],
-"conditions_policy": "ALL",
-"actions": {
-"change_assignee": "user1@email.com",
-"change_urgency": "LOW",
-"change_project": "project-123456789012",
-"add_additional_info": {
-"type": "personal rule"
-},
-"no_notification": true
-},
-"options": {},
-"scope": "PROJECT",
-"project_id": "project-123456789012",
-"tags": {},
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-02T06:02:31.517Z"
-}
+Creates a new EventRule. You can filter the Events to apply the EventRule by setting the input parameter `Conditions`. The method can change the Events' assignee or Project.
 
 
 
@@ -91,54 +50,128 @@ response_example: >-
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateEventRuleRequest](./EventRule#createeventrulerequest)
+
+* **name** (string)  `Required` 
+
+
+* **conditions** (EventRuleCondition)  `Required` 
+
+
+* **conditions_policy** (ConditionsPolicy)  `Required` 
+
+
+* **actions** (EventRuleActions)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **options** (EventRuleOptions) 
+
+
+* **project_id** (string) 
+
+
+* **tags** (Struct) 
+
+
+
+
+
+{{< highlight json >}}
+{
+     "conditions": [{"key": "description", "value": "API", "operator": "contain"}],
+     "conditions_policy": "ALL",
+     "actions": {"change_assignee": "user1@email.com",
+     "change_urgency": "LOW",
+     "change_project": "project-123456789012",
+     "add_additional_info": {"type": "personal rule"},
+     "no_notification": true},
+     "options": {},
+     "project_id": "project-123456789012",
+     "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EventRuleInfo](#EVENTRULEINFO)
+* **event_rule_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **order** (int32)  `Required` 
+
+* **conditions** (EventRuleCondition)  `Required` 
+
+* **conditions_policy** (ConditionsPolicy)  `Required` 
+
+* **actions** (EventRuleActions)  `Required` 
+
+* **options** (EventRuleOptions)  `Required` 
+
+* **scope** (EventRuleScope)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "event_rule_id": "er-123456789012",
+     "order": 1,
+     "conditions": [
+     {
+     "key": "description",
+     "value": "API",
+     "operator": "contain"
+     }
+     ],
+     "conditions_policy": "ALL",
+     "actions": {
+     "change_assignee": "user1@email.com",
+     "change_urgency": "LOW",
+     "change_project": "project-123456789012",
+     "add_additional_info": {
+     "type": "personal rule"
+     },
+     "no_notification": true
+     },
+     "options": {},
+     "scope": "PROJECT",
+     "project_id": "project-123456789012",
+     "tags": {},
+     "domain_id": "domain-123456789012",
+     "created_at": "2022-01-02T06:02:31.517Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update
 
-desc: Changes a priority order between EventRules to apply. EventRules are filtered by the order configured.
-request_example: >-
-{
-"event_rule_id": "er-123456789012",
-"conditions": [{"key": "description", "value": "ELB", "operator": "contain"}],
-"conditions_policy": "ALL",
-"actions": {"change_assignee": "user2@email.com",
-"change_urgency": "HIGH",
-"change_project": "project-123456789012",
-"add_additional_info": {"type": "personal rule"},
-"no_notification": true},
-"options": {},
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"event_rule_id": "er-123456789012",
-"order": 2,
-"conditions": [
-{
-"key": "description",
-"value": "ELB",
-"operator": "contain"
-}
-],
-"conditions_policy": "ALL",
-"actions": {
-"change_assignee": "user2@email.com",
-"change_urgency": "HIGH",
-"change_project": "project-123456789012",
-"add_additional_info": {
-"type": "personal rule"
-},
-"no_notification": true
-},
-"options": {},
-"scope": "PROJECT",
-"project_id": "project-123456789012",
-"tags": {},
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T06:02:31.517Z"
-}
+Changes a priority order between EventRules to apply. EventRules are filtered by the order configured.
 
 
 
@@ -149,47 +182,128 @@ response_example: >-
 
 
 
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateEventRuleRequest](./EventRule#updateeventrulerequest)
+
+* **event_rule_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **name** (string) 
+
+
+* **conditions** (EventRuleCondition) 
+
+
+* **conditions_policy** (ConditionsPolicy) 
+
+
+* **actions** (EventRuleActions) 
+
+
+* **options** (EventRuleOptions) 
+
+
+* **tags** (Struct) 
+
+
+
+
+
+{{< highlight json >}}
+{
+     "event_rule_id": "er-123456789012",
+     "conditions": [{"key": "description", "value": "ELB", "operator": "contain"}],
+     "conditions_policy": "ALL",
+     "actions": {"change_assignee": "user2@email.com",
+     "change_urgency": "HIGH",
+     "change_project": "project-123456789012",
+     "add_additional_info": {"type": "personal rule"},
+     "no_notification": true},
+     "options": {},
+     "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EventRuleInfo](#EVENTRULEINFO)
+* **event_rule_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **order** (int32)  `Required` 
+
+* **conditions** (EventRuleCondition)  `Required` 
+
+* **conditions_policy** (ConditionsPolicy)  `Required` 
+
+* **actions** (EventRuleActions)  `Required` 
+
+* **options** (EventRuleOptions)  `Required` 
+
+* **scope** (EventRuleScope)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "event_rule_id": "er-123456789012",
+     "order": 1,
+     "conditions": [
+     {
+     "key": "description",
+     "value": "API",
+     "operator": "contain"
+     }
+     ],
+     "conditions_policy": "ALL",
+     "actions": {
+     "change_assignee": "user1@email.com",
+     "change_urgency": "LOW",
+     "change_project": "project-123456789012",
+     "add_additional_info": {
+     "type": "personal rule"
+     },
+     "no_notification": true
+     },
+     "options": {},
+     "scope": "PROJECT",
+     "project_id": "project-123456789012",
+     "tags": {},
+     "domain_id": "domain-123456789012",
+     "created_at": "2022-01-02T06:02:31.517Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### change_order
 
-desc: Updates a specific EventRule. You can make changes in EventRule settings.
-request_example: >-
-{
-"event_rule_id": "er-123456789012",
-"order": 2,
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"event_rule_id": "er-123456789012",
-"order": 2,
-"conditions": [
-{
-"key": "description",
-"value": "API",
-"operator": "contain"
-}
-],
-"conditions_policy": "ALL",
-"actions": {
-"change_assignee": "user1@email.com",
-"change_urgency": "LOW",
-"change_project": "project-123456789012",
-"add_additional_info": {
-"type": "personal rule"
-},
-"no_notification": true
-},
-"options": {},
-"scope": "PROJECT",
-"project_id": "project-123456789012",
-"tags": {},
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-02T06:02:31.517Z"
-}
+Updates a specific EventRule. You can make changes in EventRule settings.
 
 
 
@@ -200,18 +314,106 @@ response_example: >-
 
 
 
+ {{< tabs " change_order " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ChangeEventRuleOrderRequest](./EventRule#changeeventruleorderrequest)
+
+* **event_rule_id** (string)  `Required` 
+
+
+* **order** (int32)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "event_rule_id": "er-123456789012", 
+   "order": 2,
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EventRuleInfo](#EVENTRULEINFO)
+* **event_rule_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **order** (int32)  `Required` 
+
+* **conditions** (EventRuleCondition)  `Required` 
+
+* **conditions_policy** (ConditionsPolicy)  `Required` 
+
+* **actions** (EventRuleActions)  `Required` 
+
+* **options** (EventRuleOptions)  `Required` 
+
+* **scope** (EventRuleScope)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "event_rule_id": "er-123456789012",
+     "order": 1,
+     "conditions": [
+     {
+     "key": "description",
+     "value": "API",
+     "operator": "contain"
+     }
+     ],
+     "conditions_policy": "ALL",
+     "actions": {
+     "change_assignee": "user1@email.com",
+     "change_urgency": "LOW",
+     "change_project": "project-123456789012",
+     "add_additional_info": {
+     "type": "personal rule"
+     },
+     "no_notification": true
+     },
+     "options": {},
+     "scope": "PROJECT",
+     "project_id": "project-123456789012",
+     "tags": {},
+     "domain_id": "domain-123456789012",
+     "created_at": "2022-01-02T06:02:31.517Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### delete
 
-desc: Deletes a specific EventRule. You must assign an EventRule resource to delete by specifying `event_rule_id`.
-request_example: >-
-{
-"event_rule_id": "er-123456789012",
-"domain_id": "domain-123456789012"
-}
+Deletes a specific EventRule. You must assign an EventRule resource to delete by specifying `event_rule_id`.
 
 
 
@@ -222,44 +424,43 @@ request_example: >-
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[EventRuleRequest](./EventRule#eventrulerequest)
+
+* **event_rule_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "event_rule_id": "er-123456789012",
+   "order": 2,
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get
 
-desc: Gets a specific EventRule. Prints detailed information about the EventRule.
-request_example: >-
-{
-"event_rule_id": "er-123456789012",
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"event_rule_id": "er-123456789012",
-"order": 2,
-"conditions": [
-{
-"key": "title",
-"value": "ELB",
-"operator": "contain"
-}
-],
-"conditions_policy": "ALL",
-"actions": {
-"change_assignee": "user1@email.com",
-"change_urgency": "LOW",
-"change_project": "project-123456789012",
-"add_additional_info": {},
-"no_notification": true
-},
-"options": {},
-"scope": "PROJECT",
-"project_id": "project-123456789012",
-"tags": {},
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T06:12:30.226Z"
-}
+Gets a specific EventRule. Prints detailed information about the EventRule.
 
 
 
@@ -270,73 +471,105 @@ response_example: >-
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GetEventRuleRequest](./EventRule#geteventrulerequest)
+
+* **event_rule_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **only** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "event_rule_id": "er-123456789012",
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EventRuleInfo](#EVENTRULEINFO)
+* **event_rule_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **order** (int32)  `Required` 
+
+* **conditions** (EventRuleCondition)  `Required` 
+
+* **conditions_policy** (ConditionsPolicy)  `Required` 
+
+* **actions** (EventRuleActions)  `Required` 
+
+* **options** (EventRuleOptions)  `Required` 
+
+* **scope** (EventRuleScope)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "event_rule_id": "er-123456789012",
+     "order": 1,
+     "conditions": [
+     {
+     "key": "description",
+     "value": "API",
+     "operator": "contain"
+     }
+     ],
+     "conditions_policy": "ALL",
+     "actions": {
+     "change_assignee": "user1@email.com",
+     "change_urgency": "LOW",
+     "change_project": "project-123456789012",
+     "add_additional_info": {
+     "type": "personal rule"
+     },
+     "no_notification": true
+     },
+     "options": {},
+     "scope": "PROJECT",
+     "project_id": "project-123456789012",
+     "tags": {},
+     "domain_id": "domain-123456789012",
+     "created_at": "2022-01-02T06:02:31.517Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### list
 
-desc: Gets a list of all EventRules. You can use a query to get a filtered list of EventRules. For example, you can adjust the scope of the list to a certain Project or Domain.
-request_example: >-
-{
-"project_id": "project-123456789012",
-"domain_id": "domain-123456789012"
-}
-response_example: >-
-{
-"results": [
-{
-"event_rule_id": "er-123456789012",
-"order": 1,
-"conditions": [
-{
-"key": "title",
-"value": "AWS",
-"operator": "contain"
-}
-],
-"conditions_policy": "ALL",
-"actions": {
-"change_assignee": "user2@email.com",
-"change_urgency": "HIGH",
-"add_additional_info": {},
-"no_notification": true
-},
-"options": {},
-"scope": "PROJECT",
-"project_id": "project-123456789012",
-"tags": {},
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T06:33:58.388Z"
-},
-{
-"event_rule_id": "er-123456789012",
-"order": 2,
-"conditions": [
-{
-"key": "title",
-"value": "ELB",
-"operator": "contain"
-}
-],
-"conditions_policy": "ALL",
-"actions": {
-"change_assignee": "user1@email.com",
-"change_urgency": "LOW",
-"change_project": "project-123456789012",
-"add_additional_info": {},
-"no_notification": true
-},
-"options": {},
-"scope": "PROJECT",
-"project_id": "project-123456789012",
-"tags": {},
-"domain_id": "domain-123456789012",
-"created_at": "2022-01-01T06:12:30.226Z"
-}
-],
-"total_count": 2
-}
+Gets a list of all EventRules. You can use a query to get a filtered list of EventRules. For example, you can adjust the scope of the list to a certain Project or Domain.
 
 
 
@@ -346,6 +579,114 @@ response_example: >-
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[EventRuleQuery](./EventRule#eventrulequery)
+
+* **domain_id** (string)  `Required` 
+
+
+* **query** (Query) 
+
+
+* **event_rule_id** (string) 
+
+
+* **name** (string) 
+
+
+* **scope** (EventRuleScope) 
+
+
+* **project_id** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "project_id": "project-123456789012",
+   "domain_id": "domain-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EventRulesInfo](#EVENTRULESINFO)
+* **results** (EventRuleInfo)  `Required` 
+
+* **total_count** (int32)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "results": [
+     {
+     "event_rule_id": "er-123456789012",
+     "order": 1,
+     "conditions": [
+     {
+     "key": "title",
+     "value": "AWS",
+     "operator": "contain"
+     }
+     ],
+     "conditions_policy": "ALL",
+     "actions": {
+     "change_assignee": "user2@email.com",
+     "change_urgency": "HIGH",
+     "add_additional_info": {},
+     "no_notification": true
+     },
+     "options": {},
+     "scope": "PROJECT",
+     "project_id": "project-123456789012",
+     "tags": {},
+     "domain_id": "domain-123456789012",
+     "created_at": "2022-01-01T06:33:58.388Z"
+     },
+     {
+     "event_rule_id": "er-123456789012",
+     "order": 2,
+     "conditions": [
+     {
+     "key": "title",
+     "value": "ELB",
+     "operator": "contain"
+     }
+     ],
+     "conditions_policy": "ALL",
+     "actions": {
+     "change_assignee": "user1@email.com",
+     "change_urgency": "LOW",
+     "change_project": "project-123456789012",
+     "add_additional_info": {},
+     "no_notification": true
+     },
+     "options": {},
+     "scope": "PROJECT",
+     "project_id": "project-123456789012",
+     "tags": {},
+     "domain_id": "domain-123456789012",
+     "created_at": "2022-01-01T06:12:30.226Z"
+     }
+     ],
+     "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -378,59 +719,37 @@ response_example: >-
 ### ChangeEventRuleOrderRequest
 * **event_rule_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **order** (int32)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### CreateEventRuleRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **conditions** (EventRuleCondition)  `Required` 
-
-  *is_required: true*
 
     
 * **conditions_policy** (ConditionsPolicy)  `Required` 
 
-  *is_required: true*
-
     
 * **actions** (EventRuleActions)  `Required` 
-
-  *is_required: true*
-
-    
-* **options** (EventRuleOptions)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **options** (EventRuleOptions) 
+
+    
+* **project_id** (string) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
@@ -523,58 +842,38 @@ response_example: >-
     <br>
 
 ### EventRuleQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **event_rule_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **scope** (EventRuleScope)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **event_rule_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **scope** (EventRuleScope) 
+
+    
+* **project_id** (string) 
 
     <br>
 
 ### EventRuleRequest
 * **event_rule_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### EventRuleStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -589,17 +888,11 @@ response_example: >-
 ### GetEventRuleRequest
 * **event_rule_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -614,41 +907,25 @@ response_example: >-
 ### UpdateEventRuleRequest
 * **event_rule_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **conditions** (EventRuleCondition)  `Required` 
-
-  *is_required: false*
-
-    
-* **conditions_policy** (ConditionsPolicy)  `Required` 
-
-  *is_required: false*
-
-    
-* **actions** (EventRuleActions)  `Required` 
-
-  *is_required: false*
-
-    
-* **options** (EventRuleOptions)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **conditions** (EventRuleCondition) 
+
+    
+* **conditions_policy** (ConditionsPolicy) 
+
+    
+* **actions** (EventRuleActions) 
+
+    
+* **options** (EventRuleOptions) 
+
+    
+* **tags** (Struct) 
 
     <br>

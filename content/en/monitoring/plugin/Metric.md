@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Metric](#Metric)
-desc: A Metric is a monitoring metric data delivered from an external cloud service via a DataSource.
+A Metric is a monitoring metric data delivered from an external cloud service via a DataSource.
 
 
 >  **Package : spaceone.api.monitoring.plugin**
@@ -34,7 +34,7 @@ desc: A Metric is a monitoring metric data delivered from an external cloud serv
 
 ### list
 
-desc: Gets a list of all Metrics from a specific cloud service. You can use the method to list up the Metrics to collect before using the `get_data` method to collect the Metrics.
+Gets a list of all Metrics from a specific cloud service. You can use the method to list up the Metrics to collect before using the `get_data` method to collect the Metrics.
 
 
 
@@ -48,7 +48,7 @@ desc: Gets a list of all Metrics from a specific cloud service. You can use the 
 
 ### get_data
 
-desc: Gets a Metric from a specific cloud service resource `instance`. By specifying the time period to collect the Metric, the Metric data value of the `instance` during the period is returned.
+Gets a Metric from a specific cloud service resource `instance`. By specifying the time period to collect the Metric, the Metric data value of the `instance` during the period is returned.
 
 
 
@@ -78,48 +78,31 @@ desc: Gets a Metric from a specific cloud service resource `instance`. By specif
 ### MetricDataRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
 
     
 * **metric_query** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **metric** (string)  `Required` 
 
-  *is_required: true
-desc: metric identifier in case of requested metric info is not a single.*
+  *metric identifier in case of requested metric info is not a single.*
 
     
 * **start** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **end** (string)  `Required` 
 
-  *is_required: true*
+    
+* **period** (int32) 
 
     
-* **period** (int32)  `Required` 
-
-  *is_required: false*
+* **stat** (string) 
 
     
-* **stat** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
+* **schema** (string) 
 
     <br>
 
@@ -143,22 +126,14 @@ desc: metric identifier in case of requested metric info is not a single.*
 ### MetricRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
 
     
 * **query** (Struct)  `Required` 
 
-  *is_required: true*
-
     
-* **schema** (string)  `Required` 
-
-  *is_required: false*
+* **schema** (string) 
 
     <br>
 

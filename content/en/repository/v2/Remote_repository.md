@@ -76,8 +76,6 @@ bookFlatSection: true
 ### GetRemoteRepository
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     <br>
 
 ### RemoteRepositoriesInfo
@@ -106,13 +104,9 @@ bookFlatSection: true
     <br>
 
 ### RemoteRepositoryQuery
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **name** (string) 
 
     
-* **version** (string)  `Required` 
-
-  *is_required: false*
+* **version** (string) 
 
     <br>

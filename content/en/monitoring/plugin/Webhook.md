@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Webhook](#Webhook)
-desc: A Webhook is a plugin receiving data from external monitoring systems.
+A Webhook is a plugin receiving data from external monitoring systems.
 
 
 >  **Package : spaceone.api.monitoring.plugin**
@@ -34,7 +34,7 @@ desc: A Webhook is a plugin receiving data from external monitoring systems.
 
 ### init
 
-desc: Verifies a specific Webhook. You must specify the parameter `secret_data`, encrypted account data of the Webhook to validate.
+Verifies a specific Webhook. You must specify the parameter `secret_data`, encrypted account data of the Webhook to validate.
 
 
 
@@ -48,7 +48,7 @@ desc: Verifies a specific Webhook. You must specify the parameter `secret_data`,
 
 ### verify
 
-desc: Initializes a specific Webhook. During initialization, the Webhook information to be passed to the Webhook user is delivered as `metadata`. Webhook information includes its name and version.
+Initializes a specific Webhook. During initialization, the Webhook information to be passed to the Webhook user is delivered as `metadata`. Webhook information includes its name and version.
 
 
 
@@ -70,8 +70,6 @@ desc: Initializes a specific Webhook. During initialization, the Webhook informa
 ### WebhookInitRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     <br>
 
 ### WebhookPluginInfo
@@ -81,7 +79,5 @@ desc: Initializes a specific Webhook. During initialization, the Webhook informa
 
 ### WebhookPluginVerifyRequest
 * **options** (Struct)  `Required` 
-
-  *is_required: true*
 
     <br>

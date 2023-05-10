@@ -153,67 +153,41 @@ bookFlatSection: true
 ### CreateProviderRequest
 * **provider** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **name** (string)  `Required` 
 
-  *is_required: true*
+    
+* **sync_mode** (SyncMode) 
 
     
-* **sync_mode** (SyncMode)  `Required` 
-
-  *is_required: false*
+* **sync_options** (SyncOptions) 
 
     
-* **sync_options** (SyncOptions)  `Required` 
-
-  *is_required: false*
+* **description** (Description) 
 
     
-* **description** (Description)  `Required` 
-
-  *is_required: false*
+* **schema** (ProviderSchema) 
 
     
-* **schema** (ProviderSchema)  `Required` 
-
-  *is_required: false*
+* **capability** (Capability) 
 
     
-* **capability** (Capability)  `Required` 
-
-  *is_required: false*
+* **color** (string) 
 
     
-* **color** (string)  `Required` 
-
-  *is_required: false*
+* **icon** (string) 
 
     
-* **icon** (string)  `Required` 
-
-  *is_required: false*
+* **reference** (Reference) 
 
     
-* **reference** (Reference)  `Required` 
-
-  *is_required: false*
+* **labels** (ListValue) 
 
     
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
+* **tags** (Struct) 
 
     
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
@@ -228,17 +202,11 @@ bookFlatSection: true
 ### GetProviderRequest
 * **provider** (string)  `Required` 
 
-  *is_required: true*
+    
+* **only** (string) 
 
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
@@ -290,46 +258,30 @@ bookFlatSection: true
     <br>
 
 ### ProviderQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
+* **query** (Query) 
 
     
-* **provider** (string)  `Required` 
-
-  *is_required: false*
+* **provider** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **name** (string) 
 
     
-* **sync_mode** (SyncMode)  `Required` 
-
-  *is_required: false*
+* **sync_mode** (SyncMode) 
 
     
-* **remote_repository_name** (string)  `Required` 
-
-  *is_required: false*
+* **remote_repository_name** (string) 
 
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
 ### ProviderRequest
 * **provider** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
@@ -363,66 +315,40 @@ bookFlatSection: true
 ### UpdateProviderRequest
 * **provider** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **sync_mode** (SyncMode) 
 
     
-* **sync_mode** (SyncMode)  `Required` 
-
-  *is_required: false*
+* **sync_options** (SyncOptions) 
 
     
-* **sync_options** (SyncOptions)  `Required` 
-
-  *is_required: false*
+* **description** (Description) 
 
     
-* **description** (Description)  `Required` 
-
-  *is_required: false*
+* **schema** (ProviderSchema) 
 
     
-* **schema** (ProviderSchema)  `Required` 
-
-  *is_required: false*
+* **capability** (Capability) 
 
     
-* **capability** (Capability)  `Required` 
-
-  *is_required: false*
+* **color** (string) 
 
     
-* **color** (string)  `Required` 
-
-  *is_required: false*
+* **icon** (string) 
 
     
-* **icon** (string)  `Required` 
-
-  *is_required: false*
+* **reference** (Reference) 
 
     
-* **reference** (Reference)  `Required` 
-
-  *is_required: false*
+* **labels** (ListValue) 
 
     
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
+* **tags** (Struct) 
 
     
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>

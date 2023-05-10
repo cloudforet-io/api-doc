@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Escalation_policy](#Escalation_policy)
-desc: An EscalationPolicy is a set of rules to deliver an alert to assigned members.
+An EscalationPolicy is a set of rules to deliver an alert to assigned members.
 
 
 >  **Package : spaceone.api.monitoring.v1**
@@ -39,37 +39,7 @@ desc: An EscalationPolicy is a set of rules to deliver an alert to assigned memb
 
 ### create
 
-desc: Creates a new EscalationPolicy. When creating an EscalationPolicy, if the project_id is assigned, the EscalationPolicy is applied to the Project with the same project_id. If an EscalationPolicy is set as a global policy, all Projects in the same domain can apply the policy.
-request_example: >-
-{
-"name": "es-test",
-"rules": [{"notification_level": "LV1", "escalate_minutes": 30},
-{"notification_level": "LV2", "escalate_minutes": 30}],
-"repeat_count": 2,
-"finish_condition": "ACKNOWLEDGED",
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"escalation_policy_id": "ep-526e536fdca9",
-"name": "es-test",
-"rules": [
-{
-"notification_level": "LV1",
-"escalate_minutes": 30
-},
-{
-"notification_level": "LV2",
-"escalate_minutes": 30
-}
-],
-"repeat_count": 2,
-"finish_condition": "ACKNOWLEDGED",
-"scope": "DOMAIN",
-"tags": {},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-06-21T09:22:45.340Z"
-}
+Creates a new EscalationPolicy. When creating an EscalationPolicy, if the project_id is assigned, the EscalationPolicy is applied to the Project with the same project_id. If an EscalationPolicy is set as a global policy, all Projects in the same domain can apply the policy.
 
 
 
@@ -80,49 +50,112 @@ response_example: >-
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateEscalationPolicyRequest](./EscalationPolicy#createescalationpolicyrequest)
+
+* **name** (string)  `Required` 
+
+
+* **rules** (EscalationPolicyRule)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **repeat_count** (int32) 
+
+
+* **finish_condition** (EscalationFinishCondition) 
+
+
+* **project_id** (string) 
+
+
+* **tags** (Struct) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "name": "es-test",
+   "rules": [{"notification_level": "LV1", "escalate_minutes": 30},
+             {"notification_level": "LV2", "escalate_minutes": 30}],
+   "repeat_count": 2,
+   "finish_condition": "ACKNOWLEDGED",
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EscalationPolicyInfo](#ESCALATIONPOLICYINFO)
+* **escalation_policy_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **is_default** (bool)  `Required` 
+
+* **rules** (EscalationPolicyRule)  `Required` 
+
+* **repeat_count** (int32)  `Required` 
+
+* **finish_condition** (EscalationFinishCondition)  `Required` 
+
+* **scope** (EscalationPolicyScope)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+       "escalation_policy_id": "ep-526e536fdca9",
+       "name": "es-test",
+       "rules": [
+           {
+               "notification_level": "LV1",
+               "escalate_minutes": 30
+           },
+           {
+               "notification_level": "LV2",
+               "escalate_minutes": 30
+           }
+       ],
+       "repeat_count": 2,
+       "finish_condition": "ACKNOWLEDGED",
+       "scope": "DOMAIN",
+       "tags": {},
+       "domain_id": "domain-58010aa2e451",
+       "created_at": "2022-06-21T09:22:45.340Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update
 
-desc: Updates a specific EscalationPolicy. You can make changes in EscalationPolicy settings, including the name, the escalation process, and the number of iterations.
-request_example: >-
-{
-"escalation_policy_id": "ep-526e536fdca9",
-"name": "es-test2",
-"rules": [{"notification_level": "LV1", "escalate_minutes": 15},
-{"notification_level": "LV2", "escalate_minutes": 15},
-{"notification_level": "LV3", "escalate_minutes": 15}],
-"repeat_count": 1,
-"finish_condition": "RESOLVED",
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"escalation_policy_id": "ep-526e536fdca9",
-"name": "es-test2",
-"rules": [
-{
-"notification_level": "LV1",
-"escalate_minutes": 15
-},
-{
-"notification_level": "LV2",
-"escalate_minutes": 15
-},
-{
-"notification_level": "LV3",
-"escalate_minutes": 15
-}
-],
-"repeat_count": 1,
-"finish_condition": "RESOLVED",
-"scope": "DOMAIN",
-"tags": {},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-06-21T09:22:45.340Z"
-}
+Updates a specific EscalationPolicy. You can make changes in EscalationPolicy settings, including the name, the escalation process, and the number of iterations.
 
 
 
@@ -133,44 +166,114 @@ response_example: >-
 
 
 
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateEscalationPolicyRequest](./EscalationPolicy#updateescalationpolicyrequest)
+
+* **escalation_policy_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **name** (string) 
+
+
+* **rules** (EscalationPolicyRule) 
+
+
+* **repeat_count** (int32) 
+
+
+* **finish_condition** (EscalationFinishCondition) 
+
+
+* **tags** (Struct) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "escalation_policy_id": "ep-526e536fdca9",
+   "name": "es-test2",
+   "rules": [{"notification_level": "LV1", "escalate_minutes": 15},
+             {"notification_level": "LV2", "escalate_minutes": 15},
+             {"notification_level": "LV3", "escalate_minutes": 15}],
+   "repeat_count": 1,
+   "finish_condition": "RESOLVED",
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EscalationPolicyInfo](#ESCALATIONPOLICYINFO)
+* **escalation_policy_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **is_default** (bool)  `Required` 
+
+* **rules** (EscalationPolicyRule)  `Required` 
+
+* **repeat_count** (int32)  `Required` 
+
+* **finish_condition** (EscalationFinishCondition)  `Required` 
+
+* **scope** (EscalationPolicyScope)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+       "escalation_policy_id": "ep-526e536fdca9",
+       "name": "es-test",
+       "rules": [
+           {
+               "notification_level": "LV1",
+               "escalate_minutes": 30
+           },
+           {
+               "notification_level": "LV2",
+               "escalate_minutes": 30
+           }
+       ],
+       "repeat_count": 2,
+       "finish_condition": "ACKNOWLEDGED",
+       "scope": "DOMAIN",
+       "tags": {},
+       "domain_id": "domain-58010aa2e451",
+       "created_at": "2022-06-21T09:22:45.340Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### set_default
 
-desc: Sets a specific EscalationPolicy as default. Only policies configured as global can be set as default. When a Project is created, even if you did not configure any policy to the Project, the default policy set by this api method is applied.
-request_example: >-
-{
-"escalation_policy_id": "ep-526e536fdca9",
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"escalation_policy_id": "ep-526e536fdca9",
-"name": "es-test2",
-"is_default": true,
-"rules": [
-{
-"notification_level": "LV1",
-"escalate_minutes": 15
-},
-{
-"notification_level": "LV2",
-"escalate_minutes": 15
-},
-{
-"notification_level": "LV3",
-"escalate_minutes": 15
-}
-],
-"repeat_count": 1,
-"finish_condition": "RESOLVED",
-"scope": "DOMAIN",
-"tags": {},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-06-21T09:22:45.340Z"
-}
+Sets a specific EscalationPolicy as default. Only policies configured as global can be set as default. When a Project is created, even if you did not configure any policy to the Project, the default policy set by this api method is applied.
 
 
 
@@ -181,18 +284,93 @@ response_example: >-
 
 
 
+ {{< tabs " set_default " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[EscalationPolicyRequest](./EscalationPolicy#escalationpolicyrequest)
+
+* **escalation_policy_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "escalation_policy_id": "ep-526e536fdca9",
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EscalationPolicyInfo](#ESCALATIONPOLICYINFO)
+* **escalation_policy_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **is_default** (bool)  `Required` 
+
+* **rules** (EscalationPolicyRule)  `Required` 
+
+* **repeat_count** (int32)  `Required` 
+
+* **finish_condition** (EscalationFinishCondition)  `Required` 
+
+* **scope** (EscalationPolicyScope)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+       "escalation_policy_id": "ep-526e536fdca9",
+       "name": "es-test",
+       "rules": [
+           {
+               "notification_level": "LV1",
+               "escalate_minutes": 30
+           },
+           {
+               "notification_level": "LV2",
+               "escalate_minutes": 30
+           }
+       ],
+       "repeat_count": 2,
+       "finish_condition": "ACKNOWLEDGED",
+       "scope": "DOMAIN",
+       "tags": {},
+       "domain_id": "domain-58010aa2e451",
+       "created_at": "2022-06-21T09:22:45.340Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### delete
 
-desc: Deletes a specific EscalationPolicy. Deletes the EscalationPolicy with the escalation_policy_id from the deletion request.
-request_example: >-
-{
-"escalation_policy_id": "ep-d75670166af4",
-"domain_id": "domain-58010aa2e451"
-}
+Deletes a specific EscalationPolicy. Deletes the EscalationPolicy with the escalation_policy_id from the deletion request.
 
 
 
@@ -203,37 +381,42 @@ request_example: >-
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[EscalationPolicyRequest](./EscalationPolicy#escalationpolicyrequest)
+
+* **escalation_policy_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "escalation_policy_id": "ep-526e536fdca9",
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get
 
-desc: Gets a specific EscalationPolicy. Prints detailed information about the EscalationPolicy, including the name, rules, and termination conditions.
-request_example: >-
-{
-"escalation_policy_id": "ep-d75670166af4",
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"escalation_policy_id": "ep-d75670166af4",
-"name": "0525-ms-test-2",
-"rules": [
-{
-"notification_level": "LV2",
-"escalate_minutes": 30
-},
-{
-"notification_level": "LV2"
-}
-],
-"finish_condition": "ACKNOWLEDGED",
-"scope": "DOMAIN",
-"tags": {},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-05-25T09:31:38.573Z"
-}
+Gets a specific EscalationPolicy. Prints detailed information about the EscalationPolicy, including the name, rules, and termination conditions.
 
 
 
@@ -244,56 +427,96 @@ response_example: >-
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GetEscalationPolicyRequest](./EscalationPolicy#getescalationpolicyrequest)
+
+* **escalation_policy_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **only** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "escalation_policy_id": "ep-d75670166af4",
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EscalationPolicyInfo](#ESCALATIONPOLICYINFO)
+* **escalation_policy_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **is_default** (bool)  `Required` 
+
+* **rules** (EscalationPolicyRule)  `Required` 
+
+* **repeat_count** (int32)  `Required` 
+
+* **finish_condition** (EscalationFinishCondition)  `Required` 
+
+* **scope** (EscalationPolicyScope)  `Required` 
+
+* **project_id** (string)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+       "escalation_policy_id": "ep-526e536fdca9",
+       "name": "es-test",
+       "rules": [
+           {
+               "notification_level": "LV1",
+               "escalate_minutes": 30
+           },
+           {
+               "notification_level": "LV2",
+               "escalate_minutes": 30
+           }
+       ],
+       "repeat_count": 2,
+       "finish_condition": "ACKNOWLEDGED",
+       "scope": "DOMAIN",
+       "tags": {},
+       "domain_id": "domain-58010aa2e451",
+       "created_at": "2022-06-21T09:22:45.340Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### list
 
-desc: Gets a list of all EscalationPolicies. You can use a query to get a filtered list of EscalationPolicies.
-request_example: >-
-{
-"query": {},
-"domain_id": "domain-58010aa2e451"
-}
-response_example: >-
-{
-"results": [
-{
-"escalation_policy_id": "ep-7c9745003372",
-"name": "0525-ms-test-1",
-"rules": [
-{
-"notification_level": "LV1"
-}
-],
-"finish_condition": "ACKNOWLEDGED",
-"scope": "DOMAIN",
-"tags": {},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-05-25T09:31:15.150Z"
-},
-{
-"escalation_policy_id": "ep-d75670166af4",
-"name": "0525-ms-test-2",
-"rules": [
-{
-"notification_level": "LV2",
-"escalate_minutes": 30
-},
-{
-"notification_level": "LV2"
-}
-],
-"finish_condition": "ACKNOWLEDGED",
-"scope": "DOMAIN",
-"tags": {},
-"domain_id": "domain-58010aa2e451",
-"created_at": "2022-05-25T09:31:38.573Z"
-}
-],
-"total_count": 2
-}
+Gets a list of all EscalationPolicies. You can use a query to get a filtered list of EscalationPolicies.
 
 
 
@@ -303,6 +526,103 @@ response_example: >-
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[EscalationPolicyQuery](./EscalationPolicy#escalationpolicyquery)
+
+* **domain_id** (string)  `Required` 
+
+
+* **query** (Query) 
+
+
+* **escalation_policy_id** (string) 
+
+
+* **name** (string) 
+
+
+* **is_default** (bool) 
+
+
+* **finish_condition** (EscalationFinishCondition) 
+
+
+* **scope** (EscalationPolicyScope) 
+
+
+* **project_id** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {},
+   "domain_id": "domain-58010aa2e451"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EscalationPoliciesInfo](#ESCALATIONPOLICIESINFO)
+* **results** (EscalationPolicyInfo)  `Required` 
+
+* **total_count** (int32)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "results": [
+       {
+           "escalation_policy_id": "ep-7c9745003372",
+           "name": "0525-ms-test-1",
+           "rules": [
+               {
+                   "notification_level": "LV1"
+               }
+           ],
+           "finish_condition": "ACKNOWLEDGED",
+           "scope": "DOMAIN",
+           "tags": {},
+           "domain_id": "domain-58010aa2e451",
+           "created_at": "2022-05-25T09:31:15.150Z"
+       },
+       {
+           "escalation_policy_id": "ep-d75670166af4",
+           "name": "0525-ms-test-2",
+           "rules": [
+               {
+                   "notification_level": "LV2",
+                   "escalate_minutes": 30
+               },
+               {
+                   "notification_level": "LV2"
+               }
+           ],
+           "finish_condition": "ACKNOWLEDGED",
+           "scope": "DOMAIN",
+           "tags": {},
+           "domain_id": "domain-58010aa2e451",
+           "created_at": "2022-05-25T09:31:38.573Z"
+       }
+   ],
+   "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -335,37 +655,23 @@ response_example: >-
 ### CreateEscalationPolicyRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **rules** (EscalationPolicyRule)  `Required` 
-
-  *is_required: true*
-
-    
-* **repeat_count** (int32)  `Required` 
-
-  *is_required: false*
-
-    
-* **finish_condition** (EscalationFinishCondition)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **repeat_count** (int32) 
+
+    
+* **finish_condition** (EscalationFinishCondition) 
+
+    
+* **project_id** (string) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
@@ -413,56 +719,36 @@ response_example: >-
     <br>
 
 ### EscalationPolicyQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **escalation_policy_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **is_default** (bool)  `Required` 
-
-  *is_required: false*
-
-    
-* **finish_condition** (EscalationFinishCondition)  `Required` 
-
-  *is_required: false*
-
-    
-* **scope** (EscalationPolicyScope)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **escalation_policy_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **is_default** (bool) 
+
+    
+* **finish_condition** (EscalationFinishCondition) 
+
+    
+* **scope** (EscalationPolicyScope) 
+
+    
+* **project_id** (string) 
 
     <br>
 
 ### EscalationPolicyRequest
 * **escalation_policy_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -477,65 +763,41 @@ response_example: >-
 ### EscalationPolicyStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### GetEscalationPolicyRequest
 * **escalation_policy_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### UpdateEscalationPolicyRequest
 * **escalation_policy_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **rules** (EscalationPolicyRule)  `Required` 
-
-  *is_required: false*
-
-    
-* **repeat_count** (int32)  `Required` 
-
-  *is_required: false*
-
-    
-* **finish_condition** (EscalationFinishCondition)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **rules** (EscalationPolicyRule) 
+
+    
+* **repeat_count** (int32) 
+
+    
+* **finish_condition** (EscalationFinishCondition) 
+
+    
+* **tags** (Struct) 
 
     <br>

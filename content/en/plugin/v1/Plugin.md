@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Plugin](#Plugin)
-desc: A Plugin is a resource managing endpoints of the plugin instances deployed. If there is a plugin instance that does not work properly, the Plugin requests the Supervisor to redeploy the instance.
+A Plugin is a resource managing endpoints of the plugin instances deployed. If there is a plugin instance that does not work properly, the Plugin requests the Supervisor to redeploy the instance.
 
 
 >  **Package : spaceone.api.plugin.v1**
@@ -34,16 +34,7 @@ desc: A Plugin is a resource managing endpoints of the plugin instances deployed
 
 ### get_plugin_endpoint
 
-desc: Gets the `endpoint` of a specific plugin instance. A Plugin returns only a single `endpoint` by determining `labels` and `priority`. If the requested plugin instance is already deployed, the `endpoint` is returned. If not, the `endpoint` is returned after deploying the plugin instance.
-request_example: >-
-{
-"plugin_id": "plugin-aws-sns-mon-webhook",
-"version": "1.2.2"
-}
-response_example: >-
-{
-"endpoint": "grpc://endpoint-url:50051"
-}
+Gets the `endpoint` of a specific plugin instance. A Plugin returns only a single `endpoint` by determining `labels` and `priority`. If the requested plugin instance is already deployed, the `endpoint` is returned. If not, the `endpoint` is returned after deploying the plugin instance.
 
 
 
@@ -53,6 +44,62 @@ response_example: >-
 
 
 
+
+ {{< tabs " get_plugin_endpoint " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[PluginEndpointRequest](./Plugin#pluginendpointrequest)
+
+* **plugin_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **version** (string) 
+
+
+* **labels** (Struct) 
+
+
+* **upgrade_mode** (UpgradeMode) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "plugin_id": "plugin-aws-sns-mon-webhook",
+   "version": "1.2.2"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[PluginEndpoint](#PLUGINENDPOINT)
+* **endpoint** (string)  `Required` 
+
+* **access_token** (string)  `Required` 
+
+* **updated_version** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "endpoint": "grpc://endpoint-url:50051"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -96,48 +143,30 @@ response_example: >-
 ### PluginEndpointRequest
 * **plugin_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **version** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **version** (string) 
 
     
-* **upgrade_mode** (UpgradeMode)  `Required` 
+* **labels** (Struct) 
 
-  *is_required: false*
+    
+* **upgrade_mode** (UpgradeMode) 
 
     <br>
 
 ### PluginFailureRequest
 * **supervisor_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **plugin_id** (string)  `Required` 
-
-  *is_required: true*
 
     
 * **version** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>

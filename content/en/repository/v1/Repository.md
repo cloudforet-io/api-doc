@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Repository](#Repository)
-desc: A Repository is a repository storing data of deployable plugins.
+A Repository is a repository storing data of deployable plugins.
 
 
 >  **Package : spaceone.api.repository.v1**
@@ -38,21 +38,7 @@ desc: A Repository is a repository storing data of deployable plugins.
 
 ### register
 
-desc: Registers a Repository. The parameter `name` can only include alphabets, numbers, and hyphens(-). The parameter `repository_type` can be either `local` or `remote`. The parameter `endpoint` is needed if the `repository_type` is `remote`.
-request_example: >-
-{
-"name": "Local",
-"repository_type": "local",
-"endpoint": "grpc+ssl://local-url:443"
-}
-response_example: >-
-{
-"repository_id": "repo-123456789012",
-"name": "Local",
-"repository_type": "local",
-"endpoint": "grpc+ssl://local-url:443",
-"created_at": "2022-01-01T02:27:02.924Z"
-}
+Registers a Repository. The parameter `name` can only include alphabets, numbers, and hyphens(-). The parameter `repository_type` can be either `local` or `remote`. The parameter `endpoint` is needed if the `repository_type` is `remote`.
 
 
 
@@ -63,26 +49,85 @@ response_example: >-
 
 
 
+ {{< tabs " register " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateRepositoryRequest](./Repository#createrepositoryrequest)
+
+* **name** (string)  `Required` 
+
+
+* **repository_type** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **endpoint** (string) 
+
+
+* **version** (string) 
+
+
+* **secret_id** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "name": "Local",
+   "repository_type": "local",
+   "endpoint": "grpc+ssl://local-url:443"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[RepositoryInfo](#REPOSITORYINFO)
+* **repository_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **repository_type** (string)  `Required` 
+
+* **endpoint** (string)  `Required` 
+
+* **version** (string)  `Required` 
+
+* **secret_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "repository_id": "repo-123456789012",
+   "name": "Local",
+   "repository_type": "local",
+   "endpoint": "grpc+ssl://local-url:443",
+   "created_at": "2022-01-01T02:27:02.924Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update
 
-desc: Updates a specific Repository registered. You must specify the `repository_id` of the Repository to update. You can make changes in Repository settings, including `name`.
-request_example: >-
-{
-"repository_id": "repo-123456789012",
-"name": "Local-repo"
-}
-response_example: >-
-{
-"repository_id": "repo-123456789012",
-"name": "Local-repo",
-"repository_type": "local",
-"endpoint": "grpc+ssl://local-url:443",
-"created_at": "2022-01-01T02:27:02.924Z"
-}
+Updates a specific Repository registered. You must specify the `repository_id` of the Repository to update. You can make changes in Repository settings, including `name`.
 
 
 
@@ -93,17 +138,75 @@ response_example: >-
 
 
 
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateRepositoryRequest](./Repository#updaterepositoryrequest)
+
+* **repository_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **name** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "repository_id": "repo-123456789012",
+   "name": "Local-repo"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[RepositoryInfo](#REPOSITORYINFO)
+* **repository_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **repository_type** (string)  `Required` 
+
+* **endpoint** (string)  `Required` 
+
+* **version** (string)  `Required` 
+
+* **secret_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "repository_id": "repo-123456789012",
+   "name": "Local",
+   "repository_type": "local",
+   "endpoint": "grpc+ssl://local-url:443",
+   "created_at": "2022-01-01T02:27:02.924Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### deregister
 
-desc: Deregisters and deletes a specific Repository. You must specify the `repository_id` of the Repository to deregister.
-request_example: >-
-{
-"repository_id": "repo-123456789012"
-}
+Deregisters and deletes a specific Repository. You must specify the `repository_id` of the Repository to deregister.
 
 
 
@@ -114,25 +217,41 @@ request_example: >-
 
 
 
+ {{< tabs " deregister " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[RepositoryRequest](./Repository#repositoryrequest)
+
+* **repository_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "repository_id": "repo-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get
 
-desc: Gets a specific Repository. Prints detailed information about the Repository, including  `name`, `repository_type`, and `endpoint`.
-request_example: >-
-{
-"repository_id": "repo-123456789012"
-}
-response_example: >-
-{
-"repository_id": "repo-123456789012",
-"name": "Local-repo",
-"repository_type": "local",
-"endpoint": "grpc+ssl://local-url:443",
-"created_at": "2022-01-01T02:26:29.081Z"
-}
+Gets a specific Repository. Prints detailed information about the Repository, including  `name`, `repository_type`, and `endpoint`.
 
 
 
@@ -143,31 +262,74 @@ response_example: >-
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GetRepositoryRequest](./Repository#getrepositoryrequest)
+
+* **repository_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **only** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "repository_id": "repo-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[RepositoryInfo](#REPOSITORYINFO)
+* **repository_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **repository_type** (string)  `Required` 
+
+* **endpoint** (string)  `Required` 
+
+* **version** (string)  `Required` 
+
+* **secret_id** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "repository_id": "repo-123456789012",
+   "name": "Local",
+   "repository_type": "local",
+   "endpoint": "grpc+ssl://local-url:443",
+   "created_at": "2022-01-01T02:27:02.924Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### list
 
-desc: Gets a list of all Repositories regardless of `domain`. You can use a query to get a filtered list of Repositories.
-request_example: >-
-{
-"query": {},
-"repository_id": "repo-123456789012"
-}
-response_example: >-
-{
-"results": [
-{
-"repository_id": "repo-123456789012",
-"name": "Local-repo",
-"repository_type": "local",
-"endpoint": "grpc+ssl://local-url:443",
-"created_at": "2022-01-01T02:26:29.081Z"
-}
-],
-"total_count": 1
-}
+Gets a list of all Repositories regardless of `domain`. You can use a query to get a filtered list of Repositories.
 
 
 
@@ -177,6 +339,69 @@ response_example: >-
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[RepositoryQuery](./Repository#repositoryquery)
+
+* **domain_id** (string)  `Required` 
+
+
+* **query** (Query) 
+
+
+* **repository_id** (string) 
+
+
+* **name** (string) 
+
+
+* **repository_type** (string) 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {},
+   "repository_id": "repo-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[RepositoriesInfo](#REPOSITORIESINFO)
+* **results** (RepositoryInfo)  `Required` 
+
+* **total_count** (int32)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "results": [
+       {
+           "repository_id": "repo-123456789012",
+           "name": "Local-repo",
+           "repository_type": "local",
+           "endpoint": "grpc+ssl://local-url:443",
+           "created_at": "2022-01-01T02:26:29.081Z"
+       }
+   ],
+   "total_count": 1
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -209,49 +434,31 @@ response_example: >-
 ### CreateRepositoryRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **repository_type** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **endpoint** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **version** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **secret_id** (string)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **endpoint** (string) 
+
+    
+* **version** (string) 
+
+    
+* **secret_id** (string) 
 
     <br>
 
 ### GetRepositoryRequest
 * **repository_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **only** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **only** (string) 
 
     <br>
 
@@ -287,69 +494,45 @@ response_example: >-
     <br>
 
 ### RepositoryQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **repository_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **repository_type** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **repository_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **repository_type** (string) 
 
     <br>
 
 ### RepositoryRequest
 * **repository_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### RepositoryStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### UpdateRepositoryRequest
 * **repository_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
 
     <br>
