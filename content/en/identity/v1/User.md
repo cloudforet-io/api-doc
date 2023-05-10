@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [User](#User)
-desc: User API which allows member management within project, company, and domain
+User API which allows member management within project, company, and domain
 note: Administrator must register User first.
 
 
@@ -58,51 +58,81 @@ note: Administrator must register User first.
 
 
 
+ {{< tabs " create " >}}
+
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **state** (State)  `Required` 
+
+* **email** (string)  `Required` 
+
+* **user_type** (UserType)  `Required` 
+
+* **backend** (UserBackend)  `Required` 
+
+* **language** (string)  `Required` 
+
+* **timezone** (string)  `Required` 
+
+* **required_actions** (UserRequiredAction)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **last_accessed_at** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **email_verified** (bool)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "user_id": "dkang@mz.co.kr",
+   "name": "Dong Yoo kang",
+   "state": "ENABLED",
+   "email": "dkang@mz.co.kr",
+   "language": "en",
+   "timezone": "UTC",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "last_accessed_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "created_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "domain_id": "domain-fd6e23a5ae36"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### update
 
-desc: Update user info by given user_id
-note:
-request_example: >-
-{
-"user_id": "dkang@mz.co.kr",
-"tags": [{
-"key": "user1",
-"value": "Reuters"
-}, {
-"key": "user2",
-"value": "Bloomberg"
-}],
-"domain_id": "{{DOMAIN_ID}}"
-}
-response_example: >-
-{
-"user_id": "dkang@mz.co.kr",
-"name": "Dong Yoo kang",
-"state": "ENABLED",
-"email": "dkang@mz.co.kr",
-"language": "en",
-"timezone": "UTC",
-"tags": [{
-"key": "user1",
-"value": "Reuters"
-}, {
-"key": "user2",
-"value": "Bloomberg"
-}],
-"last_accessed_at": {
-"seconds": "1593161630",
-"nanos": 79000000
-},
-"created_at": {
-"seconds": "1593161630",
-"nanos": 79000000
-},
-"domain_id": "domain-fd6e23a5ae36"
-}
+Update user info by given user_id
 
 
 
@@ -112,6 +142,124 @@ response_example: >-
 
 
 
+
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateUserRequest](./User#updateuserrequest)
+
+* **user_id** (string)  `Required` 
+
+
+* **domain_id** (string)  `Required` 
+
+
+* **password** (string) 
+
+
+* **name** (string) 
+
+
+* **email** (string) 
+
+
+* **language** (string) 
+
+
+* **timezone** (string) 
+
+
+* **tags** (Struct) 
+
+
+* **reset_password** (bool) 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "dkang@mz.co.kr",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "domain_id": "{{DOMAIN_ID}}"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **state** (State)  `Required` 
+
+* **email** (string)  `Required` 
+
+* **user_type** (UserType)  `Required` 
+
+* **backend** (UserBackend)  `Required` 
+
+* **language** (string)  `Required` 
+
+* **timezone** (string)  `Required` 
+
+* **required_actions** (UserRequiredAction)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **last_accessed_at** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **email_verified** (bool)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "user_id": "dkang@mz.co.kr",
+   "name": "Dong Yoo kang",
+   "state": "ENABLED",
+   "email": "dkang@mz.co.kr",
+   "language": "en",
+   "timezone": "UTC",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "last_accessed_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "created_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "domain_id": "domain-fd6e23a5ae36"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -147,6 +295,74 @@ response_example: >-
 
 
 
+ {{< tabs " confirm_email " >}}
+
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **state** (State)  `Required` 
+
+* **email** (string)  `Required` 
+
+* **user_type** (UserType)  `Required` 
+
+* **backend** (UserBackend)  `Required` 
+
+* **language** (string)  `Required` 
+
+* **timezone** (string)  `Required` 
+
+* **required_actions** (UserRequiredAction)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **last_accessed_at** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **email_verified** (bool)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "user_id": "dkang@mz.co.kr",
+   "name": "Dong Yoo kang",
+   "state": "ENABLED",
+   "email": "dkang@mz.co.kr",
+   "language": "en",
+   "timezone": "UTC",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "last_accessed_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "created_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "domain_id": "domain-fd6e23a5ae36"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -181,6 +397,74 @@ response_example: >-
 
 
 
+ {{< tabs " set_required_actions " >}}
+
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **state** (State)  `Required` 
+
+* **email** (string)  `Required` 
+
+* **user_type** (UserType)  `Required` 
+
+* **backend** (UserBackend)  `Required` 
+
+* **language** (string)  `Required` 
+
+* **timezone** (string)  `Required` 
+
+* **required_actions** (UserRequiredAction)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **last_accessed_at** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **email_verified** (bool)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "user_id": "dkang@mz.co.kr",
+   "name": "Dong Yoo kang",
+   "state": "ENABLED",
+   "email": "dkang@mz.co.kr",
+   "language": "en",
+   "timezone": "UTC",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "last_accessed_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "created_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "domain_id": "domain-fd6e23a5ae36"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -198,6 +482,74 @@ response_example: >-
 
 
 
+ {{< tabs " enable " >}}
+
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **state** (State)  `Required` 
+
+* **email** (string)  `Required` 
+
+* **user_type** (UserType)  `Required` 
+
+* **backend** (UserBackend)  `Required` 
+
+* **language** (string)  `Required` 
+
+* **timezone** (string)  `Required` 
+
+* **required_actions** (UserRequiredAction)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **last_accessed_at** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **email_verified** (bool)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "user_id": "dkang@mz.co.kr",
+   "name": "Dong Yoo kang",
+   "state": "ENABLED",
+   "email": "dkang@mz.co.kr",
+   "language": "en",
+   "timezone": "UTC",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "last_accessed_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "created_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "domain_id": "domain-fd6e23a5ae36"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -214,6 +566,74 @@ response_example: >-
 
 
 
+
+ {{< tabs " disable " >}}
+
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **state** (State)  `Required` 
+
+* **email** (string)  `Required` 
+
+* **user_type** (UserType)  `Required` 
+
+* **backend** (UserBackend)  `Required` 
+
+* **language** (string)  `Required` 
+
+* **timezone** (string)  `Required` 
+
+* **required_actions** (UserRequiredAction)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **last_accessed_at** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **email_verified** (bool)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "user_id": "dkang@mz.co.kr",
+   "name": "Dong Yoo kang",
+   "state": "ENABLED",
+   "email": "dkang@mz.co.kr",
+   "language": "en",
+   "timezone": "UTC",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "last_accessed_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "created_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "domain_id": "domain-fd6e23a5ae36"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -248,6 +668,74 @@ response_example: >-
 
 
 
+
+ {{< tabs " get " >}}
+
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **state** (State)  `Required` 
+
+* **email** (string)  `Required` 
+
+* **user_type** (UserType)  `Required` 
+
+* **backend** (UserBackend)  `Required` 
+
+* **language** (string)  `Required` 
+
+* **timezone** (string)  `Required` 
+
+* **required_actions** (UserRequiredAction)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **last_accessed_at** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **email_verified** (bool)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "user_id": "dkang@mz.co.kr",
+   "name": "Dong Yoo kang",
+   "state": "ENABLED",
+   "email": "dkang@mz.co.kr",
+   "language": "en",
+   "timezone": "UTC",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "last_accessed_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "created_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "domain_id": "domain-fd6e23a5ae36"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -317,6 +805,74 @@ response_example: >-
 
 
 
+ {{< tabs " sync " >}}
+
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)  `Required` 
+
+* **name** (string)  `Required` 
+
+* **state** (State)  `Required` 
+
+* **email** (string)  `Required` 
+
+* **user_type** (UserType)  `Required` 
+
+* **backend** (UserBackend)  `Required` 
+
+* **language** (string)  `Required` 
+
+* **timezone** (string)  `Required` 
+
+* **required_actions** (UserRequiredAction)  `Required` 
+
+* **tags** (Struct)  `Required` 
+
+* **last_accessed_at** (string)  `Required` 
+
+* **created_at** (string)  `Required` 
+
+* **domain_id** (string)  `Required` 
+
+* **email_verified** (bool)  `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "user_id": "dkang@mz.co.kr",
+   "name": "Dong Yoo kang",
+   "state": "ENABLED",
+   "email": "dkang@mz.co.kr",
+   "language": "en",
+   "timezone": "UTC",
+   "tags": [{
+     "key": "user1",
+     "value": "Reuters"
+   }, {
+     "key": "user2",
+     "value": "Bloomberg"
+   }],
+   "last_accessed_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "created_at": {
+       "seconds": "1593161630",
+       "nanos": 79000000
+   },
+   "domain_id": "domain-fd6e23a5ae36"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 
@@ -331,74 +887,46 @@ response_example: >-
 ### ConfirmEmailRequest
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **verify_code** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### CreateUserRequest
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **password** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **email** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_type** (UserType)  `Required` 
-
-  *is_required: false*
-
     
 * **backend** (UserBackend)  `Required` 
-
-  *is_required: true*
-
-    
-* **language** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **timezone** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **password** (string) 
 
     
-* **reset_password** (bool)  `Required` 
+* **name** (string) 
 
-  *is_required: false*
+    
+* **email** (string) 
+
+    
+* **user_type** (UserType) 
+
+    
+* **language** (string) 
+
+    
+* **timezone** (string) 
+
+    
+* **tags** (Struct) 
+
+    
+* **reset_password** (bool) 
 
     <br>
 
@@ -419,12 +947,8 @@ response_example: >-
 ### FindUserQuery
 * **search** (FindUserSearch)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -447,81 +971,51 @@ response_example: >-
 ### GetUserRequest
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### SetRequiredActionsRequest
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **actions** (UserRequiredAction)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### UpdateUserRequest
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **password** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **email** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **language** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **timezone** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **password** (string) 
 
     
-* **reset_password** (bool)  `Required` 
+* **name** (string) 
 
-  *is_required: false*
+    
+* **email** (string) 
+
+    
+* **language** (string) 
+
+    
+* **timezone** (string) 
+
+    
+* **tags** (Struct) 
+
+    
+* **reset_password** (bool) 
 
     <br>
 
@@ -570,68 +1064,44 @@ response_example: >-
     <br>
 
 ### UserQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
+* **query** (Query) 
 
     
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
+* **user_id** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **name** (string) 
 
     
-* **state** (string)  `Required` 
-
-  *is_required: false*
+* **state** (string) 
 
     
-* **email** (string)  `Required` 
-
-  *is_required: false*
+* **email** (string) 
 
     
-* **user_type** (UserType)  `Required` 
-
-  *is_required: false*
+* **user_type** (UserType) 
 
     
-* **backend** (UserBackend)  `Required` 
-
-  *is_required: false*
+* **backend** (UserBackend) 
 
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
 ### UserRequest
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### UserStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -646,21 +1116,13 @@ response_example: >-
 ### VerifyEmailRequest
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **email** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **force** (bool)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **email** (string) 
+
+    
+* **force** (bool) 
 
     <br>

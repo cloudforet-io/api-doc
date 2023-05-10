@@ -148,49 +148,31 @@ bookFlatSection: true
 ### CreateRoleRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **role_type** (RoleType)  `Required` 
-
-  *is_required: true*
 
     
 * **policies** (RolePolicy)  `Required` 
 
-  *is_required: true*
-
-    
-* **page_permissions** (PagePermission)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **page_permissions** (PagePermission) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetRoleRequest
 * **role_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -240,58 +222,38 @@ bookFlatSection: true
     <br>
 
 ### RoleQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **role_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **role_type** (RoleType)  `Required` 
-
-  *is_required: false*
-
-    
-* **policy_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **role_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **role_type** (RoleType) 
+
+    
+* **policy_id** (string) 
 
     <br>
 
 ### RoleRequest
 * **role_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### RoleStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -306,36 +268,22 @@ bookFlatSection: true
 ### UpdateRoleRequest
 * **role_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **policies** (RolePolicy)  `Required` 
-
-  *is_required: false*
-
-    
-* **page_permissions** (PagePermission)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **release_page_permissions** (bool)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **policies** (RolePolicy) 
+
+    
+* **page_permissions** (PagePermission) 
+
+    
+* **tags** (Struct) 
+
+    
+* **release_page_permissions** (bool) 
 
     <br>

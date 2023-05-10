@@ -256,39 +256,25 @@ bookFlatSection: true
 ### ChangeAuthRequest
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **plugin_info** (PluginInfo) 
 
     
-* **plugin_info** (PluginInfo)  `Required` 
-
-  *is_required: false*
-
-    
-* **release_auth_plugin** (bool)  `Required` 
-
-  *is_required: false*
+* **release_auth_plugin** (bool) 
 
     <br>
 
 ### CreateDomainRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
+    
+* **plugin_info** (PluginInfo) 
 
     
-* **plugin_info** (PluginInfo)  `Required` 
-
-  *is_required: false*
+* **config** (Struct) 
 
     
-* **config** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
+* **tags** (Struct) 
 
     <br>
 
@@ -319,38 +305,26 @@ bookFlatSection: true
     <br>
 
 ### DomainQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
+* **query** (Query) 
 
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **name** (string) 
 
     
-* **state** (State)  `Required` 
-
-  *is_required: false*
+* **state** (State) 
 
     <br>
 
 ### DomainRequest
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     <br>
 
 ### DomainStatQuery
 * **query** (StatisticsQuery)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -365,12 +339,8 @@ bookFlatSection: true
 ### GetDomainRequest
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -403,43 +373,27 @@ bookFlatSection: true
 ### UpdateDomainRequest
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **plugin_info** (PluginInfo) 
 
     
-* **plugin_info** (PluginInfo)  `Required` 
-
-  *is_required: false*
+* **config** (Struct) 
 
     
-* **config** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
+* **tags** (Struct) 
 
     <br>
 
 ### UpdatePluginRequest
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **version** (string) 
 
     
-* **version** (string)  `Required` 
-
-  *is_required: false*
+* **options** (Struct) 
 
     
-* **options** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **upgrade_mode** (UpgradeMode)  `Required` 
-
-  *is_required: false*
+* **upgrade_mode** (UpgradeMode) 
 
     <br>

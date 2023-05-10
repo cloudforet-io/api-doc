@@ -74,34 +74,22 @@ bookFlatSection: true
 
 
 ### IssueTokenRequest
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **credentials** (Struct)  `Required` 
-
-  *is_required: true*
-
-    
-* **user_type** (string)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **user_id** (string) 
 
     
-* **timeout** (int32)  `Required` 
-
-  *is_required: false*
+* **user_type** (string) 
 
     
-* **refresh_count** (int32)  `Required` 
+* **timeout** (int32) 
 
-  *is_required: false*
+    
+* **refresh_count** (int32) 
 
     <br>
 

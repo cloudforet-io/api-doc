@@ -238,103 +238,65 @@ bookFlatSection: true
 ### AddProjectGroupMemberRequest
 * **project_group_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **user_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **role_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **role_id** (string) 
 
     
-* **is_external_user** (bool)  `Required` 
+* **labels** (ListValue) 
 
-  *is_required: false*
+    
+* **tags** (Struct) 
+
+    
+* **is_external_user** (bool) 
 
     <br>
 
 ### CreateProjectGroupRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **parent_project_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **parent_project_group_id** (string) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetProjectGroupRequest
 * **project_group_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### ModifyProjectGroupMemberRequest
 * **project_group_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **user_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
@@ -362,34 +324,22 @@ bookFlatSection: true
     <br>
 
 ### ProjectGroupMemberQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
 * **project_group_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **role_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **include_parent_member** (bool)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **user_id** (string) 
+
+    
+* **role_id** (string) 
+
+    
+* **include_parent_member** (bool) 
 
     <br>
 
@@ -417,24 +367,16 @@ bookFlatSection: true
     <br>
 
 ### ProjectGroupProjectQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
 * **project_group_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **recursive** (bool)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **recursive** (bool) 
 
     <br>
 
@@ -447,46 +389,30 @@ bookFlatSection: true
     <br>
 
 ### ProjectGroupQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **parent_project_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **author_within** (bool)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **project_group_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **parent_project_group_id** (string) 
+
+    
+* **author_within** (bool) 
 
     <br>
 
 ### ProjectGroupRequest
 * **project_group_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -530,12 +456,8 @@ bookFlatSection: true
 ### ProjectGroupStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -550,48 +472,30 @@ bookFlatSection: true
 ### RemoveProjectGroupMemberRequest
 * **project_group_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### UpdateProjectGroupRequest
 * **project_group_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **parent_project_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **release_parent_project_group** (bool)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **parent_project_group_id** (string) 
+
+    
+* **release_parent_project_group** (bool) 
+
+    
+* **tags** (Struct) 
 
     <br>

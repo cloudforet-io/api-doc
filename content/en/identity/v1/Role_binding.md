@@ -148,59 +148,37 @@ bookFlatSection: true
 ### CreateRoleBindingRequest
 * **resource_type** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **resource_id** (string)  `Required` 
-
-  *is_required: true*
 
     
 * **role_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **project_id** (string) 
+
+    
+* **project_group_id** (string) 
+
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetRoleBindingRequest
 * **role_binding_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -237,73 +215,47 @@ bookFlatSection: true
     <br>
 
 ### RoleBindingQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **role_binding_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **resource_type** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **resource_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **role_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **role_type** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **role_binding_id** (string) 
+
+    
+* **resource_type** (string) 
+
+    
+* **resource_id** (string) 
+
+    
+* **role_id** (string) 
+
+    
+* **role_type** (string) 
+
+    
+* **project_id** (string) 
+
+    
+* **project_group_id** (string) 
 
     <br>
 
 ### RoleBindingRequest
 * **role_binding_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### RoleBindingStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -318,21 +270,13 @@ bookFlatSection: true
 ### UpdateRoleBindingRequest
 * **role_binding_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>

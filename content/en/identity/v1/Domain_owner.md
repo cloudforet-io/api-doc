@@ -110,39 +110,25 @@ bookFlatSection: true
 
 
 ### CreateDomainOwner
-* **owner_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **password** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **email** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **language** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **timezone** (string)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **owner_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **email** (string) 
+
+    
+* **language** (string) 
+
+    
+* **timezone** (string) 
 
     <br>
 
@@ -175,65 +161,41 @@ bookFlatSection: true
 ### DomainOwnerRequest
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **owner_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### GetDomainOwnerRequest
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **owner_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### UpdateDomainOwner
 * **owner_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **password** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **email** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **language** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **timezone** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **password** (string) 
+
+    
+* **name** (string) 
+
+    
+* **email** (string) 
+
+    
+* **language** (string) 
+
+    
+* **timezone** (string) 
 
     <br>

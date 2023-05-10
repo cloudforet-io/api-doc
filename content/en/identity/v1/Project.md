@@ -220,103 +220,65 @@ bookFlatSection: true
 ### AddProjectMemberRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **user_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **role_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **role_id** (string) 
 
     
-* **is_external_user** (bool)  `Required` 
+* **labels** (ListValue) 
 
-  *is_required: false*
+    
+* **tags** (Struct) 
+
+    
+* **is_external_user** (bool) 
 
     <br>
 
 ### CreateProjectRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **project_group_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetProjectRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
 ### ModifyProjectMemberRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **user_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **labels** (ListValue)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **labels** (ListValue) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
@@ -344,78 +306,50 @@ bookFlatSection: true
     <br>
 
 ### ProjectMemberQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
 * **project_id** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **role_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **include_parent_member** (bool)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **user_id** (string) 
+
+    
+* **role_id** (string) 
+
+    
+* **include_parent_member** (bool) 
 
     <br>
 
 ### ProjectQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **project_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **project_group_id** (string) 
+
+    
+* **user_id** (string) 
 
     <br>
 
 ### ProjectRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -462,12 +396,8 @@ bookFlatSection: true
 ### ProjectStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -482,43 +412,27 @@ bookFlatSection: true
 ### RemoveProjectMemberRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### UpdateProjectRequest
 * **project_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **project_group_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **project_group_id** (string) 
+
+    
+* **name** (string) 
+
+    
+* **tags** (Struct) 
 
     <br>

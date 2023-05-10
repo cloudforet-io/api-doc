@@ -148,59 +148,37 @@ bookFlatSection: true
 ### CreateServiceAccountRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **data** (Struct)  `Required` 
-
-  *is_required: true*
 
     
 * **provider** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **service_account_type** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **trusted_service_account_id** (string)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **project_id** (string) 
+
+    
+* **tags** (Struct) 
+
+    
+* **trusted_service_account_id** (string) 
 
     <br>
 
 ### GetServiceAccountRequest
 * **service_account_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -240,73 +218,47 @@ bookFlatSection: true
     <br>
 
 ### ServiceAccountQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
+* **query** (Query) 
 
     
-* **service_account_id** (string)  `Required` 
-
-  *is_required: false*
+* **service_account_id** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **name** (string) 
 
     
-* **service_account_type** (string)  `Required` 
-
-  *is_required: false*
+* **service_account_type** (string) 
 
     
-* **provider** (string)  `Required` 
-
-  *is_required: false*
+* **provider** (string) 
 
     
-* **trusted_service_account_id** (string)  `Required` 
-
-  *is_required: false*
+* **trusted_service_account_id** (string) 
 
     
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
+* **project_id** (string) 
 
     
-* **scope** (string)  `Required` 
-
-  *is_required: false*
+* **scope** (string) 
 
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
 ### ServiceAccountRequest
 * **service_account_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### ServiceAccountStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -321,41 +273,25 @@ bookFlatSection: true
 ### UpdateServiceAccountRequest
 * **service_account_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **data** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **project_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **trusted_service_account_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **release_trusted_service_account** (bool)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **data** (Struct) 
+
+    
+* **project_id** (string) 
+
+    
+* **tags** (Struct) 
+
+    
+* **trusted_service_account_id** (string) 
+
+    
+* **release_trusted_service_account** (bool) 
 
     <br>

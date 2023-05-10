@@ -105,56 +105,36 @@ bookFlatSection: true
 ### FindRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
 
-  *is_required: true*
+    
+* **user_id** (string) 
 
     
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
+* **keyword** (string) 
 
     
-* **keyword** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **schema** (string)  `Required` 
-
-  *is_required: false*
+* **schema** (string) 
 
     <br>
 
 ### InitRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     <br>
 
 ### LoginRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
-
-  *is_required: true*
 
     
 * **user_credentials** (Struct)  `Required` 
 
-  *is_required: true*
-
     
-* **schema** (string)  `Required` 
-
-  *is_required: false*
+* **schema** (string) 
 
     <br>
 
@@ -199,16 +179,10 @@ bookFlatSection: true
 ### VerifyRequest
 * **options** (Struct)  `Required` 
 
-  *is_required: true*
-
     
 * **secret_data** (Struct)  `Required` 
 
-  *is_required: true*
-
     
-* **schema** (string)  `Required` 
-
-  *is_required: false*
+* **schema** (string) 
 
     <br>

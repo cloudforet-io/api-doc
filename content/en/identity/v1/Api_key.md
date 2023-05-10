@@ -187,53 +187,35 @@ bookFlatSection: true
     <br>
 
 ### APIKeyQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **api_key_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **state** (State)  `Required` 
-
-  *is_required: false*
-
-    
-* **user_id** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **api_key_id** (string) 
+
+    
+* **state** (State) 
+
+    
+* **user_id** (string) 
 
     <br>
 
 ### APIKeyRequest
 * **api_key_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### APIKeyStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -248,28 +230,18 @@ bookFlatSection: true
 ### CreateAPIKeyRequest
 * **user_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### GetAPIKeyRequest
 * **api_key_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>

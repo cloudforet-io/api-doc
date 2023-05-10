@@ -148,39 +148,25 @@ bookFlatSection: true
 ### CreatePolicyRequest
 * **name** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **permissions** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetPolicyRequest
 * **policy_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
-
     
-* **only** (string)  `Required` 
-
-  *is_required: false*
+* **only** (string) 
 
     <br>
 
@@ -213,74 +199,48 @@ bookFlatSection: true
     <br>
 
 ### PolicyQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
+* **query** (Query) 
 
     
-* **policy_id** (string)  `Required` 
-
-  *is_required: false*
+* **policy_id** (string) 
 
     
-* **name** (string)  `Required` 
-
-  *is_required: false*
+* **name** (string) 
 
     
-* **domain_id** (string)  `Required` 
-
-  *is_required: false*
+* **domain_id** (string) 
 
     <br>
 
 ### PolicyRequest
 * **policy_id** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### PolicyStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### UpdatePolicyRequest
 * **policy_id** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **permissions** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **permissions** (string) 
+
+    
+* **tags** (Struct) 
 
     <br>

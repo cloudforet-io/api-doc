@@ -148,54 +148,34 @@ bookFlatSection: true
 ### CreateProviderRequest
 * **provider** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **name** (string)  `Required` 
-
-  *is_required: true*
-
-    
-* **template** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **metadata** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **capability** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
 
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **template** (Struct) 
+
+    
+* **metadata** (Struct) 
+
+    
+* **capability** (Struct) 
+
+    
+* **tags** (Struct) 
 
     <br>
 
 ### GetProviderRequest
 * **provider** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **only** (string)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **only** (string) 
 
     <br>
 
@@ -223,48 +203,32 @@ bookFlatSection: true
     <br>
 
 ### ProviderQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **provider** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **provider** (string) 
+
+    
+* **name** (string) 
 
     <br>
 
 ### ProviderRequest
 * **provider** (string)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
 ### ProviderStatQuery
 * **query** (StatisticsQuery)  `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)  `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -279,36 +243,22 @@ bookFlatSection: true
 ### UpdateProviderRequest
 * **provider** (string)  `Required` 
 
-  *is_required: true*
-
-    
-* **name** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **template** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **metadata** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **capability** (Struct)  `Required` 
-
-  *is_required: false*
-
-    
-* **tags** (Struct)  `Required` 
-
-  *is_required: false*
-
     
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **name** (string) 
+
+    
+* **template** (Struct) 
+
+    
+* **metadata** (Struct) 
+
+    
+* **capability** (Struct) 
+
+    
+* **tags** (Struct) 
 
     <br>

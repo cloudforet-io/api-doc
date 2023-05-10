@@ -73,25 +73,18 @@ bookFlatSection: true
     <br>
 
 ### EndpointQuery
-* **query** (Query)  `Required` 
-
-  *is_required: false*
-
-    
-* **service** (string)  `Required` 
-
-  *is_required: false*
-
-    
-* **endpoint_type** (string)  `Required` 
-
-  *is_required: false
-example: public | internal*
-
-    
 * **domain_id** (string)  `Required` 
 
-  *is_required: true*
+    
+* **query** (Query) 
+
+    
+* **service** (string) 
+
+    
+* **endpoint_type** (string) 
+
+  *example: public | internal*
 
     <br>
 
