@@ -1,0 +1,53 @@
+{{- if .Values.enabled }}
+{{- if .Values.ingress.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+  {{- range $key, $value := .Values.ingress.annotations }}
+    {{- if not (eq $key "nil") }}
+    {{ $key }}: {{ $value | quote }}
+    {{- end }}
+  {{- end }}
+  labels:
+{{ include "spaceone.labels" . | indent 4 }}
+    spaceone.service: ingress
+  name: alb-ingress-docs
+  namespace: {{ .Values.global.namespace | default .Release.Namespace }}
+
+spec:
+  ingressClassName: alb
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ssl-redirect
+                port:
+                  name: use-annotation
+
+    - host: "{{ .Values.endpoint }}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: docs
+                port:
+                  number: 80
+
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: redirect-to-non-www
+                port:
+                  name: use-annotation
+
+{{- end }}
+{{- end }}
