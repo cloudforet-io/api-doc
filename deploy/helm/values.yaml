@@ -1,0 +1,50 @@
+###############################
+# DEFAULT 
+###############################
+enabled: true
+developer: false
+name: api-doc
+replicas: 1
+image:
+    name: cloudforet/api-doc
+    version: 1.12.8
+imagePullPolicy: IfNotPresent
+
+resources: {}
+#     requests:
+#         memory: "128Mi"
+#         cpu: "25m"
+#     limits:
+#         memory: "256Mi"
+#         cpu: "50m"
+
+service:
+    type: NodePort
+    annotations:
+        nil: nil
+    ports:
+        - name: http
+          port: 80
+          targetPort: 80
+          protocol: TCP
+        - name: https
+          port: 443
+          targetPort: 80
+          protocol: TCP
+
+ingress:
+    enabled: true
+    name: ingress
+    annotations:
+        alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+        alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'
+        alb.ingress.kubernetes.io/inbound-cidrs: 0.0.0.0/0 
+        alb.ingress.kubernetes.io/scheme: "internet-facing"
+        alb.ingress.kubernetes.io/target-type: instance 
+        alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:257706363616:certificate/3ee00cdd-04af-4c0a-a65a-e2fa771e74f0"
+        external-dns.alpha.kubernetes.io/hostname:  www.cloudforet.io
+
+# This endpoint is temporary setting
+endpoint: www.cloudforet.io
+global:
+    namespace: api-doc
