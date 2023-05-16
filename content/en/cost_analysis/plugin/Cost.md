@@ -131,7 +131,7 @@ bookFlatSection: true
 * **usage_type** (string)  `Required` 
 
     
-* **resource_group** (string)  `Required` 
+* **usage_unit** (string)  `Required` 
 
     
 * **resource** (string)  `Required` 
