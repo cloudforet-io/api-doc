@@ -165,7 +165,7 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 * **usage_type** (string)  `Required` 
 
-* **resource_group** (string)  `Required` 
+* **usage_unit** (string)  `Required` 
 
 * **resource** (string)  `Required` 
 
@@ -331,7 +331,7 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 
 * **usage_type** (string)  `Required` 
 
-* **resource_group** (string)  `Required` 
+* **usage_unit** (string)  `Required` 
 
 * **resource** (string)  `Required` 
 
@@ -728,7 +728,7 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **usage_type** (string)  `Required` 
 
     
-* **resource_group** (string)  `Required` 
+* **usage_unit** (string)  `Required` 
 
     
 * **resource** (string)  `Required` 
