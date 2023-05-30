@@ -24,12 +24,12 @@ An ExchangeRate is a resource defining the exchange rate of currencies. This res
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**set**](./ExchangeRate#set) | [SetExchangeRateRequest](ExchangeRate#setexchangeraterequest) | [ExchangeRateInfo](./ExchangeRate#exchangerateinfo) |
-| [**reset**](./ExchangeRate#reset) | [ExchangeRateRequest](ExchangeRate#exchangeraterequest) | [ExchangeRateInfo](./ExchangeRate#exchangerateinfo) |
-| [**enable**](./ExchangeRate#enable) | [ExchangeRateRequest](ExchangeRate#exchangeraterequest) | [ExchangeRateInfo](./ExchangeRate#exchangerateinfo) |
-| [**disable**](./ExchangeRate#disable) | [ExchangeRateRequest](ExchangeRate#exchangeraterequest) | [ExchangeRateInfo](./ExchangeRate#exchangerateinfo) |
-| [**get**](./ExchangeRate#get) | [ExchangeRateRequest](ExchangeRate#exchangeraterequest) | [ExchangeRateInfo](./ExchangeRate#exchangerateinfo) |
-| [**list**](./ExchangeRate#list) | [ExchangeRateQuery](ExchangeRate#exchangeratequery) | [ExchangeRatesInfo](./ExchangeRate#exchangeratesinfo) |
+| [**set**](./ExchangeRate#set) | [SetExchangeRateRequest](ExchangeRate#setexchangeraterequest) | [ExchangeRateInfo](ExchangeRate#exchangerateinfo) |
+| [**reset**](./ExchangeRate#reset) | [ExchangeRateRequest](ExchangeRate#exchangeraterequest) | [ExchangeRateInfo](ExchangeRate#exchangerateinfo) |
+| [**enable**](./ExchangeRate#enable) | [ExchangeRateRequest](ExchangeRate#exchangeraterequest) | [ExchangeRateInfo](ExchangeRate#exchangerateinfo) |
+| [**disable**](./ExchangeRate#disable) | [ExchangeRateRequest](ExchangeRate#exchangeraterequest) | [ExchangeRateInfo](ExchangeRate#exchangerateinfo) |
+| [**get**](./ExchangeRate#get) | [ExchangeRateRequest](ExchangeRate#exchangeraterequest) | [ExchangeRateInfo](ExchangeRate#exchangerateinfo) |
+| [**list**](./ExchangeRate#list) | [ExchangeRateQuery](ExchangeRate#exchangeratequery) | [ExchangeRatesInfo](ExchangeRate#exchangeratesinfo) |
 
 
 
@@ -57,13 +57,13 @@ Overrides a value of a specific ExchangeRate. This method is used to change the 
 
 [SetExchangeRateRequest](./ExchangeRate#setexchangeraterequest)
 
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
 
-* **rate** (float)  `Required` 
+* **rate** (float)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -81,15 +81,15 @@ Overrides a value of a specific ExchangeRate. This method is used to change the 
  {{< tab "Response Example" >}}
 
 [ExchangeRateInfo](#EXCHANGERATEINFO)
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
-* **rate** (float)  `Required` 
+* **rate** (float)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -131,10 +131,10 @@ Resets a value of a specific ExchangeRate and changes the ExchangeRate to the Ex
 
 [ExchangeRateRequest](./ExchangeRate#exchangeraterequest)
 
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -151,15 +151,15 @@ Resets a value of a specific ExchangeRate and changes the ExchangeRate to the Ex
  {{< tab "Response Example" >}}
 
 [ExchangeRateInfo](#EXCHANGERATEINFO)
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
-* **rate** (float)  `Required` 
+* **rate** (float)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -201,10 +201,10 @@ Resets a value of a specific ExchangeRate and changes the ExchangeRate to the Ex
 
 [ExchangeRateRequest](./ExchangeRate#exchangeraterequest)
 
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -221,15 +221,15 @@ Resets a value of a specific ExchangeRate and changes the ExchangeRate to the Ex
  {{< tab "Response Example" >}}
 
 [ExchangeRateInfo](#EXCHANGERATEINFO)
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
-* **rate** (float)  `Required` 
+* **rate** (float)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -271,10 +271,10 @@ Resets a value of a specific ExchangeRate and changes the ExchangeRate to the Ex
 
 [ExchangeRateRequest](./ExchangeRate#exchangeraterequest)
 
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -291,15 +291,15 @@ Resets a value of a specific ExchangeRate and changes the ExchangeRate to the Ex
  {{< tab "Response Example" >}}
 
 [ExchangeRateInfo](#EXCHANGERATEINFO)
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
-* **rate** (float)  `Required` 
+* **rate** (float)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -341,10 +341,10 @@ Gets a specific ExchangeRate. Prints detailed information about the ExchangeRate
 
 [ExchangeRateRequest](./ExchangeRate#exchangeraterequest)
 
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -361,15 +361,15 @@ Gets a specific ExchangeRate. Prints detailed information about the ExchangeRate
  {{< tab "Response Example" >}}
 
 [ExchangeRateInfo](#EXCHANGERATEINFO)
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
-* **rate** (float)  `Required` 
+* **rate** (float)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -411,7 +411,7 @@ Gets a list of all ExchangeRates. You can use a query to get a filtered list of 
 
 [ExchangeRateQuery](./ExchangeRate#exchangeratequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -428,9 +428,9 @@ Gets a list of all ExchangeRates. You can use a query to get a filtered list of 
  {{< tab "Response Example" >}}
 
 [ExchangeRatesInfo](#EXCHANGERATESINFO)
-* **results** (ExchangeRateInfo)  `Required` 
+* **results** (ExchangeRateInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -472,50 +472,50 @@ Gets a list of all ExchangeRates. You can use a query to get a filtered list of 
 
 
 ### ExchangeRateInfo
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
     
-* **rate** (float)  `Required` 
+* **rate** (float)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ExchangeRateQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ExchangeRateRequest
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ExchangeRatesInfo
-* **results** (ExchangeRateInfo)  `Required` 
+* **results** (ExchangeRateInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### SetExchangeRateRequest
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
     
-* **rate** (float)  `Required` 
+* **rate** (float)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>

@@ -24,13 +24,13 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Schema#create) | [CreateSchemaRequest](Schema#createschemarequest) | [SchemaInfo](./Schema#schemainfo) |
-| [**update**](./Schema#update) | [UpdateSchemaRequest](Schema#updateschemarequest) | [SchemaInfo](./Schema#schemainfo) |
-| [**sync**](./Schema#sync) | [SchemaRequest](Schema#schemarequest) | [SchemaInfo](./Schema#schemainfo) |
-| [**delete**](./Schema#delete) | [SchemaRequest](Schema#schemarequest) | [Empty](./Schema#empty) |
-| [**get**](./Schema#get) | [GetSchemaRequest](Schema#getschemarequest) | [SchemaInfo](./Schema#schemainfo) |
-| [**list**](./Schema#list) | [SchemaQuery](Schema#schemaquery) | [SchemasInfo](./Schema#schemasinfo) |
-| [**stat**](./Schema#stat) | [SchemaStatQuery](Schema#schemastatquery) | [Struct](./Schema#struct) |
+| [**create**](./Schema#create) | [CreateSchemaRequest](Schema#createschemarequest) | [SchemaInfo](Schema#schemainfo) |
+| [**update**](./Schema#update) | [UpdateSchemaRequest](Schema#updateschemarequest) | [SchemaInfo](Schema#schemainfo) |
+| [**sync**](./Schema#sync) | [SchemaRequest](Schema#schemarequest) | [SchemaInfo](Schema#schemainfo) |
+| [**delete**](./Schema#delete) | [SchemaRequest](Schema#schemarequest) | [Empty](Schema#empty) |
+| [**get**](./Schema#get) | [GetSchemaRequest](Schema#getschemarequest) | [SchemaInfo](Schema#schemainfo) |
+| [**list**](./Schema#list) | [SchemaQuery](Schema#schemaquery) | [SchemasInfo](Schema#schemasinfo) |
+| [**stat**](./Schema#stat) | [SchemaStatQuery](Schema#schemastatquery) | [Struct](Schema#struct) |
 
 
 
@@ -164,142 +164,142 @@ bookFlatSection: true
 
 
 ### CreateSchemaRequest
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **sync_mode** (SyncMode) 
+* **sync_mode** (SyncMode)  
 
     
-* **sync_options** (SyncOptions) 
+* **sync_options** (SyncOptions)  
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetSchemaRequest
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### SchemaInfo
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **sync_mode** (SyncMode)  `Required` 
+* **sync_mode** (SyncMode)   `Required` 
 
     
-* **sync_options** (SyncOptions)  `Required` 
+* **sync_options** (SyncOptions)   `Required` 
 
     
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
     
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **remote_repository** (Struct)  `Required` 
+* **remote_repository** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### SchemaQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **schema_id** (string) 
+* **schema_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **sync_mode** (SyncMode) 
+* **sync_mode** (SyncMode)  
 
     
-* **remote_repository_name** (string) 
+* **remote_repository_name** (string)  
 
     <br>
 
 ### SchemaRequest
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SchemaStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SchemasInfo
-* **results** (SchemaInfo)  `Required` 
+* **results** (SchemaInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateSchemaRequest
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
     
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
   *is_required: flase*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **sync_mode** (SyncMode) 
+* **sync_mode** (SyncMode)  
 
     
-* **sync_options** (SyncOptions) 
+* **sync_options** (SyncOptions)  
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

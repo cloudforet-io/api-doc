@@ -24,12 +24,12 @@ A CostQuerySet is a set of saved queries a User frequently uses as a setting.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./CostQuerySet#create) | [CreateCostQuerySetRequest](CostQuerySet#createcostquerysetrequest) | [CostQuerySetInfo](./CostQuerySet#costquerysetinfo) |
-| [**update**](./CostQuerySet#update) | [UpdateCostQuerySetRequest](CostQuerySet#updatecostquerysetrequest) | [CostQuerySetInfo](./CostQuerySet#costquerysetinfo) |
-| [**delete**](./CostQuerySet#delete) | [CostQuerySetRequest](CostQuerySet#costquerysetrequest) | [Empty](./CostQuerySet#empty) |
-| [**get**](./CostQuerySet#get) | [GetCostQuerySetRequest](CostQuerySet#getcostquerysetrequest) | [CostQuerySetInfo](./CostQuerySet#costquerysetinfo) |
-| [**list**](./CostQuerySet#list) | [CostQuerySetQuery](CostQuerySet#costquerysetquery) | [CostQuerySetsInfo](./CostQuerySet#costquerysetsinfo) |
-| [**stat**](./CostQuerySet#stat) | [CostQuerySetStatQuery](CostQuerySet#costquerysetstatquery) | [Struct](./CostQuerySet#struct) |
+| [**create**](./CostQuerySet#create) | [CreateCostQuerySetRequest](CostQuerySet#createcostquerysetrequest) | [CostQuerySetInfo](CostQuerySet#costquerysetinfo) |
+| [**update**](./CostQuerySet#update) | [UpdateCostQuerySetRequest](CostQuerySet#updatecostquerysetrequest) | [CostQuerySetInfo](CostQuerySet#costquerysetinfo) |
+| [**delete**](./CostQuerySet#delete) | [CostQuerySetRequest](CostQuerySet#costquerysetrequest) | [Empty](CostQuerySet#empty) |
+| [**get**](./CostQuerySet#get) | [GetCostQuerySetRequest](CostQuerySet#getcostquerysetrequest) | [CostQuerySetInfo](CostQuerySet#costquerysetinfo) |
+| [**list**](./CostQuerySet#list) | [CostQuerySetQuery](CostQuerySet#costquerysetquery) | [CostQuerySetsInfo](CostQuerySet#costquerysetsinfo) |
+| [**stat**](./CostQuerySet#stat) | [CostQuerySetStatQuery](CostQuerySet#costquerysetstatquery) | [Struct](CostQuerySet#struct) |
 
 
 
@@ -57,16 +57,16 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
 
 [CreateCostQuerySetRequest](./CostQuerySet#createcostquerysetrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -97,21 +97,21 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
  {{< tab "Response Example" >}}
 
 [CostQuerySetInfo](#COSTQUERYSETINFO)
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -171,19 +171,19 @@ Updates a specific CostQuerySet. You can make changes in the details of queries.
 
 [UpdateCostQuerySetRequest](./CostQuerySet#updatecostquerysetrequest)
 
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -222,21 +222,21 @@ Updates a specific CostQuerySet. You can make changes in the details of queries.
  {{< tab "Response Example" >}}
 
 [CostQuerySetInfo](#COSTQUERYSETINFO)
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -296,10 +296,10 @@ Deletes a specific CostQuerySet. You must specify the `cost_query_set_id` of the
 
 [CostQuerySetRequest](./CostQuerySet#costquerysetrequest)
 
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -341,13 +341,13 @@ Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet
 
 [GetCostQuerySetRequest](./CostQuerySet#getcostquerysetrequest)
 
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -364,21 +364,21 @@ Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet
  {{< tab "Response Example" >}}
 
 [CostQuerySetInfo](#COSTQUERYSETINFO)
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -438,19 +438,19 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
 [CostQuerySetQuery](./CostQuerySet#costquerysetquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **cost_query_set_id** (string) 
+* **cost_query_set_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **user_id** (string) 
+* **user_id** (string)  
 
 
 
@@ -467,9 +467,9 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
  {{< tab "Response Example" >}}
 
 [CostQuerySetsInfo](#COSTQUERYSETSINFO)
-* **results** (CostQuerySetInfo)  `Required` 
+* **results** (CostQuerySetInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -558,110 +558,110 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
 
 ### CostQuerySetInfo
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### CostQuerySetQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **cost_query_set_id** (string) 
+* **cost_query_set_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     <br>
 
 ### CostQuerySetRequest
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CostQuerySetStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CostQuerySetsInfo
-* **results** (CostQuerySetInfo)  `Required` 
+* **results** (CostQuerySetInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### CreateCostQuerySetRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetCostQuerySetRequest
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateCostQuerySetRequest
-* **cost_query_set_id** (string)  `Required` 
+* **cost_query_set_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

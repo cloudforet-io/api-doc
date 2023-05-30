@@ -24,12 +24,12 @@ A ResourceGroup is a group of `resource`s from various `provider`s.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./ResourceGroup#create) | [CreateResourceGroupRequest](ResourceGroup#createresourcegrouprequest) | [ResourceGroupInfo](./ResourceGroup#resourcegroupinfo) |
-| [**update**](./ResourceGroup#update) | [UpdateResourceGroupRequest](ResourceGroup#updateresourcegrouprequest) | [ResourceGroupInfo](./ResourceGroup#resourcegroupinfo) |
-| [**delete**](./ResourceGroup#delete) | [ResourceGroupRequest](ResourceGroup#resourcegrouprequest) | [Empty](./ResourceGroup#empty) |
-| [**get**](./ResourceGroup#get) | [GetResourceGroupRequest](ResourceGroup#getresourcegrouprequest) | [ResourceGroupInfo](./ResourceGroup#resourcegroupinfo) |
-| [**list**](./ResourceGroup#list) | [ResourceGroupQuery](ResourceGroup#resourcegroupquery) | [ResourceGroupsInfo](./ResourceGroup#resourcegroupsinfo) |
-| [**stat**](./ResourceGroup#stat) | [ResourceGroupStatQuery](ResourceGroup#resourcegroupstatquery) | [Struct](./ResourceGroup#struct) |
+| [**create**](./ResourceGroup#create) | [CreateResourceGroupRequest](ResourceGroup#createresourcegrouprequest) | [ResourceGroupInfo](ResourceGroup#resourcegroupinfo) |
+| [**update**](./ResourceGroup#update) | [UpdateResourceGroupRequest](ResourceGroup#updateresourcegrouprequest) | [ResourceGroupInfo](ResourceGroup#resourcegroupinfo) |
+| [**delete**](./ResourceGroup#delete) | [ResourceGroupRequest](ResourceGroup#resourcegrouprequest) | [Empty](ResourceGroup#empty) |
+| [**get**](./ResourceGroup#get) | [GetResourceGroupRequest](ResourceGroup#getresourcegrouprequest) | [ResourceGroupInfo](ResourceGroup#resourcegroupinfo) |
+| [**list**](./ResourceGroup#list) | [ResourceGroupQuery](ResourceGroup#resourcegroupquery) | [ResourceGroupsInfo](ResourceGroup#resourcegroupsinfo) |
+| [**stat**](./ResourceGroup#stat) | [ResourceGroupStatQuery](ResourceGroup#resourcegroupstatquery) | [Struct](ResourceGroup#struct) |
 
 
 
@@ -57,22 +57,22 @@ Creates a new ResourceGroup. You can integrate `resource`s from different `provi
 
 [CreateResourceGroupRequest](./ResourceGroup#createresourcegrouprequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **resources** (Resource)  `Required` 
+* **resources** (Resource)  `Repeated`    `Required` 
 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -105,21 +105,21 @@ Creates a new ResourceGroup. You can integrate `resource`s from different `provi
  {{< tab "Response Example" >}}
 
 [ResourceGroupInfo](#RESOURCEGROUPINFO)
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **resources** (Resource)  `Required` 
+* **resources** (Resource)  `Repeated`   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -189,28 +189,28 @@ Updates a specific ResourceGroup. You can make changes in ResourceGroup settings
 
 [UpdateResourceGroupRequest](./ResourceGroup#updateresourcegrouprequest)
 
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **resources** (Resource) 
+* **resources** (Resource)  `Repeated`   
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **release_project** (bool) 
+* **release_project** (bool)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -242,21 +242,21 @@ Updates a specific ResourceGroup. You can make changes in ResourceGroup settings
  {{< tab "Response Example" >}}
 
 [ResourceGroupInfo](#RESOURCEGROUPINFO)
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **resources** (Resource)  `Required` 
+* **resources** (Resource)  `Repeated`   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -326,10 +326,10 @@ Deletes a specific ResourceGroup. You must specify the `resource_group_id` of th
 
 [ResourceGroupRequest](./ResourceGroup#resourcegrouprequest)
 
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -371,13 +371,13 @@ Gets a specific ResourceGroup. Prints detailed information about the ResourceGro
 
 [GetResourceGroupRequest](./ResourceGroup#getresourcegrouprequest)
 
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -394,21 +394,21 @@ Gets a specific ResourceGroup. Prints detailed information about the ResourceGro
  {{< tab "Response Example" >}}
 
 [ResourceGroupInfo](#RESOURCEGROUPINFO)
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **resources** (Resource)  `Required` 
+* **resources** (Resource)  `Repeated`   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -478,19 +478,19 @@ Gets a list of all ResourceGroups. You can use a query to get a filtered list of
 
 [ResourceGroupQuery](./ResourceGroup#resourcegroupquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **resource_group_id** (string) 
+* **resource_group_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -518,9 +518,9 @@ Gets a list of all ResourceGroups. You can use a query to get a filtered list of
  {{< tab "Response Example" >}}
 
 [ResourceGroupsInfo](#RESOURCEGROUPSINFO)
-* **results** (ResourceGroupInfo)  `Required` 
+* **results** (ResourceGroupInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -636,136 +636,136 @@ Gets a list of all ResourceGroups. You can use a query to get a filtered list of
 
 
 ### CreateResourceGroupRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **resources** (Resource)  `Required` 
+* **resources** (Resource)  `Repeated`    `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetResourceGroupRequest
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### Resource
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **filter** (ListValue) 
+* **filter** (ListValue)  
 
     
-* **keyword** (string) 
+* **keyword** (string)  
 
     <br>
 
 ### ResourceGroupInfo
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **resources** (Resource)  `Required` 
+* **resources** (Resource)  `Repeated`    `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### ResourceGroupQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **resource_group_id** (string) 
+* **resource_group_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>
 
 ### ResourceGroupRequest
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ResourceGroupStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ResourceGroupsInfo
-* **results** (ResourceGroupInfo)  `Required` 
+* **results** (ResourceGroupInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateResourceGroupRequest
-* **resource_group_id** (string)  `Required` 
+* **resource_group_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **resources** (Resource) 
+* **resources** (Resource)  `Repeated`   
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **release_project** (bool) 
+* **release_project** (bool)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>

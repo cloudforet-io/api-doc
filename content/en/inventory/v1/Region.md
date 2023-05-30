@@ -24,12 +24,12 @@ A Region is a resource storing regional information from each cloud service prov
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Region#create) | [CreateRegionRequest](Region#createregionrequest) | [RegionInfo](./Region#regioninfo) |
-| [**update**](./Region#update) | [UpdateRegionRequest](Region#updateregionrequest) | [RegionInfo](./Region#regioninfo) |
-| [**delete**](./Region#delete) | [RegionRequest](Region#regionrequest) | [Empty](./Region#empty) |
-| [**get**](./Region#get) | [GetRegionRequest](Region#getregionrequest) | [RegionInfo](./Region#regioninfo) |
-| [**list**](./Region#list) | [RegionQuery](Region#regionquery) | [RegionsInfo](./Region#regionsinfo) |
-| [**stat**](./Region#stat) | [RegionStatQuery](Region#regionstatquery) | [Struct](./Region#struct) |
+| [**create**](./Region#create) | [CreateRegionRequest](Region#createregionrequest) | [RegionInfo](Region#regioninfo) |
+| [**update**](./Region#update) | [UpdateRegionRequest](Region#updateregionrequest) | [RegionInfo](Region#regioninfo) |
+| [**delete**](./Region#delete) | [RegionRequest](Region#regionrequest) | [Empty](Region#empty) |
+| [**get**](./Region#get) | [GetRegionRequest](Region#getregionrequest) | [RegionInfo](Region#regioninfo) |
+| [**list**](./Region#list) | [RegionQuery](Region#regionquery) | [RegionsInfo](Region#regionsinfo) |
+| [**stat**](./Region#stat) | [RegionStatQuery](Region#regionstatquery) | [Struct](Region#struct) |
 
 
 
@@ -57,19 +57,19 @@ Creates a new Region. As the parameter `region_key`, which is automatically crea
 
 [CreateRegionRequest](./Region#createregionrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -93,23 +93,23 @@ Creates a new Region. As the parameter `region_key`, which is automatically crea
  {{< tab "Response Example" >}}
 
 [RegionInfo](#REGIONINFO)
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **region_key** (string)  `Required` 
+* **region_key** (string)   `Required` 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -160,16 +160,16 @@ Updates a specific Region. You can make changes in Region settings, including `n
 
 [UpdateRegionRequest](./Region#updateregionrequest)
 
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -192,23 +192,23 @@ Updates a specific Region. You can make changes in Region settings, including `n
  {{< tab "Response Example" >}}
 
 [RegionInfo](#REGIONINFO)
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **region_key** (string)  `Required` 
+* **region_key** (string)   `Required` 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -259,10 +259,10 @@ Deletes a specific Region. You must specify the `region_id` of the Region to del
 
 [RegionRequest](./Region#regionrequest)
 
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -304,13 +304,13 @@ Gets a specific Region. Prints detailed information about the Region, including 
 
 [GetRegionRequest](./Region#getregionrequest)
 
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -327,23 +327,23 @@ Gets a specific Region. Prints detailed information about the Region, including 
  {{< tab "Response Example" >}}
 
 [RegionInfo](#REGIONINFO)
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **region_key** (string)  `Required` 
+* **region_key** (string)   `Required` 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -394,25 +394,25 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
 
 [RegionQuery](./Region#regionquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **region_id** (string) 
+* **region_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **region_key** (string) 
+* **region_key** (string)  
 
 
-* **region_code** (string) 
+* **region_code** (string)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
 
@@ -437,9 +437,9 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
  {{< tab "Response Example" >}}
 
 [RegionsInfo](#REGIONSINFO)
-* **results** (RegionInfo)  `Required` 
+* **results** (RegionInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -514,119 +514,119 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
 
 
 ### CreateRegionRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetRegionRequest
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### RegionInfo
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **region_key** (string)  `Required` 
+* **region_key** (string)   `Required` 
 
     
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### RegionQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **region_id** (string) 
+* **region_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **region_key** (string) 
+* **region_key** (string)  
 
     
-* **region_code** (string) 
+* **region_code** (string)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     <br>
 
 ### RegionRequest
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### RegionStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### RegionsInfo
-* **results** (RegionInfo)  `Required` 
+* **results** (RegionInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateRegionRequest
-* **region_id** (string)  `Required` 
+* **region_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

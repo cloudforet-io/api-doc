@@ -24,10 +24,10 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**init**](./Auth#init) | [InitRequest](Auth#initrequest) | [PluginInfo](./Auth#plugininfo) |
-| [**verify**](./Auth#verify) | [VerifyRequest](Auth#verifyrequest) | [Empty](./Auth#empty) |
-| [**find**](./Auth#find) | [FindRequest](Auth#findrequest) | [UsersInfo](./Auth#usersinfo) |
-| [**login**](./Auth#login) | [LoginRequest](Auth#loginrequest) | [UserInfo](./Auth#userinfo) |
+| [**init**](./Auth#init) | [InitRequest](Auth#initrequest) | [PluginInfo](Auth#plugininfo) |
+| [**verify**](./Auth#verify) | [VerifyRequest](Auth#verifyrequest) | [Empty](Auth#empty) |
+| [**find**](./Auth#find) | [FindRequest](Auth#findrequest) | [UsersInfo](Auth#usersinfo) |
+| [**login**](./Auth#login) | [LoginRequest](Auth#loginrequest) | [UserInfo](Auth#userinfo) |
 
 
 
@@ -98,91 +98,91 @@ bookFlatSection: true
 
 
 ### AuthVerifyInfo
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>
 
 ### FindRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     
-* **keyword** (string) 
+* **keyword** (string)  
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>
 
 ### InitRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>
 
 ### LoginRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **user_credentials** (Struct)  `Required` 
+* **user_credentials** (Struct)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>
 
 ### PluginInfo
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     <br>
 
 ### UserInfo
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
     
-* **mobile** (string)  `Required` 
+* **mobile** (string)   `Required` 
 
     
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     <br>
 
 ### UsersInfo
-* **results** (UserInfo)  `Required` 
+* **results** (UserInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   *will be depricated*
 
     
-* **more** (bool)  `Required` 
+* **more** (bool)   `Required` 
 
     <br>
 
 ### VerifyRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>

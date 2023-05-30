@@ -29,27 +29,27 @@ bookFlatSection: true
 
 
 ### GitHubOptions
-* **url** (string)  `Required` 
+* **url** (string)   `Required` 
 
     <br>
 
 ### GitLabOptions
-* **url** (string)  `Required` 
+* **url** (string)   `Required` 
 
     <br>
 
 ### GitOptions
-* **url** (string)  `Required` 
+* **url** (string)   `Required` 
 
     <br>
 
 ### SyncOptions
-* **github** (GitHubOptions)  `Required` 
+* **github** (GitHubOptions)   `Required` 
 
     
-* **git** (GitOptions)  `Required` 
+* **git** (GitOptions)   `Required` 
 
     
-* **gitlab** (GitLabOptions)  `Required` 
+* **gitlab** (GitLabOptions)   `Required` 
 
     <br>

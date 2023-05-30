@@ -24,12 +24,12 @@ A CloudServiceType is a classification with hierarchical information of `CloudSe
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./CloudServiceType#create) | [CreateCloudServiceTypeRequest](CloudServiceType#createcloudservicetyperequest) | [CloudServiceTypeInfo](./CloudServiceType#cloudservicetypeinfo) |
-| [**update**](./CloudServiceType#update) | [UpdateCloudServiceTypeRequest](CloudServiceType#updatecloudservicetyperequest) | [CloudServiceTypeInfo](./CloudServiceType#cloudservicetypeinfo) |
-| [**delete**](./CloudServiceType#delete) | [CloudServiceTypeRequest](CloudServiceType#cloudservicetyperequest) | [Empty](./CloudServiceType#empty) |
-| [**get**](./CloudServiceType#get) | [GetCloudServiceTypeRequest](CloudServiceType#getcloudservicetyperequest) | [CloudServiceTypeInfo](./CloudServiceType#cloudservicetypeinfo) |
-| [**list**](./CloudServiceType#list) | [CloudServiceTypeQuery](CloudServiceType#cloudservicetypequery) | [CloudServiceTypesInfo](./CloudServiceType#cloudservicetypesinfo) |
-| [**stat**](./CloudServiceType#stat) | [CloudServiceTypeStatQuery](CloudServiceType#cloudservicetypestatquery) | [Struct](./CloudServiceType#struct) |
+| [**create**](./CloudServiceType#create) | [CreateCloudServiceTypeRequest](CloudServiceType#createcloudservicetyperequest) | [CloudServiceTypeInfo](CloudServiceType#cloudservicetypeinfo) |
+| [**update**](./CloudServiceType#update) | [UpdateCloudServiceTypeRequest](CloudServiceType#updatecloudservicetyperequest) | [CloudServiceTypeInfo](CloudServiceType#cloudservicetypeinfo) |
+| [**delete**](./CloudServiceType#delete) | [CloudServiceTypeRequest](CloudServiceType#cloudservicetyperequest) | [Empty](CloudServiceType#empty) |
+| [**get**](./CloudServiceType#get) | [GetCloudServiceTypeRequest](CloudServiceType#getcloudservicetyperequest) | [CloudServiceTypeInfo](CloudServiceType#cloudservicetypeinfo) |
+| [**list**](./CloudServiceType#list) | [CloudServiceTypeQuery](CloudServiceType#cloudservicetypequery) | [CloudServiceTypesInfo](CloudServiceType#cloudservicetypesinfo) |
+| [**stat**](./CloudServiceType#stat) | [CloudServiceTypeStatQuery](CloudServiceType#cloudservicetypestatquery) | [Struct](CloudServiceType#struct) |
 
 
 
@@ -57,37 +57,37 @@ Creates a new CloudServiceType. You must specify the `name`, `provider`, and `gr
 
 [CreateCloudServiceTypeRequest](./CloudServiceType#createcloudservicetyperequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
 
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **service_code** (string) 
+* **service_code** (string)  
 
 
-* **is_primary** (bool) 
+* **is_primary** (bool)  
 
 
-* **is_major** (bool) 
+* **is_major** (bool)  
 
 
-* **resource_type** (string) 
+* **resource_type** (string)  
 
 
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
 
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -117,35 +117,35 @@ Creates a new CloudServiceType. You must specify the `name`, `provider`, and `gr
  {{< tab "Response Example" >}}
 
 [CloudServiceTypeInfo](#CLOUDSERVICETYPEINFO)
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
-* **cloud_service_type_key** (string)  `Required` 
+* **cloud_service_type_key** (string)   `Required` 
 
-* **service_code** (string)  `Required` 
+* **service_code** (string)   `Required` 
 
-* **is_primary** (bool)  `Required` 
+* **is_primary** (bool)   `Required` 
 
-* **is_major** (bool)  `Required` 
+* **is_major** (bool)   `Required` 
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -202,31 +202,31 @@ Updates a specific CloudServiceType. You can make changes in CloudServiceType se
 
 [UpdateCloudServiceTypeRequest](./CloudServiceType#updatecloudservicetyperequest)
 
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **service_code** (string) 
+* **service_code** (string)  
 
 
-* **is_primary** (bool) 
+* **is_primary** (bool)  
 
 
-* **is_major** (bool) 
+* **is_major** (bool)  
 
 
-* **resource_type** (string) 
+* **resource_type** (string)  
 
 
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
 
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -251,35 +251,35 @@ Updates a specific CloudServiceType. You can make changes in CloudServiceType se
  {{< tab "Response Example" >}}
 
 [CloudServiceTypeInfo](#CLOUDSERVICETYPEINFO)
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
-* **cloud_service_type_key** (string)  `Required` 
+* **cloud_service_type_key** (string)   `Required` 
 
-* **service_code** (string)  `Required` 
+* **service_code** (string)   `Required` 
 
-* **is_primary** (bool)  `Required` 
+* **is_primary** (bool)   `Required` 
 
-* **is_major** (bool)  `Required` 
+* **is_major** (bool)   `Required` 
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -336,10 +336,10 @@ Deletes a specific CloudServiceType. You must specify the `cloud_service_type_id
 
 [CloudServiceTypeRequest](./CloudServiceType#cloudservicetyperequest)
 
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -381,13 +381,13 @@ Gets a specific CloudServiceType. Prints detailed information about the CloudSer
 
 [GetCloudServiceTypeRequest](./CloudServiceType#getcloudservicetyperequest)
 
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -404,35 +404,35 @@ Gets a specific CloudServiceType. Prints detailed information about the CloudSer
  {{< tab "Response Example" >}}
 
 [CloudServiceTypeInfo](#CLOUDSERVICETYPEINFO)
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
-* **cloud_service_type_key** (string)  `Required` 
+* **cloud_service_type_key** (string)   `Required` 
 
-* **service_code** (string)  `Required` 
+* **service_code** (string)   `Required` 
 
-* **is_primary** (bool)  `Required` 
+* **is_primary** (bool)   `Required` 
 
-* **is_major** (bool)  `Required` 
+* **is_major** (bool)   `Required` 
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -489,37 +489,37 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
 
 [CloudServiceTypeQuery](./CloudServiceType#cloudservicetypequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **cloud_service_type_id** (string) 
+* **cloud_service_type_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **group** (string) 
+* **group** (string)  
 
 
-* **cloud_service_type_key** (string) 
+* **cloud_service_type_key** (string)  
 
 
-* **service_code** (string) 
+* **service_code** (string)  
 
 
-* **is_primary** (bool) 
+* **is_primary** (bool)  
 
 
-* **is_major** (bool) 
+* **is_major** (bool)  
 
 
-* **resource_type** (string) 
+* **resource_type** (string)  
 
 
 
@@ -544,9 +544,9 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
  {{< tab "Response Example" >}}
 
 [CloudServiceTypesInfo](#CLOUDSERVICETYPESINFO)
-* **results** (CloudServiceTypeInfo)  `Required` 
+* **results** (CloudServiceTypeInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -634,182 +634,182 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
 
 
 ### CloudServiceTypeInfo
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
     
-* **cloud_service_type_key** (string)  `Required` 
+* **cloud_service_type_key** (string)   `Required` 
 
     
-* **service_code** (string)  `Required` 
+* **service_code** (string)   `Required` 
 
     
-* **is_primary** (bool)  `Required` 
+* **is_primary** (bool)   `Required` 
 
     
-* **is_major** (bool)  `Required` 
+* **is_major** (bool)   `Required` 
 
     
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### CloudServiceTypeQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **cloud_service_type_id** (string) 
+* **cloud_service_type_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **group** (string) 
+* **group** (string)  
 
     
-* **cloud_service_type_key** (string) 
+* **cloud_service_type_key** (string)  
 
     
-* **service_code** (string) 
+* **service_code** (string)  
 
     
-* **is_primary** (bool) 
+* **is_primary** (bool)  
 
     
-* **is_major** (bool) 
+* **is_major** (bool)  
 
     
-* **resource_type** (string) 
+* **resource_type** (string)  
 
     <br>
 
 ### CloudServiceTypeRequest
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CloudServiceTypeStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CloudServiceTypesInfo
-* **results** (CloudServiceTypeInfo)  `Required` 
+* **results** (CloudServiceTypeInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### CreateCloudServiceTypeRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **service_code** (string) 
+* **service_code** (string)  
 
     
-* **is_primary** (bool) 
+* **is_primary** (bool)  
 
     
-* **is_major** (bool) 
+* **is_major** (bool)  
 
     
-* **resource_type** (string) 
+* **resource_type** (string)  
 
     
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetCloudServiceTypeRequest
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateCloudServiceTypeRequest
-* **cloud_service_type_id** (string)  `Required` 
+* **cloud_service_type_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **service_code** (string) 
+* **service_code** (string)  
 
     
-* **is_primary** (bool) 
+* **is_primary** (bool)  
 
     
-* **is_major** (bool) 
+* **is_major** (bool)  
 
     
-* **resource_type** (string) 
+* **resource_type** (string)  
 
     
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

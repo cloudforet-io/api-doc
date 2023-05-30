@@ -24,8 +24,8 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**issue**](./Token#issue) | [IssueTokenRequest](Token#issuetokenrequest) | [TokenInfo](./Token#tokeninfo) |
-| [**refresh**](./Token#refresh) | [Empty](Token#empty) | [TokenInfo](./Token#tokeninfo) |
+| [**issue**](./Token#issue) | [IssueTokenRequest](Token#issuetokenrequest) | [TokenInfo](Token#tokeninfo) |
+| [**refresh**](./Token#refresh) | [Empty](Token#empty) | [TokenInfo](Token#tokeninfo) |
 
 
 
@@ -74,29 +74,29 @@ bookFlatSection: true
 
 
 ### IssueTokenRequest
-* **credentials** (Struct)  `Required` 
+* **credentials** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     
-* **user_type** (string) 
+* **user_type** (string)  
 
     
-* **timeout** (int32) 
+* **timeout** (int32)  
 
     
-* **refresh_count** (int32) 
+* **refresh_count** (int32)  
 
     <br>
 
 ### TokenInfo
-* **access_token** (string)  `Required` 
+* **access_token** (string)   `Required` 
 
     
-* **refresh_token** (string)  `Required` 
+* **refresh_token** (string)   `Required` 
 
     <br>

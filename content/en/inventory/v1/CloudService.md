@@ -24,13 +24,13 @@ A CloudService is data of an `instance` of a `resource`. A CloudService follows 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./CloudService#create) | [CreateServiceRequest](CloudService#createservicerequest) | [CloudServiceInfo](./CloudService#cloudserviceinfo) |
-| [**update**](./CloudService#update) | [UpdateCloudServiceRequest](CloudService#updatecloudservicerequest) | [CloudServiceInfo](./CloudService#cloudserviceinfo) |
-| [**delete**](./CloudService#delete) | [CloudServiceRequest](CloudService#cloudservicerequest) | [Empty](./CloudService#empty) |
-| [**get**](./CloudService#get) | [GetCloudServiceRequest](CloudService#getcloudservicerequest) | [CloudServiceInfo](./CloudService#cloudserviceinfo) |
-| [**list**](./CloudService#list) | [CloudServiceQuery](CloudService#cloudservicequery) | [CloudServicesInfo](./CloudService#cloudservicesinfo) |
-| [**analyze**](./CloudService#analyze) | [CloudServiceAnalyzeQuery](CloudService#cloudserviceanalyzequery) | [Struct](./CloudService#struct) |
-| [**stat**](./CloudService#stat) | [CloudServiceStatQuery](CloudService#cloudservicestatquery) | [Struct](./CloudService#struct) |
+| [**create**](./CloudService#create) | [CreateServiceRequest](CloudService#createservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
+| [**update**](./CloudService#update) | [UpdateCloudServiceRequest](CloudService#updatecloudservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
+| [**delete**](./CloudService#delete) | [CloudServiceRequest](CloudService#cloudservicerequest) | [Empty](CloudService#empty) |
+| [**get**](./CloudService#get) | [GetCloudServiceRequest](CloudService#getcloudservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
+| [**list**](./CloudService#list) | [CloudServiceQuery](CloudService#cloudservicequery) | [CloudServicesInfo](CloudService#cloudservicesinfo) |
+| [**analyze**](./CloudService#analyze) | [CloudServiceAnalyzeQuery](CloudService#cloudserviceanalyzequery) | [Struct](CloudService#struct) |
+| [**stat**](./CloudService#stat) | [CloudServiceStatQuery](CloudService#cloudservicestatquery) | [Struct](CloudService#struct) |
 
 
 
@@ -58,49 +58,49 @@ Creates a new CloudService. A CloudService instance is created based on data inc
 
 [CreateServiceRequest](./CloudService#createservicerequest)
 
-* **cloud_service_type** (string)  `Required` 
+* **cloud_service_type** (string)   `Required` 
 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
 
-* **cloud_service_group** (string)  `Required` 
+* **cloud_service_group** (string)   `Required` 
 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **account** (string) 
+* **account** (string)  
 
 
-* **instance_type** (string) 
+* **instance_type** (string)  
 
 
-* **instance_size** (float) 
+* **instance_size** (float)  
 
 
-* **ip_addresses** (string) 
+* **ip_addresses** (string)  `Repeated`   
 
 
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
 
-* **reference** (CloudServiceReference) 
+* **reference** (CloudServiceReference)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **region_code** (string) 
+* **region_code** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -161,49 +161,49 @@ Creates a new CloudService. A CloudService instance is created based on data inc
  {{< tab "Response Example" >}}
 
 [CloudServiceInfo](#CLOUDSERVICEINFO)
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (string)  `Required` 
+* **state** (string)   `Required` 
 
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
-* **instance_type** (string)  `Required` 
+* **instance_type** (string)   `Required` 
 
-* **instance_size** (float)  `Required` 
+* **instance_size** (float)   `Required` 
 
-* **cloud_service_type** (string)  `Required` 
+* **cloud_service_type** (string)   `Required` 
 
-* **cloud_service_group** (string)  `Required` 
+* **cloud_service_group** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
-* **reference** (CloudServiceReference)  `Required` 
+* **reference** (CloudServiceReference)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **tag_keys** (Struct)  `Required` 
+* **tag_keys** (Struct)   `Required` 
 
-* **collection_info** (CollectionInfo)  `Required` 
+* **collection_info** (CollectionInfo)  `Repeated`   `Required` 
 
-* **ip_addresses** (string)  `Required` 
+* **ip_addresses** (string)  `Repeated`   `Required` 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **deleted_at** (string)  `Required` 
+* **deleted_at** (string)   `Required` 
 
 
 
@@ -298,49 +298,49 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
 
 [UpdateCloudServiceRequest](./CloudService#updatecloudservicerequest)
 
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **account** (string) 
+* **account** (string)  
 
 
-* **instance_type** (string) 
+* **instance_type** (string)  
 
 
-* **instance_size** (float) 
+* **instance_size** (float)  
 
 
-* **ip_addresses** (string) 
+* **ip_addresses** (string)  `Repeated`   
 
 
-* **data** (Struct) 
+* **data** (Struct)  
 
 
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
 
-* **reference** (CloudServiceReference) 
+* **reference** (CloudServiceReference)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **region_code** (string) 
+* **region_code** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **release_project** (bool) 
+* **release_project** (bool)  
 
 
-* **release_region** (bool) 
+* **release_region** (bool)  
 
 
 
@@ -366,49 +366,49 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
  {{< tab "Response Example" >}}
 
 [CloudServiceInfo](#CLOUDSERVICEINFO)
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (string)  `Required` 
+* **state** (string)   `Required` 
 
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
-* **instance_type** (string)  `Required` 
+* **instance_type** (string)   `Required` 
 
-* **instance_size** (float)  `Required` 
+* **instance_size** (float)   `Required` 
 
-* **cloud_service_type** (string)  `Required` 
+* **cloud_service_type** (string)   `Required` 
 
-* **cloud_service_group** (string)  `Required` 
+* **cloud_service_group** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
-* **reference** (CloudServiceReference)  `Required` 
+* **reference** (CloudServiceReference)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **tag_keys** (Struct)  `Required` 
+* **tag_keys** (Struct)   `Required` 
 
-* **collection_info** (CollectionInfo)  `Required` 
+* **collection_info** (CollectionInfo)  `Repeated`   `Required` 
 
-* **ip_addresses** (string)  `Required` 
+* **ip_addresses** (string)  `Repeated`   `Required` 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **deleted_at** (string)  `Required` 
+* **deleted_at** (string)   `Required` 
 
 
 
@@ -503,10 +503,10 @@ Deletes a specific CloudService. You must specify the `cloud_service_id` of the 
 
 [CloudServiceRequest](./CloudService#cloudservicerequest)
 
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -548,13 +548,13 @@ Gets a specific CloudService. Prints detailed information about the CloudService
 
 [GetCloudServiceRequest](./CloudService#getcloudservicerequest)
 
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -571,49 +571,49 @@ Gets a specific CloudService. Prints detailed information about the CloudService
  {{< tab "Response Example" >}}
 
 [CloudServiceInfo](#CLOUDSERVICEINFO)
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (string)  `Required` 
+* **state** (string)   `Required` 
 
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
-* **instance_type** (string)  `Required` 
+* **instance_type** (string)   `Required` 
 
-* **instance_size** (float)  `Required` 
+* **instance_size** (float)   `Required` 
 
-* **cloud_service_type** (string)  `Required` 
+* **cloud_service_type** (string)   `Required` 
 
-* **cloud_service_group** (string)  `Required` 
+* **cloud_service_group** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
-* **reference** (CloudServiceReference)  `Required` 
+* **reference** (CloudServiceReference)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **tag_keys** (Struct)  `Required` 
+* **tag_keys** (Struct)   `Required` 
 
-* **collection_info** (CollectionInfo)  `Required` 
+* **collection_info** (CollectionInfo)  `Repeated`   `Required` 
 
-* **ip_addresses** (string)  `Required` 
+* **ip_addresses** (string)  `Repeated`   `Required` 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **deleted_at** (string)  `Required` 
+* **deleted_at** (string)   `Required` 
 
 
 
@@ -708,49 +708,49 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
 [CloudServiceQuery](./CloudService#cloudservicequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **cloud_service_id** (string) 
+* **cloud_service_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **state** (string) 
+* **state** (string)  
 
 
-* **account** (string) 
+* **account** (string)  
 
 
-* **instance_type** (string) 
+* **instance_type** (string)  
 
 
-* **cloud_service_type** (string) 
+* **cloud_service_type** (string)  
 
 
-* **cloud_service_group** (string) 
+* **cloud_service_group** (string)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **region_code** (string) 
+* **region_code** (string)  
 
 
-* **ip_address** (string) 
+* **ip_address** (string)  
 
 
-* **resource_group_id** (string) 
+* **resource_group_id** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **project_group_id** (string) 
+* **project_group_id** (string)  
 
 
 
@@ -775,9 +775,9 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
  {{< tab "Response Example" >}}
 
 [CloudServicesInfo](#CLOUDSERVICESINFO)
-* **results** (CloudServiceInfo)  `Required` 
+* **results** (CloudServiceInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -899,289 +899,289 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
 
 ### CloudServiceAnalyzeQuery
-* **query** (AnalyzeQuery)  `Required` 
+* **query** (AnalyzeQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CloudServiceInfo
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (string)  `Required` 
+* **state** (string)   `Required` 
 
     
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
     
-* **instance_type** (string)  `Required` 
+* **instance_type** (string)   `Required` 
 
     
-* **instance_size** (float)  `Required` 
+* **instance_size** (float)   `Required` 
 
     
-* **cloud_service_type** (string)  `Required` 
+* **cloud_service_type** (string)   `Required` 
 
     
-* **cloud_service_group** (string)  `Required` 
+* **cloud_service_group** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     
-* **reference** (CloudServiceReference)  `Required` 
+* **reference** (CloudServiceReference)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **tag_keys** (Struct)  `Required` 
+* **tag_keys** (Struct)   `Required` 
 
     
-* **collection_info** (CollectionInfo)  `Required` 
+* **collection_info** (CollectionInfo)  `Repeated`    `Required` 
 
     
-* **ip_addresses** (string)  `Required` 
+* **ip_addresses** (string)  `Repeated`    `Required` 
 
     
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     
-* **deleted_at** (string)  `Required` 
+* **deleted_at** (string)   `Required` 
 
     <br>
 
 ### CloudServiceQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **cloud_service_id** (string) 
+* **cloud_service_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **state** (string) 
+* **state** (string)  
 
     
-* **account** (string) 
+* **account** (string)  
 
     
-* **instance_type** (string) 
+* **instance_type** (string)  
 
     
-* **cloud_service_type** (string) 
+* **cloud_service_type** (string)  
 
     
-* **cloud_service_group** (string) 
+* **cloud_service_group** (string)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **region_code** (string) 
+* **region_code** (string)  
 
     
-* **ip_address** (string) 
+* **ip_address** (string)  
 
     
-* **resource_group_id** (string) 
+* **resource_group_id** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **project_group_id** (string) 
+* **project_group_id** (string)  
 
     <br>
 
 ### CloudServiceReference
-* **resource_id** (string)  `Required` 
+* **resource_id** (string)   `Required` 
 
     
-* **external_link** (string)  `Required` 
+* **external_link** (string)   `Required` 
 
     <br>
 
 ### CloudServiceRequest
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CloudServiceStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CloudServicesInfo
-* **results** (CloudServiceInfo)  `Required` 
+* **results** (CloudServiceInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### CollectionInfo
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **last_collected_at** (string)  `Required` 
+* **last_collected_at** (string)   `Required` 
 
     <br>
 
 ### CreateServiceRequest
-* **cloud_service_type** (string)  `Required` 
+* **cloud_service_type** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **cloud_service_group** (string)  `Required` 
+* **cloud_service_group** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **account** (string) 
+* **account** (string)  
 
     
-* **instance_type** (string) 
+* **instance_type** (string)  
 
     
-* **instance_size** (float) 
+* **instance_size** (float)  
 
     
-* **ip_addresses** (string) 
+* **ip_addresses** (string)  `Repeated`   
 
     
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
     
-* **reference** (CloudServiceReference) 
+* **reference** (CloudServiceReference)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **region_code** (string) 
+* **region_code** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>
 
 ### GetCloudServiceRequest
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### PinCloudServiceDataRequest
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     
-* **keys** (string)  `Required` 
+* **keys** (string)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UpdateCloudServiceRequest
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **account** (string) 
+* **account** (string)  
 
     
-* **instance_type** (string) 
+* **instance_type** (string)  
 
     
-* **instance_size** (float) 
+* **instance_size** (float)  
 
     
-* **ip_addresses** (string) 
+* **ip_addresses** (string)  `Repeated`   
 
     
-* **data** (Struct) 
+* **data** (Struct)  
 
     
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
     
-* **reference** (CloudServiceReference) 
+* **reference** (CloudServiceReference)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **region_code** (string) 
+* **region_code** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **release_project** (bool) 
+* **release_project** (bool)  
 
     
-* **release_region** (bool) 
+* **release_region** (bool)  
 
     <br>

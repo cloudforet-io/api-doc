@@ -24,12 +24,12 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Note#create) | [CreateNoteRequest](Note#createnoterequest) | [NoteInfo](./Note#noteinfo) |
-| [**update**](./Note#update) | [UpdateNoteRequest](Note#updatenoterequest) | [NoteInfo](./Note#noteinfo) |
-| [**delete**](./Note#delete) | [NoteRequest](Note#noterequest) | [Empty](./Note#empty) |
-| [**get**](./Note#get) | [GetNoteRequest](Note#getnoterequest) | [NoteInfo](./Note#noteinfo) |
-| [**list**](./Note#list) | [NoteQuery](Note#notequery) | [NotesInfo](./Note#notesinfo) |
-| [**stat**](./Note#stat) | [NoteStatQuery](Note#notestatquery) | [Struct](./Note#struct) |
+| [**create**](./Note#create) | [CreateNoteRequest](Note#createnoterequest) | [NoteInfo](Note#noteinfo) |
+| [**update**](./Note#update) | [UpdateNoteRequest](Note#updatenoterequest) | [NoteInfo](Note#noteinfo) |
+| [**delete**](./Note#delete) | [NoteRequest](Note#noterequest) | [Empty](Note#empty) |
+| [**get**](./Note#get) | [GetNoteRequest](Note#getnoterequest) | [NoteInfo](Note#noteinfo) |
+| [**list**](./Note#list) | [NoteQuery](Note#notequery) | [NotesInfo](Note#notesinfo) |
+| [**stat**](./Note#stat) | [NoteStatQuery](Note#notestatquery) | [Struct](Note#struct) |
 
 
 
@@ -57,17 +57,17 @@ bookFlatSection: true
 
 [CreateNoteRequest](./Note#createnoterequest)
 
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
   *is_required: true*
 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
   *is_required: true*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 
@@ -86,19 +86,19 @@ bookFlatSection: true
  {{< tab "Response Example" >}}
 
 [NoteInfo](#NOTEINFO)
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -137,17 +137,17 @@ bookFlatSection: true
 
 [UpdateNoteRequest](./Note#updatenoterequest)
 
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
   *is_required: true*
 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
   *is_required: false*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 
@@ -166,19 +166,19 @@ bookFlatSection: true
  {{< tab "Response Example" >}}
 
 [NoteInfo](#NOTEINFO)
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -217,12 +217,12 @@ bookFlatSection: true
 
 [NoteRequest](./Note#noterequest)
 
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
   *is_required: true*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 
@@ -266,17 +266,17 @@ bookFlatSection: true
 
 [GetNoteRequest](./Note#getnoterequest)
 
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
   *is_required: true*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 
 
-* **only** (string)  `Required` 
+* **only** (string)  `Repeated`    `Required` 
 
   *is_required: false*
 
@@ -295,19 +295,19 @@ bookFlatSection: true
  {{< tab "Response Example" >}}
 
 [NoteInfo](#NOTEINFO)
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -346,32 +346,32 @@ bookFlatSection: true
 
 [NoteQuery](./Note#notequery)
 
-* **query** (Query)  `Required` 
+* **query** (Query)   `Required` 
 
   *is_required: false*
 
 
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
   *is_required: false*
 
 
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
   *is_required: false*
 
 
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
   *is_required: false*
 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
   *is_required: false*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: false*
 
@@ -419,138 +419,138 @@ bookFlatSection: true
 
 
 ### CreateNoteRequest
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
   *is_required: true*
 
     
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
   *is_required: true*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 
     <br>
 
 ### GetNoteRequest
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
   *is_required: true*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 
     
-* **only** (string)  `Required` 
+* **only** (string)  `Repeated`    `Required` 
 
   *is_required: false*
 
     <br>
 
 ### NoteInfo
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
     
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
     
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
     
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### NoteQuery
-* **query** (Query)  `Required` 
+* **query** (Query)   `Required` 
 
   *is_required: false*
 
     
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
   *is_required: false*
 
     
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
   *is_required: false*
 
     
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
   *is_required: false*
 
     
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
   *is_required: false*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: false*
 
     <br>
 
 ### NoteRequest
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
   *is_required: true*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 
     <br>
 
 ### NoteStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
   *is_required: true*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 
     <br>
 
 ### NotesInfo
-* **results** (NoteInfo)  `Required` 
+* **results** (NoteInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateNoteRequest
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
   *is_required: true*
 
     
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
   *is_required: false*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *is_required: true*
 

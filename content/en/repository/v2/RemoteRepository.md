@@ -24,8 +24,8 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**get**](./RemoteRepository#get) | [GetRemoteRepository](RemoteRepository#getremoterepository) | [RemoteRepositoryInfo](./RemoteRepository#remoterepositoryinfo) |
-| [**list**](./RemoteRepository#list) | [RemoteRepositoryQuery](RemoteRepository#remoterepositoryquery) | [RemoteRepositoriesInfo](./RemoteRepository#remoterepositoriesinfo) |
+| [**get**](./RemoteRepository#get) | [GetRemoteRepository](RemoteRepository#getremoterepository) | [RemoteRepositoryInfo](RemoteRepository#remoterepositoryinfo) |
+| [**list**](./RemoteRepository#list) | [RemoteRepositoryQuery](RemoteRepository#remoterepositoryquery) | [RemoteRepositoriesInfo](RemoteRepository#remoterepositoriesinfo) |
 
 
 
@@ -74,39 +74,39 @@ bookFlatSection: true
 
 
 ### GetRemoteRepository
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     <br>
 
 ### RemoteRepositoriesInfo
-* **results** (RemoteRepositoryInfo)  `Required` 
+* **results** (RemoteRepositoryInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### RemoteRepositoryInfo
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **description** (string)  `Required` 
+* **description** (string)   `Required` 
 
     
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### RemoteRepositoryQuery
-* **name** (string) 
+* **name** (string)  
 
     
-* **version** (string) 
+* **version** (string)  
 
     <br>

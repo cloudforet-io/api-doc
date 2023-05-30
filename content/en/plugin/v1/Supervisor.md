@@ -24,17 +24,17 @@ A Supervisor is a resource managing the lifecycle of the plugin instances to dep
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**publish**](./Supervisor#publish) | [PublishSupervisorRequest](Supervisor#publishsupervisorrequest) | [SupervisorInfo](./Supervisor#supervisorinfo) |
-| [**register**](./Supervisor#register) | [RegisterSupervisorRequest](Supervisor#registersupervisorrequest) | [SupervisorInfo](./Supervisor#supervisorinfo) |
-| [**update**](./Supervisor#update) | [RegisterSupervisorRequest](Supervisor#registersupervisorrequest) | [SupervisorInfo](./Supervisor#supervisorinfo) |
-| [**deregister**](./Supervisor#deregister) | [SupervisorRequest](Supervisor#supervisorrequest) | [Empty](./Supervisor#empty) |
-| [**enable**](./Supervisor#enable) | [SupervisorRequest](Supervisor#supervisorrequest) | [SupervisorInfo](./Supervisor#supervisorinfo) |
-| [**disable**](./Supervisor#disable) | [SupervisorRequest](Supervisor#supervisorrequest) | [SupervisorInfo](./Supervisor#supervisorinfo) |
-| [**recover_plugin**](./Supervisor#recover_plugin) | [RecoverPluginRequest](Supervisor#recoverpluginrequest) | [PluginInfo](./Supervisor#plugininfo) |
-| [**get**](./Supervisor#get) | [GetSupervisorRequest](Supervisor#getsupervisorrequest) | [SupervisorInfo](./Supervisor#supervisorinfo) |
-| [**list**](./Supervisor#list) | [SupervisorQuery](Supervisor#supervisorquery) | [SupervisorsInfo](./Supervisor#supervisorsinfo) |
-| [**stat**](./Supervisor#stat) | [SupervisorStatQuery](Supervisor#supervisorstatquery) | [Struct](./Supervisor#struct) |
-| [**list_plugins**](./Supervisor#list_plugins) | [PluginQuery](Supervisor#pluginquery) | [PluginsInfo](./Supervisor#pluginsinfo) |
+| [**publish**](./Supervisor#publish) | [PublishSupervisorRequest](Supervisor#publishsupervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
+| [**register**](./Supervisor#register) | [RegisterSupervisorRequest](Supervisor#registersupervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
+| [**update**](./Supervisor#update) | [RegisterSupervisorRequest](Supervisor#registersupervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
+| [**deregister**](./Supervisor#deregister) | [SupervisorRequest](Supervisor#supervisorrequest) | [Empty](Supervisor#empty) |
+| [**enable**](./Supervisor#enable) | [SupervisorRequest](Supervisor#supervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
+| [**disable**](./Supervisor#disable) | [SupervisorRequest](Supervisor#supervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
+| [**recover_plugin**](./Supervisor#recover_plugin) | [RecoverPluginRequest](Supervisor#recoverpluginrequest) | [PluginInfo](Supervisor#plugininfo) |
+| [**get**](./Supervisor#get) | [GetSupervisorRequest](Supervisor#getsupervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
+| [**list**](./Supervisor#list) | [SupervisorQuery](Supervisor#supervisorquery) | [SupervisorsInfo](Supervisor#supervisorsinfo) |
+| [**stat**](./Supervisor#stat) | [SupervisorStatQuery](Supervisor#supervisorstatquery) | [Struct](Supervisor#struct) |
+| [**list_plugins**](./Supervisor#list_plugins) | [PluginQuery](Supervisor#pluginquery) | [PluginsInfo](Supervisor#pluginsinfo) |
 
 
 
@@ -62,28 +62,28 @@ Creates a new Supervisor. Only Users with the `MANAGED` permission can set the S
 
 [PublishSupervisorRequest](./Supervisor#publishsupervisorrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **secret_key** (string) 
+* **secret_key** (string)  
 
 
-* **plugin_info** (PluginInfo) 
+* **plugin_info** (PluginInfo)  `Repeated`   
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **is_public** (bool) 
+* **is_public** (bool)  
 
 
-* **labels** (Struct) 
+* **labels** (Struct)  
 
 
 
@@ -105,25 +105,25 @@ Creates a new Supervisor. Only Users with the `MANAGED` permission can set the S
  {{< tab "Response Example" >}}
 
 [SupervisorInfo](#SUPERVISORINFO)
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_public** (bool)  `Required` 
+* **is_public** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (Struct)  `Required` 
+* **labels** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -171,25 +171,25 @@ Registers a specific Supervisor. You must specify the `supervisor_id` of the Sup
 
 [RegisterSupervisorRequest](./Supervisor#registersupervisorrequest)
 
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **is_public** (bool) 
+* **is_public** (bool)  
 
 
-* **priority** (int32) 
+* **priority** (int32)  
 
 
-* **labels** (Struct) 
+* **labels** (Struct)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -215,25 +215,25 @@ Registers a specific Supervisor. You must specify the `supervisor_id` of the Sup
  {{< tab "Response Example" >}}
 
 [SupervisorInfo](#SUPERVISORINFO)
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_public** (bool)  `Required` 
+* **is_public** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (Struct)  `Required` 
+* **labels** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -281,25 +281,25 @@ Updates a specific Supervisor. You can make changes in Supervisor settings, incl
 
 [RegisterSupervisorRequest](./Supervisor#registersupervisorrequest)
 
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **is_public** (bool) 
+* **is_public** (bool)  
 
 
-* **priority** (int32) 
+* **priority** (int32)  
 
 
-* **labels** (Struct) 
+* **labels** (Struct)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -325,25 +325,25 @@ Updates a specific Supervisor. You can make changes in Supervisor settings, incl
  {{< tab "Response Example" >}}
 
 [SupervisorInfo](#SUPERVISORINFO)
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_public** (bool)  `Required` 
+* **is_public** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (Struct)  `Required` 
+* **labels** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -391,10 +391,10 @@ Deregisters and deletes a specific Supervisor. You must specify the `supervisor_
 
 [SupervisorRequest](./Supervisor#supervisorrequest)
 
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -436,10 +436,10 @@ Enables a specific Supervisor. By changing the `state` parameter to `ENABLED`, t
 
 [SupervisorRequest](./Supervisor#supervisorrequest)
 
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -456,25 +456,25 @@ Enables a specific Supervisor. By changing the `state` parameter to `ENABLED`, t
  {{< tab "Response Example" >}}
 
 [SupervisorInfo](#SUPERVISORINFO)
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_public** (bool)  `Required` 
+* **is_public** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (Struct)  `Required` 
+* **labels** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -522,10 +522,10 @@ Disables a specific Supervisor. By changing the `state` parameter to `DISABLED`,
 
 [SupervisorRequest](./Supervisor#supervisorrequest)
 
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -542,25 +542,25 @@ Disables a specific Supervisor. By changing the `state` parameter to `DISABLED`,
  {{< tab "Response Example" >}}
 
 [SupervisorInfo](#SUPERVISORINFO)
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_public** (bool)  `Required` 
+* **is_public** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (Struct)  `Required` 
+* **labels** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -608,16 +608,16 @@ Recovers a specific plugin instance in a specific Supervisor. Changes the `state
 
 [RecoverPluginRequest](./Supervisor#recoverpluginrequest)
 
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
 
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
 
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -660,25 +660,25 @@ Recovers a specific plugin instance in a specific Supervisor. Changes the `state
  {{< tab "Response Example" >}}
 
 [SupervisorInfo](#SUPERVISORINFO)
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **is_public** (bool)  `Required` 
+* **is_public** (bool)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **labels** (Struct)  `Required` 
+* **labels** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -726,19 +726,19 @@ Gets a list of all Supervisors. You can use a query to get a filtered list of Su
 
 [SupervisorQuery](./Supervisor#supervisorquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **supervisor_id** (string) 
+* **supervisor_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **is_public** (bool) 
+* **is_public** (bool)  
 
 
 
@@ -755,9 +755,9 @@ Gets a list of all Supervisors. You can use a query to get a filtered list of Su
  {{< tab "Response Example" >}}
 
 [SupervisorsInfo](#SUPERVISORSINFO)
-* **results** (SupervisorInfo)  `Required` 
+* **results** (SupervisorInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -837,28 +837,28 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
 
 [PluginQuery](./Supervisor#pluginquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **supervisor_id** (string) 
+* **supervisor_id** (string)  
 
 
-* **hostname** (string) 
+* **hostname** (string)  
 
 
-* **plugin_id** (string) 
+* **plugin_id** (string)  
 
 
-* **version** (string) 
+* **version** (string)  
 
 
-* **state** (State) 
+* **state** (State)  
 
 
-* **endpoint** (string) 
+* **endpoint** (string)  
 
 
 
@@ -875,9 +875,9 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
  {{< tab "Response Example" >}}
 
 [PluginsInfo](#PLUGINSINFO)
-* **results** (PluginInfo)  `Required` 
+* **results** (PluginInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -929,211 +929,211 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
 
 
 ### GetSupervisorRequest
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### PluginInfo
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
     
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
     
-* **supervisor_name** (string)  `Required` 
+* **supervisor_name** (string)   `Required` 
 
     
-* **managed** (bool)  `Required` 
+* **managed** (bool)   `Required` 
 
     
-* **endpoints** (string)  `Required` 
+* **endpoints** (string)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### PluginQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **supervisor_id** (string) 
+* **supervisor_id** (string)  
 
     
-* **hostname** (string) 
+* **hostname** (string)  
 
     
-* **plugin_id** (string) 
+* **plugin_id** (string)  
 
     
-* **version** (string) 
+* **version** (string)  
 
     
-* **state** (State) 
+* **state** (State)  
 
     
-* **endpoint** (string) 
+* **endpoint** (string)  
 
     <br>
 
 ### PluginsInfo
-* **results** (PluginInfo)  `Required` 
+* **results** (PluginInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### PublishSupervisorRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **secret_key** (string) 
+* **secret_key** (string)  
 
     
-* **plugin_info** (PluginInfo) 
+* **plugin_info** (PluginInfo)  `Repeated`   
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **is_public** (bool) 
+* **is_public** (bool)  
 
     
-* **labels** (Struct) 
+* **labels** (Struct)  
 
     <br>
 
 ### RecoverPluginRequest
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
     
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### RegisterSupervisorRequest
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **is_public** (bool) 
+* **is_public** (bool)  
 
     
-* **priority** (int32) 
+* **priority** (int32)  
 
     
-* **labels** (Struct) 
+* **labels** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### SupervisorInfo
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **hostname** (string)  `Required` 
+* **hostname** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **is_public** (bool)  `Required` 
+* **is_public** (bool)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **labels** (Struct)  `Required` 
+* **labels** (Struct)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### SupervisorQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **supervisor_id** (string) 
+* **supervisor_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **is_public** (bool) 
+* **is_public** (bool)  
 
     <br>
 
 ### SupervisorRequest
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SupervisorStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SupervisorsInfo
-* **results** (SupervisorInfo)  `Required` 
+* **results** (SupervisorInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>

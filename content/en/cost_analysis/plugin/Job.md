@@ -24,7 +24,7 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**get_tasks**](./Job#get_tasks) | [GetTasksRequest](Job#gettasksrequest) | [TasksInfo](./Job#tasksinfo) |
+| [**get_tasks**](./Job#get_tasks) | [GetTasksRequest](Job#gettasksrequest) | [TasksInfo](Job#tasksinfo) |
 
 
 
@@ -49,22 +49,22 @@ bookFlatSection: true
 
 [GetTasksRequest](./Job#gettasksrequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schema** (string) 
+* **schema** (string)  
 
 
-* **start** (string) 
+* **start** (string)  
 
 
-* **last_synchronized_at** (string) 
+* **last_synchronized_at** (string)  
 
 
 
@@ -81,9 +81,9 @@ bookFlatSection: true
  {{< tab "Response Example" >}}
 
 [TasksInfo](#TASKSINFO)
-* **tasks** (TaskInfo)  `Required` 
+* **tasks** (TaskInfo)  `Repeated`   `Required` 
 
-* **changed** (ChangedInfo)  `Required` 
+* **changed** (ChangedInfo)  `Repeated`   `Required` 
 
 
 
@@ -109,45 +109,45 @@ bookFlatSection: true
 
 
 ### ChangedInfo
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
     <br>
 
 ### GetTasksRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     
-* **start** (string) 
+* **start** (string)  
 
     
-* **last_synchronized_at** (string) 
+* **last_synchronized_at** (string)  
 
     <br>
 
 ### TaskInfo
-* **task_options** (Struct)  `Required` 
+* **task_options** (Struct)   `Required` 
 
     <br>
 
 ### TasksInfo
-* **tasks** (TaskInfo)  `Required` 
+* **tasks** (TaskInfo)  `Repeated`    `Required` 
 
     
-* **changed** (ChangedInfo)  `Required` 
+* **changed** (ChangedInfo)  `Repeated`    `Required` 
 
     <br>

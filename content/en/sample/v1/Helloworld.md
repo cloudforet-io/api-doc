@@ -24,7 +24,7 @@ The greeting service definition.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**say_hello**](./HelloWorld#say_hello) | [HelloRequest](HelloWorld#hellorequest) | [HelloReply](./HelloWorld#helloreply) |
+| [**say_hello**](./HelloWorld#say_hello) | [HelloRequest](HelloWorld#hellorequest) | [HelloReply](HelloWorld#helloreply) |
 
 
 
@@ -49,7 +49,7 @@ Sends a greeting
 
 [HelloRequest](./HelloWorld#hellorequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
 
@@ -64,7 +64,7 @@ The request message containing the user's name.
  {{< tab "Response Example" >}}
 
 [HelloReply](#HELLOREPLY)
-* **message** (string)  `Required` 
+* **message** (string)   `Required` 
 
 
 
@@ -88,11 +88,11 @@ The response message containing the greetings
 
 
 ### HelloReply
-* **message** (string)  `Required` 
+* **message** (string)   `Required` 
 
     <br>
 
 ### HelloRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     <br>

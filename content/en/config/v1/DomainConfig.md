@@ -24,13 +24,13 @@ DomainConfig API which configure environments for domain
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./DomainConfig#create) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](./DomainConfig#domainconfiginfo) |
-| [**update**](./DomainConfig#update) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](./DomainConfig#domainconfiginfo) |
-| [**set**](./DomainConfig#set) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](./DomainConfig#domainconfiginfo) |
-| [**delete**](./DomainConfig#delete) | [DomainConfigRequest](DomainConfig#domainconfigrequest) | [Empty](./DomainConfig#empty) |
-| [**get**](./DomainConfig#get) | [GetDomainConfigRequest](DomainConfig#getdomainconfigrequest) | [DomainConfigInfo](./DomainConfig#domainconfiginfo) |
-| [**list**](./DomainConfig#list) | [DomainConfigQuery](DomainConfig#domainconfigquery) | [DomainConfigsInfo](./DomainConfig#domainconfigsinfo) |
-| [**stat**](./DomainConfig#stat) | [DomainConfigStatQuery](DomainConfig#domainconfigstatquery) | [Struct](./DomainConfig#struct) |
+| [**create**](./DomainConfig#create) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
+| [**update**](./DomainConfig#update) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
+| [**set**](./DomainConfig#set) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
+| [**delete**](./DomainConfig#delete) | [DomainConfigRequest](DomainConfig#domainconfigrequest) | [Empty](DomainConfig#empty) |
+| [**get**](./DomainConfig#get) | [GetDomainConfigRequest](DomainConfig#getdomainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
+| [**list**](./DomainConfig#list) | [DomainConfigQuery](DomainConfig#domainconfigquery) | [DomainConfigsInfo](DomainConfig#domainconfigsinfo) |
+| [**stat**](./DomainConfig#stat) | [DomainConfigStatQuery](DomainConfig#domainconfigstatquery) | [Struct](DomainConfig#struct) |
 
 
 
@@ -164,81 +164,81 @@ DomainConfig API which configure environments for domain
 
 
 ### DomainConfigInfo
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### DomainConfigQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     <br>
 
 ### DomainConfigRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### DomainConfigStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### DomainConfigsInfo
-* **results** (DomainConfigInfo)  `Required` 
+* **results** (DomainConfigInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### GetDomainConfigRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### SetDomainConfigRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

@@ -24,14 +24,14 @@ A Secret is an external data, encrypted by CloudForet.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Secret#create) | [CreateSecretRequest](Secret#createsecretrequest) | [SecretInfo](./Secret#secretinfo) |
-| [**update**](./Secret#update) | [UpdateSecretRequest](Secret#updatesecretrequest) | [SecretInfo](./Secret#secretinfo) |
-| [**delete**](./Secret#delete) | [SecretRequest](Secret#secretrequest) | [Empty](./Secret#empty) |
-| [**update_data**](./Secret#update_data) | [UpdateSecretDataRequest](Secret#updatesecretdatarequest) | [Empty](./Secret#empty) |
-| [**get_data**](./Secret#get_data) | [SecretRequest](Secret#secretrequest) | [SecretDataInfo](./Secret#secretdatainfo) |
-| [**get**](./Secret#get) | [GetSecretRequest](Secret#getsecretrequest) | [SecretInfo](./Secret#secretinfo) |
-| [**list**](./Secret#list) | [SecretQuery](Secret#secretquery) | [SecretsInfo](./Secret#secretsinfo) |
-| [**stat**](./Secret#stat) | [SecretStatQuery](Secret#secretstatquery) | [Struct](./Secret#struct) |
+| [**create**](./Secret#create) | [CreateSecretRequest](Secret#createsecretrequest) | [SecretInfo](Secret#secretinfo) |
+| [**update**](./Secret#update) | [UpdateSecretRequest](Secret#updatesecretrequest) | [SecretInfo](Secret#secretinfo) |
+| [**delete**](./Secret#delete) | [SecretRequest](Secret#secretrequest) | [Empty](Secret#empty) |
+| [**update_data**](./Secret#update_data) | [UpdateSecretDataRequest](Secret#updatesecretdatarequest) | [Empty](Secret#empty) |
+| [**get_data**](./Secret#get_data) | [SecretRequest](Secret#secretrequest) | [SecretDataInfo](Secret#secretdatainfo) |
+| [**get**](./Secret#get) | [GetSecretRequest](Secret#getsecretrequest) | [SecretInfo](Secret#secretinfo) |
+| [**list**](./Secret#list) | [SecretQuery](Secret#secretquery) | [SecretsInfo](Secret#secretsinfo) |
+| [**stat**](./Secret#stat) | [SecretStatQuery](Secret#secretstatquery) | [Struct](Secret#struct) |
 
 
 
@@ -59,31 +59,31 @@ Creates a new Secret. When creating the resource, external `data` is encrypted, 
 
 [CreateSecretRequest](./Secret#createsecretrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
 
-* **secret_type** (SecretType)  `Required` 
+* **secret_type** (SecretType)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **schema** (string) 
+* **schema** (string)  
 
 
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **trusted_secret_id** (string) 
+* **trusted_secret_id** (string)  
 
 
 
@@ -106,27 +106,27 @@ Creates a new Secret. When creating the resource, external `data` is encrypted, 
  {{< tab "Response Example" >}}
 
 [SecretInfo](#SECRETINFO)
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **secret_type** (SecretType)  `Required` 
+* **secret_type** (SecretType)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -174,22 +174,22 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
 
 [UpdateSecretRequest](./Secret#updatesecretrequest)
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **release_project** (bool) 
+* **release_project** (bool)  
 
 
 
@@ -211,27 +211,27 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
  {{< tab "Response Example" >}}
 
 [SecretInfo](#SECRETINFO)
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **secret_type** (SecretType)  `Required` 
+* **secret_type** (SecretType)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -279,10 +279,10 @@ Deletes a specific Secret. You must specify the `secret_id` of the Secret to del
 
 [SecretRequest](./Secret#secretrequest)
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -325,16 +325,16 @@ Updates encrypted data of a specific Secret resource. For example, to change the
 
 [UpdateSecretDataRequest](./Secret#updatesecretdatarequest)
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schema** (string) 
+* **schema** (string)  
 
 
 
@@ -378,10 +378,10 @@ Gets a specific Secret. Prints detailed information about the Secret, including 
 
 [SecretRequest](./Secret#secretrequest)
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -424,13 +424,13 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 [GetSecretRequest](./Secret#getsecretrequest)
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -448,27 +448,27 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
  {{< tab "Response Example" >}}
 
 [SecretInfo](#SECRETINFO)
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **secret_type** (SecretType)  `Required` 
+* **secret_type** (SecretType)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -516,31 +516,31 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 [SecretQuery](./Secret#secretquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **secret_id** (string) 
+* **secret_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **secret_type** (SecretType) 
+* **secret_type** (SecretType)  
 
 
-* **schema** (string) 
+* **schema** (string)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
 
-* **trusted_secret_id** (string) 
+* **trusted_secret_id** (string)  
 
 
 
@@ -558,9 +558,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
  {{< tab "Response Example" >}}
 
 [SecretsInfo](#SECRETSINFO)
-* **results** (SecretInfo)  `Required` 
+* **results** (SecretInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -625,174 +625,174 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 ### CreateSecretRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **secret_type** (SecretType)  `Required` 
+* **secret_type** (SecretType)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **trusted_secret_id** (string) 
+* **trusted_secret_id** (string)  
 
     <br>
 
 ### GetSecretRequest
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### SecretDataInfo
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **encrypted** (bool)  `Required` 
+* **encrypted** (bool)   `Required` 
 
     
-* **encrypt_options** (Struct)  `Required` 
+* **encrypt_options** (Struct)   `Required` 
 
     <br>
 
 ### SecretInfo
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **secret_type** (SecretType)  `Required` 
+* **secret_type** (SecretType)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### SecretQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **secret_id** (string) 
+* **secret_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **secret_type** (SecretType) 
+* **secret_type** (SecretType)  
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
     
-* **trusted_secret_id** (string) 
+* **trusted_secret_id** (string)  
 
     <br>
 
 ### SecretRequest
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SecretStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SecretsInfo
-* **results** (SecretInfo)  `Required` 
+* **results** (SecretInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateSecretDataRequest
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>
 
 ### UpdateSecretRequest
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **release_project** (bool) 
+* **release_project** (bool)  
 
     <br>

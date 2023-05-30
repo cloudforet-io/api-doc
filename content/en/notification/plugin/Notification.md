@@ -24,7 +24,7 @@ A Notification is a resource delivering data from a Protocol plugin instance to 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**dispatch**](./Notification#dispatch) | [PluginDispatchRequest](Notification#plugindispatchrequest) | [Empty](./Notification#empty) |
+| [**dispatch**](./Notification#dispatch) | [PluginDispatchRequest](Notification#plugindispatchrequest) | [Empty](Notification#empty) |
 
 
 
@@ -49,28 +49,28 @@ Dispatches data from Cloudforet to a specific notification Protocol. When dispat
 
 [PluginDispatchRequest](./Notification#plugindispatchrequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
   *Option value required for notification delivery.*
 
 
-* **message** (Struct)  `Required` 
+* **message** (Struct)   `Required` 
 
   *Message containing notification information*
 
 
-* **notification_type** (NotificationType)  `Required` 
+* **notification_type** (NotificationType)   `Required` 
 
   *The type of Notification*
 
 
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
   *Secret value required for notification delivery.
 The secret data usually includes the credential information required for the plugin to access the external system.*
 
 
-* **channel_data** (Struct)  `Required` 
+* **channel_data** (Struct)   `Required` 
 
   *Channel data required for notification delivery.*
 
@@ -142,28 +142,28 @@ The secret data usually includes the credential information required for the plu
 
 
 ### PluginDispatchRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
   *Option value required for notification delivery.*
 
     
-* **message** (Struct)  `Required` 
+* **message** (Struct)   `Required` 
 
   *Message containing notification information*
 
     
-* **notification_type** (NotificationType)  `Required` 
+* **notification_type** (NotificationType)   `Required` 
 
   *The type of Notification*
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
   *Secret value required for notification delivery.
 The secret data usually includes the credential information required for the plugin to access the external system.*
 
     
-* **channel_data** (Struct)  `Required` 
+* **channel_data** (Struct)   `Required` 
 
   *Channel data required for notification delivery.*
 

@@ -24,8 +24,8 @@ A NotificationUsage is a resource indicating daily Protocol usage. The limit set
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**list**](./NotificationUsage#list) | [NotificationUsageQuery](NotificationUsage#notificationusagequery) | [NotificationUsagesInfo](./NotificationUsage#notificationusagesinfo) |
-| [**stat**](./NotificationUsage#stat) | [NotificationUsageStatQuery](NotificationUsage#notificationusagestatquery) | [Struct](./NotificationUsage#struct) |
+| [**list**](./NotificationUsage#list) | [NotificationUsageQuery](NotificationUsage#notificationusagequery) | [NotificationUsagesInfo](NotificationUsage#notificationusagesinfo) |
+| [**stat**](./NotificationUsage#stat) | [NotificationUsageStatQuery](NotificationUsage#notificationusagestatquery) | [Struct](NotificationUsage#struct) |
 
 
 
@@ -53,17 +53,17 @@ Gets a list of all NotificationUsages. You can use a query to get a filtered lis
 
 [NotificationUsageQuery](./NotificationUsage#notificationusagequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
 
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of Protocol.*
 
@@ -82,11 +82,11 @@ Gets a list of all NotificationUsages. You can use a query to get a filtered lis
  {{< tab "Response Example" >}}
 
 [NotificationUsagesInfo](#NOTIFICATIONUSAGESINFO)
-* **results** (NotificationUsageInfo)  `Required` 
+* **results** (NotificationUsageInfo)  `Repeated`   `Required` 
 
   List of queried Notification Usage.
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   Total counts of queried Notification Usage.
 
@@ -147,73 +147,73 @@ Gets a list of all NotificationUsages. You can use a query to get a filtered lis
 
 
 ### NotificationUsageInfo
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
     
-* **usage_date** (string)  `Required` 
+* **usage_date** (string)   `Required` 
 
   *Usage Date.*
 
     
-* **usage_month** (string)  `Required` 
+* **usage_month** (string)   `Required` 
 
   *Usage Month.*
 
     
-* **count** (int32)  `Required` 
+* **count** (int32)   `Required` 
 
   *Usage count using actual notifications.*
 
     
-* **fail_count** (int32)  `Required` 
+* **fail_count** (int32)   `Required` 
 
   *Fail count when dispatching notifications.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain*
 
     <br>
 
 ### NotificationUsageQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of Protocol.*
 
     <br>
 
 ### NotificationUsageStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
   *Statistics Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     <br>
 
 ### NotificationUsagesInfo
-* **results** (NotificationUsageInfo)  `Required` 
+* **results** (NotificationUsageInfo)  `Repeated`    `Required` 
 
   *List of queried Notification Usage.*
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   *Total counts of queried Notification Usage.*
 

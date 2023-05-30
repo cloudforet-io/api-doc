@@ -24,14 +24,14 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./SecretGroup#create) | [CreateSecretGroupRequest](SecretGroup#createsecretgrouprequest) | [SecretGroupInfo](./SecretGroup#secretgroupinfo) |
-| [**update**](./SecretGroup#update) | [UpdateSecretGroupRequest](SecretGroup#updatesecretgrouprequest) | [SecretGroupInfo](./SecretGroup#secretgroupinfo) |
-| [**add_secret**](./SecretGroup#add_secret) | [SecretGroupSecretRequest](SecretGroup#secretgroupsecretrequest) | [SecretGroupSecretInfo](./SecretGroup#secretgroupsecretinfo) |
-| [**remove_secret**](./SecretGroup#remove_secret) | [SecretGroupSecretRequest](SecretGroup#secretgroupsecretrequest) | [Empty](./SecretGroup#empty) |
-| [**delete**](./SecretGroup#delete) | [SecretGroupRequest](SecretGroup#secretgrouprequest) | [Empty](./SecretGroup#empty) |
-| [**get**](./SecretGroup#get) | [GetSecretGroupRequest](SecretGroup#getsecretgrouprequest) | [SecretGroupInfo](./SecretGroup#secretgroupinfo) |
-| [**list**](./SecretGroup#list) | [SecretGroupQuery](SecretGroup#secretgroupquery) | [SecretGroupsInfo](./SecretGroup#secretgroupsinfo) |
-| [**stat**](./SecretGroup#stat) | [SecretGroupStatQuery](SecretGroup#secretgroupstatquery) | [Struct](./SecretGroup#struct) |
+| [**create**](./SecretGroup#create) | [CreateSecretGroupRequest](SecretGroup#createsecretgrouprequest) | [SecretGroupInfo](SecretGroup#secretgroupinfo) |
+| [**update**](./SecretGroup#update) | [UpdateSecretGroupRequest](SecretGroup#updatesecretgrouprequest) | [SecretGroupInfo](SecretGroup#secretgroupinfo) |
+| [**add_secret**](./SecretGroup#add_secret) | [SecretGroupSecretRequest](SecretGroup#secretgroupsecretrequest) | [SecretGroupSecretInfo](SecretGroup#secretgroupsecretinfo) |
+| [**remove_secret**](./SecretGroup#remove_secret) | [SecretGroupSecretRequest](SecretGroup#secretgroupsecretrequest) | [Empty](SecretGroup#empty) |
+| [**delete**](./SecretGroup#delete) | [SecretGroupRequest](SecretGroup#secretgrouprequest) | [Empty](SecretGroup#empty) |
+| [**get**](./SecretGroup#get) | [GetSecretGroupRequest](SecretGroup#getsecretgrouprequest) | [SecretGroupInfo](SecretGroup#secretgroupinfo) |
+| [**list**](./SecretGroup#list) | [SecretGroupQuery](SecretGroup#secretgroupquery) | [SecretGroupsInfo](SecretGroup#secretgroupsinfo) |
+| [**stat**](./SecretGroup#stat) | [SecretGroupStatQuery](SecretGroup#secretgroupstatquery) | [Struct](SecretGroup#struct) |
 
 
 
@@ -182,117 +182,117 @@ bookFlatSection: true
 
 
 ### CreateSecretGroupRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetSecretGroupRequest
-* **secret_group_id** (string)  `Required` 
+* **secret_group_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### SecretGroupInfo
-* **secret_group_id** (string)  `Required` 
+* **secret_group_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### SecretGroupQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **secret_group_id** (string) 
+* **secret_group_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **secret_id** (string) 
+* **secret_id** (string)  
 
     <br>
 
 ### SecretGroupRequest
-* **secret_group_id** (string)  `Required` 
+* **secret_group_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SecretGroupSecretInfo
-* **secret_group_info** (SecretGroupInfo)  `Required` 
+* **secret_group_info** (SecretGroupInfo)   `Required` 
 
     
-* **secret_info** (SecretInfo)  `Required` 
+* **secret_info** (SecretInfo)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SecretGroupSecretRequest
-* **secret_group_id** (string)  `Required` 
+* **secret_group_id** (string)   `Required` 
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SecretGroupStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SecretGroupsInfo
-* **results** (SecretGroupInfo)  `Required` 
+* **results** (SecretGroupInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateSecretGroupRequest
-* **secret_group_id** (string)  `Required` 
+* **secret_group_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

@@ -24,7 +24,7 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**list**](./Log#list) | [LogRequest](Log#logrequest) | [LogDataInfo](./Log#logdatainfo) |
+| [**list**](./Log#list) | [LogRequest](Log#logrequest) | [LogDataInfo](Log#logdatainfo) |
 
 
 
@@ -56,35 +56,35 @@ bookFlatSection: true
 
 
 ### LogDataInfo
-* **results** (ListValue)  `Required` 
+* **results** (ListValue)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### LogRequest
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **resource_id** (string)  `Required` 
+* **resource_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **keyword** (string) 
+* **keyword** (string)  
 
     
-* **start** (string) 
+* **start** (string)  
 
     
-* **end** (string) 
+* **end** (string)  
 
     
-* **sort** (Struct) 
+* **sort** (Struct)  
 
     
-* **limit** (int32) 
+* **limit** (int32)  
 
     <br>

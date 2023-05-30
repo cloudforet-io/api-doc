@@ -24,9 +24,9 @@ A JobTask is a task unit subdividing a Job. The division criteria are specified 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**get**](./JobTask#get) | [GetJobTaskRequest](JobTask#getjobtaskrequest) | [JobTaskInfo](./JobTask#jobtaskinfo) |
-| [**list**](./JobTask#list) | [JobTaskQuery](JobTask#jobtaskquery) | [JobTasksInfo](./JobTask#jobtasksinfo) |
-| [**stat**](./JobTask#stat) | [JobTaskStatQuery](JobTask#jobtaskstatquery) | [Struct](./JobTask#struct) |
+| [**get**](./JobTask#get) | [GetJobTaskRequest](JobTask#getjobtaskrequest) | [JobTaskInfo](JobTask#jobtaskinfo) |
+| [**list**](./JobTask#list) | [JobTaskQuery](JobTask#jobtaskquery) | [JobTasksInfo](JobTask#jobtasksinfo) |
+| [**stat**](./JobTask#stat) | [JobTaskStatQuery](JobTask#jobtaskstatquery) | [Struct](JobTask#struct) |
 
 
 
@@ -54,13 +54,13 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 
 [GetJobTaskRequest](./JobTask#getjobtaskrequest)
 
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -77,31 +77,31 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
  {{< tab "Response Example" >}}
 
 [JobTaskInfo](#JOBTASKINFO)
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
-* **status** (Status)  `Required` 
+* **status** (Status)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **created_count** (int32)  `Required` 
+* **created_count** (int32)   `Required` 
 
-* **error_code** (string)  `Required` 
+* **error_code** (string)   `Required` 
 
-* **error_message** (string)  `Required` 
+* **error_message** (string)   `Required` 
 
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **started_at** (string)  `Required` 
+* **started_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
 
 
@@ -153,22 +153,22 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 
 [JobTaskQuery](./JobTask#jobtaskquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **job_task_id** (string) 
+* **job_task_id** (string)  
 
 
-* **status** (Status) 
+* **status** (Status)  
 
 
-* **job_id** (string) 
+* **job_id** (string)  
 
 
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
 
 
@@ -185,9 +185,9 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
  {{< tab "Response Example" >}}
 
 [JobTasksInfo](#JOBTASKSINFO)
-* **results** (JobTaskInfo)  `Required` 
+* **results** (JobTaskInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -264,89 +264,89 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 
 
 ### GetJobTaskRequest
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### JobTaskInfo
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
     
-* **status** (Status)  `Required` 
+* **status** (Status)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **created_count** (int32)  `Required` 
+* **created_count** (int32)   `Required` 
 
     
-* **error_code** (string)  `Required` 
+* **error_code** (string)   `Required` 
 
     
-* **error_message** (string)  `Required` 
+* **error_message** (string)   `Required` 
 
     
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **started_at** (string)  `Required` 
+* **started_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
     <br>
 
 ### JobTaskQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **job_task_id** (string) 
+* **job_task_id** (string)  
 
     
-* **status** (Status) 
+* **status** (Status)  
 
     
-* **job_id** (string) 
+* **job_id** (string)  
 
     
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
     <br>
 
 ### JobTaskStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### JobTasksInfo
-* **results** (JobTaskInfo)  `Required` 
+* **results** (JobTaskInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>

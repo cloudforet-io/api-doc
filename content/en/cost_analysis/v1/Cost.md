@@ -24,13 +24,13 @@ A Cost is a resource of raw cost data collected by the cost_analysis.DataSource.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Cost#create) | [CreateCostRequest](Cost#createcostrequest) | [CostInfo](./Cost#costinfo) |
-| [**delete**](./Cost#delete) | [CostRequest](Cost#costrequest) | [Empty](./Cost#empty) |
-| [**get**](./Cost#get) | [GetCostRequest](Cost#getcostrequest) | [CostInfo](./Cost#costinfo) |
-| [**list**](./Cost#list) | [CostQuery](Cost#costquery) | [CostsInfo](./Cost#costsinfo) |
-| [**analyze**](./Cost#analyze) | [CostAnalyzeQuery](Cost#costanalyzequery) | [Struct](./Cost#struct) |
-| [**analyze_v2**](./Cost#analyze_v2) | [CostAnalyzeV2Query](Cost#costanalyzev2query) | [Struct](./Cost#struct) |
-| [**stat**](./Cost#stat) | [CostStatQuery](Cost#coststatquery) | [Struct](./Cost#struct) |
+| [**create**](./Cost#create) | [CreateCostRequest](Cost#createcostrequest) | [CostInfo](Cost#costinfo) |
+| [**delete**](./Cost#delete) | [CostRequest](Cost#costrequest) | [Empty](Cost#empty) |
+| [**get**](./Cost#get) | [GetCostRequest](Cost#getcostrequest) | [CostInfo](Cost#costinfo) |
+| [**list**](./Cost#list) | [CostQuery](Cost#costquery) | [CostsInfo](Cost#costsinfo) |
+| [**analyze**](./Cost#analyze) | [CostAnalyzeQuery](Cost#costanalyzequery) | [Struct](Cost#struct) |
+| [**analyze_v2**](./Cost#analyze_v2) | [CostAnalyzeV2Query](Cost#costanalyzev2query) | [Struct](Cost#struct) |
+| [**stat**](./Cost#stat) | [CostStatQuery](Cost#coststatquery) | [Struct](Cost#struct) |
 
 
 
@@ -58,61 +58,61 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 [CreateCostRequest](./Cost#createcostrequest)
 
-* **original_cost** (float)  `Required` 
+* **original_cost** (float)   `Required` 
 
 
-* **original_currency** (string)  `Required` 
+* **original_currency** (string)   `Required` 
 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **usd_cost** (float) 
+* **usd_cost** (float)  
 
 
-* **usage_quantity** (float) 
+* **usage_quantity** (float)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **region_code** (string) 
+* **region_code** (string)  
 
 
-* **category** (string) 
+* **category** (string)  
 
 
-* **product** (string) 
+* **product** (string)  
 
 
-* **account** (string) 
+* **account** (string)  
 
 
-* **usage_type** (string) 
+* **usage_type** (string)  
 
 
-* **resource_group** (string) 
+* **resource_group** (string)  
 
 
-* **resource** (string) 
+* **resource** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **additional_info** (Struct) 
+* **additional_info** (Struct)  
 
 
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **billed_at** (string) 
+* **billed_at** (string)  
 
 
 
@@ -141,51 +141,51 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
  {{< tab "Response Example" >}}
 
 [CostInfo](#COSTINFO)
-* **cost_id** (string)  `Required` 
+* **cost_id** (string)   `Required` 
 
-* **usd_cost** (float)  `Required` 
+* **usd_cost** (float)   `Required` 
 
-* **original_currency** (string)  `Required` 
+* **original_currency** (string)   `Required` 
 
-* **original_cost** (float)  `Required` 
+* **original_cost** (float)   `Required` 
 
-* **usage_quantity** (float)  `Required` 
+* **usage_quantity** (float)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
-* **region_key** (string)  `Required` 
+* **region_key** (string)   `Required` 
 
-* **category** (string)  `Required` 
+* **category** (string)   `Required` 
 
-* **product** (string)  `Required` 
+* **product** (string)   `Required` 
 
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
-* **usage_type** (string)  `Required` 
+* **usage_type** (string)   `Required` 
 
-* **usage_unit** (string)  `Required` 
+* **usage_unit** (string)   `Required` 
 
-* **resource** (string)  `Required` 
+* **resource** (string)   `Required` 
 
-* **resource_group** (string)  `Required` 
+* **resource_group** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **additional_info** (Struct)  `Required` 
+* **additional_info** (Struct)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **billed_at** (string)  `Required` 
+* **billed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -241,10 +241,10 @@ Deletes a specific Cost. You must specify the `cost_id` of the Cost to delete.
 
 [CostRequest](./Cost#costrequest)
 
-* **cost_id** (string)  `Required` 
+* **cost_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -286,13 +286,13 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 
 [GetCostRequest](./Cost#getcostrequest)
 
-* **cost_id** (string)  `Required` 
+* **cost_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -309,51 +309,51 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
  {{< tab "Response Example" >}}
 
 [CostInfo](#COSTINFO)
-* **cost_id** (string)  `Required` 
+* **cost_id** (string)   `Required` 
 
-* **usd_cost** (float)  `Required` 
+* **usd_cost** (float)   `Required` 
 
-* **original_currency** (string)  `Required` 
+* **original_currency** (string)   `Required` 
 
-* **original_cost** (float)  `Required` 
+* **original_cost** (float)   `Required` 
 
-* **usage_quantity** (float)  `Required` 
+* **usage_quantity** (float)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
-* **region_key** (string)  `Required` 
+* **region_key** (string)   `Required` 
 
-* **category** (string)  `Required` 
+* **category** (string)   `Required` 
 
-* **product** (string)  `Required` 
+* **product** (string)   `Required` 
 
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
-* **usage_type** (string)  `Required` 
+* **usage_type** (string)   `Required` 
 
-* **usage_unit** (string)  `Required` 
+* **usage_unit** (string)   `Required` 
 
-* **resource** (string)  `Required` 
+* **resource** (string)   `Required` 
 
-* **resource_group** (string)  `Required` 
+* **resource_group** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **additional_info** (Struct)  `Required` 
+* **additional_info** (Struct)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **billed_at** (string)  `Required` 
+* **billed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -409,52 +409,52 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 
 [CostQuery](./Cost#costquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **cost_id** (string) 
+* **cost_id** (string)  
 
 
-* **original_currency** (string) 
+* **original_currency** (string)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **region_code** (string) 
+* **region_code** (string)  
 
 
-* **region_key** (string) 
+* **region_key** (string)  
 
 
-* **category** (string) 
+* **category** (string)  
 
 
-* **product** (string) 
+* **product** (string)  
 
 
-* **account** (string) 
+* **account** (string)  
 
 
-* **usage_type** (string) 
+* **usage_type** (string)  
 
 
-* **resource_group** (string) 
+* **resource_group** (string)  
 
 
-* **resource** (string) 
+* **resource** (string)  
 
 
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
 
 
@@ -471,9 +471,9 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
  {{< tab "Response Example" >}}
 
 [CostsInfo](#COSTSINFO)
-* **results** (CostInfo)  `Required` 
+* **results** (CostInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -553,37 +553,37 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
 [CostAnalyzeQuery](./Cost#costanalyzequery)
 
-* **granularity** (Granularity)  `Required` 
+* **granularity** (Granularity)   `Required` 
 
 
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
 
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **group_by** (string) 
+* **group_by** (string)  `Repeated`   
 
 
-* **filter** (ListValue) 
+* **filter** (ListValue)  
 
 
-* **limit** (int32) 
+* **limit** (int32)  
 
 
-* **page** (Page) 
+* **page** (Page)  
 
 
-* **sort** (Sort) 
+* **sort** (Sort)  
 
 
-* **include_usage_quantity** (bool) 
+* **include_usage_quantity** (bool)  
 
 
-* **include_others** (bool) 
+* **include_others** (bool)  
 
 
 
@@ -653,259 +653,259 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
 
 ### CostAnalyzeQuery
-* **granularity** (Granularity)  `Required` 
+* **granularity** (Granularity)   `Required` 
 
     
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **group_by** (string) 
+* **group_by** (string)  `Repeated`   
 
     
-* **filter** (ListValue) 
+* **filter** (ListValue)  
 
     
-* **limit** (int32) 
+* **limit** (int32)  
 
     
-* **page** (Page) 
+* **page** (Page)  
 
     
-* **sort** (Sort) 
+* **sort** (Sort)  
 
     
-* **include_usage_quantity** (bool) 
+* **include_usage_quantity** (bool)  
 
     
-* **include_others** (bool) 
+* **include_others** (bool)  
 
     <br>
 
 ### CostAnalyzeV2Query
-* **query** (TimeSeriesAnalyzeQuery)  `Required` 
+* **query** (TimeSeriesAnalyzeQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CostInfo
-* **cost_id** (string)  `Required` 
+* **cost_id** (string)   `Required` 
 
     
-* **usd_cost** (float)  `Required` 
+* **usd_cost** (float)   `Required` 
 
     
-* **original_currency** (string)  `Required` 
+* **original_currency** (string)   `Required` 
 
     
-* **original_cost** (float)  `Required` 
+* **original_cost** (float)   `Required` 
 
     
-* **usage_quantity** (float)  `Required` 
+* **usage_quantity** (float)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
     
-* **region_key** (string)  `Required` 
+* **region_key** (string)   `Required` 
 
     
-* **category** (string)  `Required` 
+* **category** (string)   `Required` 
 
     
-* **product** (string)  `Required` 
+* **product** (string)   `Required` 
 
     
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
     
-* **usage_type** (string)  `Required` 
+* **usage_type** (string)   `Required` 
 
     
-* **usage_unit** (string)  `Required` 
+* **usage_unit** (string)   `Required` 
 
     
-* **resource** (string)  `Required` 
+* **resource** (string)   `Required` 
 
     
-* **resource_group** (string)  `Required` 
+* **resource_group** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **additional_info** (Struct)  `Required` 
+* **additional_info** (Struct)   `Required` 
 
     
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **billed_at** (string)  `Required` 
+* **billed_at** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### CostQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **cost_id** (string) 
+* **cost_id** (string)  
 
     
-* **original_currency** (string) 
+* **original_currency** (string)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **region_code** (string) 
+* **region_code** (string)  
 
     
-* **region_key** (string) 
+* **region_key** (string)  
 
     
-* **category** (string) 
+* **category** (string)  
 
     
-* **product** (string) 
+* **product** (string)  
 
     
-* **account** (string) 
+* **account** (string)  
 
     
-* **usage_type** (string) 
+* **usage_type** (string)  
 
     
-* **resource_group** (string) 
+* **resource_group** (string)  
 
     
-* **resource** (string) 
+* **resource** (string)  
 
     
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
     <br>
 
 ### CostRequest
-* **cost_id** (string)  `Required` 
+* **cost_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CostStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CostsInfo
-* **results** (CostInfo)  `Required` 
+* **results** (CostInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### CreateCostRequest
-* **original_cost** (float)  `Required` 
+* **original_cost** (float)   `Required` 
 
     
-* **original_currency** (string)  `Required` 
+* **original_currency** (string)   `Required` 
 
     
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **usd_cost** (float) 
+* **usd_cost** (float)  
 
     
-* **usage_quantity** (float) 
+* **usage_quantity** (float)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **region_code** (string) 
+* **region_code** (string)  
 
     
-* **category** (string) 
+* **category** (string)  
 
     
-* **product** (string) 
+* **product** (string)  
 
     
-* **account** (string) 
+* **account** (string)  
 
     
-* **usage_type** (string) 
+* **usage_type** (string)  
 
     
-* **resource_group** (string) 
+* **resource_group** (string)  
 
     
-* **resource** (string) 
+* **resource** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **additional_info** (Struct) 
+* **additional_info** (Struct)  
 
     
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **billed_at** (string) 
+* **billed_at** (string)  
 
     <br>
 
 ### GetCostRequest
-* **cost_id** (string)  `Required` 
+* **cost_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>

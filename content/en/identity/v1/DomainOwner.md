@@ -24,10 +24,10 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./DomainOwner#create) | [CreateDomainOwner](DomainOwner#createdomainowner) | [DomainOwnerInfo](./DomainOwner#domainownerinfo) |
-| [**update**](./DomainOwner#update) | [UpdateDomainOwner](DomainOwner#updatedomainowner) | [DomainOwnerInfo](./DomainOwner#domainownerinfo) |
-| [**delete**](./DomainOwner#delete) | [DomainOwnerRequest](DomainOwner#domainownerrequest) | [Empty](./DomainOwner#empty) |
-| [**get**](./DomainOwner#get) | [GetDomainOwnerRequest](DomainOwner#getdomainownerrequest) | [DomainOwnerInfo](./DomainOwner#domainownerinfo) |
+| [**create**](./DomainOwner#create) | [CreateDomainOwner](DomainOwner#createdomainowner) | [DomainOwnerInfo](DomainOwner#domainownerinfo) |
+| [**update**](./DomainOwner#update) | [UpdateDomainOwner](DomainOwner#updatedomainowner) | [DomainOwnerInfo](DomainOwner#domainownerinfo) |
+| [**delete**](./DomainOwner#delete) | [DomainOwnerRequest](DomainOwner#domainownerrequest) | [Empty](DomainOwner#empty) |
+| [**get**](./DomainOwner#get) | [GetDomainOwnerRequest](DomainOwner#getdomainownerrequest) | [DomainOwnerInfo](DomainOwner#domainownerinfo) |
 
 
 
@@ -110,92 +110,92 @@ bookFlatSection: true
 
 
 ### CreateDomainOwner
-* **password** (string)  `Required` 
+* **password** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **owner_id** (string) 
+* **owner_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **email** (string) 
+* **email** (string)  
 
     
-* **language** (string) 
+* **language** (string)  
 
     
-* **timezone** (string) 
+* **timezone** (string)  
 
     <br>
 
 ### DomainOwnerInfo
-* **owner_id** (string)  `Required` 
+* **owner_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
     
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
     
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
     
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### DomainOwnerRequest
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **owner_id** (string)  `Required` 
+* **owner_id** (string)   `Required` 
 
     <br>
 
 ### GetDomainOwnerRequest
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **owner_id** (string)  `Required` 
+* **owner_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateDomainOwner
-* **owner_id** (string)  `Required` 
+* **owner_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **password** (string) 
+* **password** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **email** (string) 
+* **email** (string)  
 
     
-* **language** (string) 
+* **language** (string)  
 
     
-* **timezone** (string) 
+* **timezone** (string)  
 
     <br>

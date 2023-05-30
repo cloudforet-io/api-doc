@@ -24,13 +24,13 @@ A Trusted Secret is an external data, encrypted by CloudForet.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./TrustedSecret#create) | [CreateTrustedSecretRequest](TrustedSecret#createtrustedsecretrequest) | [TrustedSecretInfo](./TrustedSecret#trustedsecretinfo) |
-| [**update**](./TrustedSecret#update) | [UpdateTrustedSecretRequest](TrustedSecret#updatetrustedsecretrequest) | [TrustedSecretInfo](./TrustedSecret#trustedsecretinfo) |
-| [**delete**](./TrustedSecret#delete) | [TrustedSecretRequest](TrustedSecret#trustedsecretrequest) | [Empty](./TrustedSecret#empty) |
-| [**update_data**](./TrustedSecret#update_data) | [UpdateTrustedSecretDataRequest](TrustedSecret#updatetrustedsecretdatarequest) | [Empty](./TrustedSecret#empty) |
-| [**get**](./TrustedSecret#get) | [GetTrustedSecretRequest](TrustedSecret#gettrustedsecretrequest) | [TrustedSecretInfo](./TrustedSecret#trustedsecretinfo) |
-| [**list**](./TrustedSecret#list) | [TrustedSecretQuery](TrustedSecret#trustedsecretquery) | [TrustedSecretsInfo](./TrustedSecret#trustedsecretsinfo) |
-| [**stat**](./TrustedSecret#stat) | [TrustedSecretStatQuery](TrustedSecret#trustedsecretstatquery) | [Struct](./TrustedSecret#struct) |
+| [**create**](./TrustedSecret#create) | [CreateTrustedSecretRequest](TrustedSecret#createtrustedsecretrequest) | [TrustedSecretInfo](TrustedSecret#trustedsecretinfo) |
+| [**update**](./TrustedSecret#update) | [UpdateTrustedSecretRequest](TrustedSecret#updatetrustedsecretrequest) | [TrustedSecretInfo](TrustedSecret#trustedsecretinfo) |
+| [**delete**](./TrustedSecret#delete) | [TrustedSecretRequest](TrustedSecret#trustedsecretrequest) | [Empty](TrustedSecret#empty) |
+| [**update_data**](./TrustedSecret#update_data) | [UpdateTrustedSecretDataRequest](TrustedSecret#updatetrustedsecretdatarequest) | [Empty](TrustedSecret#empty) |
+| [**get**](./TrustedSecret#get) | [GetTrustedSecretRequest](TrustedSecret#gettrustedsecretrequest) | [TrustedSecretInfo](TrustedSecret#trustedsecretinfo) |
+| [**list**](./TrustedSecret#list) | [TrustedSecretQuery](TrustedSecret#trustedsecretquery) | [TrustedSecretsInfo](TrustedSecret#trustedsecretsinfo) |
+| [**stat**](./TrustedSecret#stat) | [TrustedSecretStatQuery](TrustedSecret#trustedsecretstatquery) | [Struct](TrustedSecret#struct) |
 
 
 
@@ -58,22 +58,22 @@ Creates a new Trusted Secret. When creating the resource, external `data` is enc
 
 [CreateTrustedSecretRequest](./TrustedSecret#createtrustedsecretrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **schema** (string) 
+* **schema** (string)  
 
 
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
 
 
@@ -95,23 +95,23 @@ Creates a new Trusted Secret. When creating the resource, external `data` is enc
  {{< tab "Response Example" >}}
 
 [TrustedSecretInfo](#TRUSTEDSECRETINFO)
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -157,16 +157,16 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
 
 [UpdateTrustedSecretRequest](./TrustedSecret#updatetrustedsecretrequest)
 
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -186,23 +186,23 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
  {{< tab "Response Example" >}}
 
 [TrustedSecretInfo](#TRUSTEDSECRETINFO)
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -248,10 +248,10 @@ Deletes a specific Secret. You must specify the `secret_id` of the Secret to del
 
 [TrustedSecretRequest](./TrustedSecret#trustedsecretrequest)
 
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -294,16 +294,16 @@ Updates encrypted data of a specific Secret resource. For example, to change the
 
 [UpdateTrustedSecretDataRequest](./TrustedSecret#updatetrustedsecretdatarequest)
 
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schema** (string) 
+* **schema** (string)  
 
 
 
@@ -347,13 +347,13 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 [GetTrustedSecretRequest](./TrustedSecret#gettrustedsecretrequest)
 
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -371,23 +371,23 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
  {{< tab "Response Example" >}}
 
 [TrustedSecretInfo](#TRUSTEDSECRETINFO)
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -433,25 +433,25 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 [TrustedSecretQuery](./TrustedSecret#trustedsecretquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **trusted_secret_id** (string) 
+* **trusted_secret_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **schema** (string) 
+* **schema** (string)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
 
 
@@ -469,9 +469,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
  {{< tab "Response Example" >}}
 
 [TrustedSecretsInfo](#TRUSTEDSECRETSINFO)
-* **results** (TrustedSecretInfo)  `Required` 
+* **results** (TrustedSecretInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -533,136 +533,136 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 ### CreateTrustedSecretRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
     <br>
 
 ### GetTrustedSecretRequest
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### TrustedSecretInfo
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### TrustedSecretQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **trusted_secret_id** (string) 
+* **trusted_secret_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
     <br>
 
 ### TrustedSecretRequest
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### TrustedSecretStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### TrustedSecretsInfo
-* **results** (TrustedSecretInfo)  `Required` 
+* **results** (TrustedSecretInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateTrustedSecretDataRequest
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>
 
 ### UpdateTrustedSecretRequest
-* **trusted_secret_id** (string)  `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

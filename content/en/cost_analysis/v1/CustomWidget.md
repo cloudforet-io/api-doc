@@ -24,12 +24,12 @@ A CustomWidget is a widget created by a CostQuerySet a User defined.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./CustomWidget#create) | [CreateCustomWidgetRequest](CustomWidget#createcustomwidgetrequest) | [CustomWidgetInfo](./CustomWidget#customwidgetinfo) |
-| [**update**](./CustomWidget#update) | [UpdateCustomWidgetRequest](CustomWidget#updatecustomwidgetrequest) | [CustomWidgetInfo](./CustomWidget#customwidgetinfo) |
-| [**delete**](./CustomWidget#delete) | [CustomWidgetRequest](CustomWidget#customwidgetrequest) | [Empty](./CustomWidget#empty) |
-| [**get**](./CustomWidget#get) | [GetCustomWidgetRequest](CustomWidget#getcustomwidgetrequest) | [CustomWidgetInfo](./CustomWidget#customwidgetinfo) |
-| [**list**](./CustomWidget#list) | [CustomWidgetQuery](CustomWidget#customwidgetquery) | [CustomWidgetsInfo](./CustomWidget#customwidgetsinfo) |
-| [**stat**](./CustomWidget#stat) | [CustomWidgetStatQuery](CustomWidget#customwidgetstatquery) | [Struct](./CustomWidget#struct) |
+| [**create**](./CustomWidget#create) | [CreateCustomWidgetRequest](CustomWidget#createcustomwidgetrequest) | [CustomWidgetInfo](CustomWidget#customwidgetinfo) |
+| [**update**](./CustomWidget#update) | [UpdateCustomWidgetRequest](CustomWidget#updatecustomwidgetrequest) | [CustomWidgetInfo](CustomWidget#customwidgetinfo) |
+| [**delete**](./CustomWidget#delete) | [CustomWidgetRequest](CustomWidget#customwidgetrequest) | [Empty](CustomWidget#empty) |
+| [**get**](./CustomWidget#get) | [GetCustomWidgetRequest](CustomWidget#getcustomwidgetrequest) | [CustomWidgetInfo](CustomWidget#customwidgetinfo) |
+| [**list**](./CustomWidget#list) | [CustomWidgetQuery](CustomWidget#customwidgetquery) | [CustomWidgetsInfo](CustomWidget#customwidgetsinfo) |
+| [**stat**](./CustomWidget#stat) | [CustomWidgetStatQuery](CustomWidget#customwidgetstatquery) | [Struct](CustomWidget#struct) |
 
 
 
@@ -57,16 +57,16 @@ Creates a new CustomWidget. Based on the queries of the CostQuerySet the User ma
 
 [CreateCustomWidgetRequest](./CustomWidget#createcustomwidgetrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -91,21 +91,21 @@ Creates a new CustomWidget. Based on the queries of the CostQuerySet the User ma
  {{< tab "Response Example" >}}
 
 [CustomWidgetInfo](#CUSTOMWIDGETINFO)
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -158,19 +158,19 @@ Updates a specific CustomWidget. You can make changes in CustomWidget settings, 
 
 [UpdateCustomWidgetRequest](./CustomWidget#updatecustomwidgetrequest)
 
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -199,21 +199,21 @@ Updates a specific CustomWidget. You can make changes in CustomWidget settings, 
  {{< tab "Response Example" >}}
 
 [CustomWidgetInfo](#CUSTOMWIDGETINFO)
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -266,10 +266,10 @@ Deletes a specific CustomWidget. You must specify the `custom_widget_id` of the 
 
 [CustomWidgetRequest](./CustomWidget#customwidgetrequest)
 
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -311,13 +311,13 @@ Gets a specific CustomWidget. Prints detailed information about the CustomWidget
 
 [GetCustomWidgetRequest](./CustomWidget#getcustomwidgetrequest)
 
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -334,21 +334,21 @@ Gets a specific CustomWidget. Prints detailed information about the CustomWidget
  {{< tab "Response Example" >}}
 
 [CustomWidgetInfo](#CUSTOMWIDGETINFO)
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -401,19 +401,19 @@ Gets a list of all CustomWidgets. You can use a query to get a filtered list of 
 
 [CustomWidgetQuery](./CustomWidget#customwidgetquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **widget_id** (string) 
+* **widget_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **user_id** (string) 
+* **user_id** (string)  
 
 
 
@@ -430,9 +430,9 @@ Gets a list of all CustomWidgets. You can use a query to get a filtered list of 
  {{< tab "Response Example" >}}
 
 [CustomWidgetsInfo](#CUSTOMWIDGETSINFO)
-* **results** (CustomWidgetInfo)  `Required` 
+* **results** (CustomWidgetInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -511,110 +511,110 @@ Gets a list of all CustomWidgets. You can use a query to get a filtered list of 
 
 
 ### CreateCustomWidgetRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### CustomWidgetInfo
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### CustomWidgetQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **widget_id** (string) 
+* **widget_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     <br>
 
 ### CustomWidgetRequest
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CustomWidgetStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CustomWidgetsInfo
-* **results** (CustomWidgetInfo)  `Required` 
+* **results** (CustomWidgetInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### GetCustomWidgetRequest
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateCustomWidgetRequest
-* **widget_id** (string)  `Required` 
+* **widget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

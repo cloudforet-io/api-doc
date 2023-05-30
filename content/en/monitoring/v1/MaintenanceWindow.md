@@ -24,12 +24,12 @@ A MaintenanceWindow is a resource snoozing Alerts during maintenance time.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./MaintenanceWindow#create) | [CreateMaintenanceWindowRequest](MaintenanceWindow#createmaintenancewindowrequest) | [MaintenanceWindowInfo](./MaintenanceWindow#maintenancewindowinfo) |
-| [**update**](./MaintenanceWindow#update) | [UpdateMaintenanceWindowRequest](MaintenanceWindow#updatemaintenancewindowrequest) | [MaintenanceWindowInfo](./MaintenanceWindow#maintenancewindowinfo) |
-| [**close**](./MaintenanceWindow#close) | [MaintenanceWindowRequest](MaintenanceWindow#maintenancewindowrequest) | [MaintenanceWindowInfo](./MaintenanceWindow#maintenancewindowinfo) |
-| [**get**](./MaintenanceWindow#get) | [GetMaintenanceWindowRequest](MaintenanceWindow#getmaintenancewindowrequest) | [MaintenanceWindowInfo](./MaintenanceWindow#maintenancewindowinfo) |
-| [**list**](./MaintenanceWindow#list) | [MaintenanceWindowQuery](MaintenanceWindow#maintenancewindowquery) | [MaintenanceWindowsInfo](./MaintenanceWindow#maintenancewindowsinfo) |
-| [**stat**](./MaintenanceWindow#stat) | [MaintenanceWindowStatQuery](MaintenanceWindow#maintenancewindowstatquery) | [Struct](./MaintenanceWindow#struct) |
+| [**create**](./MaintenanceWindow#create) | [CreateMaintenanceWindowRequest](MaintenanceWindow#createmaintenancewindowrequest) | [MaintenanceWindowInfo](MaintenanceWindow#maintenancewindowinfo) |
+| [**update**](./MaintenanceWindow#update) | [UpdateMaintenanceWindowRequest](MaintenanceWindow#updatemaintenancewindowrequest) | [MaintenanceWindowInfo](MaintenanceWindow#maintenancewindowinfo) |
+| [**close**](./MaintenanceWindow#close) | [MaintenanceWindowRequest](MaintenanceWindow#maintenancewindowrequest) | [MaintenanceWindowInfo](MaintenanceWindow#maintenancewindowinfo) |
+| [**get**](./MaintenanceWindow#get) | [GetMaintenanceWindowRequest](MaintenanceWindow#getmaintenancewindowrequest) | [MaintenanceWindowInfo](MaintenanceWindow#maintenancewindowinfo) |
+| [**list**](./MaintenanceWindow#list) | [MaintenanceWindowQuery](MaintenanceWindow#maintenancewindowquery) | [MaintenanceWindowsInfo](MaintenanceWindow#maintenancewindowsinfo) |
+| [**stat**](./MaintenanceWindow#stat) | [MaintenanceWindowStatQuery](MaintenanceWindow#maintenancewindowstatquery) | [Struct](MaintenanceWindow#struct) |
 
 
 
@@ -57,22 +57,22 @@ Creates a new MaintenanceWindow. When creating a MaintenanceWindow, you can set 
 
 [CreateMaintenanceWindowRequest](./MaintenanceWindow#createmaintenancewindowrequest)
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
 
-* **projects** (string)  `Required` 
+* **projects** (string)  `Repeated`    `Required` 
 
 
-* **start_time** (string)  `Required` 
+* **start_time** (string)   `Required` 
 
 
-* **end_time** (string)  `Required` 
+* **end_time** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -93,29 +93,29 @@ Creates a new MaintenanceWindow. When creating a MaintenanceWindow, you can set 
  {{< tab "Response Example" >}}
 
 [MaintenanceWindowInfo](#MAINTENANCEWINDOWINFO)
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
-* **state** (MaintenanceWindowState)  `Required` 
+* **state** (MaintenanceWindowState)   `Required` 
 
-* **start_time** (string)  `Required` 
+* **start_time** (string)   `Required` 
 
-* **end_time** (string)  `Required` 
+* **end_time** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **projects** (string)  `Required` 
+* **projects** (string)  `Repeated`   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **closed_at** (string)  `Required` 
+* **closed_at** (string)   `Required` 
 
 
 
@@ -166,25 +166,25 @@ Updates a specific MaintenanceWindow. You can make changes in MaintenanceWindow 
 
 [UpdateMaintenanceWindowRequest](./MaintenanceWindow#updatemaintenancewindowrequest)
 
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **title** (string) 
+* **title** (string)  
 
 
-* **projects** (string) 
+* **projects** (string)  `Repeated`   
 
 
-* **start_time** (string) 
+* **start_time** (string)  
 
 
-* **end_time** (string) 
+* **end_time** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -206,29 +206,29 @@ Updates a specific MaintenanceWindow. You can make changes in MaintenanceWindow 
  {{< tab "Response Example" >}}
 
 [MaintenanceWindowInfo](#MAINTENANCEWINDOWINFO)
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
-* **state** (MaintenanceWindowState)  `Required` 
+* **state** (MaintenanceWindowState)   `Required` 
 
-* **start_time** (string)  `Required` 
+* **start_time** (string)   `Required` 
 
-* **end_time** (string)  `Required` 
+* **end_time** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **projects** (string)  `Required` 
+* **projects** (string)  `Repeated`   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **closed_at** (string)  `Required` 
+* **closed_at** (string)   `Required` 
 
 
 
@@ -279,10 +279,10 @@ Closes a MaintenanceWindow by changing the state of the MaintenanceWindow to `CL
 
 [MaintenanceWindowRequest](./MaintenanceWindow#maintenancewindowrequest)
 
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -300,29 +300,29 @@ Closes a MaintenanceWindow by changing the state of the MaintenanceWindow to `CL
  {{< tab "Response Example" >}}
 
 [MaintenanceWindowInfo](#MAINTENANCEWINDOWINFO)
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
-* **state** (MaintenanceWindowState)  `Required` 
+* **state** (MaintenanceWindowState)   `Required` 
 
-* **start_time** (string)  `Required` 
+* **start_time** (string)   `Required` 
 
-* **end_time** (string)  `Required` 
+* **end_time** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **projects** (string)  `Required` 
+* **projects** (string)  `Repeated`   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **closed_at** (string)  `Required` 
+* **closed_at** (string)   `Required` 
 
 
 
@@ -373,13 +373,13 @@ Gets a specific MaintenanceWindow. Prints detailed information about the Mainten
 
 [GetMaintenanceWindowRequest](./MaintenanceWindow#getmaintenancewindowrequest)
 
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -397,29 +397,29 @@ Gets a specific MaintenanceWindow. Prints detailed information about the Mainten
  {{< tab "Response Example" >}}
 
 [MaintenanceWindowInfo](#MAINTENANCEWINDOWINFO)
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
-* **state** (MaintenanceWindowState)  `Required` 
+* **state** (MaintenanceWindowState)   `Required` 
 
-* **start_time** (string)  `Required` 
+* **start_time** (string)   `Required` 
 
-* **end_time** (string)  `Required` 
+* **end_time** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **projects** (string)  `Required` 
+* **projects** (string)  `Repeated`   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **closed_at** (string)  `Required` 
+* **closed_at** (string)   `Required` 
 
 
 
@@ -470,25 +470,25 @@ Gets a list of all MaintenanceWindows. You can use a query to get a filtered lis
 
 [MaintenanceWindowQuery](./MaintenanceWindow#maintenancewindowquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **maintenance_window_id** (string) 
+* **maintenance_window_id** (string)  
 
 
-* **title** (string) 
+* **title** (string)  
 
 
-* **state** (MaintenanceWindowState) 
+* **state** (MaintenanceWindowState)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **created_by** (string) 
+* **created_by** (string)  
 
 
 
@@ -506,9 +506,9 @@ Gets a list of all MaintenanceWindows. You can use a query to get a filtered lis
  {{< tab "Response Example" >}}
 
 [MaintenanceWindowsInfo](#MAINTENANCEWINDOWSINFO)
-* **results** (MaintenanceWindowInfo)  `Required` 
+* **results** (MaintenanceWindowInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -583,140 +583,140 @@ Gets a list of all MaintenanceWindows. You can use a query to get a filtered lis
 
 
 ### CreateMaintenanceWindowRequest
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
     
-* **projects** (string)  `Required` 
+* **projects** (string)  `Repeated`    `Required` 
 
     
-* **start_time** (string)  `Required` 
+* **start_time** (string)   `Required` 
 
     
-* **end_time** (string)  `Required` 
+* **end_time** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetMaintenanceWindowRequest
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### MaintenanceWindowInfo
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
     
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
     
-* **state** (MaintenanceWindowState)  `Required` 
+* **state** (MaintenanceWindowState)   `Required` 
 
     
-* **start_time** (string)  `Required` 
+* **start_time** (string)   `Required` 
 
     
-* **end_time** (string)  `Required` 
+* **end_time** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **projects** (string)  `Required` 
+* **projects** (string)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     
-* **closed_at** (string)  `Required` 
+* **closed_at** (string)   `Required` 
 
     <br>
 
 ### MaintenanceWindowQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **maintenance_window_id** (string) 
+* **maintenance_window_id** (string)  
 
     
-* **title** (string) 
+* **title** (string)  
 
     
-* **state** (MaintenanceWindowState) 
+* **state** (MaintenanceWindowState)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **created_by** (string) 
+* **created_by** (string)  
 
     <br>
 
 ### MaintenanceWindowRequest
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### MaintenanceWindowStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### MaintenanceWindowsInfo
-* **results** (MaintenanceWindowInfo)  `Required` 
+* **results** (MaintenanceWindowInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateMaintenanceWindowRequest
-* **maintenance_window_id** (string)  `Required` 
+* **maintenance_window_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **title** (string) 
+* **title** (string)  
 
     
-* **projects** (string) 
+* **projects** (string)  `Repeated`   
 
     
-* **start_time** (string) 
+* **start_time** (string)  
 
     
-* **end_time** (string) 
+* **end_time** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

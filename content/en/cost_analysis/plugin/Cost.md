@@ -24,7 +24,7 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**get_data**](./Cost#get_data) | [GetDataRequest](Cost#getdatarequest) | [CostsInfo](./Cost#costsinfo) |
+| [**get_data**](./Cost#get_data) | [GetDataRequest](Cost#getdatarequest) | [CostsInfo](Cost#costsinfo) |
 
 
 
@@ -49,19 +49,19 @@ bookFlatSection: true
 
 [GetDataRequest](./Cost#getdatarequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schema** (string) 
+* **schema** (string)  
 
 
-* **task_options** (Struct) 
+* **task_options** (Struct)  
 
 
 
@@ -78,7 +78,7 @@ bookFlatSection: true
  {{< tab "Response Example" >}}
 
 [CostsInfo](#COSTSINFO)
-* **results** (CostInfo)  `Required` 
+* **results** (CostInfo)  `Repeated`   `Required` 
 
 
 
@@ -104,73 +104,73 @@ bookFlatSection: true
 
 
 ### CostInfo
-* **cost** (float)  `Required` 
+* **cost** (float)   `Required` 
 
     
-* **currency** (string)  `Required` 
+* **currency** (string)   `Required` 
 
     
-* **usage_quantity** (float)  `Required` 
+* **usage_quantity** (float)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **region_code** (string)  `Required` 
+* **region_code** (string)   `Required` 
 
     
-* **category** (string)  `Required` 
+* **category** (string)   `Required` 
 
     
-* **product** (string)  `Required` 
+* **product** (string)   `Required` 
 
     
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
     
-* **usage_type** (string)  `Required` 
+* **usage_type** (string)   `Required` 
 
     
-* **resource_group** (string)  `Required` 
+* **resource_group** (string)   `Required` 
 
     
-* **resource** (string)  `Required` 
+* **resource** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **additional_info** (Struct)  `Required` 
+* **additional_info** (Struct)   `Required` 
 
     
-* **billed_at** (string)  `Required` 
+* **billed_at** (string)   `Required` 
 
     
-* **usd_cost** (float)  `Required` 
+* **usd_cost** (float)   `Required` 
 
     
-* **usage_unit** (string)  `Required` 
+* **usage_unit** (string)   `Required` 
 
     <br>
 
 ### CostsInfo
-* **results** (CostInfo)  `Required` 
+* **results** (CostInfo)  `Repeated`    `Required` 
 
     <br>
 
 ### GetDataRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     
-* **task_options** (Struct) 
+* **task_options** (Struct)  
 
     <br>

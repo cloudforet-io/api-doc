@@ -24,16 +24,16 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**register**](./Storage#register) | [RegisterStorageRequest](Storage#registerstoragerequest) | [StorageInfo](./Storage#storageinfo) |
-| [**update**](./Storage#update) | [UpdateStorageRequest](Storage#updatestoragerequest) | [StorageInfo](./Storage#storageinfo) |
-| [**update_plugin**](./Storage#update_plugin) | [UpdateStoragePluginRequest](Storage#updatestoragepluginrequest) | [StorageInfo](./Storage#storageinfo) |
-| [**verify_plugin**](./Storage#verify_plugin) | [StorageRequest](Storage#storagerequest) | [Empty](./Storage#empty) |
-| [**enable**](./Storage#enable) | [StorageRequest](Storage#storagerequest) | [StorageInfo](./Storage#storageinfo) |
-| [**disable**](./Storage#disable) | [StorageRequest](Storage#storagerequest) | [StorageInfo](./Storage#storageinfo) |
-| [**deregister**](./Storage#deregister) | [StorageRequest](Storage#storagerequest) | [Empty](./Storage#empty) |
-| [**get**](./Storage#get) | [GetStorageRequest](Storage#getstoragerequest) | [StorageInfo](./Storage#storageinfo) |
-| [**list**](./Storage#list) | [StorageQuery](Storage#storagequery) | [StoragesInfo](./Storage#storagesinfo) |
-| [**stat**](./Storage#stat) | [StorageStatQuery](Storage#storagestatquery) | [Struct](./Storage#struct) |
+| [**register**](./Storage#register) | [RegisterStorageRequest](Storage#registerstoragerequest) | [StorageInfo](Storage#storageinfo) |
+| [**update**](./Storage#update) | [UpdateStorageRequest](Storage#updatestoragerequest) | [StorageInfo](Storage#storageinfo) |
+| [**update_plugin**](./Storage#update_plugin) | [UpdateStoragePluginRequest](Storage#updatestoragepluginrequest) | [StorageInfo](Storage#storageinfo) |
+| [**verify_plugin**](./Storage#verify_plugin) | [StorageRequest](Storage#storagerequest) | [Empty](Storage#empty) |
+| [**enable**](./Storage#enable) | [StorageRequest](Storage#storagerequest) | [StorageInfo](Storage#storageinfo) |
+| [**disable**](./Storage#disable) | [StorageRequest](Storage#storagerequest) | [StorageInfo](Storage#storageinfo) |
+| [**deregister**](./Storage#deregister) | [StorageRequest](Storage#storagerequest) | [Empty](Storage#empty) |
+| [**get**](./Storage#get) | [GetStorageRequest](Storage#getstoragerequest) | [StorageInfo](Storage#storageinfo) |
+| [**list**](./Storage#list) | [StorageQuery](Storage#storagequery) | [StoragesInfo](Storage#storagesinfo) |
+| [**stat**](./Storage#stat) | [StorageStatQuery](Storage#storagestatquery) | [Struct](Storage#struct) |
 
 
 
@@ -218,170 +218,170 @@ bookFlatSection: true
 
 
 ### GetStorageRequest
-* **storage_id** (string)  `Required` 
+* **storage_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### PluginInfo
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     <br>
 
 ### PluginRequest
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **schema** (string)  `Required` 
+* **schema** (string)   `Required` 
 
     <br>
 
 ### RegisterStorageRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **plugin_info** (PluginRequest) 
+* **plugin_info** (PluginRequest)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### StorageInfo
-* **storage_id** (string)  `Required` 
+* **storage_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
     
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### StorageQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **storage_id** (string) 
+* **storage_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **state** (string) 
+* **state** (string)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     <br>
 
 ### StorageRequest
-* **storage_id** (string)  `Required` 
+* **storage_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### StorageStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### StoragesInfo
-* **results** (StorageInfo)  `Required` 
+* **results** (StorageInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateStoragePluginRequest
-* **storage_id** (string)  `Required` 
+* **storage_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **version** (string) 
+* **version** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **secret_data** (Struct) 
+* **secret_data** (Struct)  
 
     <br>
 
 ### UpdateStorageRequest
-* **storage_id** (string)  `Required` 
+* **storage_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

@@ -24,7 +24,7 @@ A Resource is a resource used for analysis on all microservices used in Cloudfor
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**stat**](./Resource#stat) | [ResourceStatRequest](Resource#resourcestatrequest) | [Struct](./Resource#struct) |
+| [**stat**](./Resource#stat) | [ResourceStatRequest](Resource#resourcestatrequest) | [Struct](Resource#struct) |
 
 
 
@@ -52,13 +52,13 @@ Enables data preprocessing of different services. Although limited, it is possib
 
 [ResourceStatRequest](./Resource#resourcestatrequest)
 
-* **aggregate** (StatAggregate)  `Required` 
+* **aggregate** (StatAggregate)  `Repeated`    `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **page** (StatPage) 
+* **page** (StatPage)  
 
 
 
@@ -130,111 +130,111 @@ Enables data preprocessing of different services. Although limited, it is possib
 
 
 ### ResourceStatRequest
-* **aggregate** (StatAggregate)  `Required` 
+* **aggregate** (StatAggregate)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **page** (StatPage) 
+* **page** (StatPage)  
 
     <br>
 
 ### SortKey
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **desc** (bool)  `Required` 
+* **desc** (bool)   `Required` 
 
     <br>
 
 ### StatAggregate
-* **query** (StatAggregateQuery)  `Required` 
+* **query** (StatAggregateQuery)   `Required` 
 
     
-* **join** (StatAggregateJoin)  `Required` 
+* **join** (StatAggregateJoin)   `Required` 
 
     
-* **concat** (StatAggregateConcat)  `Required` 
+* **concat** (StatAggregateConcat)   `Required` 
 
     
-* **sort** (StatAggregateSort)  `Required` 
+* **sort** (StatAggregateSort)   `Required` 
 
     
-* **formula** (StatAggregateFormula)  `Required` 
+* **formula** (StatAggregateFormula)   `Required` 
 
     
-* **fill_na** (StatAggregateFillNA)  `Required` 
+* **fill_na** (StatAggregateFillNA)   `Required` 
 
     <br>
 
 ### StatAggregateConcat
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **extend_data** (Struct) 
+* **extend_data** (Struct)  
 
     <br>
 
 ### StatAggregateFillNA
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     <br>
 
 ### StatAggregateFormula
-* **eval** (string)  `Required` 
+* **eval** (string)   `Required` 
 
     
-* **query** (string)  `Required` 
+* **query** (string)   `Required` 
 
     <br>
 
 ### StatAggregateJoin
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **extend_data** (Struct) 
+* **extend_data** (Struct)  
 
     
-* **type** (JoinType) 
+* **type** (JoinType)  
 
     
-* **keys** (string) 
+* **keys** (string)  `Repeated`   
 
     <br>
 
 ### StatAggregateQuery
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **extend_data** (Struct) 
+* **extend_data** (Struct)  
 
     <br>
 
 ### StatAggregateSort
-* **key** (string) 
+* **key** (string)  
 
     
-* **desc** (bool) 
+* **desc** (bool)  
 
     
-* **keys** (SortKey) 
+* **keys** (SortKey)  `Repeated`   
 
     <br>
 
 ### StatPage
-* **limit** (uint32)  `Required` 
+* **limit** (uint32)   `Required` 
 
     
-* **start** (uint32) 
+* **start** (uint32)  
 
     <br>

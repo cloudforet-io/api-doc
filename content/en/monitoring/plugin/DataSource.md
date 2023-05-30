@@ -24,8 +24,8 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**init**](./DataSource#init) | [InitRequest](DataSource#initrequest) | [PluginInfo](./DataSource#plugininfo) |
-| [**verify**](./DataSource#verify) | [PluginVerifyRequest](DataSource#pluginverifyrequest) | [Empty](./DataSource#empty) |
+| [**init**](./DataSource#init) | [InitRequest](DataSource#initrequest) | [PluginInfo](DataSource#plugininfo) |
+| [**verify**](./DataSource#verify) | [PluginVerifyRequest](DataSource#pluginverifyrequest) | [Empty](DataSource#empty) |
 
 
 
@@ -68,22 +68,22 @@ Verifies a specific DataSource. You must specify the parameter `secret_data`, en
 
 
 ### InitRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>
 
 ### PluginInfo
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     <br>
 
 ### PluginVerifyRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>

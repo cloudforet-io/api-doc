@@ -24,10 +24,10 @@ A JobTask is a unit for collecting external cloud resources. The resource belong
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**delete**](./JobTask#delete) | [JobTaskRequest](JobTask#jobtaskrequest) | [Empty](./JobTask#empty) |
-| [**get**](./JobTask#get) | [GetJobTaskRequest](JobTask#getjobtaskrequest) | [JobTaskInfo](./JobTask#jobtaskinfo) |
-| [**list**](./JobTask#list) | [JobTaskQuery](JobTask#jobtaskquery) | [JobTasksInfo](./JobTask#jobtasksinfo) |
-| [**stat**](./JobTask#stat) | [JobTaskStatQuery](JobTask#jobtaskstatquery) | [Struct](./JobTask#struct) |
+| [**delete**](./JobTask#delete) | [JobTaskRequest](JobTask#jobtaskrequest) | [Empty](JobTask#empty) |
+| [**get**](./JobTask#get) | [GetJobTaskRequest](JobTask#getjobtaskrequest) | [JobTaskInfo](JobTask#jobtaskinfo) |
+| [**list**](./JobTask#list) | [JobTaskQuery](JobTask#jobtaskquery) | [JobTasksInfo](JobTask#jobtasksinfo) |
+| [**stat**](./JobTask#stat) | [JobTaskStatQuery](JobTask#jobtaskstatquery) | [Struct](JobTask#struct) |
 
 
 
@@ -55,10 +55,10 @@ Deletes a specific JobTask. You must specify the `job_task_id` of the JobTask to
 
 [JobTaskRequest](./JobTask#jobtaskrequest)
 
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -101,13 +101,13 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 
 [GetJobTaskRequest](./JobTask#getjobtaskrequest)
 
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -125,39 +125,39 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
  {{< tab "Response Example" >}}
 
 [JobTaskInfo](#JOBTASKINFO)
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
-* **status** (JobTaskStatus)  `Required` 
+* **status** (JobTaskStatus)   `Required` 
 
-* **created_count** (int32)  `Required` 
+* **created_count** (int32)   `Required` 
 
-* **updated_count** (int32)  `Required` 
+* **updated_count** (int32)   `Required` 
 
-* **failure_count** (int32)  `Required` 
+* **failure_count** (int32)   `Required` 
 
-* **deleted_count** (int32)  `Required` 
+* **deleted_count** (int32)   `Required` 
 
-* **disconnected_count** (int32)  `Required` 
+* **disconnected_count** (int32)   `Required` 
 
-* **errors** (ErrorInfo)  `Required` 
+* **errors** (ErrorInfo)  `Repeated`   `Required` 
 
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **started_at** (string)  `Required` 
+* **started_at** (string)   `Required` 
 
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
 
 
@@ -222,31 +222,31 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
 
 [JobTaskQuery](./JobTask#jobtaskquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **job_task_id** (string) 
+* **job_task_id** (string)  
 
 
-* **status** (JobTaskStatus) 
+* **status** (JobTaskStatus)  
 
 
-* **job_id** (string) 
+* **job_id** (string)  
 
 
-* **secret_id** (string) 
+* **secret_id** (string)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -263,9 +263,9 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
  {{< tab "Response Example" >}}
 
 [JobTasksInfo](#JOBTASKSINFO)
-* **results** (JobTaskInfo)  `Required` 
+* **results** (JobTaskInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -338,118 +338,118 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
 
 
 ### GetJobTaskRequest
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### JobTaskInfo
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
     
-* **status** (JobTaskStatus)  `Required` 
+* **status** (JobTaskStatus)   `Required` 
 
     
-* **created_count** (int32)  `Required` 
+* **created_count** (int32)   `Required` 
 
     
-* **updated_count** (int32)  `Required` 
+* **updated_count** (int32)   `Required` 
 
     
-* **failure_count** (int32)  `Required` 
+* **failure_count** (int32)   `Required` 
 
     
-* **deleted_count** (int32)  `Required` 
+* **deleted_count** (int32)   `Required` 
 
     
-* **disconnected_count** (int32)  `Required` 
+* **disconnected_count** (int32)   `Required` 
 
     
-* **errors** (ErrorInfo)  `Required` 
+* **errors** (ErrorInfo)  `Repeated`    `Required` 
 
     
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **service_account_id** (string)  `Required` 
+* **service_account_id** (string)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **started_at** (string)  `Required` 
+* **started_at** (string)   `Required` 
 
     
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
     <br>
 
 ### JobTaskQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **job_task_id** (string) 
+* **job_task_id** (string)  
 
     
-* **status** (JobTaskStatus) 
+* **status** (JobTaskStatus)  
 
     
-* **job_id** (string) 
+* **job_id** (string)  
 
     
-* **secret_id** (string) 
+* **secret_id** (string)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **service_account_id** (string) 
+* **service_account_id** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>
 
 ### JobTaskRequest
-* **job_task_id** (string)  `Required` 
+* **job_task_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### JobTaskStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### JobTasksInfo
-* **results** (JobTaskInfo)  `Required` 
+* **results** (JobTaskInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>

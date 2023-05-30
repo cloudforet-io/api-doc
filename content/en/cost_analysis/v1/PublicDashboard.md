@@ -24,12 +24,12 @@ A PublicDashboard is a cost data dashboard provided to all users by default.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./PublicDashboard#create) | [CreatePublicDashboardRequest](PublicDashboard#createpublicdashboardrequest) | [PublicDashboardInfo](./PublicDashboard#publicdashboardinfo) |
-| [**update**](./PublicDashboard#update) | [UpdatePublicDashboardRequest](PublicDashboard#updatepublicdashboardrequest) | [PublicDashboardInfo](./PublicDashboard#publicdashboardinfo) |
-| [**delete**](./PublicDashboard#delete) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [Empty](./PublicDashboard#empty) |
-| [**get**](./PublicDashboard#get) | [GetPublicDashboardRequest](PublicDashboard#getpublicdashboardrequest) | [PublicDashboardInfo](./PublicDashboard#publicdashboardinfo) |
-| [**list**](./PublicDashboard#list) | [PublicDashboardQuery](PublicDashboard#publicdashboardquery) | [PublicDashboardsInfo](./PublicDashboard#publicdashboardsinfo) |
-| [**stat**](./PublicDashboard#stat) | [PublicDashboardStatQuery](PublicDashboard#publicdashboardstatquery) | [Struct](./PublicDashboard#struct) |
+| [**create**](./PublicDashboard#create) | [CreatePublicDashboardRequest](PublicDashboard#createpublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
+| [**update**](./PublicDashboard#update) | [UpdatePublicDashboardRequest](PublicDashboard#updatepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
+| [**delete**](./PublicDashboard#delete) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [Empty](PublicDashboard#empty) |
+| [**get**](./PublicDashboard#get) | [GetPublicDashboardRequest](PublicDashboard#getpublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
+| [**list**](./PublicDashboard#list) | [PublicDashboardQuery](PublicDashboard#publicdashboardquery) | [PublicDashboardsInfo](PublicDashboard#publicdashboardsinfo) |
+| [**stat**](./PublicDashboard#stat) | [PublicDashboardStatQuery](PublicDashboard#publicdashboardstatquery) | [Struct](PublicDashboard#struct) |
 
 
 
@@ -57,28 +57,28 @@ Creates a new PublicDashboard. This method is used for creating the default dash
 
 [CreatePublicDashboardRequest](./PublicDashboard#createpublicdashboardrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **default_layout_id** (string) 
+* **default_layout_id** (string)  
 
 
-* **custom_layouts** (ListValue) 
+* **custom_layouts** (ListValue)  
 
 
-* **default_filter** (Struct) 
+* **default_filter** (Struct)  
 
 
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
 
-* **period** (PublicDashboardPeriod) 
+* **period** (PublicDashboardPeriod)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -135,27 +135,27 @@ Creates a new PublicDashboard. This method is used for creating the default dash
  {{< tab "Response Example" >}}
 
 [PublicDashboardInfo](#PUBLICDASHBOARDINFO)
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **default_layout_id** (string)  `Required` 
+* **default_layout_id** (string)   `Required` 
 
-* **custom_layouts** (ListValue)  `Required` 
+* **custom_layouts** (ListValue)   `Required` 
 
-* **default_filter** (Struct)  `Required` 
+* **default_filter** (Struct)   `Required` 
 
-* **period_type** (PeriodType)  `Required` 
+* **period_type** (PeriodType)   `Required` 
 
-* **period** (PublicDashboardPeriod)  `Required` 
+* **period** (PublicDashboardPeriod)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -240,31 +240,31 @@ Updates a specific PublicDashboard. Changes the widgets of the PublicDashboard w
 
 [UpdatePublicDashboardRequest](./PublicDashboard#updatepublicdashboardrequest)
 
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **default_layout_id** (string) 
+* **default_layout_id** (string)  
 
 
-* **custom_layouts** (ListValue) 
+* **custom_layouts** (ListValue)  
 
 
-* **default_filter** (Struct) 
+* **default_filter** (Struct)  
 
 
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
 
-* **period** (PublicDashboardPeriod) 
+* **period** (PublicDashboardPeriod)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -321,27 +321,27 @@ Updates a specific PublicDashboard. Changes the widgets of the PublicDashboard w
  {{< tab "Response Example" >}}
 
 [PublicDashboardInfo](#PUBLICDASHBOARDINFO)
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **default_layout_id** (string)  `Required` 
+* **default_layout_id** (string)   `Required` 
 
-* **custom_layouts** (ListValue)  `Required` 
+* **custom_layouts** (ListValue)   `Required` 
 
-* **default_filter** (Struct)  `Required` 
+* **default_filter** (Struct)   `Required` 
 
-* **period_type** (PeriodType)  `Required` 
+* **period_type** (PeriodType)   `Required` 
 
-* **period** (PublicDashboardPeriod)  `Required` 
+* **period** (PublicDashboardPeriod)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -426,10 +426,10 @@ Deletes a specific PublicDashboard. You must specify the `public_dashboard_id` o
 
 [PublicDashboardRequest](./PublicDashboard#publicdashboardrequest)
 
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -471,13 +471,13 @@ Gets a specific PublicDashboard. Prints detailed information about the PublicDas
 
 [GetPublicDashboardRequest](./PublicDashboard#getpublicdashboardrequest)
 
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -494,27 +494,27 @@ Gets a specific PublicDashboard. Prints detailed information about the PublicDas
  {{< tab "Response Example" >}}
 
 [PublicDashboardInfo](#PUBLICDASHBOARDINFO)
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **default_layout_id** (string)  `Required` 
+* **default_layout_id** (string)   `Required` 
 
-* **custom_layouts** (ListValue)  `Required` 
+* **custom_layouts** (ListValue)   `Required` 
 
-* **default_filter** (Struct)  `Required` 
+* **default_filter** (Struct)   `Required` 
 
-* **period_type** (PeriodType)  `Required` 
+* **period_type** (PeriodType)   `Required` 
 
-* **period** (PublicDashboardPeriod)  `Required` 
+* **period** (PublicDashboardPeriod)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -599,19 +599,19 @@ Gets a list of all PublicDashboards. You can use a query to get a filtered list 
 
 [PublicDashboardQuery](./PublicDashboard#publicdashboardquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **public_dashboard_id** (string) 
+* **public_dashboard_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
 
 
@@ -628,9 +628,9 @@ Gets a list of all PublicDashboards. You can use a query to get a filtered list 
  {{< tab "Response Example" >}}
 
 [PublicDashboardsInfo](#PUBLICDASHBOARDSINFO)
-* **results** (PublicDashboardInfo)  `Required` 
+* **results** (PublicDashboardInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -830,151 +830,151 @@ Gets a list of all PublicDashboards. You can use a query to get a filtered list 
 
 
 ### CreatePublicDashboardRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **default_layout_id** (string) 
+* **default_layout_id** (string)  
 
     
-* **custom_layouts** (ListValue) 
+* **custom_layouts** (ListValue)  
 
     
-* **default_filter** (Struct) 
+* **default_filter** (Struct)  
 
     
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
     
-* **period** (PublicDashboardPeriod) 
+* **period** (PublicDashboardPeriod)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetPublicDashboardRequest
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### PublicDashboardInfo
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **default_layout_id** (string)  `Required` 
+* **default_layout_id** (string)   `Required` 
 
     
-* **custom_layouts** (ListValue)  `Required` 
+* **custom_layouts** (ListValue)   `Required` 
 
     
-* **default_filter** (Struct)  `Required` 
+* **default_filter** (Struct)   `Required` 
 
     
-* **period_type** (PeriodType)  `Required` 
+* **period_type** (PeriodType)   `Required` 
 
     
-* **period** (PublicDashboardPeriod)  `Required` 
+* **period** (PublicDashboardPeriod)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### PublicDashboardPeriod
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     <br>
 
 ### PublicDashboardQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **public_dashboard_id** (string) 
+* **public_dashboard_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
     <br>
 
 ### PublicDashboardRequest
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### PublicDashboardStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### PublicDashboardsInfo
-* **results** (PublicDashboardInfo)  `Required` 
+* **results** (PublicDashboardInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdatePublicDashboardRequest
-* **public_dashboard_id** (string)  `Required` 
+* **public_dashboard_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **default_layout_id** (string) 
+* **default_layout_id** (string)  
 
     
-* **custom_layouts** (ListValue) 
+* **custom_layouts** (ListValue)  
 
     
-* **default_filter** (Struct) 
+* **default_filter** (Struct)  
 
     
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
     
-* **period** (PublicDashboardPeriod) 
+* **period** (PublicDashboardPeriod)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

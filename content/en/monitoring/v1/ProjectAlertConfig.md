@@ -24,12 +24,12 @@ A ProjectAlertConfig is a resource to set the alert policies for a Project.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./ProjectAlertConfig#create) | [CreateProjectAlertConfigRequest](ProjectAlertConfig#createprojectalertconfigrequest) | [ProjectAlertConfigInfo](./ProjectAlertConfig#projectalertconfiginfo) |
-| [**update**](./ProjectAlertConfig#update) | [UpdateProjectAlertConfigRequest](ProjectAlertConfig#updateprojectalertconfigrequest) | [ProjectAlertConfigInfo](./ProjectAlertConfig#projectalertconfiginfo) |
-| [**delete**](./ProjectAlertConfig#delete) | [ProjectAlertConfigRequest](ProjectAlertConfig#projectalertconfigrequest) | [Empty](./ProjectAlertConfig#empty) |
-| [**get**](./ProjectAlertConfig#get) | [GetProjectAlertConfigRequest](ProjectAlertConfig#getprojectalertconfigrequest) | [ProjectAlertConfigInfo](./ProjectAlertConfig#projectalertconfiginfo) |
-| [**list**](./ProjectAlertConfig#list) | [ProjectAlertConfigQuery](ProjectAlertConfig#projectalertconfigquery) | [ProjectAlertConfigsInfo](./ProjectAlertConfig#projectalertconfigsinfo) |
-| [**stat**](./ProjectAlertConfig#stat) | [ProjectAlertConfigStatQuery](ProjectAlertConfig#projectalertconfigstatquery) | [Struct](./ProjectAlertConfig#struct) |
+| [**create**](./ProjectAlertConfig#create) | [CreateProjectAlertConfigRequest](ProjectAlertConfig#createprojectalertconfigrequest) | [ProjectAlertConfigInfo](ProjectAlertConfig#projectalertconfiginfo) |
+| [**update**](./ProjectAlertConfig#update) | [UpdateProjectAlertConfigRequest](ProjectAlertConfig#updateprojectalertconfigrequest) | [ProjectAlertConfigInfo](ProjectAlertConfig#projectalertconfiginfo) |
+| [**delete**](./ProjectAlertConfig#delete) | [ProjectAlertConfigRequest](ProjectAlertConfig#projectalertconfigrequest) | [Empty](ProjectAlertConfig#empty) |
+| [**get**](./ProjectAlertConfig#get) | [GetProjectAlertConfigRequest](ProjectAlertConfig#getprojectalertconfigrequest) | [ProjectAlertConfigInfo](ProjectAlertConfig#projectalertconfiginfo) |
+| [**list**](./ProjectAlertConfig#list) | [ProjectAlertConfigQuery](ProjectAlertConfig#projectalertconfigquery) | [ProjectAlertConfigsInfo](ProjectAlertConfig#projectalertconfigsinfo) |
+| [**stat**](./ProjectAlertConfig#stat) | [ProjectAlertConfigStatQuery](ProjectAlertConfig#projectalertconfigstatquery) | [Struct](ProjectAlertConfig#struct) |
 
 
 
@@ -57,16 +57,16 @@ Creates a new ProjectAlertConfig in a specific Project. When creating a ProjectA
 
 [CreateProjectAlertConfigRequest](./ProjectAlertConfig#createprojectalertconfigrequest)
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **escalation_policy_id** (string) 
+* **escalation_policy_id** (string)  
 
 
-* **options** (AlertOptions) 
+* **options** (AlertOptions)  
 
 
 
@@ -89,15 +89,15 @@ Creates a new ProjectAlertConfig in a specific Project. When creating a ProjectA
  {{< tab "Response Example" >}}
 
 [ProjectAlertConfigInfo](#PROJECTALERTCONFIGINFO)
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **options** (AlertOptions)  `Required` 
+* **options** (AlertOptions)   `Required` 
 
-* **escalation_policy_info** (EscalationPolicyInfo)  `Required` 
+* **escalation_policy_info** (EscalationPolicyInfo)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -146,16 +146,16 @@ Updates a specific ProjectAlertConfig. You can make changes in ProjectAlertConfi
 
 [UpdateProjectAlertConfigRequest](./ProjectAlertConfig#updateprojectalertconfigrequest)
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **escalation_policy_id** (string) 
+* **escalation_policy_id** (string)  
 
 
-* **options** (AlertOptions) 
+* **options** (AlertOptions)  
 
 
 
@@ -178,15 +178,15 @@ Updates a specific ProjectAlertConfig. You can make changes in ProjectAlertConfi
  {{< tab "Response Example" >}}
 
 [ProjectAlertConfigInfo](#PROJECTALERTCONFIGINFO)
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **options** (AlertOptions)  `Required` 
+* **options** (AlertOptions)   `Required` 
 
-* **escalation_policy_info** (EscalationPolicyInfo)  `Required` 
+* **escalation_policy_info** (EscalationPolicyInfo)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -235,10 +235,10 @@ Deletes a specific ProjectAlertConfig. Deletes alert configuration data in a Pro
 
 [ProjectAlertConfigRequest](./ProjectAlertConfig#projectalertconfigrequest)
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -281,13 +281,13 @@ Gets a specific ProjectAlertConfig. Prints detailed information about the Projec
 
 [GetProjectAlertConfigRequest](./ProjectAlertConfig#getprojectalertconfigrequest)
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -305,15 +305,15 @@ Gets a specific ProjectAlertConfig. Prints detailed information about the Projec
  {{< tab "Response Example" >}}
 
 [ProjectAlertConfigInfo](#PROJECTALERTCONFIGINFO)
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **options** (AlertOptions)  `Required` 
+* **options** (AlertOptions)   `Required` 
 
-* **escalation_policy_info** (EscalationPolicyInfo)  `Required` 
+* **escalation_policy_info** (EscalationPolicyInfo)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -362,16 +362,16 @@ Gets a list of all ProjectAlertConfigs from all projects configured in the same 
 
 [ProjectAlertConfigQuery](./ProjectAlertConfig#projectalertconfigquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **escalation_policy_id** (string) 
+* **escalation_policy_id** (string)  
 
 
 
@@ -389,9 +389,9 @@ Gets a list of all ProjectAlertConfigs from all projects configured in the same 
  {{< tab "Response Example" >}}
 
 [ProjectAlertConfigsInfo](#PROJECTALERTCONFIGSINFO)
-* **results** (ProjectAlertConfigInfo)  `Required` 
+* **results** (ProjectAlertConfigInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -463,103 +463,103 @@ Gets a list of all ProjectAlertConfigs from all projects configured in the same 
 
 
 ### AlertOptions
-* **notification_urgency** (UrgencyOption)  `Required` 
+* **notification_urgency** (UrgencyOption)   `Required` 
 
     
-* **recovery_mode** (RecoveryOption)  `Required` 
+* **recovery_mode** (RecoveryOption)   `Required` 
 
     <br>
 
 ### CreateProjectAlertConfigRequest
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **escalation_policy_id** (string) 
+* **escalation_policy_id** (string)  
 
     
-* **options** (AlertOptions) 
+* **options** (AlertOptions)  
 
     <br>
 
 ### GetProjectAlertConfigRequest
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### ProjectAlertConfigInfo
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **options** (AlertOptions)  `Required` 
+* **options** (AlertOptions)   `Required` 
 
     
-* **escalation_policy_info** (EscalationPolicyInfo)  `Required` 
+* **escalation_policy_info** (EscalationPolicyInfo)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### ProjectAlertConfigQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **escalation_policy_id** (string) 
+* **escalation_policy_id** (string)  
 
     <br>
 
 ### ProjectAlertConfigRequest
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ProjectAlertConfigStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ProjectAlertConfigsInfo
-* **results** (ProjectAlertConfigInfo)  `Required` 
+* **results** (ProjectAlertConfigInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateProjectAlertConfigRequest
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **escalation_policy_id** (string) 
+* **escalation_policy_id** (string)  
 
     
-* **options** (AlertOptions) 
+* **options** (AlertOptions)  
 
     <br>

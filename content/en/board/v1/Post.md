@@ -24,13 +24,13 @@ A Post is a message published on a Board. It also provides notifications to Proj
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Post#create) | [CreatePostRequest](Post#createpostrequest) | [PostInfo](./Post#postinfo) |
-| [**update**](./Post#update) | [UpdatePostRequest](Post#updatepostrequest) | [PostInfo](./Post#postinfo) |
-| [**send_notification**](./Post#send_notification) | [SendNotificationRequest](Post#sendnotificationrequest) | [Empty](./Post#empty) |
-| [**delete**](./Post#delete) | [PostRequest](Post#postrequest) | [Empty](./Post#empty) |
-| [**get**](./Post#get) | [GetPostRequest](Post#getpostrequest) | [PostInfo](./Post#postinfo) |
-| [**list**](./Post#list) | [PostQuery](Post#postquery) | [PostsInfo](./Post#postsinfo) |
-| [**stat**](./Post#stat) | [PostStatQuery](Post#poststatquery) | [Struct](./Post#struct) |
+| [**create**](./Post#create) | [CreatePostRequest](Post#createpostrequest) | [PostInfo](Post#postinfo) |
+| [**update**](./Post#update) | [UpdatePostRequest](Post#updatepostrequest) | [PostInfo](Post#postinfo) |
+| [**send_notification**](./Post#send_notification) | [SendNotificationRequest](Post#sendnotificationrequest) | [Empty](Post#empty) |
+| [**delete**](./Post#delete) | [PostRequest](Post#postrequest) | [Empty](Post#empty) |
+| [**get**](./Post#get) | [GetPostRequest](Post#getpostrequest) | [PostInfo](Post#postinfo) |
+| [**list**](./Post#list) | [PostQuery](Post#postquery) | [PostsInfo](Post#postsinfo) |
+| [**stat**](./Post#stat) | [PostStatQuery](Post#poststatquery) | [Struct](Post#struct) |
 
 
 
@@ -58,28 +58,28 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 [CreatePostRequest](./Post#createpostrequest)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
 
-* **contents** (string)  `Required` 
+* **contents** (string)   `Required` 
 
 
-* **category** (string) 
+* **category** (string)  
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
 
-* **writer** (string) 
+* **writer** (string)  
 
 
-* **files** (string) 
+* **files** (string)  `Repeated`   
 
 
-* **domain_id** (string) 
+* **domain_id** (string)  
 
 
 
@@ -102,37 +102,37 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
-* **post_type** (PostType)  `Required` 
+* **post_type** (PostType)   `Required` 
 
-* **category** (string)  `Required` 
+* **category** (string)   `Required` 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
-* **contents** (string)  `Required` 
+* **contents** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **view_count** (int32)  `Required` 
+* **view_count** (int32)   `Required` 
 
-* **writer** (string)  `Required` 
+* **writer** (string)   `Required` 
 
-* **scope** (Scope)  `Required` 
+* **scope** (Scope)   `Required` 
 
-* **files** (ListValue)  `Required` 
+* **files** (ListValue)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **user_domain_id** (string)  `Required` 
+* **user_domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -187,31 +187,31 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 [UpdatePostRequest](./Post#updatepostrequest)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
 
-* **category** (string) 
+* **category** (string)  
 
 
-* **title** (string) 
+* **title** (string)  
 
 
-* **contents** (string) 
+* **contents** (string)  
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
 
-* **writer** (string) 
+* **writer** (string)  
 
 
-* **files** (string) 
+* **files** (string)  `Repeated`   
 
 
-* **domain_id** (string) 
+* **domain_id** (string)  
 
 
 
@@ -238,37 +238,37 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
-* **post_type** (PostType)  `Required` 
+* **post_type** (PostType)   `Required` 
 
-* **category** (string)  `Required` 
+* **category** (string)   `Required` 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
-* **contents** (string)  `Required` 
+* **contents** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **view_count** (int32)  `Required` 
+* **view_count** (int32)   `Required` 
 
-* **writer** (string)  `Required` 
+* **writer** (string)   `Required` 
 
-* **scope** (Scope)  `Required` 
+* **scope** (Scope)   `Required` 
 
-* **files** (ListValue)  `Required` 
+* **files** (ListValue)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **user_domain_id** (string)  `Required` 
+* **user_domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -340,13 +340,13 @@ Deletes a specific Post. You must specify the `post_id` of the Post to delete, a
 
 [PostRequest](./Post#postrequest)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
 
-* **domain_id** (string) 
+* **domain_id** (string)  
 
 
 
@@ -390,16 +390,16 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 [GetPostRequest](./Post#getpostrequest)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
-* **domain_id** (string) 
+* **domain_id** (string)  
 
 
 
@@ -418,37 +418,37 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
-* **post_type** (PostType)  `Required` 
+* **post_type** (PostType)   `Required` 
 
-* **category** (string)  `Required` 
+* **category** (string)   `Required` 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
-* **contents** (string)  `Required` 
+* **contents** (string)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **view_count** (int32)  `Required` 
+* **view_count** (int32)   `Required` 
 
-* **writer** (string)  `Required` 
+* **writer** (string)   `Required` 
 
-* **scope** (Scope)  `Required` 
+* **scope** (Scope)   `Required` 
 
-* **files** (ListValue)  `Required` 
+* **files** (ListValue)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **user_domain_id** (string)  `Required` 
+* **user_domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -503,34 +503,34 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 [PostQuery](./Post#postquery)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
-* **post_id** (string) 
+* **post_id** (string)  
 
 
-* **post_type** (PostType) 
+* **post_type** (PostType)  
 
 
-* **category** (string) 
+* **category** (string)  
 
 
-* **writer** (string) 
+* **writer** (string)  
 
 
-* **scope** (Scope) 
+* **scope** (Scope)  
 
 
-* **user_id** (string) 
+* **user_id** (string)  
 
 
-* **user_domain_id** (string) 
+* **user_domain_id** (string)  
 
 
-* **domain_id** (string) 
+* **domain_id** (string)  
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
 
@@ -548,9 +548,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
  {{< tab "Response Example" >}}
 
 [PostsInfo](#POSTSINFO)
-* **results** (PostInfo)  `Required` 
+* **results** (PostInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -631,190 +631,190 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 ### CreatePostRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
     
-* **contents** (string)  `Required` 
+* **contents** (string)   `Required` 
 
     
-* **category** (string) 
+* **category** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **writer** (string) 
+* **writer** (string)  
 
     
-* **files** (string) 
+* **files** (string)  `Repeated`   
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### GetPostRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### PostInfo
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
     
-* **post_type** (PostType)  `Required` 
+* **post_type** (PostType)   `Required` 
 
     
-* **category** (string)  `Required` 
+* **category** (string)   `Required` 
 
     
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
     
-* **contents** (string)  `Required` 
+* **contents** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **view_count** (int32)  `Required` 
+* **view_count** (int32)   `Required` 
 
     
-* **writer** (string)  `Required` 
+* **writer** (string)   `Required` 
 
     
-* **scope** (Scope)  `Required` 
+* **scope** (Scope)   `Required` 
 
     
-* **files** (ListValue)  `Required` 
+* **files** (ListValue)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **user_domain_id** (string)  `Required` 
+* **user_domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### PostQuery
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **post_id** (string) 
+* **post_id** (string)  
 
     
-* **post_type** (PostType) 
+* **post_type** (PostType)  
 
     
-* **category** (string) 
+* **category** (string)  
 
     
-* **writer** (string) 
+* **writer** (string)  
 
     
-* **scope** (Scope) 
+* **scope** (Scope)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     
-* **user_domain_id** (string) 
+* **user_domain_id** (string)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     <br>
 
 ### PostRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### PostStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### PostsInfo
-* **results** (PostInfo)  `Required` 
+* **results** (PostInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### SendNotificationRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### UpdatePostRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **post_id** (string)  `Required` 
+* **post_id** (string)   `Required` 
 
     
-* **category** (string) 
+* **category** (string)  
 
     
-* **title** (string) 
+* **title** (string)  
 
     
-* **contents** (string) 
+* **contents** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **writer** (string) 
+* **writer** (string)  
 
     
-* **files** (string) 
+* **files** (string)  `Repeated`   
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>

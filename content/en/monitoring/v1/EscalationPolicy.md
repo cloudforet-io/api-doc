@@ -24,13 +24,13 @@ An EscalationPolicy is a set of rules to deliver an alert to assigned members.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./EscalationPolicy#create) | [CreateEscalationPolicyRequest](EscalationPolicy#createescalationpolicyrequest) | [EscalationPolicyInfo](./EscalationPolicy#escalationpolicyinfo) |
-| [**update**](./EscalationPolicy#update) | [UpdateEscalationPolicyRequest](EscalationPolicy#updateescalationpolicyrequest) | [EscalationPolicyInfo](./EscalationPolicy#escalationpolicyinfo) |
-| [**set_default**](./EscalationPolicy#set_default) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [EscalationPolicyInfo](./EscalationPolicy#escalationpolicyinfo) |
-| [**delete**](./EscalationPolicy#delete) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [Empty](./EscalationPolicy#empty) |
-| [**get**](./EscalationPolicy#get) | [GetEscalationPolicyRequest](EscalationPolicy#getescalationpolicyrequest) | [EscalationPolicyInfo](./EscalationPolicy#escalationpolicyinfo) |
-| [**list**](./EscalationPolicy#list) | [EscalationPolicyQuery](EscalationPolicy#escalationpolicyquery) | [EscalationPoliciesInfo](./EscalationPolicy#escalationpoliciesinfo) |
-| [**stat**](./EscalationPolicy#stat) | [EscalationPolicyStatQuery](EscalationPolicy#escalationpolicystatquery) | [Struct](./EscalationPolicy#struct) |
+| [**create**](./EscalationPolicy#create) | [CreateEscalationPolicyRequest](EscalationPolicy#createescalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
+| [**update**](./EscalationPolicy#update) | [UpdateEscalationPolicyRequest](EscalationPolicy#updateescalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
+| [**set_default**](./EscalationPolicy#set_default) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
+| [**delete**](./EscalationPolicy#delete) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [Empty](EscalationPolicy#empty) |
+| [**get**](./EscalationPolicy#get) | [GetEscalationPolicyRequest](EscalationPolicy#getescalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
+| [**list**](./EscalationPolicy#list) | [EscalationPolicyQuery](EscalationPolicy#escalationpolicyquery) | [EscalationPoliciesInfo](EscalationPolicy#escalationpoliciesinfo) |
+| [**stat**](./EscalationPolicy#stat) | [EscalationPolicyStatQuery](EscalationPolicy#escalationpolicystatquery) | [Struct](EscalationPolicy#struct) |
 
 
 
@@ -58,25 +58,25 @@ Creates a new EscalationPolicy. When creating an EscalationPolicy, if the projec
 
 [CreateEscalationPolicyRequest](./EscalationPolicy#createescalationpolicyrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **rules** (EscalationPolicyRule)  `Required` 
+* **rules** (EscalationPolicyRule)  `Repeated`    `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **repeat_count** (int32) 
+* **repeat_count** (int32)  
 
 
-* **finish_condition** (EscalationFinishCondition) 
+* **finish_condition** (EscalationFinishCondition)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -98,27 +98,27 @@ Creates a new EscalationPolicy. When creating an EscalationPolicy, if the projec
  {{< tab "Response Example" >}}
 
 [EscalationPolicyInfo](#ESCALATIONPOLICYINFO)
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **rules** (EscalationPolicyRule)  `Required` 
+* **rules** (EscalationPolicyRule)  `Repeated`   `Required` 
 
-* **repeat_count** (int32)  `Required` 
+* **repeat_count** (int32)   `Required` 
 
-* **finish_condition** (EscalationFinishCondition)  `Required` 
+* **finish_condition** (EscalationFinishCondition)   `Required` 
 
-* **scope** (EscalationPolicyScope)  `Required` 
+* **scope** (EscalationPolicyScope)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -174,25 +174,25 @@ Updates a specific EscalationPolicy. You can make changes in EscalationPolicy se
 
 [UpdateEscalationPolicyRequest](./EscalationPolicy#updateescalationpolicyrequest)
 
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **rules** (EscalationPolicyRule) 
+* **rules** (EscalationPolicyRule)  `Repeated`   
 
 
-* **repeat_count** (int32) 
+* **repeat_count** (int32)  
 
 
-* **finish_condition** (EscalationFinishCondition) 
+* **finish_condition** (EscalationFinishCondition)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -216,27 +216,27 @@ Updates a specific EscalationPolicy. You can make changes in EscalationPolicy se
  {{< tab "Response Example" >}}
 
 [EscalationPolicyInfo](#ESCALATIONPOLICYINFO)
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **rules** (EscalationPolicyRule)  `Required` 
+* **rules** (EscalationPolicyRule)  `Repeated`   `Required` 
 
-* **repeat_count** (int32)  `Required` 
+* **repeat_count** (int32)   `Required` 
 
-* **finish_condition** (EscalationFinishCondition)  `Required` 
+* **finish_condition** (EscalationFinishCondition)   `Required` 
 
-* **scope** (EscalationPolicyScope)  `Required` 
+* **scope** (EscalationPolicyScope)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -292,10 +292,10 @@ Sets a specific EscalationPolicy as default. Only policies configured as global 
 
 [EscalationPolicyRequest](./EscalationPolicy#escalationpolicyrequest)
 
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -313,27 +313,27 @@ Sets a specific EscalationPolicy as default. Only policies configured as global 
  {{< tab "Response Example" >}}
 
 [EscalationPolicyInfo](#ESCALATIONPOLICYINFO)
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **rules** (EscalationPolicyRule)  `Required` 
+* **rules** (EscalationPolicyRule)  `Repeated`   `Required` 
 
-* **repeat_count** (int32)  `Required` 
+* **repeat_count** (int32)   `Required` 
 
-* **finish_condition** (EscalationFinishCondition)  `Required` 
+* **finish_condition** (EscalationFinishCondition)   `Required` 
 
-* **scope** (EscalationPolicyScope)  `Required` 
+* **scope** (EscalationPolicyScope)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -389,10 +389,10 @@ Deletes a specific EscalationPolicy. Deletes the EscalationPolicy with the escal
 
 [EscalationPolicyRequest](./EscalationPolicy#escalationpolicyrequest)
 
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -435,13 +435,13 @@ Gets a specific EscalationPolicy. Prints detailed information about the Escalati
 
 [GetEscalationPolicyRequest](./EscalationPolicy#getescalationpolicyrequest)
 
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -459,27 +459,27 @@ Gets a specific EscalationPolicy. Prints detailed information about the Escalati
  {{< tab "Response Example" >}}
 
 [EscalationPolicyInfo](#ESCALATIONPOLICYINFO)
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
-* **rules** (EscalationPolicyRule)  `Required` 
+* **rules** (EscalationPolicyRule)  `Repeated`   `Required` 
 
-* **repeat_count** (int32)  `Required` 
+* **repeat_count** (int32)   `Required` 
 
-* **finish_condition** (EscalationFinishCondition)  `Required` 
+* **finish_condition** (EscalationFinishCondition)   `Required` 
 
-* **scope** (EscalationPolicyScope)  `Required` 
+* **scope** (EscalationPolicyScope)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -535,28 +535,28 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 
 [EscalationPolicyQuery](./EscalationPolicy#escalationpolicyquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **escalation_policy_id** (string) 
+* **escalation_policy_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **is_default** (bool) 
+* **is_default** (bool)  
 
 
-* **finish_condition** (EscalationFinishCondition) 
+* **finish_condition** (EscalationFinishCondition)  
 
 
-* **scope** (EscalationPolicyScope) 
+* **scope** (EscalationPolicyScope)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -574,9 +574,9 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
  {{< tab "Response Example" >}}
 
 [EscalationPoliciesInfo](#ESCALATIONPOLICIESINFO)
-* **results** (EscalationPolicyInfo)  `Required` 
+* **results** (EscalationPolicyInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -653,151 +653,151 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 
 
 ### CreateEscalationPolicyRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **rules** (EscalationPolicyRule)  `Required` 
+* **rules** (EscalationPolicyRule)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **repeat_count** (int32) 
+* **repeat_count** (int32)  
 
     
-* **finish_condition** (EscalationFinishCondition) 
+* **finish_condition** (EscalationFinishCondition)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### EscalationPoliciesInfo
-* **results** (EscalationPolicyInfo)  `Required` 
+* **results** (EscalationPolicyInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### EscalationPolicyInfo
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **is_default** (bool)  `Required` 
+* **is_default** (bool)   `Required` 
 
     
-* **rules** (EscalationPolicyRule)  `Required` 
+* **rules** (EscalationPolicyRule)  `Repeated`    `Required` 
 
     
-* **repeat_count** (int32)  `Required` 
+* **repeat_count** (int32)   `Required` 
 
     
-* **finish_condition** (EscalationFinishCondition)  `Required` 
+* **finish_condition** (EscalationFinishCondition)   `Required` 
 
     
-* **scope** (EscalationPolicyScope)  `Required` 
+* **scope** (EscalationPolicyScope)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### EscalationPolicyQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **escalation_policy_id** (string) 
+* **escalation_policy_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **is_default** (bool) 
+* **is_default** (bool)  
 
     
-* **finish_condition** (EscalationFinishCondition) 
+* **finish_condition** (EscalationFinishCondition)  
 
     
-* **scope** (EscalationPolicyScope) 
+* **scope** (EscalationPolicyScope)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>
 
 ### EscalationPolicyRequest
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### EscalationPolicyRule
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
     
-* **escalate_minutes** (int32)  `Required` 
+* **escalate_minutes** (int32)   `Required` 
 
     <br>
 
 ### EscalationPolicyStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### GetEscalationPolicyRequest
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateEscalationPolicyRequest
-* **escalation_policy_id** (string)  `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **rules** (EscalationPolicyRule) 
+* **rules** (EscalationPolicyRule)  `Repeated`   
 
     
-* **repeat_count** (int32) 
+* **repeat_count** (int32)  
 
     
-* **finish_condition** (EscalationFinishCondition) 
+* **finish_condition** (EscalationFinishCondition)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

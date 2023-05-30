@@ -24,22 +24,22 @@ A Collector is a plugin instance collecting cloud resources. A Collector can col
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Collector#create) | [CreateCollectorRequest](Collector#createcollectorrequest) | [CollectorInfo](./Collector#collectorinfo) |
-| [**update**](./Collector#update) | [UpdateCollectorRequest](Collector#updatecollectorrequest) | [CollectorInfo](./Collector#collectorinfo) |
-| [**update_plugin**](./Collector#update_plugin) | [UpdatePluginRequest](Collector#updatepluginrequest) | [CollectorInfo](./Collector#collectorinfo) |
-| [**verify_plugin**](./Collector#verify_plugin) | [VerifyPluginRequest](Collector#verifypluginrequest) | [Empty](./Collector#empty) |
-| [**delete**](./Collector#delete) | [CollectorRequest](Collector#collectorrequest) | [Empty](./Collector#empty) |
-| [**get**](./Collector#get) | [GetCollectorRequest](Collector#getcollectorrequest) | [CollectorInfo](./Collector#collectorinfo) |
-| [**enable**](./Collector#enable) | [CollectorRequest](Collector#collectorrequest) | [CollectorInfo](./Collector#collectorinfo) |
-| [**disable**](./Collector#disable) | [CollectorRequest](Collector#collectorrequest) | [CollectorInfo](./Collector#collectorinfo) |
-| [**list**](./Collector#list) | [CollectorQuery](Collector#collectorquery) | [CollectorsInfo](./Collector#collectorsinfo) |
-| [**stat**](./Collector#stat) | [CollectorStatQuery](Collector#collectorstatquery) | [Struct](./Collector#struct) |
-| [**collect**](./Collector#collect) | [CollectRequest](Collector#collectrequest) | [JobInfo](./Collector#jobinfo) |
-| [**add_schedule**](./Collector#add_schedule) | [CreateScheduleRequest](Collector#createschedulerequest) | [ScheduleInfo](./Collector#scheduleinfo) |
-| [**get_schedule**](./Collector#get_schedule) | [ScheduleRequest](Collector#schedulerequest) | [ScheduleInfo](./Collector#scheduleinfo) |
-| [**update_schedule**](./Collector#update_schedule) | [UpdateScheduleRequest](Collector#updateschedulerequest) | [ScheduleInfo](./Collector#scheduleinfo) |
-| [**delete_schedule**](./Collector#delete_schedule) | [DeleteScheduleRequest](Collector#deleteschedulerequest) | [Empty](./Collector#empty) |
-| [**list_schedules**](./Collector#list_schedules) | [ScheduleQuery](Collector#schedulequery) | [SchedulesInfo](./Collector#schedulesinfo) |
+| [**create**](./Collector#create) | [CreateCollectorRequest](Collector#createcollectorrequest) | [CollectorInfo](Collector#collectorinfo) |
+| [**update**](./Collector#update) | [UpdateCollectorRequest](Collector#updatecollectorrequest) | [CollectorInfo](Collector#collectorinfo) |
+| [**update_plugin**](./Collector#update_plugin) | [UpdatePluginRequest](Collector#updatepluginrequest) | [CollectorInfo](Collector#collectorinfo) |
+| [**verify_plugin**](./Collector#verify_plugin) | [VerifyPluginRequest](Collector#verifypluginrequest) | [Empty](Collector#empty) |
+| [**delete**](./Collector#delete) | [CollectorRequest](Collector#collectorrequest) | [Empty](Collector#empty) |
+| [**get**](./Collector#get) | [GetCollectorRequest](Collector#getcollectorrequest) | [CollectorInfo](Collector#collectorinfo) |
+| [**enable**](./Collector#enable) | [CollectorRequest](Collector#collectorrequest) | [CollectorInfo](Collector#collectorinfo) |
+| [**disable**](./Collector#disable) | [CollectorRequest](Collector#collectorrequest) | [CollectorInfo](Collector#collectorinfo) |
+| [**list**](./Collector#list) | [CollectorQuery](Collector#collectorquery) | [CollectorsInfo](Collector#collectorsinfo) |
+| [**stat**](./Collector#stat) | [CollectorStatQuery](Collector#collectorstatquery) | [Struct](Collector#struct) |
+| [**collect**](./Collector#collect) | [CollectRequest](Collector#collectrequest) | [JobInfo](Collector#jobinfo) |
+| [**add_schedule**](./Collector#add_schedule) | [CreateScheduleRequest](Collector#createschedulerequest) | [ScheduleInfo](Collector#scheduleinfo) |
+| [**get_schedule**](./Collector#get_schedule) | [ScheduleRequest](Collector#schedulerequest) | [ScheduleInfo](Collector#scheduleinfo) |
+| [**update_schedule**](./Collector#update_schedule) | [UpdateScheduleRequest](Collector#updateschedulerequest) | [ScheduleInfo](Collector#scheduleinfo) |
+| [**delete_schedule**](./Collector#delete_schedule) | [DeleteScheduleRequest](Collector#deleteschedulerequest) | [Empty](Collector#empty) |
+| [**list_schedules**](./Collector#list_schedules) | [ScheduleQuery](Collector#schedulequery) | [SchedulesInfo](Collector#schedulesinfo) |
 
 
 
@@ -67,22 +67,22 @@ Creates a new Collector with information of the plugin to use. Information of th
 
 [CreateCollectorRequest](./Collector#createcollectorrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -123,27 +123,27 @@ Creates a new Collector with information of the plugin to use. Information of th
  {{< tab "Response Example" >}}
 
 [CollectorInfo](#COLLECTORINFO)
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_collected_at** (string)  `Required` 
+* **last_collected_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -223,19 +223,19 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 
 [UpdateCollectorRequest](./Collector#updatecollectorrequest)
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -262,27 +262,27 @@ Updates a specific Collector. You can make changes in Collector settings, includ
  {{< tab "Response Example" >}}
 
 [CollectorInfo](#COLLECTORINFO)
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_collected_at** (string)  `Required` 
+* **last_collected_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -361,27 +361,27 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
  {{< tab "Response Example" >}}
 
 [CollectorInfo](#COLLECTORINFO)
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_collected_at** (string)  `Required` 
+* **last_collected_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -478,10 +478,10 @@ Deletes a specific Collector. You must specify the `collector_id` of the Collect
 
 [CollectorRequest](./Collector#collectorrequest)
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -523,13 +523,13 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
 
 [GetCollectorRequest](./Collector#getcollectorrequest)
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -546,27 +546,27 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
  {{< tab "Response Example" >}}
 
 [CollectorInfo](#COLLECTORINFO)
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_collected_at** (string)  `Required` 
+* **last_collected_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -646,10 +646,10 @@ Enables a specific Collector. By enabling a Collector, you can communicate with 
 
 [CollectorRequest](./Collector#collectorrequest)
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -666,27 +666,27 @@ Enables a specific Collector. By enabling a Collector, you can communicate with 
  {{< tab "Response Example" >}}
 
 [CollectorInfo](#COLLECTORINFO)
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_collected_at** (string)  `Required` 
+* **last_collected_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -766,10 +766,10 @@ Disables a specific Collector. By disabling a Collector, you cannot communicate 
 
 [CollectorRequest](./Collector#collectorrequest)
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -786,27 +786,27 @@ Disables a specific Collector. By disabling a Collector, you cannot communicate 
  {{< tab "Response Example" >}}
 
 [CollectorInfo](#COLLECTORINFO)
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_collected_at** (string)  `Required` 
+* **last_collected_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -886,25 +886,25 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
 [CollectorQuery](./Collector#collectorquery)
 
-* **query** (Query)  `Required` 
+* **query** (Query)   `Required` 
 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
 
-* **priority** (int32)  `Required` 
+* **priority** (int32)   `Required` 
 
 
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -921,9 +921,9 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
  {{< tab "Response Example" >}}
 
 [CollectorsInfo](#COLLECTORSINFO)
-* **results** (CollectorInfo)  `Required` 
+* **results** (CollectorInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -1032,29 +1032,29 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
  {{< tab "Response Example" >}}
 
 [JobInfo](#JOBINFO)
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
-* **status** (Status)  `Required` 
+* **status** (Status)   `Required` 
 
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
-* **total_tasks** (int32)  `Required` 
+* **total_tasks** (int32)   `Required` 
 
-* **remained_tasks** (int32)  `Required` 
+* **remained_tasks** (int32)   `Required` 
 
-* **errors** (ErrorInfo)  `Required` 
+* **errors** (ErrorInfo)  `Repeated`   `Required` 
 
-* **collector_info** (CollectorInfo)  `Required` 
+* **collector_info** (CollectorInfo)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
 
 
@@ -1112,22 +1112,22 @@ Adds a schedule to a specific Collector. When specifying the time to collect, th
 
 [CreateScheduleRequest](./Collector#createschedulerequest)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **collect_mode** (string) 
+* **collect_mode** (string)  
 
 
-* **filter** (Struct) 
+* **filter** (Struct)  
 
 
 
@@ -1148,23 +1148,23 @@ Adds a schedule to a specific Collector. When specifying the time to collect, th
  {{< tab "Response Example" >}}
 
 [ScheduleInfo](#SCHEDULEINFO)
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **collect_mode** (string)  `Required` 
+* **collect_mode** (string)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
-* **collector_info** (CollectorInfo)  `Required` 
+* **collector_info** (CollectorInfo)   `Required` 
 
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
 
 
@@ -1255,13 +1255,13 @@ Gets a specific schedule set in a specific Collector. You must specify the `coll
 
 [ScheduleRequest](./Collector#schedulerequest)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
 
@@ -1279,23 +1279,23 @@ Gets a specific schedule set in a specific Collector. You must specify the `coll
  {{< tab "Response Example" >}}
 
 [ScheduleInfo](#SCHEDULEINFO)
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **collect_mode** (string)  `Required` 
+* **collect_mode** (string)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
-* **collector_info** (CollectorInfo)  `Required` 
+* **collector_info** (CollectorInfo)   `Required` 
 
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
 
 
@@ -1386,25 +1386,25 @@ Updates a specific schedule of the Collector. You can make changes in schedule s
 
 [UpdateScheduleRequest](./Collector#updateschedulerequest)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **collect_mode** (string) 
+* **collect_mode** (string)  
 
 
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
 
-* **filter** (Struct) 
+* **filter** (Struct)  
 
 
 
@@ -1428,23 +1428,23 @@ Updates a specific schedule of the Collector. You can make changes in schedule s
  {{< tab "Response Example" >}}
 
 [ScheduleInfo](#SCHEDULEINFO)
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **collect_mode** (string)  `Required` 
+* **collect_mode** (string)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
-* **collector_info** (CollectorInfo)  `Required` 
+* **collector_info** (CollectorInfo)   `Required` 
 
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
 
 
@@ -1535,13 +1535,13 @@ Deletes a specific schedule of the Collector. You must specify the `schedule_id`
 
 [DeleteScheduleRequest](./Collector#deleteschedulerequest)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
 
@@ -1584,16 +1584,16 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 
 [ScheduleQuery](./Collector#schedulequery)
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **schedule_id** (string) 
+* **schedule_id** (string)  
 
 
 
@@ -1610,9 +1610,9 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
  {{< tab "Response Example" >}}
 
 [SchedulesInfo](#SCHEDULESINFO)
-* **results** (ScheduleInfo)  `Required` 
+* **results** (ScheduleInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -1699,383 +1699,383 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 
 
 ### CollectRequest
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **filter** (Struct) 
+* **filter** (Struct)  
 
     
-* **secret_id** (string) 
+* **secret_id** (string)  
 
     
-* **collect_mode** (string) 
+* **collect_mode** (string)  
 
     
-* **use_cache** (bool) 
+* **use_cache** (bool)  
 
     <br>
 
 ### CollectorInfo
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
     
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **last_collected_at** (string)  `Required` 
+* **last_collected_at** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CollectorQuery
-* **query** (Query)  `Required` 
+* **query** (Query)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **priority** (int32)  `Required` 
+* **priority** (int32)   `Required` 
 
     
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CollectorRequest
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CollectorStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CollectorsInfo
-* **results** (CollectorInfo)  `Required` 
+* **results** (CollectorInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### CreateCollectorRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### CreateScheduleRequest
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **collect_mode** (string) 
+* **collect_mode** (string)  
 
     
-* **filter** (Struct) 
+* **filter** (Struct)  
 
     <br>
 
 ### DeleteScheduleRequest
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     <br>
 
 ### ErrorInfo
-* **error_code** (string)  `Required` 
+* **error_code** (string)   `Required` 
 
     
-* **message** (string)  `Required` 
+* **message** (string)   `Required` 
 
     
-* **additional** (Struct)  `Required` 
+* **additional** (Struct)   `Required` 
 
     <br>
 
 ### GetCollectorRequest
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### JobInfo
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **status** (Status)  `Required` 
+* **status** (Status)   `Required` 
 
     
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
     
-* **total_tasks** (int32)  `Required` 
+* **total_tasks** (int32)   `Required` 
 
     
-* **remained_tasks** (int32)  `Required` 
+* **remained_tasks** (int32)   `Required` 
 
     
-* **errors** (ErrorInfo)  `Required` 
+* **errors** (ErrorInfo)  `Repeated`    `Required` 
 
     
-* **collector_info** (CollectorInfo)  `Required` 
+* **collector_info** (CollectorInfo)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
     <br>
 
 ### PluginInfo
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     
-* **upgrade_mode** (UpgradeMode)  `Required` 
+* **upgrade_mode** (UpgradeMode)   `Required` 
 
     
-* **secret_filter** (Struct)  `Required` 
+* **secret_filter** (Struct)   `Required` 
 
     <br>
 
 ### ScheduleInfo
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **collect_mode** (string)  `Required` 
+* **collect_mode** (string)   `Required` 
 
     
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
     
-* **collector_info** (CollectorInfo)  `Required` 
+* **collector_info** (CollectorInfo)   `Required` 
 
     
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
     <br>
 
 ### ScheduleQuery
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **schedule_id** (string) 
+* **schedule_id** (string)  
 
     <br>
 
 ### ScheduleRequest
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     <br>
 
 ### Scheduled
-* **cron** (string)  `Required` 
+* **cron** (string)   `Required` 
 
     
-* **interval** (int32)  `Required` 
+* **interval** (int32)   `Required` 
 
     
-* **minutes** (int32)  `Required` 
+* **minutes** (int32)  `Repeated`    `Required` 
 
     
-* **hours** (int32)  `Required` 
+* **hours** (int32)  `Repeated`    `Required` 
 
     <br>
 
 ### SchedulesInfo
-* **results** (ScheduleInfo)  `Required` 
+* **results** (ScheduleInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateCollectorRequest
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### UpdatePluginRequest
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **version** (string) 
+* **version** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **upgrade_mode** (UpgradeMode) 
+* **upgrade_mode** (UpgradeMode)  
 
     <br>
 
 ### UpdateScheduleRequest
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **collect_mode** (string) 
+* **collect_mode** (string)  
 
     
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
     
-* **filter** (Struct) 
+* **filter** (Struct)  
 
     <br>
 
 ### VerifyInfo
-* **status** (bool)  `Required` 
+* **status** (bool)   `Required` 
 
     <br>
 
 ### VerifyPluginRequest
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **secret_id** (string) 
+* **secret_id** (string)  
 
     <br>

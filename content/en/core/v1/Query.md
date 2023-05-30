@@ -29,318 +29,318 @@ bookFlatSection: true
 
 
 ### AggregateCount
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     <br>
 
 ### AggregateGroup
-* **keys** (AggregateGroupKey)  `Required` 
+* **keys** (AggregateGroupKey)  `Repeated`    `Required` 
 
     
-* **fields** (AggregateGroupField)  `Required` 
+* **fields** (AggregateGroupField)  `Repeated`    `Required` 
 
     <br>
 
 ### AggregateGroupField
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **k** (string)  `Required` 
+* **k** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **n** (string)  `Required` 
+* **n** (string)   `Required` 
 
     
-* **operator** (string)  `Required` 
+* **operator** (string)   `Required` 
 
     
-* **o** (string)  `Required` 
+* **o** (string)   `Required` 
 
     
-* **fields** (AggregateGroupSubField)  `Required` 
+* **fields** (AggregateGroupSubField)  `Repeated`    `Required` 
 
     
-* **conditions** (AggregateSubCondition)  `Required` 
+* **conditions** (AggregateSubCondition)  `Repeated`    `Required` 
 
     <br>
 
 ### AggregateGroupKey
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **k** (string)  `Required` 
+* **k** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **n** (string)  `Required` 
+* **n** (string)   `Required` 
 
     
-* **date_format** (string)  `Required` 
+* **date_format** (string)   `Required` 
 
     <br>
 
 ### AggregateGroupSubField
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **k** (string)  `Required` 
+* **k** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **n** (string)  `Required` 
+* **n** (string)   `Required` 
 
     <br>
 
 ### AggregateProject
-* **fields** (AggregateProjectField)  `Required` 
+* **fields** (AggregateProjectField)  `Repeated`    `Required` 
 
     
-* **exclude_keys** (bool)  `Required` 
+* **exclude_keys** (bool)   `Required` 
 
     <br>
 
 ### AggregateProjectField
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **k** (string)  `Required` 
+* **k** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **n** (string)  `Required` 
+* **n** (string)   `Required` 
 
     
-* **operator** (string)  `Required` 
+* **operator** (string)   `Required` 
 
     
-* **o** (string)  `Required` 
+* **o** (string)   `Required` 
 
     <br>
 
 ### AggregateSort
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **desc** (bool)  `Required` 
+* **desc** (bool)   `Required` 
 
     
-* **keys** (SortKey)  `Required` 
+* **keys** (SortKey)  `Repeated`    `Required` 
 
     <br>
 
 ### AggregateSubCondition
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **k** (string)  `Required` 
+* **k** (string)   `Required` 
 
     
-* **value** (Value)  `Required` 
+* **value** (Value)   `Required` 
 
     
-* **v** (Value)  `Required` 
+* **v** (Value)   `Required` 
 
     
-* **operator** (string)  `Required` 
+* **operator** (string)   `Required` 
 
     
-* **o** (string)  `Required` 
+* **o** (string)   `Required` 
 
     <br>
 
 ### AggregateUnwind
-* **path** (string)  `Required` 
+* **path** (string)   `Required` 
 
     <br>
 
 ### AnalyzeQuery
-* **group_by** (string)  `Required` 
+* **group_by** (string)  `Repeated`    `Required` 
 
     
-* **field_group** (string)  `Required` 
+* **field_group** (string)  `Repeated`    `Required` 
 
     
-* **filter** (Filter)  `Required` 
+* **filter** (Filter)  `Repeated`    `Required` 
 
     
-* **filter_or** (Filter)  `Required` 
+* **filter_or** (Filter)  `Repeated`    `Required` 
 
     
-* **page** (Page)  `Required` 
+* **page** (Page)   `Required` 
 
     
-* **sort** (SortKey)  `Required` 
+* **sort** (SortKey)  `Repeated`    `Required` 
 
     
-* **fields** (Struct)  `Required` 
+* **fields** (Struct)   `Required` 
 
     
-* **select** (Struct)  `Required` 
+* **select** (Struct)   `Required` 
 
     
-* **keyword** (string)  `Required` 
+* **keyword** (string)   `Required` 
 
     <br>
 
 ### Filter
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **k** (string)  `Required` 
+* **k** (string)   `Required` 
 
     
-* **value** (Value)  `Required` 
+* **value** (Value)   `Required` 
 
     
-* **v** (Value)  `Required` 
+* **v** (Value)   `Required` 
 
     
-* **operator** (string)  `Required` 
+* **operator** (string)   `Required` 
 
     
-* **o** (string)  `Required` 
+* **o** (string)   `Required` 
 
     <br>
 
 ### Page
-* **start** (uint32)  `Required` 
+* **start** (uint32)   `Required` 
 
     
-* **limit** (uint32)  `Required` 
+* **limit** (uint32)   `Required` 
 
     <br>
 
 ### Query
-* **filter** (Filter)  `Required` 
+* **filter** (Filter)  `Repeated`    `Required` 
 
     
-* **filter_or** (Filter)  `Required` 
+* **filter_or** (Filter)  `Repeated`    `Required` 
 
     
-* **sort** (Sort)  `Required` 
+* **sort** (Sort)   `Required` 
 
     
-* **page** (Page)  `Required` 
+* **page** (Page)   `Required` 
 
     
-* **minimal** (bool)  `Required` 
+* **minimal** (bool)   `Required` 
 
     
-* **count_only** (bool)  `Required` 
+* **count_only** (bool)   `Required` 
 
     
-* **only** (string)  `Required` 
+* **only** (string)  `Repeated`    `Required` 
 
     
-* **keyword** (string)  `Required` 
+* **keyword** (string)   `Required` 
 
     <br>
 
 ### Sort
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **desc** (bool)  `Required` 
+* **desc** (bool)   `Required` 
 
     
-* **keys** (SortKey)  `Required` 
+* **keys** (SortKey)  `Repeated`    `Required` 
 
     <br>
 
 ### SortKey
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **desc** (bool)  `Required` 
+* **desc** (bool)   `Required` 
 
     <br>
 
 ### StatisticsAggregate
-* **unwind** (AggregateUnwind)  `Required` 
+* **unwind** (AggregateUnwind)   `Required` 
 
     
-* **group** (AggregateGroup)  `Required` 
+* **group** (AggregateGroup)   `Required` 
 
     
-* **count** (AggregateCount)  `Required` 
+* **count** (AggregateCount)   `Required` 
 
     
-* **sort** (AggregateSort)  `Required` 
+* **sort** (AggregateSort)   `Required` 
 
     
-* **project** (AggregateProject)  `Required` 
+* **project** (AggregateProject)   `Required` 
 
     
-* **limit** (int32)  `Required` 
+* **limit** (int32)   `Required` 
 
     
-* **skip** (int32)  `Required` 
+* **skip** (int32)   `Required` 
 
     <br>
 
 ### StatisticsQuery
-* **filter** (Filter)  `Required` 
+* **filter** (Filter)  `Repeated`    `Required` 
 
     
-* **filter_or** (Filter)  `Required` 
+* **filter_or** (Filter)  `Repeated`    `Required` 
 
     
-* **aggregate** (StatisticsAggregate)  `Required` 
+* **aggregate** (StatisticsAggregate)  `Repeated`    `Required` 
 
     
-* **page** (Page)  `Required` 
+* **page** (Page)   `Required` 
 
     
-* **distinct** (string)  `Required` 
+* **distinct** (string)   `Required` 
 
     
-* **keyword** (string)  `Required` 
+* **keyword** (string)   `Required` 
 
     <br>
 
 ### TimeSeriesAnalyzeQuery
-* **granularity** (Granularity)  `Required` 
+* **granularity** (Granularity)   `Required` 
 
     
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **group_by** (string)  `Required` 
+* **group_by** (string)  `Repeated`    `Required` 
 
     
-* **field_group** (string)  `Required` 
+* **field_group** (string)  `Repeated`    `Required` 
 
     
-* **filter** (Filter)  `Required` 
+* **filter** (Filter)  `Repeated`    `Required` 
 
     
-* **filter_or** (Filter)  `Required` 
+* **filter_or** (Filter)  `Repeated`    `Required` 
 
     
-* **page** (Page)  `Required` 
+* **page** (Page)   `Required` 
 
     
-* **sort** (SortKey)  `Required` 
+* **sort** (SortKey)  `Repeated`    `Required` 
 
     
-* **fields** (Struct)  `Required` 
+* **fields** (Struct)   `Required` 
 
     
-* **select** (Struct)  `Required` 
+* **select** (Struct)   `Required` 
 
     
-* **keyword** (string)  `Required` 
+* **keyword** (string)   `Required` 
 
     <br>

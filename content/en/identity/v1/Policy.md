@@ -24,12 +24,12 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Policy#create) | [CreatePolicyRequest](Policy#createpolicyrequest) | [PolicyInfo](./Policy#policyinfo) |
-| [**update**](./Policy#update) | [UpdatePolicyRequest](Policy#updatepolicyrequest) | [PolicyInfo](./Policy#policyinfo) |
-| [**delete**](./Policy#delete) | [PolicyRequest](Policy#policyrequest) | [Empty](./Policy#empty) |
-| [**get**](./Policy#get) | [GetPolicyRequest](Policy#getpolicyrequest) | [PolicyInfo](./Policy#policyinfo) |
-| [**list**](./Policy#list) | [PolicyQuery](Policy#policyquery) | [PoliciesInfo](./Policy#policiesinfo) |
-| [**stat**](./Policy#stat) | [PolicyStatQuery](Policy#policystatquery) | [Struct](./Policy#struct) |
+| [**create**](./Policy#create) | [CreatePolicyRequest](Policy#createpolicyrequest) | [PolicyInfo](Policy#policyinfo) |
+| [**update**](./Policy#update) | [UpdatePolicyRequest](Policy#updatepolicyrequest) | [PolicyInfo](Policy#policyinfo) |
+| [**delete**](./Policy#delete) | [PolicyRequest](Policy#policyrequest) | [Empty](Policy#empty) |
+| [**get**](./Policy#get) | [GetPolicyRequest](Policy#getpolicyrequest) | [PolicyInfo](Policy#policyinfo) |
+| [**list**](./Policy#list) | [PolicyQuery](Policy#policyquery) | [PoliciesInfo](Policy#policiesinfo) |
+| [**stat**](./Policy#stat) | [PolicyStatQuery](Policy#policystatquery) | [Struct](Policy#struct) |
 
 
 
@@ -146,101 +146,101 @@ bookFlatSection: true
 
 
 ### CreatePolicyRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **permissions** (string)  `Required` 
+* **permissions** (string)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetPolicyRequest
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### PoliciesInfo
-* **results** (PolicyInfo)  `Required` 
+* **results** (PolicyInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### PolicyInfo
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **permissions** (string)  `Required` 
+* **permissions** (string)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### PolicyQuery
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **policy_id** (string) 
+* **policy_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### PolicyRequest
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### PolicyStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UpdatePolicyRequest
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **permissions** (string) 
+* **permissions** (string)  `Repeated`   
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

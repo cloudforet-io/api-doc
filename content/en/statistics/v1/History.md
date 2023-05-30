@@ -24,9 +24,9 @@ A History is a record of data collection based on a Schedule.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./History#create) | [CreateHistoryRequest](History#createhistoryrequest) | [Empty](./History#empty) |
-| [**list**](./History#list) | [QueryHistoryRequest](History#queryhistoryrequest) | [HistoryInfo](./History#historyinfo) |
-| [**stat**](./History#stat) | [HistoryStatRequest](History#historystatrequest) | [Struct](./History#struct) |
+| [**create**](./History#create) | [CreateHistoryRequest](History#createhistoryrequest) | [Empty](History#empty) |
+| [**list**](./History#list) | [QueryHistoryRequest](History#queryhistoryrequest) | [HistoryInfo](History#historyinfo) |
+| [**stat**](./History#stat) | [HistoryStatRequest](History#historystatrequest) | [Struct](History#struct) |
 
 
 
@@ -54,10 +54,10 @@ Creates a new History. Gets a Schedule as an input and creates a History as an o
 
 [CreateHistoryRequest](./History#createhistoryrequest)
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -100,13 +100,13 @@ Gets a list of all Histories. You can use a query to get a filtered list of Hist
 
 [QueryHistoryRequest](./History#queryhistoryrequest)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **topic** (string) 
+* **topic** (string)  
 
 
 
@@ -124,9 +124,9 @@ Gets a list of all Histories. You can use a query to get a filtered list of Hist
  {{< tab "Response Example" >}}
 
 [HistoryInfo](#HISTORYINFO)
-* **results** (HistoryValueInfo)  `Required` 
+* **results** (HistoryValueInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -197,53 +197,53 @@ Gets a list of all Histories. You can use a query to get a filtered list of Hist
 
 
 ### CreateHistoryRequest
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### HistoryInfo
-* **results** (HistoryValueInfo)  `Required` 
+* **results** (HistoryValueInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### HistoryStatRequest
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **topic** (string) 
+* **topic** (string)  
 
     <br>
 
 ### HistoryValueInfo
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
     
-* **values** (Struct)  `Required` 
+* **values** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### QueryHistoryRequest
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **topic** (string) 
+* **topic** (string)  
 
     <br>

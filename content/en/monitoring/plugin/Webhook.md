@@ -24,8 +24,8 @@ A Webhook is a plugin receiving data from external monitoring systems.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**init**](./Webhook#init) | [WebhookInitRequest](Webhook#webhookinitrequest) | [WebhookPluginInfo](./Webhook#webhookplugininfo) |
-| [**verify**](./Webhook#verify) | [WebhookPluginVerifyRequest](Webhook#webhookpluginverifyrequest) | [Empty](./Webhook#empty) |
+| [**init**](./Webhook#init) | [WebhookInitRequest](Webhook#webhookinitrequest) | [WebhookPluginInfo](Webhook#webhookplugininfo) |
+| [**verify**](./Webhook#verify) | [WebhookPluginVerifyRequest](Webhook#webhookpluginverifyrequest) | [Empty](Webhook#empty) |
 
 
 
@@ -68,16 +68,16 @@ Initializes a specific Webhook. During initialization, the Webhook information t
 
 
 ### WebhookInitRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>
 
 ### WebhookPluginInfo
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     <br>
 
 ### WebhookPluginVerifyRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>

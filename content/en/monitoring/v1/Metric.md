@@ -24,8 +24,8 @@ A Metric is a monitoring metric of a specific cloud service delivered from a Dat
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**list**](./Metric#list) | [MetricRequest](Metric#metricrequest) | [MetricsInfo](./Metric#metricsinfo) |
-| [**get_data**](./Metric#get_data) | [MetricDataRequest](Metric#metricdatarequest) | [MetricDataInfo](./Metric#metricdatainfo) |
+| [**list**](./Metric#list) | [MetricRequest](Metric#metricrequest) | [MetricsInfo](Metric#metricsinfo) |
+| [**get_data**](./Metric#get_data) | [MetricDataRequest](Metric#metricdatarequest) | [MetricDataInfo](Metric#metricdatainfo) |
 
 
 
@@ -53,13 +53,13 @@ Gets a list of all Metrics of one or more specified Resources. The parameter `re
 
 [MetricRequest](./Metric#metricrequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **resources** (string)  `Required` 
+* **resources** (string)  `Repeated`    `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -78,11 +78,11 @@ Gets a list of all Metrics of one or more specified Resources. The parameter `re
  {{< tab "Response Example" >}}
 
 [MetricsInfo](#METRICSINFO)
-* **metrics** (MetricInfo)  `Required` 
+* **metrics** (MetricInfo)  `Repeated`   `Required` 
 
-* **available_resources** (Struct)  `Required` 
+* **available_resources** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -168,28 +168,28 @@ Gets data of a single Metric. You must specify the parameter `metric` to get dat
 
 [MetricDataRequest](./Metric#metricdatarequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **metric_query** (Struct)  `Required` 
+* **metric_query** (Struct)   `Required` 
 
 
-* **metric** (string)  `Required` 
+* **metric** (string)   `Required` 
 
 
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
 
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **period** (int32) 
+* **period** (int32)  
 
 
-* **stat** (string) 
+* **stat** (string)  
 
 
 
@@ -223,11 +223,11 @@ Gets data of a single Metric. You must specify the parameter `metric` to get dat
  {{< tab "Response Example" >}}
 
 [MetricDataInfo](#METRICDATAINFO)
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
-* **values** (Struct)  `Required` 
+* **values** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -283,77 +283,77 @@ Gets data of a single Metric. You must specify the parameter `metric` to get dat
 
 
 ### MetricDataInfo
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
     
-* **values** (Struct)  `Required` 
+* **values** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### MetricDataRequest
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **metric_query** (Struct)  `Required` 
+* **metric_query** (Struct)   `Required` 
 
     
-* **metric** (string)  `Required` 
+* **metric** (string)   `Required` 
 
     
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **period** (int32) 
+* **period** (int32)  
 
     
-* **stat** (string) 
+* **stat** (string)  
 
     <br>
 
 ### MetricInfo
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
     
-* **unit** (Struct)  `Required` 
+* **unit** (Struct)   `Required` 
 
     
-* **metric_query** (Struct)  `Required` 
+* **metric_query** (Struct)   `Required` 
 
     <br>
 
 ### MetricRequest
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **resources** (string)  `Required` 
+* **resources** (string)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### MetricsInfo
-* **metrics** (MetricInfo)  `Required` 
+* **metrics** (MetricInfo)  `Repeated`    `Required` 
 
     
-* **available_resources** (Struct)  `Required` 
+* **available_resources** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>

@@ -24,10 +24,10 @@ An Event is an alarm raised by an external monitoring system and collected by a 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Event#create) | [CreateEventRequest](Event#createeventrequest) | [Empty](./Event#empty) |
-| [**get**](./Event#get) | [GetEventRequest](Event#geteventrequest) | [EventInfo](./Event#eventinfo) |
-| [**list**](./Event#list) | [EventQuery](Event#eventquery) | [EventsInfo](./Event#eventsinfo) |
-| [**stat**](./Event#stat) | [EventStatQuery](Event#eventstatquery) | [Struct](./Event#struct) |
+| [**create**](./Event#create) | [CreateEventRequest](Event#createeventrequest) | [Empty](Event#empty) |
+| [**get**](./Event#get) | [GetEventRequest](Event#geteventrequest) | [EventInfo](Event#eventinfo) |
+| [**list**](./Event#list) | [EventQuery](Event#eventquery) | [EventsInfo](Event#eventsinfo) |
+| [**stat**](./Event#stat) | [EventStatQuery](Event#eventstatquery) | [Struct](Event#struct) |
 
 
 
@@ -72,13 +72,13 @@ Gets a specific Event matching the input parameters, `event_id` and `domain_id`.
 
 [GetEventRequest](./Event#geteventrequest)
 
-* **event_id** (string)  `Required` 
+* **event_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -96,43 +96,43 @@ Gets a specific Event matching the input parameters, `event_id` and `domain_id`.
  {{< tab "Response Example" >}}
 
 [EventInfo](#EVENTINFO)
-* **event_id** (string)  `Required` 
+* **event_id** (string)   `Required` 
 
-* **event_key** (string)  `Required` 
+* **event_key** (string)   `Required` 
 
-* **event_type** (string)  `Required` 
+* **event_type** (string)   `Required` 
 
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
-* **description** (string)  `Required` 
+* **description** (string)   `Required` 
 
-* **severity** (string)  `Required` 
+* **severity** (string)   `Required` 
 
-* **rule** (string)  `Required` 
+* **rule** (string)   `Required` 
 
-* **resource** (EventResource)  `Required` 
+* **resource** (EventResource)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
-* **image_url** (string)  `Required` 
+* **image_url** (string)   `Required` 
 
-* **raw_data** (Struct)  `Required` 
+* **raw_data** (Struct)   `Required` 
 
-* **additional_info** (Struct)  `Required` 
+* **additional_info** (Struct)   `Required` 
 
-* **alert_id** (string)  `Required` 
+* **alert_id** (string)   `Required` 
 
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **occurred_at** (string)  `Required` 
+* **occurred_at** (string)   `Required` 
 
 
 
@@ -206,40 +206,40 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 
 [EventQuery](./Event#eventquery)
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **event_id** (string) 
+* **event_id** (string)  
 
 
-* **event_key** (string) 
+* **event_key** (string)  
 
 
-* **event_type** (string) 
+* **event_type** (string)  
 
 
-* **severity** (string) 
+* **severity** (string)  
 
 
-* **resource_id** (string) 
+* **resource_id** (string)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
-* **account** (string) 
+* **account** (string)  
 
 
-* **alert_id** (string) 
+* **alert_id** (string)  
 
 
-* **webhook_id** (string) 
+* **webhook_id** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **domain_id** (string) 
+* **domain_id** (string)  
 
 
 
@@ -257,9 +257,9 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
  {{< tab "Response Example" >}}
 
 [EventsInfo](#EVENTSINFO)
-* **results** (EventInfo)  `Required` 
+* **results** (EventInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -382,147 +382,147 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 
 
 ### CreateEventRequest
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
     
-* **access_key** (string)  `Required` 
+* **access_key** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     <br>
 
 ### EventInfo
-* **event_id** (string)  `Required` 
+* **event_id** (string)   `Required` 
 
     
-* **event_key** (string)  `Required` 
+* **event_key** (string)   `Required` 
 
     
-* **event_type** (string)  `Required` 
+* **event_type** (string)   `Required` 
 
     
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
     
-* **description** (string)  `Required` 
+* **description** (string)   `Required` 
 
     
-* **severity** (string)  `Required` 
+* **severity** (string)   `Required` 
 
     
-* **rule** (string)  `Required` 
+* **rule** (string)   `Required` 
 
     
-* **resource** (EventResource)  `Required` 
+* **resource** (EventResource)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
     
-* **image_url** (string)  `Required` 
+* **image_url** (string)   `Required` 
 
     
-* **raw_data** (Struct)  `Required` 
+* **raw_data** (Struct)   `Required` 
 
     
-* **additional_info** (Struct)  `Required` 
+* **additional_info** (Struct)   `Required` 
 
     
-* **alert_id** (string)  `Required` 
+* **alert_id** (string)   `Required` 
 
     
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **occurred_at** (string)  `Required` 
+* **occurred_at** (string)   `Required` 
 
     <br>
 
 ### EventQuery
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **event_id** (string) 
+* **event_id** (string)  
 
     
-* **event_key** (string) 
+* **event_key** (string)  
 
     
-* **event_type** (string) 
+* **event_type** (string)  
 
     
-* **severity** (string) 
+* **severity** (string)  
 
     
-* **resource_id** (string) 
+* **resource_id** (string)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **account** (string) 
+* **account** (string)  
 
     
-* **alert_id** (string) 
+* **alert_id** (string)  
 
     
-* **webhook_id** (string) 
+* **webhook_id** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### EventResource
-* **resource_id** (string)  `Required` 
+* **resource_id** (string)   `Required` 
 
     
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     <br>
 
 ### EventStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### EventsInfo
-* **results** (EventInfo)  `Required` 
+* **results** (EventInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### GetEventRequest
-* **event_id** (string)  `Required` 
+* **event_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>

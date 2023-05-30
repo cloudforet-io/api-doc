@@ -24,13 +24,13 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**add**](./File#add) | [CreateFileRequest](File#createfilerequest) | [FileInfo](./File#fileinfo) |
-| [**update**](./File#update) | [UpdateFileRequest](File#updatefilerequest) | [FileInfo](./File#fileinfo) |
-| [**delete**](./File#delete) | [FileRequest](File#filerequest) | [Empty](./File#empty) |
-| [**get_download_url**](./File#get_download_url) | [FileRequest](File#filerequest) | [FileInfo](./File#fileinfo) |
-| [**get**](./File#get) | [GetFileRequest](File#getfilerequest) | [FileInfo](./File#fileinfo) |
-| [**list**](./File#list) | [FileQuery](File#filequery) | [FilesInfo](./File#filesinfo) |
-| [**stat**](./File#stat) | [FileStatQuery](File#filestatquery) | [Struct](./File#struct) |
+| [**add**](./File#add) | [CreateFileRequest](File#createfilerequest) | [FileInfo](File#fileinfo) |
+| [**update**](./File#update) | [UpdateFileRequest](File#updatefilerequest) | [FileInfo](File#fileinfo) |
+| [**delete**](./File#delete) | [FileRequest](File#filerequest) | [Empty](File#empty) |
+| [**get_download_url**](./File#get_download_url) | [FileRequest](File#filerequest) | [FileInfo](File#fileinfo) |
+| [**get**](./File#get) | [GetFileRequest](File#getfilerequest) | [FileInfo](File#fileinfo) |
+| [**list**](./File#list) | [FileQuery](File#filequery) | [FilesInfo](File#filesinfo) |
+| [**stat**](./File#stat) | [FileStatQuery](File#filestatquery) | [Struct](File#struct) |
 
 
 
@@ -164,148 +164,148 @@ bookFlatSection: true
 
 
 ### CreateFileRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **reference** (FileReference) 
+* **reference** (FileReference)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### FileInfo
-* **file_id** (string)  `Required` 
+* **file_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (FileState)  `Required` 
+* **state** (FileState)   `Required` 
 
     
-* **scope** (FileScope)  `Required` 
+* **scope** (FileScope)   `Required` 
 
     
-* **file_type** (string)  `Required` 
+* **file_type** (string)   `Required` 
 
     
-* **upload_url** (string)  `Required` 
+* **upload_url** (string)   `Required` 
 
     
-* **upload_options** (Struct)  `Required` 
+* **upload_options** (Struct)   `Required` 
 
     
-* **download_url** (string)  `Required` 
+* **download_url** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **reference** (FileReference)  `Required` 
+* **reference** (FileReference)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **user_domain_id** (string)  `Required` 
+* **user_domain_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### FileQuery
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **file_id** (string) 
+* **file_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **state** (FileState) 
+* **state** (FileState)  
 
     
-* **scope** (FileScope) 
+* **scope** (FileScope)  
 
     
-* **file_type** (string) 
+* **file_type** (string)  
 
     
-* **resource_type** (string) 
+* **resource_type** (string)  
 
     
-* **resource_id** (string) 
+* **resource_id** (string)  
 
     
-* **user_domain_id** (string) 
+* **user_domain_id** (string)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### FileReference
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **resource_id** (string)  `Required` 
+* **resource_id** (string)   `Required` 
 
     <br>
 
 ### FileRequest
-* **file_id** (string)  `Required` 
+* **file_id** (string)   `Required` 
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### FileStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### FilesInfo
-* **results** (FileInfo)  `Required` 
+* **results** (FileInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### GetFileRequest
-* **file_id** (string)  `Required` 
+* **file_id** (string)   `Required` 
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateFileRequest
-* **file_id** (string)  `Required` 
+* **file_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **reference** (FileReference) 
+* **reference** (FileReference)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>

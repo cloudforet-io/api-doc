@@ -24,14 +24,14 @@ A Schedule is a time schedule of when a User will use a query.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**add**](./Schedule#add) | [AddScheduleRequest](Schedule#addschedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**update**](./Schedule#update) | [UpdateScheduleRequest](Schedule#updateschedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**enable**](./Schedule#enable) | [ScheduleRequest](Schedule#schedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**disable**](./Schedule#disable) | [ScheduleRequest](Schedule#schedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**delete**](./Schedule#delete) | [ScheduleRequest](Schedule#schedulerequest) | [Empty](./Schedule#empty) |
-| [**get**](./Schedule#get) | [GetScheduleRequest](Schedule#getschedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**list**](./Schedule#list) | [ScheduleQuery](Schedule#schedulequery) | [SchedulesInfo](./Schedule#schedulesinfo) |
-| [**stat**](./Schedule#stat) | [ScheduleStatQuery](Schedule#schedulestatquery) | [Struct](./Schedule#struct) |
+| [**add**](./Schedule#add) | [AddScheduleRequest](Schedule#addschedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**update**](./Schedule#update) | [UpdateScheduleRequest](Schedule#updateschedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**enable**](./Schedule#enable) | [ScheduleRequest](Schedule#schedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**disable**](./Schedule#disable) | [ScheduleRequest](Schedule#schedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**delete**](./Schedule#delete) | [ScheduleRequest](Schedule#schedulerequest) | [Empty](Schedule#empty) |
+| [**get**](./Schedule#get) | [GetScheduleRequest](Schedule#getschedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**list**](./Schedule#list) | [ScheduleQuery](Schedule#schedulequery) | [SchedulesInfo](Schedule#schedulesinfo) |
+| [**stat**](./Schedule#stat) | [ScheduleStatQuery](Schedule#schedulestatquery) | [Struct](Schedule#struct) |
 
 
 
@@ -59,22 +59,22 @@ Adds a new Schedule. When creating, `topic` and queries to be used should be spe
 
 [AddScheduleRequest](./Schedule#addschedulerequest)
 
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -266,23 +266,23 @@ Adds a new Schedule. When creating, `topic` and queries to be used should be spe
  {{< tab "Response Example" >}}
 
 [ScheduleInfo](#SCHEDULEINFO)
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
 
 
@@ -747,19 +747,19 @@ Updates a specific Schedule. You can make changes in Schedule settings, includin
 
 [UpdateScheduleRequest](./Schedule#updateschedulerequest)
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **storage_id** (string)  `Required` 
+* **storage_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -779,23 +779,23 @@ Updates a specific Schedule. You can make changes in Schedule settings, includin
  {{< tab "Response Example" >}}
 
 [ScheduleInfo](#SCHEDULEINFO)
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
 
 
@@ -1260,10 +1260,10 @@ Enables a specific Schedule. If a Schedule is enabled, the query usage will be s
 
 [ScheduleRequest](./Schedule#schedulerequest)
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -1281,23 +1281,23 @@ Enables a specific Schedule. If a Schedule is enabled, the query usage will be s
  {{< tab "Response Example" >}}
 
 [ScheduleInfo](#SCHEDULEINFO)
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
 
 
@@ -1762,10 +1762,10 @@ Disables a specific Schedule. If a Schedule is disabled, the query usage will no
 
 [ScheduleRequest](./Schedule#schedulerequest)
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -1783,23 +1783,23 @@ Disables a specific Schedule. If a Schedule is disabled, the query usage will no
  {{< tab "Response Example" >}}
 
 [ScheduleInfo](#SCHEDULEINFO)
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
 
 
@@ -2264,10 +2264,10 @@ Deletes a specific Schedule. You must specify the `schedule_id` of the Schedule 
 
 [ScheduleRequest](./Schedule#schedulerequest)
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -2310,13 +2310,13 @@ Gets a specific Schedule. Prints detailed information about the Schedule, includ
 
 [GetScheduleRequest](./Schedule#getschedulerequest)
 
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -2334,23 +2334,23 @@ Gets a specific Schedule. Prints detailed information about the Schedule, includ
  {{< tab "Response Example" >}}
 
 [ScheduleInfo](#SCHEDULEINFO)
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
 
 
@@ -2815,22 +2815,22 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
 
 [ScheduleQuery](./Schedule#schedulequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **schedule_id** (string) 
+* **schedule_id** (string)  
 
 
-* **topic** (string) 
+* **topic** (string)  
 
 
-* **state** (string) 
+* **state** (string)  
 
 
-* **resource_type** (string) 
+* **resource_type** (string)  
 
 
 
@@ -2848,9 +2848,9 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
  {{< tab "Response Example" >}}
 
 [SchedulesInfo](#SCHEDULESINFO)
-* **results** (ScheduleInfo)  `Required` 
+* **results** (ScheduleInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -3324,144 +3324,144 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
 
 
 ### AddScheduleRequest
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetScheduleRequest
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### QueryOption
-* **aggregate** (StatAggregate)  `Required` 
+* **aggregate** (StatAggregate)   `Required` 
 
     
-* **page** (StatPage) 
+* **page** (StatPage)  
 
     <br>
 
 ### ScheduleInfo
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **topic** (string)  `Required` 
+* **topic** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
     <br>
 
 ### ScheduleQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **schedule_id** (string) 
+* **schedule_id** (string)  
 
     
-* **topic** (string) 
+* **topic** (string)  
 
     
-* **state** (string) 
+* **state** (string)  
 
     
-* **resource_type** (string) 
+* **resource_type** (string)  
 
     <br>
 
 ### ScheduleRequest
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ScheduleStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### Scheduled
-* **cron** (string)  `Required` 
+* **cron** (string)   `Required` 
 
     
-* **interval** (int32)  `Required` 
+* **interval** (int32)   `Required` 
 
     
-* **minutes** (int32)  `Required` 
+* **minutes** (int32)  `Repeated`    `Required` 
 
     
-* **hours** (int32)  `Required` 
+* **hours** (int32)  `Repeated`    `Required` 
 
     <br>
 
 ### SchedulesInfo
-* **results** (ScheduleInfo)  `Required` 
+* **results** (ScheduleInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateScheduleRequest
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **storage_id** (string)  `Required` 
+* **storage_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

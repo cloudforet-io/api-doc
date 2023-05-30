@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Cloudforet API Documentation Site"
 ---
 
 # Cloudforet API Documentation

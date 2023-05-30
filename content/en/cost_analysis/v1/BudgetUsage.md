@@ -24,9 +24,9 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**list**](./BudgetUsage#list) | [BudgetUsageQuery](BudgetUsage#budgetusagequery) | [BudgetUsagesInfo](./BudgetUsage#budgetusagesinfo) |
-| [**analyze**](./BudgetUsage#analyze) | [BudgetUsageAnalyzeQuery](BudgetUsage#budgetusageanalyzequery) | [Struct](./BudgetUsage#struct) |
-| [**stat**](./BudgetUsage#stat) | [BudgetUsageStatQuery](BudgetUsage#budgetusagestatquery) | [Struct](./BudgetUsage#struct) |
+| [**list**](./BudgetUsage#list) | [BudgetUsageQuery](BudgetUsage#budgetusagequery) | [BudgetUsagesInfo](BudgetUsage#budgetusagesinfo) |
+| [**analyze**](./BudgetUsage#analyze) | [BudgetUsageAnalyzeQuery](BudgetUsage#budgetusageanalyzequery) | [Struct](BudgetUsage#struct) |
+| [**stat**](./BudgetUsage#stat) | [BudgetUsageStatQuery](BudgetUsage#budgetusagestatquery) | [Struct](BudgetUsage#struct) |
 
 
 
@@ -54,19 +54,19 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 
 [BudgetUsageQuery](./BudgetUsage#budgetusagequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **budget_id** (string) 
+* **budget_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **date** (string) 
+* **date** (string)  
 
 
 
@@ -83,9 +83,9 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
  {{< tab "Response Example" >}}
 
 [BudgetUsagesInfo](#BUDGETUSAGESINFO)
-* **results** (BudgetUsageInfo)  `Required` 
+* **results** (BudgetUsageInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -165,68 +165,68 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 
 
 ### BudgetUsageAnalyzeQuery
-* **query** (TimeSeriesAnalyzeQuery)  `Required` 
+* **query** (TimeSeriesAnalyzeQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### BudgetUsageInfo
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **date** (string)  `Required` 
+* **date** (string)   `Required` 
 
     
-* **usd_cost** (float)  `Required` 
+* **usd_cost** (float)   `Required` 
 
     
-* **limit** (float)  `Required` 
+* **limit** (float)   `Required` 
 
     
-* **cost_types** (Struct)  `Required` 
+* **cost_types** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### BudgetUsageQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **budget_id** (string) 
+* **budget_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **date** (string) 
+* **date** (string)  
 
     <br>
 
 ### BudgetUsageStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### BudgetUsagesInfo
-* **results** (BudgetUsageInfo)  `Required` 
+* **results** (BudgetUsageInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>

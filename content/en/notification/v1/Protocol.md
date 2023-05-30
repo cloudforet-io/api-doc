@@ -24,15 +24,15 @@ A Protocol defines the method to use when dispatching Notifications via a channe
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Protocol#create) | [CreateProtocolRequest](Protocol#createprotocolrequest) | [ProtocolInfo](./Protocol#protocolinfo) |
-| [**update**](./Protocol#update) | [UpdateProtocolRequest](Protocol#updateprotocolrequest) | [ProtocolInfo](./Protocol#protocolinfo) |
-| [**update_plugin**](./Protocol#update_plugin) | [UpdateProtocolPluginRequest](Protocol#updateprotocolpluginrequest) | [ProtocolInfo](./Protocol#protocolinfo) |
-| [**enable**](./Protocol#enable) | [ProtocolRequest](Protocol#protocolrequest) | [ProtocolInfo](./Protocol#protocolinfo) |
-| [**disable**](./Protocol#disable) | [ProtocolRequest](Protocol#protocolrequest) | [ProtocolInfo](./Protocol#protocolinfo) |
-| [**delete**](./Protocol#delete) | [ProtocolRequest](Protocol#protocolrequest) | [Empty](./Protocol#empty) |
-| [**get**](./Protocol#get) | [GetProtocolRequest](Protocol#getprotocolrequest) | [ProtocolInfo](./Protocol#protocolinfo) |
-| [**list**](./Protocol#list) | [ProtocolQuery](Protocol#protocolquery) | [ProtocolsInfo](./Protocol#protocolsinfo) |
-| [**stat**](./Protocol#stat) | [ProtocolStatQuery](Protocol#protocolstatquery) | [Struct](./Protocol#struct) |
+| [**create**](./Protocol#create) | [CreateProtocolRequest](Protocol#createprotocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
+| [**update**](./Protocol#update) | [UpdateProtocolRequest](Protocol#updateprotocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
+| [**update_plugin**](./Protocol#update_plugin) | [UpdateProtocolPluginRequest](Protocol#updateprotocolpluginrequest) | [ProtocolInfo](Protocol#protocolinfo) |
+| [**enable**](./Protocol#enable) | [ProtocolRequest](Protocol#protocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
+| [**disable**](./Protocol#disable) | [ProtocolRequest](Protocol#protocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
+| [**delete**](./Protocol#delete) | [ProtocolRequest](Protocol#protocolrequest) | [Empty](Protocol#empty) |
+| [**get**](./Protocol#get) | [GetProtocolRequest](Protocol#getprotocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
+| [**list**](./Protocol#list) | [ProtocolQuery](Protocol#protocolquery) | [ProtocolsInfo](Protocol#protocolsinfo) |
+| [**stat**](./Protocol#stat) | [ProtocolStatQuery](Protocol#protocolstatquery) | [Struct](Protocol#struct) |
 
 
 
@@ -60,22 +60,22 @@ Creates a new Protocol. When creating a protocol, you must specify the plugins p
 
 [CreateProtocolRequest](./Protocol#createprotocolrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of Protocol. It can have a maximum of 255 characters.*
 
 
-* **plugin_info** (PluginRequest)  `Required` 
+* **plugin_info** (PluginRequest)   `Required` 
 
   *Describe a Plugin information for protocol that include was used plugin, specific version, schema etc.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for protocol.*
 
@@ -125,45 +125,45 @@ Creates a new Protocol. When creating a protocol, you must specify the plugins p
  {{< tab "Response Example" >}}
 
 [ProtocolInfo](#PROTOCOLINFO)
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of Protocol.
 
-* **state** (ProtocolState)  `Required` 
+* **state** (ProtocolState)   `Required` 
 
   The state of Protocol.
 ENABLED or DISABLED only.
 
-* **protocol_type** (ProtocolType)  `Required` 
+* **protocol_type** (ProtocolType)   `Required` 
 
   desc : The type of Protocol.
 INTERNAL or EXTERNAL only.
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
   desc : Resource type for Protocol. Currently only identity.Project or identity.User can be set.
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
   desc : The capability information for the Protocol. It included supported schema for the Protocol.
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
   the plugin information set in Protocol.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for protocol.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain to which the Protocol belongs.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Protocol creation time.
 
@@ -245,22 +245,22 @@ Updates a specific Protocol. The method `update` can update the name and tags on
 
 [UpdateProtocolRequest](./Protocol#updateprotocolrequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
 
-* **name** (string) 
+* **name** (string)  
 
   *The Name of Protocol. It can have a maximum of 255 characters.*
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for protocol. When updating, existing tag information is deleted all and will be updated with new.*
 
@@ -283,45 +283,45 @@ Updates a specific Protocol. The method `update` can update the name and tags on
  {{< tab "Response Example" >}}
 
 [ProtocolInfo](#PROTOCOLINFO)
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of Protocol.
 
-* **state** (ProtocolState)  `Required` 
+* **state** (ProtocolState)   `Required` 
 
   The state of Protocol.
 ENABLED or DISABLED only.
 
-* **protocol_type** (ProtocolType)  `Required` 
+* **protocol_type** (ProtocolType)   `Required` 
 
   desc : The type of Protocol.
 INTERNAL or EXTERNAL only.
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
   desc : Resource type for Protocol. Currently only identity.Project or identity.User can be set.
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
   desc : The capability information for the Protocol. It included supported schema for the Protocol.
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
   the plugin information set in Protocol.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for protocol.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain to which the Protocol belongs.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Protocol creation time.
 
@@ -403,22 +403,22 @@ Updates a plugin for a Protocol. It is usually used when redeploying a plugin to
 
 [UpdateProtocolPluginRequest](./Protocol#updateprotocolpluginrequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
 
-* **version** (string) 
+* **version** (string)  
 
   *The version of plugin you want to update. Version means the tags of plugin container image in repository that specific market place.*
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
   *The Options that contains information about using plugin.*
 
@@ -439,45 +439,45 @@ Updates a plugin for a Protocol. It is usually used when redeploying a plugin to
  {{< tab "Response Example" >}}
 
 [ProtocolInfo](#PROTOCOLINFO)
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of Protocol.
 
-* **state** (ProtocolState)  `Required` 
+* **state** (ProtocolState)   `Required` 
 
   The state of Protocol.
 ENABLED or DISABLED only.
 
-* **protocol_type** (ProtocolType)  `Required` 
+* **protocol_type** (ProtocolType)   `Required` 
 
   desc : The type of Protocol.
 INTERNAL or EXTERNAL only.
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
   desc : Resource type for Protocol. Currently only identity.Project or identity.User can be set.
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
   desc : The capability information for the Protocol. It included supported schema for the Protocol.
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
   the plugin information set in Protocol.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for protocol.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain to which the Protocol belongs.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Protocol creation time.
 
@@ -559,12 +559,12 @@ Enables a specific Protocol. If the Protocol is enabled, the Protocol can be use
 
 [ProtocolRequest](./Protocol#protocolrequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
@@ -583,45 +583,45 @@ Enables a specific Protocol. If the Protocol is enabled, the Protocol can be use
  {{< tab "Response Example" >}}
 
 [ProtocolInfo](#PROTOCOLINFO)
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of Protocol.
 
-* **state** (ProtocolState)  `Required` 
+* **state** (ProtocolState)   `Required` 
 
   The state of Protocol.
 ENABLED or DISABLED only.
 
-* **protocol_type** (ProtocolType)  `Required` 
+* **protocol_type** (ProtocolType)   `Required` 
 
   desc : The type of Protocol.
 INTERNAL or EXTERNAL only.
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
   desc : Resource type for Protocol. Currently only identity.Project or identity.User can be set.
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
   desc : The capability information for the Protocol. It included supported schema for the Protocol.
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
   the plugin information set in Protocol.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for protocol.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain to which the Protocol belongs.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Protocol creation time.
 
@@ -703,12 +703,12 @@ Disables a specific Protocol. If a Protocol is disabled, the Notification will n
 
 [ProtocolRequest](./Protocol#protocolrequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
@@ -727,45 +727,45 @@ Disables a specific Protocol. If a Protocol is disabled, the Notification will n
  {{< tab "Response Example" >}}
 
 [ProtocolInfo](#PROTOCOLINFO)
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of Protocol.
 
-* **state** (ProtocolState)  `Required` 
+* **state** (ProtocolState)   `Required` 
 
   The state of Protocol.
 ENABLED or DISABLED only.
 
-* **protocol_type** (ProtocolType)  `Required` 
+* **protocol_type** (ProtocolType)   `Required` 
 
   desc : The type of Protocol.
 INTERNAL or EXTERNAL only.
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
   desc : Resource type for Protocol. Currently only identity.Project or identity.User can be set.
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
   desc : The capability information for the Protocol. It included supported schema for the Protocol.
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
   the plugin information set in Protocol.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for protocol.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain to which the Protocol belongs.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Protocol creation time.
 
@@ -847,12 +847,12 @@ Deletes a specific Protocol. If there exists a channel using the Protocol, it ca
 
 [ProtocolRequest](./Protocol#protocolrequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
@@ -896,17 +896,17 @@ Gets a specific Protocol. Prints detailed information about the Protocol.
 
 [GetProtocolRequest](./Protocol#getprotocolrequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
   *The list of the Protocol information column you want to be returned. It must be specified in the ProtocolInfo.*
 
@@ -925,45 +925,45 @@ Gets a specific Protocol. Prints detailed information about the Protocol.
  {{< tab "Response Example" >}}
 
 [ProtocolInfo](#PROTOCOLINFO)
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of Protocol.
 
-* **state** (ProtocolState)  `Required` 
+* **state** (ProtocolState)   `Required` 
 
   The state of Protocol.
 ENABLED or DISABLED only.
 
-* **protocol_type** (ProtocolType)  `Required` 
+* **protocol_type** (ProtocolType)   `Required` 
 
   desc : The type of Protocol.
 INTERNAL or EXTERNAL only.
 
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
   desc : Resource type for Protocol. Currently only identity.Project or identity.User can be set.
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
   desc : The capability information for the Protocol. It included supported schema for the Protocol.
 
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
   the plugin information set in Protocol.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for protocol.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain to which the Protocol belongs.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Protocol creation time.
 
@@ -1045,32 +1045,32 @@ Gets a list of Protocols. You can use a query to get a filtered list of Protocol
 
 [ProtocolQuery](./Protocol#protocolquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
 
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
 
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of Protocol.*
 
 
-* **name** (string) 
+* **name** (string)  
 
   *The name of Protocol.*
 
 
-* **state** (ProtocolState) 
+* **state** (ProtocolState)  
 
   *The state of Protocol. ENABLED or DISABLED only.*
 
 
-* **protocol_type** (ProtocolType) 
+* **protocol_type** (ProtocolType)  
 
   *The type of Protocol. INTERNAL or EXTERNAL only.*
 
@@ -1089,11 +1089,11 @@ Gets a list of Protocols. You can use a query to get a filtered list of Protocol
  {{< tab "Response Example" >}}
 
 [ProtocolsInfo](#PROTOCOLSINFO)
-* **results** (ProtocolInfo)  `Required` 
+* **results** (ProtocolInfo)  `Repeated`   `Required` 
 
   List of queried protocols.
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   Total counts of queried Protocols.
 
@@ -1188,72 +1188,72 @@ Gets a list of Protocols. You can use a query to get a filtered list of Protocol
 
 
 ### CreateProtocolRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of Protocol. It can have a maximum of 255 characters.*
 
     
-* **plugin_info** (PluginRequest)  `Required` 
+* **plugin_info** (PluginRequest)   `Required` 
 
   *Describe a Plugin information for protocol that include was used plugin, specific version, schema etc.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for protocol.*
 
     <br>
 
 ### GetProtocolRequest
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
   *The list of the Protocol information column you want to be returned. It must be specified in the ProtocolInfo.*
 
     <br>
 
 ### PluginInfo
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
   *The ID of plugin set in the Protocol.*
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
   *The version of plugin.*
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
   *The Options that contains information about using plugin.*
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   *The ID of the Secret containing encrypted data to be used in the plugin.*
 
     
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
   *The metadata of plugin. It includes schema for the data that must be set for the Channel when creating the Channel using a Protocol.
 The schema follows the JSON Schema format.*
 
     
-* **upgrade_mode** (UpgradeMode)  `Required` 
+* **upgrade_mode** (UpgradeMode)   `Required` 
 
   *Auto upgrade for plugin.
 If the upgrade_mode is AUTO, check the latest plugin version when running the plugin, and if a new version is existed, replace the plugin and then run it.*
@@ -1261,34 +1261,34 @@ If the upgrade_mode is AUTO, check the latest plugin version when running the pl
     <br>
 
 ### PluginRequest
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
   *The ID of plugin.*
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
   *The version of plugin.*
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
   *The Options that contains information about using plugin.*
 
     
-* **secret_data** (Struct) 
+* **secret_data** (Struct)  
 
   *The data for using plugin if necessary. This data is encrypted and stored in the Secret service.*
 
     
-* **schema** (string) 
+* **schema** (string)  
 
   *The name of schema.
 When the secret_data is stored in the Secret service, it can be set with schema if the schema is existed.
 The schema is provided through the Repository service.*
 
     
-* **upgrade_mode** (UpgradeMode) 
+* **upgrade_mode** (UpgradeMode)  
 
   *Auto upgrade feature for plugin.
 If the upgrade mode is AUTO, check the latest plugin version when running the plugin, and if a new version is existed, replace the plugin and then run it.*
@@ -1296,166 +1296,166 @@ If the upgrade mode is AUTO, check the latest plugin version when running the pl
     <br>
 
 ### ProtocolInfo
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of Protocol.*
 
     
-* **state** (ProtocolState)  `Required` 
+* **state** (ProtocolState)   `Required` 
 
   *The state of Protocol.
 ENABLED or DISABLED only.*
 
     
-* **protocol_type** (ProtocolType)  `Required` 
+* **protocol_type** (ProtocolType)   `Required` 
 
   *desc : The type of Protocol.
 INTERNAL or EXTERNAL only.*
 
     
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
   *desc : Resource type for Protocol. Currently only identity.Project or identity.User can be set.*
 
     
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
   *desc : The capability information for the Protocol. It included supported schema for the Protocol.*
 
     
-* **plugin_info** (PluginInfo)  `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
   *the plugin information set in Protocol.*
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   *The tags for protocol.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   *Protocol creation time.*
 
     <br>
 
 ### ProtocolQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
     
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of Protocol.*
 
     
-* **name** (string) 
+* **name** (string)  
 
   *The name of Protocol.*
 
     
-* **state** (ProtocolState) 
+* **state** (ProtocolState)  
 
   *The state of Protocol. ENABLED or DISABLED only.*
 
     
-* **protocol_type** (ProtocolType) 
+* **protocol_type** (ProtocolType)  
 
   *The type of Protocol. INTERNAL or EXTERNAL only.*
 
     <br>
 
 ### ProtocolRequest
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
     <br>
 
 ### ProtocolStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
   *Statistics Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
     <br>
 
 ### ProtocolsInfo
-* **results** (ProtocolInfo)  `Required` 
+* **results** (ProtocolInfo)  `Repeated`    `Required` 
 
   *List of queried protocols.*
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   *Total counts of queried Protocols.*
 
     <br>
 
 ### UpdateProtocolPluginRequest
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
     
-* **version** (string) 
+* **version** (string)  
 
   *The version of plugin you want to update. Version means the tags of plugin container image in repository that specific market place.*
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
   *The Options that contains information about using plugin.*
 
     <br>
 
 ### UpdateProtocolRequest
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain to which the Protocol belongs.*
 
     
-* **name** (string) 
+* **name** (string)  
 
   *The Name of Protocol. It can have a maximum of 255 characters.*
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for protocol. When updating, existing tag information is deleted all and will be updated with new.*
 

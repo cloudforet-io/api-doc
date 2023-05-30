@@ -24,7 +24,7 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**list**](./Endpoint#list) | [EndpointQuery](Endpoint#endpointquery) | [EndpointsInfo](./Endpoint#endpointsinfo) |
+| [**list**](./Endpoint#list) | [EndpointQuery](Endpoint#endpointquery) | [EndpointsInfo](Endpoint#endpointsinfo) |
 
 
 
@@ -56,42 +56,42 @@ bookFlatSection: true
 
 
 ### EndpointInfo
-* **service** (string)  `Required` 
+* **service** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
     
-* **state** (EndpointState)  `Required` 
+* **state** (EndpointState)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     <br>
 
 ### EndpointQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **service** (string) 
+* **service** (string)  
 
     
-* **endpoint_type** (string) 
+* **endpoint_type** (string)  
 
   *example: public | internal*
 
     <br>
 
 ### EndpointsInfo
-* **results** (EndpointInfo)  `Required` 
+* **results** (EndpointInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>

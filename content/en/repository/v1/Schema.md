@@ -24,12 +24,12 @@ A Schema is a data structure used in all domains. For example, data forms of Goo
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Schema#create) | [CreateSchemaRequest](Schema#createschemarequest) | [SchemaInfo](./Schema#schemainfo) |
-| [**update**](./Schema#update) | [UpdateSchemaRequest](Schema#updateschemarequest) | [SchemaInfo](./Schema#schemainfo) |
-| [**delete**](./Schema#delete) | [SchemaRequest](Schema#schemarequest) | [Empty](./Schema#empty) |
-| [**get**](./Schema#get) | [GetRepositorySchemaRequest](Schema#getrepositoryschemarequest) | [SchemaInfo](./Schema#schemainfo) |
-| [**list**](./Schema#list) | [SchemaQuery](Schema#schemaquery) | [SchemasInfo](./Schema#schemasinfo) |
-| [**stat**](./Schema#stat) | [SchemaStatQuery](Schema#schemastatquery) | [Struct](./Schema#struct) |
+| [**create**](./Schema#create) | [CreateSchemaRequest](Schema#createschemarequest) | [SchemaInfo](Schema#schemainfo) |
+| [**update**](./Schema#update) | [UpdateSchemaRequest](Schema#updateschemarequest) | [SchemaInfo](Schema#schemainfo) |
+| [**delete**](./Schema#delete) | [SchemaRequest](Schema#schemarequest) | [Empty](Schema#empty) |
+| [**get**](./Schema#get) | [GetRepositorySchemaRequest](Schema#getrepositoryschemarequest) | [SchemaInfo](Schema#schemainfo) |
+| [**list**](./Schema#list) | [SchemaQuery](Schema#schemaquery) | [SchemasInfo](Schema#schemasinfo) |
+| [**stat**](./Schema#stat) | [SchemaStatQuery](Schema#schemastatquery) | [Struct](Schema#struct) |
 
 
 
@@ -57,28 +57,28 @@ Creates a new Schema. You must specify the parameters: `service_type`, `name`, a
 
 [CreateSchemaRequest](./Schema#createschemarequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **service_type** (string)  `Required` 
+* **service_type** (string)   `Required` 
 
 
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
 
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -102,27 +102,27 @@ Creates a new Schema. You must specify the parameters: `service_type`, `name`, a
  {{< tab "Response Example" >}}
 
 [SchemaInfo](#SCHEMAINFO)
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **service_type** (string)  `Required` 
+* **service_type** (string)   `Required` 
 
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)  `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -175,19 +175,19 @@ Updates a specific Schema. You can make changes in Schema settings, including `n
 
 [UpdateSchemaRequest](./Schema#updateschemarequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schema** (Struct) 
+* **schema** (Struct)  
 
 
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -208,27 +208,27 @@ Updates a specific Schema. You can make changes in Schema settings, including `n
  {{< tab "Response Example" >}}
 
 [SchemaInfo](#SCHEMAINFO)
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **service_type** (string)  `Required` 
+* **service_type** (string)   `Required` 
 
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)  `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -281,13 +281,13 @@ Deletes a specific Schema. You must specify the `name` of the Schema to delete, 
 
 [SchemaRequest](./Schema#schemarequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **schema_id** (string) 
+* **schema_id** (string)  
 
 
 
@@ -329,19 +329,19 @@ Gets a specific Schema. You must specify the `name` of the Schema to get, as the
 
 [GetRepositorySchemaRequest](./Schema#getrepositoryschemarequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **repository_id** (string) 
+* **repository_id** (string)  
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
-* **schema_id** (string) 
+* **schema_id** (string)  
 
 
 
@@ -359,27 +359,27 @@ Gets a specific Schema. You must specify the `name` of the Schema to get, as the
  {{< tab "Response Example" >}}
 
 [SchemaInfo](#SCHEMAINFO)
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **service_type** (string)  `Required` 
+* **service_type** (string)   `Required` 
 
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)  `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -432,28 +432,28 @@ Gets a list of all Schemas in a specific Repository. The parameter `repository_i
 
 [SchemaQuery](./Schema#schemaquery)
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
 
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **service_type** (string) 
+* **service_type** (string)  
 
 
-* **schema_id** (string) 
+* **schema_id** (string)  
 
 
-* **state** (State) 
+* **state** (State)  
 
 
 
@@ -473,9 +473,9 @@ Gets a list of all Schemas in a specific Repository. The parameter `repository_i
  {{< tab "Response Example" >}}
 
 [SchemasInfo](#SCHEMASINFO)
-* **results** (SchemaInfo)  `Required` 
+* **results** (SchemaInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -537,152 +537,152 @@ Gets a list of all Schemas in a specific Repository. The parameter `repository_i
 
 
 ### CreateSchemaRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **service_type** (string)  `Required` 
+* **service_type** (string)   `Required` 
 
     
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
     
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>
 
 ### GetRepositorySchemaRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **repository_id** (string) 
+* **repository_id** (string)  
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     
-* **schema_id** (string) 
+* **schema_id** (string)  
 
     <br>
 
 ### SchemaInfo
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **service_type** (string)  `Required` 
+* **service_type** (string)   `Required` 
 
     
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
     
-* **schema** (Struct)  `Required` 
+* **schema** (Struct)   `Required` 
 
     
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **repository_info** (RepositoryInfo)  `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### SchemaQuery
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **service_type** (string) 
+* **service_type** (string)  
 
     
-* **schema_id** (string) 
+* **schema_id** (string)  
 
     
-* **state** (State) 
+* **state** (State)  
 
     <br>
 
 ### SchemaRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schema_id** (string) 
+* **schema_id** (string)  
 
     <br>
 
 ### SchemaStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### SchemasInfo
-* **results** (SchemaInfo)  `Required` 
+* **results** (SchemaInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateSchemaRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schema** (Struct) 
+* **schema** (Struct)  
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

@@ -24,9 +24,9 @@ A Plugin is a resource managing endpoints of the plugin instances deployed. If t
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**get_plugin_endpoint**](./Plugin#get_plugin_endpoint) | [PluginEndpointRequest](Plugin#pluginendpointrequest) | [PluginEndpoint](./Plugin#pluginendpoint) |
-| [**get_plugin_metadata**](./Plugin#get_plugin_metadata) | [PluginMetadataRequest](Plugin#pluginmetadatarequest) | [PluginMetadata](./Plugin#pluginmetadata) |
-| [**notify_failure**](./Plugin#notify_failure) | [PluginFailureRequest](Plugin#pluginfailurerequest) | [Empty](./Plugin#empty) |
+| [**get_plugin_endpoint**](./Plugin#get_plugin_endpoint) | [PluginEndpointRequest](Plugin#pluginendpointrequest) | [PluginEndpoint](Plugin#pluginendpoint) |
+| [**get_plugin_metadata**](./Plugin#get_plugin_metadata) | [PluginMetadataRequest](Plugin#pluginmetadatarequest) | [PluginMetadata](Plugin#pluginmetadata) |
+| [**notify_failure**](./Plugin#notify_failure) | [PluginFailureRequest](Plugin#pluginfailurerequest) | [Empty](Plugin#empty) |
 
 
 
@@ -54,19 +54,19 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 
 [PluginEndpointRequest](./Plugin#pluginendpointrequest)
 
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **version** (string) 
+* **version** (string)  
 
 
-* **labels** (Struct) 
+* **labels** (Struct)  
 
 
-* **upgrade_mode** (UpgradeMode) 
+* **upgrade_mode** (UpgradeMode)  
 
 
 
@@ -84,11 +84,11 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
  {{< tab "Response Example" >}}
 
 [PluginEndpoint](#PLUGINENDPOINT)
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
-* **access_token** (string)  `Required` 
+* **access_token** (string)   `Required` 
 
-* **updated_version** (string)  `Required` 
+* **updated_version** (string)   `Required` 
 
 
 
@@ -148,62 +148,62 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 
 
 ### PluginEndpoint
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
     
-* **access_token** (string)  `Required` 
+* **access_token** (string)   `Required` 
 
     
-* **updated_version** (string)  `Required` 
+* **updated_version** (string)   `Required` 
 
     <br>
 
 ### PluginEndpointRequest
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **version** (string) 
+* **version** (string)  
 
     
-* **labels** (Struct) 
+* **labels** (Struct)  
 
     
-* **upgrade_mode** (UpgradeMode) 
+* **upgrade_mode** (UpgradeMode)  
 
     <br>
 
 ### PluginFailureRequest
-* **supervisor_id** (string)  `Required` 
+* **supervisor_id** (string)   `Required` 
 
     
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### PluginMetadata
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     <br>
 
 ### PluginMetadataRequest
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **version** (string) 
+* **version** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     <br>

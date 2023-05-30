@@ -24,13 +24,13 @@ A CollectorRule is a cloud service resource filtering the raw data from the Coll
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./CollectorRule#create) | [CreateCollectorRuleRequest](CollectorRule#createcollectorrulerequest) | [CollectorRuleInfo](./CollectorRule#collectorruleinfo) |
-| [**update**](./CollectorRule#update) | [UpdateCollectorRuleRequest](CollectorRule#updatecollectorrulerequest) | [CollectorRuleInfo](./CollectorRule#collectorruleinfo) |
-| [**change_order**](./CollectorRule#change_order) | [ChangeCollectorRuleOrderRequest](CollectorRule#changecollectorruleorderrequest) | [CollectorRuleInfo](./CollectorRule#collectorruleinfo) |
-| [**delete**](./CollectorRule#delete) | [CollectorRuleRequest](CollectorRule#collectorrulerequest) | [Empty](./CollectorRule#empty) |
-| [**get**](./CollectorRule#get) | [GetCollectorRuleRequest](CollectorRule#getcollectorrulerequest) | [CollectorRuleInfo](./CollectorRule#collectorruleinfo) |
-| [**list**](./CollectorRule#list) | [CollectorRuleQuery](CollectorRule#collectorrulequery) | [CollectorRulesInfo](./CollectorRule#collectorrulesinfo) |
-| [**stat**](./CollectorRule#stat) | [CollectorRuleStatQuery](CollectorRule#collectorrulestatquery) | [Struct](./CollectorRule#struct) |
+| [**create**](./CollectorRule#create) | [CreateCollectorRuleRequest](CollectorRule#createcollectorrulerequest) | [CollectorRuleInfo](CollectorRule#collectorruleinfo) |
+| [**update**](./CollectorRule#update) | [UpdateCollectorRuleRequest](CollectorRule#updatecollectorrulerequest) | [CollectorRuleInfo](CollectorRule#collectorruleinfo) |
+| [**change_order**](./CollectorRule#change_order) | [ChangeCollectorRuleOrderRequest](CollectorRule#changecollectorruleorderrequest) | [CollectorRuleInfo](CollectorRule#collectorruleinfo) |
+| [**delete**](./CollectorRule#delete) | [CollectorRuleRequest](CollectorRule#collectorrulerequest) | [Empty](CollectorRule#empty) |
+| [**get**](./CollectorRule#get) | [GetCollectorRuleRequest](CollectorRule#getcollectorrulerequest) | [CollectorRuleInfo](CollectorRule#collectorruleinfo) |
+| [**list**](./CollectorRule#list) | [CollectorRuleQuery](CollectorRule#collectorrulequery) | [CollectorRulesInfo](CollectorRule#collectorrulesinfo) |
+| [**stat**](./CollectorRule#stat) | [CollectorRuleStatQuery](CollectorRule#collectorrulestatquery) | [Struct](CollectorRule#struct) |
 
 
 
@@ -58,28 +58,28 @@ Creates a new CollectorRule. When creating the cloud service, this method can ap
 
 [CreateCollectorRuleRequest](./CollectorRule#createcollectorrulerequest)
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
 
-* **actions** (CollectorRuleActions)  `Required` 
+* **actions** (CollectorRuleActions)   `Required` 
 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **conditions** (CollectorRuleCondition) 
+* **conditions** (CollectorRuleCondition)  `Repeated`   
 
 
-* **options** (CollectorRuleOptions) 
+* **options** (CollectorRuleOptions)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -103,29 +103,29 @@ Creates a new CollectorRule. When creating the cloud service, this method can ap
  {{< tab "Response Example" >}}
 
 [CollectorRuleInfo](#COLLECTORRULEINFO)
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
-* **conditions** (CollectorRuleCondition)  `Required` 
+* **conditions** (CollectorRuleCondition)  `Repeated`   `Required` 
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
-* **actions** (CollectorRuleActions)  `Required` 
+* **actions** (CollectorRuleActions)   `Required` 
 
-* **options** (CollectorRuleOptions)  `Required` 
+* **options** (CollectorRuleOptions)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -183,28 +183,28 @@ Updates a specific CollectorRule. You can make changes in CollectorRule settings
 
 [UpdateCollectorRuleRequest](./CollectorRule#updatecollectorrulerequest)
 
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **conditions** (CollectorRuleCondition) 
+* **conditions** (CollectorRuleCondition)  `Repeated`   
 
 
-* **conditions_policy** (ConditionsPolicy) 
+* **conditions_policy** (ConditionsPolicy)  
 
 
-* **actions** (CollectorRuleActions) 
+* **actions** (CollectorRuleActions)  
 
 
-* **options** (CollectorRuleOptions) 
+* **options** (CollectorRuleOptions)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -233,29 +233,29 @@ Updates a specific CollectorRule. You can make changes in CollectorRule settings
  {{< tab "Response Example" >}}
 
 [CollectorRuleInfo](#COLLECTORRULEINFO)
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
-* **conditions** (CollectorRuleCondition)  `Required` 
+* **conditions** (CollectorRuleCondition)  `Repeated`   `Required` 
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
-* **actions** (CollectorRuleActions)  `Required` 
+* **actions** (CollectorRuleActions)   `Required` 
 
-* **options** (CollectorRuleOptions)  `Required` 
+* **options** (CollectorRuleOptions)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -313,13 +313,13 @@ Changes the priority order of the CollectorRules to apply. If there are multiple
 
 [ChangeCollectorRuleOrderRequest](./CollectorRule#changecollectorruleorderrequest)
 
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -337,29 +337,29 @@ Changes the priority order of the CollectorRules to apply. If there are multiple
  {{< tab "Response Example" >}}
 
 [CollectorRuleInfo](#COLLECTORRULEINFO)
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
-* **conditions** (CollectorRuleCondition)  `Required` 
+* **conditions** (CollectorRuleCondition)  `Repeated`   `Required` 
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
-* **actions** (CollectorRuleActions)  `Required` 
+* **actions** (CollectorRuleActions)   `Required` 
 
-* **options** (CollectorRuleOptions)  `Required` 
+* **options** (CollectorRuleOptions)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -417,10 +417,10 @@ Deletes a specific CollectorRule. You must specify the `collector_rule_id` of th
 
 [CollectorRuleRequest](./CollectorRule#collectorrulerequest)
 
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -462,13 +462,13 @@ Gets a specific CollectorRule. Prints detailed information about the CollectorRu
 
 [GetCollectorRuleRequest](./CollectorRule#getcollectorrulerequest)
 
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -485,29 +485,29 @@ Gets a specific CollectorRule. Prints detailed information about the CollectorRu
  {{< tab "Response Example" >}}
 
 [CollectorRuleInfo](#COLLECTORRULEINFO)
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
-* **conditions** (CollectorRuleCondition)  `Required` 
+* **conditions** (CollectorRuleCondition)  `Repeated`   `Required` 
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
-* **actions** (CollectorRuleActions)  `Required` 
+* **actions** (CollectorRuleActions)   `Required` 
 
-* **options** (CollectorRuleOptions)  `Required` 
+* **options** (CollectorRuleOptions)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -565,19 +565,19 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 
 [CollectorRuleQuery](./CollectorRule#collectorrulequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **collector_rule_id** (string) 
+* **collector_rule_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
 
 
@@ -594,9 +594,9 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
  {{< tab "Response Example" >}}
 
 [CollectorRulesInfo](#COLLECTORRULESINFO)
-* **results** (CollectorRuleInfo)  `Required` 
+* **results** (CollectorRuleInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -679,192 +679,192 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 
 
 ### ChangeCollectorRuleOrderRequest
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
     
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CollectorRuleActions
-* **change_project** (string)  `Required` 
+* **change_project** (string)   `Required` 
 
     
-* **match_project** (MatchRule)  `Required` 
+* **match_project** (MatchRule)   `Required` 
 
     
-* **match_service_account** (MatchRule)  `Required` 
+* **match_service_account** (MatchRule)   `Required` 
 
     
-* **add_additional_info** (Struct)  `Required` 
+* **add_additional_info** (Struct)   `Required` 
 
     <br>
 
 ### CollectorRuleCondition
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **value** (string)  `Required` 
+* **value** (string)   `Required` 
 
     
-* **operator** (string)  `Required` 
+* **operator** (string)   `Required` 
 
     <br>
 
 ### CollectorRuleInfo
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
     
-* **conditions** (CollectorRuleCondition)  `Required` 
+* **conditions** (CollectorRuleCondition)  `Repeated`    `Required` 
 
     
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
     
-* **actions** (CollectorRuleActions)  `Required` 
+* **actions** (CollectorRuleActions)   `Required` 
 
     
-* **options** (CollectorRuleOptions)  `Required` 
+* **options** (CollectorRuleOptions)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### CollectorRuleOptions
-* **stop_processing** (bool)  `Required` 
+* **stop_processing** (bool)   `Required` 
 
     <br>
 
 ### CollectorRuleQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **collector_rule_id** (string) 
+* **collector_rule_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
     <br>
 
 ### CollectorRuleRequest
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CollectorRuleStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CollectorRulesInfo
-* **results** (CollectorRuleInfo)  `Required` 
+* **results** (CollectorRuleInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### CreateCollectorRuleRequest
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
     
-* **actions** (CollectorRuleActions)  `Required` 
+* **actions** (CollectorRuleActions)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **conditions** (CollectorRuleCondition) 
+* **conditions** (CollectorRuleCondition)  `Repeated`   
 
     
-* **options** (CollectorRuleOptions) 
+* **options** (CollectorRuleOptions)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetCollectorRuleRequest
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### MatchRule
-* **source** (string)  `Required` 
+* **source** (string)   `Required` 
 
     
-* **target** (string)  `Required` 
+* **target** (string)   `Required` 
 
     <br>
 
 ### UpdateCollectorRuleRequest
-* **collector_rule_id** (string)  `Required` 
+* **collector_rule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **conditions** (CollectorRuleCondition) 
+* **conditions** (CollectorRuleCondition)  `Repeated`   
 
     
-* **conditions_policy** (ConditionsPolicy) 
+* **conditions_policy** (ConditionsPolicy)  
 
     
-* **actions** (CollectorRuleActions) 
+* **actions** (CollectorRuleActions)  
 
     
-* **options** (CollectorRuleOptions) 
+* **options** (CollectorRuleOptions)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

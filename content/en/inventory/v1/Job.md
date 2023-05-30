@@ -24,10 +24,10 @@ A Job is an act of collecting external cloud resources through plugins.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**delete**](./Job#delete) | [JobRequest](Job#jobrequest) | [Empty](./Job#empty) |
-| [**get**](./Job#get) | [GetJobRequest](Job#getjobrequest) | [JobInfo](./Job#jobinfo) |
-| [**list**](./Job#list) | [JobsQuery](Job#jobsquery) | [JobsInfo](./Job#jobsinfo) |
-| [**stat**](./Job#stat) | [JobStatQuery](Job#jobstatquery) | [Struct](./Job#struct) |
+| [**delete**](./Job#delete) | [JobRequest](Job#jobrequest) | [Empty](Job#empty) |
+| [**get**](./Job#get) | [GetJobRequest](Job#getjobrequest) | [JobInfo](Job#jobinfo) |
+| [**list**](./Job#list) | [JobsQuery](Job#jobsquery) | [JobsInfo](Job#jobsinfo) |
+| [**stat**](./Job#stat) | [JobStatQuery](Job#jobstatquery) | [Struct](Job#struct) |
 
 
 
@@ -55,10 +55,10 @@ Deletes a specific Job. You must specify the `job_id` of the Job to delete.
 
 [JobRequest](./Job#jobrequest)
 
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -101,13 +101,13 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 
 [GetJobRequest](./Job#getjobrequest)
 
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -150,22 +150,22 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 [JobsQuery](./Job#jobsquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **job_id** (string) 
+* **job_id** (string)  
 
 
-* **status** (JobStatus) 
+* **status** (JobStatus)  
 
 
-* **collector_id** (string) 
+* **collector_id** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -182,9 +182,9 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
  {{< tab "Response Example" >}}
 
 [JobsInfo](#JOBSINFO)
-* **results** (JobInfo)  `Required` 
+* **results** (JobInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -281,56 +281,56 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 
 ### GetJobRequest
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### JobRequest
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### JobStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### JobsInfo
-* **results** (JobInfo)  `Required` 
+* **results** (JobInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### JobsQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **job_id** (string) 
+* **job_id** (string)  
 
     
-* **status** (JobStatus) 
+* **status** (JobStatus)  
 
     
-* **collector_id** (string) 
+* **collector_id** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>

@@ -24,7 +24,7 @@ An Event is data created by an external monitoring system and collected by a Web
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**parse**](./Event#parse) | [ParseRequest](Event#parserequest) | [EventsInfo](./Event#eventsinfo) |
+| [**parse**](./Event#parse) | [ParseRequest](Event#parserequest) | [EventsInfo](Event#eventsinfo) |
 
 
 
@@ -53,53 +53,53 @@ Parses a specific Event resource and transforms the resource from external data 
 
 
 ### EventInfo
-* **event_key** (string)  `Required` 
+* **event_key** (string)   `Required` 
 
     
-* **event_type** (string)  `Required` 
+* **event_type** (string)   `Required` 
 
     
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
     
-* **description** (string)  `Required` 
+* **description** (string)   `Required` 
 
     
-* **severity** (Severity)  `Required` 
+* **severity** (Severity)   `Required` 
 
     
-* **resource** (Struct)  `Required` 
+* **resource** (Struct)   `Required` 
 
     
-* **rule** (string)  `Required` 
+* **rule** (string)   `Required` 
 
     
-* **occurred_at** (string)  `Required` 
+* **occurred_at** (string)   `Required` 
 
     
-* **additional_info** (Struct)  `Required` 
+* **additional_info** (Struct)   `Required` 
 
     
-* **image_url** (string)  `Required` 
+* **image_url** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **account** (string)  `Required` 
+* **account** (string)   `Required` 
 
     <br>
 
 ### EventsInfo
-* **results** (EventInfo)  `Required` 
+* **results** (EventInfo)  `Repeated`    `Required` 
 
     <br>
 
 ### ParseRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   *Unpredictable data format that comes from Webhook*
 

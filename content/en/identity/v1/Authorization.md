@@ -24,7 +24,7 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**verify**](./Authorization#verify) | [AuthorizationRequest](Authorization#authorizationrequest) | [AuthorizationResponse](./Authorization#authorizationresponse) |
+| [**verify**](./Authorization#verify) | [AuthorizationRequest](Authorization#authorizationrequest) | [AuthorizationResponse](Authorization#authorizationresponse) |
 
 
 

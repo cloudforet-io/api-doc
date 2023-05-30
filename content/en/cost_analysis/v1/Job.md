@@ -24,10 +24,10 @@ A Job is an act of collecting external cost data through plugins. The data to co
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**cancel**](./Job#cancel) | [JobRequest](Job#jobrequest) | [JobInfo](./Job#jobinfo) |
-| [**get**](./Job#get) | [GetJobRequest](Job#getjobrequest) | [JobInfo](./Job#jobinfo) |
-| [**list**](./Job#list) | [JobQuery](Job#jobquery) | [JobsInfo](./Job#jobsinfo) |
-| [**stat**](./Job#stat) | [JobStatQuery](Job#jobstatquery) | [Struct](./Job#struct) |
+| [**cancel**](./Job#cancel) | [JobRequest](Job#jobrequest) | [JobInfo](Job#jobinfo) |
+| [**get**](./Job#get) | [GetJobRequest](Job#getjobrequest) | [JobInfo](Job#jobinfo) |
+| [**list**](./Job#list) | [JobQuery](Job#jobquery) | [JobsInfo](Job#jobsinfo) |
+| [**stat**](./Job#stat) | [JobStatQuery](Job#jobstatquery) | [Struct](Job#struct) |
 
 
 
@@ -55,10 +55,10 @@ Cancels a specific Job. You can manually cease a Job in run with this method.
 
 [JobRequest](./Job#jobrequest)
 
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -75,31 +75,31 @@ Cancels a specific Job. You can manually cease a Job in run with this method.
  {{< tab "Response Example" >}}
 
 [JobInfo](#JOBINFO)
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
-* **status** (Status)  `Required` 
+* **status** (Status)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **error_code** (string)  `Required` 
+* **error_code** (string)   `Required` 
 
-* **error_message** (string)  `Required` 
+* **error_message** (string)   `Required` 
 
-* **total_tasks** (int32)  `Required` 
+* **total_tasks** (int32)   `Required` 
 
-* **remained_tasks** (int32)  `Required` 
+* **remained_tasks** (int32)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
-* **changed** (ChangedInfo)  `Required` 
+* **changed** (ChangedInfo)  `Repeated`   `Required` 
 
 
 
@@ -155,13 +155,13 @@ Gets a specific Job. Prints detailed information about the Job, including the pl
 
 [GetJobRequest](./Job#getjobrequest)
 
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -178,31 +178,31 @@ Gets a specific Job. Prints detailed information about the Job, including the pl
  {{< tab "Response Example" >}}
 
 [JobInfo](#JOBINFO)
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
-* **status** (Status)  `Required` 
+* **status** (Status)   `Required` 
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
-* **error_code** (string)  `Required` 
+* **error_code** (string)   `Required` 
 
-* **error_message** (string)  `Required` 
+* **error_message** (string)   `Required` 
 
-* **total_tasks** (int32)  `Required` 
+* **total_tasks** (int32)   `Required` 
 
-* **remained_tasks** (int32)  `Required` 
+* **remained_tasks** (int32)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
-* **changed** (ChangedInfo)  `Required` 
+* **changed** (ChangedInfo)  `Repeated`   `Required` 
 
 
 
@@ -258,19 +258,19 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 [JobQuery](./Job#jobquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **job_id** (string) 
+* **job_id** (string)  
 
 
-* **status** (Status) 
+* **status** (Status)  
 
 
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
 
 
@@ -287,9 +287,9 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
  {{< tab "Response Example" >}}
 
 [JobsInfo](#JOBSINFO)
-* **results** (JobInfo)  `Required` 
+* **results** (JobInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -372,105 +372,105 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 
 ### ChangedInfo
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
     <br>
 
 ### GetJobRequest
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### JobInfo
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **status** (Status)  `Required` 
+* **status** (Status)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **error_code** (string)  `Required` 
+* **error_code** (string)   `Required` 
 
     
-* **error_message** (string)  `Required` 
+* **error_message** (string)   `Required` 
 
     
-* **total_tasks** (int32)  `Required` 
+* **total_tasks** (int32)   `Required` 
 
     
-* **remained_tasks** (int32)  `Required` 
+* **remained_tasks** (int32)   `Required` 
 
     
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     
-* **finished_at** (string)  `Required` 
+* **finished_at** (string)   `Required` 
 
     
-* **changed** (ChangedInfo)  `Required` 
+* **changed** (ChangedInfo)  `Repeated`    `Required` 
 
     <br>
 
 ### JobQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **job_id** (string) 
+* **job_id** (string)  
 
     
-* **status** (Status) 
+* **status** (Status)  
 
     
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
     <br>
 
 ### JobRequest
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### JobStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### JobsInfo
-* **results** (JobInfo)  `Required` 
+* **results** (JobInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>

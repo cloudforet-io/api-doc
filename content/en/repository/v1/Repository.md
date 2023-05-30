@@ -24,12 +24,12 @@ A Repository is a repository storing data of deployable plugins.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**register**](./Repository#register) | [CreateRepositoryRequest](Repository#createrepositoryrequest) | [RepositoryInfo](./Repository#repositoryinfo) |
-| [**update**](./Repository#update) | [UpdateRepositoryRequest](Repository#updaterepositoryrequest) | [RepositoryInfo](./Repository#repositoryinfo) |
-| [**deregister**](./Repository#deregister) | [RepositoryRequest](Repository#repositoryrequest) | [Empty](./Repository#empty) |
-| [**get**](./Repository#get) | [GetRepositoryRequest](Repository#getrepositoryrequest) | [RepositoryInfo](./Repository#repositoryinfo) |
-| [**list**](./Repository#list) | [RepositoryQuery](Repository#repositoryquery) | [RepositoriesInfo](./Repository#repositoriesinfo) |
-| [**stat**](./Repository#stat) | [RepositoryStatQuery](Repository#repositorystatquery) | [Struct](./Repository#struct) |
+| [**register**](./Repository#register) | [CreateRepositoryRequest](Repository#createrepositoryrequest) | [RepositoryInfo](Repository#repositoryinfo) |
+| [**update**](./Repository#update) | [UpdateRepositoryRequest](Repository#updaterepositoryrequest) | [RepositoryInfo](Repository#repositoryinfo) |
+| [**deregister**](./Repository#deregister) | [RepositoryRequest](Repository#repositoryrequest) | [Empty](Repository#empty) |
+| [**get**](./Repository#get) | [GetRepositoryRequest](Repository#getrepositoryrequest) | [RepositoryInfo](Repository#repositoryinfo) |
+| [**list**](./Repository#list) | [RepositoryQuery](Repository#repositoryquery) | [RepositoriesInfo](Repository#repositoriesinfo) |
+| [**stat**](./Repository#stat) | [RepositoryStatQuery](Repository#repositorystatquery) | [Struct](Repository#struct) |
 
 
 
@@ -57,22 +57,22 @@ Registers a Repository. The parameter `name` can only include alphabets, numbers
 
 [CreateRepositoryRequest](./Repository#createrepositoryrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **repository_type** (string)  `Required` 
+* **repository_type** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **endpoint** (string) 
+* **endpoint** (string)  
 
 
-* **version** (string) 
+* **version** (string)  
 
 
-* **secret_id** (string) 
+* **secret_id** (string)  
 
 
 
@@ -91,19 +91,19 @@ Registers a Repository. The parameter `name` can only include alphabets, numbers
  {{< tab "Response Example" >}}
 
 [RepositoryInfo](#REPOSITORYINFO)
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **repository_type** (string)  `Required` 
+* **repository_type** (string)   `Required` 
 
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -146,13 +146,13 @@ Updates a specific Repository registered. You must specify the `repository_id` o
 
 [UpdateRepositoryRequest](./Repository#updaterepositoryrequest)
 
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
 
@@ -170,19 +170,19 @@ Updates a specific Repository registered. You must specify the `repository_id` o
  {{< tab "Response Example" >}}
 
 [RepositoryInfo](#REPOSITORYINFO)
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **repository_type** (string)  `Required` 
+* **repository_type** (string)   `Required` 
 
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -225,10 +225,10 @@ Deregisters and deletes a specific Repository. You must specify the `repository_
 
 [RepositoryRequest](./Repository#repositoryrequest)
 
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -270,13 +270,13 @@ Gets a specific Repository. Prints detailed information about the Repository, in
 
 [GetRepositoryRequest](./Repository#getrepositoryrequest)
 
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -293,19 +293,19 @@ Gets a specific Repository. Prints detailed information about the Repository, in
  {{< tab "Response Example" >}}
 
 [RepositoryInfo](#REPOSITORYINFO)
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **repository_type** (string)  `Required` 
+* **repository_type** (string)   `Required` 
 
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -348,19 +348,19 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
 
 [RepositoryQuery](./Repository#repositoryquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **repository_id** (string) 
+* **repository_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **repository_type** (string) 
+* **repository_type** (string)  
 
 
 
@@ -378,9 +378,9 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
  {{< tab "Response Example" >}}
 
 [RepositoriesInfo](#REPOSITORIESINFO)
-* **results** (RepositoryInfo)  `Required` 
+* **results** (RepositoryInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -432,107 +432,107 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
 
 
 ### CreateRepositoryRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **repository_type** (string)  `Required` 
+* **repository_type** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **endpoint** (string) 
+* **endpoint** (string)  
 
     
-* **version** (string) 
+* **version** (string)  
 
     
-* **secret_id** (string) 
+* **secret_id** (string)  
 
     <br>
 
 ### GetRepositoryRequest
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### RepositoriesInfo
-* **results** (RepositoryInfo)  `Required` 
+* **results** (RepositoryInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### RepositoryInfo
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **repository_type** (string)  `Required` 
+* **repository_type** (string)   `Required` 
 
     
-* **endpoint** (string)  `Required` 
+* **endpoint** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### RepositoryQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **repository_id** (string) 
+* **repository_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **repository_type** (string) 
+* **repository_type** (string)  
 
     <br>
 
 ### RepositoryRequest
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### RepositoryStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UpdateRepositoryRequest
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     <br>

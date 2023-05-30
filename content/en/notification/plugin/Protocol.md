@@ -24,8 +24,8 @@ A Protocol is a plugin instance defining how a User receives data from Cloudfore
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**init**](./Protocol#init) | [InitRequest](Protocol#initrequest) | [PluginInfo](./Protocol#plugininfo) |
-| [**verify**](./Protocol#verify) | [PluginVerifyRequest](Protocol#pluginverifyrequest) | [Empty](./Protocol#empty) |
+| [**init**](./Protocol#init) | [InitRequest](Protocol#initrequest) | [PluginInfo](Protocol#plugininfo) |
+| [**verify**](./Protocol#verify) | [PluginVerifyRequest](Protocol#pluginverifyrequest) | [Empty](Protocol#empty) |
 
 
 
@@ -50,7 +50,7 @@ Initializes a specific Protocol. During initialization, the Protocol information
 
 [InitRequest](./Protocol#initrequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
   *Option value used when initializing the plugin.*
 
@@ -69,7 +69,7 @@ Initializes a specific Protocol. During initialization, the Protocol information
  {{< tab "Response Example" >}}
 
 [PluginInfo](#PLUGININFO)
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
   Metadata value required to input various values required for plugin to work.
 In the case of protocol plugins, when creating a channel, the plugin contains the definition of additional data (channel data) required for channel transmission.
@@ -108,12 +108,12 @@ Verifies if a specific Protocol is a valid plugin instance.
 
 [PluginVerifyRequest](./Protocol#pluginverifyrequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
   *Option values required for the plugin to work.*
 
 
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
   *The secret value required for the plugin to work.
 The secret data usually includes the credential information required for the plugin to access the external system.*
@@ -145,14 +145,14 @@ The secret data usually includes the credential information required for the plu
 
 
 ### InitRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
   *Option value used when initializing the plugin.*
 
     <br>
 
 ### PluginInfo
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
   *Metadata value required to input various values required for plugin to work.
 In the case of protocol plugins, when creating a channel, the plugin contains the definition of additional data (channel data) required for channel transmission.*
@@ -160,12 +160,12 @@ In the case of protocol plugins, when creating a channel, the plugin contains th
     <br>
 
 ### PluginVerifyRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
   *Option values required for the plugin to work.*
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
   *The secret value required for the plugin to work.
 The secret data usually includes the credential information required for the plugin to access the external system.*

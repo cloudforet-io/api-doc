@@ -24,9 +24,9 @@ A Collector is a plugin collecting data of external infrastructure resources.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**init**](./Collector#init) | [InitRequest](Collector#initrequest) | [PluginInfo](./Collector#plugininfo) |
-| [**verify**](./Collector#verify) | [VerifyRequest](Collector#verifyrequest) | [Empty](./Collector#empty) |
-| [**collect**](./Collector#collect) | [CollectRequest](Collector#collectrequest) | [ResourceInfo](./Collector#resourceinfo) |
+| [**init**](./Collector#init) | [InitRequest](Collector#initrequest) | [PluginInfo](Collector#plugininfo) |
+| [**verify**](./Collector#verify) | [VerifyRequest](Collector#verifyrequest) | [Empty](Collector#empty) |
+| [**collect**](./Collector#collect) | [CollectRequest](Collector#collectrequest) | [ResourceInfo](Collector#resourceinfo) |
 
 
 
@@ -51,7 +51,7 @@ Initializes a specific Collector. During initialization, the Collector informati
 
 [InitRequest](./Collector#initrequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
 
@@ -68,7 +68,7 @@ Initializes a specific Collector. During initialization, the Collector informati
  {{< tab "Response Example" >}}
 
 [PluginInfo](#PLUGININFO)
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
 
 
@@ -104,10 +104,10 @@ Verifies a specific Collector. You must specify the parameter `secret_data`, enc
 
 [VerifyRequest](./Collector#verifyrequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
 
 
@@ -146,13 +146,13 @@ Collects data of external infrastructure resources by a specific Collector.
 
 [CollectRequest](./Collector#collectrequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
 
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
 
 
@@ -181,55 +181,55 @@ Collects data of external infrastructure resources by a specific Collector.
 
 
 ### CollectRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **filter** (Struct)  `Required` 
+* **filter** (Struct)   `Required` 
 
     <br>
 
 ### CollectorVerifyInfo
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>
 
 ### InitRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>
 
 ### PluginInfo
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     <br>
 
 ### ResourceInfo
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **message** (string)  `Required` 
+* **message** (string)   `Required` 
 
     
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **match_rules** (Struct)  `Required` 
+* **match_rules** (Struct)   `Required` 
 
     
-* **resource** (Struct)  `Required` 
+* **resource** (Struct)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>
 
 ### VerifyRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     <br>

@@ -24,12 +24,12 @@ A Note is a comment on an Event, and is used for incident management.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Note#create) | [CreateNoteRequest](Note#createnoterequest) | [NoteInfo](./Note#noteinfo) |
-| [**update**](./Note#update) | [UpdateNoteRequest](Note#updatenoterequest) | [NoteInfo](./Note#noteinfo) |
-| [**delete**](./Note#delete) | [NoteRequest](Note#noterequest) | [Empty](./Note#empty) |
-| [**get**](./Note#get) | [GetNoteRequest](Note#getnoterequest) | [NoteInfo](./Note#noteinfo) |
-| [**list**](./Note#list) | [NoteQuery](Note#notequery) | [NotesInfo](./Note#notesinfo) |
-| [**stat**](./Note#stat) | [NoteStatQuery](Note#notestatquery) | [Struct](./Note#struct) |
+| [**create**](./Note#create) | [CreateNoteRequest](Note#createnoterequest) | [NoteInfo](Note#noteinfo) |
+| [**update**](./Note#update) | [UpdateNoteRequest](Note#updatenoterequest) | [NoteInfo](Note#noteinfo) |
+| [**delete**](./Note#delete) | [NoteRequest](Note#noterequest) | [Empty](Note#empty) |
+| [**get**](./Note#get) | [GetNoteRequest](Note#getnoterequest) | [NoteInfo](Note#noteinfo) |
+| [**list**](./Note#list) | [NoteQuery](Note#notequery) | [NotesInfo](Note#notesinfo) |
+| [**stat**](./Note#stat) | [NoteStatQuery](Note#notestatquery) | [Struct](Note#struct) |
 
 
 
@@ -57,13 +57,13 @@ Creates a new Note. You can create Notes for each Alert to record the informatio
 
 [CreateNoteRequest](./Note#createnoterequest)
 
-* **alert_id** (string)  `Required` 
+* **alert_id** (string)   `Required` 
 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -82,19 +82,19 @@ Creates a new Note. You can create Notes for each Alert to record the informatio
  {{< tab "Response Example" >}}
 
 [NoteInfo](#NOTEINFO)
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
-* **alert_id** (string)  `Required` 
+* **alert_id** (string)   `Required` 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -139,13 +139,13 @@ Updates a specific Note. You must specify the `note_id` for Note validation chec
 
 [UpdateNoteRequest](./Note#updatenoterequest)
 
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **note** (string) 
+* **note** (string)  
 
 
 
@@ -164,19 +164,19 @@ Updates a specific Note. You must specify the `note_id` for Note validation chec
  {{< tab "Response Example" >}}
 
 [NoteInfo](#NOTEINFO)
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
-* **alert_id** (string)  `Required` 
+* **alert_id** (string)   `Required` 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -221,10 +221,10 @@ Deletes a specific Note. You must specify the `note_id` of the Note to delete.
 
 [NoteRequest](./Note#noterequest)
 
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -267,13 +267,13 @@ Gets a specific Note. You must specify the `note_id` and `domain_id`.
 
 [GetNoteRequest](./Note#getnoterequest)
 
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -291,19 +291,19 @@ Gets a specific Note. You must specify the `note_id` and `domain_id`.
  {{< tab "Response Example" >}}
 
 [NoteInfo](#NOTEINFO)
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
-* **alert_id** (string)  `Required` 
+* **alert_id** (string)   `Required` 
 
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -348,22 +348,22 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
 [NoteQuery](./Note#notequery)
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **note_id** (string) 
+* **note_id** (string)  
 
 
-* **alert_id** (string) 
+* **alert_id** (string)  
 
 
-* **created_by** (string) 
+* **created_by** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **domain_id** (string) 
+* **domain_id** (string)  
 
 
 
@@ -381,9 +381,9 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
  {{< tab "Response Example" >}}
 
 [NotesInfo](#NOTESINFO)
-* **results** (NoteInfo)  `Required` 
+* **results** (NoteInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -446,101 +446,101 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
 
 ### CreateNoteRequest
-* **alert_id** (string)  `Required` 
+* **alert_id** (string)   `Required` 
 
     
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### GetNoteRequest
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### NoteInfo
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
     
-* **alert_id** (string)  `Required` 
+* **alert_id** (string)   `Required` 
 
     
-* **note** (string)  `Required` 
+* **note** (string)   `Required` 
 
     
-* **created_by** (string)  `Required` 
+* **created_by** (string)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### NoteQuery
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **note_id** (string) 
+* **note_id** (string)  
 
     
-* **alert_id** (string) 
+* **alert_id** (string)  
 
     
-* **created_by** (string) 
+* **created_by** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### NoteRequest
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### NoteStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### NotesInfo
-* **results** (NoteInfo)  `Required` 
+* **results** (NoteInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateNoteRequest
-* **note_id** (string)  `Required` 
+* **note_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **note** (string) 
+* **note** (string)  
 
     <br>

@@ -24,8 +24,8 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**list**](./ChangeHistory#list) | [ChangeHistoryQuery](ChangeHistory#changehistoryquery) | [ChangeHistoryInfo](./ChangeHistory#changehistoryinfo) |
-| [**stat**](./ChangeHistory#stat) | [ChangeHistoryStatQuery](ChangeHistory#changehistorystatquery) | [Struct](./ChangeHistory#struct) |
+| [**list**](./ChangeHistory#list) | [ChangeHistoryQuery](ChangeHistory#changehistoryquery) | [ChangeHistoryInfo](ChangeHistory#changehistoryinfo) |
+| [**stat**](./ChangeHistory#stat) | [ChangeHistoryStatQuery](ChangeHistory#changehistorystatquery) | [Struct](ChangeHistory#struct) |
 
 
 
@@ -74,83 +74,83 @@ bookFlatSection: true
 
 
 ### ChangeHistoryInfo
-* **results** (RecordInfo)  `Required` 
+* **results** (RecordInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### ChangeHistoryQuery
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **action** (RecordAction) 
+* **action** (RecordAction)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     
-* **collector_id** (string) 
+* **collector_id** (string)  
 
     
-* **job_id** (string) 
+* **job_id** (string)  
 
     
-* **updated_by** (string) 
+* **updated_by** (string)  
 
     <br>
 
 ### ChangeHistoryStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     <br>
 
 ### RecordInfo
-* **record_id** (string)  `Required` 
+* **record_id** (string)   `Required` 
 
     
-* **cloud_service_id** (string)  `Required` 
+* **cloud_service_id** (string)   `Required` 
 
     
-* **action** (RecordAction)  `Required` 
+* **action** (RecordAction)   `Required` 
 
     
-* **diff** (ListValue)  `Required` 
+* **diff** (ListValue)   `Required` 
 
     
-* **diff_count** (int32)  `Required` 
+* **diff_count** (int32)   `Required` 
 
   *repeated RecordDiff diff = 4;*
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **collector_id** (string)  `Required` 
+* **collector_id** (string)   `Required` 
 
     
-* **job_id** (string)  `Required` 
+* **job_id** (string)   `Required` 
 
     
-* **updated_by** (string)  `Required` 
+* **updated_by** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>

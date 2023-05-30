@@ -24,13 +24,13 @@ A Board is a bulletin-board-type resource for posting notices and announcements 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Board#create) | [CreateBoardRequest](Board#createboardrequest) | [BoardInfo](./Board#boardinfo) |
-| [**update**](./Board#update) | [UpdateBoardRequest](Board#updateboardrequest) | [BoardInfo](./Board#boardinfo) |
-| [**set_categories**](./Board#set_categories) | [SetBoardCategoriesRequest](Board#setboardcategoriesrequest) | [BoardInfo](./Board#boardinfo) |
-| [**delete**](./Board#delete) | [BoardRequest](Board#boardrequest) | [Empty](./Board#empty) |
-| [**get**](./Board#get) | [GetBoardRequest](Board#getboardrequest) | [BoardInfo](./Board#boardinfo) |
-| [**list**](./Board#list) | [BoardQuery](Board#boardquery) | [BoardsInfo](./Board#boardsinfo) |
-| [**stat**](./Board#stat) | [BoardStatQuery](Board#boardstatquery) | [Struct](./Board#struct) |
+| [**create**](./Board#create) | [CreateBoardRequest](Board#createboardrequest) | [BoardInfo](Board#boardinfo) |
+| [**update**](./Board#update) | [UpdateBoardRequest](Board#updateboardrequest) | [BoardInfo](Board#boardinfo) |
+| [**set_categories**](./Board#set_categories) | [SetBoardCategoriesRequest](Board#setboardcategoriesrequest) | [BoardInfo](Board#boardinfo) |
+| [**delete**](./Board#delete) | [BoardRequest](Board#boardrequest) | [Empty](Board#empty) |
+| [**get**](./Board#get) | [GetBoardRequest](Board#getboardrequest) | [BoardInfo](Board#boardinfo) |
+| [**list**](./Board#list) | [BoardQuery](Board#boardquery) | [BoardsInfo](Board#boardsinfo) |
+| [**stat**](./Board#stat) | [BoardStatQuery](Board#boardstatquery) | [Struct](Board#struct) |
 
 
 
@@ -58,13 +58,13 @@ Creates a new Board with SYSTEM permission. The `name` of the board is only requ
 
 [CreateBoardRequest](./Board#createboardrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **categories** (string) 
+* **categories** (string)  `Repeated`   
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -83,15 +83,15 @@ Creates a new Board with SYSTEM permission. The `name` of the board is only requ
  {{< tab "Response Example" >}}
 
 [BoardInfo](#BOARDINFO)
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **categories** (string)  `Required` 
+* **categories** (string)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -140,13 +140,13 @@ Updates a specific Board with SYSTEM permission. You can make changes in Board s
 
 [UpdateBoardRequest](./Board#updateboardrequest)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -165,15 +165,15 @@ Updates a specific Board with SYSTEM permission. You can make changes in Board s
  {{< tab "Response Example" >}}
 
 [BoardInfo](#BOARDINFO)
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **categories** (string)  `Required` 
+* **categories** (string)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -222,10 +222,10 @@ Adds or changes `categories` of a specific Board with SYSTEM permission. A chang
 
 [SetBoardCategoriesRequest](./Board#setboardcategoriesrequest)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
-* **categories** (string) 
+* **categories** (string)  `Repeated`   
 
 
 
@@ -243,15 +243,15 @@ Adds or changes `categories` of a specific Board with SYSTEM permission. A chang
  {{< tab "Response Example" >}}
 
 [BoardInfo](#BOARDINFO)
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **categories** (string)  `Required` 
+* **categories** (string)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -300,7 +300,7 @@ Deletes a specific Board with `SYSTEM` permission. You can delete a Board regard
 
 [BoardRequest](./Board#boardrequest)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
 
@@ -342,10 +342,10 @@ Gets a specific Board. You must specify the `board_id` of the Board to get. Prin
 
 [GetBoardRequest](./Board#getboardrequest)
 
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -362,15 +362,15 @@ Gets a specific Board. You must specify the `board_id` of the Board to get. Prin
  {{< tab "Response Example" >}}
 
 [BoardInfo](#BOARDINFO)
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **categories** (string)  `Required` 
+* **categories** (string)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -419,13 +419,13 @@ Gets a list of all Boards. You can use a query to get a filtered list of Boards.
 
 [BoardQuery](./Board#boardquery)
 
-* **board_id** (string) 
+* **board_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
 
@@ -442,9 +442,9 @@ Gets a list of all Boards. You can use a query to get a filtered list of Boards.
  {{< tab "Response Example" >}}
 
 [BoardsInfo](#BOARDSINFO)
-* **results** (BoardInfo)  `Required` 
+* **results** (BoardInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -510,85 +510,85 @@ Gets a list of all Boards. You can use a query to get a filtered list of Boards.
 
 
 ### BoardInfo
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **categories** (string)  `Required` 
+* **categories** (string)  `Repeated`    `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### BoardQuery
-* **board_id** (string) 
+* **board_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     <br>
 
 ### BoardRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     <br>
 
 ### BoardStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     <br>
 
 ### BoardsInfo
-* **results** (BoardInfo)  `Required` 
+* **results** (BoardInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### CreateBoardRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **categories** (string) 
+* **categories** (string)  `Repeated`   
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetBoardRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### SetBoardCategoriesRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **categories** (string) 
+* **categories** (string)  `Repeated`   
 
     <br>
 
 ### UpdateBoardRequest
-* **board_id** (string)  `Required` 
+* **board_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

@@ -24,12 +24,12 @@ A Quota is a limit on protocol usage for a day or a month. You can manage the us
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Quota#create) | [CreateQuotaRequest](Quota#createquotarequest) | [QuotaInfo](./Quota#quotainfo) |
-| [**update**](./Quota#update) | [UpdateQuotaRequest](Quota#updatequotarequest) | [QuotaInfo](./Quota#quotainfo) |
-| [**delete**](./Quota#delete) | [QuotaRequest](Quota#quotarequest) | [Empty](./Quota#empty) |
-| [**get**](./Quota#get) | [QuotaRequest](Quota#quotarequest) | [QuotaInfo](./Quota#quotainfo) |
-| [**list**](./Quota#list) | [QuotaQuery](Quota#quotaquery) | [QuotasInfo](./Quota#quotasinfo) |
-| [**stat**](./Quota#stat) | [QuotaStatQuery](Quota#quotastatquery) | [Struct](./Quota#struct) |
+| [**create**](./Quota#create) | [CreateQuotaRequest](Quota#createquotarequest) | [QuotaInfo](Quota#quotainfo) |
+| [**update**](./Quota#update) | [UpdateQuotaRequest](Quota#updatequotarequest) | [QuotaInfo](Quota#quotainfo) |
+| [**delete**](./Quota#delete) | [QuotaRequest](Quota#quotarequest) | [Empty](Quota#empty) |
+| [**get**](./Quota#get) | [QuotaRequest](Quota#quotarequest) | [QuotaInfo](Quota#quotainfo) |
+| [**list**](./Quota#list) | [QuotaQuery](Quota#quotaquery) | [QuotasInfo](Quota#quotasinfo) |
+| [**stat**](./Quota#stat) | [QuotaStatQuery](Quota#quotastatquery) | [Struct](Quota#struct) |
 
 
 
@@ -57,15 +57,15 @@ Creates a new Quota limiting the use of a selected Protocol for a day or a month
 
 [CreateQuotaRequest](./Quota#createquotarequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
 
-* **limit** (Struct)  `Required` 
+* **limit** (Struct)   `Required` 
 
   *The information about Quota limitation.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -88,19 +88,19 @@ Creates a new Quota limiting the use of a selected Protocol for a day or a month
  {{< tab "Response Example" >}}
 
 [QuotaInfo](#QUOTAINFO)
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   The ID of Quota.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **limit** (Struct)  `Required` 
+* **limit** (Struct)   `Required` 
 
   The information about Quota limitation.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain
 
@@ -147,17 +147,17 @@ Updates a specific Quota. You can make changes in Quota `limit`, managing the us
 
 [UpdateQuotaRequest](./Quota#updatequotarequest)
 
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   *The ID of Quota.*
 
 
-* **limit** (Struct)  `Required` 
+* **limit** (Struct)   `Required` 
 
   *The information about Quota limitation.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -178,19 +178,19 @@ Updates a specific Quota. You can make changes in Quota `limit`, managing the us
  {{< tab "Response Example" >}}
 
 [QuotaInfo](#QUOTAINFO)
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   The ID of Quota.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **limit** (Struct)  `Required` 
+* **limit** (Struct)   `Required` 
 
   The information about Quota limitation.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain
 
@@ -237,12 +237,12 @@ Deletes a specific Quota. The default Quota set in the Config will be applied to
 
 [QuotaRequest](./Quota#quotarequest)
 
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   *The ID of Quota.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -286,12 +286,12 @@ Gets a specific Quota. Prints detailed information about the Quota, including th
 
 [QuotaRequest](./Quota#quotarequest)
 
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   *The ID of Quota.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -310,19 +310,19 @@ Gets a specific Quota. Prints detailed information about the Quota, including th
  {{< tab "Response Example" >}}
 
 [QuotaInfo](#QUOTAINFO)
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   The ID of Quota.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of Protocol.
 
-* **limit** (Struct)  `Required` 
+* **limit** (Struct)   `Required` 
 
   The information about Quota limitation.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain
 
@@ -369,22 +369,22 @@ Gets a list of all Quotas. You can use a query to get a filtered list of Quotas.
 
 [QuotaQuery](./Quota#quotaquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
 
-* **quota_id** (string) 
+* **quota_id** (string)  
 
   *The ID of Quota.*
 
 
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of Protocol.*
 
@@ -403,11 +403,11 @@ Gets a list of all Quotas. You can use a query to get a filtered list of Quotas.
  {{< tab "Response Example" >}}
 
 [QuotasInfo](#QUOTASINFO)
-* **results** (QuotaInfo)  `Required` 
+* **results** (QuotaInfo)  `Repeated`   `Required` 
 
   List of queried Quota.
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   Total counts of queried Quota.
 
@@ -472,111 +472,111 @@ Gets a list of all Quotas. You can use a query to get a filtered list of Quotas.
 
 
 ### CreateQuotaRequest
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
     
-* **limit** (Struct)  `Required` 
+* **limit** (Struct)   `Required` 
 
   *The information about Quota limitation.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     <br>
 
 ### QuotaInfo
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   *The ID of Quota.*
 
     
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
 
     
-* **limit** (Struct)  `Required` 
+* **limit** (Struct)   `Required` 
 
   *The information about Quota limitation.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain*
 
     <br>
 
 ### QuotaQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **quota_id** (string) 
+* **quota_id** (string)  
 
   *The ID of Quota.*
 
     
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of Protocol.*
 
     <br>
 
 ### QuotaRequest
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   *The ID of Quota.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     <br>
 
 ### QuotaStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
   *Statistics Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     <br>
 
 ### QuotasInfo
-* **results** (QuotaInfo)  `Required` 
+* **results** (QuotaInfo)  `Repeated`    `Required` 
 
   *List of queried Quota.*
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   *Total counts of queried Quota.*
 
     <br>
 
 ### UpdateQuotaRequest
-* **quota_id** (string)  `Required` 
+* **quota_id** (string)   `Required` 
 
   *The ID of Quota.*
 
     
-* **limit** (Struct)  `Required` 
+* **limit** (Struct)   `Required` 
 
   *The information about Quota limitation.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>

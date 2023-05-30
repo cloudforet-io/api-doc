@@ -24,16 +24,16 @@ A ProjectChannel is a destination  where Notifications are delivered. Notificati
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./ProjectChannel#create) | [CreateProjectChannelRequest](ProjectChannel#createprojectchannelrequest) | [ProjectChannelInfo](./ProjectChannel#projectchannelinfo) |
-| [**update**](./ProjectChannel#update) | [UpdateProjectChannelRequest](ProjectChannel#updateprojectchannelrequest) | [ProjectChannelInfo](./ProjectChannel#projectchannelinfo) |
-| [**set_schedule**](./ProjectChannel#set_schedule) | [UpdateProjectChannelScheduleRequest](ProjectChannel#updateprojectchannelschedulerequest) | [ProjectChannelInfo](./ProjectChannel#projectchannelinfo) |
-| [**set_subscription**](./ProjectChannel#set_subscription) | [UpdateProjectChannelSubscriptionRequest](ProjectChannel#updateprojectchannelsubscriptionrequest) | [ProjectChannelInfo](./ProjectChannel#projectchannelinfo) |
-| [**enable**](./ProjectChannel#enable) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [ProjectChannelInfo](./ProjectChannel#projectchannelinfo) |
-| [**disable**](./ProjectChannel#disable) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [ProjectChannelInfo](./ProjectChannel#projectchannelinfo) |
-| [**delete**](./ProjectChannel#delete) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [Empty](./ProjectChannel#empty) |
-| [**get**](./ProjectChannel#get) | [GetProjectChannelRequest](ProjectChannel#getprojectchannelrequest) | [ProjectChannelInfo](./ProjectChannel#projectchannelinfo) |
-| [**list**](./ProjectChannel#list) | [ProjectChannelQuery](ProjectChannel#projectchannelquery) | [ProjectChannelsInfo](./ProjectChannel#projectchannelsinfo) |
-| [**stat**](./ProjectChannel#stat) | [ProjectChannelStatQuery](ProjectChannel#projectchannelstatquery) | [Struct](./ProjectChannel#struct) |
+| [**create**](./ProjectChannel#create) | [CreateProjectChannelRequest](ProjectChannel#createprojectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
+| [**update**](./ProjectChannel#update) | [UpdateProjectChannelRequest](ProjectChannel#updateprojectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
+| [**set_schedule**](./ProjectChannel#set_schedule) | [UpdateProjectChannelScheduleRequest](ProjectChannel#updateprojectchannelschedulerequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
+| [**set_subscription**](./ProjectChannel#set_subscription) | [UpdateProjectChannelSubscriptionRequest](ProjectChannel#updateprojectchannelsubscriptionrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
+| [**enable**](./ProjectChannel#enable) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
+| [**disable**](./ProjectChannel#disable) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
+| [**delete**](./ProjectChannel#delete) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [Empty](ProjectChannel#empty) |
+| [**get**](./ProjectChannel#get) | [GetProjectChannelRequest](ProjectChannel#getprojectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
+| [**list**](./ProjectChannel#list) | [ProjectChannelQuery](ProjectChannel#projectchannelquery) | [ProjectChannelsInfo](ProjectChannel#projectchannelsinfo) |
+| [**stat**](./ProjectChannel#stat) | [ProjectChannelStatQuery](ProjectChannel#projectchannelstatquery) | [Struct](ProjectChannel#struct) |
 
 
 
@@ -61,17 +61,17 @@ Creates a new ProjectChannel. ProjectChannel is a channel that delivers a Notifi
 
 [CreateProjectChannelRequest](./ProjectChannel#createprojectchannelrequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of protocol that will be set in project channel.*
 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of Project Channel. It can have a maximum of 255 characters.*
 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   *The data for using project channel.
 This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.
@@ -79,44 +79,44 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   *The ID of project to which the project channel belongs.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **is_subscribe** (bool) 
+* **is_subscribe** (bool)  
 
   *Indicates whether subscriptions will be used.*
 
 
-* **subscriptions** (string) 
+* **subscriptions** (string)  `Repeated`   
 
   *When using subscriptions, it indicates the topic list to subscription.
 If is_subscribe is set to false, this value is ignored.*
 
 
-* **notification_level** (NotificationLevel) 
+* **notification_level** (NotificationLevel)  
 
   *Set the level of notification.
 If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.*
 
 
-* **is_scheduled** (bool) 
+* **is_scheduled** (bool)  
 
   *Indicates whether schedule will be used.*
 
 
-* **schedule** (ProjectChannelSchedule) 
+* **schedule** (ProjectChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the project channel.*
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for project channel.*
 
@@ -154,63 +154,63 @@ If a notification has a level and a notification level that this channel can rec
  {{< tab "Response Example" >}}
 
 [ProjectChannelInfo](#PROJECTCHANNELINFO)
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   The ID of project channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of project channel
 
-* **state** (ProjectChannelState)  `Required` 
+* **state** (ProjectChannelState)   `Required` 
 
   The state of project channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using project channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
   Set the level of notification.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (ProjectChannelSchedule)  `Required` 
+* **schedule** (ProjectChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the project channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the project channel.
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   The ID of project to which the project channel belongs.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Project channel creation time.
 
@@ -262,22 +262,22 @@ Updates a specific ProjectChannel. A ProjectChannel that has already been config
 
 [UpdateProjectChannelRequest](./ProjectChannel#updateprojectchannelrequest)
 
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **name** (string) 
+* **name** (string)  
 
   *The name of Project Channel. It can have a maximum of 255 characters.*
 
 
-* **data** (Struct) 
+* **data** (Struct)  
 
   *The data for using project channel.
 This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.
@@ -285,13 +285,13 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
 
-* **notification_level** (NotificationLevel) 
+* **notification_level** (NotificationLevel)  
 
   *Set the level of notification.
 If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.*
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for project channel.*
 
@@ -318,63 +318,63 @@ If a notification has a level and a notification level that this channel can rec
  {{< tab "Response Example" >}}
 
 [ProjectChannelInfo](#PROJECTCHANNELINFO)
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   The ID of project channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of project channel
 
-* **state** (ProjectChannelState)  `Required` 
+* **state** (ProjectChannelState)   `Required` 
 
   The state of project channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using project channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
   Set the level of notification.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (ProjectChannelSchedule)  `Required` 
+* **schedule** (ProjectChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the project channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the project channel.
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   The ID of project to which the project channel belongs.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Project channel creation time.
 
@@ -426,22 +426,22 @@ Sets a schedule for a ProjectChannel. A schedule defines the time to receive a N
 
 [UpdateProjectChannelScheduleRequest](./ProjectChannel#updateprojectchannelschedulerequest)
 
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   *Indicates whether schedule will be used.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **schedule** (ProjectChannelSchedule) 
+* **schedule** (ProjectChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the project channel.*
 
@@ -469,63 +469,63 @@ Sets a schedule for a ProjectChannel. A schedule defines the time to receive a N
  {{< tab "Response Example" >}}
 
 [ProjectChannelInfo](#PROJECTCHANNELINFO)
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   The ID of project channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of project channel
 
-* **state** (ProjectChannelState)  `Required` 
+* **state** (ProjectChannelState)   `Required` 
 
   The state of project channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using project channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
   Set the level of notification.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (ProjectChannelSchedule)  `Required` 
+* **schedule** (ProjectChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the project channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the project channel.
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   The ID of project to which the project channel belongs.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Project channel creation time.
 
@@ -577,22 +577,22 @@ Sets a subscription for a ProjectChannel. A subscription is a topic for channels
 
 [UpdateProjectChannelSubscriptionRequest](./ProjectChannel#updateprojectchannelsubscriptionrequest)
 
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **subscriptions** (string) 
+* **subscriptions** (string)  `Repeated`   
 
   *When using subscriptions, it indicates the topic list to subscription.
 If is_subscribe is set to false, this value is ignored.*
@@ -616,63 +616,63 @@ If is_subscribe is set to false, this value is ignored.*
  {{< tab "Response Example" >}}
 
 [ProjectChannelInfo](#PROJECTCHANNELINFO)
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   The ID of project channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of project channel
 
-* **state** (ProjectChannelState)  `Required` 
+* **state** (ProjectChannelState)   `Required` 
 
   The state of project channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using project channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
   Set the level of notification.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (ProjectChannelSchedule)  `Required` 
+* **schedule** (ProjectChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the project channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the project channel.
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   The ID of project to which the project channel belongs.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Project channel creation time.
 
@@ -724,12 +724,12 @@ Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectCh
 
 [ProjectChannelRequest](./ProjectChannel#projectchannelrequest)
 
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -748,63 +748,63 @@ Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectCh
  {{< tab "Response Example" >}}
 
 [ProjectChannelInfo](#PROJECTCHANNELINFO)
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   The ID of project channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of project channel
 
-* **state** (ProjectChannelState)  `Required` 
+* **state** (ProjectChannelState)   `Required` 
 
   The state of project channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using project channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
   Set the level of notification.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (ProjectChannelSchedule)  `Required` 
+* **schedule** (ProjectChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the project channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the project channel.
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   The ID of project to which the project channel belongs.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Project channel creation time.
 
@@ -856,12 +856,12 @@ Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notific
 
 [ProjectChannelRequest](./ProjectChannel#projectchannelrequest)
 
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -880,63 +880,63 @@ Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notific
  {{< tab "Response Example" >}}
 
 [ProjectChannelInfo](#PROJECTCHANNELINFO)
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   The ID of project channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of project channel
 
-* **state** (ProjectChannelState)  `Required` 
+* **state** (ProjectChannelState)   `Required` 
 
   The state of project channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using project channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
   Set the level of notification.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (ProjectChannelSchedule)  `Required` 
+* **schedule** (ProjectChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the project channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the project channel.
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   The ID of project to which the project channel belongs.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Project channel creation time.
 
@@ -988,12 +988,12 @@ Deletes a specific ProjectChannel.
 
 [ProjectChannelRequest](./ProjectChannel#projectchannelrequest)
 
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -1037,17 +1037,17 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
 
 [GetProjectChannelRequest](./ProjectChannel#getprojectchannelrequest)
 
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
   *The list of the project channel information column you want to be returned. It must be specified in the ProjectChannelInfo.*
 
@@ -1066,63 +1066,63 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
  {{< tab "Response Example" >}}
 
 [ProjectChannelInfo](#PROJECTCHANNELINFO)
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   The ID of project channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of project channel
 
-* **state** (ProjectChannelState)  `Required` 
+* **state** (ProjectChannelState)   `Required` 
 
   The state of project channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using project channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
   Set the level of notification.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (ProjectChannelSchedule)  `Required` 
+* **schedule** (ProjectChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the project channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the project channel.
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   The ID of project to which the project channel belongs.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   Project channel creation time.
 
@@ -1174,47 +1174,47 @@ Gets a list of all ProjectChannels. You can use a query to get a filtered list o
 
 [ProjectChannelQuery](./ProjectChannel#projectchannelquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
 
-* **project_channel_id** (string) 
+* **project_channel_id** (string)  
 
   *The ID of project channel.*
 
 
-* **name** (string) 
+* **name** (string)  
 
   *The name of project channel.*
 
 
-* **state** (ProjectChannelState) 
+* **state** (ProjectChannelState)  
 
   *The state of project channel. ENABLED or DISABLED only.*
 
 
-* **secret_id** (string) 
+* **secret_id** (string)  
 
   *The ID of secret encrypted data in the security service*
 
 
-* **notification_level** (NotificationLevel) 
+* **notification_level** (NotificationLevel)  
 
   *The level of notification.*
 
 
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of protocol set in the project channel.*
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
   *The ID of project to which the project channel belongs.*
 
@@ -1241,11 +1241,11 @@ Gets a list of all ProjectChannels. You can use a query to get a filtered list o
  {{< tab "Response Example" >}}
 
 [ProjectChannelsInfo](#PROJECTCHANNELSINFO)
-* **results** (ProjectChannelInfo)  `Required` 
+* **results** (ProjectChannelInfo)  `Repeated`   `Required` 
 
   List of queried project channels.
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   Total counts of queried project channels.
 
@@ -1320,17 +1320,17 @@ Gets a list of all ProjectChannels. You can use a query to get a filtered list o
 
 
 ### CreateProjectChannelRequest
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of protocol that will be set in project channel.*
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of Project Channel. It can have a maximum of 255 characters.*
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   *The data for using project channel.
 This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.
@@ -1338,216 +1338,216 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   *The ID of project to which the project channel belongs.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **is_subscribe** (bool) 
+* **is_subscribe** (bool)  
 
   *Indicates whether subscriptions will be used.*
 
     
-* **subscriptions** (string) 
+* **subscriptions** (string)  `Repeated`   
 
   *When using subscriptions, it indicates the topic list to subscription.
 If is_subscribe is set to false, this value is ignored.*
 
     
-* **notification_level** (NotificationLevel) 
+* **notification_level** (NotificationLevel)  
 
   *Set the level of notification.
 If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.*
 
     
-* **is_scheduled** (bool) 
+* **is_scheduled** (bool)  
 
   *Indicates whether schedule will be used.*
 
     
-* **schedule** (ProjectChannelSchedule) 
+* **schedule** (ProjectChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the project channel.*
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for project channel.*
 
     <br>
 
 ### GetProjectChannelRequest
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
   *The list of the project channel information column you want to be returned. It must be specified in the ProjectChannelInfo.*
 
     <br>
 
 ### ProjectChannelInfo
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of project channel*
 
     
-* **state** (ProjectChannelState)  `Required` 
+* **state** (ProjectChannelState)   `Required` 
 
   *The state of project channel. ENABLED or DISABLED only.*
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   *The data for using project channel.*
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   *The ID of secret encrypted data in the security service*
 
     
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
 
     
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`    `Required` 
 
   *The topic list to subscription.*
 
     
-* **notification_level** (NotificationLevel)  `Required` 
+* **notification_level** (NotificationLevel)   `Required` 
 
   *Set the level of notification.*
 
     
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   *Indicates whether schedule will be used.*
 
     
-* **schedule** (ProjectChannelSchedule)  `Required` 
+* **schedule** (ProjectChannelSchedule)   `Required` 
 
   *Schedule for which you want to receive notifications through the project channel.*
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   *The tags for project channel.*
 
     
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of protocol set in the project channel.*
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
   *The ID of project to which the project channel belongs.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   *Project channel creation time.*
 
     <br>
 
 ### ProjectChannelQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **project_channel_id** (string) 
+* **project_channel_id** (string)  
 
   *The ID of project channel.*
 
     
-* **name** (string) 
+* **name** (string)  
 
   *The name of project channel.*
 
     
-* **state** (ProjectChannelState) 
+* **state** (ProjectChannelState)  
 
   *The state of project channel. ENABLED or DISABLED only.*
 
     
-* **secret_id** (string) 
+* **secret_id** (string)  
 
   *The ID of secret encrypted data in the security service*
 
     
-* **notification_level** (NotificationLevel) 
+* **notification_level** (NotificationLevel)  
 
   *The level of notification.*
 
     
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of protocol set in the project channel.*
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
   *The ID of project to which the project channel belongs.*
 
     <br>
 
 ### ProjectChannelRequest
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     <br>
 
 ### ProjectChannelSchedule
-* **day_of_week** (DayOfWeek)  `Required` 
+* **day_of_week** (DayOfWeek)  `Repeated`    `Required` 
 
   *Day of the week to be notified.
 As a list type, only types that can be specified from MON to SUN can be set.*
 
     
-* **start_hour** (int32)  `Required` 
+* **start_hour** (int32)   `Required` 
 
   *Start time to receive notifications.
 Only integer type can be set, and 0 to 23 can be.*
 
     
-* **end_hour** (int32)  `Required` 
+* **end_hour** (int32)   `Required` 
 
   *End time to receive notifications.
 Only integer type can be set, and 1 to 24 can be.*
@@ -1555,46 +1555,46 @@ Only integer type can be set, and 1 to 24 can be.*
     <br>
 
 ### ProjectChannelStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
   *Statistics Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     <br>
 
 ### ProjectChannelsInfo
-* **results** (ProjectChannelInfo)  `Required` 
+* **results** (ProjectChannelInfo)  `Repeated`    `Required` 
 
   *List of queried project channels.*
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   *Total counts of queried project channels.*
 
     <br>
 
 ### UpdateProjectChannelRequest
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **name** (string) 
+* **name** (string)  
 
   *The name of Project Channel. It can have a maximum of 255 characters.*
 
     
-* **data** (Struct) 
+* **data** (Struct)  
 
   *The data for using project channel.
 This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.
@@ -1602,57 +1602,57 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
     
-* **notification_level** (NotificationLevel) 
+* **notification_level** (NotificationLevel)  
 
   *Set the level of notification.
 If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.*
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for project channel.*
 
     <br>
 
 ### UpdateProjectChannelScheduleRequest
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
     
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   *Indicates whether schedule will be used.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **schedule** (ProjectChannelSchedule) 
+* **schedule** (ProjectChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the project channel.*
 
     <br>
 
 ### UpdateProjectChannelSubscriptionRequest
-* **project_channel_id** (string)  `Required` 
+* **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
 
     
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **subscriptions** (string) 
+* **subscriptions** (string)  `Repeated`   
 
   *When using subscriptions, it indicates the topic list to subscription.
 If is_subscribe is set to false, this value is ignored.*

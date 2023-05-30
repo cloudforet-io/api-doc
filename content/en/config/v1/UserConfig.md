@@ -24,13 +24,13 @@ UserConfig API which configure environments for user
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./UserConfig#create) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](./UserConfig#userconfiginfo) |
-| [**update**](./UserConfig#update) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](./UserConfig#userconfiginfo) |
-| [**set**](./UserConfig#set) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](./UserConfig#userconfiginfo) |
-| [**delete**](./UserConfig#delete) | [UserConfigRequest](UserConfig#userconfigrequest) | [Empty](./UserConfig#empty) |
-| [**get**](./UserConfig#get) | [GetUserConfigRequest](UserConfig#getuserconfigrequest) | [UserConfigInfo](./UserConfig#userconfiginfo) |
-| [**list**](./UserConfig#list) | [UserConfigQuery](UserConfig#userconfigquery) | [UserConfigsInfo](./UserConfig#userconfigsinfo) |
-| [**stat**](./UserConfig#stat) | [UserConfigStatQuery](UserConfig#userconfigstatquery) | [Struct](./UserConfig#struct) |
+| [**create**](./UserConfig#create) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
+| [**update**](./UserConfig#update) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
+| [**set**](./UserConfig#set) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
+| [**delete**](./UserConfig#delete) | [UserConfigRequest](UserConfig#userconfigrequest) | [Empty](UserConfig#empty) |
+| [**get**](./UserConfig#get) | [GetUserConfigRequest](UserConfig#getuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
+| [**list**](./UserConfig#list) | [UserConfigQuery](UserConfig#userconfigquery) | [UserConfigsInfo](UserConfig#userconfigsinfo) |
+| [**stat**](./UserConfig#stat) | [UserConfigStatQuery](UserConfig#userconfigstatquery) | [Struct](UserConfig#struct) |
 
 
 
@@ -164,87 +164,87 @@ UserConfig API which configure environments for user
 
 
 ### GetUserConfigRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### SetUserConfigRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### UserConfigInfo
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### UserConfigQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     <br>
 
 ### UserConfigRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UserConfigStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UserConfigsInfo
-* **results** (UserConfigInfo)  `Required` 
+* **results** (UserConfigInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>

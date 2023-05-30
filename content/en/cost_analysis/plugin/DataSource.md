@@ -24,8 +24,8 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**init**](./DataSource#init) | [InitRequest](DataSource#initrequest) | [PluginInfo](./DataSource#plugininfo) |
-| [**verify**](./DataSource#verify) | [PluginVerifyRequest](DataSource#pluginverifyrequest) | [Empty](./DataSource#empty) |
+| [**init**](./DataSource#init) | [InitRequest](DataSource#initrequest) | [PluginInfo](DataSource#plugininfo) |
+| [**verify**](./DataSource#verify) | [PluginVerifyRequest](DataSource#pluginverifyrequest) | [Empty](DataSource#empty) |
 
 
 
@@ -50,10 +50,10 @@ bookFlatSection: true
 
 [InitRequest](./DataSource#initrequest)
 
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -70,7 +70,7 @@ bookFlatSection: true
  {{< tab "Response Example" >}}
 
 [PluginInfo](#PLUGININFO)
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
 
 
@@ -110,28 +110,28 @@ bookFlatSection: true
 
 
 ### InitRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### PluginInfo
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     <br>
 
 ### PluginVerifyRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>

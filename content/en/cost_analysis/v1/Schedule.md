@@ -24,14 +24,14 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Schedule#create) | [CreateScheduleRequest](Schedule#createschedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**update**](./Schedule#update) | [UpdateScheduleRequest](Schedule#updateschedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**enable**](./Schedule#enable) | [ScheduleRequest](Schedule#schedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**disable**](./Schedule#disable) | [ScheduleRequest](Schedule#schedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**delete**](./Schedule#delete) | [ScheduleRequest](Schedule#schedulerequest) | [Empty](./Schedule#empty) |
-| [**get**](./Schedule#get) | [GetScheduleRequest](Schedule#getschedulerequest) | [ScheduleInfo](./Schedule#scheduleinfo) |
-| [**list**](./Schedule#list) | [ScheduleQuery](Schedule#schedulequery) | [SchedulesInfo](./Schedule#schedulesinfo) |
-| [**stat**](./Schedule#stat) | [ScheduleStatQuery](Schedule#schedulestatquery) | [Struct](./Schedule#struct) |
+| [**create**](./Schedule#create) | [CreateScheduleRequest](Schedule#createschedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**update**](./Schedule#update) | [UpdateScheduleRequest](Schedule#updateschedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**enable**](./Schedule#enable) | [ScheduleRequest](Schedule#schedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**disable**](./Schedule#disable) | [ScheduleRequest](Schedule#schedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**delete**](./Schedule#delete) | [ScheduleRequest](Schedule#schedulerequest) | [Empty](Schedule#empty) |
+| [**get**](./Schedule#get) | [GetScheduleRequest](Schedule#getschedulerequest) | [ScheduleInfo](Schedule#scheduleinfo) |
+| [**list**](./Schedule#list) | [ScheduleQuery](Schedule#schedulequery) | [SchedulesInfo](Schedule#schedulesinfo) |
+| [**stat**](./Schedule#stat) | [ScheduleStatQuery](Schedule#schedulestatquery) | [Struct](Schedule#struct) |
 
 
 
@@ -182,142 +182,142 @@ bookFlatSection: true
 
 
 ### CreateScheduleRequest
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
     
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetScheduleRequest
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### ScheduleInfo
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **schedule** (Scheduled)  `Required` 
+* **schedule** (Scheduled)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **last_scheduled_at** (string)  `Required` 
+* **last_scheduled_at** (string)   `Required` 
 
     <br>
 
 ### ScheduleQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **schedule_id** (string) 
+* **schedule_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **state** (string) 
+* **state** (string)  
 
     
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
     <br>
 
 ### ScheduleRequest
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ScheduleStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### Scheduled
-* **cron** (string)  `Required` 
+* **cron** (string)   `Required` 
 
     
-* **interval** (int32)  `Required` 
+* **interval** (int32)   `Required` 
 
     
-* **minutes** (int32)  `Required` 
+* **minutes** (int32)  `Repeated`    `Required` 
 
     
-* **hours** (int32)  `Required` 
+* **hours** (int32)  `Repeated`    `Required` 
 
     <br>
 
 ### SchedulesInfo
-* **results** (ScheduleInfo)  `Required` 
+* **results** (ScheduleInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateScheduleRequest
-* **schedule_id** (string)  `Required` 
+* **schedule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **schedule** (Scheduled) 
+* **schedule** (Scheduled)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

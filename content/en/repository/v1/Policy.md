@@ -24,12 +24,12 @@ A Policy is a resource managing page access permissions. This resource can be us
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Policy#create) | [CreatePolicyRequest](Policy#createpolicyrequest) | [PolicyInfo](./Policy#policyinfo) |
-| [**update**](./Policy#update) | [UpdatePolicyRequest](Policy#updatepolicyrequest) | [PolicyInfo](./Policy#policyinfo) |
-| [**delete**](./Policy#delete) | [PolicyRequest](Policy#policyrequest) | [Empty](./Policy#empty) |
-| [**get**](./Policy#get) | [GetRepositoryPolicyRequest](Policy#getrepositorypolicyrequest) | [PolicyInfo](./Policy#policyinfo) |
-| [**list**](./Policy#list) | [PolicyQuery](Policy#policyquery) | [PoliciesInfo](./Policy#policiesinfo) |
-| [**stat**](./Policy#stat) | [PolicyStatQuery](Policy#policystatquery) | [Struct](./Policy#struct) |
+| [**create**](./Policy#create) | [CreatePolicyRequest](Policy#createpolicyrequest) | [PolicyInfo](Policy#policyinfo) |
+| [**update**](./Policy#update) | [UpdatePolicyRequest](Policy#updatepolicyrequest) | [PolicyInfo](Policy#policyinfo) |
+| [**delete**](./Policy#delete) | [PolicyRequest](Policy#policyrequest) | [Empty](Policy#empty) |
+| [**get**](./Policy#get) | [GetRepositoryPolicyRequest](Policy#getrepositorypolicyrequest) | [PolicyInfo](Policy#policyinfo) |
+| [**list**](./Policy#list) | [PolicyQuery](Policy#policyquery) | [PoliciesInfo](Policy#policiesinfo) |
+| [**stat**](./Policy#stat) | [PolicyStatQuery](Policy#policystatquery) | [Struct](Policy#struct) |
 
 
 
@@ -57,25 +57,25 @@ Creates a new Policy. The parameter `policy_id`, an identifier of Policy resourc
 
 [CreatePolicyRequest](./Policy#createpolicyrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **permissions** (string)  `Required` 
+* **permissions** (string)  `Repeated`    `Required` 
 
 
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -97,31 +97,31 @@ Creates a new Policy. The parameter `policy_id`, an identifier of Policy resourc
  {{< tab "Response Example" >}}
 
 [PolicyInfo](#POLICYINFO)
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **permissions** (string)  `Required` 
+* **permissions** (string)  `Repeated`   `Required` 
 
   list of permissions
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
   list of labels
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)  `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -175,22 +175,22 @@ Updates a specific Policy. You can make changes in Policy settings, including `n
 
 [UpdatePolicyRequest](./Policy#updatepolicyrequest)
 
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **permissions** (string) 
+* **permissions** (string)  `Repeated`   
 
 
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -212,31 +212,31 @@ Updates a specific Policy. You can make changes in Policy settings, including `n
  {{< tab "Response Example" >}}
 
 [PolicyInfo](#POLICYINFO)
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **permissions** (string)  `Required` 
+* **permissions** (string)  `Repeated`   `Required` 
 
   list of permissions
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
   list of labels
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)  `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -290,10 +290,10 @@ Deletes a specific Policy. You must specify the `policy_id` of the Policy to del
 
 [PolicyRequest](./Policy#policyrequest)
 
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -335,16 +335,16 @@ Gets a specific Policy. You must specify the `policy_id` of the Policy to get, a
 
 [GetRepositoryPolicyRequest](./Policy#getrepositorypolicyrequest)
 
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **repository_id** (string) 
+* **repository_id** (string)  
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -362,31 +362,31 @@ Gets a specific Policy. You must specify the `policy_id` of the Policy to get, a
  {{< tab "Response Example" >}}
 
 [PolicyInfo](#POLICYINFO)
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **permissions** (string)  `Required` 
+* **permissions** (string)  `Repeated`   `Required` 
 
   list of permissions
 
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
   list of labels
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)  `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -440,25 +440,25 @@ Gets a list of all Policies in a specific Repository. The parameter `repository_
 
 [PolicyQuery](./Policy#policyquery)
 
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **policy_id** (string) 
+* **policy_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **state** (State) 
+* **state** (State)  
 
 
 
@@ -476,11 +476,11 @@ Gets a list of all Policies in a specific Repository. The parameter `repository_
  {{< tab "Response Example" >}}
 
 [PoliciesInfo](#POLICIESINFO)
-* **results** (PolicyInfo)  `Required` 
+* **results** (PolicyInfo)  `Repeated`   `Required` 
 
   list of PolicyInfo
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -561,149 +561,149 @@ Gets a list of all Policies in a specific Repository. The parameter `repository_
 
 
 ### CreatePolicyRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **permissions** (string)  `Required` 
+* **permissions** (string)  `Repeated`    `Required` 
 
     
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>
 
 ### GetRepositoryPolicyRequest
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **repository_id** (string) 
+* **repository_id** (string)  
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### PoliciesInfo
-* **results** (PolicyInfo)  `Required` 
+* **results** (PolicyInfo)  `Repeated`    `Required` 
 
   *list of PolicyInfo*
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### PolicyInfo
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **permissions** (string)  `Required` 
+* **permissions** (string)  `Repeated`    `Required` 
 
   *list of permissions*
 
     
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
   *list of labels*
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **repository_info** (RepositoryInfo)  `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### PolicyQuery
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **policy_id** (string) 
+* **policy_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **state** (State) 
+* **state** (State)  
 
     <br>
 
 ### PolicyRequest
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### PolicyStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **repository_id** (string)  `Required` 
+* **repository_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UpdatePolicyRequest
-* **policy_id** (string)  `Required` 
+* **policy_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **permissions** (string) 
+* **permissions** (string)  `Repeated`   
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

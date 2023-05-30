@@ -24,12 +24,12 @@ description of dashboard
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./CustomWidget#create) | [CreateCustomWidgetRequest](CustomWidget#createcustomwidgetrequest) | [CustomWidgetInfo](./CustomWidget#customwidgetinfo) |
-| [**update**](./CustomWidget#update) | [UpdateCustomWidgetRequest](CustomWidget#updatecustomwidgetrequest) | [CustomWidgetInfo](./CustomWidget#customwidgetinfo) |
-| [**delete**](./CustomWidget#delete) | [CustomWidgetRequest](CustomWidget#customwidgetrequest) | [Empty](./CustomWidget#empty) |
-| [**get**](./CustomWidget#get) | [GetCustomWidgetRequest](CustomWidget#getcustomwidgetrequest) | [CustomWidgetInfo](./CustomWidget#customwidgetinfo) |
-| [**list**](./CustomWidget#list) | [CustomWidgetQuery](CustomWidget#customwidgetquery) | [CustomWidgetsInfo](./CustomWidget#customwidgetsinfo) |
-| [**stat**](./CustomWidget#stat) | [CustomWidgetStatQuery](CustomWidget#customwidgetstatquery) | [Struct](./CustomWidget#struct) |
+| [**create**](./CustomWidget#create) | [CreateCustomWidgetRequest](CustomWidget#createcustomwidgetrequest) | [CustomWidgetInfo](CustomWidget#customwidgetinfo) |
+| [**update**](./CustomWidget#update) | [UpdateCustomWidgetRequest](CustomWidget#updatecustomwidgetrequest) | [CustomWidgetInfo](CustomWidget#customwidgetinfo) |
+| [**delete**](./CustomWidget#delete) | [CustomWidgetRequest](CustomWidget#customwidgetrequest) | [Empty](CustomWidget#empty) |
+| [**get**](./CustomWidget#get) | [GetCustomWidgetRequest](CustomWidget#getcustomwidgetrequest) | [CustomWidgetInfo](CustomWidget#customwidgetinfo) |
+| [**list**](./CustomWidget#list) | [CustomWidgetQuery](CustomWidget#customwidgetquery) | [CustomWidgetsInfo](CustomWidget#customwidgetsinfo) |
+| [**stat**](./CustomWidget#stat) | [CustomWidgetStatQuery](CustomWidget#customwidgetstatquery) | [Struct](CustomWidget#struct) |
 
 
 
@@ -146,149 +146,149 @@ description of dashboard
 
 
 ### CreateCustomWidgetRequest
-* **widget_name** (string)  `Required` 
+* **widget_name** (string)   `Required` 
 
     
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **settings** (Struct) 
+* **settings** (Struct)  
 
     
-* **inherit_options** (Struct) 
+* **inherit_options** (Struct)  
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### CustomWidgetInfo
-* **custom_widget_id** (string)  `Required` 
+* **custom_widget_id** (string)   `Required` 
 
     
-* **widget_name** (string)  `Required` 
+* **widget_name** (string)   `Required` 
 
     
-* **title** (string)  `Required` 
+* **title** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **settings** (Struct)  `Required` 
+* **settings** (Struct)   `Required` 
 
     
-* **inherit_options** (Struct)  `Required` 
+* **inherit_options** (Struct)   `Required` 
 
     
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### CustomWidgetQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **custom_widget_id** (string) 
+* **custom_widget_id** (string)  
 
     
-* **widget_name** (string) 
+* **widget_name** (string)  
 
     
-* **title** (string) 
+* **title** (string)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     <br>
 
 ### CustomWidgetRequest
-* **custom_widget_id** (string)  `Required` 
+* **custom_widget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CustomWidgetStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CustomWidgetsInfo
-* **results** (CustomWidgetInfo)  `Required` 
+* **results** (CustomWidgetInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### GetCustomWidgetRequest
-* **custom_widget_id** (string)  `Required` 
+* **custom_widget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateCustomWidgetRequest
-* **custom_widget_id** (string)  `Required` 
+* **custom_widget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **title** (string) 
+* **title** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **settings** (Struct) 
+* **settings** (Struct)  
 
     
-* **inherit_options** (Struct) 
+* **inherit_options** (Struct)  
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

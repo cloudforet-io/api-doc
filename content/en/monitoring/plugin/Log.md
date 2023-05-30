@@ -24,7 +24,7 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**list**](./Log#list) | [LogRequest](Log#logrequest) | [LogsDataInfo](./Log#logsdatainfo) |
+| [**list**](./Log#list) | [LogRequest](Log#logrequest) | [LogsDataInfo](Log#logsdatainfo) |
 
 
 
@@ -53,43 +53,43 @@ bookFlatSection: true
 
 
 ### LogRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **query** (Struct)  `Required` 
+* **query** (Struct)   `Required` 
 
     
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     
-* **keyword** (string) 
+* **keyword** (string)  
 
     
-* **sort** (Sort) 
+* **sort** (Sort)  
 
     
-* **limit** (int32) 
+* **limit** (int32)  
 
     <br>
 
 ### LogsDataInfo
-* **results** (Struct)  `Required` 
+* **results** (Struct)  `Repeated`    `Required` 
 
     <br>
 
 ### Sort
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **desc** (bool)  `Required` 
+* **desc** (bool)   `Required` 
 
     <br>

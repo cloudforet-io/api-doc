@@ -24,13 +24,13 @@ A Budget is a planned amount of cost expenditure for reduction and prediction of
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Budget#create) | [CreateBudgetRequest](Budget#createbudgetrequest) | [BudgetInfo](./Budget#budgetinfo) |
-| [**update**](./Budget#update) | [UpdateBudgetRequest](Budget#updatebudgetrequest) | [BudgetInfo](./Budget#budgetinfo) |
-| [**set_notification**](./Budget#set_notification) | [SetBudgetNotificationRequest](Budget#setbudgetnotificationrequest) | [BudgetInfo](./Budget#budgetinfo) |
-| [**delete**](./Budget#delete) | [BudgetRequest](Budget#budgetrequest) | [Empty](./Budget#empty) |
-| [**get**](./Budget#get) | [GetBudgetRequest](Budget#getbudgetrequest) | [BudgetInfo](./Budget#budgetinfo) |
-| [**list**](./Budget#list) | [BudgetQuery](Budget#budgetquery) | [BudgetsInfo](./Budget#budgetsinfo) |
-| [**stat**](./Budget#stat) | [BudgetStatQuery](Budget#budgetstatquery) | [Struct](./Budget#struct) |
+| [**create**](./Budget#create) | [CreateBudgetRequest](Budget#createbudgetrequest) | [BudgetInfo](Budget#budgetinfo) |
+| [**update**](./Budget#update) | [UpdateBudgetRequest](Budget#updatebudgetrequest) | [BudgetInfo](Budget#budgetinfo) |
+| [**set_notification**](./Budget#set_notification) | [SetBudgetNotificationRequest](Budget#setbudgetnotificationrequest) | [BudgetInfo](Budget#budgetinfo) |
+| [**delete**](./Budget#delete) | [BudgetRequest](Budget#budgetrequest) | [Empty](Budget#empty) |
+| [**get**](./Budget#get) | [GetBudgetRequest](Budget#getbudgetrequest) | [BudgetInfo](Budget#budgetinfo) |
+| [**list**](./Budget#list) | [BudgetQuery](Budget#budgetquery) | [BudgetsInfo](Budget#budgetsinfo) |
+| [**stat**](./Budget#stat) | [BudgetStatQuery](Budget#budgetstatquery) | [Struct](Budget#struct) |
 
 
 
@@ -58,40 +58,40 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 
 [CreateBudgetRequest](./Budget#createbudgetrequest)
 
-* **time_unit** (TimeUnit)  `Required` 
+* **time_unit** (TimeUnit)   `Required` 
 
 
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
 
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **limit** (float) 
+* **limit** (float)  
 
 
-* **planned_limits** (PlannedLimit) 
+* **planned_limits** (PlannedLimit)  `Repeated`   
 
 
-* **cost_types** (Struct) 
+* **cost_types** (Struct)  
 
 
-* **notifications** (BudgetNotification) 
+* **notifications** (BudgetNotification)  `Repeated`   
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **project_group_id** (string) 
+* **project_group_id** (string)  
 
 
 
@@ -124,37 +124,37 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
  {{< tab "Response Example" >}}
 
 [BudgetInfo](#BUDGETINFO)
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **limit** (float)  `Required` 
+* **limit** (float)   `Required` 
 
-* **planned_limits** (PlannedLimit)  `Required` 
+* **planned_limits** (PlannedLimit)  `Repeated`   `Required` 
 
-* **total_usage_usd_cost** (float)  `Required` 
+* **total_usage_usd_cost** (float)   `Required` 
 
-* **cost_types** (Struct)  `Required` 
+* **cost_types** (Struct)   `Required` 
 
-* **time_unit** (TimeUnit)  `Required` 
+* **time_unit** (TimeUnit)   `Required` 
 
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
-* **notifications** (BudgetNotification)  `Required` 
+* **notifications** (BudgetNotification)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **project_group_id** (string)  `Required` 
+* **project_group_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -254,25 +254,25 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
 
 [UpdateBudgetRequest](./Budget#updatebudgetrequest)
 
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **limit** (float) 
+* **limit** (float)  
 
 
-* **planned_limits** (PlannedLimit) 
+* **planned_limits** (PlannedLimit)  `Repeated`   
 
 
-* **end** (string) 
+* **end** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -301,37 +301,37 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
  {{< tab "Response Example" >}}
 
 [BudgetInfo](#BUDGETINFO)
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **limit** (float)  `Required` 
+* **limit** (float)   `Required` 
 
-* **planned_limits** (PlannedLimit)  `Required` 
+* **planned_limits** (PlannedLimit)  `Repeated`   `Required` 
 
-* **total_usage_usd_cost** (float)  `Required` 
+* **total_usage_usd_cost** (float)   `Required` 
 
-* **cost_types** (Struct)  `Required` 
+* **cost_types** (Struct)   `Required` 
 
-* **time_unit** (TimeUnit)  `Required` 
+* **time_unit** (TimeUnit)   `Required` 
 
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
-* **notifications** (BudgetNotification)  `Required` 
+* **notifications** (BudgetNotification)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **project_group_id** (string)  `Required` 
+* **project_group_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -431,13 +431,13 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
 
 [SetBudgetNotificationRequest](./Budget#setbudgetnotificationrequest)
 
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
 
-* **notifications** (BudgetNotification)  `Required` 
+* **notifications** (BudgetNotification)  `Repeated`    `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -466,37 +466,37 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
  {{< tab "Response Example" >}}
 
 [BudgetInfo](#BUDGETINFO)
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **limit** (float)  `Required` 
+* **limit** (float)   `Required` 
 
-* **planned_limits** (PlannedLimit)  `Required` 
+* **planned_limits** (PlannedLimit)  `Repeated`   `Required` 
 
-* **total_usage_usd_cost** (float)  `Required` 
+* **total_usage_usd_cost** (float)   `Required` 
 
-* **cost_types** (Struct)  `Required` 
+* **cost_types** (Struct)   `Required` 
 
-* **time_unit** (TimeUnit)  `Required` 
+* **time_unit** (TimeUnit)   `Required` 
 
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
-* **notifications** (BudgetNotification)  `Required` 
+* **notifications** (BudgetNotification)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **project_group_id** (string)  `Required` 
+* **project_group_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -596,10 +596,10 @@ Deletes a specific Budget. You must specify the `budget_id` of the Budget to del
 
 [BudgetRequest](./Budget#budgetrequest)
 
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -640,37 +640,37 @@ Gets a specific Budget. Prints detailed information about the Budget, including 
  {{< tab "Response Example" >}}
 
 [BudgetInfo](#BUDGETINFO)
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **limit** (float)  `Required` 
+* **limit** (float)   `Required` 
 
-* **planned_limits** (PlannedLimit)  `Required` 
+* **planned_limits** (PlannedLimit)  `Repeated`   `Required` 
 
-* **total_usage_usd_cost** (float)  `Required` 
+* **total_usage_usd_cost** (float)   `Required` 
 
-* **cost_types** (Struct)  `Required` 
+* **cost_types** (Struct)   `Required` 
 
-* **time_unit** (TimeUnit)  `Required` 
+* **time_unit** (TimeUnit)   `Required` 
 
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
-* **notifications** (BudgetNotification)  `Required` 
+* **notifications** (BudgetNotification)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **project_group_id** (string)  `Required` 
+* **project_group_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -770,25 +770,25 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
 [BudgetQuery](./Budget#budgetquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **budget_id** (string) 
+* **budget_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
-* **project_group_id** (string) 
+* **project_group_id** (string)  
 
 
-* **time_unit** (TimeUnit) 
+* **time_unit** (TimeUnit)  
 
 
 
@@ -805,9 +805,9 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
  {{< tab "Response Example" >}}
 
 [BudgetsInfo](#BUDGETSINFO)
-* **results** (BudgetInfo)  `Required` 
+* **results** (BudgetInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -916,200 +916,200 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
 
 ### BudgetInfo
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **limit** (float)  `Required` 
+* **limit** (float)   `Required` 
 
     
-* **planned_limits** (PlannedLimit)  `Required` 
+* **planned_limits** (PlannedLimit)  `Repeated`    `Required` 
 
     
-* **total_usage_usd_cost** (float)  `Required` 
+* **total_usage_usd_cost** (float)   `Required` 
 
     
-* **cost_types** (Struct)  `Required` 
+* **cost_types** (Struct)   `Required` 
 
     
-* **time_unit** (TimeUnit)  `Required` 
+* **time_unit** (TimeUnit)   `Required` 
 
     
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **notifications** (BudgetNotification)  `Required` 
+* **notifications** (BudgetNotification)  `Repeated`    `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **project_group_id** (string)  `Required` 
+* **project_group_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### BudgetNotification
-* **threshold** (float)  `Required` 
+* **threshold** (float)   `Required` 
 
     
-* **unit** (Unit)  `Required` 
+* **unit** (Unit)   `Required` 
 
     
-* **notification_type** (NotificationType)  `Required` 
+* **notification_type** (NotificationType)   `Required` 
 
     <br>
 
 ### BudgetQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **budget_id** (string) 
+* **budget_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **project_group_id** (string) 
+* **project_group_id** (string)  
 
     
-* **time_unit** (TimeUnit) 
+* **time_unit** (TimeUnit)  
 
     <br>
 
 ### BudgetRequest
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### BudgetStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### BudgetsInfo
-* **results** (BudgetInfo)  `Required` 
+* **results** (BudgetInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### CreateBudgetRequest
-* **time_unit** (TimeUnit)  `Required` 
+* **time_unit** (TimeUnit)   `Required` 
 
     
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **limit** (float) 
+* **limit** (float)  
 
     
-* **planned_limits** (PlannedLimit) 
+* **planned_limits** (PlannedLimit)  `Repeated`   
 
     
-* **cost_types** (Struct) 
+* **cost_types** (Struct)  
 
     
-* **notifications** (BudgetNotification) 
+* **notifications** (BudgetNotification)  `Repeated`   
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     
-* **project_group_id** (string) 
+* **project_group_id** (string)  
 
     <br>
 
 ### GetBudgetRequest
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### PlannedLimit
-* **date** (string)  `Required` 
+* **date** (string)   `Required` 
 
     
-* **limit** (float)  `Required` 
+* **limit** (float)   `Required` 
 
     <br>
 
 ### SetBudgetNotificationRequest
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
     
-* **notifications** (BudgetNotification)  `Required` 
+* **notifications** (BudgetNotification)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UpdateBudgetRequest
-* **budget_id** (string)  `Required` 
+* **budget_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **limit** (float) 
+* **limit** (float)  
 
     
-* **planned_limits** (PlannedLimit) 
+* **planned_limits** (PlannedLimit)  `Repeated`   
 
     
-* **end** (string) 
+* **end** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

@@ -24,13 +24,13 @@ A DataSourceRule is a resource filtering the raw data from the DataSource. The C
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./DataSourceRule#create) | [CreateDataSourceRuleRequest](DataSourceRule#createdatasourcerulerequest) | [DataSourceRuleInfo](./DataSourceRule#datasourceruleinfo) |
-| [**update**](./DataSourceRule#update) | [UpdateDataSourceRuleRequest](DataSourceRule#updatedatasourcerulerequest) | [DataSourceRuleInfo](./DataSourceRule#datasourceruleinfo) |
-| [**change_order**](./DataSourceRule#change_order) | [ChangeDataSourceRuleOrderRequest](DataSourceRule#changedatasourceruleorderrequest) | [DataSourceRuleInfo](./DataSourceRule#datasourceruleinfo) |
-| [**delete**](./DataSourceRule#delete) | [DataSourceRuleRequest](DataSourceRule#datasourcerulerequest) | [Empty](./DataSourceRule#empty) |
-| [**get**](./DataSourceRule#get) | [GetDataSourceRuleRequest](DataSourceRule#getdatasourcerulerequest) | [DataSourceRuleInfo](./DataSourceRule#datasourceruleinfo) |
-| [**list**](./DataSourceRule#list) | [DataSourceRuleQuery](DataSourceRule#datasourcerulequery) | [DataSourceRulesInfo](./DataSourceRule#datasourcerulesinfo) |
-| [**stat**](./DataSourceRule#stat) | [DataSourceRuleStatQuery](DataSourceRule#datasourcerulestatquery) | [Struct](./DataSourceRule#struct) |
+| [**create**](./DataSourceRule#create) | [CreateDataSourceRuleRequest](DataSourceRule#createdatasourcerulerequest) | [DataSourceRuleInfo](DataSourceRule#datasourceruleinfo) |
+| [**update**](./DataSourceRule#update) | [UpdateDataSourceRuleRequest](DataSourceRule#updatedatasourcerulerequest) | [DataSourceRuleInfo](DataSourceRule#datasourceruleinfo) |
+| [**change_order**](./DataSourceRule#change_order) | [ChangeDataSourceRuleOrderRequest](DataSourceRule#changedatasourceruleorderrequest) | [DataSourceRuleInfo](DataSourceRule#datasourceruleinfo) |
+| [**delete**](./DataSourceRule#delete) | [DataSourceRuleRequest](DataSourceRule#datasourcerulerequest) | [Empty](DataSourceRule#empty) |
+| [**get**](./DataSourceRule#get) | [GetDataSourceRuleRequest](DataSourceRule#getdatasourcerulerequest) | [DataSourceRuleInfo](DataSourceRule#datasourceruleinfo) |
+| [**list**](./DataSourceRule#list) | [DataSourceRuleQuery](DataSourceRule#datasourcerulequery) | [DataSourceRulesInfo](DataSourceRule#datasourcerulesinfo) |
+| [**stat**](./DataSourceRule#stat) | [DataSourceRuleStatQuery](DataSourceRule#datasourcerulestatquery) | [Struct](DataSourceRule#struct) |
 
 
 
@@ -58,28 +58,28 @@ Creates a new DataSourceRule. When creating the resource, this method can apply 
 
 [CreateDataSourceRuleRequest](./DataSourceRule#createdatasourcerulerequest)
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
 
-* **actions** (DataSourceRuleActions)  `Required` 
+* **actions** (DataSourceRuleActions)   `Required` 
 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **conditions** (DataSourceRuleCondition) 
+* **conditions** (DataSourceRuleCondition)  `Repeated`   
 
 
-* **options** (DataSourceRuleOptions) 
+* **options** (DataSourceRuleOptions)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -103,29 +103,29 @@ Creates a new DataSourceRule. When creating the resource, this method can apply 
  {{< tab "Response Example" >}}
 
 [DataSourceRuleInfo](#DATASOURCERULEINFO)
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
-* **conditions** (DataSourceRuleCondition)  `Required` 
+* **conditions** (DataSourceRuleCondition)  `Repeated`   `Required` 
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
-* **actions** (DataSourceRuleActions)  `Required` 
+* **actions** (DataSourceRuleActions)   `Required` 
 
-* **options** (DataSourceRuleOptions)  `Required` 
+* **options** (DataSourceRuleOptions)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -183,28 +183,28 @@ Updates a specific DataSourceRule. You can make changes in DataSourceRule settin
 
 [UpdateDataSourceRuleRequest](./DataSourceRule#updatedatasourcerulerequest)
 
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **conditions** (DataSourceRuleCondition) 
+* **conditions** (DataSourceRuleCondition)  `Repeated`   
 
 
-* **conditions_policy** (ConditionsPolicy) 
+* **conditions_policy** (ConditionsPolicy)  
 
 
-* **actions** (DataSourceRuleActions) 
+* **actions** (DataSourceRuleActions)  
 
 
-* **options** (DataSourceRuleOptions) 
+* **options** (DataSourceRuleOptions)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -233,29 +233,29 @@ Updates a specific DataSourceRule. You can make changes in DataSourceRule settin
  {{< tab "Response Example" >}}
 
 [DataSourceRuleInfo](#DATASOURCERULEINFO)
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
-* **conditions** (DataSourceRuleCondition)  `Required` 
+* **conditions** (DataSourceRuleCondition)  `Repeated`   `Required` 
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
-* **actions** (DataSourceRuleActions)  `Required` 
+* **actions** (DataSourceRuleActions)   `Required` 
 
-* **options** (DataSourceRuleOptions)  `Required` 
+* **options** (DataSourceRuleOptions)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -313,13 +313,13 @@ Changes the priority order of the DataSourceRules to apply. If there are multipl
 
 [ChangeDataSourceRuleOrderRequest](./DataSourceRule#changedatasourceruleorderrequest)
 
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -337,29 +337,29 @@ Changes the priority order of the DataSourceRules to apply. If there are multipl
  {{< tab "Response Example" >}}
 
 [DataSourceRuleInfo](#DATASOURCERULEINFO)
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
-* **conditions** (DataSourceRuleCondition)  `Required` 
+* **conditions** (DataSourceRuleCondition)  `Repeated`   `Required` 
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
-* **actions** (DataSourceRuleActions)  `Required` 
+* **actions** (DataSourceRuleActions)   `Required` 
 
-* **options** (DataSourceRuleOptions)  `Required` 
+* **options** (DataSourceRuleOptions)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -417,10 +417,10 @@ Deletes a specific DataSourceRule. You must specify the `data_source_rule_id` of
 
 [DataSourceRuleRequest](./DataSourceRule#datasourcerulerequest)
 
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -462,13 +462,13 @@ Gets a specific DataSourceRule. Prints detailed information about the DataSource
 
 [GetDataSourceRuleRequest](./DataSourceRule#getdatasourcerulerequest)
 
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -485,29 +485,29 @@ Gets a specific DataSourceRule. Prints detailed information about the DataSource
  {{< tab "Response Example" >}}
 
 [DataSourceRuleInfo](#DATASOURCERULEINFO)
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
-* **conditions** (DataSourceRuleCondition)  `Required` 
+* **conditions** (DataSourceRuleCondition)  `Repeated`   `Required` 
 
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
-* **actions** (DataSourceRuleActions)  `Required` 
+* **actions** (DataSourceRuleActions)   `Required` 
 
-* **options** (DataSourceRuleOptions)  `Required` 
+* **options** (DataSourceRuleOptions)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -565,19 +565,19 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 
 [DataSourceRuleQuery](./DataSourceRule#datasourcerulequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **data_source_rule_id** (string) 
+* **data_source_rule_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
 
 
@@ -594,9 +594,9 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
  {{< tab "Response Example" >}}
 
 [DataSourceRulesInfo](#DATASOURCERULESINFO)
-* **results** (DataSourceRuleInfo)  `Required` 
+* **results** (DataSourceRuleInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -679,192 +679,192 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 
 
 ### ChangeDataSourceRuleOrderRequest
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
     
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CreateDataSourceRuleRequest
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
     
-* **actions** (DataSourceRuleActions)  `Required` 
+* **actions** (DataSourceRuleActions)   `Required` 
 
     
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **conditions** (DataSourceRuleCondition) 
+* **conditions** (DataSourceRuleCondition)  `Repeated`   
 
     
-* **options** (DataSourceRuleOptions) 
+* **options** (DataSourceRuleOptions)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### DataSourceRuleActions
-* **change_project** (string)  `Required` 
+* **change_project** (string)   `Required` 
 
     
-* **match_project** (MatchRule)  `Required` 
+* **match_project** (MatchRule)   `Required` 
 
     
-* **match_service_account** (MatchRule)  `Required` 
+* **match_service_account** (MatchRule)   `Required` 
 
     
-* **add_additional_info** (Struct)  `Required` 
+* **add_additional_info** (Struct)   `Required` 
 
     <br>
 
 ### DataSourceRuleCondition
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **value** (string)  `Required` 
+* **value** (string)   `Required` 
 
     
-* **operator** (string)  `Required` 
+* **operator** (string)   `Required` 
 
     <br>
 
 ### DataSourceRuleInfo
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **order** (int32)  `Required` 
+* **order** (int32)   `Required` 
 
     
-* **conditions** (DataSourceRuleCondition)  `Required` 
+* **conditions** (DataSourceRuleCondition)  `Repeated`    `Required` 
 
     
-* **conditions_policy** (ConditionsPolicy)  `Required` 
+* **conditions_policy** (ConditionsPolicy)   `Required` 
 
     
-* **actions** (DataSourceRuleActions)  `Required` 
+* **actions** (DataSourceRuleActions)   `Required` 
 
     
-* **options** (DataSourceRuleOptions)  `Required` 
+* **options** (DataSourceRuleOptions)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **rule_type** (string)  `Required` 
+* **rule_type** (string)   `Required` 
 
     
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### DataSourceRuleOptions
-* **stop_processing** (bool)  `Required` 
+* **stop_processing** (bool)   `Required` 
 
     <br>
 
 ### DataSourceRuleQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **data_source_rule_id** (string) 
+* **data_source_rule_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
     <br>
 
 ### DataSourceRuleRequest
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### DataSourceRuleStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### DataSourceRulesInfo
-* **results** (DataSourceRuleInfo)  `Required` 
+* **results** (DataSourceRuleInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### GetDataSourceRuleRequest
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### MatchRule
-* **source** (string)  `Required` 
+* **source** (string)   `Required` 
 
     
-* **target** (string)  `Required` 
+* **target** (string)   `Required` 
 
     <br>
 
 ### UpdateDataSourceRuleRequest
-* **data_source_rule_id** (string)  `Required` 
+* **data_source_rule_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **conditions** (DataSourceRuleCondition) 
+* **conditions** (DataSourceRuleCondition)  `Repeated`   
 
     
-* **conditions_policy** (ConditionsPolicy) 
+* **conditions_policy** (ConditionsPolicy)  
 
     
-* **actions** (DataSourceRuleActions) 
+* **actions** (DataSourceRuleActions)  
 
     
-* **options** (DataSourceRuleOptions) 
+* **options** (DataSourceRuleOptions)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

@@ -24,8 +24,8 @@ A Metric is a monitoring metric data delivered from an external cloud service vi
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**list**](./Metric#list) | [MetricRequest](Metric#metricrequest) | [MetricsInfo](./Metric#metricsinfo) |
-| [**get_data**](./Metric#get_data) | [MetricDataRequest](Metric#metricdatarequest) | [MetricDataInfo](./Metric#metricdatainfo) |
+| [**list**](./Metric#list) | [MetricRequest](Metric#metricrequest) | [MetricsInfo](Metric#metricsinfo) |
+| [**get_data**](./Metric#get_data) | [MetricDataRequest](Metric#metricdatarequest) | [MetricDataInfo](Metric#metricdatainfo) |
 
 
 
@@ -68,76 +68,76 @@ Gets a Metric from a specific cloud service resource `instance`. By specifying t
 
 
 ### MetricDataInfo
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
     
-* **values** (Struct)  `Required` 
+* **values** (Struct)   `Required` 
 
     <br>
 
 ### MetricDataRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **metric_query** (Struct)  `Required` 
+* **metric_query** (Struct)   `Required` 
 
     
-* **metric** (string)  `Required` 
+* **metric** (string)   `Required` 
 
   *metric identifier in case of requested metric info is not a single.*
 
     
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     
-* **period** (int32) 
+* **period** (int32)  
 
     
-* **stat** (string) 
+* **stat** (string)  
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>
 
 ### MetricInfo
-* **key** (string)  `Required` 
+* **key** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **group** (string)  `Required` 
+* **group** (string)   `Required` 
 
     
-* **unit** (Struct)  `Required` 
+* **unit** (Struct)   `Required` 
 
     
-* **metric_query** (Struct)  `Required` 
+* **metric_query** (Struct)   `Required` 
 
     <br>
 
 ### MetricRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **query** (Struct)  `Required` 
+* **query** (Struct)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>
 
 ### MetricsInfo
-* **metrics** (MetricInfo)  `Required` 
+* **metrics** (MetricInfo)  `Repeated`    `Required` 
 
     <br>

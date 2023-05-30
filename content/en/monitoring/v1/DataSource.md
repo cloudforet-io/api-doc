@@ -24,16 +24,16 @@ A DataSource is a plugin instance collecting `metric` and `log` data from Cloudf
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**register**](./DataSource#register) | [RegisterDataSourceRequest](DataSource#registerdatasourcerequest) | [DataSourceInfo](./DataSource#datasourceinfo) |
-| [**update**](./DataSource#update) | [UpdateDataSourceRequest](DataSource#updatedatasourcerequest) | [DataSourceInfo](./DataSource#datasourceinfo) |
-| [**enable**](./DataSource#enable) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](./DataSource#datasourceinfo) |
-| [**disable**](./DataSource#disable) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](./DataSource#datasourceinfo) |
-| [**deregister**](./DataSource#deregister) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](./DataSource#empty) |
-| [**update_plugin**](./DataSource#update_plugin) | [UpdateDataSourcePluginRequest](DataSource#updatedatasourcepluginrequest) | [DataSourceInfo](./DataSource#datasourceinfo) |
-| [**verify_plugin**](./DataSource#verify_plugin) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](./DataSource#empty) |
-| [**get**](./DataSource#get) | [GetDataSourceRequest](DataSource#getdatasourcerequest) | [DataSourceInfo](./DataSource#datasourceinfo) |
-| [**list**](./DataSource#list) | [DataSourceQuery](DataSource#datasourcequery) | [DataSourcesInfo](./DataSource#datasourcesinfo) |
-| [**stat**](./DataSource#stat) | [DataSourceStatQuery](DataSource#datasourcestatquery) | [Struct](./DataSource#struct) |
+| [**register**](./DataSource#register) | [RegisterDataSourceRequest](DataSource#registerdatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**update**](./DataSource#update) | [UpdateDataSourceRequest](DataSource#updatedatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**enable**](./DataSource#enable) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**disable**](./DataSource#disable) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**deregister**](./DataSource#deregister) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](DataSource#empty) |
+| [**update_plugin**](./DataSource#update_plugin) | [UpdateDataSourcePluginRequest](DataSource#updatedatasourcepluginrequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**verify_plugin**](./DataSource#verify_plugin) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](DataSource#empty) |
+| [**get**](./DataSource#get) | [GetDataSourceRequest](DataSource#getdatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**list**](./DataSource#list) | [DataSourceQuery](DataSource#datasourcequery) | [DataSourcesInfo](DataSource#datasourcesinfo) |
+| [**stat**](./DataSource#stat) | [DataSourceStatQuery](DataSource#datasourcestatquery) | [Struct](DataSource#struct) |
 
 
 
@@ -61,16 +61,16 @@ Registers a DataSource with information of the plugin to use. Information of the
 
 [RegisterDataSourceRequest](./DataSource#registerdatasourcerequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -99,25 +99,25 @@ Registers a DataSource with information of the plugin to use. Information of the
  {{< tab "Response Example" >}}
 
 [DataSourceInfo](#DATASOURCEINFO)
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **monitoring_type** (MonitoringType)  `Required` 
+* **monitoring_type** (MonitoringType)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -195,16 +195,16 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 
 [UpdateDataSourceRequest](./DataSource#updatedatasourcerequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -224,25 +224,25 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
  {{< tab "Response Example" >}}
 
 [DataSourceInfo](#DATASOURCEINFO)
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **monitoring_type** (MonitoringType)  `Required` 
+* **monitoring_type** (MonitoringType)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -320,10 +320,10 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 
 [DataSourceRequest](./DataSource#datasourcerequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -341,25 +341,25 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
  {{< tab "Response Example" >}}
 
 [DataSourceInfo](#DATASOURCEINFO)
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **monitoring_type** (MonitoringType)  `Required` 
+* **monitoring_type** (MonitoringType)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -437,10 +437,10 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 
 [DataSourceRequest](./DataSource#datasourcerequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -458,25 +458,25 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
  {{< tab "Response Example" >}}
 
 [DataSourceInfo](#DATASOURCEINFO)
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **monitoring_type** (MonitoringType)  `Required` 
+* **monitoring_type** (MonitoringType)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -554,10 +554,10 @@ Deregisters and deletes a specific DataSource. You must specify the `data_source
 
 [DataSourceRequest](./DataSource#datasourcerequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -600,19 +600,19 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 
 [UpdateDataSourcePluginRequest](./DataSource#updatedatasourcepluginrequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **version** (string) 
+* **version** (string)  
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
 
-* **upgrade_mode** (UpgradeMode) 
+* **upgrade_mode** (UpgradeMode)  
 
 
 
@@ -633,25 +633,25 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
  {{< tab "Response Example" >}}
 
 [DataSourceInfo](#DATASOURCEINFO)
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **monitoring_type** (MonitoringType)  `Required` 
+* **monitoring_type** (MonitoringType)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -729,10 +729,10 @@ Verifies the plugin of a specific DataSource. This method validates the plugin d
 
 [DataSourceRequest](./DataSource#datasourcerequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -775,13 +775,13 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 
 [GetDataSourceRequest](./DataSource#getdatasourcerequest)
 
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -799,25 +799,25 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
  {{< tab "Response Example" >}}
 
 [DataSourceInfo](#DATASOURCEINFO)
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **monitoring_type** (MonitoringType)  `Required` 
+* **monitoring_type** (MonitoringType)   `Required` 
 
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -895,25 +895,25 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
 [DataSourceQuery](./DataSource#datasourcequery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **state** (string) 
+* **state** (string)  
 
 
-* **monitoring_type** (MonitoringType) 
+* **monitoring_type** (MonitoringType)  
 
 
-* **provider** (string) 
+* **provider** (string)  
 
 
 
@@ -931,9 +931,9 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
  {{< tab "Response Example" >}}
 
 [DataSourcesInfo](#DATASOURCESINFO)
-* **results** (DataSourceInfo)  `Required` 
+* **results** (DataSourceInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -1012,159 +1012,159 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
 
 ### DataSourceInfo
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **monitoring_type** (MonitoringType)  `Required` 
+* **monitoring_type** (MonitoringType)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
     
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### DataSourcePluginInfo
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     
-* **upgrade_mode** (UpgradeMode)  `Required` 
+* **upgrade_mode** (UpgradeMode)   `Required` 
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
     
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     <br>
 
 ### DataSourceQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **data_source_id** (string) 
+* **data_source_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **state** (string) 
+* **state** (string)  
 
     
-* **monitoring_type** (MonitoringType) 
+* **monitoring_type** (MonitoringType)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     <br>
 
 ### DataSourceRequest
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### DataSourceStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### DataSourcesInfo
-* **results** (DataSourceInfo)  `Required` 
+* **results** (DataSourceInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### GetDataSourceRequest
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### RegisterDataSourceRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **plugin_info** (DataSourcePluginInfo)  `Required` 
+* **plugin_info** (DataSourcePluginInfo)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### UpdateDataSourcePluginRequest
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **version** (string) 
+* **version** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **upgrade_mode** (UpgradeMode) 
+* **upgrade_mode** (UpgradeMode)  
 
     <br>
 
 ### UpdateDataSourceRequest
-* **data_source_id** (string)  `Required` 
+* **data_source_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

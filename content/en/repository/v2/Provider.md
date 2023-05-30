@@ -24,12 +24,12 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Provider#create) | [CreateProviderRequest](Provider#createproviderrequest) | [ProviderInfo](./Provider#providerinfo) |
-| [**update**](./Provider#update) | [UpdateProviderRequest](Provider#updateproviderrequest) | [ProviderInfo](./Provider#providerinfo) |
-| [**sync**](./Provider#sync) | [ProviderRequest](Provider#providerrequest) | [ProviderInfo](./Provider#providerinfo) |
-| [**delete**](./Provider#delete) | [ProviderRequest](Provider#providerrequest) | [Empty](./Provider#empty) |
-| [**get**](./Provider#get) | [GetProviderRequest](Provider#getproviderrequest) | [ProviderInfo](./Provider#providerinfo) |
-| [**list**](./Provider#list) | [ProviderQuery](Provider#providerquery) | [ProvidersInfo](./Provider#providersinfo) |
+| [**create**](./Provider#create) | [CreateProviderRequest](Provider#createproviderrequest) | [ProviderInfo](Provider#providerinfo) |
+| [**update**](./Provider#update) | [UpdateProviderRequest](Provider#updateproviderrequest) | [ProviderInfo](Provider#providerinfo) |
+| [**sync**](./Provider#sync) | [ProviderRequest](Provider#providerrequest) | [ProviderInfo](Provider#providerinfo) |
+| [**delete**](./Provider#delete) | [ProviderRequest](Provider#providerrequest) | [Empty](Provider#empty) |
+| [**get**](./Provider#get) | [GetProviderRequest](Provider#getproviderrequest) | [ProviderInfo](Provider#providerinfo) |
+| [**list**](./Provider#list) | [ProviderQuery](Provider#providerquery) | [ProvidersInfo](Provider#providersinfo) |
 
 
 
@@ -146,209 +146,209 @@ bookFlatSection: true
 
 
 ### Capability
-* **trusted_service_account** (string)  `Required` 
+* **trusted_service_account** (string)   `Required` 
 
     <br>
 
 ### CreateProviderRequest
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **sync_mode** (SyncMode) 
+* **sync_mode** (SyncMode)  
 
     
-* **sync_options** (SyncOptions) 
+* **sync_options** (SyncOptions)  
 
     
-* **description** (Description) 
+* **description** (Description)  `Repeated`   
 
     
-* **schema** (ProviderSchema) 
+* **schema** (ProviderSchema)  `Repeated`   
 
     
-* **capability** (Capability) 
+* **capability** (Capability)  
 
     
-* **color** (string) 
+* **color** (string)  
 
     
-* **icon** (string) 
+* **icon** (string)  
 
     
-* **reference** (Reference) 
+* **reference** (Reference)  `Repeated`   
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### Description
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **body** (Struct)  `Required` 
+* **body** (Struct)   `Required` 
 
     <br>
 
 ### GetProviderRequest
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### ProviderInfo
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **sync_mode** (SyncMode)  `Required` 
+* **sync_mode** (SyncMode)   `Required` 
 
     
-* **sync_options** (SyncOptions)  `Required` 
+* **sync_options** (SyncOptions)   `Required` 
 
     
-* **description** (Description)  `Required` 
+* **description** (Description)  `Repeated`    `Required` 
 
     
-* **schema** (ProviderSchema)  `Required` 
+* **schema** (ProviderSchema)  `Repeated`    `Required` 
 
     
-* **capability** (Capability)  `Required` 
+* **capability** (Capability)   `Required` 
 
     
-* **color** (string)  `Required` 
+* **color** (string)   `Required` 
 
     
-* **icon** (string)  `Required` 
+* **icon** (string)   `Required` 
 
     
-* **reference** (Reference)  `Required` 
+* **reference** (Reference)  `Repeated`    `Required` 
 
     
-* **labels** (ListValue)  `Required` 
+* **labels** (ListValue)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **remote_repository** (Struct)  `Required` 
+* **remote_repository** (Struct)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### ProviderQuery
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **sync_mode** (SyncMode) 
+* **sync_mode** (SyncMode)  
 
     
-* **remote_repository_name** (string) 
+* **remote_repository_name** (string)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### ProviderRequest
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### ProviderSchema
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **secret_type** (string)  `Required` 
+* **secret_type** (string)   `Required` 
 
     
-* **schema_id** (string)  `Required` 
+* **schema_id** (string)   `Required` 
 
     <br>
 
 ### ProvidersInfo
-* **results** (ProviderInfo)  `Required` 
+* **results** (ProviderInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### Reference
-* **resource_type** (string)  `Required` 
+* **resource_type** (string)   `Required` 
 
     
-* **link** (Struct)  `Required` 
+* **link** (Struct)   `Required` 
 
     <br>
 
 ### UpdateProviderRequest
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **sync_mode** (SyncMode) 
+* **sync_mode** (SyncMode)  
 
     
-* **sync_options** (SyncOptions) 
+* **sync_options** (SyncOptions)  
 
     
-* **description** (Description) 
+* **description** (Description)  `Repeated`   
 
     
-* **schema** (ProviderSchema) 
+* **schema** (ProviderSchema)  `Repeated`   
 
     
-* **capability** (Capability) 
+* **capability** (Capability)  
 
     
-* **color** (string) 
+* **color** (string)  
 
     
-* **icon** (string) 
+* **icon** (string)  
 
     
-* **reference** (Reference) 
+* **reference** (Reference)  `Repeated`   
 
     
-* **labels** (ListValue) 
+* **labels** (ListValue)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>

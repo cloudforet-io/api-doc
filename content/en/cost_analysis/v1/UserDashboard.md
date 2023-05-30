@@ -24,12 +24,12 @@ A UserDashboard is a cost data dashboard customized with a combination of widget
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./UserDashboard#create) | [CreateUserDashboardRequest](UserDashboard#createuserdashboardrequest) | [UserDashboardInfo](./UserDashboard#userdashboardinfo) |
-| [**update**](./UserDashboard#update) | [UpdateUserDashboardRequest](UserDashboard#updateuserdashboardrequest) | [UserDashboardInfo](./UserDashboard#userdashboardinfo) |
-| [**delete**](./UserDashboard#delete) | [UserDashboardRequest](UserDashboard#userdashboardrequest) | [Empty](./UserDashboard#empty) |
-| [**get**](./UserDashboard#get) | [GetUserDashboardRequest](UserDashboard#getuserdashboardrequest) | [UserDashboardInfo](./UserDashboard#userdashboardinfo) |
-| [**list**](./UserDashboard#list) | [UserDashboardQuery](UserDashboard#userdashboardquery) | [UserDashboardsInfo](./UserDashboard#userdashboardsinfo) |
-| [**stat**](./UserDashboard#stat) | [UserDashboardStatQuery](UserDashboard#userdashboardstatquery) | [Struct](./UserDashboard#struct) |
+| [**create**](./UserDashboard#create) | [CreateUserDashboardRequest](UserDashboard#createuserdashboardrequest) | [UserDashboardInfo](UserDashboard#userdashboardinfo) |
+| [**update**](./UserDashboard#update) | [UpdateUserDashboardRequest](UserDashboard#updateuserdashboardrequest) | [UserDashboardInfo](UserDashboard#userdashboardinfo) |
+| [**delete**](./UserDashboard#delete) | [UserDashboardRequest](UserDashboard#userdashboardrequest) | [Empty](UserDashboard#empty) |
+| [**get**](./UserDashboard#get) | [GetUserDashboardRequest](UserDashboard#getuserdashboardrequest) | [UserDashboardInfo](UserDashboard#userdashboardinfo) |
+| [**list**](./UserDashboard#list) | [UserDashboardQuery](UserDashboard#userdashboardquery) | [UserDashboardsInfo](UserDashboard#userdashboardsinfo) |
+| [**stat**](./UserDashboard#stat) | [UserDashboardStatQuery](UserDashboard#userdashboardstatquery) | [Struct](UserDashboard#struct) |
 
 
 
@@ -57,28 +57,28 @@ Creates a new UserDashboard. Users can use the dashboard in `private`. In additi
 
 [CreateUserDashboardRequest](./UserDashboard#createuserdashboardrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **default_layout_id** (string) 
+* **default_layout_id** (string)  
 
 
-* **custom_layouts** (ListValue) 
+* **custom_layouts** (ListValue)  
 
 
-* **default_filter** (Struct) 
+* **default_filter** (Struct)  
 
 
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
 
-* **period** (UserDashboardPeriod) 
+* **period** (UserDashboardPeriod)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -136,29 +136,29 @@ Creates a new UserDashboard. Users can use the dashboard in `private`. In additi
  {{< tab "Response Example" >}}
 
 [UserDashboardInfo](#USERDASHBOARDINFO)
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **default_layout_id** (string)  `Required` 
+* **default_layout_id** (string)   `Required` 
 
-* **custom_layouts** (ListValue)  `Required` 
+* **custom_layouts** (ListValue)   `Required` 
 
-* **default_filter** (Struct)  `Required` 
+* **default_filter** (Struct)   `Required` 
 
-* **period_type** (PeriodType)  `Required` 
+* **period_type** (PeriodType)   `Required` 
 
-* **period** (UserDashboardPeriod)  `Required` 
+* **period** (UserDashboardPeriod)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -244,31 +244,31 @@ Updates a specific UserDashboard. You can make changes in widgets, including def
 
 [UpdateUserDashboardRequest](./UserDashboard#updateuserdashboardrequest)
 
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **default_layout_id** (string) 
+* **default_layout_id** (string)  
 
 
-* **custom_layouts** (ListValue) 
+* **custom_layouts** (ListValue)  
 
 
-* **default_filter** (Struct) 
+* **default_filter** (Struct)  
 
 
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
 
-* **period** (UserDashboardPeriod) 
+* **period** (UserDashboardPeriod)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -312,29 +312,29 @@ Updates a specific UserDashboard. You can make changes in widgets, including def
  {{< tab "Response Example" >}}
 
 [UserDashboardInfo](#USERDASHBOARDINFO)
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **default_layout_id** (string)  `Required` 
+* **default_layout_id** (string)   `Required` 
 
-* **custom_layouts** (ListValue)  `Required` 
+* **custom_layouts** (ListValue)   `Required` 
 
-* **default_filter** (Struct)  `Required` 
+* **default_filter** (Struct)   `Required` 
 
-* **period_type** (PeriodType)  `Required` 
+* **period_type** (PeriodType)   `Required` 
 
-* **period** (UserDashboardPeriod)  `Required` 
+* **period** (UserDashboardPeriod)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -420,10 +420,10 @@ Deletes a specific UserDashboard. You must specify the `user_dashboard_id` of th
 
 [UserDashboardRequest](./UserDashboard#userdashboardrequest)
 
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -465,13 +465,13 @@ Gets a specific UserDashboard. Prints detailed information about the UserDashboa
 
 [GetUserDashboardRequest](./UserDashboard#getuserdashboardrequest)
 
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -488,29 +488,29 @@ Gets a specific UserDashboard. Prints detailed information about the UserDashboa
  {{< tab "Response Example" >}}
 
 [UserDashboardInfo](#USERDASHBOARDINFO)
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **default_layout_id** (string)  `Required` 
+* **default_layout_id** (string)   `Required` 
 
-* **custom_layouts** (ListValue)  `Required` 
+* **custom_layouts** (ListValue)   `Required` 
 
-* **default_filter** (Struct)  `Required` 
+* **default_filter** (Struct)   `Required` 
 
-* **period_type** (PeriodType)  `Required` 
+* **period_type** (PeriodType)   `Required` 
 
-* **period** (UserDashboardPeriod)  `Required` 
+* **period** (UserDashboardPeriod)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
 
 
@@ -595,9 +595,9 @@ Gets a list of all UserDashboards. You can use a query to get a filtered list of
  {{< tab "Response Example" >}}
 
 [UserDashboardsInfo](#USERDASHBOARDSINFO)
-* **results** (UserDashboardInfo)  `Required` 
+* **results** (UserDashboardInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -740,157 +740,157 @@ Gets a list of all UserDashboards. You can use a query to get a filtered list of
 
 
 ### CreateUserDashboardRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **default_layout_id** (string) 
+* **default_layout_id** (string)  
 
     
-* **custom_layouts** (ListValue) 
+* **custom_layouts** (ListValue)  
 
     
-* **default_filter** (Struct) 
+* **default_filter** (Struct)  
 
     
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
     
-* **period** (UserDashboardPeriod) 
+* **period** (UserDashboardPeriod)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetUserDashboardRequest
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateUserDashboardRequest
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **default_layout_id** (string) 
+* **default_layout_id** (string)  
 
     
-* **custom_layouts** (ListValue) 
+* **custom_layouts** (ListValue)  
 
     
-* **default_filter** (Struct) 
+* **default_filter** (Struct)  
 
     
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
     
-* **period** (UserDashboardPeriod) 
+* **period** (UserDashboardPeriod)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### UserDashboardInfo
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **default_layout_id** (string)  `Required` 
+* **default_layout_id** (string)   `Required` 
 
     
-* **custom_layouts** (ListValue)  `Required` 
+* **custom_layouts** (ListValue)   `Required` 
 
     
-* **default_filter** (Struct)  `Required` 
+* **default_filter** (Struct)   `Required` 
 
     
-* **period_type** (PeriodType)  `Required` 
+* **period_type** (PeriodType)   `Required` 
 
     
-* **period** (UserDashboardPeriod)  `Required` 
+* **period** (UserDashboardPeriod)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)  `Required` 
+* **updated_at** (string)   `Required` 
 
     <br>
 
 ### UserDashboardPeriod
-* **start** (string)  `Required` 
+* **start** (string)   `Required` 
 
     
-* **end** (string)  `Required` 
+* **end** (string)   `Required` 
 
     <br>
 
 ### UserDashboardQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **user_dashboard_id** (string) 
+* **user_dashboard_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **period_type** (PeriodType) 
+* **period_type** (PeriodType)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     <br>
 
 ### UserDashboardRequest
-* **user_dashboard_id** (string)  `Required` 
+* **user_dashboard_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UserDashboardStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UserDashboardsInfo
-* **results** (UserDashboardInfo)  `Required` 
+* **results** (UserDashboardInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>

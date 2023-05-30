@@ -24,7 +24,7 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**get_version**](./ServerInfo#get_version) | [Empty](ServerInfo#empty) | [VersionInfo](./ServerInfo#versioninfo) |
+| [**get_version**](./ServerInfo#get_version) | [Empty](ServerInfo#empty) | [VersionInfo](ServerInfo#versioninfo) |
 
 
 
@@ -53,6 +53,6 @@ bookFlatSection: true
 
 
 ### VersionInfo
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     <br>

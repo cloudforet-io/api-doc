@@ -24,9 +24,9 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**init**](./Storage#init) | [InitRequest](Storage#initrequest) | [PluginInfo](./Storage#plugininfo) |
-| [**verify**](./Storage#verify) | [VerifyRequest](Storage#verifyrequest) | [Empty](./Storage#empty) |
-| [**export**](./Storage#export) | [ExportRequest](Storage#exportrequest) | [Empty](./Storage#empty) |
+| [**init**](./Storage#init) | [InitRequest](Storage#initrequest) | [PluginInfo](Storage#plugininfo) |
+| [**verify**](./Storage#verify) | [VerifyRequest](Storage#verifyrequest) | [Empty](Storage#empty) |
+| [**export**](./Storage#export) | [ExportRequest](Storage#exportrequest) | [Empty](Storage#empty) |
 
 
 
@@ -83,36 +83,36 @@ bookFlatSection: true
 
 
 ### ExportRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>
 
 ### InitRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     <br>
 
 ### PluginInfo
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     <br>
 
 ### VerifyRequest
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)  `Required` 
+* **secret_data** (Struct)   `Required` 
 
     
-* **schema** (string) 
+* **schema** (string)  
 
     <br>

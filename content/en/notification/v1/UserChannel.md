@@ -24,16 +24,16 @@ A UserChannel is a destination where Notifications are delivered. Notifications 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./UserChannel#create) | [CreateUserChannelRequest](UserChannel#createuserchannelrequest) | [UserChannelInfo](./UserChannel#userchannelinfo) |
-| [**update**](./UserChannel#update) | [UpdateUserChannelRequest](UserChannel#updateuserchannelrequest) | [UserChannelInfo](./UserChannel#userchannelinfo) |
-| [**set_schedule**](./UserChannel#set_schedule) | [UpdateUserChannelScheduleRequest](UserChannel#updateuserchannelschedulerequest) | [UserChannelInfo](./UserChannel#userchannelinfo) |
-| [**set_subscription**](./UserChannel#set_subscription) | [UpdateUserChannelSubscriptionRequest](UserChannel#updateuserchannelsubscriptionrequest) | [UserChannelInfo](./UserChannel#userchannelinfo) |
-| [**enable**](./UserChannel#enable) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](./UserChannel#userchannelinfo) |
-| [**disable**](./UserChannel#disable) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](./UserChannel#userchannelinfo) |
-| [**delete**](./UserChannel#delete) | [UserChannelRequest](UserChannel#userchannelrequest) | [Empty](./UserChannel#empty) |
-| [**get**](./UserChannel#get) | [GetUserChannelRequest](UserChannel#getuserchannelrequest) | [UserChannelInfo](./UserChannel#userchannelinfo) |
-| [**list**](./UserChannel#list) | [UserChannelQuery](UserChannel#userchannelquery) | [UserChannelsInfo](./UserChannel#userchannelsinfo) |
-| [**stat**](./UserChannel#stat) | [UserChannelStatQuery](UserChannel#userchannelstatquery) | [Struct](./UserChannel#struct) |
+| [**create**](./UserChannel#create) | [CreateUserChannelRequest](UserChannel#createuserchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**update**](./UserChannel#update) | [UpdateUserChannelRequest](UserChannel#updateuserchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**set_schedule**](./UserChannel#set_schedule) | [UpdateUserChannelScheduleRequest](UserChannel#updateuserchannelschedulerequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**set_subscription**](./UserChannel#set_subscription) | [UpdateUserChannelSubscriptionRequest](UserChannel#updateuserchannelsubscriptionrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**enable**](./UserChannel#enable) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**disable**](./UserChannel#disable) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**delete**](./UserChannel#delete) | [UserChannelRequest](UserChannel#userchannelrequest) | [Empty](UserChannel#empty) |
+| [**get**](./UserChannel#get) | [GetUserChannelRequest](UserChannel#getuserchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**list**](./UserChannel#list) | [UserChannelQuery](UserChannel#userchannelquery) | [UserChannelsInfo](UserChannel#userchannelsinfo) |
+| [**stat**](./UserChannel#stat) | [UserChannelStatQuery](UserChannel#userchannelstatquery) | [Struct](UserChannel#struct) |
 
 
 
@@ -61,17 +61,17 @@ Creates a new UserChannel. A UserChannel is a channel that delivers a Notificati
 
 [CreateUserChannelRequest](./UserChannel#createuserchannelrequest)
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of protocol that will be set in user channel.*
 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of User Channel. It can have a maximum of 255 characters.*
 
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   *The data for using user channel.
 This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.
@@ -79,38 +79,38 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   *The ID of user*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **is_subscribe** (bool) 
+* **is_subscribe** (bool)  
 
   *Indicates whether subscriptions will be used.*
 
 
-* **subscriptions** (string) 
+* **subscriptions** (string)  `Repeated`   
 
   *When using subscriptions, it indicates the topic list to subscription.
 If is_subscribe is set to false, this value is ignored.*
 
 
-* **is_scheduled** (bool) 
+* **is_scheduled** (bool)  
 
   *Indicates whether schedule will be used.*
 
 
-* **schedule** (UserChannelSchedule) 
+* **schedule** (UserChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the user channel.*
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for user channel.*
 
@@ -135,59 +135,59 @@ If is_subscribe is set to false, this value is ignored.*
  {{< tab "Response Example" >}}
 
 [UserChannelInfo](#USERCHANNELINFO)
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   The ID of user channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of user channel
 
-* **state** (UserChannelState)  `Required` 
+* **state** (UserChannelState)   `Required` 
 
   The state of user channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using user channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (UserChannelSchedule)  `Required` 
+* **schedule** (UserChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the user channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for user channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the user channel.
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   User channel creation time.
 
@@ -237,22 +237,22 @@ Updates a specific UserChannel. A UserChannel that has already been configured c
 
 [UpdateUserChannelRequest](./UserChannel#updateuserchannelrequest)
 
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **name** (string) 
+* **name** (string)  
 
   *The name of user channel. It can have a maximum of 255 characters.*
 
 
-* **data** (Struct) 
+* **data** (Struct)  
 
   *The data for using user channel.
 This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.
@@ -260,13 +260,13 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
 
-* **schedule** (UserChannelSchedule) 
+* **schedule** (UserChannelSchedule)  
 
   *Set the level of notification.
 If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.*
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for user channel.*
 
@@ -292,59 +292,59 @@ If a notification has a level and a notification level that this channel can rec
  {{< tab "Response Example" >}}
 
 [UserChannelInfo](#USERCHANNELINFO)
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   The ID of user channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of user channel
 
-* **state** (UserChannelState)  `Required` 
+* **state** (UserChannelState)   `Required` 
 
   The state of user channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using user channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (UserChannelSchedule)  `Required` 
+* **schedule** (UserChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the user channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for user channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the user channel.
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   User channel creation time.
 
@@ -394,22 +394,22 @@ Sets a schedule for a UserChannel. A schedule defines the time to receive a Noti
 
 [UpdateUserChannelScheduleRequest](./UserChannel#updateuserchannelschedulerequest)
 
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   *Indicates whether schedule will be used.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **schedule** (UserChannelSchedule) 
+* **schedule** (UserChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the user channel.*
 
@@ -440,59 +440,59 @@ Sets a schedule for a UserChannel. A schedule defines the time to receive a Noti
  {{< tab "Response Example" >}}
 
 [UserChannelInfo](#USERCHANNELINFO)
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   The ID of user channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of user channel
 
-* **state** (UserChannelState)  `Required` 
+* **state** (UserChannelState)   `Required` 
 
   The state of user channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using user channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (UserChannelSchedule)  `Required` 
+* **schedule** (UserChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the user channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for user channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the user channel.
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   User channel creation time.
 
@@ -542,22 +542,22 @@ Sets a subscription for a UserChannel. A subscription is a topic for channels to
 
 [UpdateUserChannelSubscriptionRequest](./UserChannel#updateuserchannelsubscriptionrequest)
 
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **subscriptions** (string) 
+* **subscriptions** (string)  `Repeated`   
 
   *If is_subscribe is set to false, this value is ignored.*
 
@@ -581,59 +581,59 @@ Sets a subscription for a UserChannel. A subscription is a topic for channels to
  {{< tab "Response Example" >}}
 
 [UserChannelInfo](#USERCHANNELINFO)
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   The ID of user channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of user channel
 
-* **state** (UserChannelState)  `Required` 
+* **state** (UserChannelState)   `Required` 
 
   The state of user channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using user channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (UserChannelSchedule)  `Required` 
+* **schedule** (UserChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the user channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for user channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the user channel.
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   User channel creation time.
 
@@ -683,12 +683,12 @@ Enables a specific UserChannel. If a UserChannel is enabled, the UserChannel can
 
 [UserChannelRequest](./UserChannel#userchannelrequest)
 
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -707,59 +707,59 @@ Enables a specific UserChannel. If a UserChannel is enabled, the UserChannel can
  {{< tab "Response Example" >}}
 
 [UserChannelInfo](#USERCHANNELINFO)
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   The ID of user channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of user channel
 
-* **state** (UserChannelState)  `Required` 
+* **state** (UserChannelState)   `Required` 
 
   The state of user channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using user channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (UserChannelSchedule)  `Required` 
+* **schedule** (UserChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the user channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for user channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the user channel.
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   User channel creation time.
 
@@ -809,12 +809,12 @@ Disables a specific UserChannel. If a UserChannel is disabled, the Notification 
 
 [UserChannelRequest](./UserChannel#userchannelrequest)
 
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -833,59 +833,59 @@ Disables a specific UserChannel. If a UserChannel is disabled, the Notification 
  {{< tab "Response Example" >}}
 
 [UserChannelInfo](#USERCHANNELINFO)
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   The ID of user channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of user channel
 
-* **state** (UserChannelState)  `Required` 
+* **state** (UserChannelState)   `Required` 
 
   The state of user channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using user channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (UserChannelSchedule)  `Required` 
+* **schedule** (UserChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the user channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for user channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the user channel.
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   User channel creation time.
 
@@ -935,12 +935,12 @@ Deletes a specific UserChannel. You must specify the `user_channel_id` of the Us
 
 [UserChannelRequest](./UserChannel#userchannelrequest)
 
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
@@ -983,59 +983,59 @@ Gets a specific UserChannel. Prints detailed information about the UserChannel, 
  {{< tab "Response Example" >}}
 
 [UserChannelInfo](#USERCHANNELINFO)
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   The ID of user channel.
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   The name of user channel
 
-* **state** (UserChannelState)  `Required` 
+* **state** (UserChannelState)   `Required` 
 
   The state of user channel. ENABLED or DISABLED only.
 
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   The data for using user channel.
 
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
 
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
 
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   Indicates whether schedule will be used.
 
-* **schedule** (UserChannelSchedule)  `Required` 
+* **schedule** (UserChannelSchedule)   `Required` 
 
   Schedule for which you want to receive notifications through the user channel.
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   The tags for user channel.
 
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   The ID of protocol set in the user channel.
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   The ID of domain.
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   User channel creation time.
 
@@ -1085,42 +1085,42 @@ Gets a list of all UserChannels. You can use a query to get a filtered list of U
 
 [UserChannelQuery](./UserChannel#userchannelquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
 
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
 
-* **user_channel_id** (string) 
+* **user_channel_id** (string)  
 
   *The ID of user channel.*
 
 
-* **name** (string) 
+* **name** (string)  
 
   *The name of user channel. It can have a maximum of 255 characters.*
 
 
-* **state** (UserChannelState) 
+* **state** (UserChannelState)  
 
   *The state of user channel. ENABLED or DISABLED only.*
 
 
-* **secret_id** (string) 
+* **secret_id** (string)  
 
   *The ID of secret encrypted data in the security service*
 
 
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of protocol set in the user channel.*
 
 
-* **user_id** (string) 
+* **user_id** (string)  
 
   *The ID of user using the user channel.*
 
@@ -1139,11 +1139,11 @@ Gets a list of all UserChannels. You can use a query to get a filtered list of U
  {{< tab "Response Example" >}}
 
 [UserChannelsInfo](#USERCHANNELSINFO)
-* **results** (UserChannelInfo)  `Required` 
+* **results** (UserChannelInfo)  `Repeated`   `Required` 
 
   List of queried user channels.
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   Total counts of queried user channels.
 
@@ -1226,17 +1226,17 @@ Gets a list of all UserChannels. You can use a query to get a filtered list of U
 
 
 ### CreateUserChannelRequest
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of protocol that will be set in user channel.*
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of User Channel. It can have a maximum of 255 characters.*
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   *The data for using user channel.
 This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.
@@ -1244,77 +1244,77 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   *The ID of user*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **is_subscribe** (bool) 
+* **is_subscribe** (bool)  
 
   *Indicates whether subscriptions will be used.*
 
     
-* **subscriptions** (string) 
+* **subscriptions** (string)  `Repeated`   
 
   *When using subscriptions, it indicates the topic list to subscription.
 If is_subscribe is set to false, this value is ignored.*
 
     
-* **is_scheduled** (bool) 
+* **is_scheduled** (bool)  
 
   *Indicates whether schedule will be used.*
 
     
-* **schedule** (UserChannelSchedule) 
+* **schedule** (UserChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the user channel.*
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for user channel.*
 
     <br>
 
 ### GetUserChannelRequest
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
   *The list of the user channel information column you want to be returned. It must be specified in the UserChannelInfo.*
 
     <br>
 
 ### UpdateUserChannelRequest
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **name** (string) 
+* **name** (string)  
 
   *The name of user channel. It can have a maximum of 255 characters.*
 
     
-* **data** (Struct) 
+* **data** (Struct)  
 
   *The data for using user channel.
 This data is encrypted and stored in the Secret service if JSON schema in the protocol's metadata is set to SECRET type.
@@ -1322,202 +1322,202 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
     
-* **schedule** (UserChannelSchedule) 
+* **schedule** (UserChannelSchedule)  
 
   *Set the level of notification.
 If a notification has a level and a notification level that this channel can receive is set, a notification is dispatched only if the notification level is the same.*
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
   *The tags for user channel.*
 
     <br>
 
 ### UpdateUserChannelScheduleRequest
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
     
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   *Indicates whether schedule will be used.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **schedule** (UserChannelSchedule) 
+* **schedule** (UserChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the user channel.*
 
     <br>
 
 ### UpdateUserChannelSubscriptionRequest
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
     
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **subscriptions** (string) 
+* **subscriptions** (string)  `Repeated`   
 
   *If is_subscribe is set to false, this value is ignored.*
 
     <br>
 
 ### UserChannelInfo
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
   *The name of user channel*
 
     
-* **state** (UserChannelState)  `Required` 
+* **state** (UserChannelState)   `Required` 
 
   *The state of user channel. ENABLED or DISABLED only.*
 
     
-* **data** (Struct)  `Required` 
+* **data** (Struct)   `Required` 
 
   *The data for using user channel.*
 
     
-* **secret_id** (string)  `Required` 
+* **secret_id** (string)   `Required` 
 
   *The ID of secret encrypted data in the security service*
 
     
-* **is_subscribe** (bool)  `Required` 
+* **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
 
     
-* **subscriptions** (string)  `Required` 
+* **subscriptions** (string)  `Repeated`    `Required` 
 
   *The topic list to subscription.*
 
     
-* **is_scheduled** (bool)  `Required` 
+* **is_scheduled** (bool)   `Required` 
 
   *Indicates whether schedule will be used.*
 
     
-* **schedule** (UserChannelSchedule)  `Required` 
+* **schedule** (UserChannelSchedule)   `Required` 
 
   *Schedule for which you want to receive notifications through the user channel.*
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
   *The tags for user channel.*
 
     
-* **protocol_id** (string)  `Required` 
+* **protocol_id** (string)   `Required` 
 
   *The ID of protocol set in the user channel.*
 
     
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
   *The ID of user using the user channel.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
   *User channel creation time.*
 
     <br>
 
 ### UserChannelQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     
-* **query** (Query) 
+* **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **user_channel_id** (string) 
+* **user_channel_id** (string)  
 
   *The ID of user channel.*
 
     
-* **name** (string) 
+* **name** (string)  
 
   *The name of user channel. It can have a maximum of 255 characters.*
 
     
-* **state** (UserChannelState) 
+* **state** (UserChannelState)  
 
   *The state of user channel. ENABLED or DISABLED only.*
 
     
-* **secret_id** (string) 
+* **secret_id** (string)  
 
   *The ID of secret encrypted data in the security service*
 
     
-* **protocol_id** (string) 
+* **protocol_id** (string)  
 
   *The ID of protocol set in the user channel.*
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
   *The ID of user using the user channel.*
 
     <br>
 
 ### UserChannelRequest
-* **user_channel_id** (string)  `Required` 
+* **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     <br>
 
 ### UserChannelSchedule
-* **day_of_week** (DayOfWeek)  `Required` 
+* **day_of_week** (DayOfWeek)  `Repeated`    `Required` 
 
   *Day of the week to be notified.
 As a list type, only types that can be specified from MON to SUN can be set.*
 
     
-* **start_hour** (int32)  `Required` 
+* **start_hour** (int32)   `Required` 
 
   *Start time to receive notifications.
 Only integer type can be set, and 0 to 23 can be.*
 
     
-* **end_hour** (int32)  `Required` 
+* **end_hour** (int32)   `Required` 
 
   *End time to receive notifications.
 Only integer type can be set, and 1 to 24 can be.*
@@ -1525,24 +1525,24 @@ Only integer type can be set, and 1 to 24 can be.*
     <br>
 
 ### UserChannelStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
   *Statistics Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
   *The ID of domain.*
 
     <br>
 
 ### UserChannelsInfo
-* **results** (UserChannelInfo)  `Required` 
+* **results** (UserChannelInfo)  `Repeated`    `Required` 
 
   *List of queried user channels.*
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
   *Total counts of queried user channels.*
 

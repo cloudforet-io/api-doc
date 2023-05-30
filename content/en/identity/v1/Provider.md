@@ -24,12 +24,12 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Provider#create) | [CreateProviderRequest](Provider#createproviderrequest) | [ProviderInfo](./Provider#providerinfo) |
-| [**update**](./Provider#update) | [UpdateProviderRequest](Provider#updateproviderrequest) | [ProviderInfo](./Provider#providerinfo) |
-| [**delete**](./Provider#delete) | [ProviderRequest](Provider#providerrequest) | [Empty](./Provider#empty) |
-| [**get**](./Provider#get) | [GetProviderRequest](Provider#getproviderrequest) | [ProviderInfo](./Provider#providerinfo) |
-| [**list**](./Provider#list) | [ProviderQuery](Provider#providerquery) | [ProvidersInfo](./Provider#providersinfo) |
-| [**stat**](./Provider#stat) | [ProviderStatQuery](Provider#providerstatquery) | [Struct](./Provider#struct) |
+| [**create**](./Provider#create) | [CreateProviderRequest](Provider#createproviderrequest) | [ProviderInfo](Provider#providerinfo) |
+| [**update**](./Provider#update) | [UpdateProviderRequest](Provider#updateproviderrequest) | [ProviderInfo](Provider#providerinfo) |
+| [**delete**](./Provider#delete) | [ProviderRequest](Provider#providerrequest) | [Empty](Provider#empty) |
+| [**get**](./Provider#get) | [GetProviderRequest](Provider#getproviderrequest) | [ProviderInfo](Provider#providerinfo) |
+| [**list**](./Provider#list) | [ProviderQuery](Provider#providerquery) | [ProvidersInfo](Provider#providersinfo) |
+| [**stat**](./Provider#stat) | [ProviderStatQuery](Provider#providerstatquery) | [Struct](Provider#struct) |
 
 
 
@@ -146,119 +146,119 @@ bookFlatSection: true
 
 
 ### CreateProviderRequest
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **template** (Struct) 
+* **template** (Struct)  
 
     
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
     
-* **capability** (Struct) 
+* **capability** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetProviderRequest
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### ProviderInfo
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **template** (Struct)  `Required` 
+* **template** (Struct)   `Required` 
 
     
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### ProviderQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **provider** (string) 
+* **provider** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     <br>
 
 ### ProviderRequest
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ProviderStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### ProvidersInfo
-* **results** (ProviderInfo)  `Required` 
+* **results** (ProviderInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### UpdateProviderRequest
-* **provider** (string)  `Required` 
+* **provider** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **template** (Struct) 
+* **template** (Struct)  
 
     
-* **metadata** (Struct) 
+* **metadata** (Struct)  
 
     
-* **capability** (Struct) 
+* **capability** (Struct)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>

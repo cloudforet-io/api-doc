@@ -25,20 +25,20 @@ note: Administrator must register User first.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./User#create) | [CreateUserRequest](User#createuserrequest) | [UserInfo](./User#userinfo) |
-| [**update**](./User#update) | [UpdateUserRequest](User#updateuserrequest) | [UserInfo](./User#userinfo) |
-| [**verify_email**](./User#verify_email) | [VerifyEmailRequest](User#verifyemailrequest) | [Empty](./User#empty) |
-| [**confirm_email**](./User#confirm_email) | [ConfirmEmailRequest](User#confirmemailrequest) | [UserInfo](./User#userinfo) |
-| [**reset_password**](./User#reset_password) | [UserRequest](User#userrequest) | [Empty](./User#empty) |
-| [**set_required_actions**](./User#set_required_actions) | [SetRequiredActionsRequest](User#setrequiredactionsrequest) | [UserInfo](./User#userinfo) |
-| [**enable**](./User#enable) | [UserRequest](User#userrequest) | [UserInfo](./User#userinfo) |
-| [**disable**](./User#disable) | [UserRequest](User#userrequest) | [UserInfo](./User#userinfo) |
-| [**delete**](./User#delete) | [UserRequest](User#userrequest) | [Empty](./User#empty) |
-| [**get**](./User#get) | [GetUserRequest](User#getuserrequest) | [UserInfo](./User#userinfo) |
-| [**list**](./User#list) | [UserQuery](User#userquery) | [UsersInfo](./User#usersinfo) |
-| [**stat**](./User#stat) | [UserStatQuery](User#userstatquery) | [Struct](./User#struct) |
-| [**find**](./User#find) | [FindUserQuery](User#finduserquery) | [FindUsersInfo](./User#findusersinfo) |
-| [**sync**](./User#sync) | [UserRequest](User#userrequest) | [UserInfo](./User#userinfo) |
+| [**create**](./User#create) | [CreateUserRequest](User#createuserrequest) | [UserInfo](User#userinfo) |
+| [**update**](./User#update) | [UpdateUserRequest](User#updateuserrequest) | [UserInfo](User#userinfo) |
+| [**verify_email**](./User#verify_email) | [VerifyEmailRequest](User#verifyemailrequest) | [Empty](User#empty) |
+| [**confirm_email**](./User#confirm_email) | [ConfirmEmailRequest](User#confirmemailrequest) | [UserInfo](User#userinfo) |
+| [**reset_password**](./User#reset_password) | [UserRequest](User#userrequest) | [Empty](User#empty) |
+| [**set_required_actions**](./User#set_required_actions) | [SetRequiredActionsRequest](User#setrequiredactionsrequest) | [UserInfo](User#userinfo) |
+| [**enable**](./User#enable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
+| [**disable**](./User#disable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
+| [**delete**](./User#delete) | [UserRequest](User#userrequest) | [Empty](User#empty) |
+| [**get**](./User#get) | [GetUserRequest](User#getuserrequest) | [UserInfo](User#userinfo) |
+| [**list**](./User#list) | [UserQuery](User#userquery) | [UsersInfo](User#usersinfo) |
+| [**stat**](./User#stat) | [UserStatQuery](User#userstatquery) | [Struct](User#struct) |
+| [**find**](./User#find) | [FindUserQuery](User#finduserquery) | [FindUsersInfo](User#findusersinfo) |
+| [**sync**](./User#sync) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 
 
 
@@ -65,33 +65,33 @@ note: Administrator must register User first.
  {{< tab "Response Example" >}}
 
 [UserInfo](#USERINFO)
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
 
 
@@ -151,31 +151,31 @@ Update user info by given user_id
 
 [UpdateUserRequest](./User#updateuserrequest)
 
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **password** (string) 
+* **password** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **email** (string) 
+* **email** (string)  
 
 
-* **language** (string) 
+* **language** (string)  
 
 
-* **timezone** (string) 
+* **timezone** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
-* **reset_password** (bool) 
+* **reset_password** (bool)  
 
 
 
@@ -200,33 +200,33 @@ Update user info by given user_id
  {{< tab "Response Example" >}}
 
 [UserInfo](#USERINFO)
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
 
 
@@ -302,33 +302,33 @@ Update user info by given user_id
  {{< tab "Response Example" >}}
 
 [UserInfo](#USERINFO)
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
 
 
@@ -404,33 +404,33 @@ Update user info by given user_id
  {{< tab "Response Example" >}}
 
 [UserInfo](#USERINFO)
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
 
 
@@ -489,33 +489,33 @@ Update user info by given user_id
  {{< tab "Response Example" >}}
 
 [UserInfo](#USERINFO)
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
 
 
@@ -574,33 +574,33 @@ Update user info by given user_id
  {{< tab "Response Example" >}}
 
 [UserInfo](#USERINFO)
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
 
 
@@ -676,33 +676,33 @@ Update user info by given user_id
  {{< tab "Response Example" >}}
 
 [UserInfo](#USERINFO)
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
 
 
@@ -812,33 +812,33 @@ Update user info by given user_id
  {{< tab "Response Example" >}}
 
 [UserInfo](#USERINFO)
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
 
 
@@ -885,244 +885,244 @@ Update user info by given user_id
 
 
 ### ConfirmEmailRequest
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **verify_code** (string)  `Required` 
+* **verify_code** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CreateUserRequest
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **password** (string) 
+* **password** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **email** (string) 
+* **email** (string)  
 
     
-* **user_type** (UserType) 
+* **user_type** (UserType)  
 
     
-* **language** (string) 
+* **language** (string)  
 
     
-* **timezone** (string) 
+* **timezone** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **reset_password** (bool) 
+* **reset_password** (bool)  
 
     <br>
 
 ### FindUserInfo
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     <br>
 
 ### FindUserQuery
-* **search** (FindUserSearch)  `Required` 
+* **search** (FindUserSearch)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### FindUserSearch
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **keyword** (string)  `Required` 
+* **keyword** (string)   `Required` 
 
     <br>
 
 ### FindUsersInfo
-* **results** (FindUserInfo)  `Required` 
+* **results** (FindUserInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### GetUserRequest
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### SetRequiredActionsRequest
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **actions** (UserRequiredAction)  `Required` 
+* **actions** (UserRequiredAction)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UpdateUserRequest
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **password** (string) 
+* **password** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **email** (string) 
+* **email** (string)  
 
     
-* **language** (string) 
+* **language** (string)  
 
     
-* **timezone** (string) 
+* **timezone** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     
-* **reset_password** (bool) 
+* **reset_password** (bool)  
 
     <br>
 
 ### UserInfo
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (State)  `Required` 
+* **state** (State)   `Required` 
 
     
-* **email** (string)  `Required` 
+* **email** (string)   `Required` 
 
     
-* **user_type** (UserType)  `Required` 
+* **user_type** (UserType)   `Required` 
 
     
-* **backend** (UserBackend)  `Required` 
+* **backend** (UserBackend)   `Required` 
 
     
-* **language** (string)  `Required` 
+* **language** (string)   `Required` 
 
     
-* **timezone** (string)  `Required` 
+* **timezone** (string)   `Required` 
 
     
-* **required_actions** (UserRequiredAction)  `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`    `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **last_accessed_at** (string)  `Required` 
+* **last_accessed_at** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **email_verified** (bool)  `Required` 
+* **email_verified** (bool)   `Required` 
 
     <br>
 
 ### UserQuery
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **user_id** (string) 
+* **user_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **state** (string) 
+* **state** (string)  
 
     
-* **email** (string) 
+* **email** (string)  
 
     
-* **user_type** (UserType) 
+* **user_type** (UserType)  
 
     
-* **backend** (UserBackend) 
+* **backend** (UserBackend)  
 
     
-* **domain_id** (string) 
+* **domain_id** (string)  
 
     <br>
 
 ### UserRequest
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UserStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### UsersInfo
-* **results** (UserInfo)  `Required` 
+* **results** (UserInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
 
 ### VerifyEmailRequest
-* **user_id** (string)  `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **email** (string) 
+* **email** (string)  
 
     
-* **force** (bool) 
+* **force** (bool)  
 
     <br>

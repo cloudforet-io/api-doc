@@ -24,16 +24,16 @@ A Webhook is a plugin instance receiving data from external monitoring systems.
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Webhook#create) | [CreateWebhookRequest](Webhook#createwebhookrequest) | [WebhookInfo](./Webhook#webhookinfo) |
-| [**update**](./Webhook#update) | [UpdateWebhookRequest](Webhook#updatewebhookrequest) | [WebhookInfo](./Webhook#webhookinfo) |
-| [**update_plugin**](./Webhook#update_plugin) | [UpdateWebhookPluginRequest](Webhook#updatewebhookpluginrequest) | [WebhookInfo](./Webhook#webhookinfo) |
-| [**verify_plugin**](./Webhook#verify_plugin) | [WebhookRequest](Webhook#webhookrequest) | [Empty](./Webhook#empty) |
-| [**enable**](./Webhook#enable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](./Webhook#webhookinfo) |
-| [**disable**](./Webhook#disable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](./Webhook#webhookinfo) |
-| [**delete**](./Webhook#delete) | [WebhookRequest](Webhook#webhookrequest) | [Empty](./Webhook#empty) |
-| [**get**](./Webhook#get) | [GetWebhookRequest](Webhook#getwebhookrequest) | [WebhookInfo](./Webhook#webhookinfo) |
-| [**list**](./Webhook#list) | [WebhookQuery](Webhook#webhookquery) | [WebhooksInfo](./Webhook#webhooksinfo) |
-| [**stat**](./Webhook#stat) | [WebhookStatQuery](Webhook#webhookstatquery) | [Struct](./Webhook#struct) |
+| [**create**](./Webhook#create) | [CreateWebhookRequest](Webhook#createwebhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
+| [**update**](./Webhook#update) | [UpdateWebhookRequest](Webhook#updatewebhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
+| [**update_plugin**](./Webhook#update_plugin) | [UpdateWebhookPluginRequest](Webhook#updatewebhookpluginrequest) | [WebhookInfo](Webhook#webhookinfo) |
+| [**verify_plugin**](./Webhook#verify_plugin) | [WebhookRequest](Webhook#webhookrequest) | [Empty](Webhook#empty) |
+| [**enable**](./Webhook#enable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
+| [**disable**](./Webhook#disable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
+| [**delete**](./Webhook#delete) | [WebhookRequest](Webhook#webhookrequest) | [Empty](Webhook#empty) |
+| [**get**](./Webhook#get) | [GetWebhookRequest](Webhook#getwebhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
+| [**list**](./Webhook#list) | [WebhookQuery](Webhook#webhookquery) | [WebhooksInfo](Webhook#webhooksinfo) |
+| [**stat**](./Webhook#stat) | [WebhookStatQuery](Webhook#webhookstatquery) | [Struct](Webhook#struct) |
 
 
 
@@ -61,19 +61,19 @@ Creates a new Webhook. A Webhook collects data from an external monitoring syste
 
 [CreateWebhookRequest](./Webhook#createwebhookrequest)
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
 
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -96,27 +96,27 @@ Creates a new Webhook. A Webhook collects data from an external monitoring syste
  {{< tab "Response Example" >}}
 
 [WebhookInfo](#WEBHOOKINFO)
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (WebhookState)  `Required` 
+* **state** (WebhookState)   `Required` 
 
-* **access_key** (string)  `Required` 
+* **access_key** (string)   `Required` 
 
-* **webhook_url** (string)  `Required` 
+* **webhook_url** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -170,16 +170,16 @@ Updates a specific Webhook. You can make changes in Webhook settings, including 
 
 [UpdateWebhookRequest](./Webhook#updatewebhookrequest)
 
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **tags** (Struct) 
+* **tags** (Struct)  
 
 
 
@@ -198,27 +198,27 @@ Updates a specific Webhook. You can make changes in Webhook settings, including 
  {{< tab "Response Example" >}}
 
 [WebhookInfo](#WEBHOOKINFO)
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (WebhookState)  `Required` 
+* **state** (WebhookState)   `Required` 
 
-* **access_key** (string)  `Required` 
+* **access_key** (string)   `Required` 
 
-* **webhook_url** (string)  `Required` 
+* **webhook_url** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -272,19 +272,19 @@ Updates the plugin of a specific DataSource. You can change the `version` of the
 
 [UpdateWebhookPluginRequest](./Webhook#updatewebhookpluginrequest)
 
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **version** (string) 
+* **version** (string)  
 
 
-* **options** (Struct) 
+* **options** (Struct)  
 
 
-* **upgrade_mode** (UpgradeMode) 
+* **upgrade_mode** (UpgradeMode)  
 
 
 
@@ -305,27 +305,27 @@ Updates the plugin of a specific DataSource. You can change the `version` of the
  {{< tab "Response Example" >}}
 
 [WebhookInfo](#WEBHOOKINFO)
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (WebhookState)  `Required` 
+* **state** (WebhookState)   `Required` 
 
-* **access_key** (string)  `Required` 
+* **access_key** (string)   `Required` 
 
-* **webhook_url** (string)  `Required` 
+* **webhook_url** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -379,10 +379,10 @@ Verifies a specific plugin for a Webhook.
 
 [WebhookRequest](./Webhook#webhookrequest)
 
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -425,10 +425,10 @@ Enables a specific Webhook. By enabling a Webhook, you can communicate with an e
 
 [WebhookRequest](./Webhook#webhookrequest)
 
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -446,27 +446,27 @@ Enables a specific Webhook. By enabling a Webhook, you can communicate with an e
  {{< tab "Response Example" >}}
 
 [WebhookInfo](#WEBHOOKINFO)
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (WebhookState)  `Required` 
+* **state** (WebhookState)   `Required` 
 
-* **access_key** (string)  `Required` 
+* **access_key** (string)   `Required` 
 
-* **webhook_url** (string)  `Required` 
+* **webhook_url** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -520,10 +520,10 @@ Disables a specific Webhook. By disabling a Webhook, you cannot communicate with
 
 [WebhookRequest](./Webhook#webhookrequest)
 
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -541,27 +541,27 @@ Disables a specific Webhook. By disabling a Webhook, you cannot communicate with
  {{< tab "Response Example" >}}
 
 [WebhookInfo](#WEBHOOKINFO)
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (WebhookState)  `Required` 
+* **state** (WebhookState)   `Required` 
 
-* **access_key** (string)  `Required` 
+* **access_key** (string)   `Required` 
 
-* **webhook_url** (string)  `Required` 
+* **webhook_url** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -615,10 +615,10 @@ Deletes a specific Webhook. By deleting a Webhook, you cannot collect data from 
 
 [WebhookRequest](./Webhook#webhookrequest)
 
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
 
@@ -661,13 +661,13 @@ Gets a specific Webhook. Prints detailed information about the Webhook, includin
 
 [GetWebhookRequest](./Webhook#getwebhookrequest)
 
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
 
 
@@ -685,27 +685,27 @@ Gets a specific Webhook. Prints detailed information about the Webhook, includin
  {{< tab "Response Example" >}}
 
 [WebhookInfo](#WEBHOOKINFO)
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
-* **state** (WebhookState)  `Required` 
+* **state** (WebhookState)   `Required` 
 
-* **access_key** (string)  `Required` 
+* **access_key** (string)   `Required` 
 
-* **webhook_url** (string)  `Required` 
+* **webhook_url** (string)   `Required` 
 
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
 
 
@@ -759,28 +759,28 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 
 [WebhookQuery](./Webhook#webhookquery)
 
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
 
-* **query** (Query) 
+* **query** (Query)  
 
 
-* **webhook_id** (string) 
+* **webhook_id** (string)  
 
 
-* **name** (string) 
+* **name** (string)  
 
 
-* **state** (WebhookState) 
+* **state** (WebhookState)  
 
 
-* **access_key** (string) 
+* **access_key** (string)  
 
 
-* **webhook_url** (string) 
+* **webhook_url** (string)  
 
 
-* **project_id** (string) 
+* **project_id** (string)  
 
 
 
@@ -799,9 +799,9 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
  {{< tab "Response Example" >}}
 
 [WebhooksInfo](#WEBHOOKSINFO)
-* **results** (WebhookInfo)  `Required` 
+* **results** (WebhookInfo)  `Repeated`   `Required` 
 
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
 
 
@@ -882,162 +882,162 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 
 
 ### CreateWebhookRequest
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### GetWebhookRequest
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string) 
+* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateWebhookPluginRequest
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **version** (string) 
+* **version** (string)  
 
     
-* **options** (Struct) 
+* **options** (Struct)  
 
     
-* **upgrade_mode** (UpgradeMode) 
+* **upgrade_mode** (UpgradeMode)  
 
     <br>
 
 ### UpdateWebhookRequest
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **tags** (Struct) 
+* **tags** (Struct)  
 
     <br>
 
 ### WebhookInfo
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
     
-* **name** (string)  `Required` 
+* **name** (string)   `Required` 
 
     
-* **state** (WebhookState)  `Required` 
+* **state** (WebhookState)   `Required` 
 
     
-* **access_key** (string)  `Required` 
+* **access_key** (string)   `Required` 
 
     
-* **webhook_url** (string)  `Required` 
+* **webhook_url** (string)   `Required` 
 
     
-* **capability** (Struct)  `Required` 
+* **capability** (Struct)   `Required` 
 
     
-* **plugin_info** (WebhookPluginInfo)  `Required` 
+* **plugin_info** (WebhookPluginInfo)   `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **tags** (Struct)   `Required` 
 
     
-* **project_id** (string)  `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)  `Required` 
+* **created_at** (string)   `Required` 
 
     <br>
 
 ### WebhookPluginInfo
-* **plugin_id** (string)  `Required` 
+* **plugin_id** (string)   `Required` 
 
     
-* **version** (string)  `Required` 
+* **version** (string)   `Required` 
 
     
-* **options** (Struct)  `Required` 
+* **options** (Struct)   `Required` 
 
     
-* **metadata** (Struct)  `Required` 
+* **metadata** (Struct)   `Required` 
 
     
-* **upgrade_mode** (UpgradeMode)  `Required` 
+* **upgrade_mode** (UpgradeMode)   `Required` 
 
     <br>
 
 ### WebhookQuery
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **query** (Query) 
+* **query** (Query)  
 
     
-* **webhook_id** (string) 
+* **webhook_id** (string)  
 
     
-* **name** (string) 
+* **name** (string)  
 
     
-* **state** (WebhookState) 
+* **state** (WebhookState)  
 
     
-* **access_key** (string) 
+* **access_key** (string)  
 
     
-* **webhook_url** (string) 
+* **webhook_url** (string)  
 
     
-* **project_id** (string) 
+* **project_id** (string)  
 
     <br>
 
 ### WebhookRequest
-* **webhook_id** (string)  `Required` 
+* **webhook_id** (string)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### WebhookStatQuery
-* **query** (StatisticsQuery)  `Required` 
+* **query** (StatisticsQuery)   `Required` 
 
     
-* **domain_id** (string)  `Required` 
+* **domain_id** (string)   `Required` 
 
     <br>
 
 ### WebhooksInfo
-* **results** (WebhookInfo)  `Required` 
+* **results** (WebhookInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (int32)  `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
