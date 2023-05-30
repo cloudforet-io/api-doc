@@ -25,7 +25,7 @@ bookFlatSection: true
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
     {%- for rpc in value %}
-| [**{{rpc.name}}**](./{{title}}#{{rpc.name}}) | [{{rpc.requestType}}]({{title}}#{{rpc.requestType.lower()}}) | [{{rpc.responseType}}](./{{title}}#{{rpc.responseType.lower()}}) |
+| [**{{rpc.name}}**](./{{title}}#{{rpc.name}}) | [{{rpc.requestType}}]({{title}}#{{rpc.requestType.lower()}}) | [{{rpc.responseType}}]({{title}}#{{rpc.responseType.lower()}}) |
     {%- endfor %}
 {%- endfor %}
 
@@ -59,7 +59,7 @@ bookFlatSection: true
 [{{ rpc.requestType }}](./{{title}}#{{rpc.requestType.lower()}})
 
 {% for field in messages.get(rpc.requestType).get('sorted_field') -%}
-* **{{ field.name }}** ({{ field.type }}) {% if field.required == 'Required' %} `Required` {% endif %}
+* **{{ field.name }}** ({{ field.type }}) {% if field.label =='repeated' %} `Repeated`  {% endif %} {% if field.required == 'Required' %} `Required` {% endif %}
 {% if field.description %}
   *{{ field.description }}*
 {% endif %}
@@ -79,7 +79,7 @@ bookFlatSection: true
 [{{ rpc.responseType }}](#{{rpc.responseType.upper()}})
 {% for field in messages.get(rpc.responseType).get('sorted_field') -%}
 
-* **{{ field.name }}** ({{ field.type }}) {% if field.required == 'Required' %} `Required` {% endif %}
+* **{{ field.name }}** ({{ field.type }}) {% if field.label =='repeated' %} `Repeated` {% endif %} {% if field.required == 'Required' %} `Required` {% endif %}
 {% if field.description %}
   {{ field.description }}
 {% endif %}
@@ -107,7 +107,7 @@ bookFlatSection: true
 ### {{msg.name}}
 
     {%- for field in msg.sorted_field %}
-* **{{ field.name }}** ({{ field.type }}) {% if field.required == 'Required' %} `Required` {% endif %}
+* **{{ field.name }}** ({{ field.type }}) {% if field.label =='repeated' %} `Repeated`  {% endif %} {% if field.required == 'Required' %} `Required` {% endif %}
 {% if field.description %}
   *{{ field.description }}*
 {% endif %}
