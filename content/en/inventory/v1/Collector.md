@@ -76,21 +76,13 @@ Creates a new Collector with information of the plugin to use. Information of th
 * **domain_id** (string)  `Required` 
 
 
-* **priority** (int32) 
+* **schedule** (Scheduled) 
+
+
+* **provider** (string) 
 
 
 * **tags** (Struct) 
-
-
-* **is_public** (bool) 
-
-  *default is true*
-
-
-* **project_id** (string) 
-
-  *if is_public is false, project_id is require
-remained as is_public | True | False*
 
 
 
@@ -103,7 +95,7 @@ remained as is_public | True | False*
        "plugin_id": "plugin-30d21ef75a5d",
        "version": "1.13.13",
        "options": {},
-       "provider": "aws",
+       "provider": ["aws"],
        "metadata": {
            "filter_format": [],
            "supported_schedules": [
@@ -120,11 +112,9 @@ remained as is_public | True | False*
        },
        "upgrade_mode": "AUTO"
    },
-   "priority": 1,
    "tags": {
        "type": "test"
    },
-   "is_public": true
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -141,23 +131,19 @@ remained as is_public | True | False*
 
 * **plugin_info** (PluginInfo)  `Required` 
 
-* **priority** (int32)  `Required` 
-
 * **tags** (Struct)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **capability** (Struct)  `Required` 
+
+* **schedule** (Scheduled)  `Required` 
 
 * **created_at** (string)  `Required` 
 
 * **last_collected_at** (string)  `Required` 
 
 * **domain_id** (string)  `Required` 
-
-* **provider** (string)  `Required` 
-
-* **capability** (Struct)  `Required` 
-
-* **is_public** (bool)  `Required` 
-
-* **project_id** (string)  `Required` 
 
 
 
@@ -187,19 +173,24 @@ remained as is_public | True | False*
        },
        "upgrade_mode": "AUTO"
    },
-   "priority": 1,
    "tags": {
        "type": "test"
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "provider": "aws",
+   "providers": ["aws"],
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
-   "is_public": true
+   "schedule": {
+       "hours": {
+           "cron": "0 * * * *",
+           "timezone": "UTC"
+       }
+   },
+   "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -241,10 +232,7 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 * **name** (string) 
 
 
-* **plugin_info** (PluginInfo) 
-
-
-* **priority** (int32) 
+* **schedule** (Scheduled) 
 
 
 * **tags** (Struct) 
@@ -263,7 +251,6 @@ Updates a specific Collector. You can make changes in Collector settings, includ
        "provider": "aws",
        "upgrade_mode": "MANUAL"
    },
-   "priority": 10,
    "tags": {
        "a": "b"
    }
@@ -283,23 +270,19 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 
 * **plugin_info** (PluginInfo)  `Required` 
 
-* **priority** (int32)  `Required` 
-
 * **tags** (Struct)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **capability** (Struct)  `Required` 
+
+* **schedule** (Scheduled)  `Required` 
 
 * **created_at** (string)  `Required` 
 
 * **last_collected_at** (string)  `Required` 
 
 * **domain_id** (string)  `Required` 
-
-* **provider** (string)  `Required` 
-
-* **capability** (Struct)  `Required` 
-
-* **is_public** (bool)  `Required` 
-
-* **project_id** (string)  `Required` 
 
 
 
@@ -329,19 +312,24 @@ Updates a specific Collector. You can make changes in Collector settings, includ
        },
        "upgrade_mode": "AUTO"
    },
-   "priority": 1,
    "tags": {
        "type": "test"
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "provider": "aws",
+   "providers": ["aws"],
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
-   "is_public": true
+   "schedule": {
+       "hours": {
+           "cron": "0 * * * *",
+           "timezone": "UTC"
+       }
+   },
+   "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -381,23 +369,19 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
 
 * **plugin_info** (PluginInfo)  `Required` 
 
-* **priority** (int32)  `Required` 
-
 * **tags** (Struct)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **capability** (Struct)  `Required` 
+
+* **schedule** (Scheduled)  `Required` 
 
 * **created_at** (string)  `Required` 
 
 * **last_collected_at** (string)  `Required` 
 
 * **domain_id** (string)  `Required` 
-
-* **provider** (string)  `Required` 
-
-* **capability** (Struct)  `Required` 
-
-* **is_public** (bool)  `Required` 
-
-* **project_id** (string)  `Required` 
 
 
 
@@ -427,19 +411,24 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
        },
        "upgrade_mode": "AUTO"
    },
-   "priority": 1,
    "tags": {
        "type": "test"
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "provider": "aws",
+   "providers": ["aws"],
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
-   "is_public": true
+   "schedule": {
+       "hours": {
+           "cron": "0 * * * *",
+           "timezone": "UTC"
+       }
+   },
+   "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -565,23 +554,19 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
 
 * **plugin_info** (PluginInfo)  `Required` 
 
-* **priority** (int32)  `Required` 
-
 * **tags** (Struct)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **capability** (Struct)  `Required` 
+
+* **schedule** (Scheduled)  `Required` 
 
 * **created_at** (string)  `Required` 
 
 * **last_collected_at** (string)  `Required` 
 
 * **domain_id** (string)  `Required` 
-
-* **provider** (string)  `Required` 
-
-* **capability** (Struct)  `Required` 
-
-* **is_public** (bool)  `Required` 
-
-* **project_id** (string)  `Required` 
 
 
 
@@ -611,19 +596,24 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
        },
        "upgrade_mode": "AUTO"
    },
-   "priority": 1,
    "tags": {
        "type": "test"
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "provider": "aws",
+   "providers": ["aws"],
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
-   "is_public": true
+   "schedule": {
+       "hours": {
+           "cron": "0 * * * *",
+           "timezone": "UTC"
+       }
+   },
+   "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -684,23 +674,19 @@ Enables a specific Collector. By enabling a Collector, you can communicate with 
 
 * **plugin_info** (PluginInfo)  `Required` 
 
-* **priority** (int32)  `Required` 
-
 * **tags** (Struct)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **capability** (Struct)  `Required` 
+
+* **schedule** (Scheduled)  `Required` 
 
 * **created_at** (string)  `Required` 
 
 * **last_collected_at** (string)  `Required` 
 
 * **domain_id** (string)  `Required` 
-
-* **provider** (string)  `Required` 
-
-* **capability** (Struct)  `Required` 
-
-* **is_public** (bool)  `Required` 
-
-* **project_id** (string)  `Required` 
 
 
 
@@ -730,19 +716,24 @@ Enables a specific Collector. By enabling a Collector, you can communicate with 
        },
        "upgrade_mode": "AUTO"
    },
-   "priority": 1,
    "tags": {
        "type": "test"
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "provider": "aws",
+   "providers": ["aws"],
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
-   "is_public": true
+   "schedule": {
+       "hours": {
+           "cron": "0 * * * *",
+           "timezone": "UTC"
+       }
+   },
+   "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -803,23 +794,19 @@ Disables a specific Collector. By disabling a Collector, you cannot communicate 
 
 * **plugin_info** (PluginInfo)  `Required` 
 
-* **priority** (int32)  `Required` 
-
 * **tags** (Struct)  `Required` 
+
+* **provider** (string)  `Required` 
+
+* **capability** (Struct)  `Required` 
+
+* **schedule** (Scheduled)  `Required` 
 
 * **created_at** (string)  `Required` 
 
 * **last_collected_at** (string)  `Required` 
 
 * **domain_id** (string)  `Required` 
-
-* **provider** (string)  `Required` 
-
-* **capability** (Struct)  `Required` 
-
-* **is_public** (bool)  `Required` 
-
-* **project_id** (string)  `Required` 
 
 
 
@@ -849,19 +836,24 @@ Disables a specific Collector. By disabling a Collector, you cannot communicate 
        },
        "upgrade_mode": "AUTO"
    },
-   "priority": 1,
    "tags": {
        "type": "test"
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "provider": "aws",
+   "providers": ["aws"],
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
-   "is_public": true
+   "schedule": {
+       "hours": {
+           "cron": "0 * * * *",
+           "timezone": "UTC"
+       }
+   },
+   "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -1739,10 +1731,16 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 * **plugin_info** (PluginInfo)  `Required` 
 
     
-* **priority** (int32)  `Required` 
+* **tags** (Struct)  `Required` 
 
     
-* **tags** (Struct)  `Required` 
+* **provider** (string)  `Required` 
+
+    
+* **capability** (Struct)  `Required` 
+
+    
+* **schedule** (Scheduled)  `Required` 
 
     
 * **created_at** (string)  `Required` 
@@ -1752,18 +1750,6 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 
     
 * **domain_id** (string)  `Required` 
-
-    
-* **provider** (string)  `Required` 
-
-    
-* **capability** (Struct)  `Required` 
-
-    
-* **is_public** (bool)  `Required` 
-
-    
-* **project_id** (string)  `Required` 
 
     <br>
 
@@ -1824,21 +1810,13 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 * **domain_id** (string)  `Required` 
 
     
-* **priority** (int32) 
+* **schedule** (Scheduled) 
+
+    
+* **provider** (string) 
 
     
 * **tags** (Struct) 
-
-    
-* **is_public** (bool) 
-
-  *default is true*
-
-    
-* **project_id** (string) 
-
-  *if is_public is false, project_id is require
-remained as is_public | True | False*
 
     <br>
 
@@ -1943,22 +1921,13 @@ remained as is_public | True | False*
 * **options** (Struct)  `Required` 
 
     
-* **secret_id** (string)  `Required` 
-
-    
-* **secret_group_id** (string)  `Required` 
-
-    
-* **provider** (string)  `Required` 
-
-    
-* **service_account_id** (string)  `Required` 
-
-    
 * **metadata** (Struct)  `Required` 
 
     
 * **upgrade_mode** (UpgradeMode)  `Required` 
+
+    
+* **secret_filter** (Struct)  `Required` 
 
     <br>
 
@@ -2048,10 +2017,7 @@ remained as is_public | True | False*
 * **name** (string) 
 
     
-* **plugin_info** (PluginInfo) 
-
-    
-* **priority** (int32) 
+* **schedule** (Scheduled) 
 
     
 * **tags** (Struct) 

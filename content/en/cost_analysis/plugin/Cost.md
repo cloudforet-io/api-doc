@@ -131,7 +131,7 @@ bookFlatSection: true
 * **usage_type** (string)  `Required` 
 
     
-* **usage_unit** (string)  `Required` 
+* **resource_group** (string)  `Required` 
 
     
 * **resource** (string)  `Required` 
@@ -144,6 +144,12 @@ bookFlatSection: true
 
     
 * **billed_at** (string)  `Required` 
+
+    
+* **usd_cost** (float)  `Required` 
+
+    
+* **usage_unit** (string)  `Required` 
 
     <br>
 

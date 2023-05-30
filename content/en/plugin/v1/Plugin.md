@@ -25,6 +25,7 @@ A Plugin is a resource managing endpoints of the plugin instances deployed. If t
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**get_plugin_endpoint**](./Plugin#get_plugin_endpoint) | [PluginEndpointRequest](Plugin#pluginendpointrequest) | [PluginEndpoint](./Plugin#pluginendpoint) |
+| [**get_plugin_metadata**](./Plugin#get_plugin_metadata) | [PluginMetadataRequest](Plugin#pluginmetadatarequest) | [PluginMetadata](./Plugin#pluginmetadata) |
 | [**notify_failure**](./Plugin#notify_failure) | [PluginFailureRequest](Plugin#pluginfailurerequest) | [Empty](./Plugin#empty) |
 
 
@@ -105,6 +106,23 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
     
 <br>
 
+### get_plugin_metadata
+
+
+
+
+
+> **POST** /plugin/v1/plugin/get-metadata
+>
+
+
+
+
+
+
+    
+<br>
+
 ### notify_failure
 
 
@@ -168,5 +186,24 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 
     
 * **domain_id** (string)  `Required` 
+
+    <br>
+
+### PluginMetadata
+* **metadata** (Struct)  `Required` 
+
+    <br>
+
+### PluginMetadataRequest
+* **plugin_id** (string)  `Required` 
+
+    
+* **domain_id** (string)  `Required` 
+
+    
+* **version** (string) 
+
+    
+* **options** (Struct) 
 
     <br>
