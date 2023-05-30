@@ -99,10 +99,15 @@ def _update_description_and_required_field(messages):
         value['sorted_field'] = sorted(value.get('fields'), key=lambda x: x.get('required'), reverse=True)
 
 
+def _convert_to_pascal_case(snake_case):
+    return ''.join([word.capitalize() for word in snake_case.split('_')])
+
 def _make_markdown_file(json_file_path):
     try:
         with open(os.path.join(json_file_path), 'r') as _json_file:
             service_name = _get_service_name_from_file_path(json_file_path)
+            service_name = _convert_to_pascal_case(service_name)
+
             _json_file_context = json.load(_json_file)
             _files_in_json_file_context = _get_files_from_json_file(_json_file_context)
             _markdown_path = _get_markdown_path_from_json_file_path(json_file_path)
