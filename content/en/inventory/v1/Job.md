@@ -27,6 +27,7 @@ A Job is an act of collecting external cloud resources through plugins.
 | [**delete**](./Job#delete) | [JobRequest](Job#jobrequest) | [Empty](Job#empty) |
 | [**get**](./Job#get) | [GetJobRequest](Job#getjobrequest) | [JobInfo](Job#jobinfo) |
 | [**list**](./Job#list) | [JobsQuery](Job#jobsquery) | [JobsInfo](Job#jobsinfo) |
+| [**analyze**](./Job#analyze) | [JobAnalyzeQuery](Job#jobanalyzequery) | [Struct](Job#struct) |
 | [**stat**](./Job#stat) | [JobStatQuery](Job#jobstatquery) | [Struct](Job#struct) |
 
 
@@ -256,6 +257,23 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
     
 <br>
 
+### analyze
+
+
+
+
+
+> **POST** /inventory/v1/job/analyze
+>
+
+
+
+
+
+
+    
+<br>
+
 ### stat
 
 
@@ -288,6 +306,14 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
     
 * **only** (string)  `Repeated`   
+
+    <br>
+
+### JobAnalyzeQuery
+* **query** (AnalyzeQuery)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
 
     <br>
 
