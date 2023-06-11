@@ -206,4 +206,7 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
     
 * **options** (Struct)  
 
+    
+* **upgrade_mode** (UpgradeMode)  
+
     <br>

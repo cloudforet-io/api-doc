@@ -64,6 +64,9 @@ You can use a query to get a filtered list of statistics data.
 * **query_set_id** (string)  
 
 
+* **key** (string)  
+
+
 * **provider** (string)  
 
 
@@ -89,6 +92,7 @@ You can use a query to get a filtered list of statistics data.
 {
    "query": <SearchQuery>,
    "query_set_id": "query-set-abcd1234",
+   "key": "Disk Size
    "provider": "aws",
    "cloud_service_group": "EC2",
    "cloud_service_type": "Instance",
@@ -112,22 +116,24 @@ You can use a query to get a filtered list of statistics data.
 {{< highlight json >}}
 {
    "results": [
-   {
-       "query_set_id": "query-set-abcd1234",
-       "name": "EC2 Count by Instance Type",
-       "state": "ENABLED",
-       "query_type": "MANAGED",
-       "unit": "Count",
-       "provider": "aws",
-       "cloud_service_group": "EC2",
-       "cloud_service_type": "Instance",
-       "tags": {
-           "foo": "bar"
+       {
+           "query_set_id": "query-set-abcd1234",
+           "key": "Disk Size",
+           "value": "1040",
+           "unit": "GB",
+           "provider": "aws",
+           "cloud_service_group": "EC2",
+           "cloud_service_type": "Instance",
+           "region_code": "us-east-1",
+           "account": "aws-account-id",
+           "additional_info": {
+               "instance_type": "t2.micro"
+           },
+           "project_id": "project-abcd1234",
+           "domain_id": "domain-58010aa2e451",
+           "created_at": "2022-06-22T01:38:16.301Z"
        },
-       "domain_id": "domain-58010aa2e451",
-       "created_at": "2022-06-22T01:38:16.301Z"
-   },
-   {...}
+       {...}
    ],
    "total_count": 2
 }
@@ -186,6 +192,9 @@ You can use a query to get a filtered list of statistics data.
 * **query_set_id** (string)   `Required` 
 
     
+* **key** (string)   `Required` 
+
+    
 * **value** (float)   `Required` 
 
     
@@ -208,9 +217,6 @@ You can use a query to get a filtered list of statistics data.
 
     
 * **additional_info** (Struct)   `Required` 
-
-    
-* **tags** (Struct)   `Required` 
 
     
 * **project_id** (string)   `Required` 
@@ -247,6 +253,9 @@ You can use a query to get a filtered list of statistics data.
 
     
 * **query_set_id** (string)  
+
+    
+* **key** (string)  
 
     
 * **provider** (string)  

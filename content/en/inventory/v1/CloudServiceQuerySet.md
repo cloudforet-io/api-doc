@@ -64,13 +64,22 @@ Create a new query set. Periodic statistics data is created based on the query s
 * **name** (string)   `Required` 
 
 
-* **query** (AnalyzeQuery)   `Required` 
+* **query_options** (AnalyzeQuery)   `Required` 
+
+
+* **provider** (string)   `Required` 
+
+
+* **cloud_service_group** (string)   `Required` 
+
+
+* **cloud_service_type** (string)   `Required` 
 
 
 * **domain_id** (string)   `Required` 
 
 
-* **unit** (string)  
+* **unit** (Struct)  
 
 
 * **tags** (Struct)  
@@ -82,8 +91,15 @@ Create a new query set. Periodic statistics data is created based on the query s
 {{< highlight json >}}
 {
    "name": "EC2 Count by Instance Type",
-   "query": "<AnalyzeQuery>",
-   "unit": "Count",
+   "query_options": "<AnalyzeQuery>",
+   "unit": {
+       "Disk Size": "GB",
+       "Memory": "GB",
+       "CPU": "Core"
+   },
+   "provider": "aws",
+   "cloud_service_group": "EC2",
+   "cloud_service_type": "Instance",
    "tags": {
        "foo": "bar"
    }
@@ -101,11 +117,11 @@ Create a new query set. Periodic statistics data is created based on the query s
 
 * **state** (State)   `Required` 
 
-* **query** (AnalyzeQuery)   `Required` 
+* **query_options** (AnalyzeQuery)   `Required` 
 
 * **query_type** (QueryType)   `Required` 
 
-* **unit** (string)   `Required` 
+* **unit** (Struct)   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -119,6 +135,8 @@ Create a new query set. Periodic statistics data is created based on the query s
 
 * **created_at** (string)   `Required` 
 
+* **updated_at** (string)   `Required` 
+
 
 
 {{< highlight json >}}
@@ -126,7 +144,13 @@ Create a new query set. Periodic statistics data is created based on the query s
    "query_set_id": "query-set-abcd1234",
    "name": "EC2 Count by Instance Type",
    "state": "ENABLED",
+   "query_options": "<AnalyzeQuery>",
    "query_type": "MANAGED",
+   "unit": {
+       "Disk Size": "GB",
+       "Memory": "GB",
+       "CPU": "Core"
+   },
    "unit": "Count",
    "provider": "aws",
    "cloud_service_group": "EC2",
@@ -136,6 +160,7 @@ Create a new query set. Periodic statistics data is created based on the query s
    },
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-22T01:38:16.301Z"
+   "updated_at": "2023-03-16T06:00:00.000Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -174,10 +199,10 @@ Update a specific query set. You can only update the query set of custom type.
 * **name** (string)  
 
 
-* **query** (AnalyzeQuery)  
+* **query_options** (AnalyzeQuery)  
 
 
-* **unit** (string)  
+* **unit** (Struct)  
 
 
 * **tags** (Struct)  
@@ -193,8 +218,12 @@ Update a specific query set. You can only update the query set of custom type.
 {
    "query_set_id": "query-set-abcd1234",
    "name": "Changed Name",
-   "query": "<AnalyzeQuery>",
-   "unit": "Size (GB)",
+   "query_options": "<AnalyzeQuery>",
+   "unit": {
+       "Disk Size": "GB",
+       "Memory": "GB",
+       "CPU": "Core"
+   },
    "tags": {
        "changed_key": "changed_value"
    }
@@ -212,11 +241,11 @@ Update a specific query set. You can only update the query set of custom type.
 
 * **state** (State)   `Required` 
 
-* **query** (AnalyzeQuery)   `Required` 
+* **query_options** (AnalyzeQuery)   `Required` 
 
 * **query_type** (QueryType)   `Required` 
 
-* **unit** (string)   `Required` 
+* **unit** (Struct)   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -230,6 +259,8 @@ Update a specific query set. You can only update the query set of custom type.
 
 * **created_at** (string)   `Required` 
 
+* **updated_at** (string)   `Required` 
+
 
 
 {{< highlight json >}}
@@ -237,7 +268,13 @@ Update a specific query set. You can only update the query set of custom type.
    "query_set_id": "query-set-abcd1234",
    "name": "EC2 Count by Instance Type",
    "state": "ENABLED",
+   "query_options": "<AnalyzeQuery>",
    "query_type": "MANAGED",
+   "unit": {
+       "Disk Size": "GB",
+       "Memory": "GB",
+       "CPU": "Core"
+   },
    "unit": "Count",
    "provider": "aws",
    "cloud_service_group": "EC2",
@@ -247,6 +284,7 @@ Update a specific query set. You can only update the query set of custom type.
    },
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-22T01:38:16.301Z"
+   "updated_at": "2023-03-16T06:00:00.000Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -395,11 +433,11 @@ Enable a specific query set.
 
 * **state** (State)   `Required` 
 
-* **query** (AnalyzeQuery)   `Required` 
+* **query_options** (AnalyzeQuery)   `Required` 
 
 * **query_type** (QueryType)   `Required` 
 
-* **unit** (string)   `Required` 
+* **unit** (Struct)   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -413,6 +451,8 @@ Enable a specific query set.
 
 * **created_at** (string)   `Required` 
 
+* **updated_at** (string)   `Required` 
+
 
 
 {{< highlight json >}}
@@ -420,7 +460,13 @@ Enable a specific query set.
    "query_set_id": "query-set-abcd1234",
    "name": "EC2 Count by Instance Type",
    "state": "ENABLED",
+   "query_options": "<AnalyzeQuery>",
    "query_type": "MANAGED",
+   "unit": {
+       "Disk Size": "GB",
+       "Memory": "GB",
+       "CPU": "Core"
+   },
    "unit": "Count",
    "provider": "aws",
    "cloud_service_group": "EC2",
@@ -430,6 +476,7 @@ Enable a specific query set.
    },
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-22T01:38:16.301Z"
+   "updated_at": "2023-03-16T06:00:00.000Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -488,11 +535,11 @@ Disable a specific query set. query set is not executed when disabled.
 
 * **state** (State)   `Required` 
 
-* **query** (AnalyzeQuery)   `Required` 
+* **query_options** (AnalyzeQuery)   `Required` 
 
 * **query_type** (QueryType)   `Required` 
 
-* **unit** (string)   `Required` 
+* **unit** (Struct)   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -506,6 +553,8 @@ Disable a specific query set. query set is not executed when disabled.
 
 * **created_at** (string)   `Required` 
 
+* **updated_at** (string)   `Required` 
+
 
 
 {{< highlight json >}}
@@ -513,7 +562,13 @@ Disable a specific query set. query set is not executed when disabled.
    "query_set_id": "query-set-abcd1234",
    "name": "EC2 Count by Instance Type",
    "state": "ENABLED",
+   "query_options": "<AnalyzeQuery>",
    "query_type": "MANAGED",
+   "unit": {
+       "Disk Size": "GB",
+       "Memory": "GB",
+       "CPU": "Core"
+   },
    "unit": "Count",
    "provider": "aws",
    "cloud_service_group": "EC2",
@@ -523,6 +578,7 @@ Disable a specific query set. query set is not executed when disabled.
    },
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-22T01:38:16.301Z"
+   "updated_at": "2023-03-16T06:00:00.000Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -584,11 +640,11 @@ Get a specific query set.
 
 * **state** (State)   `Required` 
 
-* **query** (AnalyzeQuery)   `Required` 
+* **query_options** (AnalyzeQuery)   `Required` 
 
 * **query_type** (QueryType)   `Required` 
 
-* **unit** (string)   `Required` 
+* **unit** (Struct)   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -602,6 +658,8 @@ Get a specific query set.
 
 * **created_at** (string)   `Required` 
 
+* **updated_at** (string)   `Required` 
+
 
 
 {{< highlight json >}}
@@ -609,7 +667,13 @@ Get a specific query set.
    "query_set_id": "query-set-abcd1234",
    "name": "EC2 Count by Instance Type",
    "state": "ENABLED",
+   "query_options": "<AnalyzeQuery>",
    "query_type": "MANAGED",
+   "unit": {
+       "Disk Size": "GB",
+       "Memory": "GB",
+       "CPU": "Core"
+   },
    "unit": "Count",
    "provider": "aws",
    "cloud_service_group": "EC2",
@@ -619,6 +683,7 @@ Get a specific query set.
    },
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-22T01:38:16.301Z"
+   "updated_at": "2023-03-16T06:00:00.000Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -709,22 +774,28 @@ You can use a query to get a filtered list of query sets.
 {{< highlight json >}}
 {
    "results": [
-   {
-       "query_set_id": "query-set-abcd1234",
-       "name": "EC2 Count by Instance Type",
-       "state": "ENABLED",
-       "query_type": "MANAGED",
-       "unit": "Count",
-       "provider": "aws",
-       "cloud_service_group": "EC2",
-       "cloud_service_type": "Instance",
-       "tags": {
-           "foo": "bar"
+       {
+           "query_set_id": "query-set-abcd1234",
+           "name": "EC2 Count by Instance Type",
+           "state": "ENABLED",
+           "query_type": "MANAGED",
+           "query_options": "<AnalyzeQuery>",
+           "unit": {
+               "Disk Size": "GB",
+               "Memory": "GB",
+               "CPU": "Core"
+           },
+           "provider": "aws",
+           "cloud_service_group": "EC2",
+           "cloud_service_type": "Instance",
+           "tags": {
+               "foo": "bar"
+           },
+           "domain_id": "domain-58010aa2e451",
+           "created_at": "2022-06-22T01:38:16.301Z",
+           "updated_at": "2023-03-16T06:00:00.000Z"
        },
-       "domain_id": "domain-58010aa2e451",
-       "created_at": "2022-06-22T01:38:16.301Z"
-   },
-   {...}
+       {...}
    ],
    "total_count": 2
 }
@@ -772,13 +843,13 @@ You can use a query to get a filtered list of query sets.
 * **state** (State)   `Required` 
 
     
-* **query** (AnalyzeQuery)   `Required` 
+* **query_options** (AnalyzeQuery)   `Required` 
 
     
 * **query_type** (QueryType)   `Required` 
 
     
-* **unit** (string)   `Required` 
+* **unit** (Struct)   `Required` 
 
     
 * **provider** (string)   `Required` 
@@ -797,6 +868,9 @@ You can use a query to get a filtered list of query sets.
 
     
 * **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
 
     <br>
 
@@ -857,13 +931,22 @@ You can use a query to get a filtered list of query sets.
 * **name** (string)   `Required` 
 
     
-* **query** (AnalyzeQuery)   `Required` 
+* **query_options** (AnalyzeQuery)   `Required` 
+
+    
+* **provider** (string)   `Required` 
+
+    
+* **cloud_service_group** (string)   `Required` 
+
+    
+* **cloud_service_type** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
 
     
-* **unit** (string)  
+* **unit** (Struct)  
 
     
 * **tags** (Struct)  
@@ -888,10 +971,10 @@ You can use a query to get a filtered list of query sets.
 * **name** (string)  
 
     
-* **query** (AnalyzeQuery)  
+* **query_options** (AnalyzeQuery)  
 
     
-* **unit** (string)  
+* **unit** (Struct)  
 
     
 * **tags** (Struct)  
