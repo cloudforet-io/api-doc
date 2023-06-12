@@ -142,6 +142,8 @@ Creates a new Collector with information of the plugin to use. Information of th
 
 * **schedule** (Scheduled)   `Required` 
 
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **last_collected_at** (string)   `Required` 
@@ -294,6 +296,8 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 
 * **schedule** (Scheduled)   `Required` 
 
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **last_collected_at** (string)   `Required` 
@@ -392,6 +396,8 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
 * **capability** (Struct)   `Required` 
 
 * **schedule** (Scheduled)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -577,6 +583,8 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
 * **capability** (Struct)   `Required` 
 
 * **schedule** (Scheduled)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -956,6 +964,9 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
     
 * **schedule** (Scheduled)   `Required` 
+
+    
+* **secret_filter** (SecretFilter)   `Required` 
 
     
 * **created_at** (string)   `Required` 
