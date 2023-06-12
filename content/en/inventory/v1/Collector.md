@@ -30,16 +30,9 @@ A Collector is a plugin instance collecting cloud resources. A Collector can col
 | [**verify_plugin**](./Collector#verify_plugin) | [VerifyPluginRequest](Collector#verifypluginrequest) | [Empty](Collector#empty) |
 | [**delete**](./Collector#delete) | [CollectorRequest](Collector#collectorrequest) | [Empty](Collector#empty) |
 | [**get**](./Collector#get) | [GetCollectorRequest](Collector#getcollectorrequest) | [CollectorInfo](Collector#collectorinfo) |
-| [**enable**](./Collector#enable) | [CollectorRequest](Collector#collectorrequest) | [CollectorInfo](Collector#collectorinfo) |
-| [**disable**](./Collector#disable) | [CollectorRequest](Collector#collectorrequest) | [CollectorInfo](Collector#collectorinfo) |
 | [**list**](./Collector#list) | [CollectorQuery](Collector#collectorquery) | [CollectorsInfo](Collector#collectorsinfo) |
 | [**stat**](./Collector#stat) | [CollectorStatQuery](Collector#collectorstatquery) | [Struct](Collector#struct) |
 | [**collect**](./Collector#collect) | [CollectRequest](Collector#collectrequest) | [JobInfo](Collector#jobinfo) |
-| [**add_schedule**](./Collector#add_schedule) | [CreateScheduleRequest](Collector#createschedulerequest) | [ScheduleInfo](Collector#scheduleinfo) |
-| [**get_schedule**](./Collector#get_schedule) | [ScheduleRequest](Collector#schedulerequest) | [ScheduleInfo](Collector#scheduleinfo) |
-| [**update_schedule**](./Collector#update_schedule) | [UpdateScheduleRequest](Collector#updateschedulerequest) | [ScheduleInfo](Collector#scheduleinfo) |
-| [**delete_schedule**](./Collector#delete_schedule) | [DeleteScheduleRequest](Collector#deleteschedulerequest) | [Empty](Collector#empty) |
-| [**list_schedules**](./Collector#list_schedules) | [ScheduleQuery](Collector#schedulequery) | [SchedulesInfo](Collector#schedulesinfo) |
 
 
 
@@ -85,6 +78,9 @@ Creates a new Collector with information of the plugin to use. Information of th
 * **tags** (Struct)  
 
 
+* **secret_filter** (SecretFilter)  
+
+
 
 
 
@@ -95,7 +91,6 @@ Creates a new Collector with information of the plugin to use. Information of th
        "plugin_id": "plugin-30d21ef75a5d",
        "version": "1.13.13",
        "options": {},
-       "provider": ["aws"],
        "metadata": {
            "filter_format": [],
            "supported_schedules": [
@@ -112,6 +107,16 @@ Creates a new Collector with information of the plugin to use. Information of th
        },
        "upgrade_mode": "AUTO"
    },
+   "schedule": {
+       "state": "ENABLED",
+       "hours": [0, 6, 12, 18]
+   },
+   "secret_filter": {
+       "state": "ENABLED",
+       "secrets": ["secret-xxx", "secret-yyy"],
+       "service_accounts": ["sa-xxx", "sa-yyy"],
+       "schemas": ["schema-xxx", "schema-yyy"]
+   },
    "tags": {
        "type": "test"
    },
@@ -126,8 +131,6 @@ Creates a new Collector with information of the plugin to use. Information of th
 * **collector_id** (string)   `Required` 
 
 * **name** (string)   `Required` 
-
-* **state** (State)   `Required` 
 
 * **plugin_info** (PluginInfo)   `Required` 
 
@@ -151,12 +154,10 @@ Creates a new Collector with information of the plugin to use. Information of th
 {
    "collector_id": "collector-2c0847644f39",
    "name": "AWS Collector",
-   "state": "ENABLED",
    "plugin_info": {
        "plugin_id": "plugin-30d21ef75a5d",
        "version": "1.13.13",
        "options": {},
-       "provider": "aws",
        "metadata": {
            "supported_schedules": [
                "hours"
@@ -178,17 +179,21 @@ Creates a new Collector with information of the plugin to use. Information of th
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "providers": ["aws"],
+   "provider": "aws",
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
    "schedule": {
-       "hours": {
-           "cron": "0 * * * *",
-           "timezone": "UTC"
-       }
+       "state": "ENABLED",
+       "hours": [0, 6, 12, 18]
+   },
+   "secret_filter": {
+       "state": "ENABLED",
+       "secrets": ["secret-xxx", "secret-yyy"],
+       "service_accounts": ["sa-xxx", "sa-yyy"],
+       "schemas": ["schema-xxx", "schema-yyy"]
    },
    "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
@@ -235,6 +240,9 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 * **schedule** (Scheduled)  
 
 
+* **secret_filter** (SecretFilter)  
+
+
 * **tags** (Struct)  
 
 
@@ -251,6 +259,16 @@ Updates a specific Collector. You can make changes in Collector settings, includ
        "provider": "aws",
        "upgrade_mode": "MANUAL"
    },
+   "schedule": {
+       "state": "ENABLED",
+       "hours": [0, 6, 12, 18]
+   },
+   "secret_filter": {
+       "state": "ENABLED",
+       "secrets": ["secret-xxx", "secret-yyy"],
+       "service_accounts": ["sa-xxx", "sa-yyy"],
+       "schemas": ["schema-xxx", "schema-yyy"]
+   },
    "tags": {
        "a": "b"
    }
@@ -265,8 +283,6 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 * **collector_id** (string)   `Required` 
 
 * **name** (string)   `Required` 
-
-* **state** (State)   `Required` 
 
 * **plugin_info** (PluginInfo)   `Required` 
 
@@ -290,12 +306,10 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 {
    "collector_id": "collector-2c0847644f39",
    "name": "AWS Collector",
-   "state": "ENABLED",
    "plugin_info": {
        "plugin_id": "plugin-30d21ef75a5d",
        "version": "1.13.13",
        "options": {},
-       "provider": "aws",
        "metadata": {
            "supported_schedules": [
                "hours"
@@ -317,17 +331,21 @@ Updates a specific Collector. You can make changes in Collector settings, includ
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "providers": ["aws"],
+   "provider": "aws",
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
    "schedule": {
-       "hours": {
-           "cron": "0 * * * *",
-           "timezone": "UTC"
-       }
+       "state": "ENABLED",
+       "hours": [0, 6, 12, 18]
+   },
+   "secret_filter": {
+       "state": "ENABLED",
+       "secrets": ["secret-xxx", "secret-yyy"],
+       "service_accounts": ["sa-xxx", "sa-yyy"],
+       "schemas": ["schema-xxx", "schema-yyy"]
    },
    "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
@@ -365,8 +383,6 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
 
 * **name** (string)   `Required` 
 
-* **state** (State)   `Required` 
-
 * **plugin_info** (PluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -389,12 +405,10 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
 {
    "collector_id": "collector-2c0847644f39",
    "name": "AWS Collector",
-   "state": "ENABLED",
    "plugin_info": {
        "plugin_id": "plugin-30d21ef75a5d",
        "version": "1.13.13",
        "options": {},
-       "provider": "aws",
        "metadata": {
            "supported_schedules": [
                "hours"
@@ -416,17 +430,21 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "providers": ["aws"],
+   "provider": "aws",
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
    "schedule": {
-       "hours": {
-           "cron": "0 * * * *",
-           "timezone": "UTC"
-       }
+       "state": "ENABLED",
+       "hours": [0, 6, 12, 18]
+   },
+   "secret_filter": {
+       "state": "ENABLED",
+       "secrets": ["secret-xxx", "secret-yyy"],
+       "service_accounts": ["sa-xxx", "sa-yyy"],
+       "schemas": ["schema-xxx", "schema-yyy"]
    },
    "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
@@ -550,8 +568,6 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
 
 * **name** (string)   `Required` 
 
-* **state** (State)   `Required` 
-
 * **plugin_info** (PluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -574,12 +590,10 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
 {
    "collector_id": "collector-2c0847644f39",
    "name": "AWS Collector",
-   "state": "ENABLED",
    "plugin_info": {
        "plugin_id": "plugin-30d21ef75a5d",
        "version": "1.13.13",
        "options": {},
-       "provider": "aws",
        "metadata": {
            "supported_schedules": [
                "hours"
@@ -601,257 +615,21 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
    },
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
-   "providers": ["aws"],
+   "provider": "aws",
    "capability": {
        "supported_schema": [
            "aws_access_key"
        ]
    },
    "schedule": {
-       "hours": {
-           "cron": "0 * * * *",
-           "timezone": "UTC"
-       }
+       "state": "ENABLED",
+       "hours": [0, 6, 12, 18]
    },
-   "last_collected_at": "2022-06-17T06:33:27.195Z"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-{{< /tabs >}}
-
-
-    
-<br>
-
-### enable
-
-Enables a specific Collector. By enabling a Collector, you can communicate with a plugin used for collection.
-
-
-
-> **POST** /inventory/v1/collector/enable
->
-
-
-
-
-
- {{< tabs " enable " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[CollectorRequest](./Collector#collectorrequest)
-
-* **collector_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-
-
-
-{{< highlight json >}}
-{
-   "collector_id": "collector-f2e4e9cc7f21"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
- {{< tab "Response Example" >}}
-
-[CollectorInfo](#COLLECTORINFO)
-* **collector_id** (string)   `Required` 
-
-* **name** (string)   `Required` 
-
-* **state** (State)   `Required` 
-
-* **plugin_info** (PluginInfo)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
-* **provider** (string)   `Required` 
-
-* **capability** (Struct)   `Required` 
-
-* **schedule** (Scheduled)   `Required` 
-
-* **created_at** (string)   `Required` 
-
-* **last_collected_at** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
-
-
-
-{{< highlight json >}}
-{
-   "collector_id": "collector-2c0847644f39",
-   "name": "AWS Collector",
-   "state": "ENABLED",
-   "plugin_info": {
-       "plugin_id": "plugin-30d21ef75a5d",
-       "version": "1.13.13",
-       "options": {},
-       "provider": "aws",
-       "metadata": {
-           "supported_schedules": [
-               "hours"
-           ],
-           "supported_resource_type": [
-               "inventory.CloudService",
-               "inventory.CloudServiceType",
-               "inventory.Region"
-           ],
-           "filter_format": [],
-           "supported_features": [
-               "garbage_collection"
-           ]
-       },
-       "upgrade_mode": "AUTO"
-   },
-   "tags": {
-       "type": "test"
-   },
-   "created_at": "2022-06-17T06:33:27.195Z",
-   "domain_id": "domain-58010aa2e451",
-   "providers": ["aws"],
-   "capability": {
-       "supported_schema": [
-           "aws_access_key"
-       ]
-   },
-   "schedule": {
-       "hours": {
-           "cron": "0 * * * *",
-           "timezone": "UTC"
-       }
-   },
-   "last_collected_at": "2022-06-17T06:33:27.195Z"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-{{< /tabs >}}
-
-
-    
-<br>
-
-### disable
-
-Disables a specific Collector. By disabling a Collector, you cannot communicate with a plugin used for collection.
-
-
-
-> **POST** /inventory/v1/collector/disable
->
-
-
-
-
-
- {{< tabs " disable " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[CollectorRequest](./Collector#collectorrequest)
-
-* **collector_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-
-
-
-{{< highlight json >}}
-{
-   "collector_id": "collector-f2e4e9cc7f21"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
- {{< tab "Response Example" >}}
-
-[CollectorInfo](#COLLECTORINFO)
-* **collector_id** (string)   `Required` 
-
-* **name** (string)   `Required` 
-
-* **state** (State)   `Required` 
-
-* **plugin_info** (PluginInfo)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
-* **provider** (string)   `Required` 
-
-* **capability** (Struct)   `Required` 
-
-* **schedule** (Scheduled)   `Required` 
-
-* **created_at** (string)   `Required` 
-
-* **last_collected_at** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
-
-
-
-{{< highlight json >}}
-{
-   "collector_id": "collector-2c0847644f39",
-   "name": "AWS Collector",
-   "state": "ENABLED",
-   "plugin_info": {
-       "plugin_id": "plugin-30d21ef75a5d",
-       "version": "1.13.13",
-       "options": {},
-       "provider": "aws",
-       "metadata": {
-           "supported_schedules": [
-               "hours"
-           ],
-           "supported_resource_type": [
-               "inventory.CloudService",
-               "inventory.CloudServiceType",
-               "inventory.Region"
-           ],
-           "filter_format": [],
-           "supported_features": [
-               "garbage_collection"
-           ]
-       },
-       "upgrade_mode": "AUTO"
-   },
-   "tags": {
-       "type": "test"
-   },
-   "created_at": "2022-06-17T06:33:27.195Z",
-   "domain_id": "domain-58010aa2e451",
-   "providers": ["aws"],
-   "capability": {
-       "supported_schema": [
-           "aws_access_key"
-       ]
-   },
-   "schedule": {
-       "hours": {
-           "cron": "0 * * * *",
-           "timezone": "UTC"
-       }
+   "secret_filter": {
+       "state": "ENABLED",
+       "secrets": ["secret-xxx", "secret-yyy"],
+       "service_accounts": ["sa-xxx", "sa-yyy"],
+       "schemas": ["schema-xxx", "schema-yyy"]
    },
    "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
@@ -931,57 +709,97 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 {
     "results": [
        {
-           "job_id": "job-3b124006c2d2",
-           "status": "SUCCESS",
-           "filter": {},
-           "total_tasks": 2,
-           "collector_info": {
-               "collector_id": "collector-accd02663b3d",
-               "name": "openstack-collector",
-               "state": "ENABLED",
-               "plugin_info": {
-                   "plugin_id": "plugin-openstack-inven-collector",
-                   "version": "0.4.2.20220616.134758"
-               },
-               "provider": "openstack",
-               "capability": {
-                   "supported_schema": [
-                       "openstack_credentials"
-                   ]
-               },
-               "is_public": true
-           },
-           "domain_id": "domain-58010aa2e451",
-           "created_at": "2022-06-17T08:00:01.225Z",
-           "updated_at": "2022-06-17T08:00:01.225Z",
-           "finished_at": "2022-06-17T08:00:15.197Z"
-       },
-       {
-           "job_id": "job-587a3d3b4db3",
-           "status": "SUCCESS",
-           "filter": {},
-           "total_tasks": 3,
-           "collector_info": {
-               "collector_id": "collector-2c0847644f39",
-               "name": "AWS stat-kwon Collector",
-               "state": "ENABLED",
-               "plugin_info": {
-                   "plugin_id": "plugin-30d21ef75a5d",
-                   "version": "1.13.13.20220610.143142"
-               },
-               "provider": "aws",
-               "capability": {
-                   "supported_schema": [
-                       "aws_access_key"
-                   ]
-               },
-               "is_public": true
-           },
-           "domain_id": "domain-58010aa2e451",
-           "created_at": "2022-06-17T08:00:00.407Z",
-           "updated_at": "2022-06-17T08:00:00.407Z",
-           "finished_at": "2022-06-17T08:07:32.023Z"
-       }
+         "collector_id": "collector-2c0847644f39",
+         "name": "AWS Collector",
+         "plugin_info": {
+             "plugin_id": "plugin-30d21ef75a5d",
+             "version": "1.13.13",
+             "options": {},
+             "metadata": {
+                 "supported_schedules": [
+                     "hours"
+                 ],
+             "supported_resource_type": [
+               "inventory.CloudService",
+               "inventory.CloudServiceType",
+               "inventory.Region"
+             ],
+             "filter_format": [],
+             "supported_features": [
+               "garbage_collection"
+             ]
+         },
+         "upgrade_mode": "AUTO"
+     },
+     "tags": {
+         "type": "test"
+     },
+     "created_at": "2022-06-17T06:33:27.195Z",
+     "domain_id": "domain-58010aa2e451",
+     "provider": "aws",
+     "capability": {
+         "supported_schema": [
+             "aws_access_key"
+         ]
+     },
+     "schedule": {
+         "state": "ENABLED",
+         "hours": [0, 6, 12, 18]
+     },
+     "secret_filter": {
+         "state": "ENABLED",
+         "secrets": ["secret-xxx", "secret-yyy"],
+         "service_accounts": ["sa-xxx", "sa-yyy"],
+         "schemas": ["schema-xxx", "schema-yyy"]
+     },
+     "last_collected_at": "2022-06-17T06:33:27.195Z"
+   },
+   {
+     "collector_id": "collector-2c0847644f39",
+     "name": "AWS Collector",
+     "plugin_info": {
+         "plugin_id": "plugin-30d21ef75a5d",
+         "version": "1.13.13",
+         "options": {},
+         "metadata": {
+             "supported_schedules": [
+                 "hours"
+             ],
+             "supported_resource_type": [
+                 "inventory.CloudService",
+                 "inventory.CloudServiceType",
+                 "inventory.Region"
+             ],
+             "filter_format": [],
+             "supported_features": [
+               "garbage_collection"
+             ]
+         },
+         "upgrade_mode": "AUTO"
+     },
+     "tags": {
+         "type": "test"
+     },
+     "created_at": "2022-06-17T06:33:27.195Z",
+     "domain_id": "domain-58010aa2e451",
+     "provider": "aws",
+     "capability": {
+         "supported_schema": [
+             "aws_access_key"
+         ]
+     },
+     "schedule": {
+         "state": "ENABLED",
+         "hours": [0, 6, 12, 18]
+     },
+     "secret_filter": {
+         "state": "ENABLED",
+         "secrets": ["secret-xxx", "secret-yyy"],
+         "service_accounts": ["sa-xxx", "sa-yyy"],
+         "schemas": ["schema-xxx", "schema-yyy"]
+     },
+     "last_collected_at": "2022-06-17T06:33:27.195Z"
+   }
    ],
    "total_count": 2
 }
@@ -1089,606 +907,6 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
 
     
-<br>
-
-### add_schedule
-
-Adds a schedule to a specific Collector. When specifying the time to collect, the schedule is assigned in units of one hour.The specified schedule is applied every day.
-
-
-
-> **POST** /inventory/v1/collector/add_schedule
->
-
-
-
-
-
- {{< tabs " add_schedule " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[CreateScheduleRequest](./Collector#createschedulerequest)
-
-* **domain_id** (string)   `Required` 
-
-
-* **collector_id** (string)   `Required` 
-
-
-* **schedule** (Scheduled)   `Required` 
-
-
-* **name** (string)  
-
-
-* **collect_mode** (string)  
-
-
-* **filter** (Struct)  
-
-
-
-
-
-{{< highlight json >}}
-{
-   "collector_id": "collector-2c0847644f39",
-   "name": "regular collection",
-   "schedule": {
-       "hours": [16, 18, 20, 22, 0]
-   }
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
- {{< tab "Response Example" >}}
-
-[ScheduleInfo](#SCHEDULEINFO)
-* **domain_id** (string)   `Required` 
-
-* **schedule_id** (string)   `Required` 
-
-* **name** (string)   `Required` 
-
-* **collect_mode** (string)   `Required` 
-
-* **schedule** (Scheduled)   `Required` 
-
-* **created_at** (string)   `Required` 
-
-* **last_scheduled_at** (string)   `Required` 
-
-* **collector_info** (CollectorInfo)   `Required` 
-
-* **filter** (Struct)   `Required` 
-
-
-
-{{< highlight json >}}
-{
-   "schedule_id": "sched-dfb2f6ef84bc",
-   "name": "regular collection",
-   "collect_mode": "ALL",
-   "schedule": {
-       "hours": [
-           16,
-           18,
-           20,
-           22,
-           0
-       ]
-   },
-   "created_at": "2022-06-17T07:12:07.374Z",
-   "collector_info": {
-       "collector_id": "collector-2c0847644f39",
-       "name": "AWS stat-kwon Collector",
-       "state": "ENABLED",
-       "plugin_info": {
-           "plugin_id": "plugin-30d21ef75a5d",
-           "version": "1.13.13.20220610.143142",
-           "options": {},
-           "provider": "aws",
-           "metadata": {
-               "supported_resource_type": [
-                   "inventory.CloudService",
-                   "inventory.CloudServiceType",
-                   "inventory.Region"
-               ],
-               "supported_features": [
-                   "garbage_collection"
-               ],
-               "filter_format": [],
-               "supported_schedules": [
-                   "hours"
-               ]
-           },
-           "upgrade_mode": "MANUAL"
-       },
-       "priority": 10,
-       "tags": {
-           "a": "b"
-       },
-       "created_at": "2022-06-17T06:33:27.195Z",
-       "domain_id": "domain-58010aa2e451",
-       "provider": "aws",
-       "capability": {
-           "supported_schema": [
-               "aws_access_key"
-           ]
-       },
-       "is_public": true
-   },
-   "filter": {}
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-{{< /tabs >}}
-
-
-    
-<br>
-
-### get_schedule
-
-Gets a specific schedule set in a specific Collector. You must specify the `collector_id` of the Collector and the `schedule_id` of the schedule.
-
-
-
-> **POST** /inventory/v1/collector/get-schedule
->
-
-
-
-
-
- {{< tabs " get_schedule " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[ScheduleRequest](./Collector#schedulerequest)
-
-* **domain_id** (string)   `Required` 
-
-
-* **schedule_id** (string)   `Required` 
-
-
-* **collector_id** (string)   `Required` 
-
-
-
-
-
-{{< highlight json >}}
-{
-   "collector_id": "collector-2c0847644f39",
-   "schedule_id": "sched-dfb2f6ef84bc"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
- {{< tab "Response Example" >}}
-
-[ScheduleInfo](#SCHEDULEINFO)
-* **domain_id** (string)   `Required` 
-
-* **schedule_id** (string)   `Required` 
-
-* **name** (string)   `Required` 
-
-* **collect_mode** (string)   `Required` 
-
-* **schedule** (Scheduled)   `Required` 
-
-* **created_at** (string)   `Required` 
-
-* **last_scheduled_at** (string)   `Required` 
-
-* **collector_info** (CollectorInfo)   `Required` 
-
-* **filter** (Struct)   `Required` 
-
-
-
-{{< highlight json >}}
-{
-   "schedule_id": "sched-dfb2f6ef84bc",
-   "name": "regular collection",
-   "collect_mode": "ALL",
-   "schedule": {
-       "hours": [
-           16,
-           18,
-           20,
-           22,
-           0
-       ]
-   },
-   "created_at": "2022-06-17T07:12:07.374Z",
-   "collector_info": {
-       "collector_id": "collector-2c0847644f39",
-       "name": "AWS stat-kwon Collector",
-       "state": "ENABLED",
-       "plugin_info": {
-           "plugin_id": "plugin-30d21ef75a5d",
-           "version": "1.13.13.20220610.143142",
-           "options": {},
-           "provider": "aws",
-           "metadata": {
-               "supported_resource_type": [
-                   "inventory.CloudService",
-                   "inventory.CloudServiceType",
-                   "inventory.Region"
-               ],
-               "supported_features": [
-                   "garbage_collection"
-               ],
-               "filter_format": [],
-               "supported_schedules": [
-                   "hours"
-               ]
-           },
-           "upgrade_mode": "MANUAL"
-       },
-       "priority": 10,
-       "tags": {
-           "a": "b"
-       },
-       "created_at": "2022-06-17T06:33:27.195Z",
-       "domain_id": "domain-58010aa2e451",
-       "provider": "aws",
-       "capability": {
-           "supported_schema": [
-               "aws_access_key"
-           ]
-       },
-       "is_public": true
-   },
-   "filter": {}
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-{{< /tabs >}}
-
-
-    
-<br>
-
-### update_schedule
-
-Updates a specific schedule of the Collector. You can make changes in schedule settings, including `name` and collection time.
-
-
-
-> **POST** /inventory/v1/collector/update-schedule
->
-
-
-
-
-
- {{< tabs " update_schedule " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[UpdateScheduleRequest](./Collector#updateschedulerequest)
-
-* **domain_id** (string)   `Required` 
-
-
-* **schedule_id** (string)   `Required` 
-
-
-* **collector_id** (string)   `Required` 
-
-
-* **name** (string)  
-
-
-* **collect_mode** (string)  
-
-
-* **schedule** (Scheduled)  
-
-
-* **filter** (Struct)  
-
-
-
-
-
-{{< highlight json >}}
-{
-   "schedule_id": "sched-dfb2f6ef84bc",
-   "collector_id": "collector-2c0847644f39",
-   "name": "regular collection",
-   "collect_mode": "ALL",
-   "schedule": {
-       "hours": [2, 4, 6, 8, 0]
-   },
-   "filter": {}
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
- {{< tab "Response Example" >}}
-
-[ScheduleInfo](#SCHEDULEINFO)
-* **domain_id** (string)   `Required` 
-
-* **schedule_id** (string)   `Required` 
-
-* **name** (string)   `Required` 
-
-* **collect_mode** (string)   `Required` 
-
-* **schedule** (Scheduled)   `Required` 
-
-* **created_at** (string)   `Required` 
-
-* **last_scheduled_at** (string)   `Required` 
-
-* **collector_info** (CollectorInfo)   `Required` 
-
-* **filter** (Struct)   `Required` 
-
-
-
-{{< highlight json >}}
-{
-   "schedule_id": "sched-dfb2f6ef84bc",
-   "name": "regular collection",
-   "collect_mode": "ALL",
-   "schedule": {
-       "hours": [
-           16,
-           18,
-           20,
-           22,
-           0
-       ]
-   },
-   "created_at": "2022-06-17T07:12:07.374Z",
-   "collector_info": {
-       "collector_id": "collector-2c0847644f39",
-       "name": "AWS stat-kwon Collector",
-       "state": "ENABLED",
-       "plugin_info": {
-           "plugin_id": "plugin-30d21ef75a5d",
-           "version": "1.13.13.20220610.143142",
-           "options": {},
-           "provider": "aws",
-           "metadata": {
-               "supported_resource_type": [
-                   "inventory.CloudService",
-                   "inventory.CloudServiceType",
-                   "inventory.Region"
-               ],
-               "supported_features": [
-                   "garbage_collection"
-               ],
-               "filter_format": [],
-               "supported_schedules": [
-                   "hours"
-               ]
-           },
-           "upgrade_mode": "MANUAL"
-       },
-       "priority": 10,
-       "tags": {
-           "a": "b"
-       },
-       "created_at": "2022-06-17T06:33:27.195Z",
-       "domain_id": "domain-58010aa2e451",
-       "provider": "aws",
-       "capability": {
-           "supported_schema": [
-               "aws_access_key"
-           ]
-       },
-       "is_public": true
-   },
-   "filter": {}
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-{{< /tabs >}}
-
-
-    
-<br>
-
-### delete_schedule
-
-Deletes a specific schedule of the Collector. You must specify the `schedule_id` of the schedule to delete.
-
-
-
-> **POST** /inventory/v1/collector/delete-schedule
->
-
-
-
-
-
- {{< tabs " delete_schedule " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[DeleteScheduleRequest](./Collector#deleteschedulerequest)
-
-* **domain_id** (string)   `Required` 
-
-
-* **schedule_id** (string)   `Required` 
-
-
-* **collector_id** (string)   `Required` 
-
-
-
-
-
-{{< highlight json >}}
-{
-   "schedule_id": "sched-dfb2f6ef84bc",
-   "collector_id": "collector-2c0847644f39"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-
-{{< /tabs >}}
-
-
-    
-<br>
-
-### list_schedules
-
-Gets a list of all schedules set in a specific Collector. You must specify the `collector_id` of the Collector to get the schedule from.
-
-
-
-> **POST** /inventory/v1/collector/list_schedules
->
-
-
-
-
-
- {{< tabs " list_schedules " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[ScheduleQuery](./Collector#schedulequery)
-
-* **collector_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **query** (Query)  
-
-
-* **schedule_id** (string)  
-
-
-
-
-
-{{< highlight json >}}
-{
-   "collector_id": "collector-f2e4e9cc7f21"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
- {{< tab "Response Example" >}}
-
-[SchedulesInfo](#SCHEDULESINFO)
-* **results** (ScheduleInfo)  `Repeated`   `Required` 
-
-* **total_count** (int32)   `Required` 
-
-
-
-{{< highlight json >}}
-{
-   "results": [
-           {
-               "schedule_id": "sched-572819cabe90",
-               "name": "daily",
-               "collect_mode": "ALL",
-               "schedule": {
-                   "hours": [
-                       15,
-                       16,
-                       18,
-                       21,
-                       0,
-                       3,
-                       4,
-                       6,
-                       9,
-                       12
-                   ]
-               },
-               "created_at": "2021-03-13T14:32:46.137Z",
-               "collector_info": {
-                   "collector_id": "collector-f2e4e9cc7f21",
-                   "name": "AWS Cloud Service Collector",
-                   "state": "ENABLED",
-                   "plugin_info": {
-                       "plugin_id": "plugin-30d21ef75a5d",
-                       "version": "1.13.13.20220610.143142",
-                       "options": {},
-                       "provider": "aws",
-                       "metadata": {
-                           "supported_features": [
-                               "garbage_collection"
-                           ],
-                           "supported_schedules": [
-                               "hours"
-                           ],
-                           "filter_format": [],
-                           "supported_resource_type": [
-                               "inventory.CloudService",
-                               "inventory.CloudServiceType",
-                               "inventory.Region"
-                           ]
-                       },
-                       "upgrade_mode": "AUTO"
-                   },
-                   "priority": 10,
-                   "tags": {},
-                   "created_at": "2021-03-08T06:49:27.876Z",
-                   "last_collected_at": "2022-06-17T06:00:07.162Z",
-                   "domain_id": "domain-58010aa2e451",
-                   "provider": "aws",
-                   "capability": {
-                       "supported_schema": [
-                           "aws_access_key"
-                       ]
-                   },
-                   "is_public": true
-               },
-               "filter": {}
-           }
-   ],
-   "total_count": 1
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-{{< /tabs >}}
-
-
-    
 
 
 <br>
@@ -1723,9 +941,6 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 
     
 * **name** (string)   `Required` 
-
-    
-* **state** (State)   `Required` 
 
     
 * **plugin_info** (PluginInfo)   `Required` 
@@ -1817,6 +1032,9 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 
     
 * **tags** (Struct)  
+
+    
+* **secret_filter** (SecretFilter)  
 
     <br>
 
@@ -1926,9 +1144,6 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
     
 * **upgrade_mode** (UpgradeMode)   `Required` 
 
-    
-* **secret_filter** (Struct)   `Required` 
-
     <br>
 
 ### ScheduleInfo
@@ -1986,13 +1201,7 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
     <br>
 
 ### Scheduled
-* **cron** (string)   `Required` 
-
-    
-* **interval** (int32)   `Required` 
-
-    
-* **minutes** (int32)  `Repeated`    `Required` 
+* **state** (ScheduledState)   `Required` 
 
     
 * **hours** (int32)  `Repeated`    `Required` 
@@ -2007,6 +1216,20 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 
     <br>
 
+### SecretFilter
+* **state** (SecretFilterState)   `Required` 
+
+    
+* **secrets** (string)  `Repeated`    `Required` 
+
+    
+* **service_accounts** (string)  `Repeated`    `Required` 
+
+    
+* **schemas** (string)  `Repeated`    `Required` 
+
+    <br>
+
 ### UpdateCollectorRequest
 * **collector_id** (string)   `Required` 
 
@@ -2018,6 +1241,9 @@ Gets a list of all schedules set in a specific Collector. You must specify the `
 
     
 * **schedule** (Scheduled)  
+
+    
+* **secret_filter** (SecretFilter)  
 
     
 * **tags** (Struct)  
