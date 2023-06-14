@@ -218,6 +218,9 @@ bookFlatSection: true
     <br>
 
 ### ServiceAccountQuery
+* **domain_id** (string)   `Required` 
+
+    
 * **query** (Query)  
 
     
@@ -242,7 +245,7 @@ bookFlatSection: true
 * **scope** (string)  
 
     
-* **domain_id** (string)  
+* **has_secret** (bool)  
 
     <br>
 
