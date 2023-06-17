@@ -263,6 +263,9 @@ bookFlatSection: true
     
 * **domain_id** (string)   `Required` 
 
+    
+* **has_secret** (bool)  
+
     <br>
 
 ### ServiceAccountsInfo
