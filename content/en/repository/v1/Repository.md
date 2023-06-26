@@ -69,20 +69,14 @@ Registers a Repository. The parameter `name` can only include alphabets, numbers
 * **endpoint** (string)  
 
 
-* **version** (string)  
-
-
-* **secret_id** (string)  
-
-
 
 
 
 {{< highlight json >}}
 {
-   "name": "Local",
-   "repository_type": "local",
-   "endpoint": "grpc+ssl://local-url:443"
+   "name": "Open Source Marketplace",
+   "repository_type": "remote",
+   "endpoint": "grpc+ssl://repository.portal.spaceone.megazone.io:443"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -110,9 +104,9 @@ Registers a Repository. The parameter `name` can only include alphabets, numbers
 {{< highlight json >}}
 {
    "repository_id": "repo-123456789012",
-   "name": "Local",
-   "repository_type": "local",
-   "endpoint": "grpc+ssl://local-url:443",
+   "name": "Open Source Marketplace",
+   "repository_type": "remote",
+   "endpoint": "grpc+ssl://repository.portal.spaceone.megazone.io:443",
    "created_at": "2022-01-01T02:27:02.924Z"
 }
 {{< /highlight >}}
@@ -161,7 +155,7 @@ Updates a specific Repository registered. You must specify the `repository_id` o
 {{< highlight json >}}
 {
    "repository_id": "repo-123456789012",
-   "name": "Local-repo"
+   "name": "Changed Name"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -189,9 +183,9 @@ Updates a specific Repository registered. You must specify the `repository_id` o
 {{< highlight json >}}
 {
    "repository_id": "repo-123456789012",
-   "name": "Local",
-   "repository_type": "local",
-   "endpoint": "grpc+ssl://local-url:443",
+   "name": "Open Source Marketplace",
+   "repository_type": "remote",
+   "endpoint": "grpc+ssl://repository.portal.spaceone.megazone.io:443",
    "created_at": "2022-01-01T02:27:02.924Z"
 }
 {{< /highlight >}}
@@ -312,9 +306,9 @@ Gets a specific Repository. Prints detailed information about the Repository, in
 {{< highlight json >}}
 {
    "repository_id": "repo-123456789012",
-   "name": "Local",
-   "repository_type": "local",
-   "endpoint": "grpc+ssl://local-url:443",
+   "name": "Open Source Marketplace",
+   "repository_type": "remote",
+   "endpoint": "grpc+ssl://repository.portal.spaceone.megazone.io:443",
    "created_at": "2022-01-01T02:27:02.924Z"
 }
 {{< /highlight >}}
@@ -389,9 +383,9 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
    "results": [
        {
            "repository_id": "repo-123456789012",
-           "name": "Local-repo",
-           "repository_type": "local",
-           "endpoint": "grpc+ssl://local-url:443",
+           "name": "Open Source Marketplace",
+           "repository_type": "remote",
+           "endpoint": "grpc+ssl://repository.portal.spaceone.megazone.io:443",
            "created_at": "2022-01-01T02:26:29.081Z"
        }
    ],
@@ -442,12 +436,6 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
 
     
 * **endpoint** (string)  
-
-    
-* **version** (string)  
-
-    
-* **secret_id** (string)  
 
     <br>
 
