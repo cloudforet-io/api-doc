@@ -93,10 +93,6 @@ Registers a Repository. The parameter `name` can only include alphabets, numbers
 
 * **endpoint** (string)   `Required` 
 
-* **version** (string)   `Required` 
-
-* **secret_id** (string)   `Required` 
-
 * **created_at** (string)   `Required` 
 
 
@@ -171,10 +167,6 @@ Updates a specific Repository registered. You must specify the `repository_id` o
 * **repository_type** (string)   `Required` 
 
 * **endpoint** (string)   `Required` 
-
-* **version** (string)   `Required` 
-
-* **secret_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -294,10 +286,6 @@ Gets a specific Repository. Prints detailed information about the Repository, in
 * **repository_type** (string)   `Required` 
 
 * **endpoint** (string)   `Required` 
-
-* **version** (string)   `Required` 
-
-* **secret_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -469,12 +457,6 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
 
     
 * **endpoint** (string)   `Required` 
-
-    
-* **version** (string)   `Required` 
-
-    
-* **secret_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
