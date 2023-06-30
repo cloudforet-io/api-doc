@@ -30,7 +30,7 @@ A DataSource is a plugin instance collecting external cost data. External cost d
 | [**verify_plugin**](./DataSource#verify_plugin) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](DataSource#empty) |
 | [**enable**](./DataSource#enable) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**disable**](./DataSource#disable) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
-| [**deregister**](./DataSource#deregister) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](DataSource#empty) |
+| [**deregister**](./DataSource#deregister) | [DeregisterDataSourceRequest](DataSource#deregisterdatasourcerequest) | [Empty](DataSource#empty) |
 | [**sync**](./DataSource#sync) | [SyncDataSourceRequest](DataSource#syncdatasourcerequest) | [JobInfo](DataSource#jobinfo) |
 | [**get**](./DataSource#get) | [GetDataSourceRequest](DataSource#getdatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**list**](./DataSource#list) | [DataSourceQuery](DataSource#datasourcequery) | [DataSourcesInfo](DataSource#datasourcesinfo) |
@@ -519,8 +519,6 @@ Verifies the plugin of a specific DataSource. This method validates the plugin d
 
 * **data_source_id** (string)   `Required` 
 
-  *is_required: true*
-
 
 * **domain_id** (string)   `Required` 
 
@@ -565,8 +563,6 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 [DataSourceRequest](./DataSource#datasourcerequest)
 
 * **data_source_id** (string)   `Required` 
-
-  *is_required: true*
 
 
 * **domain_id** (string)   `Required` 
@@ -697,8 +693,6 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 
 * **data_source_id** (string)   `Required` 
 
-  *is_required: true*
-
 
 * **domain_id** (string)   `Required` 
 
@@ -824,14 +818,17 @@ Deregisters and deletes a specific DataSource. You must specify the `data_source
 
 
 
-[DataSourceRequest](./DataSource#datasourcerequest)
+[DeregisterDataSourceRequest](./DataSource#deregisterdatasourcerequest)
 
 * **data_source_id** (string)   `Required` 
 
-  *is_required: true*
-
 
 * **domain_id** (string)   `Required` 
+
+
+* **cascade_delete_cost** (bool)  
+
+  *Default value is true. If true delete all cost data related to data_source_id*
 
 
 
@@ -839,7 +836,9 @@ Deregisters and deletes a specific DataSource. You must specify the `data_source
 
 {{< highlight json >}}
 {
-   "data_source_id": "ds-085d1e872789"
+   "data_source_id": "ds-085d1e872789",
+   "cascade_delete_cost": true,
+   "domain_id": "domain-085d1e872789"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -1233,8 +1232,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 ### DataSourceRequest
 * **data_source_id** (string)   `Required` 
 
-  *is_required: true*
-
     
 * **domain_id** (string)   `Required` 
 
@@ -1253,6 +1250,19 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### DeregisterDataSourceRequest
+* **data_source_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **cascade_delete_cost** (bool)  
+
+  *Default value is true. If true delete all cost data related to data_source_id*
 
     <br>
 

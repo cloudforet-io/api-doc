@@ -347,7 +347,7 @@ Run a specific query set and store the result in the statistics data.
 
 
 
-> **POST** /inventory/v1/cloud-service-query-set/delete
+> **POST** /inventory/v1/cloud-service-query-set/run
 >
 
 
@@ -392,7 +392,7 @@ Enable a specific query set.
 
 
 
-> **POST** /inventory/v1/cloud-service-query-set/get
+> **POST** /inventory/v1/cloud-service-query-set/enable
 >
 
 
@@ -494,7 +494,7 @@ Disable a specific query set. query set is not executed when disabled.
 
 
 
-> **POST** /inventory/v1/cloud-service-query-set/get
+> **POST** /inventory/v1/cloud-service-query-set/disable
 >
 
 
