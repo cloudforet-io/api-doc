@@ -83,6 +83,12 @@ Registers a DataSource with information of the plugin to use. Information of the
 * **tags** (Struct)  
 
 
+* **secret_type** (SecretType)  
+
+
+* **secret_filter** (SecretFilter)  
+
+
 
 
 
@@ -146,6 +152,10 @@ Registers a DataSource with information of the plugin to use. Information of the
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -289,6 +299,10 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 
 * **domain_id** (string)   `Required` 
 
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
@@ -429,6 +443,10 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -604,6 +622,10 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 
 * **domain_id** (string)   `Required` 
 
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
@@ -732,6 +754,10 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -909,6 +935,10 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -1199,6 +1229,12 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **domain_id** (string)   `Required` 
 
     
+* **secret_type** (SecretType)   `Required` 
+
+    
+* **secret_filter** (SecretFilter)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
@@ -1323,6 +1359,26 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     
 * **tags** (Struct)  
+
+    
+* **secret_type** (SecretType)  
+
+    
+* **secret_filter** (SecretFilter)  
+
+    <br>
+
+### SecretFilter
+* **state** (SecretFilterState)   `Required` 
+
+    
+* **secrets** (string)  `Repeated`    `Required` 
+
+    
+* **service_accounts** (string)  `Repeated`    `Required` 
+
+    
+* **schemas** (string)  `Repeated`    `Required` 
 
     <br>
 
