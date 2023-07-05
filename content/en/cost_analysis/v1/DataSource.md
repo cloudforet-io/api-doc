@@ -259,6 +259,9 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 * **tags** (Struct)  
 
 
+* **secret_filter** (SecretFilter)  
+
+
 
 
 
@@ -1427,5 +1430,8 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     
 * **tags** (Struct)  
+
+    
+* **secret_filter** (SecretFilter)  
 
     <br>
