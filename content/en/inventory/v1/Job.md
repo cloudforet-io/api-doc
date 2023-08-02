@@ -166,7 +166,7 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 * **collector_id** (string)  
 
 
-* **project_id** (string)  
+* **secret_id** (string)  
 
 
 
@@ -357,6 +357,6 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 * **collector_id** (string)  
 
     
-* **project_id** (string)  
+* **secret_id** (string)  
 
     <br>

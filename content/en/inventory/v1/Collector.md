@@ -862,19 +862,21 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
 * **status** (Status)   `Required` 
 
-* **filter** (Struct)   `Required` 
-
 * **total_tasks** (int32)   `Required` 
 
 * **remained_tasks** (int32)   `Required` 
 
-* **errors** (ErrorInfo)  `Repeated`   `Required` 
+* **success_tasks** (int32)   `Required` 
 
-* **collector_info** (CollectorInfo)   `Required` 
+* **failure_tasks** (int32)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **collector_id** (string)   `Required` 
+
+* **secret_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **plugin_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -1109,25 +1111,28 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **status** (Status)   `Required` 
 
     
-* **filter** (Struct)   `Required` 
-
-    
 * **total_tasks** (int32)   `Required` 
 
     
 * **remained_tasks** (int32)   `Required` 
 
     
-* **errors** (ErrorInfo)  `Repeated`    `Required` 
+* **success_tasks** (int32)   `Required` 
 
     
-* **collector_info** (CollectorInfo)   `Required` 
+* **failure_tasks** (int32)   `Required` 
 
     
-* **project_id** (string)   `Required` 
+* **collector_id** (string)   `Required` 
+
+    
+* **secret_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **plugin_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -1238,6 +1243,15 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
     
 * **schemas** (string)  `Repeated`    `Required` 
+
+    
+* **exclude_secrets** (string)  `Repeated`    `Required` 
+
+    
+* **exclude_service_accounts** (string)  `Repeated`    `Required` 
+
+    
+* **exclude_schemas** (string)  `Repeated`    `Required` 
 
     <br>
 
