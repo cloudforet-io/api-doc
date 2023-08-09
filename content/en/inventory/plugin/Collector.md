@@ -155,6 +155,9 @@ Collects data of external infrastructure resources by a specific Collector.
 * **filter** (Struct)   `Required` 
 
 
+* **task_options** (Struct)   `Required` 
+
+
 
 
 
@@ -188,6 +191,9 @@ Collects data of external infrastructure resources by a specific Collector.
 
     
 * **filter** (Struct)   `Required` 
+
+    
+* **task_options** (Struct)   `Required` 
 
     <br>
 
