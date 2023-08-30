@@ -58,13 +58,13 @@ Creates a new DataSourceRule. When creating the resource, this method can apply 
 
 [CreateDataSourceRuleRequest](./DataSourceRule#createdatasourcerulerequest)
 
+* **data_source_id** (string)   `Required` 
+
+
 * **conditions_policy** (ConditionsPolicy)   `Required` 
 
 
 * **actions** (DataSourceRuleActions)   `Required` 
-
-
-* **data_source_id** (string)   `Required` 
 
 
 * **domain_id** (string)   `Required` 
@@ -87,14 +87,14 @@ Creates a new DataSourceRule. When creating the resource, this method can apply 
 
 {{< highlight json >}}
 {
+   "data_source_id": "ds-c96609f5afeb",
    "name": "match_service_account_test",
    "conditions_policy": "ALWAYS",
    "actions": {
        "match_service_account": {"source": "account", "target": "data.project_id"}
    },
    "options": {"stop_processing": true},
-   "tags": {"b": "c", "a": "b"},
-   "data_source_id": "ds-c96609f5afeb"
+   "tags": {"b": "c", "a": "b"}
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -577,6 +577,9 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 * **name** (string)  
 
 
+* **rule_type** (string)  
+
+
 * **data_source_id** (string)  
 
 
@@ -690,13 +693,13 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
     <br>
 
 ### CreateDataSourceRuleRequest
+* **data_source_id** (string)   `Required` 
+
+    
 * **conditions_policy** (ConditionsPolicy)   `Required` 
 
     
 * **actions** (DataSourceRuleActions)   `Required` 
-
-    
-* **data_source_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -794,6 +797,9 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 
     
 * **name** (string)  
+
+    
+* **rule_type** (string)  
 
     
 * **data_source_id** (string)  

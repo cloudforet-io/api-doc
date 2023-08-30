@@ -63,6 +63,9 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 * **budget_id** (string)  
 
 
+* **data_source_id** (string)  
+
+
 * **name** (string)  
 
 
@@ -96,8 +99,11 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
                "budget_id": "budget-abb377eb9e8b",
                "name": "Cloudforet-Budget3",
                "date": "2022-01",
-               "usd_cost": 7671.164,
+               "cost": 7671.164,
                "limit": 10000.0,
+               "currency": "USD",
+               "project_id": "project-1b2b3b4b5b6b",
+               "data_source_id": "data-source-1b2b3b4b5b6b",
                "domain_id": "domain-58010aa2e451",
                "updated_at": "2022-07-19T04:26:08.099Z"
            },
@@ -105,8 +111,11 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
                "budget_id": "budget-abb377eb9e8b",
                "name": "Cloudforet-Budget3",
                "date": "2022-02",
-               "usd_cost": 5931.771,
+               "cost": 5931.771,
                "limit": 11000.0,
+               "currency": "USD",
+               "project_id": "project-1b2b3b4b5b6b",
+               "data_source_id": "data-source-1b2b3b4b5b6b",
                "domain_id": "domain-58010aa2e451",
                "updated_at": "2022-07-19T04:26:08.105Z"
            }
@@ -170,6 +179,12 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
     
 * **domain_id** (string)   `Required` 
 
+    
+* **budget_id** (string)  
+
+    
+* **data_source_id** (string)  
+
     <br>
 
 ### BudgetUsageInfo
@@ -182,13 +197,25 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 * **date** (string)   `Required` 
 
     
-* **usd_cost** (float)   `Required` 
+* **cost** (float)   `Required` 
 
     
 * **limit** (float)   `Required` 
 
     
+* **currency** (string)   `Required` 
+
+    
 * **cost_types** (Struct)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
+
+    
+* **project_group_id** (string)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -208,6 +235,9 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 * **budget_id** (string)  
 
     
+* **data_source_id** (string)  
+
+    
 * **name** (string)  
 
     
@@ -220,6 +250,12 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **budget_id** (string)  
+
+    
+* **data_source_id** (string)  
 
     <br>
 

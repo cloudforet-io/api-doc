@@ -67,6 +67,9 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 * **end** (string)   `Required` 
 
 
+* **data_source_id** (string)   `Required` 
+
+
 * **domain_id** (string)   `Required` 
 
 
@@ -115,7 +118,8 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
    "time_unit": "MONTHLY",
    "start": "2022-01",
    "end": "2022-12",
-   "project_group_id": "pg-812c90990877"
+   "project_group_id": "pg-812c90990877",
+   "data_source_id": "ds-fcba92ca73b1"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -132,7 +136,7 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 
 * **planned_limits** (PlannedLimit)  `Repeated`   `Required` 
 
-* **total_usage_usd_cost** (float)   `Required` 
+* **currency** (string)   `Required` 
 
 * **cost_types** (Struct)   `Required` 
 
@@ -149,6 +153,8 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 * **project_id** (string)   `Required` 
 
 * **project_group_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -213,12 +219,13 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
                "limit": 2100.0
            }
        ],
-       "total_usage_usd_cost": 43412.45,
+       "currency": "USD",
        "time_unit": "MONTHLY",
        "start": "2022-01",
        "end": "2022-12",
        "tags": {},
        "project_group_id": "pg-812c90990877",
+       "data_source_id": "ds-fcba92ca73b1",
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-18T09:30:56.901Z",
        "updated_at": "2022-07-18T09:30:56.901Z"
@@ -309,7 +316,7 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
 
 * **planned_limits** (PlannedLimit)  `Repeated`   `Required` 
 
-* **total_usage_usd_cost** (float)   `Required` 
+* **currency** (string)   `Required` 
 
 * **cost_types** (Struct)   `Required` 
 
@@ -326,6 +333,8 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
 * **project_id** (string)   `Required` 
 
 * **project_group_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -390,12 +399,13 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
                "limit": 2100.0
            }
        ],
-       "total_usage_usd_cost": 43412.45,
+       "currency": "USD",
        "time_unit": "MONTHLY",
        "start": "2022-01",
        "end": "2022-12",
        "tags": {},
        "project_group_id": "pg-812c90990877",
+       "data_source_id": "ds-fcba92ca73b1",
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-18T09:30:56.901Z",
        "updated_at": "2022-07-18T09:30:56.901Z"
@@ -474,7 +484,7 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
 
 * **planned_limits** (PlannedLimit)  `Repeated`   `Required` 
 
-* **total_usage_usd_cost** (float)   `Required` 
+* **currency** (string)   `Required` 
 
 * **cost_types** (Struct)   `Required` 
 
@@ -491,6 +501,8 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
 * **project_id** (string)   `Required` 
 
 * **project_group_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -555,12 +567,13 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
                "limit": 2100.0
            }
        ],
-       "total_usage_usd_cost": 43412.45,
+       "currency": "USD",
        "time_unit": "MONTHLY",
        "start": "2022-01",
        "end": "2022-12",
        "tags": {},
        "project_group_id": "pg-812c90990877",
+       "data_source_id": "ds-fcba92ca73b1",
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-18T09:30:56.901Z",
        "updated_at": "2022-07-18T09:30:56.901Z"
@@ -648,7 +661,7 @@ Gets a specific Budget. Prints detailed information about the Budget, including 
 
 * **planned_limits** (PlannedLimit)  `Repeated`   `Required` 
 
-* **total_usage_usd_cost** (float)   `Required` 
+* **currency** (string)   `Required` 
 
 * **cost_types** (Struct)   `Required` 
 
@@ -665,6 +678,8 @@ Gets a specific Budget. Prints detailed information about the Budget, including 
 * **project_id** (string)   `Required` 
 
 * **project_group_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -729,12 +744,13 @@ Gets a specific Budget. Prints detailed information about the Budget, including 
                "limit": 2100.0
            }
        ],
-       "total_usage_usd_cost": 43412.45,
+       "currency": "USD",
        "time_unit": "MONTHLY",
        "start": "2022-01",
        "end": "2022-12",
        "tags": {},
        "project_group_id": "pg-812c90990877",
+       "data_source_id": "ds-fcba92ca73b1",
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-18T09:30:56.901Z",
        "updated_at": "2022-07-18T09:30:56.901Z"
@@ -789,6 +805,9 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
 
 * **time_unit** (TimeUnit)  
+
+
+* **data_source_id** (string)  
 
 
 
@@ -868,12 +887,13 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
                        "limit": 2100.0
                    }
                ],
-               "total_usage_usd_cost": 43412.45,
+               "currency": "USD",
                "time_unit": "MONTHLY",
                "start": "2022-01",
                "end": "2022-12",
                "tags": {},
                "project_group_id": "pg-812c90990877",
+               "data_source_id": "ds-fcba92ca73b1",
                "domain_id": "domain-58010aa2e451",
                "created_at": "2022-04-12T06:09:56.917Z",
                "updated_at": "2022-04-12T06:09:56.917Z"
@@ -928,7 +948,7 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 * **planned_limits** (PlannedLimit)  `Repeated`    `Required` 
 
     
-* **total_usage_usd_cost** (float)   `Required` 
+* **currency** (string)   `Required` 
 
     
 * **cost_types** (Struct)   `Required` 
@@ -953,6 +973,9 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
     
 * **project_group_id** (string)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -997,6 +1020,9 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
     
 * **time_unit** (TimeUnit)  
 
+    
+* **data_source_id** (string)  
+
     <br>
 
 ### BudgetRequest
@@ -1031,6 +1057,9 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
     
 * **end** (string)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 

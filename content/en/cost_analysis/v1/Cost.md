@@ -29,7 +29,6 @@ A Cost is a resource of raw cost data collected by the cost_analysis.DataSource.
 | [**get**](./Cost#get) | [GetCostRequest](Cost#getcostrequest) | [CostInfo](Cost#costinfo) |
 | [**list**](./Cost#list) | [CostQuery](Cost#costquery) | [CostsInfo](Cost#costsinfo) |
 | [**analyze**](./Cost#analyze) | [CostAnalyzeQuery](Cost#costanalyzequery) | [Struct](Cost#struct) |
-| [**analyze_v2**](./Cost#analyze_v2) | [CostAnalyzeV2Query](Cost#costanalyzev2query) | [Struct](Cost#struct) |
 | [**stat**](./Cost#stat) | [CostStatQuery](Cost#coststatquery) | [Struct](Cost#struct) |
 
 
@@ -58,10 +57,7 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 [CreateCostRequest](./Cost#createcostrequest)
 
-* **original_cost** (float)   `Required` 
-
-
-* **original_currency** (string)   `Required` 
+* **cost** (float)   `Required` 
 
 
 * **data_source_id** (string)   `Required` 
@@ -70,10 +66,10 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 * **domain_id** (string)   `Required` 
 
 
-* **usd_cost** (float)  
-
-
 * **usage_quantity** (float)  
+
+
+* **usage_unit** (float)  
 
 
 * **provider** (string)  
@@ -82,19 +78,10 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 * **region_code** (string)  
 
 
-* **category** (string)  
-
-
 * **product** (string)  
 
 
-* **account** (string)  
-
-
 * **usage_type** (string)  
-
-
-* **resource_group** (string)  
 
 
 * **resource** (string)  
@@ -120,10 +107,9 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 {{< highlight json >}}
 {
-       "original_cost": 4.50528e-08,
-       "original_currency": "USD",
-       "usd_cost": 4.50528e-08,
-       "usage_quantity": 4.11e-07,
+       "cost": 142,
+       "usage_quantity": 84532,
+       "usage_unit": "GB",
        "provider": "aws",
        "region_code": "ap-northeast-1",
        "product": "AWSDataTransfer",
@@ -131,6 +117,9 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
        "usage_type": "data-transfer.out",
        "additional_info": {
            "raw_usage_type": "APN1-DataTransfer-Out-Bytes"
+       },
+       "tags": {
+           "Environment": "Dev"
        },
        "data_source_id": "ds-fcba92ca73b1"
 }
@@ -143,13 +132,11 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 [CostInfo](#COSTINFO)
 * **cost_id** (string)   `Required` 
 
-* **usd_cost** (float)   `Required` 
-
-* **original_currency** (string)   `Required` 
-
-* **original_cost** (float)   `Required` 
+* **cost** (float)   `Required` 
 
 * **usage_quantity** (float)   `Required` 
+
+* **usage_unit** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -157,19 +144,11 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 * **region_key** (string)   `Required` 
 
-* **category** (string)   `Required` 
-
 * **product** (string)   `Required` 
-
-* **account** (string)   `Required` 
 
 * **usage_type** (string)   `Required` 
 
-* **usage_unit** (string)   `Required` 
-
 * **resource** (string)   `Required` 
-
-* **resource_group** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
@@ -192,20 +171,20 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 {{< highlight json >}}
 {
        "cost_id": "cost-c5aae7712ec9",
-       "usd_cost": 4.50528e-08,
-       "original_currency": "USD",
-       "original_cost": 4.50528e-08,
-       "usage_quantity": 4.11e-07,
+       "cost": 142,
+       "usage_quantity": 84532,
+       "usage_unit": "GB",
        "provider": "aws",
        "region_code": "ap-northeast-1",
        "product": "AWSDataTransfer",
-       "account": "722069360300",
        "usage_type": "data-transfer.out",
-       "tags": {},
        "additional_info": {
            "raw_usage_type": "APN1-DataTransfer-Out-Bytes"
        },
-       "data_source_id": "ds-fcba92ca73b1",
+       "tags": {
+           "Environment": "Dev"
+       },
+       "data_source_id": "ds-fcba92ca73b1"
        "domain_id": "domain-58010aa2e451",
        "billed_at": "2022-07-19T09:44:27.326Z",
        "created_at": "2022-07-19T09:44:27.373Z"
@@ -311,13 +290,11 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 [CostInfo](#COSTINFO)
 * **cost_id** (string)   `Required` 
 
-* **usd_cost** (float)   `Required` 
-
-* **original_currency** (string)   `Required` 
-
-* **original_cost** (float)   `Required` 
+* **cost** (float)   `Required` 
 
 * **usage_quantity** (float)   `Required` 
+
+* **usage_unit** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -325,19 +302,11 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 
 * **region_key** (string)   `Required` 
 
-* **category** (string)   `Required` 
-
 * **product** (string)   `Required` 
-
-* **account** (string)   `Required` 
 
 * **usage_type** (string)   `Required` 
 
-* **usage_unit** (string)   `Required` 
-
 * **resource** (string)   `Required` 
-
-* **resource_group** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
@@ -360,20 +329,20 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 {{< highlight json >}}
 {
        "cost_id": "cost-c5aae7712ec9",
-       "usd_cost": 4.50528e-08,
-       "original_currency": "USD",
-       "original_cost": 4.50528e-08,
-       "usage_quantity": 4.11e-07,
+       "cost": 142,
+       "usage_quantity": 84532,
+       "usage_unit": "GB",
        "provider": "aws",
        "region_code": "ap-northeast-1",
        "product": "AWSDataTransfer",
-       "account": "722069360300",
        "usage_type": "data-transfer.out",
-       "tags": {},
        "additional_info": {
            "raw_usage_type": "APN1-DataTransfer-Out-Bytes"
        },
-       "data_source_id": "ds-fcba92ca73b1",
+       "tags": {
+           "Environment": "Dev"
+       },
+       "data_source_id": "ds-fcba92ca73b1"
        "domain_id": "domain-58010aa2e451",
        "billed_at": "2022-07-19T09:44:27.326Z",
        "created_at": "2022-07-19T09:44:27.373Z"
@@ -418,9 +387,6 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 * **cost_id** (string)  
 
 
-* **original_currency** (string)  
-
-
 * **provider** (string)  
 
 
@@ -430,19 +396,10 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 * **region_key** (string)  
 
 
-* **category** (string)  
-
-
 * **product** (string)  
 
 
-* **account** (string)  
-
-
 * **usage_type** (string)  
-
-
-* **resource_group** (string)  
 
 
 * **resource** (string)  
@@ -481,39 +438,37 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 {
        "results": [
            {
-               "cost_id": "cost-2ad052ed03d7",
-               "usd_cost": 4.50528e-08,
-               "original_currency": "USD",
-               "original_cost": 4.50528e-08,
-               "usage_quantity": 4.11e-07,
+               "cost_id": "cost-c5aae7712ec9",
+               "cost": 142,
+               "usage_quantity": 84532,
+               "usage_unit": "GB",
                "provider": "aws",
                "region_code": "ap-northeast-1",
                "product": "AWSDataTransfer",
-               "account": "722069360300",
                "usage_type": "data-transfer.out",
-               "tags": {},
                "additional_info": {
-                   "raw_usage_type": "APN1-DataTransfer-Out-Bytes"
+               "raw_usage_type": "APN1-DataTransfer-Out-Bytes"
                },
-               "data_source_id": "ds-fcba92ca73b1",
+               "tags": {
+               "Environment": "Dev"
+               },
+               "data_source_id": "ds-fcba92ca73b1"
                "domain_id": "domain-58010aa2e451",
-               "billed_at": "2021-01-01T00:00:00.000Z",
-               "created_at": "2022-04-06T13:49:39.669Z"
+               "billed_at": "2022-07-19T09:44:27.326Z",
+               "created_at": "2022-07-19T09:44:27.373Z"
            },
            {
                "cost_id": "cost-1d5e1b0dbf82",
-               "usd_cost": 1.04e-05,
-               "original_currency": "USD",
-               "original_cost": 1.04e-05,
-               "usage_quantity": 26.0,
+               "cost": 78,
+               "usage_quantity": 34523,
+               "usage_unit": "Count",
                "provider": "aws",
                "region_code": "ap-northeast-1",
-               "product": "AWSQueueService",
-               "account": "722069360300",
-               "tags": {},
+               "product": "AWSQueueService"
                "additional_info": {
                    "raw_usage_type": "APN1-Requests-Tier1"
                },
+               "tags": {},
                "data_source_id": "ds-fcba92ca73b1",
                "domain_id": "domain-58010aa2e451",
                "billed_at": "2021-01-01T00:00:00.000Z",
@@ -539,85 +494,6 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
 
 > **POST** /cost-analysis/v1/cost/analyze
->
-
-
-
-
-
- {{< tabs " analyze " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[CostAnalyzeQuery](./Cost#costanalyzequery)
-
-* **granularity** (Granularity)   `Required` 
-
-
-* **start** (string)   `Required` 
-
-
-* **end** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **group_by** (string)  `Repeated`   
-
-
-* **filter** (ListValue)  
-
-
-* **limit** (int32)  
-
-
-* **page** (Page)  
-
-
-* **sort** (Sort)  
-
-
-* **include_usage_quantity** (bool)  
-
-
-* **include_others** (bool)  
-
-
-
-
-
-{{< highlight json >}}
-{
-   "granularity": "MONTHLY",
-   "start": "2022-05",
-   "end": "2022-07",
-   "group_by": ["product"],
-   "filter": [],
-   "limit": 15,
-   "include_others": true,
-   "domain_id": "domain-58010aa2e451"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-
-{{< /tabs >}}
-
-
-    
-<br>
-
-### analyze_v2
-
-
-
-
-
-> **POST** /cost-analysis/v1/cost/analyze-v2
 >
 
 
@@ -653,42 +529,10 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
 
 ### CostAnalyzeQuery
-* **granularity** (Granularity)   `Required` 
-
-    
-* **start** (string)   `Required` 
-
-    
-* **end** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **group_by** (string)  `Repeated`   
-
-    
-* **filter** (ListValue)  
-
-    
-* **limit** (int32)  
-
-    
-* **page** (Page)  
-
-    
-* **sort** (Sort)  
-
-    
-* **include_usage_quantity** (bool)  
-
-    
-* **include_others** (bool)  
-
-    <br>
-
-### CostAnalyzeV2Query
 * **query** (TimeSeriesAnalyzeQuery)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -699,16 +543,13 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **cost_id** (string)   `Required` 
 
     
-* **usd_cost** (float)   `Required` 
-
-    
-* **original_currency** (string)   `Required` 
-
-    
-* **original_cost** (float)   `Required` 
+* **cost** (float)   `Required` 
 
     
 * **usage_quantity** (float)   `Required` 
+
+    
+* **usage_unit** (string)   `Required` 
 
     
 * **provider** (string)   `Required` 
@@ -720,25 +561,13 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **region_key** (string)   `Required` 
 
     
-* **category** (string)   `Required` 
-
-    
 * **product** (string)   `Required` 
-
-    
-* **account** (string)   `Required` 
 
     
 * **usage_type** (string)   `Required` 
 
     
-* **usage_unit** (string)   `Required` 
-
-    
 * **resource** (string)   `Required` 
-
-    
-* **resource_group** (string)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -776,9 +605,6 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **cost_id** (string)  
 
     
-* **original_currency** (string)  
-
-    
 * **provider** (string)  
 
     
@@ -788,19 +614,10 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **region_key** (string)  
 
     
-* **category** (string)  
-
-    
 * **product** (string)  
 
     
-* **account** (string)  
-
-    
 * **usage_type** (string)  
-
-    
-* **resource_group** (string)  
 
     
 * **resource** (string)  
@@ -828,6 +645,9 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **query** (StatisticsQuery)   `Required` 
 
     
+* **data_source_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     <br>
@@ -841,10 +661,7 @@ Gets the Cost information of specific `product`s based on the time granularity: 
     <br>
 
 ### CreateCostRequest
-* **original_cost** (float)   `Required` 
-
-    
-* **original_currency** (string)   `Required` 
+* **cost** (float)   `Required` 
 
     
 * **data_source_id** (string)   `Required` 
@@ -853,10 +670,10 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **domain_id** (string)   `Required` 
 
     
-* **usd_cost** (float)  
+* **usage_quantity** (float)  
 
     
-* **usage_quantity** (float)  
+* **usage_unit** (float)  
 
     
 * **provider** (string)  
@@ -865,19 +682,10 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **region_code** (string)  
 
     
-* **category** (string)  
-
-    
 * **product** (string)  
 
     
-* **account** (string)  
-
-    
 * **usage_type** (string)  
-
-    
-* **resource_group** (string)  
 
     
 * **resource** (string)  
