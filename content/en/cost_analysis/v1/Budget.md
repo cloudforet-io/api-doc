@@ -82,7 +82,7 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 * **planned_limits** (PlannedLimit)  `Repeated`   
 
 
-* **cost_types** (Struct)  
+* **provider_filter** (ProviderFilter)  
 
 
 * **notifications** (BudgetNotification)  `Repeated`   
@@ -138,7 +138,7 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 
 * **currency** (string)   `Required` 
 
-* **cost_types** (Struct)   `Required` 
+* **provider_filter** (ProviderFilter)   `Required` 
 
 * **time_unit** (TimeUnit)   `Required` 
 
@@ -276,7 +276,7 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
 * **planned_limits** (PlannedLimit)  `Repeated`   
 
 
-* **end** (string)  
+* **provider_filter** (ProviderFilter)  
 
 
 * **tags** (Struct)  
@@ -318,7 +318,7 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
 
 * **currency** (string)   `Required` 
 
-* **cost_types** (Struct)   `Required` 
+* **provider_filter** (ProviderFilter)   `Required` 
 
 * **time_unit** (TimeUnit)   `Required` 
 
@@ -486,7 +486,7 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
 
 * **currency** (string)   `Required` 
 
-* **cost_types** (Struct)   `Required` 
+* **provider_filter** (ProviderFilter)   `Required` 
 
 * **time_unit** (TimeUnit)   `Required` 
 
@@ -663,7 +663,7 @@ Gets a specific Budget. Prints detailed information about the Budget, including 
 
 * **currency** (string)   `Required` 
 
-* **cost_types** (Struct)   `Required` 
+* **provider_filter** (ProviderFilter)   `Required` 
 
 * **time_unit** (TimeUnit)   `Required` 
 
@@ -951,7 +951,7 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 * **currency** (string)   `Required` 
 
     
-* **cost_types** (Struct)   `Required` 
+* **provider_filter** (ProviderFilter)   `Required` 
 
     
 * **time_unit** (TimeUnit)   `Required` 
@@ -1074,7 +1074,7 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 * **planned_limits** (PlannedLimit)  `Repeated`   
 
     
-* **cost_types** (Struct)  
+* **provider_filter** (ProviderFilter)  
 
     
 * **notifications** (BudgetNotification)  `Repeated`   
@@ -1109,6 +1109,14 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
     <br>
 
+### ProviderFilter
+* **state** (State)   `Required` 
+
+    
+* **providers** (string)  `Repeated`    `Required` 
+
+    <br>
+
 ### SetBudgetNotificationRequest
 * **budget_id** (string)   `Required` 
 
@@ -1136,7 +1144,7 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 * **planned_limits** (PlannedLimit)  `Repeated`   
 
     
-* **end** (string)  
+* **provider_filter** (ProviderFilter)  
 
     
 * **tags** (Struct)  

@@ -206,9 +206,6 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 * **currency** (string)   `Required` 
 
     
-* **cost_types** (Struct)   `Required` 
-
-    
 * **project_id** (string)   `Required` 
 
     
