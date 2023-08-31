@@ -66,6 +66,9 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 * **domain_id** (string)   `Required` 
 
 
+* **billed_date** (string)   `Required` 
+
+
 * **usage_quantity** (float)  
 
 
@@ -97,9 +100,6 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 
 * **project_id** (string)  
-
-
-* **billed_at** (string)  
 
 
 
@@ -162,9 +162,11 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 * **domain_id** (string)   `Required` 
 
-* **billed_at** (string)   `Required` 
+* **billed_year** (string)   `Required` 
 
-* **created_at** (string)   `Required` 
+* **billed_month** (string)   `Required` 
+
+* **billed_date** (string)   `Required` 
 
 
 
@@ -186,8 +188,9 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
        },
        "data_source_id": "ds-fcba92ca73b1"
        "domain_id": "domain-58010aa2e451",
-       "billed_at": "2022-07-19T09:44:27.326Z",
-       "created_at": "2022-07-19T09:44:27.373Z"
+       "billed_year": "2022",
+       "billed_month": "2022-07",
+       "billed_date": "2022-07-19"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -320,9 +323,11 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 
 * **domain_id** (string)   `Required` 
 
-* **billed_at** (string)   `Required` 
+* **billed_year** (string)   `Required` 
 
-* **created_at** (string)   `Required` 
+* **billed_month** (string)   `Required` 
+
+* **billed_date** (string)   `Required` 
 
 
 
@@ -344,8 +349,9 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
        },
        "data_source_id": "ds-fcba92ca73b1"
        "domain_id": "domain-58010aa2e451",
-       "billed_at": "2022-07-19T09:44:27.326Z",
-       "created_at": "2022-07-19T09:44:27.373Z"
+       "billed_year": "2022",
+       "billed_month": "2022-07",
+       "billed_date": "2022-07-19"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -414,6 +420,15 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 * **data_source_id** (string)  
 
 
+* **billed_year** (string)  
+
+
+* **billed_month** (string)  
+
+
+* **billed_date** (string)  
+
+
 
 
 
@@ -454,8 +469,9 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
                },
                "data_source_id": "ds-fcba92ca73b1"
                "domain_id": "domain-58010aa2e451",
-               "billed_at": "2022-07-19T09:44:27.326Z",
-               "created_at": "2022-07-19T09:44:27.373Z"
+               "billed_year": "2022",
+               "billed_month": "2022-07",
+               "billed_date": "2022-07-19"
            },
            {
                "cost_id": "cost-1d5e1b0dbf82",
@@ -471,8 +487,9 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
                "tags": {},
                "data_source_id": "ds-fcba92ca73b1",
                "domain_id": "domain-58010aa2e451",
-               "billed_at": "2021-01-01T00:00:00.000Z",
-               "created_at": "2022-04-06T13:49:39.675Z"
+               "billed_year": "2022",
+               "billed_month": "2022-07",
+               "billed_date": "2022-07-20"
            }
        ],
        "total_count": 307066
@@ -588,10 +605,13 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **domain_id** (string)   `Required` 
 
     
-* **billed_at** (string)   `Required` 
+* **billed_year** (string)   `Required` 
 
     
-* **created_at** (string)   `Required` 
+* **billed_month** (string)   `Required` 
+
+    
+* **billed_date** (string)   `Required` 
 
     <br>
 
@@ -630,6 +650,15 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
     
 * **data_source_id** (string)  
+
+    
+* **billed_year** (string)  
+
+    
+* **billed_month** (string)  
+
+    
+* **billed_date** (string)  
 
     <br>
 
@@ -670,6 +699,9 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **domain_id** (string)   `Required` 
 
     
+* **billed_date** (string)   `Required` 
+
+    
 * **usage_quantity** (float)  
 
     
@@ -701,9 +733,6 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
     
 * **project_id** (string)  
-
-    
-* **billed_at** (string)  
 
     <br>
 
