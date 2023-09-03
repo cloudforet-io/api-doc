@@ -384,6 +384,9 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 
 [CostQuery](./Cost#costquery)
 
+* **data_source_id** (string)   `Required` 
+
+
 * **domain_id** (string)   `Required` 
 
 
@@ -417,7 +420,7 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 * **project_id** (string)  
 
 
-* **data_source_id** (string)  
+* **project_group_id** (string)  
 
 
 * **billed_year** (string)  
@@ -616,6 +619,9 @@ Gets the Cost information of specific `product`s based on the time granularity: 
     <br>
 
 ### CostQuery
+* **data_source_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -649,7 +655,7 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **project_id** (string)  
 
     
-* **data_source_id** (string)  
+* **project_group_id** (string)  
 
     
 * **billed_year** (string)  

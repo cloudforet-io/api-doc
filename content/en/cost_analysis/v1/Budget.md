@@ -276,9 +276,6 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
 * **planned_limits** (PlannedLimit)  `Repeated`   
 
 
-* **provider_filter** (ProviderFilter)  
-
-
 * **tags** (Struct)  
 
 
@@ -1142,9 +1139,6 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
     
 * **planned_limits** (PlannedLimit)  `Repeated`   
-
-    
-* **provider_filter** (ProviderFilter)  
 
     
 * **tags** (Struct)  
