@@ -57,6 +57,9 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
 
 [CreateCostQuerySetRequest](./CostQuerySet#createcostquerysetrequest)
 
+* **data_source_id** (string)   `Required` 
+
+
 * **name** (string)   `Required` 
 
 
@@ -74,6 +77,7 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
 
 {{< highlight json >}}
 {
+       "data_source_id": "ds-085d1e872789",
        "name": "project_provider_region",
        "options": {}
 }
@@ -109,6 +113,7 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
        "options": {},
        "tags": {},
        "user_id": "test@cloudforet.io",
+       "data_source_id": "ds-085d1e872789",
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T06:11:03.701Z",
        "updated_at": "2022-07-19T06:11:03.701Z"
@@ -205,6 +210,7 @@ Updates a specific CostQuerySet. You can make changes in the details of queries.
        "options": {},
        "tags": {},
        "user_id": "test@cloudforet.io",
+       "data_source_id": "ds-085d1e872789",
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T06:11:03.701Z",
        "updated_at": "2022-07-19T06:11:03.701Z"
@@ -335,6 +341,7 @@ Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet
        "options": {},
        "tags": {},
        "user_id": "test@cloudforet.io",
+       "data_source_id": "ds-085d1e872789",
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T06:11:03.701Z",
        "updated_at": "2022-07-19T06:11:03.701Z"
@@ -369,6 +376,9 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
 
 [CostQuerySetQuery](./CostQuerySet#costquerysetquery)
+
+* **data_source_id** (string)   `Required` 
+
 
 * **domain_id** (string)   `Required` 
 
@@ -414,6 +424,7 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
                "options": {},
                "tags": {},
                "user_id": "yuda@mz.co.kr",
+               "data_source_id": "ds-085d1e872789",
                "domain_id": "domain-58010aa2e451",
                "created_at": "2022-03-08T03:37:31.404Z",
                "updated_at": "2022-03-08T03:37:31.404Z"
@@ -424,6 +435,7 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
                "options": {},
                "tags": {},
                "user_id": "yuda@mz.co.kr",
+               "data_source_id": "ds-085d1e872789",
                "domain_id": "domain-58010aa2e451",
                "created_at": "2022-03-14T09:29:54.306Z",
                "updated_at": "2022-03-14T09:29:54.306Z"
@@ -492,6 +504,9 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
     <br>
 
 ### CostQuerySetQuery
+* **data_source_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -520,6 +535,9 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 * **query** (StatisticsQuery)   `Required` 
 
     
+* **data_source_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     <br>
@@ -533,6 +551,9 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
     <br>
 
 ### CreateCostQuerySetRequest
+* **data_source_id** (string)   `Required` 
+
+    
 * **name** (string)   `Required` 
 
     
