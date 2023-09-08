@@ -98,6 +98,8 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
 
 * **user_id** (string)   `Required` 
 
+* **data_source_id** (string)   `Required` 
+
 * **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
@@ -194,6 +196,8 @@ Updates a specific CostQuerySet. You can make changes in the details of queries.
 * **tags** (Struct)   `Required` 
 
 * **user_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -325,6 +329,8 @@ Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet
 * **tags** (Struct)   `Required` 
 
 * **user_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -491,6 +497,9 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
     
 * **user_id** (string)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
