@@ -220,6 +220,13 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
            }
        ],
        "currency": "USD",
+       "provider_filter": {
+           "state": "ENABLED",
+           "providers": [
+               "aws",
+               "google_cloud"
+           ]
+       },
        "time_unit": "MONTHLY",
        "start": "2022-01",
        "end": "2022-12",
@@ -397,6 +404,13 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
            }
        ],
        "currency": "USD",
+       "provider_filter": {
+           "state": "ENABLED",
+           "providers": [
+               "aws",
+               "google_cloud"
+           ]
+       },
        "time_unit": "MONTHLY",
        "start": "2022-01",
        "end": "2022-12",
@@ -565,6 +579,13 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
            }
        ],
        "currency": "USD",
+       "provider_filter": {
+           "state": "ENABLED",
+           "providers": [
+               "aws",
+               "google_cloud"
+           ]
+       },
        "time_unit": "MONTHLY",
        "start": "2022-01",
        "end": "2022-12",
@@ -742,6 +763,13 @@ Gets a specific Budget. Prints detailed information about the Budget, including 
            }
        ],
        "currency": "USD",
+       "provider_filter": {
+           "state": "ENABLED",
+           "providers": [
+               "aws",
+               "google_cloud"
+           ]
+       },
        "time_unit": "MONTHLY",
        "start": "2022-01",
        "end": "2022-12",
@@ -885,6 +913,13 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
                    }
                ],
                "currency": "USD",
+               "provider_filter": {
+                   "state": "ENABLED",
+                   "providers": [
+                       "aws",
+                       "google_cloud"
+                   ]
+               },
                "time_unit": "MONTHLY",
                "start": "2022-01",
                "end": "2022-12",

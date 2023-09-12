@@ -102,6 +102,13 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
                "cost": 7671.164,
                "limit": 10000.0,
                "currency": "USD",
+               "provider_filter": {
+                   "state": "ENABLED",
+                   "providers": [
+                       "aws",
+                       "google_cloud"
+                   ]
+               },
                "project_id": "project-1b2b3b4b5b6b",
                "data_source_id": "data-source-1b2b3b4b5b6b",
                "domain_id": "domain-58010aa2e451",
@@ -114,6 +121,10 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
                "cost": 5931.771,
                "limit": 11000.0,
                "currency": "USD",
+               "provider_filter": {
+                   "state": "DISABLED",
+                   "providers": []
+               },
                "project_id": "project-1b2b3b4b5b6b",
                "data_source_id": "data-source-1b2b3b4b5b6b",
                "domain_id": "domain-58010aa2e451",
@@ -206,6 +217,9 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 * **currency** (string)   `Required` 
 
     
+* **provider_filter** (BudgetUsageProviderFilter)   `Required` 
+
+    
 * **project_id** (string)   `Required` 
 
     
@@ -219,6 +233,14 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 
     
 * **updated_at** (string)   `Required` 
+
+    <br>
+
+### BudgetUsageProviderFilter
+* **state** (State)   `Required` 
+
+    
+* **providers** (string)  `Repeated`    `Required` 
 
     <br>
 
