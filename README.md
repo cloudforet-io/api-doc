@@ -57,7 +57,7 @@ Execute following command to run as Kubernetes Pod using Helm Chart
 Execute following command to run as Hugo Server
 
 1. Clone this repository
-    ```
+    ```git
     git clone https://cloudforet-io.github.io/api-doc.git
     ```
 
