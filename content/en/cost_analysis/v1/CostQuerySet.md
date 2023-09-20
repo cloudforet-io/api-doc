@@ -383,13 +383,13 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
 [CostQuerySetQuery](./CostQuerySet#costquerysetquery)
 
-* **data_source_id** (string)   `Required` 
-
-
 * **domain_id** (string)   `Required` 
 
 
 * **query** (Query)  
+
+
+* **data_source_id** (string)  
 
 
 * **cost_query_set_id** (string)  
@@ -513,13 +513,13 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
     <br>
 
 ### CostQuerySetQuery
-* **data_source_id** (string)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
 
     
 * **query** (Query)  
+
+    
+* **data_source_id** (string)  
 
     
 * **cost_query_set_id** (string)  
