@@ -158,6 +158,8 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 * **project_id** (string)   `Required` 
 
+* **project_group_id** (string)   `Required` 
+
 * **data_source_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -318,6 +320,8 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 * **service_account_id** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **project_group_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
 
@@ -600,6 +604,9 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
     
 * **project_id** (string)   `Required` 
+
+    
+* **project_group_id** (string)   `Required` 
 
     
 * **data_source_id** (string)   `Required` 
