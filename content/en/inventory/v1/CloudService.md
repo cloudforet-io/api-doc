@@ -744,9 +744,6 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **ip_address** (string)  
 
 
-* **resource_group_id** (string)  
-
-
 * **project_id** (string)  
 
 
@@ -1009,9 +1006,6 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
     
 * **ip_address** (string)  
-
-    
-* **resource_group_id** (string)  
 
     
 * **project_id** (string)  

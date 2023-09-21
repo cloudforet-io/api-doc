@@ -28,6 +28,7 @@ A CloudServiceQuerySet is query set for storing statistics data of CloudService.
 | [**update**](./CloudServiceQuerySet#update) | [UpdateCloudServiceQuerySetRequest](CloudServiceQuerySet#updatecloudservicequerysetrequest) | [CloudServiceQuerySetInfo](CloudServiceQuerySet#cloudservicequerysetinfo) |
 | [**delete**](./CloudServiceQuerySet#delete) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [Empty](CloudServiceQuerySet#empty) |
 | [**run**](./CloudServiceQuerySet#run) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [Empty](CloudServiceQuerySet#empty) |
+| [**test**](./CloudServiceQuerySet#test) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [Struct](CloudServiceQuerySet#struct) |
 | [**enable**](./CloudServiceQuerySet#enable) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [CloudServiceQuerySetInfo](CloudServiceQuerySet#cloudservicequerysetinfo) |
 | [**disable**](./CloudServiceQuerySet#disable) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [CloudServiceQuerySetInfo](CloudServiceQuerySet#cloudservicequerysetinfo) |
 | [**get**](./CloudServiceQuerySet#get) | [GetCloudServiceQuerySetRequest](CloudServiceQuerySet#getcloudservicequerysetrequest) | [CloudServiceQuerySetInfo](CloudServiceQuerySet#cloudservicequerysetinfo) |
@@ -355,6 +356,51 @@ Run a specific query set and store the result in the statistics data.
 
 
  {{< tabs " run " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CloudServiceQuerySetRequest](./CloudServiceQuerySet#cloudservicequerysetrequest)
+
+* **query_set_id** (string)   `Required` 
+
+
+* **domain_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query_set_id": "query-set-abcd1234"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### test
+
+Run a specific query set and store the result in the statistics data.
+
+
+
+> **POST** /inventory/v1/cloud-service-query-set/test
+>
+
+
+
+
+
+ {{< tabs " test " >}}
 
  {{< tab "Request Example" >}}
 
