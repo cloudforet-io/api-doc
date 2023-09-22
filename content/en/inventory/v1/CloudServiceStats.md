@@ -55,16 +55,13 @@ You can use a query to get a filtered list of statistics data.
 
 [CloudServiceStatsQuery](./CloudServiceStats#cloudservicestatsquery)
 
+* **query_set_id** (string)   `Required` 
+
+
 * **domain_id** (string)   `Required` 
 
 
 * **query** (Query)  
-
-
-* **query_set_id** (string)  
-
-
-* **key** (string)  
 
 
 * **provider** (string)  
@@ -92,7 +89,6 @@ You can use a query to get a filtered list of statistics data.
 {
    "query": <SearchQuery>,
    "query_set_id": "query-set-abcd1234",
-   "key": "Disk Size
    "provider": "aws",
    "cloud_service_group": "EC2",
    "cloud_service_type": "Instance",
@@ -119,8 +115,16 @@ You can use a query to get a filtered list of statistics data.
        {
            "query_set_id": "query-set-abcd1234",
            "key": "Disk Size",
-           "value": "1040",
-           "unit": "GB",
+           "values": {
+               "Disk Size": 1040,
+               "Memory Size": 1024,
+               "CPU": 2
+           },
+           "unit": {
+               "Disk Size": "GB",
+               "Memory": "GB",
+               "CPU": "Core"
+           },
            "provider": "aws",
            "cloud_service_group": "EC2",
            "cloud_service_type": "Instance",
@@ -192,13 +196,10 @@ You can use a query to get a filtered list of statistics data.
 * **query_set_id** (string)   `Required` 
 
     
-* **key** (string)   `Required` 
+* **values** (Struct)   `Required` 
 
     
-* **value** (float)   `Required` 
-
-    
-* **unit** (string)   `Required` 
+* **unit** (Struct)   `Required` 
 
     
 * **provider** (string)   `Required` 
@@ -233,6 +234,9 @@ You can use a query to get a filtered list of statistics data.
 * **query** (TimeSeriesAnalyzeQuery)   `Required` 
 
     
+* **query_set_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     <br>
@@ -246,16 +250,13 @@ You can use a query to get a filtered list of statistics data.
     <br>
 
 ### CloudServiceStatsQuery
+* **query_set_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
 * **query** (Query)  
-
-    
-* **query_set_id** (string)  
-
-    
-* **key** (string)  
 
     
 * **provider** (string)  
@@ -282,5 +283,8 @@ You can use a query to get a filtered list of statistics data.
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **query_set_id** (string)  
 
     <br>

@@ -124,6 +124,10 @@ Create a new query set. Periodic statistics data is created based on the query s
 
 * **unit** (Struct)   `Required` 
 
+* **keys** (string)  `Repeated`   `Required` 
+
+* **additional_info_keys** (string)  `Repeated`   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **cloud_service_group** (string)   `Required` 
@@ -152,7 +156,14 @@ Create a new query set. Periodic statistics data is created based on the query s
        "Memory": "GB",
        "CPU": "Core"
    },
-   "unit": "Count",
+   "keys": [
+       "Disk Size",
+       "Memory",
+       "CPU
+   ],
+   "additional_info_keys": [
+       "instance_type"
+   ],
    "provider": "aws",
    "cloud_service_group": "EC2",
    "cloud_service_type": "Instance",
@@ -248,6 +259,10 @@ Update a specific query set. You can only update the query set of custom type.
 
 * **unit** (Struct)   `Required` 
 
+* **keys** (string)  `Repeated`   `Required` 
+
+* **additional_info_keys** (string)  `Repeated`   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **cloud_service_group** (string)   `Required` 
@@ -276,7 +291,14 @@ Update a specific query set. You can only update the query set of custom type.
        "Memory": "GB",
        "CPU": "Core"
    },
-   "unit": "Count",
+   "keys": [
+       "Disk Size",
+       "Memory",
+       "CPU
+   ],
+   "additional_info_keys": [
+       "instance_type"
+   ],
    "provider": "aws",
    "cloud_service_group": "EC2",
    "cloud_service_type": "Instance",
@@ -485,6 +507,10 @@ Enable a specific query set.
 
 * **unit** (Struct)   `Required` 
 
+* **keys** (string)  `Repeated`   `Required` 
+
+* **additional_info_keys** (string)  `Repeated`   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **cloud_service_group** (string)   `Required` 
@@ -513,7 +539,14 @@ Enable a specific query set.
        "Memory": "GB",
        "CPU": "Core"
    },
-   "unit": "Count",
+   "keys": [
+       "Disk Size",
+       "Memory",
+       "CPU
+   ],
+   "additional_info_keys": [
+       "instance_type"
+   ],
    "provider": "aws",
    "cloud_service_group": "EC2",
    "cloud_service_type": "Instance",
@@ -587,6 +620,10 @@ Disable a specific query set. query set is not executed when disabled.
 
 * **unit** (Struct)   `Required` 
 
+* **keys** (string)  `Repeated`   `Required` 
+
+* **additional_info_keys** (string)  `Repeated`   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **cloud_service_group** (string)   `Required` 
@@ -615,7 +652,14 @@ Disable a specific query set. query set is not executed when disabled.
        "Memory": "GB",
        "CPU": "Core"
    },
-   "unit": "Count",
+   "keys": [
+       "Disk Size",
+       "Memory",
+       "CPU
+   ],
+   "additional_info_keys": [
+       "instance_type"
+   ],
    "provider": "aws",
    "cloud_service_group": "EC2",
    "cloud_service_type": "Instance",
@@ -692,6 +736,10 @@ Get a specific query set.
 
 * **unit** (Struct)   `Required` 
 
+* **keys** (string)  `Repeated`   `Required` 
+
+* **additional_info_keys** (string)  `Repeated`   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **cloud_service_group** (string)   `Required` 
@@ -720,7 +768,14 @@ Get a specific query set.
        "Memory": "GB",
        "CPU": "Core"
    },
-   "unit": "Count",
+   "keys": [
+       "Disk Size",
+       "Memory",
+       "CPU
+   ],
+   "additional_info_keys": [
+       "instance_type"
+   ],
    "provider": "aws",
    "cloud_service_group": "EC2",
    "cloud_service_type": "Instance",
@@ -831,6 +886,14 @@ You can use a query to get a filtered list of query sets.
                "Memory": "GB",
                "CPU": "Core"
            },
+          "keys": [
+              "Disk Size",
+              "Memory",
+              "CPU
+           ],
+           "additional_info_keys": [
+               "instance_type"
+           ],
            "provider": "aws",
            "cloud_service_group": "EC2",
            "cloud_service_type": "Instance",
@@ -896,6 +959,12 @@ You can use a query to get a filtered list of query sets.
 
     
 * **unit** (Struct)   `Required` 
+
+    
+* **keys** (string)  `Repeated`    `Required` 
+
+    
+* **additional_info_keys** (string)  `Repeated`    `Required` 
 
     
 * **provider** (string)   `Required` 
