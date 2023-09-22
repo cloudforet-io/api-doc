@@ -135,7 +135,7 @@ You can use a query to get a filtered list of statistics data.
            },
            "project_id": "project-abcd1234",
            "domain_id": "domain-58010aa2e451",
-           "created_at": "2022-06-22T01:38:16.301Z"
+           "created_date": "2022-06-22"
        },
        {...}
    ],
@@ -226,7 +226,7 @@ You can use a query to get a filtered list of statistics data.
 * **domain_id** (string)   `Required` 
 
     
-* **created_at** (string)   `Required` 
+* **created_date** (string)   `Required` 
 
     <br>
 
