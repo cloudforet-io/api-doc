@@ -198,6 +198,9 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
+* **domain_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     <br>
