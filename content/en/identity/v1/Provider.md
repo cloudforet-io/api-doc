@@ -152,10 +152,13 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **template** (Struct)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
-* **template** (Struct)  
+* **order** (int32)  
 
     
 * **metadata** (Struct)  
@@ -184,6 +187,9 @@ bookFlatSection: true
 
     
 * **name** (string)   `Required` 
+
+    
+* **order** (int32)   `Required` 
 
     
 * **template** (Struct)   `Required` 
@@ -251,6 +257,9 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    
+* **order** (int32)  
 
     
 * **template** (Struct)  
