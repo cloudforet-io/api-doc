@@ -48,9 +48,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/domain/create
->
-
 
 
 
@@ -133,9 +130,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/domain/delete
->
-
 
 
 
@@ -150,9 +144,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/domain/enable
->
-
 
 
 
@@ -166,9 +157,6 @@ bookFlatSection: true
 
 
 
-
-> **POST** /identity/v1/domain/disable
->
 
 
 
@@ -201,9 +189,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/domain/list
->
-
 
 
 
@@ -218,9 +203,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/domain/stat
->
-
 
 
 
@@ -234,9 +216,6 @@ bookFlatSection: true
 
 
 
-
-> **POST** /identity/v1/domain/get-public-key
->
 
 
 

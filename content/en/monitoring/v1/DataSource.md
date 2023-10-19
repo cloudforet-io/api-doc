@@ -42,7 +42,7 @@ A DataSource is a plugin instance collecting `metric` and `log` data from Cloudf
 
 ### register
 
-Registers a DataSource with information of the plugin to use. Information of the plugin includes `version`, `provider`, `upgrade_mode`.\
+Registers a DataSource with information of the plugin to use. Information of the plugin includes `version`, `provider`, `upgrade_mode`.
 
 
 

@@ -59,7 +59,7 @@ bookFlatSection: true
 
 
 
-> **PUT** /identity/v1/policy/update
+> **POST** /identity/v1/policy/update
 >
 
 
@@ -127,7 +127,7 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/policies/stat
+> **POST** /identity/v1/policy/stat
 >
 
 

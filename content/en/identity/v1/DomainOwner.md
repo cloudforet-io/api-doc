@@ -40,9 +40,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/domain-owner/create
->
-
 
 
 
@@ -73,9 +70,6 @@ bookFlatSection: true
 
 
 
-
-> **POST** /identity/v1/domain-owner/delete
->
 
 
 

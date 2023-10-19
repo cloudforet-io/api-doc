@@ -37,9 +37,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/authorization/verify
->
-
 
 
 

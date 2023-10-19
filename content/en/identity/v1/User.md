@@ -781,7 +781,7 @@ Update user info by given user_id
 
 
 
-> **POST** /identity/v1/users/find
+> **POST** /identity/v1/user/find
 >
 
 

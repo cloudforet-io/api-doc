@@ -368,7 +368,7 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
 
 
-> **POST** /cost-analysis/v1/cost-query-sets/list
+> **POST** /cost-analysis/v1/cost-query-set/list
 >
 
 
@@ -465,7 +465,7 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
 
 
-> **POST** /cost-analysis/v1/cost-query-sets/stat
+> **POST** /cost-analysis/v1/cost-query-set/stat
 >
 
 

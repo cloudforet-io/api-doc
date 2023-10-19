@@ -43,9 +43,6 @@ Creates a new Board with SYSTEM permission. The `name` of the board is only requ
 
 
 
-> **POST** /board/v1/board/create
->
-
 
 
 
@@ -124,9 +121,6 @@ Creates a new Board with SYSTEM permission. The `name` of the board is only requ
 Updates a specific Board with SYSTEM permission. You can make changes in Board settings, including `name` and `tags`.
 
 
-
-> **POST** /board/v1/board/update
->
 
 
 
@@ -207,9 +201,6 @@ Adds or changes `categories` of a specific Board with SYSTEM permission. A chang
 
 
 
-> **POST** /board/v1/board/set-categories
->
-
 
 
 
@@ -284,9 +275,6 @@ Adds or changes `categories` of a specific Board with SYSTEM permission. A chang
 Deletes a specific Board with `SYSTEM` permission. You can delete a Board regardless of the presence of Posts created under the Board.
 
 
-
-> **POST** /board/v1/board/delete
->
 
 
 

@@ -110,7 +110,7 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/service-accounts/list
+> **POST** /identity/v1/service-account/list
 >
 
 
@@ -127,7 +127,7 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v1/service-accounts/stat
+> **POST** /identity/v1/service-account/stat
 >
 
 

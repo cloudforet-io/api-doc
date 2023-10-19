@@ -64,7 +64,7 @@ bookFlatSection: true
 
 
 
-> **PUT** /identity/v1/project-group/update
+> **POST** /identity/v1/project-group/update
 >
 
 

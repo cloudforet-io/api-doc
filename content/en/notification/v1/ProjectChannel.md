@@ -247,7 +247,7 @@ Updates a specific ProjectChannel. A ProjectChannel that has already been config
 
 
 
-> **PUT** /notification/v1/project-channel/update
+> **POST** /notification/v1/project-channel/update
 >
 
 
