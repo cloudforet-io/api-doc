@@ -112,7 +112,7 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 
 
 
-> **POST** /plugin/v1/plugin/get-metadata
+> **POST** /plugin/v1/plugin/get-plugin-metadata
 >
 
 
