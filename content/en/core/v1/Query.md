@@ -191,6 +191,65 @@ bookFlatSection: true
 
     <br>
 
+### ExportAnalyzeQuery
+* **filter** (Filter)  `Repeated`    `Required` 
+
+    
+* **filter_or** (Filter)  `Repeated`    `Required` 
+
+    
+* **keyword** (string)   `Required` 
+
+    
+* **sort** (SortKey)  `Repeated`    `Required` 
+
+    
+* **group_by** (string)  `Repeated`    `Required` 
+
+    
+* **fields** (Struct)   `Required` 
+
+    
+* **select** (Struct)   `Required` 
+
+    <br>
+
+### ExportInfo
+* **download_url** (string)   `Required` 
+
+    <br>
+
+### ExportOptions
+* **name** (string)   `Required` 
+
+    
+* **query_type** (QueryType)   `Required` 
+
+    
+* **search_query** (ExportSearchQuery)   `Required` 
+
+    
+* **analyze_query** (ExportAnalyzeQuery)   `Required` 
+
+    <br>
+
+### ExportSearchQuery
+* **filter** (Filter)  `Repeated`    `Required` 
+
+    
+* **filter_or** (Filter)  `Repeated`    `Required` 
+
+    
+* **keyword** (string)   `Required` 
+
+    
+* **sort** (SortKey)  `Repeated`    `Required` 
+
+    
+* **fields** (ListValue)   `Required` 
+
+    <br>
+
 ### Filter
 * **key** (string)   `Required` 
 

@@ -29,6 +29,7 @@ A CloudService is data of an `instance` of a `resource`. A CloudService follows 
 | [**delete**](./CloudService#delete) | [CloudServiceRequest](CloudService#cloudservicerequest) | [Empty](CloudService#empty) |
 | [**get**](./CloudService#get) | [GetCloudServiceRequest](CloudService#getcloudservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
 | [**list**](./CloudService#list) | [CloudServiceQuery](CloudService#cloudservicequery) | [CloudServicesInfo](CloudService#cloudservicesinfo) |
+| [**export**](./CloudService#export) | [CloudServiceExportRequest](CloudService#cloudserviceexportrequest) | [ExportInfo](CloudService#exportinfo) |
 | [**analyze**](./CloudService#analyze) | [CloudServiceAnalyzeQuery](CloudService#cloudserviceanalyzequery) | [Struct](CloudService#struct) |
 | [**stat**](./CloudService#stat) | [CloudServiceStatQuery](CloudService#cloudservicestatquery) | [Struct](CloudService#struct) |
 
@@ -854,6 +855,23 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
     
 <br>
 
+### export
+
+
+
+
+
+> **POST** /inventory/v1/cloud-service/export
+>
+
+
+
+
+
+
+    
+<br>
+
 ### analyze
 
 
@@ -897,6 +915,14 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
 ### CloudServiceAnalyzeQuery
 * **query** (AnalyzeQuery)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    <br>
+
+### CloudServiceExportRequest
+* **options** (ExportOptions)  `Repeated`    `Required` 
 
     
 * **domain_id** (string)   `Required` 
