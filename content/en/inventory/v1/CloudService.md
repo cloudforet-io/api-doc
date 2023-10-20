@@ -29,7 +29,7 @@ A CloudService is data of an `instance` of a `resource`. A CloudService follows 
 | [**delete**](./CloudService#delete) | [CloudServiceRequest](CloudService#cloudservicerequest) | [Empty](CloudService#empty) |
 | [**get**](./CloudService#get) | [GetCloudServiceRequest](CloudService#getcloudservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
 | [**list**](./CloudService#list) | [CloudServiceQuery](CloudService#cloudservicequery) | [CloudServicesInfo](CloudService#cloudservicesinfo) |
-| [**export**](./CloudService#export) | [CloudServiceExportRequest](CloudService#cloudserviceexportrequest) | [ExportInfo](CloudService#exportinfo) |
+| [**export**](./CloudService#export) | [CloudServiceExportRequest](CloudService#cloudserviceexportrequest) | [Struct](CloudService#struct) |
 | [**analyze**](./CloudService#analyze) | [CloudServiceAnalyzeQuery](CloudService#cloudserviceanalyzequery) | [Struct](CloudService#struct) |
 | [**stat**](./CloudService#stat) | [CloudServiceStatQuery](CloudService#cloudservicestatquery) | [Struct](CloudService#struct) |
 

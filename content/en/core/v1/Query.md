@@ -214,11 +214,6 @@ bookFlatSection: true
 
     <br>
 
-### ExportInfo
-* **download_url** (string)   `Required` 
-
-    <br>
-
 ### ExportOptions
 * **name** (string)   `Required` 
 
