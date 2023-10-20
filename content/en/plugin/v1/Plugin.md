@@ -39,9 +39,6 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 
 
 
-> **POST** /plugin/v1/plugin/get-plugin-endpoint
->
-
 
 
 
@@ -128,9 +125,6 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 
 
 
-
-> **POST** /plugin/v1/plugin/notify-failure
->
 
 
 

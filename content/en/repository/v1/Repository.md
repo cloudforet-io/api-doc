@@ -42,9 +42,6 @@ Registers a Repository. The parameter `name` can only include alphabets, numbers
 
 
 
-> **POST** /repository/v1/repository/register
->
-
 
 
 
@@ -121,9 +118,6 @@ Updates a specific Repository registered. You must specify the `repository_id` o
 
 
 
-> **POST** /repository/v1/repository/update
->
-
 
 
 
@@ -195,9 +189,6 @@ Updates a specific Repository registered. You must specify the `repository_id` o
 Deregisters and deletes a specific Repository. You must specify the `repository_id` of the Repository to deregister.
 
 
-
-> **POST** /repository/v1/repository/deregister
->
 
 
 
