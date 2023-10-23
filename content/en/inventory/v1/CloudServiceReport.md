@@ -191,7 +191,7 @@ bookFlatSection: true
 * **created_at** (string)   `Required` 
 
     
-* **updated_at** (string)   `Required` 
+* **last_sent_at** (string)   `Required` 
 
     <br>
 
