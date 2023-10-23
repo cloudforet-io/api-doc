@@ -922,7 +922,10 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
     <br>
 
 ### CloudServiceExportRequest
-* **options** (ExportOptions)  `Repeated`    `Required` 
+* **options** (ExportOption)  `Repeated`    `Required` 
+
+    
+* **file_format** (FileFormat)   `Required` 
 
     
 * **domain_id** (string)   `Required` 

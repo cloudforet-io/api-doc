@@ -214,7 +214,7 @@ bookFlatSection: true
 
     <br>
 
-### ExportOptions
+### ExportOption
 * **name** (string)   `Required` 
 
     

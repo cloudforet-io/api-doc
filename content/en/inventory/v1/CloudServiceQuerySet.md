@@ -208,6 +208,9 @@ Update a specific query set. You can only update the query set of custom type.
 * **query_set_id** (string)   `Required` 
 
 
+* **domain_id** (string)   `Required` 
+
+
 * **name** (string)  
 
 
@@ -218,9 +221,6 @@ Update a specific query set. You can only update the query set of custom type.
 
 
 * **tags** (Struct)  
-
-
-* **domain_id** (string)  
 
 
 
@@ -1083,6 +1083,9 @@ You can use a query to get a filtered list of query sets.
 * **query_set_id** (string)   `Required` 
 
     
+* **domain_id** (string)   `Required` 
+
+    
 * **name** (string)  
 
     
@@ -1093,8 +1096,5 @@ You can use a query to get a filtered list of query sets.
 
     
 * **tags** (Struct)  
-
-    
-* **domain_id** (string)  
 
     <br>
