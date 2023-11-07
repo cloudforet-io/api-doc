@@ -83,6 +83,9 @@ bookFlatSection: true
 * **additional_info** (Struct)   `Required` 
 
     
+* **data** (Struct)   `Required` 
+
+    
 * **billed_date** (string)   `Required` 
 
     <br>
