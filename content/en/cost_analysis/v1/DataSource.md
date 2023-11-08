@@ -143,6 +143,10 @@ Registers a DataSource with information of the plugin to use. Information of the
 
 * **plugin_info** (PluginInfo)   `Required` 
 
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **template** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -151,11 +155,9 @@ Registers a DataSource with information of the plugin to use. Information of the
 
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
+* **cost_data_keys** (string)  `Repeated`   `Required` 
+
 * **domain_id** (string)   `Required` 
-
-* **secret_type** (SecretType)   `Required` 
-
-* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -208,8 +210,13 @@ Registers a DataSource with information of the plugin to use. Information of the
            "Service"
        ],
        "cost_additional_info_keys": [
-           "raw_usage_type"
+           "Instance Type",
+           "Usage Type Details"
        ],
+       "cost_data_keys": [
+           "AmortizedCost",
+           "BlendedCost",
+       ]
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -292,6 +299,10 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 
 * **plugin_info** (PluginInfo)   `Required` 
 
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **template** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -300,11 +311,9 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
+* **cost_data_keys** (string)  `Repeated`   `Required` 
+
 * **domain_id** (string)   `Required` 
-
-* **secret_type** (SecretType)   `Required` 
-
-* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -357,8 +366,13 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
            "Service"
        ],
        "cost_additional_info_keys": [
-           "raw_usage_type"
+           "Instance Type",
+           "Usage Type Details"
        ],
+       "cost_data_keys": [
+           "AmortizedCost",
+           "BlendedCost",
+       ]
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -437,6 +451,10 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 
 * **plugin_info** (PluginInfo)   `Required` 
 
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **template** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -445,11 +463,9 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
+* **cost_data_keys** (string)  `Repeated`   `Required` 
+
 * **domain_id** (string)   `Required` 
-
-* **secret_type** (SecretType)   `Required` 
-
-* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -502,8 +518,13 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
            "Service"
        ],
        "cost_additional_info_keys": [
-           "raw_usage_type"
+           "Instance Type",
+           "Usage Type Details"
        ],
+       "cost_data_keys": [
+           "AmortizedCost",
+           "BlendedCost",
+       ]
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -615,6 +636,10 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 
 * **plugin_info** (PluginInfo)   `Required` 
 
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **template** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -623,11 +648,9 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
+* **cost_data_keys** (string)  `Repeated`   `Required` 
+
 * **domain_id** (string)   `Required` 
-
-* **secret_type** (SecretType)   `Required` 
-
-* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -680,8 +703,13 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
            "Service"
        ],
        "cost_additional_info_keys": [
-           "raw_usage_type"
+           "Instance Type",
+           "Usage Type Details"
        ],
+       "cost_data_keys": [
+           "AmortizedCost",
+           "BlendedCost",
+       ]
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -748,6 +776,10 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 
 * **plugin_info** (PluginInfo)   `Required` 
 
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **template** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -756,11 +788,9 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
+* **cost_data_keys** (string)  `Repeated`   `Required` 
+
 * **domain_id** (string)   `Required` 
-
-* **secret_type** (SecretType)   `Required` 
-
-* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -813,8 +843,13 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
            "Service"
        ],
        "cost_additional_info_keys": [
-           "raw_usage_type"
+           "Instance Type",
+           "Usage Type Details"
        ],
+       "cost_data_keys": [
+           "AmortizedCost",
+           "BlendedCost",
+       ]
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -929,6 +964,10 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 
 * **plugin_info** (PluginInfo)   `Required` 
 
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
 * **template** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -937,11 +976,9 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
+* **cost_data_keys** (string)  `Repeated`   `Required` 
+
 * **domain_id** (string)   `Required` 
-
-* **secret_type** (SecretType)   `Required` 
-
-* **secret_filter** (SecretFilter)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -994,8 +1031,13 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
            "Service"
        ],
        "cost_additional_info_keys": [
-           "raw_usage_type"
+           "Instance Type",
+           "Usage Type Details"
        ],
+       "cost_data_keys": [
+           "AmortizedCost",
+           "BlendedCost",
+       ]
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-07-19T10:58:36.080Z"
 }
@@ -1075,8 +1117,8 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 {
        "results": [
            {
-               "data_source_id": "ds-fcba92ca73b1",
-               "name": "AWS HyperBilling Data Source",
+               "data_source_id": "ds-085d1e872789",
+               "name": "AWS HyperBilling Data Source test",
                "state": "ENABLED",
                "data_source_type": "EXTERNAL",
                "plugin_info": {
@@ -1086,23 +1128,25 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
                    "metadata": {
                        "data_source_rules": [
                            {
-                               "name": "match_service_account",
-                               "conditions": [],
+                               "options": {
+                                   "stop_processing": true
+                               },
                                "actions": {
                                    "match_service_account": {
                                        "source": "account",
                                        "target": "data.account_id"
                                    }
                                },
-                               "conditions_policy": "ALWAYS",
+                               "domain_id": "domain-58010aa2e451",
+                               "conditions": [],
+                               "name": "match_service_account",
                                "tags": {},
-                               "options": {
-                                   "stop_processing": true
-                               }
+                               "data_source_id": "ds-085d1e872789",
+                               "conditions_policy": "ALWAYS"
                            }
                        ]
                    },
-                   "secret_id": "secret-dca385e85a27",
+                   "secret_id": "secret-ca134639483",
                    "upgrade_mode": "AUTO"
                },
                "template": {},
@@ -1116,50 +1160,15 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
                    "Service"
                ],
                "cost_additional_info_keys": [
-                   "raw_usage_type"
+                   "Instance Type",
+                   "Usage Type Details"
                ],
+               "cost_data_keys": [
+                   "AmortizedCost",
+                   "BlendedCost",
+               ]
                "domain_id": "domain-58010aa2e451",
-               "created_at": "2022-03-30T02:21:28.756Z",
-               "last_synchronized_at": "2022-07-17T16:00:05.077Z"
-           },
-           {
-               "data_source_id": "ds-c96609f5afeb",
-               "name": "MZC HyperBilling Data Source",
-               "state": "ENABLED",
-               "data_source_type": "EXTERNAL",
-               "plugin_info": {
-                   "plugin_id": "plugin-mzc-hyperbilling-cost-datasource",
-                   "version": "1.0.3",
-                   "options": {},
-                   "metadata": {
-                       "data_source_rules": [
-                           {
-                               "conditions": [],
-                               "options": {
-                                   "stop_processing": true
-                               },
-                               "conditions_policy": "ALWAYS",
-                               "name": "match_service_account",
-                               "tags": {},
-                               "actions": {
-                                   "match_service_account": {
-                                       "source": "account",
-                                       "target": "data.project_id"
-                                   }
-                               }
-                           }
-                       ]
-                   },
-                   "secret_id": "secret-354d142229e5",
-                   "upgrade_mode": "AUTO"
-               },
-               "template": {},
-               "tags": {},
-               "cost_tag_keys": [],
-               "cost_additional_info_keys": [],
-               "domain_id": "domain-58010aa2e451",
-               "created_at": "2022-04-13T05:34:54.223Z",
-               "last_synchronized_at": "2022-07-17T16:00:08.254Z"
+               "created_at": "2022-07-19T10:58:36.080Z"
            }
        ],
        "total_count": 2
@@ -1217,6 +1226,12 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **plugin_info** (PluginInfo)   `Required` 
 
     
+* **secret_type** (SecretType)   `Required` 
+
+    
+* **secret_filter** (SecretFilter)   `Required` 
+
+    
 * **template** (Struct)   `Required` 
 
     
@@ -1229,13 +1244,10 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **cost_additional_info_keys** (string)  `Repeated`    `Required` 
 
     
+* **cost_data_keys** (string)  `Repeated`    `Required` 
+
+    
 * **domain_id** (string)   `Required` 
-
-    
-* **secret_type** (SecretType)   `Required` 
-
-    
-* **secret_filter** (SecretFilter)   `Required` 
 
     
 * **created_at** (string)   `Required` 

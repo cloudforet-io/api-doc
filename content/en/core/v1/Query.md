@@ -212,6 +212,9 @@ bookFlatSection: true
     
 * **select** (Struct)   `Required` 
 
+    
+* **page** (Page)   `Required` 
+
     <br>
 
 ### ExportOption
@@ -242,6 +245,12 @@ bookFlatSection: true
 
     
 * **fields** (ListValue)   `Required` 
+
+    
+* **unwind** (string)   `Required` 
+
+    
+* **page** (Page)   `Required` 
 
     <br>
 
@@ -296,6 +305,9 @@ bookFlatSection: true
 
     
 * **keyword** (string)   `Required` 
+
+    
+* **unwind** (string)   `Required` 
 
     <br>
 
