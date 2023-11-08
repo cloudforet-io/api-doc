@@ -85,11 +85,18 @@ bookFlatSection: true
     
 * **user_type** (string)  
 
+  *LOCAL, EXTERNAL*
+
     
 * **timeout** (int32)  
 
     
 * **refresh_count** (int32)  
+
+    
+* **verify_code** (string)  
+
+  *if MFA is enabled, verify_code is required*
 
     <br>
 

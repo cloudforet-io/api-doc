@@ -57,7 +57,7 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 [CreateCostRequest](./Cost#createcostrequest)
 
-* **cost** (float)   `Required` 
+* **cost** (double)   `Required` 
 
 
 * **data_source_id** (string)   `Required` 
@@ -69,7 +69,7 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 * **billed_date** (string)   `Required` 
 
 
-* **usage_quantity** (float)  
+* **usage_quantity** (double)  
 
 
 * **usage_unit** (float)  
@@ -132,9 +132,9 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 [CostInfo](#COSTINFO)
 * **cost_id** (string)   `Required` 
 
-* **cost** (float)   `Required` 
+* **cost** (double)   `Required` 
 
-* **usage_quantity** (float)   `Required` 
+* **usage_quantity** (double)   `Required` 
 
 * **usage_unit** (string)   `Required` 
 
@@ -295,9 +295,9 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 [CostInfo](#COSTINFO)
 * **cost_id** (string)   `Required` 
 
-* **cost** (float)   `Required` 
+* **cost** (double)   `Required` 
 
-* **usage_quantity** (float)   `Required` 
+* **usage_quantity** (double)   `Required` 
 
 * **usage_unit** (string)   `Required` 
 
@@ -567,10 +567,10 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **cost_id** (string)   `Required` 
 
     
-* **cost** (float)   `Required` 
+* **cost** (double)   `Required` 
 
     
-* **usage_quantity** (float)   `Required` 
+* **usage_quantity** (double)   `Required` 
 
     
 * **usage_unit** (string)   `Required` 
@@ -703,7 +703,7 @@ Gets the Cost information of specific `product`s based on the time granularity: 
     <br>
 
 ### CreateCostRequest
-* **cost** (float)   `Required` 
+* **cost** (double)   `Required` 
 
     
 * **data_source_id** (string)   `Required` 
@@ -715,7 +715,7 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **billed_date** (string)   `Required` 
 
     
-* **usage_quantity** (float)  
+* **usage_quantity** (double)  
 
     
 * **usage_unit** (float)  
