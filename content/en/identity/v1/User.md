@@ -156,6 +156,14 @@ You can create user.
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -293,6 +301,14 @@ Update user info by given user_id
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -397,6 +413,14 @@ Update user info by given user_id
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -428,7 +452,7 @@ Update user info by given user_id
 
 ### reset_password
 
-
++noauth
 
 
 
@@ -501,6 +525,14 @@ Update user info by given user_id
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -622,6 +654,14 @@ Enable MFA for user. If this api is called, send email to user.
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -737,6 +777,14 @@ Disable MFA for user. If this api is called, send email to user.
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -850,6 +898,14 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -937,6 +993,14 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -1024,6 +1088,14 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -1128,6 +1200,14 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
@@ -1266,6 +1346,14 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    "name": "Dong Yoo kang",
    "state": "ENABLED",
    "email": "dkang@mz.co.kr",
+   "email_verified" : true,
+   "mfa": {
+      "mfa_type": "EMAIL",
+      "state" : "ENABLED",
+      "options": {
+         "email": "example@cloudforet.com"
+      }
+   },
    "language": "en",
    "timezone": "UTC",
    "tags": [{
