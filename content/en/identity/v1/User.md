@@ -50,7 +50,9 @@ note: Administrator must register User first.
 
 ### create
 
-You can create user.
+You can create user. after create user you have to binding role to user.
+See role-binding create api.
+External type user do not need password.
 
 
 
@@ -94,8 +96,12 @@ You can create user.
 
 * **language** (string)  
 
+  *en,ko*
+
 
 * **timezone** (string)  
+
+  *UTC, Asia/Seoul*
 
 
 * **tags** (Struct)  
@@ -110,7 +116,19 @@ You can create user.
 
 
 {{< highlight json >}}
-{}
+{
+ "user_id": "example@cloudforet.com",
+ "password": "password",
+ "name": "Wonny",
+ "email": "example@cloudforet.com",
+ "user_type": "USER",
+ "backend": "LOCAL",
+ "language": "en",
+ "timezone": "UTC",
+ "tags": {
+   "Department": "Development"
+ }
+}
 {{< /highlight >}}
 {{< /tab >}}
 
@@ -146,16 +164,16 @@ You can create user.
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -166,22 +184,13 @@ You can create user.
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -246,15 +255,12 @@ Update user info by given user_id
 
 {{< highlight json >}}
 {
- "user_id": "dkang@mz.co.kr",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "domain_id": "{{DOMAIN_ID}}"
+ "user_id": "example@cloudforet.com",
+ "tags": {
+     "Department": "Development",
+     "Role"
+   },
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -291,16 +297,16 @@ Update user info by given user_id
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -311,22 +317,13 @@ Update user info by given user_id
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -403,16 +400,16 @@ Update user info by given user_id
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -423,22 +420,13 @@ Update user info by given user_id
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -515,16 +503,16 @@ Update user info by given user_id
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -535,22 +523,13 @@ Update user info by given user_id
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -593,7 +572,7 @@ Enable MFA for user. If this api is called, send email to user.
 
 * **options** (Struct)   `Required` 
 
-  *If mfa_type is EMAIL, email is required in options.*
+  *If mfa_type is EMAIL, email is required in options. options will be saved in mfa's options field.*
 
 
 * **domain_id** (string)   `Required` 
@@ -644,16 +623,16 @@ Enable MFA for user. If this api is called, send email to user.
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -664,22 +643,13 @@ Enable MFA for user. If this api is called, send email to user.
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -728,7 +698,7 @@ Disable MFA for user. If this api is called, send email to user.
 
 {{< highlight json >}}
 {
- "user_id": "example@cloudforet",
+ "user_id": "example@cloudforet.com",
  "force": false,
  "domain_id": "domain-xxxxxxxxxxxx"
 }
@@ -767,16 +737,16 @@ Disable MFA for user. If this api is called, send email to user.
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -787,22 +757,13 @@ Disable MFA for user. If this api is called, send email to user.
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -888,16 +849,16 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -908,22 +869,13 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -983,16 +935,16 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -1003,22 +955,13 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -1078,16 +1021,16 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -1098,22 +1041,13 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -1190,16 +1124,16 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -1210,22 +1144,13 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -1336,16 +1261,16 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 * **email_verified** (bool)   `Required` 
 
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
 
 
 {{< highlight json >}}
 {
-   "user_id": "dkang@mz.co.kr",
-   "name": "Dong Yoo kang",
+   "user_id": "example@cloudforet.com",
+   "name": "Wonny",
    "state": "ENABLED",
-   "email": "dkang@mz.co.kr",
+   "email": "Wonny@cloudforet.com",
    "email_verified" : true,
    "mfa": {
       "mfa_type": "EMAIL",
@@ -1356,22 +1281,13 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
    },
    "language": "en",
    "timezone": "UTC",
-   "tags": [{
-     "key": "user1",
-     "value": "Reuters"
-   }, {
-     "key": "user2",
-     "value": "Bloomberg"
-   }],
-   "last_accessed_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
+   "tags": {
+     "Department": "Development",
+     "Role"
    },
-   "created_at": {
-       "seconds": "1593161630",
-       "nanos": 79000000
-   },
-   "domain_id": "domain-fd6e23a5ae36"
+   "last_accessed_at": "2023-01-01T07:12:41.890Z"
+   "created_at": "2023-01-01T15:23:31.705Z"
+   "domain_id": "domain-xxxxxxxxxxxx"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -1438,8 +1354,12 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
     
 * **language** (string)  
 
+  *en,ko*
+
     
 * **timezone** (string)  
+
+  *UTC, Asia/Seoul*
 
     
 * **tags** (Struct)  
@@ -1475,7 +1395,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
     
 * **options** (Struct)   `Required` 
 
-  *If mfa_type is EMAIL, email is required in options.*
+  *If mfa_type is EMAIL, email is required in options. options will be saved in mfa's options field.*
 
     
 * **domain_id** (string)   `Required` 
@@ -1528,6 +1448,17 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **only** (string)  `Repeated`   
+
+    <br>
+
+### MFA
+* **state** (MFAState)   `Required` 
+
+    
+* **mfa_type** (string)   `Required` 
+
+    
+* **options** (Struct)   `Required` 
 
     <br>
 
@@ -1614,7 +1545,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **email_verified** (bool)   `Required` 
 
     
-* **mfa** (Struct)   `Required` 
+* **mfa** (MFA)   `Required` 
 
     <br>
 
