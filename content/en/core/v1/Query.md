@@ -247,7 +247,7 @@ bookFlatSection: true
 * **fields** (ListValue)   `Required` 
 
     
-* **unwind** (string)   `Required` 
+* **unwind** (Unwind)   `Required` 
 
     
 * **page** (Page)   `Required` 
@@ -307,7 +307,7 @@ bookFlatSection: true
 * **keyword** (string)   `Required` 
 
     
-* **unwind** (string)   `Required` 
+* **unwind** (Unwind)   `Required` 
 
     <br>
 
@@ -408,5 +408,13 @@ bookFlatSection: true
 
     
 * **keyword** (string)   `Required` 
+
+    <br>
+
+### Unwind
+* **path** (string)   `Required` 
+
+    
+* **filter** (Filter)  `Repeated`    `Required` 
 
     <br>
