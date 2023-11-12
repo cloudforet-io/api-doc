@@ -252,6 +252,12 @@ bookFlatSection: true
 * **file_format** (FileFormat)  
 
     
+* **timezone** (string)  
+
+    
+* **language** (string)  
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -298,6 +304,12 @@ bookFlatSection: true
 
     
 * **target** (Struct)  
+
+    
+* **timezone** (string)  
+
+    
+* **language** (string)  
 
     
 * **tags** (Struct)  

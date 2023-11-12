@@ -928,6 +928,9 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **file_format** (FileFormat)   `Required` 
 
     
+* **timezone** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     <br>
