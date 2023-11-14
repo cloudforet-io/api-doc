@@ -221,6 +221,9 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **title** (string)   `Required` 
+
+    
 * **query_type** (QueryType)   `Required` 
 
     

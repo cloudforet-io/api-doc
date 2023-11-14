@@ -925,13 +925,16 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **options** (ExportOption)  `Repeated`    `Required` 
 
     
-* **file_format** (FileFormat)   `Required` 
-
-    
-* **timezone** (string)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
+
+    
+* **file_format** (FileFormat)  
+
+    
+* **file_name** (string)  
+
+    
+* **timezone** (string)  
 
     <br>
 
