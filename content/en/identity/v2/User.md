@@ -37,7 +37,7 @@ note: Administrator must register User first.
 | [**enable**](./User#enable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**disable**](./User#disable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**delete**](./User#delete) | [UserRequest](User#userrequest) | [Empty](User#empty) |
-| [**get**](./User#get) | [GetUserRequest](User#getuserrequest) | [UserInfo](User#userinfo) |
+| [**get**](./User#get) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**list**](./User#list) | [UserSearchQuery](User#usersearchquery) | [UsersInfo](User#usersinfo) |
 | [**stat**](./User#stat) | [UserStatQuery](User#userstatquery) | [Struct](User#struct) |
 
@@ -445,7 +445,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **user_id** (string)   `Required` 
 
     
-* **backend** (UserBackend)   `Required` 
+* **auth_type** (AuthType)   `Required` 
 
     
 * **reset_password** (bool)   `Required` 
@@ -515,17 +515,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **domain_id** (string)   `Required` 
-
-    <br>
-
-### GetUserRequest
-* **user_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 
@@ -599,7 +588,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **user_type** (UserType)   `Required` 
 
     
-* **backend** (UserBackend)   `Required` 
+* **auth_type** (AuthType)   `Required` 
 
     
 * **role_type** (RoleType)   `Required` 
@@ -677,7 +666,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **user_type** (UserType)  
 
     
-* **backend** (UserBackend)  
+* **auth_type** (AuthType)  
 
     
 * **domain_id** (string)  

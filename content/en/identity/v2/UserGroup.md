@@ -31,7 +31,7 @@ note: Administrator must register User first.
 | [**add_users**](./UserGroup#add_users) | [UsersUserGroupRequest](UserGroup#usersusergrouprequest) | [UserGroupInfo](UserGroup#usergroupinfo) |
 | [**remove_users**](./UserGroup#remove_users) | [UsersUserGroupRequest](UserGroup#usersusergrouprequest) | [UserGroupInfo](UserGroup#usergroupinfo) |
 | [**get**](./UserGroup#get) | [UserGroupRequest](UserGroup#usergrouprequest) | [UserGroupInfo](UserGroup#usergroupinfo) |
-| [**list**](./UserGroup#list) | [UserSearchQuery](UserGroup#usersearchquery) | [UserGroupsInfo](UserGroup#usergroupsinfo) |
+| [**list**](./UserGroup#list) | [UserGroupSearchQuery](UserGroup#usergroupsearchquery) | [UserGroupsInfo](UserGroup#usergroupsinfo) |
 | [**stat**](./UserGroup#stat) | [UserGroupStatQuery](UserGroup#usergroupstatquery) | [Struct](UserGroup#struct) |
 
 
@@ -247,26 +247,7 @@ note: Administrator must register User first.
 
     <br>
 
-### UserGroupStatQuery
-* **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
-    <br>
-
-### UserGroupsInfo
-* **results** (UserGroupInfo)  `Repeated`    `Required` 
-
-    
-* **total_count** (int32)   `Required` 
-
-    <br>
-
-### UserSearchQuery
+### UserGroupSearchQuery
 * **query** (Query)   `Required` 
 
     
@@ -283,6 +264,25 @@ note: Administrator must register User first.
 
     
 * **user_id** (string)  
+
+    <br>
+
+### UserGroupStatQuery
+* **query** (StatisticsQuery)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)  
+
+    <br>
+
+### UserGroupsInfo
+* **results** (UserGroupInfo)  `Repeated`    `Required` 
+
+    
+* **total_count** (int32)   `Required` 
 
     <br>
 

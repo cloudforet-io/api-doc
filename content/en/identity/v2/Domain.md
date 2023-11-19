@@ -248,6 +248,9 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **external_auth_state** (ExternalAuthState)   `Required` 
+
+    
 * **metadata** (Struct)   `Required` 
 
     <br>

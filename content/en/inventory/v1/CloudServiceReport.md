@@ -182,6 +182,12 @@ bookFlatSection: true
 * **target** (Struct)   `Required` 
 
     
+* **timezone** (string)   `Required` 
+
+    
+* **language** (string)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
