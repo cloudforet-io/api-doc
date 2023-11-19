@@ -27,7 +27,6 @@ bookFlatSection: true
 | [**create**](./ServiceAccount#create) | [CreateServiceAccountRequest](ServiceAccount#createserviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**update**](./ServiceAccount#update) | [UpdateServiceAccountRequest](ServiceAccount#updateserviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**change_trusted_service_account**](./ServiceAccount#change_trusted_service_account) | [ChangeTrustedAccountRequest](ServiceAccount#changetrustedaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
-| [**change_project**](./ServiceAccount#change_project) | [ChangeProjectRequest](ServiceAccount#changeprojectrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**delete**](./ServiceAccount#delete) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [Empty](ServiceAccount#empty) |
 | [**get**](./ServiceAccount#get) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**list**](./ServiceAccount#list) | [ServiceAccountSearchQuery](ServiceAccount#serviceaccountsearchquery) | [ServiceAccountsInfo](ServiceAccount#serviceaccountsinfo) |
@@ -79,23 +78,6 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/service-account/change-trusted-service-account
->
-
-
-
-
-
-
-    
-<br>
-
-### change_project
-
-
-
-
-
-> **POST** /identity/v2/service-account/change-project
 >
 
 
@@ -180,20 +162,6 @@ bookFlatSection: true
 ## Message
 
 
-
-### ChangeProjectRequest
-* **service_account_id** (string)   `Required` 
-
-    
-* **project_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    <br>
 
 ### ChangeTrustedAccountRequest
 * **service_account_id** (string)   `Required` 
@@ -343,5 +311,8 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
+
+    
+* **project_id** (string)  
 
     <br>
