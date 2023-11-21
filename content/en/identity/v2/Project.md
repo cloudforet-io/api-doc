@@ -271,7 +271,7 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **project** (ProjectType)   `Required` 
+* **project_type** (ProjectType)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -280,10 +280,10 @@ bookFlatSection: true
 * **workspace_id** (string)   `Required` 
 
     
-* **project_group_id** (string)  
+* **tags** (Struct)  
 
     
-* **tags** (Struct)  
+* **project_group_id** (string)  
 
     <br>
 
