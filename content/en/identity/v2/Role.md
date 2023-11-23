@@ -152,7 +152,7 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **policy_id** (string)   `Required` 
+* **policies** (string)  `Repeated`    `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -183,10 +183,16 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
+* **policies** (string)  `Repeated`    `Required` 
+
+    
 * **page_permissions** (PagePermission)  `Repeated`    `Required` 
 
     
 * **tags** (Struct)   `Required` 
+
+    
+* **is_managed** (bool)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -248,6 +254,9 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    
+* **policies** (string)  `Repeated`   
 
     
 * **page_permissions** (PagePermission)  `Repeated`   

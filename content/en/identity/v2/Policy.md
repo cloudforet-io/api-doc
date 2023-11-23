@@ -180,6 +180,9 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
+* **is_managed** (bool)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
