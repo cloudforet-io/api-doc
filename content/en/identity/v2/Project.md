@@ -399,7 +399,7 @@ bookFlatSection: true
 * **project_id** (string)   `Required` 
 
     
-* **project** (ProjectType)   `Required` 
+* **project_type** (ProjectType)   `Required` 
 
     
 * **domain_id** (string)   `Required` 

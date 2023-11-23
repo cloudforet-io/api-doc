@@ -30,7 +30,7 @@ bookFlatSection: true
 | [**enable**](./Domain#enable) | [DomainRequest](Domain#domainrequest) | [DomainInfo](Domain#domaininfo) |
 | [**disable**](./Domain#disable) | [DomainRequest](Domain#domainrequest) | [DomainInfo](Domain#domaininfo) |
 | [**get**](./Domain#get) | [DomainRequest](Domain#domainrequest) | [DomainInfo](Domain#domaininfo) |
-| [**get_meta_data**](./Domain#get_meta_data) | [GetDomainMetadataRequest](Domain#getdomainmetadatarequest) | [DomainMetadataInfo](Domain#domainmetadatainfo) |
+| [**get_metadata**](./Domain#get_metadata) | [GetDomainMetadataRequest](Domain#getdomainmetadatarequest) | [DomainMetadataInfo](Domain#domainmetadatainfo) |
 | [**get_public_key**](./Domain#get_public_key) | [AuthenticationRequest](Domain#authenticationrequest) | [AuthenticationResponse](Domain#authenticationresponse) |
 | [**list**](./Domain#list) | [DomainSearchQuery](Domain#domainsearchquery) | [DomainsInfo](Domain#domainsinfo) |
 | [**stat**](./Domain#stat) | [DomainStatQuery](Domain#domainstatquery) | [Struct](Domain#struct) |
@@ -124,11 +124,14 @@ bookFlatSection: true
     
 <br>
 
-### get_meta_data
+### get_metadata
 
 
 
 
+
+> **POST** /identity/v2/domain/get-metadata
+>
 
 
 
