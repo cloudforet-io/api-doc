@@ -152,9 +152,6 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **is_managed_role** (bool)   `Required` 
-
-    
 * **scope** (Scope)   `Required` 
 
     
@@ -167,9 +164,6 @@ bookFlatSection: true
 
 ### RoleBindingInfo
 * **role_binding_id** (string)   `Required` 
-
-    
-* **is_managed_role** (bool)   `Required` 
 
     
 * **scope** (Scope)   `Required` 
@@ -185,9 +179,6 @@ bookFlatSection: true
 
     
 * **user_id** (string)   `Required` 
-
-    
-* **repository_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -226,9 +217,6 @@ bookFlatSection: true
     
 * **user_id** (string)  
 
-    
-* **repository_id** (string)  
-
     <br>
 
 ### RoleBindingStatQuery
@@ -254,9 +242,9 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **is_managed_role** (bool)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **workspace_id** (string)  
 
     <br>
