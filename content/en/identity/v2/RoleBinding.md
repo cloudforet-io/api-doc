@@ -169,6 +169,9 @@ bookFlatSection: true
 * **scope** (Scope)   `Required` 
 
     
+* **role_type** (RoleType)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -204,6 +207,9 @@ bookFlatSection: true
 
     
 * **scope** (Scope)  
+
+    
+* **role_type** (RoleType)  
 
     
 * **domain_id** (string)  
