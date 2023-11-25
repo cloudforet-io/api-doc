@@ -458,16 +458,13 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
     
 * **password** (string)  
 
-  *When backend is LOCAL, password is required.*
+  *When auth_type is LOCAL, password is required.*
 
     
 * **name** (string)  
 
     
 * **email** (string)  
-
-    
-* **user_type** (UserType)  
 
     
 * **language** (string)  
@@ -585,9 +582,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **email_verified** (bool)   `Required` 
 
     
-* **user_type** (UserType)   `Required` 
-
-    
 * **auth_type** (AuthType)   `Required` 
 
     
@@ -661,9 +655,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **email** (string)  
-
-    
-* **user_type** (UserType)  
 
     
 * **auth_type** (AuthType)  

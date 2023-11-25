@@ -166,7 +166,7 @@ bookFlatSection: true
     <br>
 
 ### PagePermission
-* **pages** (string)  `Repeated`    `Required` 
+* **page** (string)   `Required` 
 
     
 * **permission** (Permission)   `Required` 

@@ -29,6 +29,7 @@ bookFlatSection: true
 | [**enable**](./APIKey#enable) | [APIKeyRequest](APIKey#apikeyrequest) | [APIKeyInfo](APIKey#apikeyinfo) |
 | [**disable**](./APIKey#disable) | [APIKeyRequest](APIKey#apikeyrequest) | [APIKeyInfo](APIKey#apikeyinfo) |
 | [**delete**](./APIKey#delete) | [APIKeyRequest](APIKey#apikeyrequest) | [Empty](APIKey#empty) |
+| [**verify**](./APIKey#verify) | [VerifyAPIKeyRequest](APIKey#verifyapikeyrequest) | [APIKeyInfo](APIKey#apikeyinfo) |
 | [**get**](./APIKey#get) | [APIKeyRequest](APIKey#apikeyrequest) | [APIKeyInfo](APIKey#apikeyinfo) |
 | [**list**](./APIKey#list) | [APIKeySearchQuery](APIKey#apikeysearchquery) | [APIKeysInfo](APIKey#apikeysinfo) |
 | [**stat**](./APIKey#stat) | [APIKeyStatQuery](APIKey#apikeystatquery) | [Struct](APIKey#struct) |
@@ -123,6 +124,23 @@ bookFlatSection: true
     
 <br>
 
+### verify
+
+
+
+
+
+> **POST** /identity/v2/api-key/verify
+>
+
+
+
+
+
+
+    
+<br>
+
 ### get
 
 
@@ -188,6 +206,9 @@ bookFlatSection: true
 * **api_key** (string)   `Required` 
 
     
+* **name** (string)   `Required` 
+
+    
 * **state** (State)   `Required` 
 
     
@@ -201,6 +222,9 @@ bookFlatSection: true
 
     
 * **last_accessed_at** (string)   `Required` 
+
+    
+* **expired_at** (string)   `Required` 
 
     <br>
 
@@ -254,6 +278,9 @@ bookFlatSection: true
     
 * **name** (string)  
 
+    
+* **expired_at** (string)  
+
     <br>
 
 ### UpdateAPIKeyRequest
@@ -264,5 +291,22 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    <br>
+
+### VerifyAPIKeyRequest
+* **api_key_id** (string)   `Required` 
+
+    
+* **api_key_type** (API_KEY_TYPE)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **app_id** (string)   `Required` 
+
+    
+* **user_id** (string)   `Required` 
 
     <br>
