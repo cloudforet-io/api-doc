@@ -628,9 +628,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **role_id** (string)   `Required` 
 
     
-* **is_managed_role** (bool)   `Required` 
-
-    
 * **scope** (Scope)   `Required` 
 
     
@@ -645,7 +642,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **user_id** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  
@@ -660,7 +657,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **auth_type** (AuthType)  
 
     
-* **domain_id** (string)  
+* **workspace_id** (string)  
 
     <br>
 

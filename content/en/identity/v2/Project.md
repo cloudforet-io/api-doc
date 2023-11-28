@@ -343,6 +343,9 @@ bookFlatSection: true
 * **name** (string)  
 
     
+* **project_type** (ProjectType)  
+
+    
 * **workspace_id** (string)  
 
     

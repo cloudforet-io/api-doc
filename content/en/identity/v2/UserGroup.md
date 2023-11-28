@@ -5,8 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [UserGroup](#UserGroup)
-User API which allows member management within project, company, and domain
-note: Administrator must register User first.
+
 
 
 >  **Package : spaceone.api.identity.v2**

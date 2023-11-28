@@ -212,10 +212,16 @@ bookFlatSection: true
 * **state** (State)   `Required` 
 
     
+* **role_type** (RoleType)   `Required` 
+
+    
+* **scope** (Scope)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **workspace_id** (string)   `Required` 
 
     
 * **role_id** (string)   `Required` 
@@ -255,9 +261,6 @@ bookFlatSection: true
 * **app_id** (string)  
 
     
-* **app_key** (string)  
-
-    
 * **name** (string)  
 
     
@@ -267,7 +270,7 @@ bookFlatSection: true
 * **scope** (Scope)  
 
     
-* **role_type** (string)  
+* **role_type** (RoleType)  
 
     
 * **workspace_id** (string)  
@@ -275,37 +278,19 @@ bookFlatSection: true
     
 * **role_id** (string)  
 
+    
+* **api_key_id** (string)  
+
     <br>
 
 ### AppStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
     
-* **app_key** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **state** (State)   `Required` 
-
-    
-* **scope** (Scope)   `Required` 
-
-    
-* **role_type** (string)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
-
-    
-* **app_id** (string)   `Required` 
-
-    
-* **role_id** (string)   `Required` 
+* **workspace_id** (string)  
 
     <br>
 

@@ -152,19 +152,22 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **template** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **alias** (string)  
+
+    
+* **color** (string)  
+
+    
+* **icon** (string)  
 
     
 * **order** (int32)  
 
     
-* **metadata** (Struct)  
-
-    
-* **capability** (Struct)  
+* **options** (Struct)  
 
     
 * **tags** (Struct)  
@@ -178,25 +181,34 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **alias** (string)   `Required` 
+
+    
+* **color** (string)   `Required` 
+
+    
+* **icon** (string)   `Required` 
+
+    
 * **order** (int32)   `Required` 
 
     
-* **template** (Struct)   `Required` 
-
-    
-* **metadata** (Struct)   `Required` 
-
-    
-* **capability** (Struct)   `Required` 
+* **options** (Struct)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
+
+    
+* **is_managed** (bool)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
 
     <br>
 
@@ -219,6 +231,12 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    
+* **alias** (string)  
+
+    
+* **is_managed** (bool)  
 
     <br>
 
@@ -248,16 +266,19 @@ bookFlatSection: true
 * **name** (string)  
 
     
+* **alias** (string)  
+
+    
+* **color** (string)  
+
+    
+* **icon** (string)  
+
+    
 * **order** (int32)  
 
     
-* **template** (Struct)  
-
-    
-* **metadata** (Struct)  
-
-    
-* **capability** (Struct)  
+* **options** (Struct)  
 
     
 * **tags** (Struct)  

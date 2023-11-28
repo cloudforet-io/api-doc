@@ -130,9 +130,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v2/api-key/verify
->
-
 
 
 

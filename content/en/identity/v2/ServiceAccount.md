@@ -26,7 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./ServiceAccount#create) | [CreateServiceAccountRequest](ServiceAccount#createserviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**update**](./ServiceAccount#update) | [UpdateServiceAccountRequest](ServiceAccount#updateserviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
-| [**change_trusted_service_account**](./ServiceAccount#change_trusted_service_account) | [ChangeTrustedAccountRequest](ServiceAccount#changetrustedaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
+| [**change_trusted_account**](./ServiceAccount#change_trusted_account) | [ChangeTrustedAccountRequest](ServiceAccount#changetrustedaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**delete**](./ServiceAccount#delete) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [Empty](ServiceAccount#empty) |
 | [**get**](./ServiceAccount#get) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**list**](./ServiceAccount#list) | [ServiceAccountSearchQuery](ServiceAccount#serviceaccountsearchquery) | [ServiceAccountsInfo](ServiceAccount#serviceaccountsinfo) |
@@ -71,13 +71,13 @@ bookFlatSection: true
     
 <br>
 
-### change_trusted_service_account
+### change_trusted_account
 
 
 
 
 
-> **POST** /identity/v2/service-account/change-trusted-service-account
+> **POST** /identity/v2/service-account/change-trusted-account
 >
 
 
@@ -167,7 +167,7 @@ bookFlatSection: true
 * **service_account_id** (string)   `Required` 
 
     
-* **trusted_service_account_id** (string)   `Required` 
+* **trusted_account_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -193,13 +193,15 @@ bookFlatSection: true
 * **project_id** (string)   `Required` 
 
     
+* **trusted_account_id** (string)   `Required` 
+
+  *+optional`*
+
+    
 * **tags** (Struct)  
 
     
 * **domain_id** (string)  
-
-    
-* **trusted_service_account_id** (string)  
 
     <br>
 
@@ -228,7 +230,7 @@ bookFlatSection: true
 * **project_id** (string)   `Required` 
 
     
-* **trusted_service_account_id** (string)   `Required` 
+* **trusted_account_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -271,7 +273,7 @@ bookFlatSection: true
 * **project_id** (string)  
 
     
-* **trusted_service_account_id** (string)  
+* **trusted_account_id** (string)  
 
     <br>
 

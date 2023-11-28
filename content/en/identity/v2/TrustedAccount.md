@@ -19,17 +19,17 @@ bookFlatSection: true
 
 
 
-**TrustedServiceAccount Methods:**
+**TrustedAccount Methods:**
 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./TrustedServiceAccount#create) | [CreateTrustedServiceAccountRequest](TrustedServiceAccount#createtrustedserviceaccountrequest) | [TrustedServiceAccountInfo](TrustedServiceAccount#trustedserviceaccountinfo) |
-| [**update**](./TrustedServiceAccount#update) | [UpdateTrustedServiceAccountRequest](TrustedServiceAccount#updatetrustedserviceaccountrequest) | [TrustedServiceAccountInfo](TrustedServiceAccount#trustedserviceaccountinfo) |
-| [**delete**](./TrustedServiceAccount#delete) | [TrustedServiceAccountRequest](TrustedServiceAccount#trustedserviceaccountrequest) | [Empty](TrustedServiceAccount#empty) |
-| [**get**](./TrustedServiceAccount#get) | [TrustedServiceAccountRequest](TrustedServiceAccount#trustedserviceaccountrequest) | [TrustedServiceAccountInfo](TrustedServiceAccount#trustedserviceaccountinfo) |
-| [**list**](./TrustedServiceAccount#list) | [TrustedServiceAccountSearchQuery](TrustedServiceAccount#trustedserviceaccountsearchquery) | [TrustedServiceAccountsInfo](TrustedServiceAccount#trustedserviceaccountsinfo) |
-| [**stat**](./TrustedServiceAccount#stat) | [TrustedServiceAccountStatQuery](TrustedServiceAccount#trustedserviceaccountstatquery) | [Struct](TrustedServiceAccount#struct) |
+| [**create**](./TrustedAccount#create) | [CreateTrustedAccountRequest](TrustedAccount#createtrustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
+| [**update**](./TrustedAccount#update) | [UpdateTrustedAccountRequest](TrustedAccount#updatetrustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
+| [**delete**](./TrustedAccount#delete) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [Empty](TrustedAccount#empty) |
+| [**get**](./TrustedAccount#get) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
+| [**list**](./TrustedAccount#list) | [TrustedAccountSearchQuery](TrustedAccount#trustedaccountsearchquery) | [TrustedAccountsInfo](TrustedAccount#trustedaccountsinfo) |
+| [**stat**](./TrustedAccount#stat) | [TrustedAccountStatQuery](TrustedAccount#trustedaccountstatquery) | [Struct](TrustedAccount#struct) |
 
 
 
@@ -145,7 +145,7 @@ bookFlatSection: true
 
 
 
-### CreateTrustedServiceAccountRequest
+### CreateTrustedAccountRequest
 * **name** (string)   `Required` 
 
     
@@ -168,8 +168,8 @@ bookFlatSection: true
 
     <br>
 
-### TrustedServiceAccountInfo
-* **trusted_service_account_id** (string)   `Required` 
+### TrustedAccountInfo
+* **trusted_account_id** (string)   `Required` 
 
     
 * **name** (string)   `Required` 
@@ -197,8 +197,8 @@ bookFlatSection: true
 
     <br>
 
-### TrustedServiceAccountRequest
-* **trusted_service_account_id** (string)   `Required` 
+### TrustedAccountRequest
+* **trusted_account_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -208,14 +208,14 @@ bookFlatSection: true
 
     <br>
 
-### TrustedServiceAccountSearchQuery
+### TrustedAccountSearchQuery
 * **domain_id** (string)   `Required` 
 
     
 * **query** (Query)  
 
     
-* **trusted_service_account_id** (string)  
+* **trusted_account_id** (string)  
 
     
 * **name** (string)  
@@ -231,7 +231,7 @@ bookFlatSection: true
 
     <br>
 
-### TrustedServiceAccountStatQuery
+### TrustedAccountStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
     
@@ -242,16 +242,16 @@ bookFlatSection: true
 
     <br>
 
-### TrustedServiceAccountsInfo
-* **results** (TrustedServiceAccountInfo)  `Repeated`    `Required` 
+### TrustedAccountsInfo
+* **results** (TrustedAccountInfo)  `Repeated`    `Required` 
 
     
 * **total_count** (int32)   `Required` 
 
     <br>
 
-### UpdateTrustedServiceAccountRequest
-* **trusted_service_account_id** (string)   `Required` 
+### UpdateTrustedAccountRequest
+* **trusted_account_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
