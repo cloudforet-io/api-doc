@@ -286,6 +286,9 @@ bookFlatSection: true
     
 * **workspace_id** (string)  
 
+    
+* **project_id** (string)  
+
     <br>
 
 ### ServiceAccountsInfo

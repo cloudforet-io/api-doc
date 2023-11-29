@@ -200,6 +200,9 @@ bookFlatSection: true
     
 * **created_at** (string)   `Required` 
 
+    
+* **updated_at** (string)   `Required` 
+
     <br>
 
 ### RoleRequest
