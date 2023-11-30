@@ -363,13 +363,10 @@ bookFlatSection: true
 * **query** (StatisticsQuery)   `Required` 
 
     
-* **project_id** (string)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
+* **workspace_id** (string)  
 
     <br>
 

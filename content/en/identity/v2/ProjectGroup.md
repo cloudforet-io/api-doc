@@ -255,7 +255,7 @@ bookFlatSection: true
 * **domain_id** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
+* **workspace_id** (string)  
 
     <br>
 

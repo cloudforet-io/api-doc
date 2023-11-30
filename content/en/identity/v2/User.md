@@ -453,6 +453,9 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
   *If reset_password is true, send email*
 
     
+* **permission_group** (PermissionGroup)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -480,7 +483,10 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **tags** (Struct)  
 
     
-* **role_binding** (UserRoleBinding)  
+* **role_id** (string)  
+
+    
+* **workspace_id** (string)  
 
     <br>
 
@@ -621,20 +627,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     <br>
 
-### UserRoleBinding
-* **user_id** (string)   `Required` 
-
-    
-* **role_id** (string)   `Required` 
-
-    
-* **scope** (Scope)   `Required` 
-
-    
-* **workspace_id** (string)  
-
-    <br>
-
 ### UserSearchQuery
 * **query** (Query)   `Required` 
 
@@ -666,9 +658,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 

@@ -215,7 +215,7 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **scope** (Scope)   `Required` 
+* **permission_group** (PermissionGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -267,10 +267,10 @@ bookFlatSection: true
 * **state** (State)  
 
     
-* **scope** (Scope)  
+* **role_type** (RoleType)  
 
     
-* **role_type** (RoleType)  
+* **permission_group** (PermissionGroup)  
 
     
 * **workspace_id** (string)  
@@ -309,7 +309,7 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **scope** (Scope)   `Required` 
+* **permission_group** (PermissionGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 

@@ -30,7 +30,7 @@ bookFlatSection: true
 | [**enable**](./Domain#enable) | [DomainRequest](Domain#domainrequest) | [DomainInfo](Domain#domaininfo) |
 | [**disable**](./Domain#disable) | [DomainRequest](Domain#domainrequest) | [DomainInfo](Domain#domaininfo) |
 | [**get**](./Domain#get) | [DomainRequest](Domain#domainrequest) | [DomainInfo](Domain#domaininfo) |
-| [**get_metadata**](./Domain#get_metadata) | [GetDomainMetadataRequest](Domain#getdomainmetadatarequest) | [DomainMetadataInfo](Domain#domainmetadatainfo) |
+| [**get_auth_info**](./Domain#get_auth_info) | [GetDomainAuthRequest](Domain#getdomainauthrequest) | [DomainAuthInfo](Domain#domainauthinfo) |
 | [**get_public_key**](./Domain#get_public_key) | [AuthenticationRequest](Domain#authenticationrequest) | [AuthenticationResponse](Domain#authenticationresponse) |
 | [**list**](./Domain#list) | [DomainSearchQuery](Domain#domainsearchquery) | [DomainsInfo](Domain#domainsinfo) |
 | [**stat**](./Domain#stat) | [DomainStatQuery](Domain#domainstatquery) | [Struct](Domain#struct) |
@@ -124,13 +124,13 @@ bookFlatSection: true
     
 <br>
 
-### get_metadata
+### get_auth_info
 
 
 
 
 
-> **POST** /identity/v2/domain/get-metadata
+> **POST** /identity/v2/domain/get-auth-info
 >
 
 
@@ -224,6 +224,20 @@ bookFlatSection: true
 
     <br>
 
+### DomainAuthInfo
+* **domain_id** (string)   `Required` 
+
+    
+* **name** (string)   `Required` 
+
+    
+* **external_auth_state** (ExternalAuthState)   `Required` 
+
+    
+* **metadata** (Struct)   `Required` 
+
+    <br>
+
 ### DomainInfo
 * **domain_id** (string)   `Required` 
 
@@ -241,20 +255,6 @@ bookFlatSection: true
 
     
 * **deleted_at** (string)   `Required` 
-
-    <br>
-
-### DomainMetadataInfo
-* **domain_id** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **external_auth_state** (ExternalAuthState)   `Required` 
-
-    
-* **metadata** (Struct)   `Required` 
 
     <br>
 
@@ -290,13 +290,16 @@ bookFlatSection: true
 
     <br>
 
-### GetDomainMetadataRequest
+### GetDomainAuthRequest
 * **name** (string)   `Required` 
 
     <br>
 
 ### UpdateDomainRequest
 * **domain_id** (string)   `Required` 
+
+    
+* **name** (string)  
 
     
 * **tags** (Struct)  

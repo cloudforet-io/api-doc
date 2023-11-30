@@ -193,15 +193,13 @@ bookFlatSection: true
 * **project_id** (string)   `Required` 
 
     
-* **trusted_account_id** (string)   `Required` 
-
-  *+optional`*
-
-    
 * **tags** (Struct)  
 
     
 * **domain_id** (string)  
+
+    
+* **trusted_account_id** (string)  
 
     <br>
 
@@ -285,9 +283,6 @@ bookFlatSection: true
 
     
 * **workspace_id** (string)  
-
-    
-* **project_id** (string)  
 
     <br>
 
