@@ -39,6 +39,9 @@ bookFlatSection: true
 
 
 
+> **POST** /identity/v2/external-auth/set
+>
+
 
 
 
@@ -53,6 +56,9 @@ bookFlatSection: true
 
 
 
+> **POST** /identity/v2/external-auth/unset
+>
+
 
 
 
@@ -66,6 +72,9 @@ bookFlatSection: true
 
 
 
+
+> **POST** /identity/v2/external-auth/get
+>
 
 
 

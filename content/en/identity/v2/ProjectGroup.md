@@ -229,6 +229,9 @@ bookFlatSection: true
     <br>
 
 ### ProjectGroupSearchQuery
+* **domain_id** (string)   `Required` 
+
+    
 * **query** (Query)  
 
     
@@ -236,9 +239,6 @@ bookFlatSection: true
 
     
 * **name** (string)  
-
-    
-* **domain_id** (string)  
 
     
 * **workspace_id** (string)  

@@ -42,46 +42,19 @@ bookFlatSection: true
     <br>
 
 ### AuthorizationRequest
-* **service** (string)   `Required` 
+* **scope** (string)   `Required` 
 
     
-* **resource** (string)   `Required` 
+* **token_type** (TokenType)   `Required` 
 
     
-* **verb** (string)   `Required` 
+* **api_key_id** (string)   `Required` 
 
     
-* **scope** (Scope)   `Required` 
-
-    
-* **require_domain_id** (bool)   `Required` 
-
-    
-* **require_workspace_id** (bool)   `Required` 
-
-    
-* **require_project_id** (bool)   `Required` 
-
-    
-* **require_user_id** (bool)   `Required` 
-
-    
-* **request_domain_id** (string)   `Required` 
-
-    
-* **request_workspace_id** (string)   `Required` 
-
-    
-* **request_project_id** (string)   `Required` 
-
-    
-* **request_user_id** (string)   `Required` 
+* **app_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
-
-    
-* **user_id** (string)   `Required` 
 
     <br>
 
@@ -89,10 +62,7 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **projects** (string)  `Repeated`    `Required` 
-
-    
-* **project_groups** (string)  `Repeated`    `Required` 
+* **user_projects** (string)  `Repeated`    `Required` 
 
     <br>
 

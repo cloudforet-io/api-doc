@@ -166,10 +166,10 @@ bookFlatSection: true
 * **role_binding_id** (string)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **role_type** (RoleType)   `Required` 
 
     
-* **role_type** (RoleType)   `Required` 
+* **permission_group** (PermissionGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -206,10 +206,10 @@ bookFlatSection: true
 * **role_binding_id** (string)  
 
     
-* **permission_group** (PermissionGroup)  
+* **role_type** (RoleType)  
 
     
-* **role_type** (RoleType)  
+* **permission_group** (PermissionGroup)  
 
     
 * **domain_id** (string)  

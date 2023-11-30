@@ -26,6 +26,7 @@ note: Administrator must register User first.
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./User#create) | [CreateUserRequest](User#createuserrequest) | [UserInfo](User#userinfo) |
+| [**create_workspace_user**](./User#create_workspace_user) | [CreateWorkspaceUserRequest](User#createworkspaceuserrequest) | [UserSummaryInfo](User#usersummaryinfo) |
 | [**update**](./User#update) | [UpdateUserRequest](User#updateuserrequest) | [UserInfo](User#userinfo) |
 | [**verify_email**](./User#verify_email) | [VerifyEmailRequest](User#verifyemailrequest) | [Empty](User#empty) |
 | [**confirm_email**](./User#confirm_email) | [ConfirmEmailRequest](User#confirmemailrequest) | [UserInfo](User#userinfo) |
@@ -40,6 +41,7 @@ note: Administrator must register User first.
 | [**get**](./User#get) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**list**](./User#list) | [UserSearchQuery](User#usersearchquery) | [UsersInfo](User#usersinfo) |
 | [**stat**](./User#stat) | [UserStatQuery](User#userstatquery) | [Struct](User#struct) |
+| [**list_summary**](./User#list_summary) | [UserSearchQuery](User#usersearchquery) | [UsersSummaryInfo](User#userssummaryinfo) |
 
 
 
@@ -55,6 +57,23 @@ External type user do not need password.
 
 
 > **POST** /identity/v2/user/create
+>
+
+
+
+
+
+
+    
+<br>
+
+### create_workspace_user
+
+
+
+
+
+> **POST** /identity/v2/user/create-workspace-user
 >
 
 
@@ -410,6 +429,23 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 
     
+<br>
+
+### list_summary
+
+
+
+
+
+> **POST** /identity/v2/user/list_summary
+>
+
+
+
+
+
+
+    
 
 
 <br>
@@ -453,10 +489,50 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
   *If reset_password is true, send email*
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **domain_id** (string)   `Required` 
+
+    
+* **password** (string)  
+
+  *When auth_type is LOCAL, password is required.*
+
+    
+* **name** (string)  
+
+    
+* **email** (string)  
+
+    
+* **language** (string)  
+
+  *en,ko*
+
+    
+* **timezone** (string)  
+
+  *UTC, Asia/Seoul*
+
+    
+* **tags** (Struct)  
+
+    <br>
+
+### CreateWorkspaceUserRequest
+* **user_id** (string)   `Required` 
+
+    
+* **auth_type** (AuthType)   `Required` 
+
+    
+* **reset_password** (bool)   `Required` 
+
+  *If reset_password is true, send email*
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **password** (string)  
@@ -484,9 +560,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **role_id** (string)  
-
-    
-* **workspace_id** (string)  
 
     <br>
 
@@ -661,8 +734,48 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     <br>
 
+### UserSummaryInfo
+* **user_id** (string)   `Required` 
+
+    
+* **name** (string)   `Required` 
+
+    
+* **state** (State)   `Required` 
+
+    
+* **email** (string)   `Required` 
+
+    
+* **auth_type** (AuthType)   `Required` 
+
+    
+* **role_type** (RoleType)   `Required` 
+
+    
+* **tags** (Struct)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    
+* **last_accessed_at** (string)   `Required` 
+
+    <br>
+
 ### UsersInfo
 * **results** (UserInfo)  `Repeated`    `Required` 
+
+    
+* **total_count** (int32)   `Required` 
+
+    <br>
+
+### UsersSummaryInfo
+* **results** (UserSummaryInfo)  `Repeated`    `Required` 
 
     
 * **total_count** (int32)   `Required` 

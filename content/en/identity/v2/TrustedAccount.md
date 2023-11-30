@@ -155,7 +155,7 @@ bookFlatSection: true
 * **provider** (string)   `Required` 
 
     
-* **scope** (Scope)   `Required` 
+* **permission_group** (PermissionGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -184,7 +184,7 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
-* **scope** (Scope)   `Required` 
+* **permission_group** (PermissionGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -224,7 +224,7 @@ bookFlatSection: true
 * **provider** (string)  
 
     
-* **scope** (Scope)  
+* **permission_group** (PermissionGroup)  
 
     
 * **workspace_id** (string)  

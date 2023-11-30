@@ -228,9 +228,6 @@ bookFlatSection: true
     
 * **role_type** (RoleType)  
 
-    
-* **policy_id** (string)  
-
     <br>
 
 ### RoleStatQuery
