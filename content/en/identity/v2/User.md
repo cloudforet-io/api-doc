@@ -609,7 +609,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **state** (State)  
 
     
-* **exclude_domain_id** (string)  
+* **exclude_workspace_id** (string)  
 
     
 * **page** (Page)  
