@@ -164,7 +164,7 @@ bookFlatSection: true
 * **domain_id** (string)   `Required` 
 
     
-* **related_schema_id** (string)  
+* **related_schemas** (string)  `Repeated`   
 
     
 * **options** (Struct)  
@@ -190,7 +190,7 @@ bookFlatSection: true
 * **provider** (string)   `Required` 
 
     
-* **related_schema_id** (string)   `Required` 
+* **related_schemas** (string)  `Repeated`    `Required` 
 
     
 * **options** (Struct)   `Required` 
@@ -275,7 +275,7 @@ bookFlatSection: true
 * **schema** (Struct)  
 
     
-* **related_schema_id** (string)  
+* **related_schemas** (string)  `Repeated`   
 
     
 * **options** (Struct)  
