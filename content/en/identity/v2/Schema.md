@@ -275,6 +275,9 @@ bookFlatSection: true
 * **schema** (Struct)  
 
     
+* **related_schema_id** (string)  
+
+    
 * **options** (Struct)  
 
     
