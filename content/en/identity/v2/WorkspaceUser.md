@@ -199,13 +199,13 @@ bookFlatSection: true
     <br>
 
 ### WorkspaceUserSearchQuery
-* **query** (Query)   `Required` 
-
-    
-* **user_id** (string)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
+
+    
+* **query** (Query)  
+
+    
+* **user_id** (string)  
 
     
 * **name** (string)  

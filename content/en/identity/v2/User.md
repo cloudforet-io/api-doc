@@ -672,13 +672,13 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
     <br>
 
 ### UserSearchQuery
-* **query** (Query)   `Required` 
-
-    
-* **user_id** (string)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
+
+    
+* **query** (Query)  
+
+    
+* **user_id** (string)  
 
     
 * **name** (string)  

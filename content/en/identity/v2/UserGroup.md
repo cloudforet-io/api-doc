@@ -247,10 +247,10 @@ bookFlatSection: true
     <br>
 
 ### UserGroupSearchQuery
-* **query** (Query)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **query** (Query)  
 
     
 * **user_group_id** (string)  
