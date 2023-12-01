@@ -174,6 +174,12 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
+* **language** (string)   `Required` 
+
+    
+* **timezone** (string)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
@@ -236,7 +242,7 @@ bookFlatSection: true
     <br>
 
 ### WorkspaceUsersInfo
-* **results** (UserInfo)  `Repeated`    `Required` 
+* **results** (WorkspaceUserInfo)  `Repeated`    `Required` 
 
     
 * **total_count** (int32)   `Required` 
