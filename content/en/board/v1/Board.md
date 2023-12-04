@@ -43,6 +43,9 @@ Creates a new Board with SYSTEM permission. The `name` of the board is only requ
 
 
 
+> **POST** /board/v1/board
+>
+
 
 
 
@@ -122,6 +125,9 @@ Updates a specific Board with SYSTEM permission. You can make changes in Board s
 
 
 
+> **POST** /board/v1/board/update
+>
+
 
 
 
@@ -200,6 +206,9 @@ Updates a specific Board with SYSTEM permission. You can make changes in Board s
 Adds or changes `categories` of a specific Board with SYSTEM permission. A change in `categories` of a Board does not affect the `category` of the child Posts.
 
 
+
+> **POST** /board/v1/board/set-categories
+>
 
 
 
