@@ -43,7 +43,7 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 
 
-> **POST** /board/v1/board/create
+> **POST** /board/v1/post/create
 >
 
 
@@ -172,7 +172,7 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 
 
-> **POST** /board/v1/board/update
+> **POST** /board/v1/post/update
 >
 
 
@@ -308,7 +308,7 @@ Not Implemented
 
 
 
-> **POST** /board/v1/board/send-notification
+> **POST** /board/v1/post/send-notification
 >
 
 
@@ -325,7 +325,7 @@ Deletes a specific Post. You must specify the `post_id` of the Post to delete, a
 
 
 
-> **POST** /board/v1/board/delete
+> **POST** /board/v1/post/delete
 >
 
 
@@ -375,7 +375,7 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 
 
-> **POST** /board/v1/board/get
+> **POST** /board/v1/post/get
 >
 
 
@@ -488,7 +488,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 
-> **POST** /board/v1/board/list
+> **POST** /board/v1/post/list
 >
 
 
@@ -612,7 +612,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 
-> **POST** /board/v1/board/stat
+> **POST** /board/v1/post/stat
 >
 
 
