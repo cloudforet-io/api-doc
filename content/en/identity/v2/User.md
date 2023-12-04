@@ -386,7 +386,7 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 
 
-> **POST** /identity/v2/user/get_workspaces
+> **POST** /identity/v2/user/get-workspaces
 >
 
 
