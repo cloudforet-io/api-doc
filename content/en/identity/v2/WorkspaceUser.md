@@ -180,7 +180,13 @@ bookFlatSection: true
 * **timezone** (string)   `Required` 
 
     
+* **api_key_count** (int32)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
+
+    
+* **role_binding** (RoleBindingInfo)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
