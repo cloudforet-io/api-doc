@@ -186,7 +186,7 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
-* **role_binding** (RoleBindingInfo)   `Required` 
+* **role_binding_info** (RoleBindingInfo)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
