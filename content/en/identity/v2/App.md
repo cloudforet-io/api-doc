@@ -26,7 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./App#create) | [CreateAppRequest](App#createapprequest) | [AppInfo](App#appinfo) |
 | [**update**](./App#update) | [UpdateAppRequest](App#updateapprequest) | [AppInfo](App#appinfo) |
-| [**generate_api_key**](./App#generate_api_key) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
+| [**generate_api_key**](./App#generate_api_key) | [GenerateAPIKeyAppRequest](App#generateapikeyapprequest) | [AppInfo](App#appinfo) |
 | [**enable**](./App#enable) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
 | [**disable**](./App#disable) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
 | [**delete**](./App#delete) | [AppRequest](App#apprequest) | [Empty](App#empty) |
@@ -319,6 +319,20 @@ bookFlatSection: true
 
     
 * **expired_at** (string)  
+
+    
+* **workspace_id** (string)  
+
+    <br>
+
+### GenerateAPIKeyAppRequest
+* **app_id** (string)   `Required` 
+
+    
+* **expired_at** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)  

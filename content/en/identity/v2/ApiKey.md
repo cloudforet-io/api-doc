@@ -188,6 +188,9 @@ bookFlatSection: true
 * **api_key** (string)   `Required` 
 
     
+* **app_id** (string)   `Required` 
+
+    
 * **name** (string)   `Required` 
 
     
