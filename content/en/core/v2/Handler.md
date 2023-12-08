@@ -45,13 +45,19 @@ bookFlatSection: true
 * **scope** (string)   `Required` 
 
     
-* **token_type** (TokenType)   `Required` 
+* **owner_type** (OwnerType)   `Required` 
+
+    
+* **user_id** (string)   `Required` 
+
+    
+* **app_id** (string)   `Required` 
 
     
 * **api_key_id** (string)   `Required` 
 
     
-* **app_id** (string)   `Required` 
+* **workspace_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
