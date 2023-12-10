@@ -5,7 +5,8 @@ weight: 3
 bookFlatSection: true
 ---
 # [Secret](#Secret)
-A Secret is an external data, encrypted by CloudForet.
+Secret is a service that stores and manages credentials.
+Secret is used to access data in other microservices.
 
 
 >  **Package : spaceone.api.secret.v1**
@@ -29,7 +30,7 @@ A Secret is an external data, encrypted by CloudForet.
 | [**delete**](./Secret#delete) | [SecretRequest](Secret#secretrequest) | [Empty](Secret#empty) |
 | [**update_data**](./Secret#update_data) | [UpdateSecretDataRequest](Secret#updatesecretdatarequest) | [Empty](Secret#empty) |
 | [**get_data**](./Secret#get_data) | [SecretRequest](Secret#secretrequest) | [SecretDataInfo](Secret#secretdatainfo) |
-| [**get**](./Secret#get) | [GetSecretRequest](Secret#getsecretrequest) | [SecretInfo](Secret#secretinfo) |
+| [**get**](./Secret#get) | [SecretRequest](Secret#secretrequest) | [SecretInfo](Secret#secretinfo) |
 | [**list**](./Secret#list) | [SecretQuery](Secret#secretquery) | [SecretsInfo](Secret#secretsinfo) |
 | [**stat**](./Secret#stat) | [SecretStatQuery](Secret#secretstatquery) | [Struct](Secret#struct) |
 
@@ -40,7 +41,9 @@ A Secret is an external data, encrypted by CloudForet.
 
 ### create
 
-Creates a new Secret. When creating the resource, external `data` is encrypted, and a `secret_id` is issued for data access by other microservices.
+Create a new secret.
+Created secret is encrypted and stored securely.
+It can be used to link to a trusted secret if you request it with 'trusted_secret_id' in the parameter.
 
 
 
@@ -65,22 +68,25 @@ Creates a new Secret. When creating the resource, external `data` is encrypted, 
 * **data** (Struct)   `Required` 
 
 
-* **secret_type** (SecretType)   `Required` 
+* **permission_group** (PermissionGroup)   `Required` 
 
 
 * **domain_id** (string)   `Required` 
 
 
+* **schema_id** (string)  
+
+
 * **tags** (Struct)  
 
 
-* **schema** (string)  
-
-
-* **service_account_id** (string)  
+* **workspace_id** (string)  
 
 
 * **project_id** (string)  
+
+
+* **service_account_id** (string)  
 
 
 * **trusted_secret_id** (string)  
@@ -91,13 +97,16 @@ Creates a new Secret. When creating the resource, external `data` is encrypted, 
 
 {{< highlight json >}}
 {
-   "name": "aws-dev",
+   "name": "Cloudforet AWS Dev",
    "data": "********",
-   "secret_type": "CREDENTIALS",
-   "schema": "aws_access_key",
-   "service_account_id": "sa-123456789012",
-   "project_id": "project-123456789012",
-   "domain_id": "domain-123456789012"
+   "schema_id": "aws-secret-assume-role",
+   "tags": {"foo": "bar"},
+   "permission_group": "PROJECT",
+   "domain_id": "domain-12345abcde",
+   "workspace_id": "workspace-12345abcde",
+   "project_id": "project-12345abcde",
+   "service_account_id": "sa-12345abcde",
+   "trusted_secret_id": "trusted-secret-12345abcde"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -110,21 +119,23 @@ Creates a new Secret. When creating the resource, external `data` is encrypted, 
 
 * **name** (string)   `Required` 
 
-* **secret_type** (SecretType)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
-* **schema** (string)   `Required` 
+* **schema_id** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
-* **service_account_id** (string)   `Required` 
+* **tags** (Struct)   `Required` 
+
+* **permission_group** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
 
-* **trusted_secret_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -132,16 +143,18 @@ Creates a new Secret. When creating the resource, external `data` is encrypted, 
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-123456789012",
-   "name": "aws-dev",
-   "secret_type": "CREDENTIALS",
-   "tags": {},
-   "schema": "aws_access_key",
+   "secret_id": "secret-12345abcde",
+   "name": "Cloudforet AWS Dev",
+   "schema_id": "aws-secret-assume-role",
    "provider": "aws",
-   "service_account_id": "sa-123456789012",
-   "project_id": "project-123456789012",
-   "domain_id": "domain-123456789012",
-   "created_at": "2022-01-01T06:10:14.851Z"
+   "tags": {"foo": "bar"},
+   "trusted_secret_id": "trusted-secret-12345abcde",
+   "service_account_id": "sa-12345abcde",
+   "permission_group": "PROJECT",
+   "domain_id": "domain-12345abcde",
+   "workspace_id": "workspace-12345abcde",
+   "project_id": "project-12345abcde",
+   "created_at": "2022-01-01T06:10:14Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -155,7 +168,8 @@ Creates a new Secret. When creating the resource, external `data` is encrypted, 
 
 ### update
 
-Updates a specific Secret. You can make changes in Secret settings, including `name` and`tags`.
+Updates a specific secret's information.
+You can only change the 'name' and 'tags', and to change the data you must use the update_data API.
 
 
 
@@ -186,10 +200,10 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
 * **tags** (Struct)  
 
 
+* **workspace_id** (string)  
+
+
 * **project_id** (string)  
-
-
-* **release_project** (bool)  
 
 
 
@@ -198,11 +212,11 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
 {{< highlight json >}}
 {
    "secret_id": "secret-123456789012",
-   "name": "aws-dev2",
-   "tags": { "a": "b"},
-   "project_id": "project-123456789012",
-   "release_project": true,
-   "domain_id": "domain-123456789012"
+   "name": "Cloudforet AWS Dev",
+   "tags": {"foo": "bar"},
+   "project_id": "project-12345abcde",
+   "domain_id": "domain-123456789012",
+   "workspace_id": "workspace-12345abcde",
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -215,21 +229,23 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
 
 * **name** (string)   `Required` 
 
-* **secret_type** (SecretType)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
-* **schema** (string)   `Required` 
+* **schema_id** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
-* **service_account_id** (string)   `Required` 
+* **tags** (Struct)   `Required` 
+
+* **permission_group** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
 
-* **trusted_secret_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -237,16 +253,18 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-123456789012",
-   "name": "aws-dev",
-   "secret_type": "CREDENTIALS",
-   "tags": {},
-   "schema": "aws_access_key",
+   "secret_id": "secret-12345abcde",
+   "name": "Cloudforet AWS Dev",
+   "schema_id": "aws-secret-assume-role",
    "provider": "aws",
-   "service_account_id": "sa-123456789012",
-   "project_id": "project-123456789012",
-   "domain_id": "domain-123456789012",
-   "created_at": "2022-01-01T06:10:14.851Z"
+   "tags": {"foo": "bar"},
+   "trusted_secret_id": "trusted-secret-12345abcde",
+   "service_account_id": "sa-12345abcde",
+   "permission_group": "PROJECT",
+   "domain_id": "domain-12345abcde",
+   "workspace_id": "workspace-12345abcde",
+   "project_id": "project-12345abcde",
+   "created_at": "2022-01-01T06:10:14Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -260,7 +278,7 @@ Updates a specific Secret. You can make changes in Secret settings, including `n
 
 ### delete
 
-Deletes a specific Secret. You must specify the `secret_id` of the Secret to delete.
+Deletes a specific secret.
 
 
 
@@ -290,8 +308,8 @@ Deletes a specific Secret. You must specify the `secret_id` of the Secret to del
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-123456789012",
-   "domain_id": "domain-123456789012"
+   "secret_id": "secret-12345abcde",
+   "domain_id": "domain-12345abcde"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -306,7 +324,8 @@ Deletes a specific Secret. You must specify the `secret_id` of the Secret to del
 
 ### update_data
 
-Updates encrypted data of a specific Secret resource. For example, to change the parameter `data`, external data to encrypt, you can use `update_data` to create new encrypted data based on the changed `data` and store it in the Secret resource.
+Updates a specific secret's data.
+Updated secret is encrypted and stored securely.
 
 
 
@@ -334,7 +353,7 @@ Updates encrypted data of a specific Secret resource. For example, to change the
 * **domain_id** (string)   `Required` 
 
 
-* **schema** (string)  
+* **workspace_id** (string)  
 
 
 
@@ -342,9 +361,10 @@ Updates encrypted data of a specific Secret resource. For example, to change the
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-123456789012",
-    "data": "********",
-    "domain_id": "domain-123456789012"
+   "secret_id": "secret-12345abcde",
+   "data": "********",
+   "domain_id": "domain-12345abcde",
+   "workspace_id": "workspace-12345abcde",
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -359,7 +379,8 @@ Updates encrypted data of a specific Secret resource. For example, to change the
 
 ### get_data
 
-Gets a specific Secret. Prints detailed information about the Secret, including  `name`, `tags`, `schema`, and `provider`.
+Updates a specific secret's data.
+This API is for internal system use only.
 
 
 
@@ -389,8 +410,8 @@ Gets a specific Secret. Prints detailed information about the Secret, including 
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-123456789012",
-   "domain_id": "domain-123456789012"
+   "secret_id": "secret-12345abcde",
+   "domain_id": "domain-12345abcde"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -405,7 +426,7 @@ Gets a specific Secret. Prints detailed information about the Secret, including 
 
 ### get
 
-Gets a specific Post. You must specify the `post_id` of the Post to get, and the `board_id` of the Board where the child Post to get belongs. Prints detailed information about the Post.
+Get a specific secret's information.
 
 
 
@@ -422,7 +443,7 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 
 
-[GetSecretRequest](./Secret#getsecretrequest)
+[SecretRequest](./Secret#secretrequest)
 
 * **secret_id** (string)   `Required` 
 
@@ -430,16 +451,13 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 * **domain_id** (string)   `Required` 
 
 
-* **only** (string)  `Repeated`   
-
-
 
 
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-123456789012",
-   "domain_id": "domain-123456789012"
+   "secret_id": "secret-12345abcde",
+   "domain_id": "domain-12345abcde"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -452,21 +470,23 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 * **name** (string)   `Required` 
 
-* **secret_type** (SecretType)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
-* **schema** (string)   `Required` 
+* **schema_id** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
-* **service_account_id** (string)   `Required` 
+* **tags** (Struct)   `Required` 
+
+* **permission_group** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
 
-* **trusted_secret_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -474,16 +494,18 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-123456789012",
-   "name": "aws-dev",
-   "secret_type": "CREDENTIALS",
-   "tags": {},
-   "schema": "aws_access_key",
+   "secret_id": "secret-12345abcde",
+   "name": "Cloudforet AWS Dev",
+   "schema_id": "aws-secret-assume-role",
    "provider": "aws",
-   "service_account_id": "sa-123456789012",
-   "project_id": "project-123456789012",
-   "domain_id": "domain-123456789012",
-   "created_at": "2022-01-01T06:10:14.851Z"
+   "tags": {"foo": "bar"},
+   "trusted_secret_id": "trusted-secret-12345abcde",
+   "service_account_id": "sa-12345abcde",
+   "permission_group": "PROJECT",
+   "domain_id": "domain-12345abcde",
+   "workspace_id": "workspace-12345abcde",
+   "project_id": "project-12345abcde",
+   "created_at": "2022-01-01T06:10:14Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -497,7 +519,8 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 ### list
 
-Gets a list of all Posts. You can use a query to get a filtered list of Posts.
+Queries a list of secrets.
+You can use a query to get a filtered list of secrets.
 
 
 
@@ -516,9 +539,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 [SecretQuery](./Secret#secretquery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -528,13 +548,19 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **name** (string)  
 
 
-* **secret_type** (SecretType)  
-
-
-* **schema** (string)  
+* **schema_id** (string)  
 
 
 * **provider** (string)  
+
+
+* **domain_id** (string)  
+
+
+* **workspace_id** (string)  
+
+
+* **project_id** (string)  
 
 
 * **service_account_id** (string)  
@@ -549,7 +575,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 {{< highlight json >}}
 {
    "query": {},
-   "domain_id": "domain-123456789012"
+   "domain_id": "domain-12345abcde"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -568,23 +594,29 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 {
    "results": [
        {
-          "secret_id": "secret-123456789012",
-          "name": "aws-dev",
-          "secret_type": "CREDENTIALS",
-          "tags": {},
-          "schema": "aws_access_key",
-          "provider": "aws",
-          "service_account_id": "sa-123456789012",
-          "project_id": "project-123456789012",
-          "domain_id": "domain-123456789012",
-          "created_at": "2022-01-01T06:10:14.851Z"
+           "secret_id": "secret-12345abcde",
+           "name": "Cloudforet AWS Dev",
+           "schema_id": "aws-secret-assume-role",
+           "provider": "aws",
+           "tags": {"foo": "bar"},
+           "trusted_secret_id": "trusted-secret-12345abcde",
+           "service_account_id": "sa-12345abcde",
+           "permission_group": "PROJECT",
+           "domain_id": "domain-12345abcde",
+           "workspace_id": "workspace-12345abcde",
+           "project_id": "project-12345abcde",
+           "created_at": "2022-01-01T06:10:14Z"
        },
        {
-           "secret_id": "secret-987654321098",
-           "name": "plugin-credentials",
-           "secret_type": "CREDENTIALS",
-           "tags": {},
-           "domain_id": "domain-123456789012",
+           "secret_id": "secret-56789abcde",
+           "name": "Cloudforet AWS Prod",
+           "schema_id": "aws-secret-access-key,
+           "provider": "aws",
+           "service_account_id": "sa-56789abcde",
+           "permission_group": "WORKSPACE",
+           "domain_id": "domain-12345abcde",
+           "workspace_id": "workspace-12345abcde",
+           "project_id": "*"
            "created_at": "2022-01-01T02:31:01.709Z"
        }
    ],
@@ -631,36 +663,28 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **data** (Struct)   `Required` 
 
     
-* **secret_type** (SecretType)   `Required` 
+* **permission_group** (PermissionGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **schema_id** (string)  
 
     
 * **tags** (Struct)  
 
     
-* **schema** (string)  
-
-    
-* **service_account_id** (string)  
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  
 
     
+* **service_account_id** (string)  
+
+    
 * **trusted_secret_id** (string)  
-
-    <br>
-
-### GetSecretRequest
-* **secret_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -682,28 +706,31 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **name** (string)   `Required` 
 
     
-* **secret_type** (SecretType)   `Required` 
-
-    
-* **tags** (Struct)   `Required` 
-
-    
-* **schema** (string)   `Required` 
+* **schema_id** (string)   `Required` 
 
     
 * **provider** (string)   `Required` 
 
     
-* **service_account_id** (string)   `Required` 
+* **tags** (Struct)   `Required` 
+
+    
+* **permission_group** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **project_id** (string)   `Required` 
 
     
-* **trusted_secret_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **trusted_secret_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -711,9 +738,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     <br>
 
 ### SecretQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -723,13 +747,19 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **name** (string)  
 
     
-* **secret_type** (SecretType)  
-
-    
-* **schema** (string)  
+* **schema_id** (string)  
 
     
 * **provider** (string)  
+
+    
+* **domain_id** (string)  
+
+    
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
 
     
 * **service_account_id** (string)  
@@ -773,7 +803,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **domain_id** (string)   `Required` 
 
     
-* **schema** (string)  
+* **workspace_id** (string)  
 
     <br>
 
@@ -790,9 +820,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **tags** (Struct)  
 
     
-* **project_id** (string)  
+* **workspace_id** (string)  
 
     
-* **release_project** (bool)  
+* **project_id** (string)  
 
     <br>

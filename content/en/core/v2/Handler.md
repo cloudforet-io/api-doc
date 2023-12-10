@@ -48,19 +48,16 @@ bookFlatSection: true
 * **owner_type** (OwnerType)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **audience** (string)   `Required` 
 
     
-* **app_id** (string)   `Required` 
+* **token_id** (string)   `Required` 
 
     
-* **api_key_id** (string)   `Required` 
+* **workspace_id** (string)  
 
     
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **domain_id** (string)  
 
     <br>
 
