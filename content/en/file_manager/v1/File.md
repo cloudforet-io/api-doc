@@ -29,7 +29,7 @@ bookFlatSection: true
 | [**delete**](./File#delete) | [FileRequest](File#filerequest) | [Empty](File#empty) |
 | [**get_download_url**](./File#get_download_url) | [FileRequest](File#filerequest) | [FileInfo](File#fileinfo) |
 | [**get**](./File#get) | [GetFileRequest](File#getfilerequest) | [FileInfo](File#fileinfo) |
-| [**list**](./File#list) | [FileQuery](File#filequery) | [FilesInfo](File#filesinfo) |
+| [**list**](./File#list) | [FileSearchQuery](File#filesearchquery) | [FilesInfo](File#filesinfo) |
 | [**stat**](./File#stat) | [FileStatQuery](File#filestatquery) | [Struct](File#struct) |
 
 
@@ -167,13 +167,19 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **permission_group** (PermissionGroup)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
 * **tags** (Struct)  
 
     
 * **reference** (FileReference)  
 
     
-* **domain_id** (string)  
+* **workspace_id** (string)  
 
     <br>
 
@@ -185,9 +191,6 @@ bookFlatSection: true
 
     
 * **state** (FileState)   `Required` 
-
-    
-* **scope** (FileScope)   `Required` 
 
     
 * **file_type** (string)   `Required` 
@@ -208,48 +211,16 @@ bookFlatSection: true
 * **reference** (FileReference)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **permission_group** (PermissionGroup)   `Required` 
 
     
-* **user_domain_id** (string)   `Required` 
+* **workspace_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
-
-    <br>
-
-### FileQuery
-* **query** (Query)  
-
-    
-* **file_id** (string)  
-
-    
-* **name** (string)  
-
-    
-* **state** (FileState)  
-
-    
-* **scope** (FileScope)  
-
-    
-* **file_type** (string)  
-
-    
-* **resource_type** (string)  
-
-    
-* **resource_id** (string)  
-
-    
-* **user_domain_id** (string)  
-
-    
-* **domain_id** (string)  
 
     <br>
 
@@ -263,6 +234,41 @@ bookFlatSection: true
 
 ### FileRequest
 * **file_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)  
+
+    <br>
+
+### FileSearchQuery
+* **query** (Query)  
+
+    
+* **file_id** (string)  
+
+    
+* **name** (string)  
+
+    
+* **state** (FileState)  
+
+    
+* **file_type** (string)  
+
+    
+* **resource_type** (string)  
+
+    
+* **resource_id** (string)  
+
+    
+* **permission_group** (string)  
+
+    
+* **workspace_id** (string)  
 
     
 * **domain_id** (string)  
@@ -289,15 +295,18 @@ bookFlatSection: true
 * **file_id** (string)   `Required` 
 
     
-* **domain_id** (string)  
+* **domain_id** (string)   `Required` 
 
     
-* **only** (string)  `Repeated`   
+* **workspace_id** (string)  
 
     <br>
 
 ### UpdateFileRequest
 * **file_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
 
     
 * **tags** (Struct)  
@@ -306,6 +315,6 @@ bookFlatSection: true
 * **reference** (FileReference)  
 
     
-* **domain_id** (string)  
+* **workspace_id** (string)  
 
     <br>

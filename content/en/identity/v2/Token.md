@@ -25,7 +25,7 @@ bookFlatSection: true
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**issue**](./Token#issue) | [IssueTokenRequest](Token#issuetokenrequest) | [TokenInfo](Token#tokeninfo) |
-| [**refresh**](./Token#refresh) | [Empty](Token#empty) | [TokenInfo](Token#tokeninfo) |
+| [**grant**](./Token#grant) | [GrantTokenRequest](Token#granttokenrequest) | [GrantTokenInfo](Token#granttokeninfo) |
 
 
 
@@ -49,13 +49,13 @@ bookFlatSection: true
     
 <br>
 
-### refresh
+### grant
 
 +noauth
 
 
 
-> **POST** /identity/v2/token/refresh
+> **POST** /identity/v2/token/grant
 >
 
 
@@ -73,6 +73,37 @@ bookFlatSection: true
 
 
 
+### GrantTokenInfo
+* **access_token** (string)   `Required` 
+
+    
+* **role_id** (string)   `Required` 
+
+    
+* **role_type** (RoleType)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    <br>
+
+### GrantTokenRequest
+* **grant_type** (GrantType)   `Required` 
+
+    
+* **token** (string)   `Required` 
+
+    
+* **scope** (Scope)   `Required` 
+
+    
+* **workspace_id** (string)  
+
+    <br>
+
 ### IssueTokenRequest
 * **credentials** (Struct)   `Required` 
 
@@ -85,10 +116,7 @@ bookFlatSection: true
   *LOCAL, EXTERNAL*
 
     
-* **timeout** (int32)  
-
-    
-* **refresh_count** (int32)  
+* **refresh_timeout** (int32)  
 
     
 * **verify_code** (string)  

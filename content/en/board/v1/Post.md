@@ -29,7 +29,7 @@ A Post is a message published on a Board. It also provides notifications to Proj
 | [**send_notification**](./Post#send_notification) | [SendNotificationRequest](Post#sendnotificationrequest) | [Empty](Post#empty) |
 | [**delete**](./Post#delete) | [PostRequest](Post#postrequest) | [Empty](Post#empty) |
 | [**get**](./Post#get) | [GetPostRequest](Post#getpostrequest) | [PostInfo](Post#postinfo) |
-| [**list**](./Post#list) | [PostQuery](Post#postquery) | [PostsInfo](Post#postsinfo) |
+| [**list**](./Post#list) | [PostSearchQuery](Post#postsearchquery) | [PostsInfo](Post#postsinfo) |
 | [**stat**](./Post#stat) | [PostStatQuery](Post#poststatquery) | [Struct](Post#struct) |
 
 
@@ -58,25 +58,28 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 [CreatePostRequest](./Post#createpostrequest)
 
-* **board_id** (string)   `Required` 
-
-
 * **title** (string)   `Required` 
 
 
 * **contents** (string)   `Required` 
 
 
+* **permission_group** (PermissionGroup)   `Required` 
+
+
+* **board_id** (string)   `Required` 
+
+
 * **category** (string)  
+
+
+* **files** (string)  `Repeated`   
 
 
 * **options** (Struct)  
 
 
 * **writer** (string)  
-
-
-* **files** (string)  `Repeated`   
 
 
 * **domain_id** (string)  
@@ -102,11 +105,7 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
-* **board_id** (string)   `Required` 
-
 * **post_id** (string)   `Required` 
-
-* **post_type** (PostType)   `Required` 
 
 * **category** (string)   `Required` 
 
@@ -120,11 +119,13 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 * **writer** (string)   `Required` 
 
-* **scope** (Scope)   `Required` 
-
 * **files** (ListValue)   `Required` 
 
+* **permission_group** (PermissionGroup)   `Required` 
+
 * **domain_id** (string)   `Required` 
+
+* **board_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -187,10 +188,10 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 [UpdatePostRequest](./Post#updatepostrequest)
 
-* **board_id** (string)   `Required` 
-
-
 * **post_id** (string)   `Required` 
+
+
+* **board_id** (string)   `Required` 
 
 
 * **category** (string)  
@@ -202,13 +203,13 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 * **contents** (string)  
 
 
+* **files** (string)  `Repeated`   
+
+
 * **options** (Struct)  
 
 
 * **writer** (string)  
-
-
-* **files** (string)  `Repeated`   
 
 
 * **domain_id** (string)  
@@ -238,11 +239,7 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
-* **board_id** (string)   `Required` 
-
 * **post_id** (string)   `Required` 
-
-* **post_type** (PostType)   `Required` 
 
 * **category** (string)   `Required` 
 
@@ -256,11 +253,13 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 * **writer** (string)   `Required` 
 
-* **scope** (Scope)   `Required` 
-
 * **files** (ListValue)   `Required` 
 
+* **permission_group** (PermissionGroup)   `Required` 
+
 * **domain_id** (string)   `Required` 
+
+* **board_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -396,9 +395,6 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 * **post_id** (string)   `Required` 
 
 
-* **only** (string)  `Repeated`   
-
-
 * **domain_id** (string)  
 
 
@@ -418,11 +414,7 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
-* **board_id** (string)   `Required` 
-
 * **post_id** (string)   `Required` 
-
-* **post_type** (PostType)   `Required` 
 
 * **category** (string)   `Required` 
 
@@ -436,11 +428,13 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 * **writer** (string)   `Required` 
 
-* **scope** (Scope)   `Required` 
-
 * **files** (ListValue)   `Required` 
 
+* **permission_group** (PermissionGroup)   `Required` 
+
 * **domain_id** (string)   `Required` 
+
+* **board_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -501,15 +495,18 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 
-[PostQuery](./Post#postquery)
+[PostSearchQuery](./Post#postsearchquery)
+
+* **permission_group** (PermissionGroup)   `Required` 
+
 
 * **board_id** (string)   `Required` 
 
 
+* **query** (Query)  
+
+
 * **post_id** (string)  
-
-
-* **post_type** (PostType)  
 
 
 * **category** (string)  
@@ -518,10 +515,10 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **writer** (string)  
 
 
-* **scope** (Scope)  
+* **is_pinned** (bool)  
 
 
-* **user_id** (string)  
+* **is_popup** (bool)  
 
 
 * **user_domain_id** (string)  
@@ -530,7 +527,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **domain_id** (string)  
 
 
-* **query** (Query)  
+* **user_id** (string)  
 
 
 
@@ -631,25 +628,28 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 ### CreatePostRequest
-* **board_id** (string)   `Required` 
-
-    
 * **title** (string)   `Required` 
 
     
 * **contents** (string)   `Required` 
 
     
+* **permission_group** (PermissionGroup)   `Required` 
+
+    
+* **board_id** (string)   `Required` 
+
+    
 * **category** (string)  
+
+    
+* **files** (string)  `Repeated`   
 
     
 * **options** (Struct)  
 
     
 * **writer** (string)  
-
-    
-* **files** (string)  `Repeated`   
 
     
 * **domain_id** (string)  
@@ -663,21 +663,12 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **post_id** (string)   `Required` 
 
     
-* **only** (string)  `Repeated`   
-
-    
 * **domain_id** (string)  
 
     <br>
 
 ### PostInfo
-* **board_id** (string)   `Required` 
-
-    
 * **post_id** (string)   `Required` 
-
-    
-* **post_type** (PostType)   `Required` 
 
     
 * **category** (string)   `Required` 
@@ -698,13 +689,16 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **writer** (string)   `Required` 
 
     
-* **scope** (Scope)   `Required` 
-
-    
 * **files** (ListValue)   `Required` 
 
     
+* **permission_group** (PermissionGroup)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
+
+    
+* **board_id** (string)   `Required` 
 
     
 * **user_id** (string)   `Required` 
@@ -720,38 +714,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     <br>
 
-### PostQuery
-* **board_id** (string)   `Required` 
-
-    
-* **post_id** (string)  
-
-    
-* **post_type** (PostType)  
-
-    
-* **category** (string)  
-
-    
-* **writer** (string)  
-
-    
-* **scope** (Scope)  
-
-    
-* **user_id** (string)  
-
-    
-* **user_domain_id** (string)  
-
-    
-* **domain_id** (string)  
-
-    
-* **query** (Query)  
-
-    <br>
-
 ### PostRequest
 * **board_id** (string)   `Required` 
 
@@ -760,6 +722,41 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **domain_id** (string)  
+
+    <br>
+
+### PostSearchQuery
+* **permission_group** (PermissionGroup)   `Required` 
+
+    
+* **board_id** (string)   `Required` 
+
+    
+* **query** (Query)  
+
+    
+* **post_id** (string)  
+
+    
+* **category** (string)  
+
+    
+* **writer** (string)  
+
+    
+* **is_pinned** (bool)  
+
+    
+* **is_popup** (bool)  
+
+    
+* **user_domain_id** (string)  
+
+    
+* **domain_id** (string)  
+
+    
+* **user_id** (string)  
 
     <br>
 
@@ -791,10 +788,10 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     <br>
 
 ### UpdatePostRequest
-* **board_id** (string)   `Required` 
+* **post_id** (string)   `Required` 
 
     
-* **post_id** (string)   `Required` 
+* **board_id** (string)   `Required` 
 
     
 * **category** (string)  
@@ -806,13 +803,13 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **contents** (string)  
 
     
+* **files** (string)  `Repeated`   
+
+    
 * **options** (Struct)  
 
     
 * **writer** (string)  
-
-    
-* **files** (string)  `Repeated`   
 
     
 * **domain_id** (string)  

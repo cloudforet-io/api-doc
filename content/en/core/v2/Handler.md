@@ -54,10 +54,13 @@ bookFlatSection: true
 * **token_id** (string)   `Required` 
 
     
-* **workspace_id** (string)  
+* **token_type** (string)   `Required` 
 
     
-* **domain_id** (string)  
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)  
 
     <br>
 

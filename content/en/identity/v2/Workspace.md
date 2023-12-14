@@ -187,16 +187,10 @@ bookFlatSection: true
     
 * **tags** (Struct)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### UpdateWorkSpaceRequest
 * **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  
@@ -219,6 +213,9 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
+* **created_by** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -229,15 +226,9 @@ bookFlatSection: true
 ### WorkspaceRequest
 * **workspace_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### WorkspaceSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -246,16 +237,13 @@ bookFlatSection: true
     
 * **name** (string)  
 
+    
+* **created_by** (string)  
+
     <br>
 
 ### WorkspaceStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 

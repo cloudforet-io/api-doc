@@ -161,9 +161,6 @@ bookFlatSection: true
 * **provider** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **related_schemas** (string)  `Repeated`   
 
     
@@ -215,15 +212,9 @@ bookFlatSection: true
 ### SchemaRequest
 * **schema_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### SchemaSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -249,9 +240,6 @@ bookFlatSection: true
 ### SchemaStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### SchemasInfo
@@ -264,9 +252,6 @@ bookFlatSection: true
 
 ### UpdateSchemaRequest
 * **schema_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

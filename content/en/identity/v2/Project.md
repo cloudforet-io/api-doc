@@ -259,12 +259,6 @@ bookFlatSection: true
     
 * **project_group_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
     <br>
 
 ### CreateProjectRequest
@@ -272,12 +266,6 @@ bookFlatSection: true
 
     
 * **project_type** (ProjectType)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
 
     
 * **tags** (Struct)  
@@ -306,6 +294,9 @@ bookFlatSection: true
 * **user_groups** (string)  `Repeated`    `Required` 
 
     
+* **created_by** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -322,18 +313,9 @@ bookFlatSection: true
 ### ProjectRequest
 * **project_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
     <br>
 
 ### ProjectSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -344,6 +326,9 @@ bookFlatSection: true
 
     
 * **project_type** (ProjectType)  
+
+    
+* **created_by** (string)  
 
     
 * **workspace_id** (string)  
@@ -362,12 +347,6 @@ bookFlatSection: true
 ### ProjectStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### ProjectsInfo
@@ -380,12 +359,6 @@ bookFlatSection: true
 
 ### UpdateProjectRequest
 * **project_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
 
     
 * **name** (string)  
@@ -401,12 +374,6 @@ bookFlatSection: true
     
 * **project_type** (ProjectType)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
     <br>
 
 ### UserGroupsProjectRequest
@@ -415,12 +382,6 @@ bookFlatSection: true
     
 * **user_groups** (string)  `Repeated`    `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
     <br>
 
 ### UsersProjectRequest
@@ -428,11 +389,5 @@ bookFlatSection: true
 
     
 * **users** (string)  `Repeated`    `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
 
     <br>

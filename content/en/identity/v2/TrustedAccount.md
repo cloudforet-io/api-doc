@@ -26,6 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./TrustedAccount#create) | [CreateTrustedAccountRequest](TrustedAccount#createtrustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
 | [**update**](./TrustedAccount#update) | [UpdateTrustedAccountRequest](TrustedAccount#updatetrustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
+| [**update_secret**](./TrustedAccount#update_secret) | [UpdateTrustedAccountSecretRequest](TrustedAccount#updatetrustedaccountsecretrequest) | [Empty](TrustedAccount#empty) |
 | [**delete**](./TrustedAccount#delete) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [Empty](TrustedAccount#empty) |
 | [**get**](./TrustedAccount#get) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
 | [**list**](./TrustedAccount#list) | [TrustedAccountSearchQuery](TrustedAccount#trustedaccountsearchquery) | [TrustedAccountsInfo](TrustedAccount#trustedaccountsinfo) |
@@ -60,6 +61,23 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/trusted-account/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### update_secret
+
+
+
+
+
+> **POST** /identity/v2/trusted-account/update-secret-data
 >
 
 
@@ -155,10 +173,13 @@ bookFlatSection: true
 * **provider** (string)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **secret_schema_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **secret_data** (Struct)   `Required` 
+
+    
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **tags** (Struct)  
@@ -184,13 +205,19 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
+
+    
+* **secret_schema_id** (string)   `Required` 
+
+    
+* **trusted_secret_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -200,18 +227,9 @@ bookFlatSection: true
 ### TrustedAccountRequest
 * **trusted_account_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### TrustedAccountSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -224,21 +242,21 @@ bookFlatSection: true
 * **provider** (string)  
 
     
-* **permission_group** (PermissionGroup)  
+* **resource_group** (ResourceGroup)  
 
     
 * **workspace_id** (string)  
+
+    
+* **secret_schema_id** (string)  
+
+    
+* **trusted_secret_id** (string)  
 
     <br>
 
 ### TrustedAccountStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 
@@ -254,9 +272,6 @@ bookFlatSection: true
 * **trusted_account_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
@@ -265,7 +280,12 @@ bookFlatSection: true
     
 * **tags** (Struct)  
 
+    <br>
+
+### UpdateTrustedAccountSecretRequest
+* **trusted_account_id** (string)   `Required` 
+
     
-* **workspace_id** (string)  
+* **secret_data** (Struct)   `Required` 
 
     <br>

@@ -27,19 +27,13 @@ note: Administrator must register User first.
 | :----- | :-------- | :-------- |
 | [**create**](./User#create) | [CreateUserRequest](User#createuserrequest) | [UserInfo](User#userinfo) |
 | [**update**](./User#update) | [UpdateUserRequest](User#updateuserrequest) | [UserInfo](User#userinfo) |
-| [**verify_email**](./User#verify_email) | [VerifyEmailRequest](User#verifyemailrequest) | [Empty](User#empty) |
-| [**confirm_email**](./User#confirm_email) | [ConfirmEmailRequest](User#confirmemailrequest) | [UserInfo](User#userinfo) |
-| [**reset_password**](./User#reset_password) | [UserRequest](User#userrequest) | [Empty](User#empty) |
+| [**verify_email**](./User#verify_email) | [VerifyUserEmailRequest](User#verifyuseremailrequest) | [Empty](User#empty) |
+| [**disable_mfa**](./User#disable_mfa) | [DisableUserMFARequest](User#disableusermfarequest) | [UserInfo](User#userinfo) |
 | [**set_required_actions**](./User#set_required_actions) | [SetRequiredActionsRequest](User#setrequiredactionsrequest) | [UserInfo](User#userinfo) |
-| [**enable_mfa**](./User#enable_mfa) | [EnableMFARequest](User#enablemfarequest) | [UserInfo](User#userinfo) |
-| [**disable_mfa**](./User#disable_mfa) | [DisableMFARequest](User#disablemfarequest) | [UserInfo](User#userinfo) |
-| [**confirm_mfa**](./User#confirm_mfa) | [ConfirmMFARequest](User#confirmmfarequest) | [UserInfo](User#userinfo) |
 | [**enable**](./User#enable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**disable**](./User#disable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**delete**](./User#delete) | [UserRequest](User#userrequest) | [Empty](User#empty) |
 | [**get**](./User#get) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
-| [**get_workspaces**](./User#get_workspaces) | [UserRequest](User#userrequest) | [WorkspacesInfo](User#workspacesinfo) |
-| [**find**](./User#find) | [UserFindRequest](User#userfindrequest) | [UsersSummaryInfo](User#userssummaryinfo) |
 | [**list**](./User#list) | [UserSearchQuery](User#usersearchquery) | [UsersInfo](User#usersinfo) |
 | [**stat**](./User#stat) | [UserStatQuery](User#userstatquery) | [Struct](User#struct) |
 
@@ -101,115 +95,6 @@ Update user info by given user_id
     
 <br>
 
-### confirm_email
-
-
-
-
-
-> **POST** /identity/v2/user/confirm-email
->
-
-
-
-
-
-
-    
-<br>
-
-### reset_password
-
-+noauth
-
-
-
-> **POST** /identity/v2/user/reset-password
->
-
-
-
-
-
-
-    
-<br>
-
-### set_required_actions
-
-
-
-
-
-> **POST** /identity/v2/user/set-required-actions
->
-
-
-
-
-
-
-    
-<br>
-
-### enable_mfa
-
-Enable MFA for user. If this api is called, send email to user.
-
-
-
-> **POST** /identity/v2/user/enable-mfa
->
-
-
-
-
-
- {{< tabs " enable_mfa " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[EnableMFARequest](./User#enablemfarequest)
-
-* **user_id** (string)   `Required` 
-
-
-* **mfa_type** (string)   `Required` 
-
-  *EMAIL*
-
-
-* **options** (Struct)   `Required` 
-
-  *If mfa_type is EMAIL, email is required in options. options will be saved in mfa's options field.*
-
-
-* **domain_id** (string)   `Required` 
-
-
-
-
-
-{{< highlight json >}}
-{
- "user_id": "example@cloudforet.com",
- "mfa_type": "EMAIL",
- "options": {"email": "wonny@cloudforet.com"},
- "domain_id": "domain-a1b2c3d4e5f6"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-
-{{< /tabs >}}
-
-
-    
-<br>
-
 ### disable_mfa
 
 Disable MFA for user. If this api is called, send email to user.
@@ -229,17 +114,9 @@ Disable MFA for user. If this api is called, send email to user.
 
 
 
-[DisableMFARequest](./User#disablemfarequest)
+[DisableUserMFARequest](./User#disableusermfarequest)
 
 * **user_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **force** (bool)  
-
-  *If this value true, disable MFA without verification for user.*
 
 
 
@@ -262,51 +139,18 @@ Disable MFA for user. If this api is called, send email to user.
     
 <br>
 
-### confirm_mfa
-
-Confirm MFA for user by given verify_code which is sent by your authentication method.
+### set_required_actions
 
 
 
-> **POST** /identity/v2/user/confirm-mfa
+
+
+> **POST** /identity/v2/user/set-required-actions
 >
 
 
 
 
-
- {{< tabs " confirm_mfa " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[ConfirmMFARequest](./User#confirmmfarequest)
-
-* **user_id** (string)   `Required` 
-
-
-* **verify_code** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-
-
-
-{{< highlight json >}}
-{
- "user_id": "example@cloudforet",
- "verify_code": "123456",
- "domain_id": "domain-a1b2c3d4e5f6"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-
-{{< /tabs >}}
 
 
     
@@ -380,40 +224,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
     
 <br>
 
-### get_workspaces
-
-
-
-
-
-> **POST** /identity/v2/user/get-workspaces
->
-
-
-
-
-
-
-    
-<br>
-
-### find
-
-
-
-
-
-> **POST** /identity/v2/user/find
->
-
-
-
-
-
-
-    
-<br>
-
 ### list
 
 
@@ -455,28 +265,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 
 
-### ConfirmEmailRequest
-* **user_id** (string)   `Required` 
-
-    
-* **verify_code** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    <br>
-
-### ConfirmMFARequest
-* **user_id** (string)   `Required` 
-
-    
-* **verify_code** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    <br>
-
 ### CreateUserRequest
 * **user_id** (string)   `Required` 
 
@@ -487,9 +275,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **reset_password** (bool)   `Required` 
 
   *If reset_password is true, send email*
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **password** (string)  
@@ -517,34 +302,8 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     <br>
 
-### DisableMFARequest
+### DisableUserMFARequest
 * **user_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **force** (bool)  
-
-  *If this value true, disable MFA without verification for user.*
-
-    <br>
-
-### EnableMFARequest
-* **user_id** (string)   `Required` 
-
-    
-* **mfa_type** (string)   `Required` 
-
-  *EMAIL*
-
-    
-* **options** (Struct)   `Required` 
-
-  *If mfa_type is EMAIL, email is required in options. options will be saved in mfa's options field.*
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -565,16 +324,10 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
     
 * **actions** (UserRequiredAction)  `Repeated`    `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### UpdateUserRequest
 * **user_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **password** (string)  
@@ -596,23 +349,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **reset_password** (bool)  
-
-    <br>
-
-### UserFindRequest
-* **keyword** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **state** (State)  
-
-    
-* **exclude_workspace_id** (string)  
-
-    
-* **page** (Page)  
 
     <br>
 
@@ -669,15 +405,9 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 ### UserRequest
 * **user_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### UserSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -695,27 +425,10 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
     
 * **auth_type** (AuthType)  
 
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### UserStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    <br>
-
-### UserSummaryInfo
-* **user_id** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **state** (State)   `Required` 
 
     <br>
 
@@ -727,24 +440,10 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     <br>
 
-### UsersSummaryInfo
-* **results** (UserSummaryInfo)  `Repeated`    `Required` 
-
-    
-* **total_count** (int32)   `Required` 
-
-    <br>
-
-### VerifyEmailRequest
+### VerifyUserEmailRequest
 * **user_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **email** (string)  
-
-    
-* **force** (bool)  
 
     <br>

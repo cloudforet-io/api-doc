@@ -105,15 +105,9 @@ bookFlatSection: true
 
     <br>
 
-### ExternalAuthRequest
-* **domain_id** (string)   `Required` 
-
-    <br>
+### ExternalAuthRequest<br>
 
 ### SetExternalAuthRequest
-* **domain_id** (string)   `Required` 
-
-    
 * **plugin_info** (PluginRequest)   `Required` 
 
     <br>

@@ -216,19 +216,16 @@ bookFlatSection: true
 ### APIKeyRequest
 * **api_key_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### APIKeySearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
 * **api_key_id** (string)  
+
+    
+* **name** (string)  
 
     
 * **state** (State)  
@@ -241,9 +238,6 @@ bookFlatSection: true
 ### APIKeyStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### APIKeysInfo
@@ -255,12 +249,6 @@ bookFlatSection: true
     <br>
 
 ### CreateAPIKeyRequest
-* **user_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
@@ -270,9 +258,6 @@ bookFlatSection: true
 
 ### UpdateAPIKeyRequest
 * **api_key_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

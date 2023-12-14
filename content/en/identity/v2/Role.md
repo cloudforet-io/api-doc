@@ -152,20 +152,17 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **permissions** (string)  `Repeated`   
 
     
-* **api_permissions** (string)  `Repeated`   
-
-    
-* **page_permissions** (PagePermission)  `Repeated`   
+* **page_access** (PageAccess)  `Repeated`   
 
     
 * **tags** (Struct)  
 
     <br>
 
-### PagePermission
+### PageAccess
 * **page** (string)   `Required` 
 
     
@@ -183,10 +180,10 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **api_permissions** (string)  `Repeated`    `Required` 
+* **permissions** (string)  `Repeated`    `Required` 
 
     
-* **page_permissions** (PagePermission)  `Repeated`    `Required` 
+* **page_access** (PageAccess)  `Repeated`    `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -208,15 +205,9 @@ bookFlatSection: true
 ### RoleRequest
 * **role_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### RoleSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -233,9 +224,6 @@ bookFlatSection: true
 ### RoleStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### RolesInfo
@@ -250,16 +238,13 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
-* **api_permissions** (string)  `Repeated`   
+* **permissions** (string)  `Repeated`   
 
     
-* **page_permissions** (PagePermission)  `Repeated`   
+* **page_access** (PageAccess)  `Repeated`   
 
     
 * **tags** (Struct)  

@@ -25,10 +25,10 @@ UserConfig API which configure environments for user
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./UserConfig#create) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
-| [**update**](./UserConfig#update) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
+| [**update**](./UserConfig#update) | [UpdateUserConfigRequest](UserConfig#updateuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
 | [**set**](./UserConfig#set) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
 | [**delete**](./UserConfig#delete) | [UserConfigRequest](UserConfig#userconfigrequest) | [Empty](UserConfig#empty) |
-| [**get**](./UserConfig#get) | [GetUserConfigRequest](UserConfig#getuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
+| [**get**](./UserConfig#get) | [UserConfigRequest](UserConfig#userconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
 | [**list**](./UserConfig#list) | [UserConfigQuery](UserConfig#userconfigquery) | [UserConfigsInfo](UserConfig#userconfigsinfo) |
 | [**stat**](./UserConfig#stat) | [UserConfigStatQuery](UserConfig#userconfigstatquery) | [Struct](UserConfig#struct) |
 
@@ -163,17 +163,6 @@ UserConfig API which configure environments for user
 
 
 
-### GetUserConfigRequest
-* **name** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### SetUserConfigRequest
 * **name** (string)   `Required` 
 
@@ -182,6 +171,20 @@ UserConfig API which configure environments for user
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **tags** (Struct)  
+
+    <br>
+
+### UpdateUserConfigRequest
+* **name** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **data** (Struct)  
 
     
 * **tags** (Struct)  

@@ -152,13 +152,7 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
+* **resource_group** (ResourceGroup)   `Required` 
 
     <br>
 
@@ -169,7 +163,7 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -191,12 +185,6 @@ bookFlatSection: true
 ### RoleBindingRequest
 * **role_binding_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### RoleBindingSearchQuery
@@ -209,10 +197,7 @@ bookFlatSection: true
 * **role_type** (RoleType)  
 
     
-* **permission_group** (PermissionGroup)  
-
-    
-* **domain_id** (string)  
+* **resource_group** (ResourceGroup)  
 
     
 * **workspace_id** (string)  
@@ -227,12 +212,6 @@ bookFlatSection: true
 
 ### RoleBindingStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 
@@ -249,11 +228,5 @@ bookFlatSection: true
 
     
 * **role_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>

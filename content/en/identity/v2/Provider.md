@@ -152,9 +152,6 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **alias** (string)  
 
     
@@ -221,9 +218,6 @@ bookFlatSection: true
     <br>
 
 ### ProviderSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -243,9 +237,6 @@ bookFlatSection: true
 ### ProviderStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### ProvidersInfo
@@ -258,9 +249,6 @@ bookFlatSection: true
 
 ### UpdateProviderRequest
 * **provider** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

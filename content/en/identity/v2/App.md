@@ -212,10 +212,13 @@ bookFlatSection: true
 * **state** (State)   `Required` 
 
     
+* **tags** (Struct)   `Required` 
+
+    
 * **role_type** (RoleType)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -243,18 +246,9 @@ bookFlatSection: true
 ### AppRequest
 * **app_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### AppSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -270,7 +264,7 @@ bookFlatSection: true
 * **role_type** (RoleType)  
 
     
-* **permission_group** (PermissionGroup)  
+* **resource_group** (ResourceGroup)  
 
     
 * **workspace_id** (string)  
@@ -285,12 +279,6 @@ bookFlatSection: true
 
 ### AppStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 
@@ -309,10 +297,7 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **tags** (Struct)  
@@ -320,22 +305,13 @@ bookFlatSection: true
     
 * **expired_at** (string)  
 
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### GenerateAPIKeyAppRequest
 * **app_id** (string)   `Required` 
 
     
-* **expired_at** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
+* **expired_at** (string)  
 
     <br>
 
@@ -343,15 +319,9 @@ bookFlatSection: true
 * **app_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
 * **tags** (Struct)  
-
-    
-* **workspace_id** (string)  
 
     <br>

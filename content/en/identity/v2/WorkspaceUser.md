@@ -26,6 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./WorkspaceUser#create) | [CreateWorkspaceUserRequest](WorkspaceUser#createworkspaceuserrequest) | [WorkspaceUserInfo](WorkspaceUser#workspaceuserinfo) |
 | [**get**](./WorkspaceUser#get) | [WorkspaceUserRequest](WorkspaceUser#workspaceuserrequest) | [WorkspaceUserInfo](WorkspaceUser#workspaceuserinfo) |
+| [**find**](./WorkspaceUser#find) | [WorkspaceUserFindRequest](WorkspaceUser#workspaceuserfindrequest) | [UsersSummaryInfo](WorkspaceUser#userssummaryinfo) |
 | [**list**](./WorkspaceUser#list) | [WorkspaceUserSearchQuery](WorkspaceUser#workspaceusersearchquery) | [WorkspaceUsersInfo](WorkspaceUser#workspaceusersinfo) |
 | [**stat**](./WorkspaceUser#stat) | [WorkspaceUserStatQuery](WorkspaceUser#workspaceuserstatquery) | [Struct](WorkspaceUser#struct) |
 
@@ -58,6 +59,23 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/workspace-user/get
+>
+
+
+
+
+
+
+    
+<br>
+
+### find
+
+
+
+
+
+> **POST** /identity/v2/user/find
 >
 
 
@@ -124,12 +142,6 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
 * **password** (string)  
 
   *When auth_type is LOCAL, password is required.*
@@ -152,6 +164,36 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### UserSummaryInfo
+* **user_id** (string)   `Required` 
+
+    
+* **name** (string)   `Required` 
+
+    
+* **state** (State)   `Required` 
+
+    <br>
+
+### UsersSummaryInfo
+* **results** (UserSummaryInfo)  `Repeated`    `Required` 
+
+    
+* **total_count** (int32)   `Required` 
+
+    <br>
+
+### WorkspaceUserFindRequest
+* **keyword** (string)   `Required` 
+
+    
+* **state** (State)  
+
+    
+* **page** (Page)  
 
     <br>
 
@@ -202,18 +244,9 @@ bookFlatSection: true
 ### WorkspaceUserRequest
 * **user_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
     <br>
 
 ### WorkspaceUserSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -238,12 +271,6 @@ bookFlatSection: true
 
 ### WorkspaceUserStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 

@@ -144,7 +144,7 @@ bookFlatSection: true
 
 ### get_auth_info
 
-
++noauth
 
 
 

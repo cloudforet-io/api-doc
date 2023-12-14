@@ -26,7 +26,8 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./ServiceAccount#create) | [CreateServiceAccountRequest](ServiceAccount#createserviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**update**](./ServiceAccount#update) | [UpdateServiceAccountRequest](ServiceAccount#updateserviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
-| [**change_trusted_account**](./ServiceAccount#change_trusted_account) | [ChangeTrustedAccountRequest](ServiceAccount#changetrustedaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
+| [**update_secret_data**](./ServiceAccount#update_secret_data) | [UpdateServiceAccountSecretRequest](ServiceAccount#updateserviceaccountsecretrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
+| [**delete_secret_data**](./ServiceAccount#delete_secret_data) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**delete**](./ServiceAccount#delete) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [Empty](ServiceAccount#empty) |
 | [**get**](./ServiceAccount#get) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**list**](./ServiceAccount#list) | [ServiceAccountSearchQuery](ServiceAccount#serviceaccountsearchquery) | [ServiceAccountsInfo](ServiceAccount#serviceaccountsinfo) |
@@ -71,13 +72,30 @@ bookFlatSection: true
     
 <br>
 
-### change_trusted_account
+### update_secret_data
 
 
 
 
 
-> **POST** /identity/v2/service-account/change-trusted-account
+> **POST** /identity/v2/service-account/update-secret-data
+>
+
+
+
+
+
+
+    
+<br>
+
+### delete_secret_data
+
+
+
+
+
+> **POST** /identity/v2/service-account/delete-secret-data
 >
 
 
@@ -163,20 +181,6 @@ bookFlatSection: true
 
 
 
-### ChangeTrustedAccountRequest
-* **service_account_id** (string)   `Required` 
-
-    
-* **trusted_account_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    <br>
-
 ### CreateServiceAccountRequest
 * **name** (string)   `Required` 
 
@@ -187,16 +191,16 @@ bookFlatSection: true
 * **provider** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
-
-    
 * **project_id** (string)   `Required` 
 
     
-* **tags** (Struct)  
+* **secret_schema_id** (string)  
 
     
-* **domain_id** (string)  
+* **secret_data** (Struct)  
+
+    
+* **tags** (Struct)  
 
     
 * **trusted_account_id** (string)  
@@ -231,6 +235,12 @@ bookFlatSection: true
 * **trusted_account_id** (string)   `Required` 
 
     
+* **secret_schema_id** (string)   `Required` 
+
+    
+* **secret_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     <br>
@@ -238,18 +248,9 @@ bookFlatSection: true
 ### ServiceAccountRequest
 * **service_account_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
     <br>
 
 ### ServiceAccountSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -262,9 +263,6 @@ bookFlatSection: true
 * **provider** (string)  
 
     
-* **has_secret** (bool)  
-
-    
 * **workspace_id** (string)  
 
     
@@ -273,16 +271,16 @@ bookFlatSection: true
     
 * **trusted_account_id** (string)  
 
+    
+* **secret_schema_id** (string)  
+
+    
+* **secret_id** (string)  
+
     <br>
 
 ### ServiceAccountStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 
@@ -298,12 +296,6 @@ bookFlatSection: true
 * **service_account_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
@@ -314,5 +306,16 @@ bookFlatSection: true
 
     
 * **project_id** (string)  
+
+    <br>
+
+### UpdateServiceAccountSecretRequest
+* **service_account_id** (string)   `Required` 
+
+    
+* **secret_data** (Struct)   `Required` 
+
+    
+* **trusted_account_id** (string)   `Required` 
 
     <br>

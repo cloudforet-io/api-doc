@@ -342,9 +342,6 @@ Gets a specific Board. You must specify the `board_id` of the Board to get. Prin
 * **board_id** (string)   `Required` 
 
 
-* **only** (string)  `Repeated`   
-
-
 
 
 
@@ -565,9 +562,6 @@ Gets a list of all Boards. You can use a query to get a filtered list of Boards.
 
 ### GetBoardRequest
 * **board_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 

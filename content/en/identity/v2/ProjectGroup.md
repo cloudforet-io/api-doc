@@ -169,22 +169,10 @@ bookFlatSection: true
     
 * **parent_group_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
     <br>
 
 ### CreateProjectGroupRequest
 * **name** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
 
     
 * **tags** (Struct)  
@@ -220,18 +208,9 @@ bookFlatSection: true
 ### ProjectGroupRequest
 * **project_group_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
     <br>
 
 ### ProjectGroupSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -251,12 +230,6 @@ bookFlatSection: true
 ### ProjectGroupStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### ProjectGroupsInfo
@@ -269,12 +242,6 @@ bookFlatSection: true
 
 ### UpdateProjectGroupRequest
 * **project_group_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
 
     
 * **name** (string)  
