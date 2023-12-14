@@ -155,18 +155,10 @@ bookFlatSection: true
 * **permissions** (string)  `Repeated`   
 
     
-* **page_access** (PageAccess)  `Repeated`   
+* **page_access** (string)  `Repeated`   
 
     
 * **tags** (Struct)  
-
-    <br>
-
-### PageAccess
-* **page** (string)   `Required` 
-
-    
-* **permission** (Permission)   `Required` 
 
     <br>
 
@@ -183,7 +175,7 @@ bookFlatSection: true
 * **permissions** (string)  `Repeated`    `Required` 
 
     
-* **page_access** (PageAccess)  `Repeated`    `Required` 
+* **page_access** (string)  `Repeated`    `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -244,7 +236,7 @@ bookFlatSection: true
 * **permissions** (string)  `Repeated`   
 
     
-* **page_access** (PageAccess)  `Repeated`   
+* **page_access** (string)  `Repeated`   
 
     
 * **tags** (Struct)  
