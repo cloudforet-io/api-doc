@@ -116,7 +116,7 @@ bookFlatSection: true
   *LOCAL, EXTERNAL*
 
     
-* **refresh_timeout** (int32)  
+* **timeout** (int32)  
 
     
 * **verify_code** (string)  
