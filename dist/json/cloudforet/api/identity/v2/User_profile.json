@@ -1,7 +1,7 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/project_group.proto",
+      "name": "spaceone/api/identity/v2/user_profile.proto",
       "description": "",
       "package": "spaceone.api.identity.v2",
       "hasEnums": false,
@@ -12,9 +12,9 @@
       "extensions": [],
       "messages": [
         {
-          "name": "ChangeParentGroupRequest",
-          "longName": "ChangeParentGroupRequest",
-          "fullName": "spaceone.api.identity.v2.ChangeParentGroupRequest",
+          "name": "ConfirmEmailRequest",
+          "longName": "ConfirmEmailRequest",
+          "fullName": "spaceone.api.identity.v2.ConfirmEmailRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -22,19 +22,7 @@
           "extensions": [],
           "fields": [
             {
-              "name": "project_group_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "parent_group_id",
+              "name": "verify_code",
               "description": "",
               "label": "",
               "type": "string",
@@ -48,9 +36,80 @@
           ]
         },
         {
-          "name": "CreateProjectGroupRequest",
-          "longName": "CreateProjectGroupRequest",
-          "fullName": "spaceone.api.identity.v2.CreateProjectGroupRequest",
+          "name": "ConfirmMFARequest",
+          "longName": "ConfirmMFARequest",
+          "fullName": "spaceone.api.identity.v2.ConfirmMFARequest",
+          "description": "{\n \"user_id\": \"example@cloudforet\",\n \"verify_code\": \"123456\",\n \"domain_id\": \"domain-a1b2c3d4e5f6\"\n}",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "verify_code",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "DisableMFARequest",
+          "longName": "DisableMFARequest",
+          "fullName": "spaceone.api.identity.v2.DisableMFARequest",
+          "description": "{\n \"user_id\": \"example@cloudforet.com\",\n \"force\": false,\n \"domain_id\": \"domain-a1b2c3d4e5f6\"\n}",
+          "hasExtensions": false,
+          "hasFields": false,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "EnableMFARequest",
+          "longName": "EnableMFARequest",
+          "fullName": "spaceone.api.identity.v2.EnableMFARequest",
+          "description": "{\n \"user_id\": \"example@cloudforet.com\",\n \"mfa_type\": \"EMAIL\",\n \"options\": {\"email\": \"wonny@cloudforet.com\"},\n \"domain_id\": \"domain-a1b2c3d4e5f6\"\n}",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "mfa_type",
+              "description": "EMAIL",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "options",
+              "description": "If mfa_type is EMAIL, email is required in options. options will be saved in mfa's options field.",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "UpdateUserProfileRequest",
+          "longName": "UpdateUserProfileRequest",
+          "fullName": "spaceone.api.identity.v2.UpdateUserProfileRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -58,8 +117,56 @@
           "extensions": [],
           "fields": [
             {
+              "name": "password",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
               "name": "name",
-              "description": "",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "email",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "language",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "timezone",
+              "description": "+optional",
               "label": "",
               "type": "string",
               "longType": "string",
@@ -80,25 +187,13 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
-            },
-            {
-              "name": "parent_group_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
             }
           ]
         },
         {
-          "name": "ProjectGroupInfo",
-          "longName": "ProjectGroupInfo",
-          "fullName": "spaceone.api.identity.v2.ProjectGroupInfo",
+          "name": "UserPasswordResetRequest",
+          "longName": "UserPasswordResetRequest",
+          "fullName": "spaceone.api.identity.v2.UserPasswordResetRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -106,36 +201,12 @@
           "extensions": [],
           "fields": [
             {
-              "name": "project_group_id",
+              "name": "user_id",
               "description": "",
               "label": "",
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "name",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -152,49 +223,24 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
-            },
-            {
-              "name": "workspace_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "parent_group_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "created_at",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
             }
           ]
         },
         {
-          "name": "ProjectGroupRequest",
-          "longName": "ProjectGroupRequest",
-          "fullName": "spaceone.api.identity.v2.ProjectGroupRequest",
+          "name": "UserProfileRequest",
+          "longName": "UserProfileRequest",
+          "fullName": "spaceone.api.identity.v2.UserProfileRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": false,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "VerifyEmailRequest",
+          "longName": "VerifyEmailRequest",
+          "fullName": "spaceone.api.identity.v2.VerifyEmailRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -202,192 +248,12 @@
           "extensions": [],
           "fields": [
             {
-              "name": "project_group_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "ProjectGroupSearchQuery",
-          "longName": "ProjectGroupSearchQuery",
-          "fullName": "spaceone.api.identity.v2.ProjectGroupSearchQuery",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "query",
-              "description": "+optional",
-              "label": "",
-              "type": "Query",
-              "longType": "spaceone.api.core.v2.Query",
-              "fullType": "spaceone.api.core.v2.Query",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "project_group_id",
+              "name": "email",
               "description": "+optional",
               "label": "",
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "name",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "workspace_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "parent_group_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "ProjectGroupStatQuery",
-          "longName": "ProjectGroupStatQuery",
-          "fullName": "spaceone.api.identity.v2.ProjectGroupStatQuery",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "query",
-              "description": "",
-              "label": "",
-              "type": "StatisticsQuery",
-              "longType": "spaceone.api.core.v2.StatisticsQuery",
-              "fullType": "spaceone.api.core.v2.StatisticsQuery",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "ProjectGroupsInfo",
-          "longName": "ProjectGroupsInfo",
-          "fullName": "spaceone.api.identity.v2.ProjectGroupsInfo",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "results",
-              "description": "",
-              "label": "repeated",
-              "type": "ProjectGroupInfo",
-              "longType": "ProjectGroupInfo",
-              "fullType": "spaceone.api.identity.v2.ProjectGroupInfo",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "total_count",
-              "description": "",
-              "label": "",
-              "type": "int32",
-              "longType": "int32",
-              "fullType": "int32",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "UpdateProjectGroupRequest",
-          "longName": "UpdateProjectGroupRequest",
-          "fullName": "spaceone.api.identity.v2.UpdateProjectGroupRequest",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "project_group_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "name",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -398,51 +264,28 @@
       ],
       "services": [
         {
-          "name": "ProjectGroup",
-          "longName": "ProjectGroup",
-          "fullName": "spaceone.api.identity.v2.ProjectGroup",
+          "name": "UserProfile",
+          "longName": "UserProfile",
+          "fullName": "spaceone.api.identity.v2.UserProfile",
           "description": "",
           "methods": [
             {
-              "name": "create",
-              "description": "",
-              "requestType": "CreateProjectGroupRequest",
-              "requestLongType": "CreateProjectGroupRequest",
-              "requestFullType": "spaceone.api.identity.v2.CreateProjectGroupRequest",
-              "requestStreaming": false,
-              "responseType": "ProjectGroupInfo",
-              "responseLongType": "ProjectGroupInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectGroupInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/project-group/create",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
               "name": "update",
               "description": "",
-              "requestType": "UpdateProjectGroupRequest",
-              "requestLongType": "UpdateProjectGroupRequest",
-              "requestFullType": "spaceone.api.identity.v2.UpdateProjectGroupRequest",
+              "requestType": "UpdateUserProfileRequest",
+              "requestLongType": "UpdateUserProfileRequest",
+              "requestFullType": "spaceone.api.identity.v2.UpdateUserProfileRequest",
               "requestStreaming": false,
-              "responseType": "ProjectGroupInfo",
-              "responseLongType": "ProjectGroupInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectGroupInfo",
+              "responseType": "UserInfo",
+              "responseLongType": "UserInfo",
+              "responseFullType": "spaceone.api.identity.v2.UserInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project-group/update",
+                      "pattern": "/identity/v2/user-profile/update",
                       "body": "*"
                     }
                   ]
@@ -450,34 +293,11 @@
               }
             },
             {
-              "name": "change_parent_group",
+              "name": "verify_email",
               "description": "",
-              "requestType": "ChangeParentGroupRequest",
-              "requestLongType": "ChangeParentGroupRequest",
-              "requestFullType": "spaceone.api.identity.v2.ChangeParentGroupRequest",
-              "requestStreaming": false,
-              "responseType": "ProjectGroupInfo",
-              "responseLongType": "ProjectGroupInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectGroupInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/project-group/change-parent-group",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "delete",
-              "description": "",
-              "requestType": "ProjectGroupRequest",
-              "requestLongType": "ProjectGroupRequest",
-              "requestFullType": "spaceone.api.identity.v2.ProjectGroupRequest",
+              "requestType": "VerifyEmailRequest",
+              "requestLongType": "VerifyEmailRequest",
+              "requestFullType": "spaceone.api.identity.v2.VerifyEmailRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
@@ -488,7 +308,122 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project-group/delete",
+                      "pattern": "/identity/v2/user-profile/verify-email",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "confirm_email",
+              "description": "",
+              "requestType": "ConfirmEmailRequest",
+              "requestLongType": "ConfirmEmailRequest",
+              "requestFullType": "spaceone.api.identity.v2.ConfirmEmailRequest",
+              "requestStreaming": false,
+              "responseType": "UserInfo",
+              "responseLongType": "UserInfo",
+              "responseFullType": "spaceone.api.identity.v2.UserInfo",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/identity/v2/user-profile/confirm-email",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "reset_password",
+              "description": "+noauth",
+              "requestType": "UserProfileRequest",
+              "requestLongType": "UserProfileRequest",
+              "requestFullType": "spaceone.api.identity.v2.UserProfileRequest",
+              "requestStreaming": false,
+              "responseType": "Empty",
+              "responseLongType": ".google.protobuf.Empty",
+              "responseFullType": "google.protobuf.Empty",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/identity/v2/user-profile/reset-password",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "enable_mfa",
+              "description": "Enable MFA for user. If this api is called, send email to user.",
+              "requestType": "EnableMFARequest",
+              "requestLongType": "EnableMFARequest",
+              "requestFullType": "spaceone.api.identity.v2.EnableMFARequest",
+              "requestStreaming": false,
+              "responseType": "UserInfo",
+              "responseLongType": "UserInfo",
+              "responseFullType": "spaceone.api.identity.v2.UserInfo",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/identity/v2/user-profile/enable-mfa",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "disable_mfa",
+              "description": "Disable MFA for user. If this api is called, send email to user.",
+              "requestType": "DisableMFARequest",
+              "requestLongType": "DisableMFARequest",
+              "requestFullType": "spaceone.api.identity.v2.DisableMFARequest",
+              "requestStreaming": false,
+              "responseType": "UserInfo",
+              "responseLongType": "UserInfo",
+              "responseFullType": "spaceone.api.identity.v2.UserInfo",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/identity/v2/user-profile/disable-mfa",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "confirm_mfa",
+              "description": "Confirm MFA for user by given verify_code which is sent by your authentication method.",
+              "requestType": "ConfirmMFARequest",
+              "requestLongType": "ConfirmMFARequest",
+              "requestFullType": "spaceone.api.identity.v2.ConfirmMFARequest",
+              "requestStreaming": false,
+              "responseType": "UserInfo",
+              "responseLongType": "UserInfo",
+              "responseFullType": "spaceone.api.identity.v2.UserInfo",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/identity/v2/user-profile/confirm-mfa",
                       "body": "*"
                     }
                   ]
@@ -498,20 +433,20 @@
             {
               "name": "get",
               "description": "",
-              "requestType": "ProjectGroupRequest",
-              "requestLongType": "ProjectGroupRequest",
-              "requestFullType": "spaceone.api.identity.v2.ProjectGroupRequest",
+              "requestType": "UserProfileRequest",
+              "requestLongType": "UserProfileRequest",
+              "requestFullType": "spaceone.api.identity.v2.UserProfileRequest",
               "requestStreaming": false,
-              "responseType": "ProjectGroupInfo",
-              "responseLongType": "ProjectGroupInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectGroupInfo",
+              "responseType": "UserInfo",
+              "responseLongType": "UserInfo",
+              "responseFullType": "spaceone.api.identity.v2.UserInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project-group/get",
+                      "pattern": "/identity/v2/user-profile/get",
                       "body": "*"
                     }
                   ]
@@ -519,45 +454,22 @@
               }
             },
             {
-              "name": "list",
+              "name": "get_workspaces",
               "description": "",
-              "requestType": "ProjectGroupSearchQuery",
-              "requestLongType": "ProjectGroupSearchQuery",
-              "requestFullType": "spaceone.api.identity.v2.ProjectGroupSearchQuery",
+              "requestType": "UserProfileRequest",
+              "requestLongType": "UserProfileRequest",
+              "requestFullType": "spaceone.api.identity.v2.UserProfileRequest",
               "requestStreaming": false,
-              "responseType": "ProjectGroupsInfo",
-              "responseLongType": "ProjectGroupsInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectGroupsInfo",
+              "responseType": "WorkspacesInfo",
+              "responseLongType": "WorkspacesInfo",
+              "responseFullType": "spaceone.api.identity.v2.WorkspacesInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project-group/list",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "stat",
-              "description": "",
-              "requestType": "ProjectGroupStatQuery",
-              "requestLongType": "ProjectGroupStatQuery",
-              "requestFullType": "spaceone.api.identity.v2.ProjectGroupStatQuery",
-              "requestStreaming": false,
-              "responseType": "Struct",
-              "responseLongType": ".google.protobuf.Struct",
-              "responseFullType": "google.protobuf.Struct",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/project-group/stat",
+                      "pattern": "/identity/v2/user-profile/get-workspaces",
                       "body": "*"
                     }
                   ]

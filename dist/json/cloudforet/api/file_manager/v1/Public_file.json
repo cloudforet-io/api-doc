@@ -1,32 +1,55 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/project.proto",
+      "name": "spaceone/api/file_manager/v1/public_file.proto",
       "description": "",
-      "package": "spaceone.api.identity.v2",
-      "hasEnums": true,
+      "package": "spaceone.api.file_manager.v1",
+      "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
       "enums": [
         {
-          "name": "ProjectType",
-          "longName": "ProjectType",
-          "fullName": "spaceone.api.identity.v2.ProjectType",
+          "name": "PublicFileState",
+          "longName": "PublicFileInfo.PublicFileState",
+          "fullName": "spaceone.api.file_manager.v1.PublicFileInfo.PublicFileState",
           "description": "",
           "values": [
             {
-              "name": "PROJECT_TYPE_NONE",
+              "name": "PUBLIC_STATE_NONE",
               "number": "0",
               "description": ""
             },
             {
-              "name": "PRIVATE",
+              "name": "PENDING",
               "number": "1",
               "description": ""
             },
             {
-              "name": "PUBLIC",
+              "name": "DONE",
+              "number": "2",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "name": "PublicFileState",
+          "longName": "PublicFileSearchQuery.PublicFileState",
+          "fullName": "spaceone.api.file_manager.v1.PublicFileSearchQuery.PublicFileState",
+          "description": "",
+          "values": [
+            {
+              "name": "PUBLIC_STATE_NONE",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "PENDING",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "DONE",
               "number": "2",
               "description": ""
             }
@@ -36,45 +59,9 @@
       "extensions": [],
       "messages": [
         {
-          "name": "ChangeProjectGroupRequest",
-          "longName": "ChangeProjectGroupRequest",
-          "fullName": "spaceone.api.identity.v2.ChangeProjectGroupRequest",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "project_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "project_group_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "CreateProjectRequest",
-          "longName": "CreateProjectRequest",
-          "fullName": "spaceone.api.identity.v2.CreateProjectRequest",
+          "name": "CreatePublicFileRequest",
+          "longName": "CreatePublicFileRequest",
+          "fullName": "spaceone.api.file_manager.v1.CreatePublicFileRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -94,18 +81,6 @@
               "defaultValue": ""
             },
             {
-              "name": "project_type",
-              "description": "",
-              "label": "",
-              "type": "ProjectType",
-              "longType": "ProjectType",
-              "fullType": "spaceone.api.identity.v2.ProjectType",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
               "name": "tags",
               "description": "+optional",
               "label": "",
@@ -118,12 +93,12 @@
               "defaultValue": ""
             },
             {
-              "name": "project_group_id",
+              "name": "reference",
               "description": "+optional",
               "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "type": "PublicFileReference",
+              "longType": "PublicFileReference",
+              "fullType": "spaceone.api.file_manager.v1.PublicFileReference",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -132,9 +107,9 @@
           ]
         },
         {
-          "name": "ProjectInfo",
-          "longName": "ProjectInfo",
-          "fullName": "spaceone.api.identity.v2.ProjectInfo",
+          "name": "PublicFileInfo",
+          "longName": "PublicFileInfo",
+          "fullName": "spaceone.api.file_manager.v1.PublicFileInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -142,7 +117,7 @@
           "extensions": [],
           "fields": [
             {
-              "name": "project_id",
+              "name": "public_file_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -166,12 +141,60 @@
               "defaultValue": ""
             },
             {
-              "name": "project_type",
+              "name": "state",
               "description": "",
               "label": "",
-              "type": "ProjectType",
-              "longType": "ProjectType",
-              "fullType": "spaceone.api.identity.v2.ProjectType",
+              "type": "PublicFileState",
+              "longType": "PublicFileInfo.PublicFileState",
+              "fullType": "spaceone.api.file_manager.v1.PublicFileInfo.PublicFileState",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "file_type",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "upload_url",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "upload_options",
+              "description": "",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "download_url",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -190,72 +213,12 @@
               "defaultValue": ""
             },
             {
-              "name": "users",
-              "description": "",
-              "label": "repeated",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "user_groups",
-              "description": "",
-              "label": "repeated",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "created_by",
+              "name": "reference",
               "description": "",
               "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "domain_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "workspace_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "project_group_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "type": "PublicFileReference",
+              "longType": "PublicFileReference",
+              "fullType": "spaceone.api.file_manager.v1.PublicFileReference",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -276,9 +239,9 @@
           ]
         },
         {
-          "name": "ProjectRequest",
-          "longName": "ProjectRequest",
-          "fullName": "spaceone.api.identity.v2.ProjectRequest",
+          "name": "PublicFileReference",
+          "longName": "PublicFileReference",
+          "fullName": "spaceone.api.file_manager.v1.PublicFileReference",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -286,7 +249,19 @@
           "extensions": [],
           "fields": [
             {
-              "name": "project_id",
+              "name": "resource_type",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "resource_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -300,9 +275,33 @@
           ]
         },
         {
-          "name": "ProjectSearchQuery",
-          "longName": "ProjectSearchQuery",
-          "fullName": "spaceone.api.identity.v2.ProjectSearchQuery",
+          "name": "PublicFileRequest",
+          "longName": "PublicFileRequest",
+          "fullName": "spaceone.api.file_manager.v1.PublicFileRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "public_file_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "PublicFileSearchQuery",
+          "longName": "PublicFileSearchQuery",
+          "fullName": "spaceone.api.file_manager.v1.PublicFileSearchQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -314,15 +313,15 @@
               "description": "+optional",
               "label": "",
               "type": "Query",
-              "longType": "spaceone.api.core.v2.Query",
-              "fullType": "spaceone.api.core.v2.Query",
+              "longType": "spaceone.api.core.v1.Query",
+              "fullType": "spaceone.api.core.v1.Query",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "project_id",
+              "name": "public_file_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -346,31 +345,19 @@
               "defaultValue": ""
             },
             {
-              "name": "project_type",
+              "name": "state",
               "description": "+optional",
               "label": "",
-              "type": "ProjectType",
-              "longType": "ProjectType",
-              "fullType": "spaceone.api.identity.v2.ProjectType",
+              "type": "PublicFileState",
+              "longType": "PublicFileSearchQuery.PublicFileState",
+              "fullType": "spaceone.api.file_manager.v1.PublicFileSearchQuery.PublicFileState",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "created_by",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "workspace_id",
+              "name": "file_type",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -382,7 +369,7 @@
               "defaultValue": ""
             },
             {
-              "name": "project_group_id",
+              "name": "resource_type",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -394,19 +381,7 @@
               "defaultValue": ""
             },
             {
-              "name": "user_group_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "user_id",
+              "name": "resource_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -420,9 +395,9 @@
           ]
         },
         {
-          "name": "ProjectStatQuery",
-          "longName": "ProjectStatQuery",
-          "fullName": "spaceone.api.identity.v2.ProjectStatQuery",
+          "name": "PublicFileStatQuery",
+          "longName": "PublicFileStatQuery",
+          "fullName": "spaceone.api.file_manager.v1.PublicFileStatQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -434,8 +409,20 @@
               "description": "",
               "label": "",
               "type": "StatisticsQuery",
-              "longType": "spaceone.api.core.v2.StatisticsQuery",
-              "fullType": "spaceone.api.core.v2.StatisticsQuery",
+              "longType": "spaceone.api.core.v1.StatisticsQuery",
+              "fullType": "spaceone.api.core.v1.StatisticsQuery",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "domain_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -444,9 +431,9 @@
           ]
         },
         {
-          "name": "ProjectsInfo",
-          "longName": "ProjectsInfo",
-          "fullName": "spaceone.api.identity.v2.ProjectsInfo",
+          "name": "PublicFilesInfo",
+          "longName": "PublicFilesInfo",
+          "fullName": "spaceone.api.file_manager.v1.PublicFilesInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -457,9 +444,9 @@
               "name": "results",
               "description": "",
               "label": "repeated",
-              "type": "ProjectInfo",
-              "longType": "ProjectInfo",
-              "fullType": "spaceone.api.identity.v2.ProjectInfo",
+              "type": "PublicFileInfo",
+              "longType": "PublicFileInfo",
+              "fullType": "spaceone.api.file_manager.v1.PublicFileInfo",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -480,9 +467,9 @@
           ]
         },
         {
-          "name": "UpdateProjectRequest",
-          "longName": "UpdateProjectRequest",
-          "fullName": "spaceone.api.identity.v2.UpdateProjectRequest",
+          "name": "UpdatePublicFileRequest",
+          "longName": "UpdatePublicFileRequest",
+          "fullName": "spaceone.api.file_manager.v1.UpdatePublicFileRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -490,20 +477,8 @@
           "extensions": [],
           "fields": [
             {
-              "name": "project_id",
+              "name": "public_file_id",
               "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "name",
-              "description": "+optional",
               "label": "",
               "type": "string",
               "longType": "string",
@@ -524,110 +499,14 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "UpdateProjectTypeRequest",
-          "longName": "UpdateProjectTypeRequest",
-          "fullName": "spaceone.api.identity.v2.UpdateProjectTypeRequest",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "project_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
             },
             {
-              "name": "project_type",
-              "description": "",
+              "name": "reference",
+              "description": "+optional",
               "label": "",
-              "type": "ProjectType",
-              "longType": "ProjectType",
-              "fullType": "spaceone.api.identity.v2.ProjectType",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "UserGroupsProjectRequest",
-          "longName": "UserGroupsProjectRequest",
-          "fullName": "spaceone.api.identity.v2.UserGroupsProjectRequest",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "project_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "user_groups",
-              "description": "",
-              "label": "repeated",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "UsersProjectRequest",
-          "longName": "UsersProjectRequest",
-          "fullName": "spaceone.api.identity.v2.UsersProjectRequest",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "project_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "users",
-              "description": "",
-              "label": "repeated",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "type": "PublicFileReference",
+              "longType": "PublicFileReference",
+              "fullType": "spaceone.api.file_manager.v1.PublicFileReference",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -638,28 +517,28 @@
       ],
       "services": [
         {
-          "name": "Project",
-          "longName": "Project",
-          "fullName": "spaceone.api.identity.v2.Project",
+          "name": "PublicFile",
+          "longName": "PublicFile",
+          "fullName": "spaceone.api.file_manager.v1.PublicFile",
           "description": "",
           "methods": [
             {
-              "name": "create",
+              "name": "add",
               "description": "",
-              "requestType": "CreateProjectRequest",
-              "requestLongType": "CreateProjectRequest",
-              "requestFullType": "spaceone.api.identity.v2.CreateProjectRequest",
+              "requestType": "CreatePublicFileRequest",
+              "requestLongType": "CreatePublicFileRequest",
+              "requestFullType": "spaceone.api.file_manager.v1.CreatePublicFileRequest",
               "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
+              "responseType": "PublicFileInfo",
+              "responseLongType": "PublicFileInfo",
+              "responseFullType": "spaceone.api.file_manager.v1.PublicFileInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project/create",
+                      "pattern": "/file-manager/v1/public-file/add",
                       "body": "*"
                     }
                   ]
@@ -669,66 +548,20 @@
             {
               "name": "update",
               "description": "",
-              "requestType": "UpdateProjectRequest",
-              "requestLongType": "UpdateProjectRequest",
-              "requestFullType": "spaceone.api.identity.v2.UpdateProjectRequest",
+              "requestType": "UpdatePublicFileRequest",
+              "requestLongType": "UpdatePublicFileRequest",
+              "requestFullType": "spaceone.api.file_manager.v1.UpdatePublicFileRequest",
               "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
+              "responseType": "PublicFileInfo",
+              "responseLongType": "PublicFileInfo",
+              "responseFullType": "spaceone.api.file_manager.v1.PublicFileInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project/update",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "update_project_type",
-              "description": "",
-              "requestType": "UpdateProjectTypeRequest",
-              "requestLongType": "UpdateProjectTypeRequest",
-              "requestFullType": "spaceone.api.identity.v2.UpdateProjectTypeRequest",
-              "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/project/update-project-type",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "change_project_group",
-              "description": "",
-              "requestType": "ChangeProjectGroupRequest",
-              "requestLongType": "ChangeProjectGroupRequest",
-              "requestFullType": "spaceone.api.identity.v2.ChangeProjectGroupRequest",
-              "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/project/change-project-group",
+                      "pattern": "/file-manager/v1/public-file/update",
                       "body": "*"
                     }
                   ]
@@ -738,9 +571,9 @@
             {
               "name": "delete",
               "description": "",
-              "requestType": "ProjectRequest",
-              "requestLongType": "ProjectRequest",
-              "requestFullType": "spaceone.api.identity.v2.ProjectRequest",
+              "requestType": "PublicFileRequest",
+              "requestLongType": "PublicFileRequest",
+              "requestFullType": "spaceone.api.file_manager.v1.PublicFileRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
@@ -751,7 +584,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project/delete",
+                      "pattern": "/file-manager/v1/public-file/delete",
                       "body": "*"
                     }
                   ]
@@ -759,91 +592,22 @@
               }
             },
             {
-              "name": "add_users",
+              "name": "get_download_url",
               "description": "",
-              "requestType": "UsersProjectRequest",
-              "requestLongType": "UsersProjectRequest",
-              "requestFullType": "spaceone.api.identity.v2.UsersProjectRequest",
+              "requestType": "PublicFileRequest",
+              "requestLongType": "PublicFileRequest",
+              "requestFullType": "spaceone.api.file_manager.v1.PublicFileRequest",
               "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
+              "responseType": "PublicFileInfo",
+              "responseLongType": "PublicFileInfo",
+              "responseFullType": "spaceone.api.file_manager.v1.PublicFileInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project/add-users",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "remove_users",
-              "description": "",
-              "requestType": "UsersProjectRequest",
-              "requestLongType": "UsersProjectRequest",
-              "requestFullType": "spaceone.api.identity.v2.UsersProjectRequest",
-              "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/project/remove-users",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "add_user_groups",
-              "description": "",
-              "requestType": "UserGroupsProjectRequest",
-              "requestLongType": "UserGroupsProjectRequest",
-              "requestFullType": "spaceone.api.identity.v2.UserGroupsProjectRequest",
-              "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/project/add-user-groups",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "remove_user_groups",
-              "description": "",
-              "requestType": "UserGroupsProjectRequest",
-              "requestLongType": "UserGroupsProjectRequest",
-              "requestFullType": "spaceone.api.identity.v2.UserGroupsProjectRequest",
-              "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/project/remove-user-groups",
+                      "pattern": "/file-manager/v1/public-file/get-download-url",
                       "body": "*"
                     }
                   ]
@@ -853,20 +617,20 @@
             {
               "name": "get",
               "description": "",
-              "requestType": "ProjectRequest",
-              "requestLongType": "ProjectRequest",
-              "requestFullType": "spaceone.api.identity.v2.ProjectRequest",
+              "requestType": "PublicFileRequest",
+              "requestLongType": "PublicFileRequest",
+              "requestFullType": "spaceone.api.file_manager.v1.PublicFileRequest",
               "requestStreaming": false,
-              "responseType": "ProjectInfo",
-              "responseLongType": "ProjectInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectInfo",
+              "responseType": "PublicFileInfo",
+              "responseLongType": "PublicFileInfo",
+              "responseFullType": "spaceone.api.file_manager.v1.PublicFileInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project/get",
+                      "pattern": "/file-manager/v1/public-file/get",
                       "body": "*"
                     }
                   ]
@@ -876,20 +640,20 @@
             {
               "name": "list",
               "description": "",
-              "requestType": "ProjectSearchQuery",
-              "requestLongType": "ProjectSearchQuery",
-              "requestFullType": "spaceone.api.identity.v2.ProjectSearchQuery",
+              "requestType": "PublicFileSearchQuery",
+              "requestLongType": "PublicFileSearchQuery",
+              "requestFullType": "spaceone.api.file_manager.v1.PublicFileSearchQuery",
               "requestStreaming": false,
-              "responseType": "ProjectsInfo",
-              "responseLongType": "ProjectsInfo",
-              "responseFullType": "spaceone.api.identity.v2.ProjectsInfo",
+              "responseType": "PublicFilesInfo",
+              "responseLongType": "PublicFilesInfo",
+              "responseFullType": "spaceone.api.file_manager.v1.PublicFilesInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project/list",
+                      "pattern": "/file-manager/v1/public-file/list",
                       "body": "*"
                     }
                   ]
@@ -899,9 +663,9 @@
             {
               "name": "stat",
               "description": "",
-              "requestType": "ProjectStatQuery",
-              "requestLongType": "ProjectStatQuery",
-              "requestFullType": "spaceone.api.identity.v2.ProjectStatQuery",
+              "requestType": "PublicFileStatQuery",
+              "requestLongType": "PublicFileStatQuery",
+              "requestFullType": "spaceone.api.file_manager.v1.PublicFileStatQuery",
               "requestStreaming": false,
               "responseType": "Struct",
               "responseLongType": ".google.protobuf.Struct",
@@ -912,7 +676,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/project/stat",
+                      "pattern": "/file-manager/v1/public-file/stat",
                       "body": "*"
                     }
                   ]
