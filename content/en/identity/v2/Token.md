@@ -79,6 +79,15 @@ bookFlatSection: true
     
 * **role_type** (RoleType)   `Required` 
 
+    
+* **role_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
     <br>
 
 ### GrantTokenRequest
