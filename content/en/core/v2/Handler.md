@@ -41,37 +41,6 @@ bookFlatSection: true
 
     <br>
 
-### AuthorizationRequest
-* **scope** (string)   `Required` 
-
-    
-* **owner_type** (OwnerType)   `Required` 
-
-    
-* **audience** (string)   `Required` 
-
-    
-* **token_id** (string)   `Required` 
-
-    
-* **token_type** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
-    <br>
-
-### AuthorizationResponse
-* **role_type** (RoleType)   `Required` 
-
-    
-* **user_projects** (string)  `Repeated`    `Required` 
-
-    <br>
-
 ### EventRequest
 * **service** (string)   `Required` 
 
