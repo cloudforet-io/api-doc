@@ -77,16 +77,7 @@ bookFlatSection: true
 * **access_token** (string)   `Required` 
 
     
-* **role_id** (string)   `Required` 
-
-    
 * **role_type** (RoleType)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
