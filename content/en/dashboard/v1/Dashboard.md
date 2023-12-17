@@ -283,16 +283,16 @@ description of dashboard
 * **resource_group** (ResourceGroup)   `Required` 
 
     
-* **user_id** (string)   `Required` 
-
-    
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
+
+    
+* **user_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -315,16 +315,13 @@ description of dashboard
 * **dashboard_type** (DashboardType)  
 
     
-* **user_id** (string)  
-
-    
-* **resource_group** (ResourceGroup)  
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  
 
     
-* **workspace_id** (string)  
+* **user_id** (string)  
 
     <br>
 

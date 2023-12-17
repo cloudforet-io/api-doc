@@ -43,7 +43,7 @@ Creates a new Board with SYSTEM permission. The `name` of the board is only requ
 
 
 
-> **POST** /board/v1/board
+> **POST** /board/v1/board/create
 >
 
 
@@ -284,6 +284,9 @@ Adds or changes `categories` of a specific Board with SYSTEM permission. A chang
 Deletes a specific Board with `SYSTEM` permission. You can delete a Board regardless of the presence of Posts created under the Board.
 
 
+
+> **POST** /board/v1/board/delete
+>
 
 
 

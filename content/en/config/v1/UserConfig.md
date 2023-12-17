@@ -184,10 +184,10 @@ UserConfig API which configure environments for user
 * **tags** (Struct)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **user_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 

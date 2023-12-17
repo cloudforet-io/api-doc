@@ -31,7 +31,7 @@ A ProjectChannel is a destination  where Notifications are delivered. Notificati
 | [**enable**](./ProjectChannel#enable) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
 | [**disable**](./ProjectChannel#disable) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
 | [**delete**](./ProjectChannel#delete) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [Empty](ProjectChannel#empty) |
-| [**get**](./ProjectChannel#get) | [GetProjectChannelRequest](ProjectChannel#getprojectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
+| [**get**](./ProjectChannel#get) | [ProjectChannelRequest](ProjectChannel#projectchannelrequest) | [ProjectChannelInfo](ProjectChannel#projectchannelinfo) |
 | [**list**](./ProjectChannel#list) | [ProjectChannelQuery](ProjectChannel#projectchannelquery) | [ProjectChannelsInfo](ProjectChannel#projectchannelsinfo) |
 | [**stat**](./ProjectChannel#stat) | [ProjectChannelStatQuery](ProjectChannel#projectchannelstatquery) | [Struct](ProjectChannel#struct) |
 
@@ -165,10 +165,6 @@ If a notification has a level and a notification level that this channel can rec
 
   The data for using project channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -176,10 +172,6 @@ If a notification has a level and a notification level that this channel can rec
 * **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
-
-* **notification_level** (NotificationLevel)   `Required` 
-
-  Set the level of notification.
 
 * **is_scheduled** (bool)   `Required` 
 
@@ -189,25 +181,33 @@ If a notification has a level and a notification level that this channel can rec
 
   Schedule for which you want to receive notifications through the project channel.
 
+* **notification_level** (NotificationLevel)   `Required` 
+
+  Set the level of notification.
+
 * **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the project channel.
-
-* **project_id** (string)   `Required` 
-
-  The ID of project to which the project channel belongs.
+  The ID of domain.
 
 * **workspace_id** (string)   `Required` 
 
   The ID of workspace
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of project to which the project channel belongs.
+
+* **protocol_id** (string)   `Required` 
+
+  The ID of protocol set in the project channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -334,10 +334,6 @@ If a notification has a level and a notification level that this channel can rec
 
   The data for using project channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -345,10 +341,6 @@ If a notification has a level and a notification level that this channel can rec
 * **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
-
-* **notification_level** (NotificationLevel)   `Required` 
-
-  Set the level of notification.
 
 * **is_scheduled** (bool)   `Required` 
 
@@ -358,25 +350,33 @@ If a notification has a level and a notification level that this channel can rec
 
   Schedule for which you want to receive notifications through the project channel.
 
+* **notification_level** (NotificationLevel)   `Required` 
+
+  Set the level of notification.
+
 * **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the project channel.
-
-* **project_id** (string)   `Required` 
-
-  The ID of project to which the project channel belongs.
+  The ID of domain.
 
 * **workspace_id** (string)   `Required` 
 
   The ID of workspace
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of project to which the project channel belongs.
+
+* **protocol_id** (string)   `Required` 
+
+  The ID of protocol set in the project channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -485,10 +485,6 @@ Sets a schedule for a ProjectChannel. A schedule defines the time to receive a N
 
   The data for using project channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -496,10 +492,6 @@ Sets a schedule for a ProjectChannel. A schedule defines the time to receive a N
 * **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
-
-* **notification_level** (NotificationLevel)   `Required` 
-
-  Set the level of notification.
 
 * **is_scheduled** (bool)   `Required` 
 
@@ -509,25 +501,33 @@ Sets a schedule for a ProjectChannel. A schedule defines the time to receive a N
 
   Schedule for which you want to receive notifications through the project channel.
 
+* **notification_level** (NotificationLevel)   `Required` 
+
+  Set the level of notification.
+
 * **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the project channel.
-
-* **project_id** (string)   `Required` 
-
-  The ID of project to which the project channel belongs.
+  The ID of domain.
 
 * **workspace_id** (string)   `Required` 
 
   The ID of workspace
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of project to which the project channel belongs.
+
+* **protocol_id** (string)   `Required` 
+
+  The ID of protocol set in the project channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -632,10 +632,6 @@ If is_subscribe is set to false, this value is ignored.*
 
   The data for using project channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -643,10 +639,6 @@ If is_subscribe is set to false, this value is ignored.*
 * **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
-
-* **notification_level** (NotificationLevel)   `Required` 
-
-  Set the level of notification.
 
 * **is_scheduled** (bool)   `Required` 
 
@@ -656,25 +648,33 @@ If is_subscribe is set to false, this value is ignored.*
 
   Schedule for which you want to receive notifications through the project channel.
 
+* **notification_level** (NotificationLevel)   `Required` 
+
+  Set the level of notification.
+
 * **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the project channel.
-
-* **project_id** (string)   `Required` 
-
-  The ID of project to which the project channel belongs.
+  The ID of domain.
 
 * **workspace_id** (string)   `Required` 
 
   The ID of workspace
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of project to which the project channel belongs.
+
+* **protocol_id** (string)   `Required` 
+
+  The ID of protocol set in the project channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -764,10 +764,6 @@ Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectCh
 
   The data for using project channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -775,10 +771,6 @@ Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectCh
 * **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
-
-* **notification_level** (NotificationLevel)   `Required` 
-
-  Set the level of notification.
 
 * **is_scheduled** (bool)   `Required` 
 
@@ -788,25 +780,33 @@ Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectCh
 
   Schedule for which you want to receive notifications through the project channel.
 
+* **notification_level** (NotificationLevel)   `Required` 
+
+  Set the level of notification.
+
 * **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the project channel.
-
-* **project_id** (string)   `Required` 
-
-  The ID of project to which the project channel belongs.
+  The ID of domain.
 
 * **workspace_id** (string)   `Required` 
 
   The ID of workspace
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of project to which the project channel belongs.
+
+* **protocol_id** (string)   `Required` 
+
+  The ID of protocol set in the project channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -896,10 +896,6 @@ Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notific
 
   The data for using project channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -907,10 +903,6 @@ Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notific
 * **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
-
-* **notification_level** (NotificationLevel)   `Required` 
-
-  Set the level of notification.
 
 * **is_scheduled** (bool)   `Required` 
 
@@ -920,25 +912,33 @@ Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notific
 
   Schedule for which you want to receive notifications through the project channel.
 
+* **notification_level** (NotificationLevel)   `Required` 
+
+  Set the level of notification.
+
 * **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the project channel.
-
-* **project_id** (string)   `Required` 
-
-  The ID of project to which the project channel belongs.
+  The ID of domain.
 
 * **workspace_id** (string)   `Required` 
 
   The ID of workspace
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of project to which the project channel belongs.
+
+* **protocol_id** (string)   `Required` 
+
+  The ID of protocol set in the project channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -1035,7 +1035,7 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
 
 
 
-[GetProjectChannelRequest](./ProjectChannel#getprojectchannelrequest)
+[ProjectChannelRequest](./ProjectChannel#projectchannelrequest)
 
 * **project_channel_id** (string)   `Required` 
 
@@ -1072,10 +1072,6 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
 
   The data for using project channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -1083,10 +1079,6 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
 * **subscriptions** (string)  `Repeated`   `Required` 
 
   The topic list to subscription.
-
-* **notification_level** (NotificationLevel)   `Required` 
-
-  Set the level of notification.
 
 * **is_scheduled** (bool)   `Required` 
 
@@ -1096,25 +1088,33 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
 
   Schedule for which you want to receive notifications through the project channel.
 
+* **notification_level** (NotificationLevel)   `Required` 
+
+  Set the level of notification.
+
 * **tags** (Struct)   `Required` 
 
   The tags for project channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the project channel.
-
-* **project_id** (string)   `Required` 
-
-  The ID of project to which the project channel belongs.
+  The ID of domain.
 
 * **workspace_id** (string)   `Required` 
 
   The ID of workspace
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of project to which the project channel belongs.
+
+* **protocol_id** (string)   `Required` 
+
+  The ID of protocol set in the project channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -1189,9 +1189,9 @@ Gets a list of all ProjectChannels. You can use a query to get a filtered list o
   *The state of project channel. ENABLED or DISABLED only.*
 
 
-* **secret_id** (string)  
+* **is_subscribe** (bool)  
 
-  *The ID of secret encrypted data in the security service*
+  *Indicates whether subscriptions will be used.*
 
 
 * **is_scheduled** (bool)  
@@ -1204,14 +1204,19 @@ Gets a list of all ProjectChannels. You can use a query to get a filtered list o
   *The level of notification.*
 
 
+* **project_id** (string)  
+
+  *The ID of project to which the project channel belongs.*
+
+
 * **protocol_id** (string)  
 
   *The ID of protocol set in the project channel.*
 
 
-* **project_id** (string)  
+* **secret_id** (string)  
 
-  *The ID of project to which the project channel belongs.*
+  *The ID of secret encrypted data in the security service*
 
 
 
@@ -1371,13 +1376,6 @@ If a notification has a level and a notification level that this channel can rec
 
     <br>
 
-### GetProjectChannelRequest
-* **project_channel_id** (string)   `Required` 
-
-  *The ID of project channel.*
-
-    <br>
-
 ### ProjectChannelInfo
 * **project_channel_id** (string)   `Required` 
 
@@ -1399,11 +1397,6 @@ If a notification has a level and a notification level that this channel can rec
   *The data for using project channel.*
 
     
-* **secret_id** (string)   `Required` 
-
-  *The ID of secret encrypted data in the security service*
-
-    
 * **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
@@ -1412,11 +1405,6 @@ If a notification has a level and a notification level that this channel can rec
 * **subscriptions** (string)  `Repeated`    `Required` 
 
   *The topic list to subscription.*
-
-    
-* **notification_level** (NotificationLevel)   `Required` 
-
-  *Set the level of notification.*
 
     
 * **is_scheduled** (bool)   `Required` 
@@ -1429,19 +1417,19 @@ If a notification has a level and a notification level that this channel can rec
   *Schedule for which you want to receive notifications through the project channel.*
 
     
+* **notification_level** (NotificationLevel)   `Required` 
+
+  *Set the level of notification.*
+
+    
 * **tags** (Struct)   `Required` 
 
   *The tags for project channel.*
 
     
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  *The ID of protocol set in the project channel.*
-
-    
-* **project_id** (string)   `Required` 
-
-  *The ID of project to which the project channel belongs.*
+  *The ID of domain.*
 
     
 * **workspace_id** (string)   `Required` 
@@ -1449,9 +1437,19 @@ If a notification has a level and a notification level that this channel can rec
   *The ID of workspace*
 
     
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
-  *The ID of domain.*
+  *The ID of project to which the project channel belongs.*
+
+    
+* **protocol_id** (string)   `Required` 
+
+  *The ID of protocol set in the project channel.*
+
+    
+* **secret_id** (string)   `Required` 
+
+  *The ID of secret encrypted data in the security service*
 
     
 * **created_at** (string)   `Required` 
@@ -1481,9 +1479,9 @@ If a notification has a level and a notification level that this channel can rec
   *The state of project channel. ENABLED or DISABLED only.*
 
     
-* **secret_id** (string)  
+* **is_subscribe** (bool)  
 
-  *The ID of secret encrypted data in the security service*
+  *Indicates whether subscriptions will be used.*
 
     
 * **is_scheduled** (bool)  
@@ -1496,14 +1494,19 @@ If a notification has a level and a notification level that this channel can rec
   *The level of notification.*
 
     
+* **project_id** (string)  
+
+  *The ID of project to which the project channel belongs.*
+
+    
 * **protocol_id** (string)  
 
   *The ID of protocol set in the project channel.*
 
     
-* **project_id** (string)  
+* **secret_id** (string)  
 
-  *The ID of project to which the project channel belongs.*
+  *The ID of secret encrypted data in the security service*
 
     <br>
 
@@ -1538,11 +1541,6 @@ Only integer type can be set, and 1 to 24 can be.*
 * **query** (StatisticsQuery)   `Required` 
 
   *Statistics Query format provided by SpaceONE. Please check the link for more information.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
     <br>
 

@@ -31,7 +31,7 @@ A UserChannel is a destination where Notifications are delivered. Notifications 
 | [**enable**](./UserChannel#enable) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
 | [**disable**](./UserChannel#disable) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
 | [**delete**](./UserChannel#delete) | [UserChannelRequest](UserChannel#userchannelrequest) | [Empty](UserChannel#empty) |
-| [**get**](./UserChannel#get) | [GetUserChannelRequest](UserChannel#getuserchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**get**](./UserChannel#get) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
 | [**list**](./UserChannel#list) | [UserChannelQuery](UserChannel#userchannelquery) | [UserChannelsInfo](UserChannel#userchannelsinfo) |
 | [**stat**](./UserChannel#stat) | [UserChannelStatQuery](UserChannel#userchannelstatquery) | [Struct](UserChannel#struct) |
 
@@ -139,10 +139,6 @@ If is_subscribe is set to false, this value is ignored.*
 
   The data for using user channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -163,17 +159,21 @@ If is_subscribe is set to false, this value is ignored.*
 
   The tags for user channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the user channel.
+  The ID of domain.
 
 * **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)   `Required` 
+* **protocol_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of protocol set in the user channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -291,10 +291,6 @@ If a notification has a level and a notification level that this channel can rec
 
   The data for using user channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -315,17 +311,21 @@ If a notification has a level and a notification level that this channel can rec
 
   The tags for user channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the user channel.
+  The ID of domain.
 
 * **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)   `Required` 
+* **protocol_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of protocol set in the user channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -433,10 +433,6 @@ Sets a schedule for a UserChannel. A schedule defines the time to receive a Noti
 
   The data for using user channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -457,17 +453,21 @@ Sets a schedule for a UserChannel. A schedule defines the time to receive a Noti
 
   The tags for user channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the user channel.
+  The ID of domain.
 
 * **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)   `Required` 
+* **protocol_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of protocol set in the user channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -568,10 +568,6 @@ Sets a subscription for a UserChannel. A subscription is a topic for channels to
 
   The data for using user channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -592,17 +588,21 @@ Sets a subscription for a UserChannel. A subscription is a topic for channels to
 
   The tags for user channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the user channel.
+  The ID of domain.
 
 * **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)   `Required` 
+* **protocol_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of protocol set in the user channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -689,10 +689,6 @@ Enables a specific UserChannel. If a UserChannel is enabled, the UserChannel can
 
   The data for using user channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -713,17 +709,21 @@ Enables a specific UserChannel. If a UserChannel is enabled, the UserChannel can
 
   The tags for user channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the user channel.
+  The ID of domain.
 
 * **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)   `Required` 
+* **protocol_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of protocol set in the user channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -810,10 +810,6 @@ Disables a specific UserChannel. If a UserChannel is disabled, the Notification 
 
   The data for using user channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -834,17 +830,21 @@ Disables a specific UserChannel. If a UserChannel is disabled, the Notification 
 
   The tags for user channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the user channel.
+  The ID of domain.
 
 * **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)   `Required` 
+* **protocol_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of protocol set in the user channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -934,6 +934,26 @@ Gets a specific UserChannel. Prints detailed information about the UserChannel, 
 
  {{< tabs " get " >}}
 
+ {{< tab "Request Example" >}}
+
+
+
+[UserChannelRequest](./UserChannel#userchannelrequest)
+
+* **user_channel_id** (string)   `Required` 
+
+  *The ID of user channel.*
+
+
+
+
+
+{{< highlight json >}}
+{
+   "user_channel_id": "user-ch-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
  {{< tab "Response Example" >}}
@@ -955,10 +975,6 @@ Gets a specific UserChannel. Prints detailed information about the UserChannel, 
 
   The data for using user channel.
 
-* **secret_id** (string)   `Required` 
-
-  The ID of secret encrypted data in the security service
-
 * **is_subscribe** (bool)   `Required` 
 
   Indicates whether subscriptions will be used.
@@ -979,17 +995,21 @@ Gets a specific UserChannel. Prints detailed information about the UserChannel, 
 
   The tags for user channel.
 
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  The ID of protocol set in the user channel.
+  The ID of domain.
 
 * **user_id** (string)   `Required` 
 
   The ID of user using the user channel.
 
-* **domain_id** (string)   `Required` 
+* **protocol_id** (string)   `Required` 
 
-  The ID of domain.
+  The ID of protocol set in the user channel.
+
+* **secret_id** (string)   `Required` 
+
+  The ID of secret encrypted data in the security service
 
 * **created_at** (string)   `Required` 
 
@@ -1061,14 +1081,24 @@ Gets a list of all UserChannels. You can use a query to get a filtered list of U
   *The state of user channel. ENABLED or DISABLED only.*
 
 
-* **secret_id** (string)  
+* **is_subscribe** (bool)  
 
-  *The ID of secret encrypted data in the security service*
+  *Indicates whether subscriptions will be used.*
+
+
+* **is_scheduled** (bool)  
+
+  *Indicates whether schedule will be used.*
 
 
 * **protocol_id** (string)  
 
   *The ID of protocol set in the user channel.*
+
+
+* **secret_id** (string)  
+
+  *The ID of secret encrypted data in the security service*
 
 
 
@@ -1217,13 +1247,6 @@ If is_subscribe is set to false, this value is ignored.*
 
     <br>
 
-### GetUserChannelRequest
-* **user_channel_id** (string)   `Required` 
-
-  *The ID of user channel.*
-
-    <br>
-
 ### UpdateUserChannelRequest
 * **user_channel_id** (string)   `Required` 
 
@@ -1310,11 +1333,6 @@ If a notification has a level and a notification level that this channel can rec
   *The data for using user channel.*
 
     
-* **secret_id** (string)   `Required` 
-
-  *The ID of secret encrypted data in the security service*
-
-    
 * **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
@@ -1340,9 +1358,9 @@ If a notification has a level and a notification level that this channel can rec
   *The tags for user channel.*
 
     
-* **protocol_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
-  *The ID of protocol set in the user channel.*
+  *The ID of domain.*
 
     
 * **user_id** (string)   `Required` 
@@ -1350,9 +1368,14 @@ If a notification has a level and a notification level that this channel can rec
   *The ID of user using the user channel.*
 
     
-* **domain_id** (string)   `Required` 
+* **protocol_id** (string)   `Required` 
 
-  *The ID of domain.*
+  *The ID of protocol set in the user channel.*
+
+    
+* **secret_id** (string)   `Required` 
+
+  *The ID of secret encrypted data in the security service*
 
     
 * **created_at** (string)   `Required` 
@@ -1382,14 +1405,24 @@ If a notification has a level and a notification level that this channel can rec
   *The state of user channel. ENABLED or DISABLED only.*
 
     
-* **secret_id** (string)  
+* **is_subscribe** (bool)  
 
-  *The ID of secret encrypted data in the security service*
+  *Indicates whether subscriptions will be used.*
+
+    
+* **is_scheduled** (bool)  
+
+  *Indicates whether schedule will be used.*
 
     
 * **protocol_id** (string)  
 
   *The ID of protocol set in the user channel.*
+
+    
+* **secret_id** (string)  
+
+  *The ID of secret encrypted data in the security service*
 
     <br>
 

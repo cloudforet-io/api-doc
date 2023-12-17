@@ -31,7 +31,7 @@ A Supervisor is a resource managing the lifecycle of the plugin instances to dep
 | [**enable**](./Supervisor#enable) | [SupervisorRequest](Supervisor#supervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
 | [**disable**](./Supervisor#disable) | [SupervisorRequest](Supervisor#supervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
 | [**recover_plugin**](./Supervisor#recover_plugin) | [RecoverPluginRequest](Supervisor#recoverpluginrequest) | [PluginInfo](Supervisor#plugininfo) |
-| [**get**](./Supervisor#get) | [GetSupervisorRequest](Supervisor#getsupervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
+| [**get**](./Supervisor#get) | [SupervisorRequest](Supervisor#supervisorrequest) | [SupervisorInfo](Supervisor#supervisorinfo) |
 | [**list**](./Supervisor#list) | [SupervisorQuery](Supervisor#supervisorquery) | [SupervisorsInfo](Supervisor#supervisorsinfo) |
 | [**stat**](./Supervisor#stat) | [SupervisorStatQuery](Supervisor#supervisorstatquery) | [Struct](Supervisor#struct) |
 | [**list_plugins**](./Supervisor#list_plugins) | [PluginQuery](Supervisor#pluginquery) | [PluginsInfo](Supervisor#pluginsinfo) |
@@ -77,13 +77,13 @@ Creates a new Supervisor. Only Users with the `MANAGED` permission can set the S
 * **plugin_info** (PluginInfo)  `Repeated`   
 
 
-* **tags** (Struct)  
-
-
 * **is_public** (bool)  
 
 
-* **labels** (Struct)  
+* **labels** (ListValue)  
+
+
+* **tags** (Struct)  
 
 
 
@@ -115,11 +115,11 @@ Creates a new Supervisor. Only Users with the `MANAGED` permission can set the S
 
 * **is_public** (bool)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **labels** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **labels** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -225,11 +225,11 @@ Registers a specific Supervisor. You must specify the `supervisor_id` of the Sup
 
 * **is_public** (bool)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **labels** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **labels** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -335,11 +335,11 @@ Updates a specific Supervisor. You can make changes in Supervisor settings, incl
 
 * **is_public** (bool)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **labels** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **labels** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -466,11 +466,11 @@ Enables a specific Supervisor. By changing the `state` parameter to `ENABLED`, t
 
 * **is_public** (bool)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **labels** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **labels** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -552,11 +552,11 @@ Disables a specific Supervisor. By changing the `state` parameter to `DISABLED`,
 
 * **is_public** (bool)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **labels** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **labels** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -611,13 +611,13 @@ Recovers a specific plugin instance in a specific Supervisor. Changes the `state
 * **supervisor_id** (string)   `Required` 
 
 
-* **plugin_id** (string)   `Required` 
-
-
 * **version** (string)   `Required` 
 
 
 * **domain_id** (string)   `Required` 
+
+
+* **plugin_id** (string)   `Required` 
 
 
 
@@ -655,6 +655,27 @@ Recovers a specific plugin instance in a specific Supervisor. Changes the `state
 
  {{< tabs " get " >}}
 
+ {{< tab "Request Example" >}}
+
+
+
+[SupervisorRequest](./Supervisor#supervisorrequest)
+
+* **supervisor_id** (string)   `Required` 
+
+
+* **domain_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "supervisor_id": "supervisor-d73011256d55"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
  {{< tab "Response Example" >}}
@@ -670,11 +691,11 @@ Recovers a specific plugin instance in a specific Supervisor. Changes the `state
 
 * **is_public** (bool)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **labels** (Struct)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **labels** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -928,17 +949,6 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
 
 
 
-### GetSupervisorRequest
-* **supervisor_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### PluginInfo
 * **plugin_id** (string)   `Required` 
 
@@ -952,12 +962,6 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
 * **endpoint** (string)   `Required` 
 
     
-* **supervisor_id** (string)   `Required` 
-
-    
-* **supervisor_name** (string)   `Required` 
-
-    
 * **managed** (bool)   `Required` 
 
     
@@ -965,6 +969,12 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **supervisor_id** (string)   `Required` 
+
+    
+* **supervisor_name** (string)   `Required` 
 
     <br>
 
@@ -1018,13 +1028,13 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
 * **plugin_info** (PluginInfo)  `Repeated`   
 
     
-* **tags** (Struct)  
-
-    
 * **is_public** (bool)  
 
     
-* **labels** (Struct)  
+* **labels** (ListValue)  
+
+    
+* **tags** (Struct)  
 
     <br>
 
@@ -1032,13 +1042,13 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
 * **supervisor_id** (string)   `Required` 
 
     
-* **plugin_id** (string)   `Required` 
-
-    
 * **version** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **plugin_id** (string)   `Required` 
 
     <br>
 
@@ -1081,13 +1091,13 @@ Gets a list of all plugin instances regardless of Supervisors. Prints detailed i
 * **is_public** (bool)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **labels** (Struct)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
 
     
-* **labels** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 

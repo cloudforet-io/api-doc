@@ -30,7 +30,7 @@ A Plugin is a resource containing data of deployable plugins such as container i
 | [**enable**](./Plugin#enable) | [PluginRequest](Plugin#pluginrequest) | [PluginInfo](Plugin#plugininfo) |
 | [**disable**](./Plugin#disable) | [PluginRequest](Plugin#pluginrequest) | [PluginInfo](Plugin#plugininfo) |
 | [**get_versions**](./Plugin#get_versions) | [RepositoryPluginRequest](Plugin#repositorypluginrequest) | [VersionsInfo](Plugin#versionsinfo) |
-| [**get**](./Plugin#get) | [GetRepositoryPluginRequest](Plugin#getrepositorypluginrequest) | [PluginInfo](Plugin#plugininfo) |
+| [**get**](./Plugin#get) | [RepositoryPluginRequest](Plugin#repositorypluginrequest) | [PluginInfo](Plugin#plugininfo) |
 | [**list**](./Plugin#list) | [PluginQuery](Plugin#pluginquery) | [PluginsInfo](Plugin#pluginsinfo) |
 | [**stat**](./Plugin#stat) | [PluginStatQuery](Plugin#pluginstatquery) | [Struct](Plugin#struct) |
 
@@ -63,7 +63,7 @@ Registers a Plugin. The parameter `registry_type`, meaning container registry ty
 * **name** (string)   `Required` 
 
 
-* **service_type** (string)   `Required` 
+* **resource_type** (string)   `Required` 
 
 
 * **image** (string)   `Required` 
@@ -81,16 +81,10 @@ Registers a Plugin. The parameter `registry_type`, meaning container registry ty
 * **capability** (Struct)  
 
 
-* **template** (Struct)  
-
-
 * **labels** (ListValue)  
 
 
 * **tags** (Struct)  
-
-
-* **project_id** (string)  
 
 
 
@@ -150,31 +144,29 @@ Registers a Plugin. The parameter `registry_type`, meaning container registry ty
 
 * **name** (string)   `Required` 
 
-* **image** (string)   `Required` 
-
-* **registry_url** (string)   `Required` 
-
 * **state** (State)   `Required` 
 
-* **service_type** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+* **image** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **registry_type** (PublicRegistryType)   `Required` 
 
+* **registry_url** (string)   `Required` 
+
 * **registry_config** (Struct)   `Required` 
 
 * **capability** (Struct)   `Required` 
-
-* **template** (Struct)   `Required` 
 
 * **labels** (ListValue)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)   `Required` 
-
 * **domain_id** (string)   `Required` 
+
+* **repository_info** (RepositoryInfo)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -276,9 +268,6 @@ Updates a specific Plugin registered. A Plugin can be updated only if its Reposi
 * **capability** (Struct)  
 
 
-* **template** (Struct)  
-
-
 * **labels** (ListValue)  
 
 
@@ -337,31 +326,29 @@ Updates a specific Plugin registered. A Plugin can be updated only if its Reposi
 
 * **name** (string)   `Required` 
 
-* **image** (string)   `Required` 
-
-* **registry_url** (string)   `Required` 
-
 * **state** (State)   `Required` 
 
-* **service_type** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+* **image** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **registry_type** (PublicRegistryType)   `Required` 
 
+* **registry_url** (string)   `Required` 
+
 * **registry_config** (Struct)   `Required` 
 
 * **capability** (Struct)   `Required` 
-
-* **template** (Struct)   `Required` 
 
 * **labels** (ListValue)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)   `Required` 
-
 * **domain_id** (string)   `Required` 
+
+* **repository_info** (RepositoryInfo)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -517,31 +504,29 @@ Enables a specific Plugin. If the Plugin is enabled, the Plugin can be used as i
 
 * **name** (string)   `Required` 
 
-* **image** (string)   `Required` 
-
-* **registry_url** (string)   `Required` 
-
 * **state** (State)   `Required` 
 
-* **service_type** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+* **image** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **registry_type** (PublicRegistryType)   `Required` 
 
+* **registry_url** (string)   `Required` 
+
 * **registry_config** (Struct)   `Required` 
 
 * **capability** (Struct)   `Required` 
-
-* **template** (Struct)   `Required` 
 
 * **labels** (ListValue)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)   `Required` 
-
 * **domain_id** (string)   `Required` 
+
+* **repository_info** (RepositoryInfo)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -655,31 +640,29 @@ Disables a specific Plugin. If the Plugin is disabled, the Plugin cannot be used
 
 * **name** (string)   `Required` 
 
-* **image** (string)   `Required` 
-
-* **registry_url** (string)   `Required` 
-
 * **state** (State)   `Required` 
 
-* **service_type** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+* **image** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **registry_type** (PublicRegistryType)   `Required` 
 
+* **registry_url** (string)   `Required` 
+
 * **registry_config** (Struct)   `Required` 
 
 * **capability** (Struct)   `Required` 
-
-* **template** (Struct)   `Required` 
 
 * **labels** (ListValue)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)   `Required` 
-
 * **domain_id** (string)   `Required` 
+
+* **repository_info** (RepositoryInfo)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -842,7 +825,7 @@ Gets a specific Plugin. Prints detailed information about the Plugin, including 
 
 
 
-[GetRepositoryPluginRequest](./Plugin#getrepositorypluginrequest)
+[RepositoryPluginRequest](./Plugin#repositorypluginrequest)
 
 * **plugin_id** (string)   `Required` 
 
@@ -868,31 +851,29 @@ Gets a specific Plugin. Prints detailed information about the Plugin, including 
 
 * **name** (string)   `Required` 
 
-* **image** (string)   `Required` 
-
-* **registry_url** (string)   `Required` 
-
 * **state** (State)   `Required` 
 
-* **service_type** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+* **image** (string)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **registry_type** (PublicRegistryType)   `Required` 
 
+* **registry_url** (string)   `Required` 
+
 * **registry_config** (Struct)   `Required` 
 
 * **capability** (Struct)   `Required` 
-
-* **template** (Struct)   `Required` 
 
 * **labels** (ListValue)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
-* **repository_info** (RepositoryInfo)   `Required` 
-
 * **domain_id** (string)   `Required` 
+
+* **repository_info** (RepositoryInfo)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -985,9 +966,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 
 [PluginQuery](./Plugin#pluginquery)
 
-* **repository_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -1000,13 +978,16 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **state** (State)  
 
 
-* **service_type** (string)  
+* **resource_type** (string)  
 
 
 * **provider** (string)  
 
 
 * **registry_type** (PublicRegistryType)  
+
+
+* **repository_id** (string)  
 
 
 
@@ -1120,7 +1101,7 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **name** (string)   `Required` 
 
     
-* **service_type** (string)   `Required` 
+* **resource_type** (string)   `Required` 
 
     
 * **image** (string)   `Required` 
@@ -1138,24 +1119,10 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **capability** (Struct)  
 
     
-* **template** (Struct)  
-
-    
 * **labels** (ListValue)  
 
     
 * **tags** (Struct)  
-
-    
-* **project_id** (string)  
-
-    <br>
-
-### GetRepositoryPluginRequest
-* **plugin_id** (string)   `Required` 
-
-    
-* **repository_id** (string)  
 
     <br>
 
@@ -1166,16 +1133,13 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **name** (string)   `Required` 
 
     
-* **image** (string)   `Required` 
-
-    
-* **registry_url** (string)   `Required` 
-
-    
 * **state** (State)   `Required` 
 
     
-* **service_type** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+    
+* **image** (string)   `Required` 
 
     
 * **provider** (string)   `Required` 
@@ -1184,13 +1148,13 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **registry_type** (PublicRegistryType)   `Required` 
 
     
+* **registry_url** (string)   `Required` 
+
+    
 * **registry_config** (Struct)   `Required` 
 
     
 * **capability** (Struct)   `Required` 
-
-    
-* **template** (Struct)   `Required` 
 
     
 * **labels** (ListValue)   `Required` 
@@ -1199,10 +1163,10 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **tags** (Struct)   `Required` 
 
     
-* **repository_info** (RepositoryInfo)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **repository_info** (RepositoryInfo)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -1213,9 +1177,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
     <br>
 
 ### PluginQuery
-* **repository_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -1228,13 +1189,16 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **state** (State)  
 
     
-* **service_type** (string)  
+* **resource_type** (string)  
 
     
 * **provider** (string)  
 
     
 * **registry_type** (PublicRegistryType)  
+
+    
+* **repository_id** (string)  
 
     <br>
 
@@ -1275,9 +1239,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 
     
 * **capability** (Struct)  
-
-    
-* **template** (Struct)  
 
     
 * **labels** (ListValue)  

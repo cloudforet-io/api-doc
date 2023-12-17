@@ -26,8 +26,8 @@ A Notification is a service that delivers event data generated in Cloudforet to 
 | :----- | :-------- | :-------- |
 | [**create**](./Notification#create) | [CreateNotificationRequest](Notification#createnotificationrequest) | [Empty](Notification#empty) |
 | [**push**](./Notification#push) | [PushNotificationRequest](Notification#pushnotificationrequest) | [Empty](Notification#empty) |
-| [**delete**](./Notification#delete) | [NotificationRequest](Notification#notificationrequest) | [Empty](Notification#empty) |
-| [**set_read**](./Notification#set_read) | [SetReadNotificationRequest](Notification#setreadnotificationrequest) | [Empty](Notification#empty) |
+| [**delete**](./Notification#delete) | [NotificationsRequest](Notification#notificationsrequest) | [Empty](Notification#empty) |
+| [**set_read**](./Notification#set_read) | [NotificationsRequest](Notification#notificationsrequest) | [Empty](Notification#empty) |
 | [**get**](./Notification#get) | [GetNotificationRequest](Notification#getnotificationrequest) | [NotificationInfo](Notification#notificationinfo) |
 | [**list**](./Notification#list) | [NotificationQuery](Notification#notificationquery) | [NotificationsInfo](Notification#notificationsinfo) |
 | [**stat**](./Notification#stat) | [NotificationStatQuery](Notification#notificationstatquery) | [Struct](Notification#struct) |
@@ -60,41 +60,35 @@ Creates a new Notification. When a Notification is created, it is delivered to a
 
 * **resource_type** (string)   `Required` 
 
-  *is_required: true
-The type of resource to which the notification is dispatched.
+  *The type of resource to which the notification is dispatched.
 Currently, only "identity.Project" or "identity.User" can be set.*
 
 
 * **resource_id** (string)   `Required` 
 
-  *is_required: true
-The ID of the resource to which notifications are dispatched.
+  *The ID of the resource to which notifications are dispatched.
 If resource_type is "identity.Project", then resource_id requires a project ID values.
 If resource_type is "identity.User", then resource_id requires a user ID value.*
 
 
 * **topic** (string)   `Required` 
 
-  *is_required: true
-The topic of notification.*
+  *The topic of notification.*
 
 
 * **message** (Struct)   `Required` 
 
-  *is_required: true
-This message is used for each protocol.*
+  *This message is used for each protocol.*
 
 
 * **notification_type** (NotificationType)  
 
-  *is_required: false
-The type of notification.*
+  *The type of notification.*
 
 
 * **notification_level** (NotificationLEVEL)  
 
-  *is_required: false
-The level of notification.*
+  *The level of notification.*
 
 
 
@@ -154,28 +148,19 @@ Manually raises a Notification. A Notification is raised with a message to be se
 
 * **protocol_id** (string)   `Required` 
 
-  *is_required: true
-The ID of Protocol.*
+  *The ID of Protocol.*
 
 
 * **data** (string)   `Required` 
 
-  *is_required: true*
-
 
 * **message** (Struct)   `Required` 
-
-  *is_required: true*
 
 
 * **notification_type** (string)  
 
-  *is_required: false*
-
 
 * **notification_level** (string)  
-
-  *is_required: false*
 
 
 * **topic** (string)  
@@ -243,12 +228,11 @@ Deletes multiple Notifications. You must specify `notifications` of the list of 
 
 
 
-[NotificationRequest](./Notification#notificationrequest)
+[NotificationsRequest](./Notification#notificationsrequest)
 
 * **notifications** (string)  `Repeated`    `Required` 
 
-  *is_required: true
-ID list of Notifications.*
+  *ID list of Notifications.*
 
 
 
@@ -292,12 +276,11 @@ Marks a Notification as read. When a Notification is raised and if the Notificat
 
 
 
-[SetReadNotificationRequest](./Notification#setreadnotificationrequest)
+[NotificationsRequest](./Notification#notificationsrequest)
 
 * **notifications** (string)  `Repeated`    `Required` 
 
-  *is_required: true
-The ID list of notification that want to change read status.*
+  *ID list of Notifications.*
 
 
 
@@ -306,8 +289,9 @@ The ID list of notification that want to change read status.*
 {{< highlight json >}}
 {
    "notifications": [
-       "notification-6c548a37ee77",
-       "notification-4j3jt9384fnf"
+       "notification-4025c1b61225",
+       "notification-13hk3fh32534",
+       "notification-4kth40jth5jy"
    ]
 }
 {{< /highlight >}}
@@ -344,8 +328,7 @@ Gets a specific Notification. Prints detailed information about the Notification
 
 * **notification_id** (string)   `Required` 
 
-  *is_required: true
-The ID of Notification.*
+  *The ID of Notification.*
 
 
 * **set_read** (bool)  
@@ -391,13 +374,13 @@ This message is used for each protocol.
   Whether or not to check the notification.
 If notification has been returned at least once through the Get or List method, is_read is changed to True.
 
-* **user_id** (string)   `Required` 
-
-  The ID of user to whom the notification was dispatched.
-
 * **domain_id** (string)   `Required` 
 
   The ID of domain
+
+* **user_id** (string)   `Required` 
+
+  The ID of user to whom the notification was dispatched.
 
 * **created_at** (string)   `Required` 
 
@@ -461,51 +444,43 @@ Gets a list of all Notifications. You can use a query to get a filtered list of 
 
 * **query** (Query)  
 
-  *is_required: false
-Query format provided by SpaceONE. Please check the link for more information.*
+  *Query format provided by SpaceONE. Please check the link for more information.*
 
 
 * **notification_id** (string)  
 
-  *is_required: false
-The ID of notification.*
+  *The ID of notification.*
 
 
 * **topic** (string)  
 
-  *is_required: false
-The topic of notification.*
+  *The topic of notification.*
 
 
 * **notification_type** (NotificationType)  
 
-  *is_required: false
-The type of notification.*
+  *The type of notification.*
 
 
 * **notification_level** (NotificationLEVEL)  
 
-  *is_required: false
-The level of notification.*
+  *The level of notification.*
 
 
 * **is_read** (bool)  
 
-  *is_required: false
-Whether or not to check the notification.
+  *Whether or not to check the notification.
 If is_read is False, the user has not checked the notification yet.*
-
-
-* **parent_notification_id** (string)  
-
-  *is_required: false
-The ID of parent notification. Not used yet.*
 
 
 * **project_id** (string)  
 
-  *is_required: false
-The project ID to which the notification will be dispatched.*
+  *The project ID to which the notification will be dispatched.*
+
+
+* **parent_notification_id** (string)  
+
+  *The ID of parent notification. Not used yet.*
 
 
 
@@ -627,49 +602,42 @@ The project ID to which the notification will be dispatched.*
 ### CreateNotificationRequest
 * **resource_type** (string)   `Required` 
 
-  *is_required: true
-The type of resource to which the notification is dispatched.
+  *The type of resource to which the notification is dispatched.
 Currently, only "identity.Project" or "identity.User" can be set.*
 
     
 * **resource_id** (string)   `Required` 
 
-  *is_required: true
-The ID of the resource to which notifications are dispatched.
+  *The ID of the resource to which notifications are dispatched.
 If resource_type is "identity.Project", then resource_id requires a project ID values.
 If resource_type is "identity.User", then resource_id requires a user ID value.*
 
     
 * **topic** (string)   `Required` 
 
-  *is_required: true
-The topic of notification.*
+  *The topic of notification.*
 
     
 * **message** (Struct)   `Required` 
 
-  *is_required: true
-This message is used for each protocol.*
+  *This message is used for each protocol.*
 
     
 * **notification_type** (NotificationType)  
 
-  *is_required: false
-The type of notification.*
+  *The type of notification.*
 
     
 * **notification_level** (NotificationLEVEL)  
 
-  *is_required: false
-The level of notification.*
+  *The level of notification.*
 
     <br>
 
 ### GetNotificationRequest
 * **notification_id** (string)   `Required` 
 
-  *is_required: true
-The ID of Notification.*
+  *The ID of Notification.*
 
     
 * **set_read** (bool)  
@@ -709,14 +677,14 @@ This message is used for each protocol.*
 If notification has been returned at least once through the Get or List method, is_read is changed to True.*
 
     
-* **user_id** (string)   `Required` 
-
-  *The ID of user to whom the notification was dispatched.*
-
-    
 * **domain_id** (string)   `Required` 
 
   *The ID of domain*
+
+    
+* **user_id** (string)   `Required` 
+
+  *The ID of user to whom the notification was dispatched.*
 
     
 * **created_at** (string)   `Required` 
@@ -728,59 +696,43 @@ If notification has been returned at least once through the Get or List method, 
 ### NotificationQuery
 * **query** (Query)  
 
-  *is_required: false
-Query format provided by SpaceONE. Please check the link for more information.*
+  *Query format provided by SpaceONE. Please check the link for more information.*
 
     
 * **notification_id** (string)  
 
-  *is_required: false
-The ID of notification.*
+  *The ID of notification.*
 
     
 * **topic** (string)  
 
-  *is_required: false
-The topic of notification.*
+  *The topic of notification.*
 
     
 * **notification_type** (NotificationType)  
 
-  *is_required: false
-The type of notification.*
+  *The type of notification.*
 
     
 * **notification_level** (NotificationLEVEL)  
 
-  *is_required: false
-The level of notification.*
+  *The level of notification.*
 
     
 * **is_read** (bool)  
 
-  *is_required: false
-Whether or not to check the notification.
+  *Whether or not to check the notification.
 If is_read is False, the user has not checked the notification yet.*
-
-    
-* **parent_notification_id** (string)  
-
-  *is_required: false
-The ID of parent notification. Not used yet.*
 
     
 * **project_id** (string)  
 
-  *is_required: false
-The project ID to which the notification will be dispatched.*
+  *The project ID to which the notification will be dispatched.*
 
-    <br>
+    
+* **parent_notification_id** (string)  
 
-### NotificationRequest
-* **notifications** (string)  `Repeated`    `Required` 
-
-  *is_required: true
-ID list of Notifications.*
+  *The ID of parent notification. Not used yet.*
 
     <br>
 
@@ -804,41 +756,31 @@ Statistics Query format provided by SpaceONE. Please check the link for more inf
 
     <br>
 
+### NotificationsRequest
+* **notifications** (string)  `Repeated`    `Required` 
+
+  *ID list of Notifications.*
+
+    <br>
+
 ### PushNotificationRequest
 * **protocol_id** (string)   `Required` 
 
-  *is_required: true
-The ID of Protocol.*
+  *The ID of Protocol.*
 
     
 * **data** (string)   `Required` 
 
-  *is_required: true*
-
     
 * **message** (Struct)   `Required` 
-
-  *is_required: true*
 
     
 * **notification_type** (string)  
 
-  *is_required: false*
-
     
 * **notification_level** (string)  
 
-  *is_required: false*
-
     
 * **topic** (string)  
-
-    <br>
-
-### SetReadNotificationRequest
-* **notifications** (string)  `Repeated`    `Required` 
-
-  *is_required: true
-The ID list of notification that want to change read status.*
 
     <br>

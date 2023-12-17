@@ -176,10 +176,10 @@ bookFlatSection: true
 * **reference** (FileReference)  
 
     
-* **workspace_id** (string)  
+* **domain_id** (string)  
 
     
-* **domain_id** (string)  
+* **workspace_id** (string)  
 
     <br>
 
@@ -193,10 +193,16 @@ bookFlatSection: true
 * **state** (FileState)   `Required` 
 
     
-* **resource_group** (ResourceGroup)   `Required` 
+* **file_type** (string)   `Required` 
 
     
-* **file_type** (string)   `Required` 
+* **upload_url** (string)   `Required` 
+
+    
+* **upload_options** (Struct)   `Required` 
+
+    
+* **download_url** (string)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -205,25 +211,19 @@ bookFlatSection: true
 * **reference** (FileReference)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **user_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
-
-    
-* **upload_url** (string)  
-
-    
-* **upload_options** (Struct)  
-
-    
-* **download_url** (string)  
 
     <br>
 
@@ -262,15 +262,15 @@ bookFlatSection: true
 * **resource_id** (string)  
 
     
-* **resource_group** (ResourceGroup)  
+* **domain_id** (string)  
+
+    
+* **workspace_id** (string)  
 
     <br>
 
 ### FileStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 

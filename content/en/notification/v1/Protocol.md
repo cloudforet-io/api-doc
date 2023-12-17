@@ -30,7 +30,7 @@ A Protocol defines the method to use when dispatching Notifications via a channe
 | [**enable**](./Protocol#enable) | [ProtocolRequest](Protocol#protocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
 | [**disable**](./Protocol#disable) | [ProtocolRequest](Protocol#protocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
 | [**delete**](./Protocol#delete) | [ProtocolRequest](Protocol#protocolrequest) | [Empty](Protocol#empty) |
-| [**get**](./Protocol#get) | [GetProtocolRequest](Protocol#getprotocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
+| [**get**](./Protocol#get) | [ProtocolRequest](Protocol#protocolrequest) | [ProtocolInfo](Protocol#protocolinfo) |
 | [**list**](./Protocol#list) | [ProtocolQuery](Protocol#protocolquery) | [ProtocolsInfo](Protocol#protocolsinfo) |
 | [**stat**](./Protocol#stat) | [ProtocolStatQuery](Protocol#protocolstatquery) | [Struct](Protocol#struct) |
 
@@ -869,7 +869,7 @@ Gets a specific Protocol. Prints detailed information about the Protocol.
 
 
 
-[GetProtocolRequest](./Protocol#getprotocolrequest)
+[ProtocolRequest](./Protocol#protocolrequest)
 
 * **protocol_id** (string)   `Required` 
 
@@ -1161,13 +1161,6 @@ Gets a list of Protocols. You can use a query to get a filtered list of Protocol
 * **tags** (Struct)  
 
   *The tags for protocol.*
-
-    <br>
-
-### GetProtocolRequest
-* **protocol_id** (string)   `Required` 
-
-  *The ID of Protocol.*
 
     <br>
 

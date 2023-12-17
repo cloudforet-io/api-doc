@@ -60,10 +60,10 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 * **version** (string)  
 
 
-* **labels** (Struct)  
-
-
 * **upgrade_mode** (UpgradeMode)  
+
+
+* **labels** (Struct)  
 
 
 
@@ -162,10 +162,10 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 * **version** (string)  
 
     
-* **labels** (Struct)  
+* **upgrade_mode** (UpgradeMode)  
 
     
-* **upgrade_mode** (UpgradeMode)  
+* **labels** (Struct)  
 
     <br>
 
@@ -173,13 +173,13 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 * **supervisor_id** (string)   `Required` 
 
     
-* **plugin_id** (string)   `Required` 
-
-    
 * **version** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **plugin_id** (string)   `Required` 
 
     <br>
 
@@ -195,9 +195,9 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 * **version** (string)  
 
     
-* **options** (Struct)  
+* **upgrade_mode** (UpgradeMode)  
 
     
-* **upgrade_mode** (UpgradeMode)  
+* **options** (Struct)  
 
     <br>

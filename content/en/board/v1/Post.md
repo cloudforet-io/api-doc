@@ -26,7 +26,7 @@ A Post is a message published on a Board. It also provides notifications to Proj
 | :----- | :-------- | :-------- |
 | [**create**](./Post#create) | [CreatePostRequest](Post#createpostrequest) | [PostInfo](Post#postinfo) |
 | [**update**](./Post#update) | [UpdatePostRequest](Post#updatepostrequest) | [PostInfo](Post#postinfo) |
-| [**send_notification**](./Post#send_notification) | [SendNotificationRequest](Post#sendnotificationrequest) | [Empty](Post#empty) |
+| [**send_notification**](./Post#send_notification) | [PostRequest](Post#postrequest) | [Empty](Post#empty) |
 | [**delete**](./Post#delete) | [PostRequest](Post#postrequest) | [Empty](Post#empty) |
 | [**get**](./Post#get) | [PostRequest](Post#postrequest) | [PostInfo](Post#postinfo) |
 | [**list**](./Post#list) | [PostSearchQuery](Post#postsearchquery) | [PostsInfo](Post#postsinfo) |
@@ -58,6 +58,9 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 [CreatePostRequest](./Post#createpostrequest)
 
+* **board_id** (string)   `Required` 
+
+
 * **title** (string)   `Required` 
 
 
@@ -65,9 +68,6 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 
 * **resource_group** (ResourceGroup)   `Required` 
-
-
-* **board_id** (string)   `Required` 
 
 
 * **category** (string)  
@@ -109,11 +109,11 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 [PostInfo](#POSTINFO)
 * **post_id** (string)   `Required` 
 
-* **category** (string)   `Required` 
-
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
+
+* **category** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -127,9 +127,9 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 * **domain_id** (string)   `Required` 
 
-* **board_id** (string)   `Required` 
-
 * **user_id** (string)   `Required` 
+
+* **board_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -189,19 +189,16 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 * **post_id** (string)   `Required` 
 
 
-* **resource_group** (ResourceGroup)   `Required` 
-
-
 * **board_id** (string)   `Required` 
-
-
-* **category** (string)  
 
 
 * **title** (string)  
 
 
 * **contents** (string)  
+
+
+* **category** (string)  
 
 
 * **files** (string)  `Repeated`   
@@ -238,11 +235,11 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 [PostInfo](#POSTINFO)
 * **post_id** (string)   `Required` 
 
-* **category** (string)   `Required` 
-
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
+
+* **category** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -256,9 +253,9 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 * **domain_id** (string)   `Required` 
 
-* **board_id** (string)   `Required` 
-
 * **user_id** (string)   `Required` 
+
+* **board_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -306,6 +303,35 @@ Not Implemented
 
 
 
+
+ {{< tabs " send_notification " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[PostRequest](./Post#postrequest)
+
+* **board_id** (string)   `Required` 
+
+
+* **post_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "board_id": "board-b9aa34e65c60",
+   "post_id": "post-2118473ce15e"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -401,11 +427,11 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 [PostInfo](#POSTINFO)
 * **post_id** (string)   `Required` 
 
-* **category** (string)   `Required` 
-
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
+
+* **category** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -419,9 +445,9 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 * **domain_id** (string)   `Required` 
 
-* **board_id** (string)   `Required` 
-
 * **user_id** (string)   `Required` 
+
+* **board_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -478,7 +504,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 [PostSearchQuery](./Post#postsearchquery)
 
-* **resource_group** (ResourceGroup)   `Required` 
+* **board_id** (string)   `Required` 
 
 
 * **query** (Query)  
@@ -499,7 +525,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **is_popup** (bool)  
 
 
-* **board_id** (string)  
+* **domain_id** (string)  
 
 
 
@@ -600,6 +626,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 ### CreatePostRequest
+* **board_id** (string)   `Required` 
+
+    
 * **title** (string)   `Required` 
 
     
@@ -607,9 +636,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **resource_group** (ResourceGroup)   `Required` 
-
-    
-* **board_id** (string)   `Required` 
 
     
 * **category** (string)  
@@ -632,13 +658,13 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **post_id** (string)   `Required` 
 
     
-* **category** (string)   `Required` 
-
-    
 * **title** (string)   `Required` 
 
     
 * **contents** (string)   `Required` 
+
+    
+* **category** (string)   `Required` 
 
     
 * **options** (Struct)   `Required` 
@@ -659,10 +685,10 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **domain_id** (string)   `Required` 
 
     
-* **board_id** (string)   `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **board_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -681,7 +707,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     <br>
 
 ### PostSearchQuery
-* **resource_group** (ResourceGroup)   `Required` 
+* **board_id** (string)   `Required` 
 
     
 * **query** (Query)  
@@ -702,7 +728,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **is_popup** (bool)  
 
     
-* **board_id** (string)  
+* **domain_id** (string)  
 
     <br>
 
@@ -719,31 +745,20 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     <br>
 
-### SendNotificationRequest
-* **board_id** (string)   `Required` 
-
-    
-* **post_id** (string)   `Required` 
-
-    <br>
-
 ### UpdatePostRequest
 * **post_id** (string)   `Required` 
 
     
-* **resource_group** (ResourceGroup)   `Required` 
-
-    
 * **board_id** (string)   `Required` 
-
-    
-* **category** (string)  
 
     
 * **title** (string)  
 
     
 * **contents** (string)  
+
+    
+* **category** (string)  
 
     
 * **files** (string)  `Repeated`   
