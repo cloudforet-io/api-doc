@@ -352,9 +352,6 @@ This API is for internal system use only.
 
 
 
-> **POST** /secret/v1/secret/get-data
->
-
 
 
 
