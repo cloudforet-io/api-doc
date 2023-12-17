@@ -313,9 +313,12 @@ bookFlatSection: true
 * **service_account_id** (string)   `Required` 
 
     
+* **secret_schema_id** (string)   `Required` 
+
+    
 * **secret_data** (Struct)   `Required` 
 
     
-* **trusted_account_id** (string)   `Required` 
+* **trusted_account_id** (string)  
 
     <br>

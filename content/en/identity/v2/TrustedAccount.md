@@ -283,6 +283,9 @@ bookFlatSection: true
 * **trusted_account_id** (string)   `Required` 
 
     
+* **secret_schema_id** (string)   `Required` 
+
+    
 * **secret_data** (Struct)   `Required` 
 
     <br>

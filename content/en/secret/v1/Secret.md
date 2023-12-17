@@ -323,6 +323,9 @@ Updated secret is encrypted and stored securely.
 * **secret_id** (string)   `Required` 
 
 
+* **schema_id** (string)   `Required` 
+
+
 * **data** (Struct)   `Required` 
 
 
@@ -732,6 +735,9 @@ You can use a query to get a filtered list of secrets.
 
 ### UpdateSecretDataRequest
 * **secret_id** (string)   `Required` 
+
+    
+* **schema_id** (string)   `Required` 
 
     
 * **data** (Struct)   `Required` 

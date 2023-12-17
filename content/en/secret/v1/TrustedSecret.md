@@ -300,6 +300,9 @@ Updated trusted secret is encrypted and stored securely.
 * **trusted_secret_id** (string)   `Required` 
 
 
+* **schema_id** (string)   `Required` 
+
+
 * **data** (Struct)   `Required` 
 
 
@@ -628,6 +631,9 @@ You can use a query to get a filtered list of trusted secrets.
 
 ### UpdateTrustedSecretDataRequest
 * **trusted_secret_id** (string)   `Required` 
+
+    
+* **schema_id** (string)   `Required` 
 
     
 * **data** (Struct)   `Required` 
