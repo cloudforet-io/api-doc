@@ -28,7 +28,7 @@ An EscalationPolicy is a set of rules to deliver an alert to assigned members.
 | [**update**](./EscalationPolicy#update) | [UpdateEscalationPolicyRequest](EscalationPolicy#updateescalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
 | [**set_default**](./EscalationPolicy#set_default) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
 | [**delete**](./EscalationPolicy#delete) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [Empty](EscalationPolicy#empty) |
-| [**get**](./EscalationPolicy#get) | [GetEscalationPolicyRequest](EscalationPolicy#getescalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
+| [**get**](./EscalationPolicy#get) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
 | [**list**](./EscalationPolicy#list) | [EscalationPolicyQuery](EscalationPolicy#escalationpolicyquery) | [EscalationPoliciesInfo](EscalationPolicy#escalationpoliciesinfo) |
 | [**stat**](./EscalationPolicy#stat) | [EscalationPolicyStatQuery](EscalationPolicy#escalationpolicystatquery) | [Struct](EscalationPolicy#struct) |
 
@@ -64,7 +64,7 @@ Creates a new EscalationPolicy. When creating an EscalationPolicy, if the projec
 * **rules** (EscalationPolicyRule)  `Repeated`    `Required` 
 
 
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **repeat_count** (int32)  
@@ -110,11 +110,13 @@ Creates a new EscalationPolicy. When creating an EscalationPolicy, if the projec
 
 * **finish_condition** (EscalationFinishCondition)   `Required` 
 
-* **scope** (EscalationPolicyScope)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **project_id** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -177,9 +179,6 @@ Updates a specific EscalationPolicy. You can make changes in EscalationPolicy se
 * **escalation_policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -228,11 +227,13 @@ Updates a specific EscalationPolicy. You can make changes in EscalationPolicy se
 
 * **finish_condition** (EscalationFinishCondition)   `Required` 
 
-* **scope** (EscalationPolicyScope)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **project_id** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -295,9 +296,6 @@ Sets a specific EscalationPolicy as default. Only policies configured as global 
 * **escalation_policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -325,11 +323,13 @@ Sets a specific EscalationPolicy as default. Only policies configured as global 
 
 * **finish_condition** (EscalationFinishCondition)   `Required` 
 
-* **scope** (EscalationPolicyScope)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **project_id** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -392,9 +392,6 @@ Deletes a specific EscalationPolicy. Deletes the EscalationPolicy with the escal
 * **escalation_policy_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -433,15 +430,9 @@ Gets a specific EscalationPolicy. Prints detailed information about the Escalati
 
 
 
-[GetEscalationPolicyRequest](./EscalationPolicy#getescalationpolicyrequest)
+[EscalationPolicyRequest](./EscalationPolicy#escalationpolicyrequest)
 
 * **escalation_policy_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -449,7 +440,7 @@ Gets a specific EscalationPolicy. Prints detailed information about the Escalati
 
 {{< highlight json >}}
 {
-   "escalation_policy_id": "ep-d75670166af4",
+   "escalation_policy_id": "ep-526e536fdca9",
    "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
@@ -471,11 +462,13 @@ Gets a specific EscalationPolicy. Prints detailed information about the Escalati
 
 * **finish_condition** (EscalationFinishCondition)   `Required` 
 
-* **scope** (EscalationPolicyScope)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **project_id** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -535,7 +528,7 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 
 [EscalationPolicyQuery](./EscalationPolicy#escalationpolicyquery)
 
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **query** (Query)  
@@ -551,9 +544,6 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 
 
 * **finish_condition** (EscalationFinishCondition)  
-
-
-* **scope** (EscalationPolicyScope)  
 
 
 * **project_id** (string)  
@@ -659,7 +649,7 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 * **rules** (EscalationPolicyRule)  `Repeated`    `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **repeat_count** (int32)  
@@ -702,13 +692,16 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 * **finish_condition** (EscalationFinishCondition)   `Required` 
 
     
-* **scope** (EscalationPolicyScope)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **project_id** (string)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -719,7 +712,7 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
     <br>
 
 ### EscalationPolicyQuery
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **query** (Query)  
@@ -737,18 +730,12 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 * **finish_condition** (EscalationFinishCondition)  
 
     
-* **scope** (EscalationPolicyScope)  
-
-    
 * **project_id** (string)  
 
     <br>
 
 ### EscalationPolicyRequest
 * **escalation_policy_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -763,27 +750,10 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 ### EscalationPolicyStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    <br>
-
-### GetEscalationPolicyRequest
-* **escalation_policy_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
     <br>
 
 ### UpdateEscalationPolicyRequest
 * **escalation_policy_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

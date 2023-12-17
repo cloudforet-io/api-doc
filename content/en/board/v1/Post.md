@@ -28,7 +28,7 @@ A Post is a message published on a Board. It also provides notifications to Proj
 | [**update**](./Post#update) | [UpdatePostRequest](Post#updatepostrequest) | [PostInfo](Post#postinfo) |
 | [**send_notification**](./Post#send_notification) | [SendNotificationRequest](Post#sendnotificationrequest) | [Empty](Post#empty) |
 | [**delete**](./Post#delete) | [PostRequest](Post#postrequest) | [Empty](Post#empty) |
-| [**get**](./Post#get) | [GetPostRequest](Post#getpostrequest) | [PostInfo](Post#postinfo) |
+| [**get**](./Post#get) | [PostRequest](Post#postrequest) | [PostInfo](Post#postinfo) |
 | [**list**](./Post#list) | [PostSearchQuery](Post#postsearchquery) | [PostsInfo](Post#postsinfo) |
 | [**stat**](./Post#stat) | [PostStatQuery](Post#poststatquery) | [Struct](Post#struct) |
 
@@ -64,7 +64,7 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 * **contents** (string)   `Required` 
 
 
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **board_id** (string)   `Required` 
@@ -94,8 +94,10 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
    "category": "developer",
    "title": "title",
    "contents": "This is contents.",
+   "files": ["file-123456789012"],
    "options": {"is_popup": true},
    "writer": "user1",
+   "resource_group": "DOMAIN",
    "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
@@ -121,15 +123,13 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 * **files** (ListValue)   `Required` 
 
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
 * **board_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
-
-* **user_domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -141,7 +141,6 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 {
          "board_id": "board-123456789012",
          "post_id": "post-123456789012",
-         "post_type": "INTERNAL",
          "category": "developer",
          "title": "title",
          "contents": "This is contents.",
@@ -151,7 +150,6 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
          },
          "view_count": 0,
          "writer": "user1",
-         "scope": "DOMAIN",
          "domain_id": "domain-123456789012",
          "user_id": "user1@email.com",
          "created_at": "2022-01-01T01:06:23.732Z",
@@ -191,6 +189,9 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 * **post_id** (string)   `Required` 
 
 
+* **resource_group** (ResourceGroup)   `Required` 
+
+
 * **board_id** (string)   `Required` 
 
 
@@ -212,9 +213,6 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 * **writer** (string)  
 
 
-* **domain_id** (string)  
-
-
 
 
 
@@ -229,8 +227,7 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
          "is_popup": false,
          "is_pinned": true
      },
-     "writer": "user1",
-     "domain_id": "domain-123456789012"
+     "writer": "user1"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -255,15 +252,13 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 * **files** (ListValue)   `Required` 
 
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
 * **board_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
-
-* **user_domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -275,7 +270,6 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 {
          "board_id": "board-123456789012",
          "post_id": "post-123456789012",
-         "post_type": "INTERNAL",
          "category": "developer",
          "title": "title",
          "contents": "This is contents.",
@@ -285,7 +279,6 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
          },
          "view_count": 0,
          "writer": "user1",
-         "scope": "DOMAIN",
          "domain_id": "domain-123456789012",
          "user_id": "user1@email.com",
          "created_at": "2022-01-01T01:06:23.732Z",
@@ -345,17 +338,13 @@ Deletes a specific Post. You must specify the `post_id` of the Post to delete, a
 * **post_id** (string)   `Required` 
 
 
-* **domain_id** (string)  
-
-
 
 
 
 {{< highlight json >}}
 {
    "board_id": "board-b9aa34e65c60",
-   "post_id": "post-2118473ce15e",
-   "domain_id": "domain-123456789012"
+   "post_id": "post-2118473ce15e"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -387,15 +376,12 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 
 
-[GetPostRequest](./Post#getpostrequest)
+[PostRequest](./Post#postrequest)
 
 * **board_id** (string)   `Required` 
 
 
 * **post_id** (string)   `Required` 
-
-
-* **domain_id** (string)  
 
 
 
@@ -404,8 +390,7 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 {{< highlight json >}}
 {
    "board_id": "board-b9aa34e65c60",
-   "post_id": "post-2118473ce15e",
-   "domain_id": "domain-58010aa2e451"
+   "post_id": "post-2118473ce15e"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -430,15 +415,13 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 * **files** (ListValue)   `Required` 
 
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
 * **board_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
-
-* **user_domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -450,7 +433,6 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 {
          "board_id": "board-123456789012",
          "post_id": "post-123456789012",
-         "post_type": "INTERNAL",
          "category": "developer",
          "title": "title",
          "contents": "This is contents.",
@@ -460,7 +442,6 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
          },
          "view_count": 0,
          "writer": "user1",
-         "scope": "DOMAIN",
          "domain_id": "domain-123456789012",
          "user_id": "user1@email.com",
          "created_at": "2022-01-01T01:06:23.732Z",
@@ -497,10 +478,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 [PostSearchQuery](./Post#postsearchquery)
 
-* **permission_group** (PermissionGroup)   `Required` 
-
-
-* **board_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **query** (Query)  
@@ -521,13 +499,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **is_popup** (bool)  
 
 
-* **user_domain_id** (string)  
-
-
-* **domain_id** (string)  
-
-
-* **user_id** (string)  
+* **board_id** (string)  
 
 
 
@@ -557,7 +529,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
          {
              "board_id": "board-b9aa34e65c60",
              "post_id": "post-2118473ce15e",
-             "post_type": "INTERNAL",
              "category": "spaceone",
              "title": "title2",
              "contents": "this is contents2.",
@@ -567,7 +538,8 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
              },
              "view_count": 3,
              "writer": "seolmin2",
-             "scope": "DOMAIN",
+             "files": ["file-123456789012"],
+             "resource_group": "DOMAIN",
              "domain_id": "domain-58010aa2e451",
              "user_id": "user1@email.com",
              "created_at": "2022-06-13T01:06:23.732Z",
@@ -576,7 +548,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
          {
              "board_id": "board-b9aa34e65c60",
              "post_id": "post-532ae1191233",
-             "post_type": "INTERNAL",
              "category": "flower",
              "title": "작업공지",
              "contents": "This is description",
@@ -585,7 +556,8 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
                  "is_popup": true
              },
              "writer": "권설민",
-             "scope": "PUBLIC",
+             "files": ["file-123456789022"],
+             "resource_group": "DOMAIN",
              "user_id": "supervisor",
              "created_at": "2022-06-10T07:01:44.384Z",
              "updated_at": "2022-06-10T07:01:44.384Z"
@@ -634,7 +606,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **contents** (string)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **board_id** (string)   `Required` 
@@ -650,17 +622,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **writer** (string)  
-
-    
-* **domain_id** (string)  
-
-    <br>
-
-### GetPostRequest
-* **board_id** (string)   `Required` 
-
-    
-* **post_id** (string)   `Required` 
 
     
 * **domain_id** (string)  
@@ -692,7 +653,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **files** (ListValue)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -702,9 +663,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **user_id** (string)   `Required` 
-
-    
-* **user_domain_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -720,16 +678,10 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     
 * **post_id** (string)   `Required` 
 
-    
-* **domain_id** (string)  
-
     <br>
 
 ### PostSearchQuery
-* **permission_group** (PermissionGroup)   `Required` 
-
-    
-* **board_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **query** (Query)  
@@ -750,21 +702,12 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **is_popup** (bool)  
 
     
-* **user_domain_id** (string)  
-
-    
-* **domain_id** (string)  
-
-    
-* **user_id** (string)  
+* **board_id** (string)  
 
     <br>
 
 ### PostStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -782,13 +725,13 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     
 * **post_id** (string)   `Required` 
 
-    
-* **domain_id** (string)  
-
     <br>
 
 ### UpdatePostRequest
 * **post_id** (string)   `Required` 
+
+    
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **board_id** (string)   `Required` 
@@ -810,8 +753,5 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **writer** (string)  
-
-    
-* **domain_id** (string)  
 
     <br>

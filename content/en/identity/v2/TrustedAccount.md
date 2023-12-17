@@ -242,9 +242,6 @@ bookFlatSection: true
 * **provider** (string)  
 
     
-* **resource_group** (ResourceGroup)  
-
-    
 * **workspace_id** (string)  
 
     

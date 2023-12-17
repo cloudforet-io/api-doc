@@ -28,7 +28,7 @@ An EventRule is a rule to transform the request data when an Event is generated.
 | [**update**](./EventRule#update) | [UpdateEventRuleRequest](EventRule#updateeventrulerequest) | [EventRuleInfo](EventRule#eventruleinfo) |
 | [**change_order**](./EventRule#change_order) | [ChangeEventRuleOrderRequest](EventRule#changeeventruleorderrequest) | [EventRuleInfo](EventRule#eventruleinfo) |
 | [**delete**](./EventRule#delete) | [EventRuleRequest](EventRule#eventrulerequest) | [Empty](EventRule#empty) |
-| [**get**](./EventRule#get) | [GetEventRuleRequest](EventRule#geteventrulerequest) | [EventRuleInfo](EventRule#eventruleinfo) |
+| [**get**](./EventRule#get) | [EventRuleRequest](EventRule#eventrulerequest) | [EventRuleInfo](EventRule#eventruleinfo) |
 | [**list**](./EventRule#list) | [EventRuleQuery](EventRule#eventrulequery) | [EventRulesInfo](EventRule#eventrulesinfo) |
 | [**stat**](./EventRule#stat) | [EventRuleStatQuery](EventRule#eventrulestatquery) | [Struct](EventRule#struct) |
 
@@ -70,7 +70,7 @@ Creates a new EventRule. You can filter the Events to apply the EventRule by set
 * **actions** (EventRuleActions)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **options** (EventRuleOptions)  
@@ -119,11 +119,13 @@ Creates a new EventRule. You can filter the Events to apply the EventRule by set
 
 * **options** (EventRuleOptions)   `Required` 
 
-* **scope** (EventRuleScope)   `Required` 
-
 * **project_id** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -193,9 +195,6 @@ Changes a priority order between EventRules to apply. EventRules are filtered by
 * **event_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -251,11 +250,13 @@ Changes a priority order between EventRules to apply. EventRules are filtered by
 
 * **options** (EventRuleOptions)   `Required` 
 
-* **scope** (EventRuleScope)   `Required` 
-
 * **project_id** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -328,9 +329,6 @@ Updates a specific EventRule. You can make changes in EventRule settings.
 * **order** (int32)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -361,11 +359,13 @@ Updates a specific EventRule. You can make changes in EventRule settings.
 
 * **options** (EventRuleOptions)   `Required` 
 
-* **scope** (EventRuleScope)   `Required` 
-
 * **project_id** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -435,9 +435,6 @@ Deletes a specific EventRule. You must assign an EventRule resource to delete by
 * **event_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -477,15 +474,9 @@ Gets a specific EventRule. Prints detailed information about the EventRule.
 
 
 
-[GetEventRuleRequest](./EventRule#geteventrulerequest)
+[EventRuleRequest](./EventRule#eventrulerequest)
 
 * **event_rule_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -494,6 +485,7 @@ Gets a specific EventRule. Prints detailed information about the EventRule.
 {{< highlight json >}}
 {
    "event_rule_id": "er-123456789012",
+   "order": 2,
    "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
@@ -517,11 +509,13 @@ Gets a specific EventRule. Prints detailed information about the EventRule.
 
 * **options** (EventRuleOptions)   `Required` 
 
-* **scope** (EventRuleScope)   `Required` 
-
 * **project_id** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -588,9 +582,6 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 
 [EventRuleQuery](./EventRule#eventrulequery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -600,7 +591,7 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **name** (string)  
 
 
-* **scope** (EventRuleScope)  
+* **resource_group** (ResourceGroup)  
 
 
 * **project_id** (string)  
@@ -722,9 +713,6 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
     
 * **order** (int32)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CreateEventRuleRequest
@@ -740,7 +728,7 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **actions** (EventRuleActions)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **options** (EventRuleOptions)  
@@ -820,13 +808,16 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **options** (EventRuleOptions)   `Required` 
 
     
-* **scope** (EventRuleScope)   `Required` 
-
-    
 * **project_id** (string)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
+
+    
+* **resource_group** (ResourceGroup)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -842,9 +833,6 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
     <br>
 
 ### EventRuleQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -854,7 +842,7 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **name** (string)  
 
     
-* **scope** (EventRuleScope)  
+* **resource_group** (ResourceGroup)  
 
     
 * **project_id** (string)  
@@ -864,16 +852,10 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 ### EventRuleRequest
 * **event_rule_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### EventRuleStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -882,17 +864,6 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### GetEventRuleRequest
-* **event_rule_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -906,9 +877,6 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 
 ### UpdateEventRuleRequest
 * **event_rule_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

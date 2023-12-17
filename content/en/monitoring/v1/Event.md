@@ -75,19 +75,12 @@ Gets a specific Event matching the input parameters, `event_id` and `domain_id`.
 * **event_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
-
-
 
 
 
 {{< highlight json >}}
 {
    "event_id": "event-4e16ba3bd384",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -127,6 +120,8 @@ Gets a specific Event matching the input parameters, `event_id` and `domain_id`.
 * **webhook_id** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -237,9 +232,6 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 
 
 * **project_id** (string)  
-
-
-* **domain_id** (string)  
 
 
 
@@ -441,6 +433,9 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **project_id** (string)   `Required` 
 
     
+* **workspace_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -484,9 +479,6 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
     
 * **project_id** (string)  
 
-    
-* **domain_id** (string)  
-
     <br>
 
 ### EventResource
@@ -503,9 +495,6 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 ### EventStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### EventsInfo
@@ -518,11 +507,5 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 
 ### GetEventRequest
 * **event_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>

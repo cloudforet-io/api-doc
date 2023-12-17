@@ -66,19 +66,13 @@ Created trusted secret is encrypted and stored securely.
 * **data** (Struct)   `Required` 
 
 
-* **permission_group** (PermissionGroup)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **schema_id** (string)  
 
 
 * **tags** (Struct)  
-
-
-* **workspace_id** (string)  
 
 
 * **trusted_account_id** (string)  
@@ -91,11 +85,10 @@ Created trusted secret is encrypted and stored securely.
 {
    "name": "Cloudforet Broker Account - Managed",
    "data": "********",
-   "schema_id": "aws-secret-access-key",
-   "tags": {"foo": "bar"},
-   "domain_id": "domain-12345abcde",
-   "trusted_account_id": "ta-12345abcde",
-   "permission_group": "DOMAIN"
+   "schema_id": "aws_access_key",
+   "trusted_account_id": "trusted-sa-123456789012",
+   "tags": {}
+   "resource_group": "DOMAIN"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -114,7 +107,7 @@ Created trusted secret is encrypted and stored securely.
 
 * **provider** (string)   `Required` 
 
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -128,14 +121,14 @@ Created trusted secret is encrypted and stored securely.
 
 {{< highlight json >}}
 {
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "name": "Cloudforet Broker Account - Managed",
-   "schema_id": "aws-secret-access-key",
-   "tags": {"foo": "bar"},
+   "trusted_secret_id": "trusted-secret-123456789012",
+   "name": "aws-dev",
+   "tags": {},
+   "schema": "aws_access_key",
    "provider": "aws",
-   "permission_group": "DOMAIN",
-   "trusted_account_id": "ta-12345abcde",
-   "domain_id": "domain-12345abcde",
+   "resource_group": "DOMAIN",
+   "trusted_account_id": "ta-123456789012",
+   "domain_id": "domain-123456789012",
    "created_at": "2022-01-01T06:10:14.851Z"
 }
 {{< /highlight >}}
@@ -173,16 +166,10 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 * **trusted_secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
 * **tags** (Struct)  
-
-
-* **workspace_id** (string)  
 
 
 
@@ -190,10 +177,9 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 
 {{< highlight json >}}
 {
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "name": "Cloudforet Broker Account - Managed",
-   "tags": {"foo": "bar"},
-   "domain_id": "domain-123456789012"
+   "trusted_secret_id": "trusted-secret-123456789012",
+   "name": "aws-dev2",
+   "tags": { "a": "b"}
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -212,7 +198,7 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 
 * **provider** (string)   `Required` 
 
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -226,14 +212,14 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 
 {{< highlight json >}}
 {
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "name": "Cloudforet Broker Account - Managed",
-   "schema_id": "aws-secret-access-key",
-   "tags": {"foo": "bar"},
+   "trusted_secret_id": "trusted-secret-123456789012",
+   "name": "aws-dev",
+   "tags": {},
+   "schema": "aws_access_key",
    "provider": "aws",
-   "permission_group": "DOMAIN",
-   "trusted_account_id": "ta-12345abcde",
-   "domain_id": "domain-12345abcde",
+   "resource_group": "DOMAIN",
+   "trusted_account_id": "ta-123456789012",
+   "domain_id": "domain-123456789012",
    "created_at": "2022-01-01T06:10:14.851Z"
 }
 {{< /highlight >}}
@@ -271,19 +257,12 @@ If a trusted secret is attached to a Secret, it cannot be deleted.
 * **trusted_secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
-* **workspace_id** (string)  
-
-
 
 
 
 {{< highlight json >}}
 {
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "domain_id": "domain-12345abcde"
+   "trusted_secret_id": "trusted-secret-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -324,12 +303,6 @@ Updated trusted secret is encrypted and stored securely.
 * **data** (Struct)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
-* **workspace_id** (string)  
-
-
 
 
 
@@ -337,7 +310,6 @@ Updated trusted secret is encrypted and stored securely.
 {
    "trusted_secret_id": "trusted-secret-12345abcde",
    "data": "********",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -374,19 +346,12 @@ Get a specific trusted secret's information.
 * **trusted_secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
-* **workspace_id** (string)  
-
-
 
 
 
 {{< highlight json >}}
 {
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "domain_id": "domain-12345abcde"
+   "trusted_secret_id": "trusted-secret-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -405,7 +370,7 @@ Get a specific trusted secret's information.
 
 * **provider** (string)   `Required` 
 
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -419,14 +384,14 @@ Get a specific trusted secret's information.
 
 {{< highlight json >}}
 {
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "name": "Cloudforet Broker Account - Managed",
-   "schema_id": "aws-secret-access-key",
-   "tags": {"foo": "bar"},
+   "trusted_secret_id": "trusted-secret-123456789012",
+   "name": "aws-dev",
+   "tags": {},
+   "schema": "aws_access_key",
    "provider": "aws",
-   "permission_group": "DOMAIN",
-   "trusted_account_id": "ta-12345abcde",
-   "domain_id": "domain-12345abcde",
+   "resource_group": "DOMAIN",
+   "trusted_account_id": "ta-123456789012",
+   "domain_id": "domain-123456789012",
    "created_at": "2022-01-01T06:10:14.851Z"
 }
 {{< /highlight >}}
@@ -461,9 +426,6 @@ You can use a query to get a filtered list of trusted secrets.
 
 [TrustedSecretQuery](./TrustedSecret#trustedsecretquery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -477,9 +439,6 @@ You can use a query to get a filtered list of trusted secrets.
 
 
 * **provider** (string)  
-
-
-* **permission_group** (PermissionGroup)  
 
 
 * **workspace_id** (string)  
@@ -518,7 +477,7 @@ You can use a query to get a filtered list of trusted secrets.
            "schema_id": "aws-secret-access-key",
            "tags": {"foo": "bar"},
            "provider": "aws",
-           "permission_group": "DOMAIN",
+           "resource_group": "DOMAIN",
            "trusted_account_id": "ta-12345abcde",
            "domain_id": "domain-12345abcde",
            "created_at": "2022-01-01T06:10:14Z"
@@ -528,7 +487,7 @@ You can use a query to get a filtered list of trusted secrets.
            "name": "Customer Broker Account",
            "schema_id": "aws-secret-access-key",
            "provider": "aws",
-           "permission_group": "WORKSPACE",
+           "resource_group": "WORKSPACE",
            "trusted_account_id": "ta-56789abcde",
            "domain_id": "domain-12345abcde",
            "workspace_id": "workspace-12345abcde",
@@ -578,19 +537,13 @@ You can use a query to get a filtered list of trusted secrets.
 * **data** (Struct)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **schema_id** (string)  
 
     
 * **tags** (Struct)  
-
-    
-* **workspace_id** (string)  
 
     
 * **trusted_account_id** (string)  
@@ -613,7 +566,7 @@ You can use a query to get a filtered list of trusted secrets.
 * **provider** (string)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -630,9 +583,6 @@ You can use a query to get a filtered list of trusted secrets.
     <br>
 
 ### TrustedSecretQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -648,9 +598,6 @@ You can use a query to get a filtered list of trusted secrets.
 * **provider** (string)  
 
     
-* **permission_group** (PermissionGroup)  
-
-    
 * **workspace_id** (string)  
 
     
@@ -660,12 +607,6 @@ You can use a query to get a filtered list of trusted secrets.
 
 ### TrustedSecretRequest
 * **trusted_secret_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 
@@ -691,27 +632,15 @@ You can use a query to get a filtered list of trusted secrets.
     
 * **data** (Struct)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### UpdateTrustedSecretRequest
 * **trusted_secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
 * **tags** (Struct)  
-
-    
-* **workspace_id** (string)  
 
     <br>

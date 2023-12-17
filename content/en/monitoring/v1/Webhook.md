@@ -31,7 +31,7 @@ A Webhook is a plugin instance receiving data from external monitoring systems.
 | [**enable**](./Webhook#enable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**disable**](./Webhook#disable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**delete**](./Webhook#delete) | [WebhookRequest](Webhook#webhookrequest) | [Empty](Webhook#empty) |
-| [**get**](./Webhook#get) | [GetWebhookRequest](Webhook#getwebhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
+| [**get**](./Webhook#get) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**list**](./Webhook#list) | [WebhookQuery](Webhook#webhookquery) | [WebhooksInfo](Webhook#webhooksinfo) |
 | [**stat**](./Webhook#stat) | [WebhookStatQuery](Webhook#webhookstatquery) | [Struct](Webhook#struct) |
 
@@ -68,9 +68,6 @@ Creates a new Webhook. A Webhook collects data from an external monitoring syste
 
 
 * **project_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **tags** (Struct)  
@@ -113,6 +110,8 @@ Creates a new Webhook. A Webhook collects data from an external monitoring syste
 * **tags** (Struct)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -173,9 +172,6 @@ Updates a specific Webhook. You can make changes in Webhook settings, including 
 * **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -215,6 +211,8 @@ Updates a specific Webhook. You can make changes in Webhook settings, including 
 * **tags** (Struct)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -275,9 +273,6 @@ Updates the plugin of a specific DataSource. You can change the `version` of the
 * **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **version** (string)  
 
 
@@ -322,6 +317,8 @@ Updates the plugin of a specific DataSource. You can change the `version` of the
 * **tags** (Struct)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -382,9 +379,6 @@ Verifies a specific plugin for a Webhook.
 * **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -428,9 +422,6 @@ Enables a specific Webhook. By enabling a Webhook, you can communicate with an e
 * **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -463,6 +454,8 @@ Enables a specific Webhook. By enabling a Webhook, you can communicate with an e
 * **tags** (Struct)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -523,9 +516,6 @@ Disables a specific Webhook. By disabling a Webhook, you cannot communicate with
 * **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -558,6 +548,8 @@ Disables a specific Webhook. By disabling a Webhook, you cannot communicate with
 * **tags** (Struct)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -618,9 +610,6 @@ Deletes a specific Webhook. By deleting a Webhook, you cannot collect data from 
 * **webhook_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -659,15 +648,9 @@ Gets a specific Webhook. Prints detailed information about the Webhook, includin
 
 
 
-[GetWebhookRequest](./Webhook#getwebhookrequest)
+[WebhookRequest](./Webhook#webhookrequest)
 
 * **webhook_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -702,6 +685,8 @@ Gets a specific Webhook. Prints detailed information about the Webhook, includin
 * **tags** (Struct)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -758,9 +743,6 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 
 
 [WebhookQuery](./Webhook#webhookquery)
-
-* **domain_id** (string)   `Required` 
-
 
 * **query** (Query)  
 
@@ -891,29 +873,12 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 * **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **tags** (Struct)  
-
-    <br>
-
-### GetWebhookRequest
-* **webhook_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateWebhookPluginRequest
 * **webhook_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **version** (string)  
@@ -928,9 +893,6 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 
 ### UpdateWebhookRequest
 * **webhook_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  
@@ -968,6 +930,9 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 * **project_id** (string)   `Required` 
 
     
+* **workspace_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -993,9 +958,6 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
     <br>
 
 ### WebhookQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -1021,16 +983,10 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 ### WebhookRequest
 * **webhook_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### WebhookStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 

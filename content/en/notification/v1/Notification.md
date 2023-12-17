@@ -85,22 +85,16 @@ The topic of notification.*
 This message is used for each protocol.*
 
 
-* **notification_type** (NotificationType)   `Required` 
+* **notification_type** (NotificationType)  
 
   *is_required: false
 The type of notification.*
 
 
-* **notification_level** (NotificationLEVEL)   `Required` 
+* **notification_level** (NotificationLEVEL)  
 
   *is_required: false
 The level of notification.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
 
 
 
@@ -164,7 +158,7 @@ Manually raises a Notification. A Notification is raised with a message to be se
 The ID of Protocol.*
 
 
-* **data** (Struct)   `Required` 
+* **data** (string)   `Required` 
 
   *is_required: true*
 
@@ -174,19 +168,17 @@ The ID of Protocol.*
   *is_required: true*
 
 
-* **notification_type** (string)   `Required` 
+* **notification_type** (string)  
 
   *is_required: false*
 
 
-* **notification_level** (string)   `Required` 
+* **notification_level** (string)  
 
   *is_required: false*
 
 
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
+* **topic** (string)  
 
 
 
@@ -259,12 +251,6 @@ Deletes multiple Notifications. You must specify `notifications` of the list of 
 ID list of Notifications.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
-
-
 
 
 
@@ -312,12 +298,6 @@ Marks a Notification as read. When a Notification is raised and if the Notificat
 
   *is_required: true
 The ID list of notification that want to change read status.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
 
 
 
@@ -368,16 +348,7 @@ Gets a specific Notification. Prints detailed information about the Notification
 The ID of Notification.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
-
-
-* **only** (string)  `Repeated`    `Required` 
-
-  *is_required: false
-The list of the notification information column you want to be returned. It must be specified in the NotificationInfo.*
+* **set_read** (bool)  
 
 
 
@@ -488,65 +459,53 @@ Gets a list of all Notifications. You can use a query to get a filtered list of 
 
 [NotificationQuery](./Notification#notificationquery)
 
-* **query** (Query)   `Required` 
+* **query** (Query)  
 
   *is_required: false
 Query format provided by SpaceONE. Please check the link for more information.*
 
 
-* **notification_id** (string)   `Required` 
+* **notification_id** (string)  
 
   *is_required: false
 The ID of notification.*
 
 
-* **topic** (string)   `Required` 
+* **topic** (string)  
 
   *is_required: false
 The topic of notification.*
 
 
-* **notification_type** (NotificationType)   `Required` 
+* **notification_type** (NotificationType)  
 
   *is_required: false
 The type of notification.*
 
 
-* **notification_level** (NotificationLEVEL)   `Required` 
+* **notification_level** (NotificationLEVEL)  
 
   *is_required: false
 The level of notification.*
 
 
-* **is_read** (bool)   `Required` 
+* **is_read** (bool)  
 
   *is_required: false
 Whether or not to check the notification.
 If is_read is False, the user has not checked the notification yet.*
 
 
-* **parent_notification_id** (string)   `Required` 
+* **parent_notification_id** (string)  
 
   *is_required: false
 The ID of parent notification. Not used yet.*
 
 
-* **project_id** (string)   `Required` 
+* **project_id** (string)  
 
   *is_required: false
 The project ID to which the notification will be dispatched.*
-
-
-* **user_id** (string)   `Required` 
-
-  *is_required: false
-The ID of user.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
 
 
 
@@ -693,22 +652,16 @@ The topic of notification.*
 This message is used for each protocol.*
 
     
-* **notification_type** (NotificationType)   `Required` 
+* **notification_type** (NotificationType)  
 
   *is_required: false
 The type of notification.*
 
     
-* **notification_level** (NotificationLEVEL)   `Required` 
+* **notification_level** (NotificationLEVEL)  
 
   *is_required: false
 The level of notification.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
 
     <br>
 
@@ -719,16 +672,7 @@ The ID of domain.*
 The ID of Notification.*
 
     
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
-
-    
-* **only** (string)  `Repeated`    `Required` 
-
-  *is_required: false
-The list of the notification information column you want to be returned. It must be specified in the NotificationInfo.*
+* **set_read** (bool)  
 
     <br>
 
@@ -782,65 +726,53 @@ If notification has been returned at least once through the Get or List method, 
     <br>
 
 ### NotificationQuery
-* **query** (Query)   `Required` 
+* **query** (Query)  
 
   *is_required: false
 Query format provided by SpaceONE. Please check the link for more information.*
 
     
-* **notification_id** (string)   `Required` 
+* **notification_id** (string)  
 
   *is_required: false
 The ID of notification.*
 
     
-* **topic** (string)   `Required` 
+* **topic** (string)  
 
   *is_required: false
 The topic of notification.*
 
     
-* **notification_type** (NotificationType)   `Required` 
+* **notification_type** (NotificationType)  
 
   *is_required: false
 The type of notification.*
 
     
-* **notification_level** (NotificationLEVEL)   `Required` 
+* **notification_level** (NotificationLEVEL)  
 
   *is_required: false
 The level of notification.*
 
     
-* **is_read** (bool)   `Required` 
+* **is_read** (bool)  
 
   *is_required: false
 Whether or not to check the notification.
 If is_read is False, the user has not checked the notification yet.*
 
     
-* **parent_notification_id** (string)   `Required` 
+* **parent_notification_id** (string)  
 
   *is_required: false
 The ID of parent notification. Not used yet.*
 
     
-* **project_id** (string)   `Required` 
+* **project_id** (string)  
 
   *is_required: false
 The project ID to which the notification will be dispatched.*
-
-    
-* **user_id** (string)   `Required` 
-
-  *is_required: false
-The ID of user.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
 
     <br>
 
@@ -850,12 +782,6 @@ The ID of domain.*
   *is_required: true
 ID list of Notifications.*
 
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
-
     <br>
 
 ### NotificationStatQuery
@@ -863,12 +789,6 @@ The ID of domain.*
 
   *is_required: true
 Statistics Query format provided by SpaceONE. Please check the link for more information.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
 
     <br>
 
@@ -891,7 +811,7 @@ The ID of domain.*
 The ID of Protocol.*
 
     
-* **data** (Struct)   `Required` 
+* **data** (string)   `Required` 
 
   *is_required: true*
 
@@ -901,19 +821,17 @@ The ID of Protocol.*
   *is_required: true*
 
     
-* **notification_type** (string)   `Required` 
+* **notification_type** (string)  
 
   *is_required: false*
 
     
-* **notification_level** (string)   `Required` 
+* **notification_level** (string)  
 
   *is_required: false*
 
     
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
+* **topic** (string)  
 
     <br>
 
@@ -922,11 +840,5 @@ The ID of Protocol.*
 
   *is_required: true
 The ID list of notification that want to change read status.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true
-The ID of domain.*
 
     <br>

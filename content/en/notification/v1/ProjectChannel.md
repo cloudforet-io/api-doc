@@ -84,11 +84,6 @@ if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data i
   *The ID of project to which the project channel belongs.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 * **is_subscribe** (bool)  
 
   *Indicates whether subscriptions will be used.*
@@ -206,6 +201,10 @@ If a notification has a level and a notification level that this channel can rec
 
   The ID of project to which the project channel belongs.
 
+* **workspace_id** (string)   `Required` 
+
+  The ID of workspace
+
 * **domain_id** (string)   `Required` 
 
   The ID of domain.
@@ -228,6 +227,7 @@ If a notification has a level and a notification level that this channel can rec
    "tags": {},
    "protocol_id": "protocol-ab94ea7d574e",
    "project_id": "project-aa723eed3d69",
+   "workspace_id": "workspace-123456789012"
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-13T07:35:28.305Z"
 }
@@ -370,6 +370,10 @@ If a notification has a level and a notification level that this channel can rec
 
   The ID of project to which the project channel belongs.
 
+* **workspace_id** (string)   `Required` 
+
+  The ID of workspace
+
 * **domain_id** (string)   `Required` 
 
   The ID of domain.
@@ -392,6 +396,7 @@ If a notification has a level and a notification level that this channel can rec
    "tags": {},
    "protocol_id": "protocol-ab94ea7d574e",
    "project_id": "project-aa723eed3d69",
+   "workspace_id": "workspace-123456789012"
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-13T07:35:28.305Z"
 }
@@ -434,11 +439,6 @@ Sets a schedule for a ProjectChannel. A schedule defines the time to receive a N
 * **is_scheduled** (bool)   `Required` 
 
   *Indicates whether schedule will be used.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
 
 * **schedule** (ProjectChannelSchedule)  
@@ -521,6 +521,10 @@ Sets a schedule for a ProjectChannel. A schedule defines the time to receive a N
 
   The ID of project to which the project channel belongs.
 
+* **workspace_id** (string)   `Required` 
+
+  The ID of workspace
+
 * **domain_id** (string)   `Required` 
 
   The ID of domain.
@@ -543,6 +547,7 @@ Sets a schedule for a ProjectChannel. A schedule defines the time to receive a N
    "tags": {},
    "protocol_id": "protocol-ab94ea7d574e",
    "project_id": "project-aa723eed3d69",
+   "workspace_id": "workspace-123456789012"
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-13T07:35:28.305Z"
 }
@@ -585,11 +590,6 @@ Sets a subscription for a ProjectChannel. A subscription is a topic for channels
 * **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
 
 * **subscriptions** (string)  `Repeated`   
@@ -668,6 +668,10 @@ If is_subscribe is set to false, this value is ignored.*
 
   The ID of project to which the project channel belongs.
 
+* **workspace_id** (string)   `Required` 
+
+  The ID of workspace
+
 * **domain_id** (string)   `Required` 
 
   The ID of domain.
@@ -690,6 +694,7 @@ If is_subscribe is set to false, this value is ignored.*
    "tags": {},
    "protocol_id": "protocol-ab94ea7d574e",
    "project_id": "project-aa723eed3d69",
+   "workspace_id": "workspace-123456789012"
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-13T07:35:28.305Z"
 }
@@ -729,11 +734,6 @@ Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectCh
   *The ID of project channel.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 
 
 
@@ -800,6 +800,10 @@ Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectCh
 
   The ID of project to which the project channel belongs.
 
+* **workspace_id** (string)   `Required` 
+
+  The ID of workspace
+
 * **domain_id** (string)   `Required` 
 
   The ID of domain.
@@ -822,6 +826,7 @@ Enables a specific ProjectChannel. If a ProjectChannel is enabled, the ProjectCh
    "tags": {},
    "protocol_id": "protocol-ab94ea7d574e",
    "project_id": "project-aa723eed3d69",
+   "workspace_id": "workspace-123456789012"
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-13T07:35:28.305Z"
 }
@@ -861,11 +866,6 @@ Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notific
   *The ID of project channel.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 
 
 
@@ -932,6 +932,10 @@ Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notific
 
   The ID of project to which the project channel belongs.
 
+* **workspace_id** (string)   `Required` 
+
+  The ID of workspace
+
 * **domain_id** (string)   `Required` 
 
   The ID of domain.
@@ -954,6 +958,7 @@ Disables a specific ProjectChannel. If a ProjectChannel is disabled, the Notific
    "tags": {},
    "protocol_id": "protocol-ab94ea7d574e",
    "project_id": "project-aa723eed3d69",
+   "workspace_id": "workspace-123456789012"
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-13T07:35:28.305Z"
 }
@@ -991,11 +996,6 @@ Deletes a specific ProjectChannel.
 * **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
 
 
@@ -1042,16 +1042,6 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
   *The ID of project channel.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
-* **only** (string)  `Repeated`   
-
-  *The list of the project channel information column you want to be returned. It must be specified in the ProjectChannelInfo.*
-
-
 
 
 
@@ -1118,6 +1108,10 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
 
   The ID of project to which the project channel belongs.
 
+* **workspace_id** (string)   `Required` 
+
+  The ID of workspace
+
 * **domain_id** (string)   `Required` 
 
   The ID of domain.
@@ -1140,6 +1134,7 @@ Gets a specific ProjectChannel. Prints detailed information about the ProjectCha
    "tags": {},
    "protocol_id": "protocol-ab94ea7d574e",
    "project_id": "project-aa723eed3d69",
+   "workspace_id": "workspace-123456789012"
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-13T07:35:28.305Z"
 }
@@ -1174,11 +1169,6 @@ Gets a list of all ProjectChannels. You can use a query to get a filtered list o
 
 [ProjectChannelQuery](./ProjectChannel#projectchannelquery)
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 * **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
@@ -1202,6 +1192,11 @@ Gets a list of all ProjectChannels. You can use a query to get a filtered list o
 * **secret_id** (string)  
 
   *The ID of secret encrypted data in the security service*
+
+
+* **is_scheduled** (bool)  
+
+  *Indicates whether schedule will be used.*
 
 
 * **notification_level** (NotificationLevel)  
@@ -1343,11 +1338,6 @@ if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data i
   *The ID of project to which the project channel belongs.*
 
     
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-    
 * **is_subscribe** (bool)  
 
   *Indicates whether subscriptions will be used.*
@@ -1385,16 +1375,6 @@ If a notification has a level and a notification level that this channel can rec
 * **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-    
-* **only** (string)  `Repeated`   
-
-  *The list of the project channel information column you want to be returned. It must be specified in the ProjectChannelInfo.*
 
     <br>
 
@@ -1464,6 +1444,11 @@ If a notification has a level and a notification level that this channel can rec
   *The ID of project to which the project channel belongs.*
 
     
+* **workspace_id** (string)   `Required` 
+
+  *The ID of workspace*
+
+    
 * **domain_id** (string)   `Required` 
 
   *The ID of domain.*
@@ -1476,11 +1461,6 @@ If a notification has a level and a notification level that this channel can rec
     <br>
 
 ### ProjectChannelQuery
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-    
 * **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
@@ -1506,6 +1486,11 @@ If a notification has a level and a notification level that this channel can rec
   *The ID of secret encrypted data in the security service*
 
     
+* **is_scheduled** (bool)  
+
+  *Indicates whether schedule will be used.*
+
+    
 * **notification_level** (NotificationLevel)  
 
   *The level of notification.*
@@ -1526,11 +1511,6 @@ If a notification has a level and a notification level that this channel can rec
 * **project_channel_id** (string)   `Required` 
 
   *The ID of project channel.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
     <br>
 
@@ -1625,11 +1605,6 @@ If a notification has a level and a notification level that this channel can rec
   *Indicates whether schedule will be used.*
 
     
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-    
 * **schedule** (ProjectChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the project channel.*
@@ -1645,11 +1620,6 @@ If a notification has a level and a notification level that this channel can rec
 * **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
     
 * **subscriptions** (string)  `Repeated`   

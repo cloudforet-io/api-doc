@@ -264,9 +264,6 @@ bookFlatSection: true
 * **role_type** (RoleType)  
 
     
-* **resource_group** (ResourceGroup)  
-
-    
 * **workspace_id** (string)  
 
     

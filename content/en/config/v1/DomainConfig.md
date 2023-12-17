@@ -25,7 +25,7 @@ DomainConfig API which configure environments for domain
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./DomainConfig#create) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
-| [**update**](./DomainConfig#update) | [UpdateDomainConfigRequest](DomainConfig#updatedomainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
+| [**update**](./DomainConfig#update) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
 | [**set**](./DomainConfig#set) | [SetDomainConfigRequest](DomainConfig#setdomainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
 | [**delete**](./DomainConfig#delete) | [DomainConfigRequest](DomainConfig#domainconfigrequest) | [Empty](DomainConfig#empty) |
 | [**get**](./DomainConfig#get) | [DomainConfigRequest](DomainConfig#domainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
@@ -186,15 +186,9 @@ DomainConfig API which configure environments for domain
 ### DomainConfigRequest
 * **name** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### DomainConfigSearchQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -204,9 +198,6 @@ DomainConfig API which configure environments for domain
 
 ### DomainConfigStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -223,23 +214,6 @@ DomainConfig API which configure environments for domain
 
     
 * **data** (Struct)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **tags** (Struct)  
-
-    <br>
-
-### UpdateDomainConfigRequest
-* **name** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **data** (Struct)  
 
     
 * **tags** (Struct)  

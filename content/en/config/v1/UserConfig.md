@@ -25,7 +25,7 @@ UserConfig API which configure environments for user
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./UserConfig#create) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
-| [**update**](./UserConfig#update) | [UpdateUserConfigRequest](UserConfig#updateuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
+| [**update**](./UserConfig#update) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
 | [**set**](./UserConfig#set) | [SetUserConfigRequest](UserConfig#setuserconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
 | [**delete**](./UserConfig#delete) | [UserConfigRequest](UserConfig#userconfigrequest) | [Empty](UserConfig#empty) |
 | [**get**](./UserConfig#get) | [UserConfigRequest](UserConfig#userconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
@@ -170,23 +170,6 @@ UserConfig API which configure environments for user
 * **data** (Struct)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
-* **tags** (Struct)  
-
-    <br>
-
-### UpdateUserConfigRequest
-* **name** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **data** (Struct)  
-
-    
 * **tags** (Struct)  
 
     <br>
@@ -215,32 +198,20 @@ UserConfig API which configure environments for user
     <br>
 
 ### UserConfigQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
 * **name** (string)  
-
-    
-* **user_id** (string)  
 
     <br>
 
 ### UserConfigRequest
 * **name** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### UserConfigStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 

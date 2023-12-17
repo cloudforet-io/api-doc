@@ -27,7 +27,7 @@ A CostQuerySet is a set of saved queries a User frequently uses as a setting.
 | [**create**](./CostQuerySet#create) | [CreateCostQuerySetRequest](CostQuerySet#createcostquerysetrequest) | [CostQuerySetInfo](CostQuerySet#costquerysetinfo) |
 | [**update**](./CostQuerySet#update) | [UpdateCostQuerySetRequest](CostQuerySet#updatecostquerysetrequest) | [CostQuerySetInfo](CostQuerySet#costquerysetinfo) |
 | [**delete**](./CostQuerySet#delete) | [CostQuerySetRequest](CostQuerySet#costquerysetrequest) | [Empty](CostQuerySet#empty) |
-| [**get**](./CostQuerySet#get) | [GetCostQuerySetRequest](CostQuerySet#getcostquerysetrequest) | [CostQuerySetInfo](CostQuerySet#costquerysetinfo) |
+| [**get**](./CostQuerySet#get) | [CostQuerySetRequest](CostQuerySet#costquerysetrequest) | [CostQuerySetInfo](CostQuerySet#costquerysetinfo) |
 | [**list**](./CostQuerySet#list) | [CostQuerySetQuery](CostQuerySet#costquerysetquery) | [CostQuerySetsInfo](CostQuerySet#costquerysetsinfo) |
 | [**stat**](./CostQuerySet#stat) | [CostQuerySetStatQuery](CostQuerySet#costquerysetstatquery) | [Struct](CostQuerySet#struct) |
 
@@ -66,9 +66,6 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
 * **options** (Struct)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **tags** (Struct)  
 
 
@@ -96,11 +93,11 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
 
 * **tags** (Struct)   `Required` 
 
+* **domain_id** (string)   `Required` 
+
 * **user_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -154,9 +151,6 @@ Updates a specific CostQuerySet. You can make changes in the details of queries.
 * **cost_query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -195,11 +189,11 @@ Updates a specific CostQuerySet. You can make changes in the details of queries.
 
 * **tags** (Struct)   `Required` 
 
+* **domain_id** (string)   `Required` 
+
 * **user_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -253,9 +247,6 @@ Deletes a specific CostQuerySet. You must specify the `cost_query_set_id` of the
 * **cost_query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -294,15 +285,9 @@ Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet
 
 
 
-[GetCostQuerySetRequest](./CostQuerySet#getcostquerysetrequest)
+[CostQuerySetRequest](./CostQuerySet#costquerysetrequest)
 
 * **cost_query_set_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -311,7 +296,7 @@ Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet
 {{< highlight json >}}
 {
    "cost_query_set_id": "query-16ae671dc8fb",
-   "domain_id": "domain-58010aa2e451"
+    "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -328,11 +313,11 @@ Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet
 
 * **tags** (Struct)   `Required` 
 
+* **domain_id** (string)   `Required` 
+
 * **user_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -383,22 +368,13 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
 [CostQuerySetQuery](./CostQuerySet#costquerysetquery)
 
-* **domain_id** (string)   `Required` 
+* **data_source_id** (string)   `Required` 
 
 
 * **query** (Query)  
 
 
-* **data_source_id** (string)  
-
-
-* **cost_query_set_id** (string)  
-
-
 * **name** (string)  
-
-
-* **user_id** (string)  
 
 
 
@@ -496,13 +472,13 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 * **tags** (Struct)   `Required` 
 
     
+* **domain_id** (string)   `Required` 
+
+    
 * **user_id** (string)   `Required` 
 
     
 * **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -513,30 +489,18 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
     <br>
 
 ### CostQuerySetQuery
-* **domain_id** (string)   `Required` 
+* **data_source_id** (string)   `Required` 
 
     
 * **query** (Query)  
 
     
-* **data_source_id** (string)  
-
-    
-* **cost_query_set_id** (string)  
-
-    
 * **name** (string)  
-
-    
-* **user_id** (string)  
 
     <br>
 
 ### CostQuerySetRequest
 * **cost_query_set_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -545,9 +509,6 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
     
 * **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -569,29 +530,12 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 * **options** (Struct)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **tags** (Struct)  
-
-    <br>
-
-### GetCostQuerySetRequest
-* **cost_query_set_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
 ### UpdateCostQuerySetRequest
 * **cost_query_set_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

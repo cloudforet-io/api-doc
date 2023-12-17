@@ -70,11 +70,6 @@ Creates a new Protocol. When creating a protocol, you must specify the plugins p
   *Describe a Plugin information for protocol that include was used plugin, specific version, schema etc.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
-
 * **tags** (Struct)  
 
   *The tags for protocol.*
@@ -248,11 +243,6 @@ Updates a specific Protocol. The method `update` can update the name and tags on
 * **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
 
 
 * **name** (string)  
@@ -564,11 +554,6 @@ Enables a specific Protocol. If the Protocol is enabled, the Protocol can be use
   *The ID of Protocol.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
-
 
 
 
@@ -706,11 +691,6 @@ Disables a specific Protocol. If a Protocol is disabled, the Notification will n
 * **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
 
 
 
@@ -852,11 +832,6 @@ Deletes a specific Protocol. If there exists a channel using the Protocol, it ca
   *The ID of Protocol.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
-
 
 
 
@@ -899,16 +874,6 @@ Gets a specific Protocol. Prints detailed information about the Protocol.
 * **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
-
-* **only** (string)  `Repeated`   
-
-  *The list of the Protocol information column you want to be returned. It must be specified in the ProtocolInfo.*
 
 
 
@@ -1044,11 +1009,6 @@ Gets a list of Protocols. You can use a query to get a filtered list of Protocol
 
 
 [ProtocolQuery](./Protocol#protocolquery)
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
 
 * **query** (Query)  
 
@@ -1198,11 +1158,6 @@ Gets a list of Protocols. You can use a query to get a filtered list of Protocol
   *Describe a Plugin information for protocol that include was used plugin, specific version, schema etc.*
 
     
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
-    
 * **tags** (Struct)  
 
   *The tags for protocol.*
@@ -1213,16 +1168,6 @@ Gets a list of Protocols. You can use a query to get a filtered list of Protocol
 * **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
-    
-* **only** (string)  `Repeated`   
-
-  *The list of the Protocol information column you want to be returned. It must be specified in the ProtocolInfo.*
 
     <br>
 
@@ -1242,11 +1187,6 @@ Gets a list of Protocols. You can use a query to get a filtered list of Protocol
   *The Options that contains information about using plugin.*
 
     
-* **secret_id** (string)   `Required` 
-
-  *The ID of the Secret containing encrypted data to be used in the plugin.*
-
-    
 * **metadata** (Struct)   `Required` 
 
   *The metadata of plugin. It includes schema for the data that must be set for the Channel when creating the Channel using a Protocol.
@@ -1257,6 +1197,11 @@ The schema follows the JSON Schema format.*
 
   *Auto upgrade for plugin.
 If the upgrade_mode is AUTO, check the latest plugin version when running the plugin, and if a new version is existed, replace the plugin and then run it.*
+
+    
+* **secret_id** (string)  
+
+  *The ID of the Secret containing encrypted data to be used in the plugin.*
 
     <br>
 
@@ -1350,11 +1295,6 @@ INTERNAL or EXTERNAL only.*
     <br>
 
 ### ProtocolQuery
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
-    
 * **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
@@ -1386,22 +1326,12 @@ INTERNAL or EXTERNAL only.*
 
   *The ID of Protocol.*
 
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
-
     <br>
 
 ### ProtocolStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
   *Statistics Query format provided by SpaceONE. Please check the link for more information.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
 
     <br>
 
@@ -1443,11 +1373,6 @@ INTERNAL or EXTERNAL only.*
 * **protocol_id** (string)   `Required` 
 
   *The ID of Protocol.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain to which the Protocol belongs.*
 
     
 * **name** (string)  

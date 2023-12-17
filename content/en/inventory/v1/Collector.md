@@ -29,7 +29,7 @@ A Collector is a plugin instance collecting cloud resources. A Collector can col
 | [**update_plugin**](./Collector#update_plugin) | [UpdatePluginRequest](Collector#updatepluginrequest) | [CollectorInfo](Collector#collectorinfo) |
 | [**verify_plugin**](./Collector#verify_plugin) | [VerifyPluginRequest](Collector#verifypluginrequest) | [Empty](Collector#empty) |
 | [**delete**](./Collector#delete) | [CollectorRequest](Collector#collectorrequest) | [Empty](Collector#empty) |
-| [**get**](./Collector#get) | [GetCollectorRequest](Collector#getcollectorrequest) | [CollectorInfo](Collector#collectorinfo) |
+| [**get**](./Collector#get) | [CollectorRequest](Collector#collectorrequest) | [CollectorInfo](Collector#collectorinfo) |
 | [**list**](./Collector#list) | [CollectorQuery](Collector#collectorquery) | [CollectorsInfo](Collector#collectorsinfo) |
 | [**stat**](./Collector#stat) | [CollectorStatQuery](Collector#collectorstatquery) | [Struct](Collector#struct) |
 | [**collect**](./Collector#collect) | [CollectRequest](Collector#collectrequest) | [JobInfo](Collector#jobinfo) |
@@ -66,7 +66,7 @@ Creates a new Collector with information of the plugin to use. Information of th
 * **plugin_info** (PluginInfo)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **schedule** (Scheduled)  
@@ -75,10 +75,10 @@ Creates a new Collector with information of the plugin to use. Information of th
 * **provider** (string)  
 
 
-* **tags** (Struct)  
-
-
 * **secret_filter** (SecretFilter)  
+
+
+* **tags** (Struct)  
 
 
 
@@ -132,23 +132,27 @@ Creates a new Collector with information of the plugin to use. Information of th
 
 * **name** (string)   `Required` 
 
-* **plugin_info** (PluginInfo)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
 * **provider** (string)   `Required` 
 
 * **capability** (Struct)   `Required` 
 
+* **secret_filter** (SecretFilter)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
 * **schedule** (Scheduled)   `Required` 
 
-* **secret_filter** (SecretFilter)   `Required` 
+* **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
 * **last_collected_at** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 
 
@@ -233,9 +237,6 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 * **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -286,23 +287,27 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 
 * **name** (string)   `Required` 
 
-* **plugin_info** (PluginInfo)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
 * **provider** (string)   `Required` 
 
 * **capability** (Struct)   `Required` 
 
+* **secret_filter** (SecretFilter)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
 * **schedule** (Scheduled)   `Required` 
 
-* **secret_filter** (SecretFilter)   `Required` 
+* **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
 * **last_collected_at** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 
 
@@ -387,23 +392,27 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
 
 * **name** (string)   `Required` 
 
-* **plugin_info** (PluginInfo)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
 * **provider** (string)   `Required` 
 
 * **capability** (Struct)   `Required` 
 
+* **secret_filter** (SecretFilter)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
 * **schedule** (Scheduled)   `Required` 
 
-* **secret_filter** (SecretFilter)   `Required` 
+* **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
 * **last_collected_at** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 
 
@@ -505,9 +514,6 @@ Deletes a specific Collector. You must specify the `collector_id` of the Collect
 * **collector_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -545,15 +551,9 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
 
 
 
-[GetCollectorRequest](./Collector#getcollectorrequest)
+[CollectorRequest](./Collector#collectorrequest)
 
 * **collector_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -574,23 +574,27 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
 
 * **name** (string)   `Required` 
 
-* **plugin_info** (PluginInfo)   `Required` 
-
-* **tags** (Struct)   `Required` 
-
 * **provider** (string)   `Required` 
 
 * **capability** (Struct)   `Required` 
 
+* **secret_filter** (SecretFilter)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
 * **schedule** (Scheduled)   `Required` 
 
-* **secret_filter** (SecretFilter)   `Required` 
+* **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
 * **last_collected_at** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 
 
@@ -681,16 +685,16 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **name** (string)   `Required` 
 
 
-* **state** (State)   `Required` 
+* **secret_filter_state** (State)   `Required` 
 
 
-* **priority** (int32)   `Required` 
+* **schedule_state** (State)   `Required` 
+
+
+* **workspace_id** (string)   `Required` 
 
 
 * **plugin_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 
@@ -851,70 +855,6 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
 
 
- {{< tabs " collect " >}}
-
-
-
- {{< tab "Response Example" >}}
-
-[JobInfo](#JOBINFO)
-* **job_id** (string)   `Required` 
-
-* **status** (Status)   `Required` 
-
-* **total_tasks** (int32)   `Required` 
-
-* **remained_tasks** (int32)   `Required` 
-
-* **success_tasks** (int32)   `Required` 
-
-* **failure_tasks** (int32)   `Required` 
-
-* **collector_id** (string)   `Required` 
-
-* **secret_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
-
-* **plugin_id** (string)   `Required` 
-
-* **created_at** (string)   `Required` 
-
-* **updated_at** (string)   `Required` 
-
-* **finished_at** (string)   `Required` 
-
-
-
-{{< highlight json >}}
-{
-     "job_id": "job-123456789012",
-     "status": "ERROR",
-     "filter": {},
-     "total_tasks": 2,
-     "collector_info": {
-         "collector_id": "collector-123456789012",
-         "name": "Jenkins Collector",
-         "state": "ENABLED",
-         "plugin_info": {
-             "plugin_id": "plugin-jenkins-inven-collector",
-             "version": "0.1.1"
-         },
-         "provider": "jenkins",
-         "capability": {},
-         "is_public": true
-     },
-     "domain_id": "domain-123456789012",
-     "created_at": "2022-01-01T10:00:01.389Z",
-     "updated_at": "2022-01-01T10:00:01.389Z",
-     "finished_at": "2022-01-01T10:02:11.270Z"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-{{< /tabs >}}
-
 
     
 
@@ -930,19 +870,7 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
-* **filter** (Struct)  
-
-    
 * **secret_id** (string)  
-
-    
-* **collect_mode** (string)  
-
-    
-* **use_cache** (bool)  
 
     <br>
 
@@ -953,31 +881,37 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **name** (string)   `Required` 
 
     
-* **plugin_info** (PluginInfo)   `Required` 
-
-    
-* **tags** (Struct)   `Required` 
-
-    
 * **provider** (string)   `Required` 
 
     
 * **capability** (Struct)   `Required` 
 
     
+* **secret_filter** (SecretFilter)   `Required` 
+
+    
+* **plugin_info** (PluginInfo)   `Required` 
+
+    
 * **schedule** (Scheduled)   `Required` 
 
     
-* **secret_filter** (SecretFilter)   `Required` 
+* **tags** (Struct)   `Required` 
+
+    
+* **resource_group** (ResourceGroup)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
 
     
 * **last_collected_at** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -991,32 +925,26 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **name** (string)   `Required` 
 
     
-* **state** (State)   `Required` 
+* **secret_filter_state** (State)   `Required` 
 
     
-* **priority** (int32)   `Required` 
+* **schedule_state** (State)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **plugin_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
 ### CollectorRequest
 * **collector_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CollectorStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -1035,7 +963,7 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **plugin_info** (PluginInfo)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **schedule** (Scheduled)  
@@ -1044,104 +972,10 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **provider** (string)  
 
     
-* **tags** (Struct)  
-
-    
 * **secret_filter** (SecretFilter)  
 
-    <br>
-
-### CreateScheduleRequest
-* **domain_id** (string)   `Required` 
-
     
-* **collector_id** (string)   `Required` 
-
-    
-* **schedule** (Scheduled)   `Required` 
-
-    
-* **name** (string)  
-
-    
-* **collect_mode** (string)  
-
-    
-* **filter** (Struct)  
-
-    <br>
-
-### DeleteScheduleRequest
-* **domain_id** (string)   `Required` 
-
-    
-* **schedule_id** (string)   `Required` 
-
-    
-* **collector_id** (string)   `Required` 
-
-    <br>
-
-### ErrorInfo
-* **error_code** (string)   `Required` 
-
-    
-* **message** (string)   `Required` 
-
-    
-* **additional** (Struct)   `Required` 
-
-    <br>
-
-### GetCollectorRequest
-* **collector_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
-### JobInfo
-* **job_id** (string)   `Required` 
-
-    
-* **status** (Status)   `Required` 
-
-    
-* **total_tasks** (int32)   `Required` 
-
-    
-* **remained_tasks** (int32)   `Required` 
-
-    
-* **success_tasks** (int32)   `Required` 
-
-    
-* **failure_tasks** (int32)   `Required` 
-
-    
-* **collector_id** (string)   `Required` 
-
-    
-* **secret_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **plugin_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    
-* **updated_at** (string)   `Required` 
-
-    
-* **finished_at** (string)   `Required` 
+* **tags** (Struct)  
 
     <br>
 
@@ -1162,73 +996,11 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
     <br>
 
-### ScheduleInfo
-* **domain_id** (string)   `Required` 
-
-    
-* **schedule_id** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **collect_mode** (string)   `Required` 
-
-    
-* **schedule** (Scheduled)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    
-* **last_scheduled_at** (string)   `Required` 
-
-    
-* **collector_info** (CollectorInfo)   `Required` 
-
-    
-* **filter** (Struct)   `Required` 
-
-    <br>
-
-### ScheduleQuery
-* **collector_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **query** (Query)  
-
-    
-* **schedule_id** (string)  
-
-    <br>
-
-### ScheduleRequest
-* **domain_id** (string)   `Required` 
-
-    
-* **schedule_id** (string)   `Required` 
-
-    
-* **collector_id** (string)   `Required` 
-
-    <br>
-
 ### Scheduled
 * **state** (ScheduledState)   `Required` 
 
     
 * **hours** (int32)  `Repeated`    `Required` 
-
-    <br>
-
-### SchedulesInfo
-* **results** (ScheduleInfo)  `Repeated`    `Required` 
-
-    
-* **total_count** (int32)   `Required` 
 
     <br>
 
@@ -1259,9 +1031,6 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
@@ -1279,9 +1048,6 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 * **collector_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **version** (string)  
 
     
@@ -1292,39 +1058,8 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
     <br>
 
-### UpdateScheduleRequest
-* **domain_id** (string)   `Required` 
-
-    
-* **schedule_id** (string)   `Required` 
-
-    
-* **collector_id** (string)   `Required` 
-
-    
-* **name** (string)  
-
-    
-* **collect_mode** (string)  
-
-    
-* **schedule** (Scheduled)  
-
-    
-* **filter** (Struct)  
-
-    <br>
-
-### VerifyInfo
-* **status** (bool)   `Required` 
-
-    <br>
-
 ### VerifyPluginRequest
 * **collector_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **secret_id** (string)  

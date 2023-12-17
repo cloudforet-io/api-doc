@@ -85,9 +85,6 @@ bookFlatSection: true
 * **cloud_service_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -105,13 +102,16 @@ bookFlatSection: true
     
 * **updated_by** (string)  
 
+    
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
+
     <br>
 
 ### ChangeHistoryStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **cloud_service_id** (string)   `Required` 
@@ -133,8 +133,6 @@ bookFlatSection: true
     
 * **diff_count** (int32)   `Required` 
 
-  *repeated RecordDiff diff = 4;*
-
     
 * **user_id** (string)   `Required` 
 
@@ -149,6 +147,12 @@ bookFlatSection: true
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 

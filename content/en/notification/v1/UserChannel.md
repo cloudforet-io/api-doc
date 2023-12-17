@@ -79,16 +79,6 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
 
-* **user_id** (string)   `Required` 
-
-  *The ID of user*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 * **is_subscribe** (bool)  
 
   *Indicates whether subscriptions will be used.*
@@ -125,8 +115,6 @@ If is_subscribe is set to false, this value is ignored.*
    "data": {
        "email": "user1@email.com"
    },
-   "user_id": "user1@email.com",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -240,11 +228,6 @@ Updates a specific UserChannel. A UserChannel that has already been configured c
 * **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
 
 * **name** (string)  
@@ -404,11 +387,6 @@ Sets a schedule for a UserChannel. A schedule defines the time to receive a Noti
   *Indicates whether schedule will be used.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 * **schedule** (UserChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the user channel.*
@@ -431,7 +409,6 @@ Sets a schedule for a UserChannel. A schedule defines the time to receive a Noti
        ],
        "end_hour": 9
    },
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -552,11 +529,6 @@ Sets a subscription for a UserChannel. A subscription is a topic for channels to
   *Indicates whether subscriptions will be used.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 * **subscriptions** (string)  `Repeated`   
 
   *If is_subscribe is set to false, this value is ignored.*
@@ -572,7 +544,6 @@ Sets a subscription for a UserChannel. A subscription is a topic for channels to
    "subscriptions": [
        "monitoring.Alert"
    ],
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -686,11 +657,6 @@ Enables a specific UserChannel. If a UserChannel is enabled, the UserChannel can
 * **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
 
 
@@ -814,11 +780,6 @@ Disables a specific UserChannel. If a UserChannel is disabled, the Notification 
   *The ID of user channel.*
 
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 
 
 
@@ -938,11 +899,6 @@ Deletes a specific UserChannel. You must specify the `user_channel_id` of the Us
 * **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
-
-
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
 
 
@@ -1085,11 +1041,6 @@ Gets a list of all UserChannels. You can use a query to get a filtered list of U
 
 [UserChannelQuery](./UserChannel#userchannelquery)
 
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-
 * **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
@@ -1118,11 +1069,6 @@ Gets a list of all UserChannels. You can use a query to get a filtered list of U
 * **protocol_id** (string)  
 
   *The ID of protocol set in the user channel.*
-
-
-* **user_id** (string)  
-
-  *The ID of user using the user channel.*
 
 
 
@@ -1244,16 +1190,6 @@ In this case, the secret ID that is stored in the security service will be retur
 if JSON schema in the protocol's metadata is set to PLAIN_TEXT type, This data is not encrypted and stored directly in the DB.*
 
     
-* **user_id** (string)   `Required` 
-
-  *The ID of user*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-    
 * **is_subscribe** (bool)  
 
   *Indicates whether subscriptions will be used.*
@@ -1286,27 +1222,12 @@ If is_subscribe is set to false, this value is ignored.*
 
   *The ID of user channel.*
 
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-    
-* **only** (string)  `Repeated`   
-
-  *The list of the user channel information column you want to be returned. It must be specified in the UserChannelInfo.*
-
     <br>
 
 ### UpdateUserChannelRequest
 * **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
     
 * **name** (string)  
@@ -1345,11 +1266,6 @@ If a notification has a level and a notification level that this channel can rec
   *Indicates whether schedule will be used.*
 
     
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-    
 * **schedule** (UserChannelSchedule)  
 
   *Schedule for which you want to receive notifications through the user channel.*
@@ -1365,11 +1281,6 @@ If a notification has a level and a notification level that this channel can rec
 * **is_subscribe** (bool)   `Required` 
 
   *Indicates whether subscriptions will be used.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
     
 * **subscriptions** (string)  `Repeated`   
@@ -1451,11 +1362,6 @@ If a notification has a level and a notification level that this channel can rec
     <br>
 
 ### UserChannelQuery
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
-
-    
 * **query** (Query)  
 
   *Query format provided by SpaceONE. Please check the link for more information.*
@@ -1485,22 +1391,12 @@ If a notification has a level and a notification level that this channel can rec
 
   *The ID of protocol set in the user channel.*
 
-    
-* **user_id** (string)  
-
-  *The ID of user using the user channel.*
-
     <br>
 
 ### UserChannelRequest
 * **user_channel_id** (string)   `Required` 
 
   *The ID of user channel.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
     <br>
 
@@ -1528,11 +1424,6 @@ Only integer type can be set, and 1 to 24 can be.*
 * **query** (StatisticsQuery)   `Required` 
 
   *Statistics Query format provided by SpaceONE. Please check the link for more information.*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *The ID of domain.*
 
     <br>
 

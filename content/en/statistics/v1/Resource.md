@@ -55,9 +55,6 @@ Enables data preprocessing of different services. Although limited, it is possib
 * **aggregate** (StatAggregate)  `Repeated`    `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **page** (StatPage)  
 
 
@@ -131,9 +128,6 @@ Enables data preprocessing of different services. Although limited, it is possib
 
 ### ResourceStatRequest
 * **aggregate** (StatAggregate)  `Repeated`    `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **page** (StatPage)  

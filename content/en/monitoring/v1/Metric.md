@@ -59,9 +59,6 @@ Gets a list of all Metrics of one or more specified Resources. The parameter `re
 * **resources** (string)  `Repeated`    `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -181,9 +178,6 @@ Gets data of a single Metric. You must specify the parameter `metric` to get dat
 
 
 * **end** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **period** (int32)  
@@ -309,9 +303,6 @@ Gets data of a single Metric. You must specify the parameter `metric` to get dat
 * **end** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **period** (int32)  
 
     
@@ -341,9 +332,6 @@ Gets data of a single Metric. You must specify the parameter `metric` to get dat
 
     
 * **resources** (string)  `Repeated`    `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 

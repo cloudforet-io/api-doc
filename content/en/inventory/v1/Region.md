@@ -27,7 +27,7 @@ A Region is a resource storing regional information from each cloud service prov
 | [**create**](./Region#create) | [CreateRegionRequest](Region#createregionrequest) | [RegionInfo](Region#regioninfo) |
 | [**update**](./Region#update) | [UpdateRegionRequest](Region#updateregionrequest) | [RegionInfo](Region#regioninfo) |
 | [**delete**](./Region#delete) | [RegionRequest](Region#regionrequest) | [Empty](Region#empty) |
-| [**get**](./Region#get) | [GetRegionRequest](Region#getregionrequest) | [RegionInfo](Region#regioninfo) |
+| [**get**](./Region#get) | [RegionRequest](Region#regionrequest) | [RegionInfo](Region#regioninfo) |
 | [**list**](./Region#list) | [RegionQuery](Region#regionquery) | [RegionsInfo](Region#regionsinfo) |
 | [**stat**](./Region#stat) | [RegionStatQuery](Region#regionstatquery) | [Struct](Region#struct) |
 
@@ -61,9 +61,6 @@ Creates a new Region. As the parameter `region_key`, which is automatically crea
 
 
 * **region_code** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **provider** (string)  
@@ -107,6 +104,8 @@ Creates a new Region. As the parameter `region_key`, which is automatically crea
 
 * **domain_id** (string)   `Required` 
 
+* **workspace_id** (string)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -126,6 +125,7 @@ Creates a new Region. As the parameter `region_key`, which is automatically crea
        "latitude": "19.147428"
    },
    "domain_id": "domain-x1b3c34v432",
+   "workspace_id": "workspace-123456789012",
    "created_at": "2021-11-18T13:07:31.382Z",
    "updated_at": "2022-06-17T00:07:35.469Z"
 }
@@ -161,9 +161,6 @@ Updates a specific Region. You can make changes in Region settings, including `n
 [UpdateRegionRequest](./Region#updateregionrequest)
 
 * **region_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **name** (string)  
@@ -206,6 +203,8 @@ Updates a specific Region. You can make changes in Region settings, including `n
 
 * **domain_id** (string)   `Required` 
 
+* **workspace_id** (string)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -225,6 +224,7 @@ Updates a specific Region. You can make changes in Region settings, including `n
        "latitude": "19.147428"
    },
    "domain_id": "domain-x1b3c34v432",
+   "workspace_id": "workspace-123456789012",
    "created_at": "2021-11-18T13:07:31.382Z",
    "updated_at": "2022-06-17T00:07:35.469Z"
 }
@@ -260,9 +260,6 @@ Deletes a specific Region. You must specify the `region_id` of the Region to del
 [RegionRequest](./Region#regionrequest)
 
 * **region_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 
@@ -302,15 +299,9 @@ Gets a specific Region. Prints detailed information about the Region, including 
 
 
 
-[GetRegionRequest](./Region#getregionrequest)
+[RegionRequest](./Region#regionrequest)
 
 * **region_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -318,7 +309,7 @@ Gets a specific Region. Prints detailed information about the Region, including 
 
 {{< highlight json >}}
 {
-   "region_id": "region-f803eb00b567"
+   "region_id": "region-e41deed3c939"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -341,6 +332,8 @@ Gets a specific Region. Prints detailed information about the Region, including 
 
 * **domain_id** (string)   `Required` 
 
+* **workspace_id** (string)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -360,6 +353,7 @@ Gets a specific Region. Prints detailed information about the Region, including 
        "latitude": "19.147428"
    },
    "domain_id": "domain-x1b3c34v432",
+   "workspace_id": "workspace-123456789012",
    "created_at": "2021-11-18T13:07:31.382Z",
    "updated_at": "2022-06-17T00:07:35.469Z"
 }
@@ -394,9 +388,6 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
 
 [RegionQuery](./Region#regionquery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -413,6 +404,9 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
 
 
 * **provider** (string)  
+
+
+* **workspace_id** (string)  
 
 
 
@@ -458,6 +452,7 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
                "latitude": "19.147428"
            },
            "domain_id": "domain-x1b3c34v432",
+           "workspace_id": "workspace-123456789012",
            "created_at": "2021-11-18T13:07:31.382Z",
            "updated_at": "2022-06-17T00:07:35.469Z"
        },
@@ -473,6 +468,7 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
                "longitude": "5.6433213"
            },
            "domain_id": "domain-x1b3c34v432",
+           "workspace_id": "workspace-123456789012",
            "created_at": "2022-03-21T09:08:31.961Z",
            "updated_at": "2022-06-17T00:07:35.749Z"
        }
@@ -520,24 +516,10 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
 * **region_code** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **provider** (string)  
 
     
 * **tags** (Struct)  
-
-    <br>
-
-### GetRegionRequest
-* **region_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -563,6 +545,9 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
 * **domain_id** (string)   `Required` 
 
     
+* **workspace_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
@@ -571,9 +556,6 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
     <br>
 
 ### RegionQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -591,21 +573,18 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
     
 * **provider** (string)  
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### RegionRequest
 * **region_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### RegionStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -619,9 +598,6 @@ Gets a list of all Regions. You can use a query to get a filtered list of Region
 
 ### UpdateRegionRequest
 * **region_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

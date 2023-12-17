@@ -70,9 +70,6 @@ bookFlatSection: true
 * **resource_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **keyword** (string)  
 
     

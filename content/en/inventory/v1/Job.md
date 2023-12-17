@@ -25,7 +25,7 @@ A Job is an act of collecting external cloud resources through plugins.
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**delete**](./Job#delete) | [JobRequest](Job#jobrequest) | [Empty](Job#empty) |
-| [**get**](./Job#get) | [GetJobRequest](Job#getjobrequest) | [JobInfo](Job#jobinfo) |
+| [**get**](./Job#get) | [JobRequest](Job#jobrequest) | [JobInfo](Job#jobinfo) |
 | [**list**](./Job#list) | [JobsQuery](Job#jobsquery) | [JobsInfo](Job#jobsinfo) |
 | [**analyze**](./Job#analyze) | [JobAnalyzeQuery](Job#jobanalyzequery) | [Struct](Job#struct) |
 | [**stat**](./Job#stat) | [JobStatQuery](Job#jobstatquery) | [Struct](Job#struct) |
@@ -59,16 +59,12 @@ Deletes a specific Job. You must specify the `job_id` of the Job to delete.
 * **job_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "job_id": "job-123456789012",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -100,15 +96,9 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 
 
 
-[GetJobRequest](./Job#getjobrequest)
+[JobRequest](./Job#jobrequest)
 
 * **job_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -117,11 +107,71 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 {{< highlight json >}}
 {
    "job_id": "job-123456789012",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[JobInfo](#JOBINFO)
+* **job_id** (string)   `Required` 
+
+* **status** (Status)   `Required` 
+
+* **total_tasks** (int32)   `Required` 
+
+* **remained_tasks** (int32)   `Required` 
+
+* **success_tasks** (int32)   `Required` 
+
+* **failure_tasks** (int32)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **collector_id** (string)   `Required` 
+
+* **secret_id** (string)   `Required` 
+
+* **plugin_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+* **finished_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "job_id": "job-123456789012",
+     "status": "ERROR",
+     "filter": {},
+     "total_tasks": 2,
+     "collector_info": {
+         "collector_id": "collector-123456789012",
+         "name": "Jenkins Collector",
+         "state": "ENABLED",
+         "plugin_info": {
+             "plugin_id": "plugin-jenkins-inven-collector",
+             "version": "0.1.1"
+         },
+         "provider": "jenkins",
+         "capability": {},
+         "is_public": true
+     },
+     "domain_id": "domain-123456789012",
+     "created_at": "2022-01-01T10:00:01.389Z",
+     "updated_at": "2022-01-01T10:00:01.389Z",
+     "finished_at": "2022-01-01T10:02:11.270Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -151,9 +201,6 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 [JobsQuery](./Job#jobsquery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -163,10 +210,16 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 * **status** (JobStatus)  
 
 
+* **workspace_id** (string)  
+
+
 * **collector_id** (string)  
 
 
 * **secret_id** (string)  
+
+
+* **plugin_id** (string)  
 
 
 
@@ -213,6 +266,7 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
                },
                "is_public": true
            },
+           "resource_group": "DOMAIN",
            "domain_id": "domain-58010aa2e451",
            "created_at": "2022-06-17T08:00:01.225Z",
            "updated_at": "2022-06-17T08:00:01.225Z",
@@ -239,6 +293,7 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
                },
                "is_public": true
            },
+           "resource_group": "DOMAIN",
            "domain_id": "domain-58010aa2e451",
            "created_at": "2022-06-17T08:00:00.407Z",
            "updated_at": "2022-06-17T08:00:00.407Z",
@@ -298,38 +353,65 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 
 
-### GetJobRequest
-* **job_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### JobAnalyzeQuery
 * **query** (AnalyzeQuery)   `Required` 
 
+    <br>
+
+### JobInfo
+* **job_id** (string)   `Required` 
+
+    
+* **status** (Status)   `Required` 
+
+    
+* **total_tasks** (int32)   `Required` 
+
+    
+* **remained_tasks** (int32)   `Required` 
+
+    
+* **success_tasks** (int32)   `Required` 
+
+    
+* **failure_tasks** (int32)   `Required` 
+
+    
+* **resource_group** (ResourceGroup)   `Required` 
+
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **collector_id** (string)   `Required` 
+
+    
+* **secret_id** (string)   `Required` 
+
+    
+* **plugin_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
+
+    
+* **finished_at** (string)   `Required` 
 
     <br>
 
 ### JobRequest
 * **job_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### JobStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -342,9 +424,6 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
     <br>
 
 ### JobsQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -354,9 +433,15 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 * **status** (JobStatus)  
 
     
+* **workspace_id** (string)  
+
+    
 * **collector_id** (string)  
 
     
 * **secret_id** (string)  
+
+    
+* **plugin_id** (string)  
 
     <br>

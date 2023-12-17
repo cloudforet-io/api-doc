@@ -31,7 +31,7 @@ A CloudServiceQuerySet is query set for storing statistics data of CloudService.
 | [**test**](./CloudServiceQuerySet#test) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [Struct](CloudServiceQuerySet#struct) |
 | [**enable**](./CloudServiceQuerySet#enable) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [CloudServiceQuerySetInfo](CloudServiceQuerySet#cloudservicequerysetinfo) |
 | [**disable**](./CloudServiceQuerySet#disable) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [CloudServiceQuerySetInfo](CloudServiceQuerySet#cloudservicequerysetinfo) |
-| [**get**](./CloudServiceQuerySet#get) | [GetCloudServiceQuerySetRequest](CloudServiceQuerySet#getcloudservicequerysetrequest) | [CloudServiceQuerySetInfo](CloudServiceQuerySet#cloudservicequerysetinfo) |
+| [**get**](./CloudServiceQuerySet#get) | [CloudServiceQuerySetRequest](CloudServiceQuerySet#cloudservicequerysetrequest) | [CloudServiceQuerySetInfo](CloudServiceQuerySet#cloudservicequerysetinfo) |
 | [**list**](./CloudServiceQuerySet#list) | [CloudServiceQuerySetQuery](CloudServiceQuerySet#cloudservicequerysetquery) | [CloudServiceQuerySetsInfo](CloudServiceQuerySet#cloudservicequerysetsinfo) |
 | [**stat**](./CloudServiceQuerySet#stat) | [CloudServiceQuerySetStatQuery](CloudServiceQuerySet#cloudservicequerysetstatquery) | [Struct](CloudServiceQuerySet#struct) |
 
@@ -77,7 +77,7 @@ Create a new query set. Periodic statistics data is created based on the query s
 * **cloud_service_type** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **unit** (Struct)  
@@ -136,7 +136,11 @@ Create a new query set. Periodic statistics data is created based on the query s
 
 * **tags** (Struct)   `Required` 
 
+* **resource_group** (ResourceGroup)   `Required` 
+
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -208,9 +212,6 @@ Update a specific query set. You can only update the query set of custom type.
 * **query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -271,7 +272,11 @@ Update a specific query set. You can only update the query set of custom type.
 
 * **tags** (Struct)   `Required` 
 
+* **resource_group** (ResourceGroup)   `Required` 
+
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -343,9 +348,6 @@ Delete a specific query set.
 * **query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -386,9 +388,6 @@ Run a specific query set and store the result in the statistics data.
 [CloudServiceQuerySetRequest](./CloudServiceQuerySet#cloudservicequerysetrequest)
 
 * **query_set_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 
@@ -433,9 +432,6 @@ Run a specific query set and store the result in the statistics data.
 * **query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -478,9 +474,6 @@ Enable a specific query set.
 * **query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -519,7 +512,11 @@ Enable a specific query set.
 
 * **tags** (Struct)   `Required` 
 
+* **resource_group** (ResourceGroup)   `Required` 
+
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -591,9 +588,6 @@ Disable a specific query set. query set is not executed when disabled.
 * **query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -632,7 +626,11 @@ Disable a specific query set. query set is not executed when disabled.
 
 * **tags** (Struct)   `Required` 
 
+* **resource_group** (ResourceGroup)   `Required` 
+
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -699,15 +697,9 @@ Get a specific query set.
 
 
 
-[GetCloudServiceQuerySetRequest](./CloudServiceQuerySet#getcloudservicequerysetrequest)
+[CloudServiceQuerySetRequest](./CloudServiceQuerySet#cloudservicequerysetrequest)
 
 * **query_set_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -748,7 +740,11 @@ Get a specific query set.
 
 * **tags** (Struct)   `Required` 
 
+* **resource_group** (ResourceGroup)   `Required` 
+
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -818,9 +814,6 @@ You can use a query to get a filtered list of query sets.
 
 [CloudServiceQuerySetQuery](./CloudServiceQuerySet#cloudservicequerysetquery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -845,6 +838,9 @@ You can use a query to get a filtered list of query sets.
 * **cloud_service_type** (string)  
 
 
+* **workspace_id** (string)  
+
+
 
 
 
@@ -858,6 +854,7 @@ You can use a query to get a filtered list of query sets.
    "provider": "aws",
    "cloud_service_group": "EC2",
    "cloud_service_type": "Instance",
+   "resource_group": "DOMAIN",
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -979,7 +976,13 @@ You can use a query to get a filtered list of query sets.
 * **tags** (Struct)   `Required` 
 
     
+* **resource_group** (ResourceGroup)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -990,9 +993,6 @@ You can use a query to get a filtered list of query sets.
     <br>
 
 ### CloudServiceQuerySetQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -1016,21 +1016,18 @@ You can use a query to get a filtered list of query sets.
     
 * **cloud_service_type** (string)  
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### CloudServiceQuerySetRequest
 * **query_set_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CloudServiceQuerySetStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -1058,7 +1055,7 @@ You can use a query to get a filtered list of query sets.
 * **cloud_service_type** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **unit** (Struct)  
@@ -1068,22 +1065,8 @@ You can use a query to get a filtered list of query sets.
 
     <br>
 
-### GetCloudServiceQuerySetRequest
-* **query_set_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### UpdateCloudServiceQuerySetRequest
 * **query_set_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

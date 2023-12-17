@@ -28,7 +28,7 @@ A CollectorRule is a cloud service resource filtering the raw data from the Coll
 | [**update**](./CollectorRule#update) | [UpdateCollectorRuleRequest](CollectorRule#updatecollectorrulerequest) | [CollectorRuleInfo](CollectorRule#collectorruleinfo) |
 | [**change_order**](./CollectorRule#change_order) | [ChangeCollectorRuleOrderRequest](CollectorRule#changecollectorruleorderrequest) | [CollectorRuleInfo](CollectorRule#collectorruleinfo) |
 | [**delete**](./CollectorRule#delete) | [CollectorRuleRequest](CollectorRule#collectorrulerequest) | [Empty](CollectorRule#empty) |
-| [**get**](./CollectorRule#get) | [GetCollectorRuleRequest](CollectorRule#getcollectorrulerequest) | [CollectorRuleInfo](CollectorRule#collectorruleinfo) |
+| [**get**](./CollectorRule#get) | [CollectorRuleRequest](CollectorRule#collectorrulerequest) | [CollectorRuleInfo](CollectorRule#collectorruleinfo) |
 | [**list**](./CollectorRule#list) | [CollectorRuleQuery](CollectorRule#collectorrulequery) | [CollectorRulesInfo](CollectorRule#collectorrulesinfo) |
 | [**stat**](./CollectorRule#stat) | [CollectorRuleStatQuery](CollectorRule#collectorrulestatquery) | [Struct](CollectorRule#struct) |
 
@@ -58,16 +58,13 @@ Creates a new CollectorRule. When creating the cloud service, this method can ap
 
 [CreateCollectorRuleRequest](./CollectorRule#createcollectorrulerequest)
 
+* **collector_id** (string)   `Required` 
+
+
 * **conditions_policy** (ConditionsPolicy)   `Required` 
 
 
 * **actions** (CollectorRuleActions)   `Required` 
-
-
-* **collector_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **name** (string)  
@@ -107,6 +104,8 @@ Creates a new CollectorRule. When creating the cloud service, this method can ap
 
 * **name** (string)   `Required` 
 
+* **rule_type** (RuleType)   `Required` 
+
 * **order** (int32)   `Required` 
 
 * **conditions** (CollectorRuleCondition)  `Repeated`   `Required` 
@@ -119,11 +118,13 @@ Creates a new CollectorRule. When creating the cloud service, this method can ap
 
 * **tags** (Struct)   `Required` 
 
-* **rule_type** (string)   `Required` 
-
-* **collector_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **collector_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -186,9 +187,6 @@ Updates a specific CollectorRule. You can make changes in CollectorRule settings
 * **collector_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -237,6 +235,8 @@ Updates a specific CollectorRule. You can make changes in CollectorRule settings
 
 * **name** (string)   `Required` 
 
+* **rule_type** (RuleType)   `Required` 
+
 * **order** (int32)   `Required` 
 
 * **conditions** (CollectorRuleCondition)  `Repeated`   `Required` 
@@ -249,11 +249,13 @@ Updates a specific CollectorRule. You can make changes in CollectorRule settings
 
 * **tags** (Struct)   `Required` 
 
-* **rule_type** (string)   `Required` 
-
-* **collector_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **collector_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -319,9 +321,6 @@ Changes the priority order of the CollectorRules to apply. If there are multiple
 * **order** (int32)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -341,6 +340,8 @@ Changes the priority order of the CollectorRules to apply. If there are multiple
 
 * **name** (string)   `Required` 
 
+* **rule_type** (RuleType)   `Required` 
+
 * **order** (int32)   `Required` 
 
 * **conditions** (CollectorRuleCondition)  `Repeated`   `Required` 
@@ -353,11 +354,13 @@ Changes the priority order of the CollectorRules to apply. If there are multiple
 
 * **tags** (Struct)   `Required` 
 
-* **rule_type** (string)   `Required` 
-
-* **collector_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **collector_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -420,9 +423,6 @@ Deletes a specific CollectorRule. You must specify the `collector_rule_id` of th
 * **collector_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -460,15 +460,9 @@ Gets a specific CollectorRule. Prints detailed information about the CollectorRu
 
 
 
-[GetCollectorRuleRequest](./CollectorRule#getcollectorrulerequest)
+[CollectorRuleRequest](./CollectorRule#collectorrulerequest)
 
 * **collector_rule_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -489,6 +483,8 @@ Gets a specific CollectorRule. Prints detailed information about the CollectorRu
 
 * **name** (string)   `Required` 
 
+* **rule_type** (RuleType)   `Required` 
+
 * **order** (int32)   `Required` 
 
 * **conditions** (CollectorRuleCondition)  `Repeated`   `Required` 
@@ -501,11 +497,13 @@ Gets a specific CollectorRule. Prints detailed information about the CollectorRu
 
 * **tags** (Struct)   `Required` 
 
-* **rule_type** (string)   `Required` 
-
-* **collector_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **collector_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -565,9 +563,6 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 
 [CollectorRuleQuery](./CollectorRule#collectorrulequery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -577,7 +572,13 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 * **name** (string)  
 
 
-* **data_source_id** (string)  
+* **rule_type** (RuleType)  
+
+
+* **workspace_id** (string)  
+
+
+* **collector_id** (string)  
 
 
 
@@ -684,9 +685,6 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
     
 * **order** (int32)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CollectorRuleActions
@@ -721,6 +719,9 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 * **name** (string)   `Required` 
 
     
+* **rule_type** (RuleType)   `Required` 
+
+    
 * **order** (int32)   `Required` 
 
     
@@ -739,13 +740,16 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 * **tags** (Struct)   `Required` 
 
     
-* **rule_type** (string)   `Required` 
-
-    
-* **collector_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **collector_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -758,9 +762,6 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
     <br>
 
 ### CollectorRuleQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -770,23 +771,23 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 * **name** (string)  
 
     
-* **data_source_id** (string)  
+* **rule_type** (RuleType)  
+
+    
+* **workspace_id** (string)  
+
+    
+* **collector_id** (string)  
 
     <br>
 
 ### CollectorRuleRequest
 * **collector_rule_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CollectorRuleStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -799,16 +800,13 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
     <br>
 
 ### CreateCollectorRuleRequest
+* **collector_id** (string)   `Required` 
+
+    
 * **conditions_policy** (ConditionsPolicy)   `Required` 
 
     
 * **actions** (CollectorRuleActions)   `Required` 
-
-    
-* **collector_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  
@@ -824,17 +822,6 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 
     <br>
 
-### GetCollectorRuleRequest
-* **collector_rule_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### MatchRule
 * **source** (string)   `Required` 
 
@@ -845,9 +832,6 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 
 ### UpdateCollectorRuleRequest
 * **collector_rule_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

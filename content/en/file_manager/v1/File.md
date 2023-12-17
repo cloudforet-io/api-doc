@@ -28,7 +28,7 @@ bookFlatSection: true
 | [**update**](./File#update) | [UpdateFileRequest](File#updatefilerequest) | [FileInfo](File#fileinfo) |
 | [**delete**](./File#delete) | [FileRequest](File#filerequest) | [Empty](File#empty) |
 | [**get_download_url**](./File#get_download_url) | [FileRequest](File#filerequest) | [FileInfo](File#fileinfo) |
-| [**get**](./File#get) | [GetFileRequest](File#getfilerequest) | [FileInfo](File#fileinfo) |
+| [**get**](./File#get) | [FileRequest](File#filerequest) | [FileInfo](File#fileinfo) |
 | [**list**](./File#list) | [FileSearchQuery](File#filesearchquery) | [FilesInfo](File#filesinfo) |
 | [**stat**](./File#stat) | [FileStatQuery](File#filestatquery) | [Struct](File#struct) |
 
@@ -167,10 +167,7 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **tags** (Struct)  
@@ -180,6 +177,9 @@ bookFlatSection: true
 
     
 * **workspace_id** (string)  
+
+    
+* **domain_id** (string)  
 
     <br>
 
@@ -193,16 +193,10 @@ bookFlatSection: true
 * **state** (FileState)   `Required` 
 
     
+* **resource_group** (ResourceGroup)   `Required` 
+
+    
 * **file_type** (string)   `Required` 
-
-    
-* **upload_url** (string)   `Required` 
-
-    
-* **upload_options** (Struct)   `Required` 
-
-    
-* **download_url** (string)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -211,16 +205,25 @@ bookFlatSection: true
 * **reference** (FileReference)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
-
-    
 * **workspace_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
 
     
+* **user_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
+
+    
+* **upload_url** (string)  
+
+    
+* **upload_options** (Struct)  
+
+    
+* **download_url** (string)  
 
     <br>
 
@@ -234,12 +237,6 @@ bookFlatSection: true
 
 ### FileRequest
 * **file_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
 
     <br>
 
@@ -265,13 +262,7 @@ bookFlatSection: true
 * **resource_id** (string)  
 
     
-* **permission_group** (string)  
-
-    
-* **workspace_id** (string)  
-
-    
-* **domain_id** (string)  
+* **resource_group** (ResourceGroup)  
 
     <br>
 
@@ -291,30 +282,13 @@ bookFlatSection: true
 
     <br>
 
-### GetFileRequest
-* **file_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
-    <br>
-
 ### UpdateFileRequest
 * **file_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **tags** (Struct)  
 
     
 * **reference** (FileReference)  
-
-    
-* **workspace_id** (string)  
 
     <br>

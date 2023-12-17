@@ -25,7 +25,7 @@ A Job is an act of collecting external cost data through plugins. The data to co
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**cancel**](./Job#cancel) | [JobRequest](Job#jobrequest) | [JobInfo](Job#jobinfo) |
-| [**get**](./Job#get) | [GetJobRequest](Job#getjobrequest) | [JobInfo](Job#jobinfo) |
+| [**get**](./Job#get) | [JobRequest](Job#jobrequest) | [JobInfo](Job#jobinfo) |
 | [**list**](./Job#list) | [JobQuery](Job#jobquery) | [JobsInfo](Job#jobsinfo) |
 | [**stat**](./Job#stat) | [JobStatQuery](Job#jobstatquery) | [Struct](Job#struct) |
 
@@ -58,9 +58,6 @@ Cancels a specific Job. You can manually cease a Job in run with this method.
 * **job_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -89,17 +86,21 @@ Cancels a specific Job. You can manually cease a Job in run with this method.
 
 * **remained_tasks** (int32)   `Required` 
 
-* **data_source_id** (string)   `Required` 
+* **changed** (ChangedInfo)  `Repeated`   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
 
 * **finished_at** (string)   `Required` 
-
-* **changed** (ChangedInfo)  `Repeated`   `Required` 
 
 
 
@@ -153,15 +154,9 @@ Gets a specific Job. Prints detailed information about the Job, including the pl
 
 
 
-[GetJobRequest](./Job#getjobrequest)
+[JobRequest](./Job#jobrequest)
 
 * **job_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -169,7 +164,7 @@ Gets a specific Job. Prints detailed information about the Job, including the pl
 
 {{< highlight json >}}
 {
-   "job_id": "job-85cf2c385252"
+   "job_id": "job-07994c7c9021"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -192,17 +187,21 @@ Gets a specific Job. Prints detailed information about the Job, including the pl
 
 * **remained_tasks** (int32)   `Required` 
 
-* **data_source_id** (string)   `Required` 
+* **changed** (ChangedInfo)  `Repeated`   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
 
 * **finished_at** (string)   `Required` 
-
-* **changed** (ChangedInfo)  `Repeated`   `Required` 
 
 
 
@@ -258,9 +257,6 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 [JobQuery](./Job#jobquery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -268,6 +264,9 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 
 * **status** (Status)  
+
+
+* **workspace_id** (string)  
 
 
 * **data_source_id** (string)  
@@ -382,17 +381,6 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
     <br>
 
-### GetJobRequest
-* **job_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### JobInfo
 * **job_id** (string)   `Required` 
 
@@ -415,10 +403,19 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 * **remained_tasks** (int32)   `Required` 
 
     
-* **data_source_id** (string)   `Required` 
+* **changed** (ChangedInfo)  `Repeated`    `Required` 
+
+    
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -429,15 +426,9 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
     
 * **finished_at** (string)   `Required` 
 
-    
-* **changed** (ChangedInfo)  `Repeated`    `Required` 
-
     <br>
 
 ### JobQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -447,6 +438,9 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 * **status** (Status)  
 
     
+* **workspace_id** (string)  
+
+    
 * **data_source_id** (string)  
 
     <br>
@@ -454,16 +448,10 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 ### JobRequest
 * **job_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### JobStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 

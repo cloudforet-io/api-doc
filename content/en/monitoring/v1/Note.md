@@ -27,7 +27,7 @@ A Note is a comment on an Event, and is used for incident management.
 | [**create**](./Note#create) | [CreateNoteRequest](Note#createnoterequest) | [NoteInfo](Note#noteinfo) |
 | [**update**](./Note#update) | [UpdateNoteRequest](Note#updatenoterequest) | [NoteInfo](Note#noteinfo) |
 | [**delete**](./Note#delete) | [NoteRequest](Note#noterequest) | [Empty](Note#empty) |
-| [**get**](./Note#get) | [GetNoteRequest](Note#getnoterequest) | [NoteInfo](Note#noteinfo) |
+| [**get**](./Note#get) | [NoteRequest](Note#noterequest) | [NoteInfo](Note#noteinfo) |
 | [**list**](./Note#list) | [NoteQuery](Note#notequery) | [NotesInfo](Note#notesinfo) |
 | [**stat**](./Note#stat) | [NoteStatQuery](Note#notestatquery) | [Struct](Note#struct) |
 
@@ -63,9 +63,6 @@ Creates a new Note. You can create Notes for each Alert to record the informatio
 * **note** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -73,7 +70,6 @@ Creates a new Note. You can create Notes for each Alert to record the informatio
 {
    "alert_id": "alert-160ce04f6908",
    "note": "This is a description",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -91,6 +87,8 @@ Creates a new Note. You can create Notes for each Alert to record the informatio
 * **created_by** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -142,9 +140,6 @@ Updates a specific Note. You must specify the `note_id` for Note validation chec
 * **note_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **note** (string)  
 
 
@@ -155,7 +150,6 @@ Updates a specific Note. You must specify the `note_id` for Note validation chec
 {
    "note_id": "note-df107d31bf20",
    "note": "This is a test",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -173,6 +167,8 @@ Updates a specific Note. You must specify the `note_id` for Note validation chec
 * **created_by** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -224,16 +220,12 @@ Deletes a specific Note. You must specify the `note_id` of the Note to delete.
 * **note_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "note_id": "note-0bfac585bf5a",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -265,15 +257,9 @@ Gets a specific Note. You must specify the `note_id` and `domain_id`.
 
 
 
-[GetNoteRequest](./Note#getnoterequest)
+[NoteRequest](./Note#noterequest)
 
 * **note_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -282,7 +268,6 @@ Gets a specific Note. You must specify the `note_id` and `domain_id`.
 {{< highlight json >}}
 {
    "note_id": "note-0bfac585bf5a",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -300,6 +285,8 @@ Gets a specific Note. You must specify the `note_id` and `domain_id`.
 * **created_by** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -361,9 +348,6 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
 
 * **project_id** (string)  
-
-
-* **domain_id** (string)  
 
 
 
@@ -451,20 +435,6 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
     
 * **note** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    <br>
-
-### GetNoteRequest
-* **note_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
     <br>
 
 ### NoteInfo
@@ -481,6 +451,9 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
     
 * **project_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -505,24 +478,15 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
     
 * **project_id** (string)  
 
-    
-* **domain_id** (string)  
-
     <br>
 
 ### NoteRequest
 * **note_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### NoteStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -536,9 +500,6 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
 ### UpdateNoteRequest
 * **note_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **note** (string)  

@@ -28,7 +28,7 @@ bookFlatSection: true
 | [**update**](./CloudServiceReport#update) | [UpdateCloudServiceReportRequest](CloudServiceReport#updatecloudservicereportrequest) | [CloudServiceReportInfo](CloudServiceReport#cloudservicereportinfo) |
 | [**delete**](./CloudServiceReport#delete) | [CloudServiceReportRequest](CloudServiceReport#cloudservicereportrequest) | [Empty](CloudServiceReport#empty) |
 | [**send**](./CloudServiceReport#send) | [CloudServiceReportRequest](CloudServiceReport#cloudservicereportrequest) | [Empty](CloudServiceReport#empty) |
-| [**get**](./CloudServiceReport#get) | [GetCloudServiceReportRequest](CloudServiceReport#getcloudservicereportrequest) | [CloudServiceReportInfo](CloudServiceReport#cloudservicereportinfo) |
+| [**get**](./CloudServiceReport#get) | [CloudServiceReportRequest](CloudServiceReport#cloudservicereportrequest) | [CloudServiceReportInfo](CloudServiceReport#cloudservicereportinfo) |
 | [**list**](./CloudServiceReport#list) | [CloudServiceReportQuery](CloudServiceReport#cloudservicereportquery) | [CloudServiceReportsInfo](CloudServiceReport#cloudservicereportsinfo) |
 | [**stat**](./CloudServiceReport#stat) | [CloudServiceReportStatQuery](CloudServiceReport#cloudservicereportstatquery) | [Struct](CloudServiceReport#struct) |
 
@@ -176,22 +176,28 @@ bookFlatSection: true
 * **file_format** (FileFormat)   `Required` 
 
     
-* **schedule** (ReportSchedule)   `Required` 
-
-    
-* **target** (Struct)   `Required` 
-
-    
 * **timezone** (string)   `Required` 
 
     
 * **language** (string)   `Required` 
 
     
+* **schedule** (ReportSchedule)   `Required` 
+
+    
+* **target** (Struct)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
+* **resource_group** (ResourceGroup)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -202,9 +208,6 @@ bookFlatSection: true
     <br>
 
 ### CloudServiceReportQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -213,21 +216,18 @@ bookFlatSection: true
     
 * **name** (string)  
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### CloudServiceReportRequest
 * **report_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CloudServiceReportStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -252,7 +252,7 @@ bookFlatSection: true
 * **target** (Struct)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **file_format** (FileFormat)  
@@ -265,17 +265,6 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
-
-    <br>
-
-### GetCloudServiceReportRequest
-* **report_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -294,9 +283,6 @@ bookFlatSection: true
 * **report_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
@@ -306,16 +292,16 @@ bookFlatSection: true
 * **file_format** (FileFormat)  
 
     
-* **schedule** (ReportSchedule)  
-
-    
-* **target** (Struct)  
-
-    
 * **timezone** (string)  
 
     
 * **language** (string)  
+
+    
+* **schedule** (ReportSchedule)  
+
+    
+* **target** (Struct)  
 
     
 * **tags** (Struct)  

@@ -57,16 +57,12 @@ Creates a new History. Gets a Schedule as an input and creates a History as an o
 * **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "schedule_id": "sch-b1d8be347bed",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -100,9 +96,6 @@ Gets a list of all Histories. You can use a query to get a filtered list of Hist
 
 [QueryHistoryRequest](./History#queryhistoryrequest)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -115,7 +108,6 @@ Gets a list of all Histories. You can use a query to get a filtered list of Hist
 {{< highlight json >}}
 {
    "query": {},
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -199,9 +191,6 @@ Gets a list of all Histories. You can use a query to get a filtered list of Hist
 ### CreateHistoryRequest
 * **schedule_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### HistoryInfo
@@ -214,9 +203,6 @@ Gets a list of all Histories. You can use a query to get a filtered list of Hist
 
 ### HistoryStatRequest
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **topic** (string)  
@@ -238,9 +224,6 @@ Gets a list of all Histories. You can use a query to get a filtered list of Hist
     <br>
 
 ### QueryHistoryRequest
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     

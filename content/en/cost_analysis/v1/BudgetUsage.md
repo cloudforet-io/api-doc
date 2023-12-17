@@ -54,22 +54,25 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 
 [BudgetUsageQuery](./BudgetUsage#budgetusagequery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
-
-
-* **budget_id** (string)  
-
-
-* **data_source_id** (string)  
 
 
 * **name** (string)  
 
 
 * **date** (string)  
+
+
+* **workspace_id** (string)  
+
+
+* **project_id** (string)  
+
+
+* **budget_id** (string)  
+
+
+* **data_source_id** (string)  
 
 
 
@@ -188,9 +191,6 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 * **query** (TimeSeriesAnalyzeQuery)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **budget_id** (string)  
 
     
@@ -220,13 +220,16 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
 * **provider_filter** (BudgetUsageProviderFilter)   `Required` 
 
     
-* **project_id** (string)   `Required` 
-
-    
-* **project_group_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **data_source_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -245,16 +248,7 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
     <br>
 
 ### BudgetUsageQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
-
-    
-* **budget_id** (string)  
-
-    
-* **data_source_id** (string)  
 
     
 * **name** (string)  
@@ -262,13 +256,22 @@ Gets a list of all BudgetUsages. You can use a query to get a filtered list of B
     
 * **date** (string)  
 
+    
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
+
+    
+* **budget_id** (string)  
+
+    
+* **data_source_id** (string)  
+
     <br>
 
 ### BudgetUsageStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **budget_id** (string)  

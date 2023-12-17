@@ -27,7 +27,7 @@ A CloudService is data of an `instance` of a `resource`. A CloudService follows 
 | [**create**](./CloudService#create) | [CreateServiceRequest](CloudService#createservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
 | [**update**](./CloudService#update) | [UpdateCloudServiceRequest](CloudService#updatecloudservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
 | [**delete**](./CloudService#delete) | [CloudServiceRequest](CloudService#cloudservicerequest) | [Empty](CloudService#empty) |
-| [**get**](./CloudService#get) | [GetCloudServiceRequest](CloudService#getcloudservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
+| [**get**](./CloudService#get) | [CloudServiceRequest](CloudService#cloudservicerequest) | [CloudServiceInfo](CloudService#cloudserviceinfo) |
 | [**list**](./CloudService#list) | [CloudServiceQuery](CloudService#cloudservicequery) | [CloudServicesInfo](CloudService#cloudservicesinfo) |
 | [**export**](./CloudService#export) | [CloudServiceExportRequest](CloudService#cloudserviceexportrequest) | [Struct](CloudService#struct) |
 | [**analyze**](./CloudService#analyze) | [CloudServiceAnalyzeQuery](CloudService#cloudserviceanalyzequery) | [Struct](CloudService#struct) |
@@ -69,9 +69,6 @@ Creates a new CloudService. A CloudService instance is created based on data inc
 
 
 * **data** (Struct)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **name** (string)  
@@ -168,6 +165,8 @@ Creates a new CloudService. A CloudService instance is created based on data inc
 
 * **state** (string)   `Required` 
 
+* **ip_addresses** (string)  `Repeated`   `Required` 
+
 * **account** (string)   `Required` 
 
 * **instance_type** (string)   `Required` 
@@ -192,13 +191,13 @@ Creates a new CloudService. A CloudService instance is created based on data inc
 
 * **collection_info** (CollectionInfo)  `Repeated`   `Required` 
 
-* **ip_addresses** (string)  `Repeated`   `Required` 
-
 * **region_code** (string)   `Required` 
 
-* **project_id** (string)   `Required` 
-
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -263,6 +262,7 @@ Creates a new CloudService. A CloudService instance is created based on data inc
    },
    "ip_addresses": [],
    "region_code": "ap-northeast-1",
+   "workspace_id": "workspace-58010aa2e451",
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-22T06:38:48.989Z",
    "updated_at": "2022-06-22T06:38:48.989Z",
@@ -302,9 +302,6 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
 * **cloud_service_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -338,12 +335,6 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
 * **project_id** (string)  
 
 
-* **release_project** (bool)  
-
-
-* **release_region** (bool)  
-
-
 
 
 
@@ -373,6 +364,8 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
 
 * **state** (string)   `Required` 
 
+* **ip_addresses** (string)  `Repeated`   `Required` 
+
 * **account** (string)   `Required` 
 
 * **instance_type** (string)   `Required` 
@@ -397,13 +390,13 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
 
 * **collection_info** (CollectionInfo)  `Repeated`   `Required` 
 
-* **ip_addresses** (string)  `Repeated`   `Required` 
-
 * **region_code** (string)   `Required` 
 
-* **project_id** (string)   `Required` 
-
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -468,6 +461,7 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
    },
    "ip_addresses": [],
    "region_code": "ap-northeast-1",
+   "workspace_id": "workspace-58010aa2e451",
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-22T06:38:48.989Z",
    "updated_at": "2022-06-22T06:38:48.989Z",
@@ -507,9 +501,6 @@ Deletes a specific CloudService. You must specify the `cloud_service_id` of the 
 * **cloud_service_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -547,15 +538,9 @@ Gets a specific CloudService. Prints detailed information about the CloudService
 
 
 
-[GetCloudServiceRequest](./CloudService#getcloudservicerequest)
+[CloudServiceRequest](./CloudService#cloudservicerequest)
 
 * **cloud_service_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -577,6 +562,8 @@ Gets a specific CloudService. Prints detailed information about the CloudService
 * **name** (string)   `Required` 
 
 * **state** (string)   `Required` 
+
+* **ip_addresses** (string)  `Repeated`   `Required` 
 
 * **account** (string)   `Required` 
 
@@ -602,13 +589,13 @@ Gets a specific CloudService. Prints detailed information about the CloudService
 
 * **collection_info** (CollectionInfo)  `Repeated`   `Required` 
 
-* **ip_addresses** (string)  `Repeated`   `Required` 
-
 * **region_code** (string)   `Required` 
 
-* **project_id** (string)   `Required` 
-
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -673,6 +660,7 @@ Gets a specific CloudService. Prints detailed information about the CloudService
    },
    "ip_addresses": [],
    "region_code": "ap-northeast-1",
+   "workspace_id": "workspace-58010aa2e451",
    "domain_id": "domain-58010aa2e451",
    "created_at": "2022-06-22T06:38:48.989Z",
    "updated_at": "2022-06-22T06:38:48.989Z",
@@ -709,9 +697,6 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
 [CloudServiceQuery](./CloudService#cloudservicequery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -722,6 +707,9 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
 
 * **state** (string)  
+
+
+* **ip_address** (string)  
 
 
 * **account** (string)  
@@ -742,7 +730,7 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **region_code** (string)  
 
 
-* **ip_address** (string)  
+* **workspace_id** (string)  
 
 
 * **project_id** (string)  
@@ -838,6 +826,7 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
            "2.2.2.2"
        ],
        "region_code": "ap-northeast-1",
+       "workspace_id": "workspace-58010aa2e451",
        "domain_id": "domain-58010aa2e451",
        "created_at": "2022-06-22T06:38:48.989Z",
        "updated_at": "2022-06-22T06:38:48.989Z",
@@ -916,16 +905,10 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 ### CloudServiceAnalyzeQuery
 * **query** (AnalyzeQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CloudServiceExportRequest
 * **options** (ExportOption)  `Repeated`    `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **file_format** (FileFormat)  
@@ -946,6 +929,9 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
     
 * **state** (string)   `Required` 
+
+    
+* **ip_addresses** (string)  `Repeated`    `Required` 
 
     
 * **account** (string)   `Required` 
@@ -984,16 +970,16 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **collection_info** (CollectionInfo)  `Repeated`    `Required` 
 
     
-* **ip_addresses** (string)  `Repeated`    `Required` 
-
-    
 * **region_code** (string)   `Required` 
 
     
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -1007,9 +993,6 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
     <br>
 
 ### CloudServiceQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -1020,6 +1003,9 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
     
 * **state** (string)  
+
+    
+* **ip_address** (string)  
 
     
 * **account** (string)  
@@ -1040,7 +1026,7 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **region_code** (string)  
 
     
-* **ip_address** (string)  
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  
@@ -1061,16 +1047,10 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 ### CloudServiceRequest
 * **cloud_service_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CloudServiceStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -1112,9 +1092,6 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **data** (Struct)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
@@ -1146,33 +1123,8 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
     <br>
 
-### GetCloudServiceRequest
-* **cloud_service_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
-### PinCloudServiceDataRequest
-* **cloud_service_id** (string)   `Required` 
-
-    
-* **keys** (string)  `Repeated`    `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    <br>
-
 ### UpdateCloudServiceRequest
 * **cloud_service_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  
@@ -1206,11 +1158,5 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
     
 * **project_id** (string)  
-
-    
-* **release_project** (bool)  
-
-    
-* **release_region** (bool)  
 
     <br>

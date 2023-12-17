@@ -58,9 +58,6 @@ You can use a query to get a filtered list of statistics data.
 * **query_set_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -77,6 +74,9 @@ You can use a query to get a filtered list of statistics data.
 
 
 * **account** (string)  
+
+
+* **workspace_id** (string)  
 
 
 * **project_id** (string)  
@@ -220,10 +220,13 @@ You can use a query to get a filtered list of statistics data.
 * **additional_info** (Struct)   `Required` 
 
     
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
 
     
 * **created_date** (string)   `Required` 
@@ -235,9 +238,6 @@ You can use a query to get a filtered list of statistics data.
 
     
 * **query_set_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -251,9 +251,6 @@ You can use a query to get a filtered list of statistics data.
 
 ### CloudServiceStatsQuery
 * **query_set_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **query** (Query)  
@@ -274,15 +271,15 @@ You can use a query to get a filtered list of statistics data.
 * **account** (string)  
 
     
+* **workspace_id** (string)  
+
+    
 * **project_id** (string)  
 
     <br>
 
 ### CloudServiceStatsStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **query_set_id** (string)  

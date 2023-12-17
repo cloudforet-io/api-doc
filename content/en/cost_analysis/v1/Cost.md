@@ -26,7 +26,7 @@ A Cost is a resource of raw cost data collected by the cost_analysis.DataSource.
 | :----- | :-------- | :-------- |
 | [**create**](./Cost#create) | [CreateCostRequest](Cost#createcostrequest) | [CostInfo](Cost#costinfo) |
 | [**delete**](./Cost#delete) | [CostRequest](Cost#costrequest) | [Empty](Cost#empty) |
-| [**get**](./Cost#get) | [GetCostRequest](Cost#getcostrequest) | [CostInfo](Cost#costinfo) |
+| [**get**](./Cost#get) | [CostRequest](Cost#costrequest) | [CostInfo](Cost#costinfo) |
 | [**list**](./Cost#list) | [CostQuery](Cost#costquery) | [CostsInfo](Cost#costsinfo) |
 | [**analyze**](./Cost#analyze) | [CostAnalyzeQuery](Cost#costanalyzequery) | [Struct](Cost#struct) |
 | [**stat**](./Cost#stat) | [CostStatQuery](Cost#coststatquery) | [Struct](Cost#struct) |
@@ -60,10 +60,10 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 * **cost** (double)   `Required` 
 
 
+* **project_id** (string)   `Required` 
+
+
 * **data_source_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **billed_date** (string)   `Required` 
@@ -97,9 +97,6 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 
 * **service_account_id** (string)  
-
-
-* **project_id** (string)  
 
 
 
@@ -154,15 +151,15 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 * **additional_info** (Struct)   `Required` 
 
-* **service_account_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
 
-* **project_group_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **billed_year** (string)   `Required` 
 
@@ -228,9 +225,6 @@ Deletes a specific Cost. You must specify the `cost_id` of the Cost to delete.
 * **cost_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -268,15 +262,9 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 
 
 
-[GetCostRequest](./Cost#getcostrequest)
+[CostRequest](./Cost#costrequest)
 
 * **cost_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -317,15 +305,15 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 
 * **additional_info** (Struct)   `Required` 
 
-* **service_account_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
 
-* **project_group_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **billed_year** (string)   `Required` 
 
@@ -391,9 +379,6 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 * **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -418,13 +403,13 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 * **resource** (string)  
 
 
-* **service_account_id** (string)  
+* **workspace_id** (string)  
 
 
 * **project_id** (string)  
 
 
-* **project_group_id** (string)  
+* **service_account_id** (string)  
 
 
 * **billed_year** (string)  
@@ -558,9 +543,6 @@ Gets the Cost information of specific `product`s based on the time granularity: 
     
 * **data_source_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CostInfo
@@ -600,19 +582,19 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **additional_info** (Struct)   `Required` 
 
     
-* **service_account_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **project_id** (string)   `Required` 
 
     
-* **project_group_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
     
 * **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **billed_year** (string)   `Required` 
@@ -627,9 +609,6 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
 ### CostQuery
 * **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **query** (Query)  
@@ -656,13 +635,13 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **resource** (string)  
 
     
-* **service_account_id** (string)  
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  
 
     
-* **project_group_id** (string)  
+* **service_account_id** (string)  
 
     
 * **billed_year** (string)  
@@ -678,19 +657,13 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 ### CostRequest
 * **cost_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CostStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
     
-* **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **data_source_id** (string)  
 
     <br>
 
@@ -706,10 +679,10 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 * **cost** (double)   `Required` 
 
     
-* **data_source_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **data_source_id** (string)   `Required` 
 
     
 * **billed_date** (string)   `Required` 
@@ -743,19 +716,5 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
     
 * **service_account_id** (string)  
-
-    
-* **project_id** (string)  
-
-    <br>
-
-### GetCostRequest
-* **cost_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>

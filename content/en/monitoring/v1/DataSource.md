@@ -31,7 +31,7 @@ A DataSource is a plugin instance collecting `metric` and `log` data from Cloudf
 | [**deregister**](./DataSource#deregister) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](DataSource#empty) |
 | [**update_plugin**](./DataSource#update_plugin) | [UpdateDataSourcePluginRequest](DataSource#updatedatasourcepluginrequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**verify_plugin**](./DataSource#verify_plugin) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](DataSource#empty) |
-| [**get**](./DataSource#get) | [GetDataSourceRequest](DataSource#getdatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**get**](./DataSource#get) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**list**](./DataSource#list) | [DataSourceQuery](DataSource#datasourcequery) | [DataSourcesInfo](DataSource#datasourcesinfo) |
 | [**stat**](./DataSource#stat) | [DataSourceStatQuery](DataSource#datasourcestatquery) | [Struct](DataSource#struct) |
 
@@ -67,7 +67,7 @@ Registers a DataSource with information of the plugin to use. Information of the
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **tags** (Struct)  
@@ -114,6 +114,10 @@ Registers a DataSource with information of the plugin to use. Information of the
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -198,9 +202,6 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 * **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -239,6 +240,10 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -323,9 +328,6 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 * **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -356,6 +358,10 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -440,9 +446,6 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 * **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -473,6 +476,10 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -557,9 +564,6 @@ Deregisters and deletes a specific DataSource. You must specify the `data_source
 * **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -601,9 +605,6 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 [UpdateDataSourcePluginRequest](./DataSource#updatedatasourcepluginrequest)
 
 * **data_source_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **version** (string)  
@@ -648,6 +649,10 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -732,9 +737,6 @@ Verifies the plugin of a specific DataSource. This method validates the plugin d
 * **data_source_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -773,15 +775,9 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 
 
 
-[GetDataSourceRequest](./DataSource#getdatasourcerequest)
+[DataSourceRequest](./DataSource#datasourcerequest)
 
 * **data_source_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -789,7 +785,7 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 
 {{< highlight json >}}
 {
-   "data_source_id": "ds-123456789012",
+   "data_source_id": "ds-6167ed6b42f4",
    "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
@@ -814,6 +810,10 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -895,9 +895,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
 [DataSourceQuery](./DataSource#datasourcequery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -914,6 +911,12 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
 
 * **provider** (string)  
+
+
+* **resource_group** (ResourceGroup)  
+
+
+* **workspace_id** (string)  
 
 
 
@@ -1036,6 +1039,12 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **tags** (Struct)   `Required` 
 
     
+* **resource_group** (ResourceGroup)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -1067,9 +1076,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
     <br>
 
 ### DataSourceQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -1087,21 +1093,21 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
     
 * **provider** (string)  
 
+    
+* **resource_group** (ResourceGroup)  
+
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### DataSourceRequest
 * **data_source_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### DataSourceStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -1113,17 +1119,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     <br>
 
-### GetDataSourceRequest
-* **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### RegisterDataSourceRequest
 * **name** (string)   `Required` 
 
@@ -1131,7 +1126,7 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **tags** (Struct)  
@@ -1140,9 +1135,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
 ### UpdateDataSourcePluginRequest
 * **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **version** (string)  
@@ -1157,9 +1149,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
 ### UpdateDataSourceRequest
 * **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

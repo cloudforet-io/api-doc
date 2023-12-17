@@ -24,7 +24,7 @@ A JobTask is a task unit subdividing a Job. The division criteria are specified 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**get**](./JobTask#get) | [GetJobTaskRequest](JobTask#getjobtaskrequest) | [JobTaskInfo](JobTask#jobtaskinfo) |
+| [**get**](./JobTask#get) | [JobTaskRequest](JobTask#jobtaskrequest) | [JobTaskInfo](JobTask#jobtaskinfo) |
 | [**list**](./JobTask#list) | [JobTaskQuery](JobTask#jobtaskquery) | [JobTasksInfo](JobTask#jobtasksinfo) |
 | [**stat**](./JobTask#stat) | [JobTaskStatQuery](JobTask#jobtaskstatquery) | [Struct](JobTask#struct) |
 
@@ -52,15 +52,9 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 
 
 
-[GetJobTaskRequest](./JobTask#getjobtaskrequest)
+[JobTaskRequest](./JobTask#jobtaskrequest)
 
 * **job_task_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -89,11 +83,15 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 
 * **error_message** (string)   `Required` 
 
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
 * **job_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -153,9 +151,6 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 
 [JobTaskQuery](./JobTask#jobtaskquery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -163,6 +158,9 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 
 
 * **status** (Status)  
+
+
+* **workspace_id** (string)  
 
 
 * **job_id** (string)  
@@ -263,17 +261,6 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 
 
 
-### GetJobTaskRequest
-* **job_task_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### JobTaskInfo
 * **job_task_id** (string)   `Required` 
 
@@ -293,13 +280,19 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 * **error_message** (string)   `Required` 
 
     
+* **resource_group** (ResourceGroup)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
 * **job_id** (string)   `Required` 
 
     
 * **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -316,9 +309,6 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
     <br>
 
 ### JobTaskQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -328,6 +318,9 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 * **status** (Status)  
 
     
+* **workspace_id** (string)  
+
+    
 * **job_id** (string)  
 
     
@@ -335,11 +328,13 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 
     <br>
 
+### JobTaskRequest
+* **job_task_id** (string)   `Required` 
+
+    <br>
+
 ### JobTaskStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 

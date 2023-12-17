@@ -85,7 +85,7 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 
 * **access_token** (string)   `Required` 
 
-* **updated_version** (string)   `Required` 
+* **updated_version** (string)  
 
 
 
@@ -148,7 +148,7 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 * **access_token** (string)   `Required` 
 
     
-* **updated_version** (string)   `Required` 
+* **updated_version** (string)  
 
     <br>
 
@@ -190,9 +190,6 @@ Gets the `endpoint` of a specific plugin instance. A Plugin returns only a singl
 
 ### PluginMetadataRequest
 * **plugin_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **version** (string)  

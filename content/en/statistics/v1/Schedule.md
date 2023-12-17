@@ -68,12 +68,6 @@ Adds a new Schedule. When creating, `topic` and queries to be used should be spe
 * **schedule** (Scheduled)   `Required` 
 
 
-* **user_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
 * **tags** (Struct)  
 
 
@@ -258,7 +252,6 @@ Adds a new Schedule. When creating, `topic` and queries to be used should be spe
        }}]},
    "schedule": {"hours": [1]},
    "tags": {},
-   "domain_id": "domain-58010aa2e451"}
 {{< /highlight >}}
 {{< /tab >}}
 
@@ -750,12 +743,6 @@ Updates a specific Schedule. You can make changes in Schedule settings, includin
 * **schedule_id** (string)   `Required` 
 
 
-* **storage_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
 * **schedule** (Scheduled)  
 
 
@@ -770,7 +757,6 @@ Updates a specific Schedule. You can make changes in Schedule settings, includin
    "schedule_id": "sch-65bb6b55d162",
    "schedule": {"hours": [2]},
    "tags": {"a": "b"},
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -1263,16 +1249,12 @@ Enables a specific Schedule. If a Schedule is enabled, the query usage will be s
 * **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "schedule_id": "sch-65bb6b55d162",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -1765,16 +1747,12 @@ Disables a specific Schedule. If a Schedule is disabled, the query usage will no
 * **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "schedule_id": "sch-65bb6b55d162",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -2267,16 +2245,12 @@ Deletes a specific Schedule. You must specify the `schedule_id` of the Schedule 
 * **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "schedule_id": "sch-65bb6b55d162",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -2313,19 +2287,12 @@ Gets a specific Schedule. Prints detailed information about the Schedule, includ
 * **schedule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
-
-
 
 
 
 {{< highlight json >}}
 {
    "schedule_id": "sch-3da9c9ed2ee2",
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -2815,9 +2782,6 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
 
 [ScheduleQuery](./Schedule#schedulequery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -2839,7 +2803,6 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
 {{< highlight json >}}
 {
    "query": {},
-   "domain_id": "domain-58010aa2e451"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -3333,24 +3296,12 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
 * **schedule** (Scheduled)   `Required` 
 
     
-* **user_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
 * **tags** (Struct)  
 
     <br>
 
 ### GetScheduleRequest
 * **schedule_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -3392,9 +3343,6 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
     <br>
 
 ### ScheduleQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -3414,16 +3362,10 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
 ### ScheduleRequest
 * **schedule_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### ScheduleStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -3451,12 +3393,6 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
 
 ### UpdateScheduleRequest
 * **schedule_id** (string)   `Required` 
-
-    
-* **storage_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **schedule** (Scheduled)  

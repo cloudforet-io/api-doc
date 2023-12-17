@@ -60,9 +60,6 @@ Registers a Repository. The parameter `name` can only include alphabets, numbers
 * **repository_type** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **endpoint** (string)  
 
 
@@ -131,9 +128,6 @@ Updates a specific Repository registered. You must specify the `repository_id` o
 [UpdateRepositoryRequest](./Repository#updaterepositoryrequest)
 
 * **repository_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **name** (string)  
@@ -205,9 +199,6 @@ Deregisters and deletes a specific Repository. You must specify the `repository_
 * **repository_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -248,12 +239,6 @@ Gets a specific Repository. Prints detailed information about the Repository, in
 [GetRepositoryRequest](./Repository#getrepositoryrequest)
 
 * **repository_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -320,9 +305,6 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
 
 
 [RepositoryQuery](./Repository#repositoryquery)
-
-* **domain_id** (string)   `Required` 
-
 
 * **query** (Query)  
 
@@ -411,21 +393,12 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
 * **repository_type** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **endpoint** (string)  
 
     <br>
 
 ### GetRepositoryRequest
 * **repository_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -455,9 +428,6 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
     <br>
 
 ### RepositoryQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -474,24 +444,15 @@ Gets a list of all Repositories regardless of `domain`. You can use a query to g
 ### RepositoryRequest
 * **repository_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### RepositoryStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### UpdateRepositoryRequest
 * **repository_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

@@ -28,7 +28,7 @@ A Budget is a planned amount of cost expenditure for reduction and prediction of
 | [**update**](./Budget#update) | [UpdateBudgetRequest](Budget#updatebudgetrequest) | [BudgetInfo](Budget#budgetinfo) |
 | [**set_notification**](./Budget#set_notification) | [SetBudgetNotificationRequest](Budget#setbudgetnotificationrequest) | [BudgetInfo](Budget#budgetinfo) |
 | [**delete**](./Budget#delete) | [BudgetRequest](Budget#budgetrequest) | [Empty](Budget#empty) |
-| [**get**](./Budget#get) | [GetBudgetRequest](Budget#getbudgetrequest) | [BudgetInfo](Budget#budgetinfo) |
+| [**get**](./Budget#get) | [BudgetRequest](Budget#budgetrequest) | [BudgetInfo](Budget#budgetinfo) |
 | [**list**](./Budget#list) | [BudgetQuery](Budget#budgetquery) | [BudgetsInfo](Budget#budgetsinfo) |
 | [**stat**](./Budget#stat) | [BudgetStatQuery](Budget#budgetstatquery) | [Struct](Budget#struct) |
 
@@ -58,6 +58,9 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 
 [CreateBudgetRequest](./Budget#createbudgetrequest)
 
+* **data_source_id** (string)   `Required` 
+
+
 * **time_unit** (TimeUnit)   `Required` 
 
 
@@ -67,10 +70,7 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 * **end** (string)   `Required` 
 
 
-* **data_source_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **name** (string)  
@@ -92,9 +92,6 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 
 
 * **project_id** (string)  
-
-
-* **project_group_id** (string)  
 
 
 
@@ -150,13 +147,15 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
-
-* **project_group_id** (string)   `Required` 
-
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -271,9 +270,6 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
 * **budget_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -334,13 +330,15 @@ Updates a specific Budget. You can make changes in the budgeted amount of the ti
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
-
-* **project_group_id** (string)   `Required` 
-
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -458,9 +456,6 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
 * **notifications** (BudgetNotification)  `Repeated`    `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -509,13 +504,15 @@ Sets a notification on a specific Budget. Sets a threshold on the budget, and if
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
-
-* **project_group_id** (string)   `Required` 
-
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -630,9 +627,6 @@ Deletes a specific Budget. You must specify the `budget_id` of the Budget to del
 * **budget_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -666,6 +660,24 @@ Gets a specific Budget. Prints detailed information about the Budget, including 
 
  {{< tabs " get " >}}
 
+ {{< tab "Request Example" >}}
+
+
+
+[BudgetRequest](./Budget#budgetrequest)
+
+* **budget_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "budget_id": "budget-d51b6b6a9910"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
  {{< tab "Response Example" >}}
@@ -693,13 +705,15 @@ Gets a specific Budget. Prints detailed information about the Budget, including 
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
-
-* **project_group_id** (string)   `Required` 
-
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -811,9 +825,6 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
 [BudgetQuery](./Budget#budgetquery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -823,13 +834,13 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 * **name** (string)  
 
 
-* **project_id** (string)  
-
-
-* **project_group_id** (string)  
-
-
 * **time_unit** (TimeUnit)  
+
+
+* **workspace_id** (string)  
+
+
+* **project_id** (string)  
 
 
 * **data_source_id** (string)  
@@ -1001,16 +1012,19 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 * **tags** (Struct)   `Required` 
 
     
-* **project_id** (string)   `Required` 
-
-    
-* **project_group_id** (string)   `Required` 
-
-    
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -1032,9 +1046,6 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
     <br>
 
 ### BudgetQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -1044,13 +1055,13 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 * **name** (string)  
 
     
-* **project_id** (string)  
-
-    
-* **project_group_id** (string)  
-
-    
 * **time_unit** (TimeUnit)  
+
+    
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
 
     
 * **data_source_id** (string)  
@@ -1060,16 +1071,10 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 ### BudgetRequest
 * **budget_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### BudgetStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -1082,6 +1087,9 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
     <br>
 
 ### CreateBudgetRequest
+* **data_source_id** (string)   `Required` 
+
+    
 * **time_unit** (TimeUnit)   `Required` 
 
     
@@ -1091,10 +1099,7 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 * **end** (string)   `Required` 
 
     
-* **data_source_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **name** (string)  
@@ -1116,20 +1121,6 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
     
 * **project_id** (string)  
-
-    
-* **project_group_id** (string)  
-
-    <br>
-
-### GetBudgetRequest
-* **budget_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -1155,16 +1146,10 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
     
 * **notifications** (BudgetNotification)  `Repeated`    `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### UpdateBudgetRequest
 * **budget_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

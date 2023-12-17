@@ -27,7 +27,7 @@ A CloudServiceType is a classification with hierarchical information of `CloudSe
 | [**create**](./CloudServiceType#create) | [CreateCloudServiceTypeRequest](CloudServiceType#createcloudservicetyperequest) | [CloudServiceTypeInfo](CloudServiceType#cloudservicetypeinfo) |
 | [**update**](./CloudServiceType#update) | [UpdateCloudServiceTypeRequest](CloudServiceType#updatecloudservicetyperequest) | [CloudServiceTypeInfo](CloudServiceType#cloudservicetypeinfo) |
 | [**delete**](./CloudServiceType#delete) | [CloudServiceTypeRequest](CloudServiceType#cloudservicetyperequest) | [Empty](CloudServiceType#empty) |
-| [**get**](./CloudServiceType#get) | [GetCloudServiceTypeRequest](CloudServiceType#getcloudservicetyperequest) | [CloudServiceTypeInfo](CloudServiceType#cloudservicetypeinfo) |
+| [**get**](./CloudServiceType#get) | [CloudServiceTypeRequest](CloudServiceType#cloudservicetyperequest) | [CloudServiceTypeInfo](CloudServiceType#cloudservicetypeinfo) |
 | [**list**](./CloudServiceType#list) | [CloudServiceTypeQuery](CloudServiceType#cloudservicetypequery) | [CloudServiceTypesInfo](CloudServiceType#cloudservicetypesinfo) |
 | [**stat**](./CloudServiceType#stat) | [CloudServiceTypeStatQuery](CloudServiceType#cloudservicetypestatquery) | [Struct](CloudServiceType#struct) |
 
@@ -64,9 +64,6 @@ Creates a new CloudServiceType. You must specify the `name`, `provider`, and `gr
 
 
 * **group** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **service_code** (string)  
@@ -143,6 +140,8 @@ Creates a new CloudServiceType. You must specify the `name`, `provider`, and `gr
 
 * **domain_id** (string)   `Required` 
 
+* **workspace_id** (string)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -168,6 +167,7 @@ Creates a new CloudServiceType. You must specify the `name`, `provider`, and `gr
        "Networking"
    ],
    "domain_id": "domain-58010aa2e451",
+   "workspace_id": "workspace-abcde12345",
    "created_at": "2022-06-22T01:38:16.301Z",
    "updated_at": "2022-06-22T01:38:16.301Z"
 }
@@ -203,9 +203,6 @@ Updates a specific CloudServiceType. You can make changes in CloudServiceType se
 [UpdateCloudServiceTypeRequest](./CloudServiceType#updatecloudservicetyperequest)
 
 * **cloud_service_type_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **service_code** (string)  
@@ -277,6 +274,8 @@ Updates a specific CloudServiceType. You can make changes in CloudServiceType se
 
 * **domain_id** (string)   `Required` 
 
+* **workspace_id** (string)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -302,6 +301,7 @@ Updates a specific CloudServiceType. You can make changes in CloudServiceType se
        "Networking"
    ],
    "domain_id": "domain-58010aa2e451",
+   "workspace_id": "workspace-abcde12345",
    "created_at": "2022-06-22T01:38:16.301Z",
    "updated_at": "2022-06-22T01:38:16.301Z"
 }
@@ -337,9 +337,6 @@ Deletes a specific CloudServiceType. You must specify the `cloud_service_type_id
 [CloudServiceTypeRequest](./CloudServiceType#cloudservicetyperequest)
 
 * **cloud_service_type_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 
@@ -379,15 +376,9 @@ Gets a specific CloudServiceType. Prints detailed information about the CloudSer
 
 
 
-[GetCloudServiceTypeRequest](./CloudServiceType#getcloudservicetyperequest)
+[CloudServiceTypeRequest](./CloudServiceType#cloudservicetyperequest)
 
 * **cloud_service_type_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -430,6 +421,8 @@ Gets a specific CloudServiceType. Prints detailed information about the CloudSer
 
 * **domain_id** (string)   `Required` 
 
+* **workspace_id** (string)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -455,6 +448,7 @@ Gets a specific CloudServiceType. Prints detailed information about the CloudSer
        "Networking"
    ],
    "domain_id": "domain-58010aa2e451",
+   "workspace_id": "workspace-abcde12345",
    "created_at": "2022-06-22T01:38:16.301Z",
    "updated_at": "2022-06-22T01:38:16.301Z"
 }
@@ -489,9 +483,6 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
 
 [CloudServiceTypeQuery](./CloudServiceType#cloudservicetypequery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -520,6 +511,9 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
 
 
 * **resource_type** (string)  
+
+
+* **workspace_id** (string)  
 
 
 
@@ -572,6 +566,7 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
                "Networking"
            ],
            "domain_id": "domain-58010aa2e451",
+           "workspace_id": "workspace-abcde12345",
            "created_at": "2021-06-03T02:29:32.690Z",
            "updated_at": "2022-06-22T00:04:45.477Z"
        },
@@ -593,6 +588,7 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
                "Security"
            ],
            "domain_id": "domain-58010aa2e451",
+           "workspace_id": "workspace-abcde12345",
            "created_at": "2021-06-03T02:29:53.052Z",
            "updated_at": "2022-06-22T00:05:41.252Z"
        }
@@ -673,6 +669,9 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
 * **domain_id** (string)   `Required` 
 
     
+* **workspace_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
@@ -681,9 +680,6 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
     <br>
 
 ### CloudServiceTypeQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -713,13 +709,13 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
     
 * **resource_type** (string)  
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### CloudServiceTypeRequest
 * **cloud_service_type_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -749,9 +745,6 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
 * **group** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **service_code** (string)  
 
     
@@ -774,22 +767,8 @@ Gets a list of all CloudServiceTypes. You can use a query to get a filtered list
 
     <br>
 
-### GetCloudServiceTypeRequest
-* **cloud_service_type_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
-
-    <br>
-
 ### UpdateCloudServiceTypeRequest
 * **cloud_service_type_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **service_code** (string)  

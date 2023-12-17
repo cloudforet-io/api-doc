@@ -28,7 +28,7 @@ A DataSourceRule is a resource filtering the raw data from the DataSource. The C
 | [**update**](./DataSourceRule#update) | [UpdateDataSourceRuleRequest](DataSourceRule#updatedatasourcerulerequest) | [DataSourceRuleInfo](DataSourceRule#datasourceruleinfo) |
 | [**change_order**](./DataSourceRule#change_order) | [ChangeDataSourceRuleOrderRequest](DataSourceRule#changedatasourceruleorderrequest) | [DataSourceRuleInfo](DataSourceRule#datasourceruleinfo) |
 | [**delete**](./DataSourceRule#delete) | [DataSourceRuleRequest](DataSourceRule#datasourcerulerequest) | [Empty](DataSourceRule#empty) |
-| [**get**](./DataSourceRule#get) | [GetDataSourceRuleRequest](DataSourceRule#getdatasourcerulerequest) | [DataSourceRuleInfo](DataSourceRule#datasourceruleinfo) |
+| [**get**](./DataSourceRule#get) | [DataSourceRuleRequest](DataSourceRule#datasourcerulerequest) | [DataSourceRuleInfo](DataSourceRule#datasourceruleinfo) |
 | [**list**](./DataSourceRule#list) | [DataSourceRuleQuery](DataSourceRule#datasourcerulequery) | [DataSourceRulesInfo](DataSourceRule#datasourcerulesinfo) |
 | [**stat**](./DataSourceRule#stat) | [DataSourceRuleStatQuery](DataSourceRule#datasourcerulestatquery) | [Struct](DataSourceRule#struct) |
 
@@ -65,9 +65,6 @@ Creates a new DataSourceRule. When creating the resource, this method can apply 
 
 
 * **actions** (DataSourceRuleActions)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **name** (string)  
@@ -107,6 +104,8 @@ Creates a new DataSourceRule. When creating the resource, this method can apply 
 
 * **name** (string)   `Required` 
 
+* **rule_type** (RuleType)   `Required` 
+
 * **order** (int32)   `Required` 
 
 * **conditions** (DataSourceRuleCondition)  `Repeated`   `Required` 
@@ -119,11 +118,13 @@ Creates a new DataSourceRule. When creating the resource, this method can apply 
 
 * **tags** (Struct)   `Required` 
 
-* **rule_type** (string)   `Required` 
-
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -186,9 +187,6 @@ Updates a specific DataSourceRule. You can make changes in DataSourceRule settin
 * **data_source_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -237,6 +235,8 @@ Updates a specific DataSourceRule. You can make changes in DataSourceRule settin
 
 * **name** (string)   `Required` 
 
+* **rule_type** (RuleType)   `Required` 
+
 * **order** (int32)   `Required` 
 
 * **conditions** (DataSourceRuleCondition)  `Repeated`   `Required` 
@@ -249,11 +249,13 @@ Updates a specific DataSourceRule. You can make changes in DataSourceRule settin
 
 * **tags** (Struct)   `Required` 
 
-* **rule_type** (string)   `Required` 
-
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -319,9 +321,6 @@ Changes the priority order of the DataSourceRules to apply. If there are multipl
 * **order** (int32)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -341,6 +340,8 @@ Changes the priority order of the DataSourceRules to apply. If there are multipl
 
 * **name** (string)   `Required` 
 
+* **rule_type** (RuleType)   `Required` 
+
 * **order** (int32)   `Required` 
 
 * **conditions** (DataSourceRuleCondition)  `Repeated`   `Required` 
@@ -353,11 +354,13 @@ Changes the priority order of the DataSourceRules to apply. If there are multipl
 
 * **tags** (Struct)   `Required` 
 
-* **rule_type** (string)   `Required` 
-
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -420,9 +423,6 @@ Deletes a specific DataSourceRule. You must specify the `data_source_rule_id` of
 * **data_source_rule_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
@@ -460,15 +460,9 @@ Gets a specific DataSourceRule. Prints detailed information about the DataSource
 
 
 
-[GetDataSourceRuleRequest](./DataSourceRule#getdatasourcerulerequest)
+[DataSourceRuleRequest](./DataSourceRule#datasourcerulerequest)
 
 * **data_source_rule_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -476,7 +470,7 @@ Gets a specific DataSourceRule. Prints detailed information about the DataSource
 
 {{< highlight json >}}
 {
- "data_source_rule_id": "rule-22fab02f6b51"
+   "data_source_rule_id": "rule-22fab02f6b51"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -488,6 +482,8 @@ Gets a specific DataSourceRule. Prints detailed information about the DataSource
 * **data_source_rule_id** (string)   `Required` 
 
 * **name** (string)   `Required` 
+
+* **rule_type** (RuleType)   `Required` 
 
 * **order** (int32)   `Required` 
 
@@ -501,11 +497,13 @@ Gets a specific DataSourceRule. Prints detailed information about the DataSource
 
 * **tags** (Struct)   `Required` 
 
-* **rule_type** (string)   `Required` 
-
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **data_source_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -565,9 +563,6 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 
 [DataSourceRuleQuery](./DataSourceRule#datasourcerulequery)
 
-* **domain_id** (string)   `Required` 
-
-
 * **query** (Query)  
 
 
@@ -577,7 +572,10 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 * **name** (string)  
 
 
-* **rule_type** (string)  
+* **rule_type** (RuleType)  
+
+
+* **workspace_id** (string)  
 
 
 * **data_source_id** (string)  
@@ -687,9 +685,6 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
     
 * **order** (int32)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### CreateDataSourceRuleRequest
@@ -700,9 +695,6 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 
     
 * **actions** (DataSourceRuleActions)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  
@@ -750,6 +742,9 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 * **name** (string)   `Required` 
 
     
+* **rule_type** (RuleType)   `Required` 
+
+    
 * **order** (int32)   `Required` 
 
     
@@ -768,13 +763,16 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 * **tags** (Struct)   `Required` 
 
     
-* **rule_type** (string)   `Required` 
-
-    
-* **data_source_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -787,9 +785,6 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
     <br>
 
 ### DataSourceRuleQuery
-* **domain_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
@@ -799,7 +794,10 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 * **name** (string)  
 
     
-* **rule_type** (string)  
+* **rule_type** (RuleType)  
+
+    
+* **workspace_id** (string)  
 
     
 * **data_source_id** (string)  
@@ -809,16 +807,10 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 ### DataSourceRuleRequest
 * **data_source_rule_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### DataSourceRuleStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -827,17 +819,6 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### GetDataSourceRuleRequest
-* **data_source_rule_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -851,9 +832,6 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 
 ### UpdateDataSourceRuleRequest
 * **data_source_rule_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  

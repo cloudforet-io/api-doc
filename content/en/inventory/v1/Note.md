@@ -27,7 +27,7 @@ bookFlatSection: true
 | [**create**](./Note#create) | [CreateNoteRequest](Note#createnoterequest) | [NoteInfo](Note#noteinfo) |
 | [**update**](./Note#update) | [UpdateNoteRequest](Note#updatenoterequest) | [NoteInfo](Note#noteinfo) |
 | [**delete**](./Note#delete) | [NoteRequest](Note#noterequest) | [Empty](Note#empty) |
-| [**get**](./Note#get) | [GetNoteRequest](Note#getnoterequest) | [NoteInfo](Note#noteinfo) |
+| [**get**](./Note#get) | [NoteRequest](Note#noterequest) | [NoteInfo](Note#noteinfo) |
 | [**list**](./Note#list) | [NoteQuery](Note#notequery) | [NotesInfo](Note#notesinfo) |
 | [**stat**](./Note#stat) | [NoteStatQuery](Note#notestatquery) | [Struct](Note#struct) |
 
@@ -59,17 +59,8 @@ bookFlatSection: true
 
 * **record_id** (string)   `Required` 
 
-  *is_required: true*
-
 
 * **note** (string)   `Required` 
-
-  *is_required: true*
-
-
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
 
 
 
@@ -97,6 +88,10 @@ bookFlatSection: true
 * **created_by** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -139,17 +134,8 @@ bookFlatSection: true
 
 * **note_id** (string)   `Required` 
 
-  *is_required: true*
 
-
-* **note** (string)   `Required` 
-
-  *is_required: false*
-
-
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
+* **note** (string)  
 
 
 
@@ -177,6 +163,10 @@ bookFlatSection: true
 * **created_by** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -219,13 +209,6 @@ bookFlatSection: true
 
 * **note_id** (string)   `Required` 
 
-  *is_required: true*
-
-
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
-
 
 
 
@@ -264,21 +247,9 @@ bookFlatSection: true
 
 
 
-[GetNoteRequest](./Note#getnoterequest)
+[NoteRequest](./Note#noterequest)
 
 * **note_id** (string)   `Required` 
-
-  *is_required: true*
-
-
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
-
-
-* **only** (string)  `Repeated`    `Required` 
-
-  *is_required: false*
 
 
 
@@ -306,6 +277,10 @@ bookFlatSection: true
 * **created_by** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -346,34 +321,25 @@ bookFlatSection: true
 
 [NoteQuery](./Note#notequery)
 
-* **query** (Query)   `Required` 
-
-  *is_required: false*
+* **query** (Query)  
 
 
-* **note_id** (string)   `Required` 
-
-  *is_required: false*
+* **note_id** (string)  
 
 
-* **record_id** (string)   `Required` 
-
-  *is_required: false*
+* **record_id** (string)  
 
 
-* **cloud_service_id** (string)   `Required` 
-
-  *is_required: false*
+* **cloud_service_id** (string)  
 
 
-* **created_by** (string)   `Required` 
-
-  *is_required: false*
+* **created_by** (string)  
 
 
-* **domain_id** (string)   `Required` 
+* **workspace_id** (string)  
 
-  *is_required: false*
+
+* **project_id** (string)  
 
 
 
@@ -421,34 +387,8 @@ bookFlatSection: true
 ### CreateNoteRequest
 * **record_id** (string)   `Required` 
 
-  *is_required: true*
-
     
 * **note** (string)   `Required` 
-
-  *is_required: true*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
-
-    <br>
-
-### GetNoteRequest
-* **note_id** (string)   `Required` 
-
-  *is_required: true*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
-
-    
-* **only** (string)  `Repeated`    `Required` 
-
-  *is_required: false*
 
     <br>
 
@@ -471,63 +411,46 @@ bookFlatSection: true
 * **domain_id** (string)   `Required` 
 
     
+* **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     <br>
 
 ### NoteQuery
-* **query** (Query)   `Required` 
-
-  *is_required: false*
+* **query** (Query)  
 
     
-* **note_id** (string)   `Required` 
-
-  *is_required: false*
+* **note_id** (string)  
 
     
-* **record_id** (string)   `Required` 
-
-  *is_required: false*
+* **record_id** (string)  
 
     
-* **cloud_service_id** (string)   `Required` 
-
-  *is_required: false*
+* **cloud_service_id** (string)  
 
     
-* **created_by** (string)   `Required` 
-
-  *is_required: false*
+* **created_by** (string)  
 
     
-* **domain_id** (string)   `Required` 
+* **workspace_id** (string)  
 
-  *is_required: false*
+    
+* **project_id** (string)  
 
     <br>
 
 ### NoteRequest
 * **note_id** (string)   `Required` 
 
-  *is_required: true*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
-
     <br>
 
 ### NoteStatQuery
 * **query** (StatisticsQuery)   `Required` 
-
-  *is_required: true*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
 
     <br>
 
@@ -542,16 +465,7 @@ bookFlatSection: true
 ### UpdateNoteRequest
 * **note_id** (string)   `Required` 
 
-  *is_required: true*
-
     
-* **note** (string)   `Required` 
-
-  *is_required: false*
-
-    
-* **domain_id** (string)   `Required` 
-
-  *is_required: true*
+* **note** (string)  
 
     <br>

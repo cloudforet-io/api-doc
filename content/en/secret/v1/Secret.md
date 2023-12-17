@@ -68,19 +68,13 @@ It can be used to link to a trusted secret if you request it with 'trusted_secre
 * **data** (Struct)   `Required` 
 
 
-* **permission_group** (PermissionGroup)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 
 * **schema_id** (string)  
 
 
 * **tags** (Struct)  
-
-
-* **workspace_id** (string)  
 
 
 * **project_id** (string)  
@@ -99,14 +93,10 @@ It can be used to link to a trusted secret if you request it with 'trusted_secre
 {
    "name": "Cloudforet AWS Dev",
    "data": "********",
-   "schema_id": "aws-secret-assume-role",
-   "tags": {"foo": "bar"},
-   "permission_group": "PROJECT",
-   "domain_id": "domain-12345abcde",
-   "workspace_id": "workspace-12345abcde",
-   "project_id": "project-12345abcde",
-   "service_account_id": "sa-12345abcde",
-   "trusted_secret_id": "trusted-secret-12345abcde"
+   "schema_id": "aws_access_key",
+   "resource_group": "PROJECT",
+   "service_account_id": "sa-123456789012",
+   "project_id": "project-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -125,7 +115,7 @@ It can be used to link to a trusted secret if you request it with 'trusted_secre
 
 * **tags** (Struct)   `Required` 
 
-* **permission_group** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -143,18 +133,17 @@ It can be used to link to a trusted secret if you request it with 'trusted_secre
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-12345abcde",
-   "name": "Cloudforet AWS Dev",
-   "schema_id": "aws-secret-assume-role",
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev",
+   "tags": {},
+   "schema_id": "aws_access_key",
    "provider": "aws",
-   "tags": {"foo": "bar"},
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "service_account_id": "sa-12345abcde",
-   "permission_group": "PROJECT",
-   "domain_id": "domain-12345abcde",
-   "workspace_id": "workspace-12345abcde",
-   "project_id": "project-12345abcde",
-   "created_at": "2022-01-01T06:10:14Z"
+   "service_account_id": "sa-123456789012",
+   "resource_group": "PROJECT",
+   "project_id": "project-123456789012",
+   "workspace_id": "workspace-123456789012",
+   "domain_id": "domain-123456789012",
+   "created_at": "2022-01-01T06:10:14.851Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -191,16 +180,10 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 * **secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
 * **tags** (Struct)  
-
-
-* **workspace_id** (string)  
 
 
 * **project_id** (string)  
@@ -212,11 +195,9 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 {{< highlight json >}}
 {
    "secret_id": "secret-123456789012",
-   "name": "Cloudforet AWS Dev",
-   "tags": {"foo": "bar"},
-   "project_id": "project-12345abcde",
-   "domain_id": "domain-123456789012",
-   "workspace_id": "workspace-12345abcde",
+   "name": "aws-dev2",
+   "tags": { "a": "b"},
+   "project_id": "project-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -235,7 +216,7 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 
 * **tags** (Struct)   `Required` 
 
-* **permission_group** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -253,18 +234,17 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-12345abcde",
-   "name": "Cloudforet AWS Dev",
-   "schema_id": "aws-secret-assume-role",
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev",
+   "tags": {},
+   "schema_id": "aws_access_key",
    "provider": "aws",
-   "tags": {"foo": "bar"},
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "service_account_id": "sa-12345abcde",
-   "permission_group": "PROJECT",
-   "domain_id": "domain-12345abcde",
-   "workspace_id": "workspace-12345abcde",
-   "project_id": "project-12345abcde",
-   "created_at": "2022-01-01T06:10:14Z"
+   "service_account_id": "sa-123456789012",
+   "resource_group": "PROJECT",
+   "project_id": "project-123456789012",
+   "workspace_id": "workspace-123456789012",
+   "domain_id": "domain-123456789012",
+   "created_at": "2022-01-01T06:10:14.851Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -300,16 +280,12 @@ Deletes a specific secret.
 * **secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-12345abcde",
-   "domain_id": "domain-12345abcde"
+   "secret_id": "secret-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -350,21 +326,13 @@ Updated secret is encrypted and stored securely.
 * **data** (Struct)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
-* **workspace_id** (string)  
-
-
 
 
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-12345abcde",
-   "data": "********",
-   "domain_id": "domain-12345abcde",
-   "workspace_id": "workspace-12345abcde",
+   "secret_id": "secret-123456789012",
+    "data": "********"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -402,16 +370,12 @@ This API is for internal system use only.
 * **secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-12345abcde",
-   "domain_id": "domain-12345abcde"
+   "secret_id": "secret-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -448,16 +412,12 @@ Get a specific secret's information.
 * **secret_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-12345abcde",
-   "domain_id": "domain-12345abcde"
+   "secret_id": "secret-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -476,7 +436,7 @@ Get a specific secret's information.
 
 * **tags** (Struct)   `Required` 
 
-* **permission_group** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -494,18 +454,17 @@ Get a specific secret's information.
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-12345abcde",
-   "name": "Cloudforet AWS Dev",
-   "schema_id": "aws-secret-assume-role",
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev",
+   "tags": {},
+   "schema_id": "aws_access_key",
    "provider": "aws",
-   "tags": {"foo": "bar"},
-   "trusted_secret_id": "trusted-secret-12345abcde",
-   "service_account_id": "sa-12345abcde",
-   "permission_group": "PROJECT",
-   "domain_id": "domain-12345abcde",
-   "workspace_id": "workspace-12345abcde",
-   "project_id": "project-12345abcde",
-   "created_at": "2022-01-01T06:10:14Z"
+   "service_account_id": "sa-123456789012",
+   "resource_group": "PROJECT",
+   "project_id": "project-123456789012",
+   "workspace_id": "workspace-123456789012",
+   "domain_id": "domain-123456789012",
+   "created_at": "2022-01-01T06:10:14.851Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -554,9 +513,6 @@ You can use a query to get a filtered list of secrets.
 * **provider** (string)  
 
 
-* **domain_id** (string)  
-
-
 * **workspace_id** (string)  
 
 
@@ -594,29 +550,25 @@ You can use a query to get a filtered list of secrets.
 {
    "results": [
        {
-           "secret_id": "secret-12345abcde",
-           "name": "Cloudforet AWS Dev",
-           "schema_id": "aws-secret-assume-role",
-           "provider": "aws",
-           "tags": {"foo": "bar"},
-           "trusted_secret_id": "trusted-secret-12345abcde",
-           "service_account_id": "sa-12345abcde",
-           "permission_group": "PROJECT",
-           "domain_id": "domain-12345abcde",
-           "workspace_id": "workspace-12345abcde",
-           "project_id": "project-12345abcde",
-           "created_at": "2022-01-01T06:10:14Z"
+          "secret_id": "secret-123456789012",
+          "name": "aws-dev",
+          "tags": {},
+          "schema": "aws_access_key",
+          "provider": "aws",
+          "service_account_id": "sa-123456789012",
+          "resource_group": "PROJECT",
+          "workspace_id": "workspace-123456789012",
+          "project_id": "project-123456789012",
+          "domain_id": "domain-123456789012",
+          "created_at": "2022-01-01T06:10:14.851Z"
        },
        {
-           "secret_id": "secret-56789abcde",
-           "name": "Cloudforet AWS Prod",
-           "schema_id": "aws-secret-access-key,
-           "provider": "aws",
-           "service_account_id": "sa-56789abcde",
-           "permission_group": "WORKSPACE",
-           "domain_id": "domain-12345abcde",
-           "workspace_id": "workspace-12345abcde",
-           "project_id": "*"
+           "secret_id": "secret-987654321098",
+           "name": "plugin-credentials",
+           "tags": {},
+           "resource_group": "WORKSPACE",
+           "workspace_id": "workspace-123456789012",
+           "domain_id": "domain-123456789012",
            "created_at": "2022-01-01T02:31:01.709Z"
        }
    ],
@@ -663,19 +615,13 @@ You can use a query to get a filtered list of secrets.
 * **data** (Struct)   `Required` 
 
     
-* **permission_group** (PermissionGroup)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **schema_id** (string)  
 
     
 * **tags** (Struct)  
-
-    
-* **workspace_id** (string)  
 
     
 * **project_id** (string)  
@@ -689,13 +635,13 @@ You can use a query to get a filtered list of secrets.
     <br>
 
 ### SecretDataInfo
-* **data** (Struct)   `Required` 
-
-    
 * **encrypted** (bool)   `Required` 
 
     
 * **encrypt_options** (Struct)   `Required` 
+
+    
+* **data** (Struct)   `Required` 
 
     <br>
 
@@ -715,7 +661,7 @@ You can use a query to get a filtered list of secrets.
 * **tags** (Struct)   `Required` 
 
     
-* **permission_group** (string)   `Required` 
+* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -753,9 +699,6 @@ You can use a query to get a filtered list of secrets.
 * **provider** (string)  
 
     
-* **domain_id** (string)  
-
-    
 * **workspace_id** (string)  
 
     
@@ -771,9 +714,6 @@ You can use a query to get a filtered list of secrets.
 
 ### SecretRequest
 * **secret_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -799,28 +739,16 @@ You can use a query to get a filtered list of secrets.
     
 * **data** (Struct)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### UpdateSecretRequest
 * **secret_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
 * **tags** (Struct)  
-
-    
-* **workspace_id** (string)  
 
     
 * **project_id** (string)  

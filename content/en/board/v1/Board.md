@@ -28,7 +28,7 @@ A Board is a bulletin-board-type resource for posting notices and announcements 
 | [**update**](./Board#update) | [UpdateBoardRequest](Board#updateboardrequest) | [BoardInfo](Board#boardinfo) |
 | [**set_categories**](./Board#set_categories) | [SetBoardCategoriesRequest](Board#setboardcategoriesrequest) | [BoardInfo](Board#boardinfo) |
 | [**delete**](./Board#delete) | [BoardRequest](Board#boardrequest) | [Empty](Board#empty) |
-| [**get**](./Board#get) | [GetBoardRequest](Board#getboardrequest) | [BoardInfo](Board#boardinfo) |
+| [**get**](./Board#get) | [BoardRequest](Board#boardrequest) | [BoardInfo](Board#boardinfo) |
 | [**list**](./Board#list) | [BoardQuery](Board#boardquery) | [BoardsInfo](Board#boardsinfo) |
 | [**stat**](./Board#stat) | [BoardStatQuery](Board#boardstatquery) | [Struct](Board#struct) |
 
@@ -337,7 +337,7 @@ Gets a specific Board. You must specify the `board_id` of the Board to get. Prin
 
 
 
-[GetBoardRequest](./Board#getboardrequest)
+[BoardRequest](./Board#boardrequest)
 
 * **board_id** (string)   `Required` 
 
@@ -413,13 +413,13 @@ Gets a list of all Boards. You can use a query to get a filtered list of Boards.
 
 [BoardQuery](./Board#boardquery)
 
+* **query** (Query)  
+
+
 * **board_id** (string)  
 
 
 * **name** (string)  
-
-
-* **query** (Query)  
 
 
 
@@ -521,13 +521,13 @@ Gets a list of all Boards. You can use a query to get a filtered list of Boards.
     <br>
 
 ### BoardQuery
+* **query** (Query)  
+
+    
 * **board_id** (string)  
 
     
 * **name** (string)  
-
-    
-* **query** (Query)  
 
     <br>
 
@@ -557,11 +557,6 @@ Gets a list of all Boards. You can use a query to get a filtered list of Boards.
 
     
 * **tags** (Struct)  
-
-    <br>
-
-### GetBoardRequest
-* **board_id** (string)   `Required` 
 
     <br>
 

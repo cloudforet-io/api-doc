@@ -69,9 +69,6 @@ Registers a Plugin. The parameter `registry_type`, meaning container registry ty
 * **image** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **provider** (string)  
 
 
@@ -177,8 +174,6 @@ Registers a Plugin. The parameter `registry_type`, meaning container registry ty
 
 * **repository_info** (RepositoryInfo)   `Required` 
 
-* **project_id** (string)   `Required` 
-
 * **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
@@ -275,9 +270,6 @@ Updates a specific Plugin registered. A Plugin can be updated only if its Reposi
 * **plugin_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **name** (string)  
 
 
@@ -368,8 +360,6 @@ Updates a specific Plugin registered. A Plugin can be updated only if its Reposi
 * **tags** (Struct)   `Required` 
 
 * **repository_info** (RepositoryInfo)   `Required` 
-
-* **project_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -467,16 +457,12 @@ Deregisters and deletes a specific Plugin. You must specify the `plugin_id` of t
 * **plugin_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "plugin_id": "plugin-aws-sns-mon-webhook",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -513,16 +499,12 @@ Enables a specific Plugin. If the Plugin is enabled, the Plugin can be used as i
 * **plugin_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "plugin_id": "plugin-aws-sns-mon-webhook",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -558,8 +540,6 @@ Enables a specific Plugin. If the Plugin is enabled, the Plugin can be used as i
 * **tags** (Struct)   `Required` 
 
 * **repository_info** (RepositoryInfo)   `Required` 
-
-* **project_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -657,16 +637,12 @@ Disables a specific Plugin. If the Plugin is disabled, the Plugin cannot be used
 * **plugin_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 
 
 
 {{< highlight json >}}
 {
    "plugin_id": "plugin-aws-sns-mon-webhook",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -702,8 +678,6 @@ Disables a specific Plugin. If the Plugin is disabled, the Plugin cannot be used
 * **tags** (Struct)   `Required` 
 
 * **repository_info** (RepositoryInfo)   `Required` 
-
-* **project_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -801,9 +775,6 @@ Gets all version data of a specific Plugin from its Repository. The parameter `p
 * **plugin_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **repository_id** (string)  
 
 
@@ -813,7 +784,6 @@ Gets all version data of a specific Plugin from its Repository. The parameter `p
 {{< highlight json >}}
 {
    "plugin_id": "plugin-aws-sns-mon-webhook",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -877,13 +847,7 @@ Gets a specific Plugin. Prints detailed information about the Plugin, including 
 * **plugin_id** (string)   `Required` 
 
 
-* **domain_id** (string)   `Required` 
-
-
 * **repository_id** (string)  
-
-
-* **only** (string)  `Repeated`   
 
 
 
@@ -892,7 +856,6 @@ Gets a specific Plugin. Prints detailed information about the Plugin, including 
 {{< highlight json >}}
 {
    "plugin_id": "plugin-aws-sns-mon-webhook",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -928,8 +891,6 @@ Gets a specific Plugin. Prints detailed information about the Plugin, including 
 * **tags** (Struct)   `Required` 
 
 * **repository_info** (RepositoryInfo)   `Required` 
-
-* **project_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -1025,9 +986,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 [PluginQuery](./Plugin#pluginquery)
 
 * **repository_id** (string)   `Required` 
-
-
-* **domain_id** (string)   `Required` 
 
 
 * **query** (Query)  
@@ -1168,9 +1126,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **image** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **provider** (string)  
 
     
@@ -1200,13 +1155,7 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **plugin_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **repository_id** (string)  
-
-    
-* **only** (string)  `Repeated`   
 
     <br>
 
@@ -1253,9 +1202,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **repository_info** (RepositoryInfo)   `Required` 
 
     
-* **project_id** (string)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
 
     
@@ -1268,9 +1214,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 
 ### PluginQuery
 * **repository_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **query** (Query)  
@@ -1298,9 +1241,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 ### PluginRequest
 * **plugin_id** (string)   `Required` 
 
-    
-* **domain_id** (string)   `Required` 
-
     <br>
 
 ### PluginStatQuery
@@ -1308,9 +1248,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 
     
 * **repository_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -1326,18 +1263,12 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 * **plugin_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
 * **repository_id** (string)  
 
     <br>
 
 ### UpdatePluginRequest
 * **plugin_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **name** (string)  
