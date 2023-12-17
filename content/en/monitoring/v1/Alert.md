@@ -26,6 +26,7 @@ An Alert, a set of Events, is the smallest unit to manage incidents.
 | :----- | :-------- | :-------- |
 | [**create**](./Alert#create) | [CreateAlertRequest](Alert#createalertrequest) | [AlertInfo](Alert#alertinfo) |
 | [**update**](./Alert#update) | [UpdateAlertRequest](Alert#updatealertrequest) | [AlertInfo](Alert#alertinfo) |
+| [**assign_user**](./Alert#assign_user) | [AssignUserRequest](Alert#assignuserrequest) | [AlertInfo](Alert#alertinfo) |
 | [**update_state**](./Alert#update_state) | [UpdateAlertStateRequest](Alert#updatealertstaterequest) | [AlertInfo](Alert#alertinfo) |
 | [**delete**](./Alert#delete) | [AlertRequest](Alert#alertrequest) | [Empty](Alert#empty) |
 | [**get**](./Alert#get) | [AlertRequest](Alert#alertrequest) | [AlertInfo](Alert#alertinfo) |
@@ -99,8 +100,6 @@ Creates a new Alert. Alerts generated with `create` method are made in a manual 
 
 * **state** (AlertState)   `Required` 
 
-* **status_message** (string)   `Required` 
-
 * **description** (string)   `Required` 
 
 * **assignee** (string)   `Required` 
@@ -111,31 +110,31 @@ Creates a new Alert. Alerts generated with `create` method are made in a manual 
 
 * **rule** (string)   `Required` 
 
+* **image_url** (string)   `Required` 
+
 * **resource** (AlertResource)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **account** (string)   `Required` 
 
+* **additional_info** (Struct)   `Required` 
+
 * **escalation_step** (int32)   `Required` 
 
 * **escalation_ttl** (int32)   `Required` 
 
-* **image_url** (string)   `Required` 
-
-* **additional_info** (Struct)   `Required` 
-
 * **triggered_by** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **webhook_id** (string)   `Required` 
 
 * **escalation_policy_id** (string)   `Required` 
-
-* **project_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -208,28 +207,13 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 * **state** (string)  
 
 
-* **status_message** (string)  
-
-
 * **description** (string)  
-
-
-* **assignee** (string)  
 
 
 * **urgency** (AlertUrgency)  
 
 
 * **project_id** (string)  
-
-
-* **reset_status_message** (bool)  
-
-
-* **reset_description** (bool)  
-
-
-* **reset_assignee** (bool)  
 
 
 
@@ -258,7 +242,110 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 
 * **state** (AlertState)   `Required` 
 
-* **status_message** (string)   `Required` 
+* **description** (string)   `Required` 
+
+* **assignee** (string)   `Required` 
+
+* **urgency** (AlertUrgency)   `Required` 
+
+* **severity** (string)   `Required` 
+
+* **rule** (string)   `Required` 
+
+* **image_url** (string)   `Required` 
+
+* **resource** (AlertResource)   `Required` 
+
+* **provider** (string)   `Required` 
+
+* **account** (string)   `Required` 
+
+* **additional_info** (Struct)   `Required` 
+
+* **escalation_step** (int32)   `Required` 
+
+* **escalation_ttl** (int32)   `Required` 
+
+* **triggered_by** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
+
+* **webhook_id** (string)   `Required` 
+
+* **escalation_policy_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+* **acknowledged_at** (string)   `Required` 
+
+* **resolved_at** (string)   `Required` 
+
+* **escalated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+     "alert_number": 104053,
+     "alert_id": "alert-123456789012",
+     "title": "sample test",
+     "state": "TRIGGERED",
+     "description": "This is a description of sample.",
+     "urgency": "HIGH",
+     "severity": "NONE",
+     "escalation_step": 1,
+     "additional_info": {},
+     "triggered_by": "user1@email.com",
+     "escalation_policy_id": "ep-123456789012",
+     "project_id": "project-123456789012",
+     "domain_id": "domain-123456789012",
+     "created_at": "2022-01-01T01:43:08.566Z",
+     "updated_at": "2022-01-01T01:43:08.566Z",
+     "escalated_at": "2022-01-01T01:43:54.464Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### assign_user
+
+
+
+
+
+> **POST** /monitoring/v1/alert/assign-user
+>
+
+
+
+
+
+ {{< tabs " assign_user " >}}
+
+
+
+ {{< tab "Response Example" >}}
+
+[AlertInfo](#ALERTINFO)
+* **alert_number** (int32)   `Required` 
+
+* **alert_id** (string)   `Required` 
+
+* **title** (string)   `Required` 
+
+* **state** (AlertState)   `Required` 
 
 * **description** (string)   `Required` 
 
@@ -270,31 +357,31 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 
 * **rule** (string)   `Required` 
 
+* **image_url** (string)   `Required` 
+
 * **resource** (AlertResource)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **account** (string)   `Required` 
 
+* **additional_info** (Struct)   `Required` 
+
 * **escalation_step** (int32)   `Required` 
 
 * **escalation_ttl** (int32)   `Required` 
 
-* **image_url** (string)   `Required` 
-
-* **additional_info** (Struct)   `Required` 
-
 * **triggered_by** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **webhook_id** (string)   `Required` 
 
 * **escalation_policy_id** (string)   `Required` 
-
-* **project_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -340,11 +427,9 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 ### update_state
 
 Updates the state of an Alert via callback URL by creating a temporary `access_key` while generating a Notification about the Alert.
++noauth
 
 
-
-> **POST** /monitoring/v1/alert/update-state
->
 
 
 
@@ -391,8 +476,6 @@ Updates the state of an Alert via callback URL by creating a temporary `access_k
 
 * **state** (AlertState)   `Required` 
 
-* **status_message** (string)   `Required` 
-
 * **description** (string)   `Required` 
 
 * **assignee** (string)   `Required` 
@@ -403,31 +486,31 @@ Updates the state of an Alert via callback URL by creating a temporary `access_k
 
 * **rule** (string)   `Required` 
 
+* **image_url** (string)   `Required` 
+
 * **resource** (AlertResource)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **account** (string)   `Required` 
 
+* **additional_info** (Struct)   `Required` 
+
 * **escalation_step** (int32)   `Required` 
 
 * **escalation_ttl** (int32)   `Required` 
 
-* **image_url** (string)   `Required` 
-
-* **additional_info** (Struct)   `Required` 
-
 * **triggered_by** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **webhook_id** (string)   `Required` 
 
 * **escalation_policy_id** (string)   `Required` 
-
-* **project_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -558,8 +641,6 @@ Gets a specific Alert. Prints detailed information about the Alert.
 
 * **state** (AlertState)   `Required` 
 
-* **status_message** (string)   `Required` 
-
 * **description** (string)   `Required` 
 
 * **assignee** (string)   `Required` 
@@ -570,31 +651,31 @@ Gets a specific Alert. Prints detailed information about the Alert.
 
 * **rule** (string)   `Required` 
 
+* **image_url** (string)   `Required` 
+
 * **resource** (AlertResource)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **account** (string)   `Required` 
 
+* **additional_info** (Struct)   `Required` 
+
 * **escalation_step** (int32)   `Required` 
 
 * **escalation_ttl** (int32)   `Required` 
 
-* **image_url** (string)   `Required` 
-
-* **additional_info** (Struct)   `Required` 
-
 * **triggered_by** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **webhook_id** (string)   `Required` 
 
 * **escalation_policy_id** (string)   `Required` 
-
-* **project_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -694,13 +775,16 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **triggered_by** (string)  
 
 
+* **workspace_id** (string)  
+
+
+* **project_id** (string)  
+
+
 * **webhook_id** (string)  
 
 
 * **escalation_policy_id** (string)  
-
-
-* **project_id** (string)  
 
 
 
@@ -833,9 +917,6 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **state** (AlertState)   `Required` 
 
     
-* **status_message** (string)   `Required` 
-
-    
 * **description** (string)   `Required` 
 
     
@@ -851,6 +932,9 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **rule** (string)   `Required` 
 
     
+* **image_url** (string)   `Required` 
+
+    
 * **resource** (AlertResource)   `Required` 
 
     
@@ -860,34 +944,31 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **account** (string)   `Required` 
 
     
+* **additional_info** (Struct)   `Required` 
+
+    
 * **escalation_step** (int32)   `Required` 
 
     
 * **escalation_ttl** (int32)   `Required` 
 
     
-* **image_url** (string)   `Required` 
-
-    
-* **additional_info** (Struct)   `Required` 
-
-    
 * **triggered_by** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
 
     
 * **webhook_id** (string)   `Required` 
 
     
 * **escalation_policy_id** (string)   `Required` 
-
-    
-* **project_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -943,13 +1024,16 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **triggered_by** (string)  
 
     
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
+
+    
 * **webhook_id** (string)  
 
     
 * **escalation_policy_id** (string)  
-
-    
-* **project_id** (string)  
 
     <br>
 
@@ -969,14 +1053,6 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 
     <br>
 
-### AlertResponder
-* **resource_type** (string)   `Required` 
-
-    
-* **resource_id** (string)   `Required` 
-
-    <br>
-
 ### AlertStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
@@ -987,6 +1063,14 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### AssignUserRequest
+* **alert_id** (string)   `Required` 
+
+    
+* **assignee** (string)   `Required` 
 
     <br>
 
@@ -1017,28 +1101,13 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **state** (string)  
 
     
-* **status_message** (string)  
-
-    
 * **description** (string)  
-
-    
-* **assignee** (string)  
 
     
 * **urgency** (AlertUrgency)  
 
     
 * **project_id** (string)  
-
-    
-* **reset_status_message** (bool)  
-
-    
-* **reset_description** (bool)  
-
-    
-* **reset_assignee** (bool)  
 
     <br>
 

@@ -109,11 +109,11 @@ Creates a new Webhook. A Webhook collects data from an external monitoring syste
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -210,11 +210,11 @@ Updates a specific Webhook. You can make changes in Webhook settings, including 
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -316,11 +316,11 @@ Updates the plugin of a specific DataSource. You can change the `version` of the
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -453,11 +453,11 @@ Enables a specific Webhook. By enabling a Webhook, you can communicate with an e
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -547,11 +547,11 @@ Disables a specific Webhook. By disabling a Webhook, you cannot communicate with
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -684,11 +684,11 @@ Gets a specific Webhook. Prints detailed information about the Webhook, includin
 
 * **tags** (Struct)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -759,7 +759,7 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 * **access_key** (string)  
 
 
-* **webhook_url** (string)  
+* **workspace_id** (string)  
 
 
 * **project_id** (string)  
@@ -927,13 +927,13 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 * **tags** (Struct)   `Required` 
 
     
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -973,7 +973,7 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 * **access_key** (string)  
 
     
-* **webhook_url** (string)  
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  

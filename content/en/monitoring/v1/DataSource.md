@@ -67,9 +67,6 @@ Registers a DataSource with information of the plugin to use. Information of the
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 
-* **resource_group** (ResourceGroup)   `Required` 
-
-
 * **tags** (Struct)  
 
 
@@ -114,10 +111,6 @@ Registers a DataSource with information of the plugin to use. Information of the
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
-
-* **resource_group** (ResourceGroup)   `Required` 
-
-* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -241,10 +234,6 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 
 * **tags** (Struct)   `Required` 
 
-* **resource_group** (ResourceGroup)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
 * **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
@@ -359,10 +348,6 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 
 * **tags** (Struct)   `Required` 
 
-* **resource_group** (ResourceGroup)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
 * **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
@@ -476,10 +461,6 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
-
-* **resource_group** (ResourceGroup)   `Required` 
-
-* **workspace_id** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -650,10 +631,6 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 
 * **tags** (Struct)   `Required` 
 
-* **resource_group** (ResourceGroup)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
 * **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
@@ -811,10 +788,6 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 
 * **tags** (Struct)   `Required` 
 
-* **resource_group** (ResourceGroup)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
 * **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
@@ -911,12 +884,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
 
 * **provider** (string)  
-
-
-* **resource_group** (ResourceGroup)  
-
-
-* **workspace_id** (string)  
 
 
 
@@ -1039,12 +1006,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **tags** (Struct)   `Required` 
 
     
-* **resource_group** (ResourceGroup)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
 
     
@@ -1093,12 +1054,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
     
 * **provider** (string)  
 
-    
-* **resource_group** (ResourceGroup)  
-
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### DataSourceRequest
@@ -1124,9 +1079,6 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     
 * **plugin_info** (DataSourcePluginInfo)   `Required` 
-
-    
-* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **tags** (Struct)  

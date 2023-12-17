@@ -25,7 +25,7 @@ An Event is an alarm raised by an external monitoring system and collected by a 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./Event#create) | [CreateEventRequest](Event#createeventrequest) | [Empty](Event#empty) |
-| [**get**](./Event#get) | [GetEventRequest](Event#geteventrequest) | [EventInfo](Event#eventinfo) |
+| [**get**](./Event#get) | [EventRequest](Event#eventrequest) | [EventInfo](Event#eventinfo) |
 | [**list**](./Event#list) | [EventQuery](Event#eventquery) | [EventsInfo](Event#eventsinfo) |
 | [**stat**](./Event#stat) | [EventStatQuery](Event#eventstatquery) | [Struct](Event#struct) |
 
@@ -39,9 +39,6 @@ An Event is an alarm raised by an external monitoring system and collected by a 
 Creates a new Event. The Event creation process starts with validation checking whether the input data is from a webhook or not. After the input data is validated, the data is processed and used to create the Event.
 
 
-
-> **POST** /monitoring/v1/event/create
->
 
 
 
@@ -70,7 +67,7 @@ Gets a specific Event matching the input parameters, `event_id` and `domain_id`.
 
 
 
-[GetEventRequest](./Event#geteventrequest)
+[EventRequest](./Event#eventrequest)
 
 * **event_id** (string)   `Required` 
 
@@ -103,27 +100,27 @@ Gets a specific Event matching the input parameters, `event_id` and `domain_id`.
 
 * **rule** (string)   `Required` 
 
+* **image_url** (string)   `Required` 
+
 * **resource** (EventResource)   `Required` 
 
 * **provider** (string)   `Required` 
 
 * **account** (string)   `Required` 
 
-* **image_url** (string)   `Required` 
+* **additional_info** (Struct)   `Required` 
 
 * **raw_data** (Struct)   `Required` 
 
-* **additional_info** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
 
 * **alert_id** (string)   `Required` 
 
 * **webhook_id** (string)   `Required` 
-
-* **project_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
-
-* **domain_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -225,13 +222,16 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **account** (string)  
 
 
+* **workspace_id** (string)  
+
+
+* **project_id** (string)  
+
+
 * **alert_id** (string)  
 
 
 * **webhook_id** (string)  
-
-
-* **project_id** (string)  
 
 
 
@@ -406,6 +406,9 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **rule** (string)   `Required` 
 
     
+* **image_url** (string)   `Required` 
+
+    
 * **resource** (EventResource)   `Required` 
 
     
@@ -415,28 +418,25 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **account** (string)   `Required` 
 
     
-* **image_url** (string)   `Required` 
+* **additional_info** (Struct)   `Required` 
 
     
 * **raw_data** (Struct)   `Required` 
 
     
-* **additional_info** (Struct)   `Required` 
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
 
     
 * **alert_id** (string)   `Required` 
 
     
 * **webhook_id** (string)   `Required` 
-
-    
-* **project_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -471,13 +471,21 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **account** (string)  
 
     
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
+
+    
 * **alert_id** (string)  
 
     
 * **webhook_id** (string)  
 
-    
-* **project_id** (string)  
+    <br>
+
+### EventRequest
+* **event_id** (string)   `Required` 
 
     <br>
 
@@ -502,10 +510,5 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### GetEventRequest
-* **event_id** (string)   `Required` 
 
     <br>

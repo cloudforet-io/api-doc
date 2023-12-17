@@ -76,10 +76,10 @@ Creates a new EventRule. You can filter the Events to apply the EventRule by set
 * **options** (EventRuleOptions)  
 
 
-* **project_id** (string)  
-
-
 * **tags** (Struct)  
+
+
+* **project_id** (string)  
 
 
 
@@ -119,15 +119,15 @@ Creates a new EventRule. You can filter the Events to apply the EventRule by set
 
 * **options** (EventRuleOptions)   `Required` 
 
-* **project_id** (string)   `Required` 
-
 * **tags** (Struct)   `Required` 
 
 * **resource_group** (ResourceGroup)   `Required` 
 
+* **domain_id** (string)   `Required` 
+
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -250,15 +250,15 @@ Changes a priority order between EventRules to apply. EventRules are filtered by
 
 * **options** (EventRuleOptions)   `Required` 
 
-* **project_id** (string)   `Required` 
-
 * **tags** (Struct)   `Required` 
 
 * **resource_group** (ResourceGroup)   `Required` 
 
+* **domain_id** (string)   `Required` 
+
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -359,15 +359,15 @@ Updates a specific EventRule. You can make changes in EventRule settings.
 
 * **options** (EventRuleOptions)   `Required` 
 
-* **project_id** (string)   `Required` 
-
 * **tags** (Struct)   `Required` 
 
 * **resource_group** (ResourceGroup)   `Required` 
 
+* **domain_id** (string)   `Required` 
+
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -509,15 +509,15 @@ Gets a specific EventRule. Prints detailed information about the EventRule.
 
 * **options** (EventRuleOptions)   `Required` 
 
-* **project_id** (string)   `Required` 
-
 * **tags** (Struct)   `Required` 
 
 * **resource_group** (ResourceGroup)   `Required` 
 
+* **domain_id** (string)   `Required` 
+
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -591,7 +591,7 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **name** (string)  
 
 
-* **resource_group** (ResourceGroup)  
+* **workspace_id** (string)  
 
 
 * **project_id** (string)  
@@ -734,10 +734,10 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **options** (EventRuleOptions)  
 
     
-* **project_id** (string)  
+* **tags** (Struct)  
 
     
-* **tags** (Struct)  
+* **project_id** (string)  
 
     <br>
 
@@ -808,19 +808,19 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **options** (EventRuleOptions)   `Required` 
 
     
-* **project_id** (string)   `Required` 
-
-    
 * **tags** (Struct)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 
 
     
+* **domain_id** (string)   `Required` 
+
+    
 * **workspace_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -842,7 +842,7 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **name** (string)  
 
     
-* **resource_group** (ResourceGroup)  
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  

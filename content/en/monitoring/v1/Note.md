@@ -86,11 +86,11 @@ Creates a new Note. You can create Notes for each Alert to record the informatio
 
 * **created_by** (string)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -166,11 +166,11 @@ Updates a specific Note. You must specify the `note_id` for Note validation chec
 
 * **created_by** (string)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -284,11 +284,11 @@ Gets a specific Note. You must specify the `note_id` and `domain_id`.
 
 * **created_by** (string)   `Required` 
 
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -345,6 +345,9 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
 
 * **created_by** (string)  
+
+
+* **workspace_id** (string)  
 
 
 * **project_id** (string)  
@@ -450,13 +453,13 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 * **created_by** (string)   `Required` 
 
     
-* **project_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -474,6 +477,9 @@ Gets a list of all Notes. You can use a query to get a filtered list of Notes.
 
     
 * **created_by** (string)  
+
+    
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  
