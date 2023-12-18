@@ -29,7 +29,7 @@ Secret is used to access data in other microservices.
 | [**update**](./Secret#update) | [UpdateSecretRequest](Secret#updatesecretrequest) | [SecretInfo](Secret#secretinfo) |
 | [**delete**](./Secret#delete) | [SecretRequest](Secret#secretrequest) | [Empty](Secret#empty) |
 | [**update_data**](./Secret#update_data) | [UpdateSecretDataRequest](Secret#updatesecretdatarequest) | [Empty](Secret#empty) |
-| [**get_data**](./Secret#get_data) | [SecretRequest](Secret#secretrequest) | [SecretDataInfo](Secret#secretdatainfo) |
+| [**get_data**](./Secret#get_data) | [GetSecretDataRequest](Secret#getsecretdatarequest) | [SecretDataInfo](Secret#secretdatainfo) |
 | [**get**](./Secret#get) | [SecretRequest](Secret#secretrequest) | [SecretInfo](Secret#secretinfo) |
 | [**list**](./Secret#list) | [SecretQuery](Secret#secretquery) | [SecretsInfo](Secret#secretsinfo) |
 | [**stat**](./Secret#stat) | [SecretStatQuery](Secret#secretstatquery) | [Struct](Secret#struct) |
@@ -365,9 +365,12 @@ This API is for internal system use only.
 
 
 
-[SecretRequest](./Secret#secretrequest)
+[GetSecretDataRequest](./Secret#getsecretdatarequest)
 
 * **secret_id** (string)   `Required` 
+
+
+* **domain_id** (string)   `Required` 
 
 
 
@@ -375,7 +378,8 @@ This API is for internal system use only.
 
 {{< highlight json >}}
 {
-   "secret_id": "secret-123456789012"
+   "secret_id": "secret-123456789012",
+   "domain_id": "domain-12345abcde"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -631,6 +635,14 @@ You can use a query to get a filtered list of secrets.
 
     
 * **trusted_secret_id** (string)  
+
+    <br>
+
+### GetSecretDataRequest
+* **secret_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
 
     <br>
 
