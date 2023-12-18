@@ -30,7 +30,7 @@ bookFlatSection: true
 | [**enable**](./Workspace#enable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**disable**](./Workspace#disable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**get**](./Workspace#get) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
-| [**check**](./Workspace#check) | [WorkspaceRequest](Workspace#workspacerequest) | [Empty](Workspace#empty) |
+| [**check**](./Workspace#check) | [WorkspaceCheckRequest](Workspace#workspacecheckrequest) | [Empty](Workspace#empty) |
 | [**list**](./Workspace#list) | [WorkspaceSearchQuery](Workspace#workspacesearchquery) | [WorkspacesInfo](Workspace#workspacesinfo) |
 | [**stat**](./Workspace#stat) | [WorkspaceStatQuery](Workspace#workspacestatquery) | [Struct](Workspace#struct) |
 
@@ -147,9 +147,6 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v2/workspace/check
->
-
 
 
 
@@ -215,6 +212,14 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### WorkspaceCheckRequest
+* **workspace_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
 
     <br>
 
