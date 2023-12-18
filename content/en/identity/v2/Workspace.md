@@ -30,6 +30,7 @@ bookFlatSection: true
 | [**enable**](./Workspace#enable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**disable**](./Workspace#disable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**get**](./Workspace#get) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
+| [**check**](./Workspace#check) | [WorkspaceRequest](Workspace#workspacerequest) | [Empty](Workspace#empty) |
 | [**list**](./Workspace#list) | [WorkspaceSearchQuery](Workspace#workspacesearchquery) | [WorkspacesInfo](Workspace#workspacesinfo) |
 | [**stat**](./Workspace#stat) | [WorkspaceStatQuery](Workspace#workspacestatquery) | [Struct](Workspace#struct) |
 
@@ -130,6 +131,23 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/workspace/get
+>
+
+
+
+
+
+
+    
+<br>
+
+### check
+
+
+
+
+
+> **POST** /identity/v2/workspace/check
 >
 
 
