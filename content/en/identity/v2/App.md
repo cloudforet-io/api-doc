@@ -259,9 +259,6 @@ bookFlatSection: true
 * **created_at** (string)   `Required` 
 
     
-* **last_accessed_at** (string)   `Required` 
-
-    
 * **expired_at** (string)   `Required` 
 
     <br>
