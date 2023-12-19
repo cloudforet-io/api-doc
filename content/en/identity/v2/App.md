@@ -31,6 +31,7 @@ bookFlatSection: true
 | [**disable**](./App#disable) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
 | [**delete**](./App#delete) | [AppRequest](App#apprequest) | [Empty](App#empty) |
 | [**get**](./App#get) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
+| [**check**](./App#check) | [AppCheckRequest](App#appcheckrequest) | [Empty](App#empty) |
 | [**list**](./App#list) | [AppSearchQuery](App#appsearchquery) | [AppsInfo](App#appsinfo) |
 | [**stat**](./App#stat) | [AppStatQuery](App#appstatquery) | [Struct](App#struct) |
 
@@ -158,6 +159,20 @@ bookFlatSection: true
     
 <br>
 
+### check
+
+
+
+
+
+
+
+
+
+
+    
+<br>
+
 ### list
 
 
@@ -198,6 +213,14 @@ bookFlatSection: true
 ## Message
 
 
+
+### AppCheckRequest
+* **api_key_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    <br>
 
 ### AppInfo
 * **app_id** (string)   `Required` 
