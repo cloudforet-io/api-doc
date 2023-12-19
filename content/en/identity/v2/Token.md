@@ -100,6 +100,9 @@ bookFlatSection: true
 * **scope** (Scope)   `Required` 
 
     
+* **timeout** (int32)  
+
+    
 * **workspace_id** (string)  
 
     <br>

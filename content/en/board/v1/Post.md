@@ -58,7 +58,7 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 [CreatePostRequest](./Post#createpostrequest)
 
-* **board_id** (string)   `Required` 
+* **board_type** (string)   `Required` 
 
 
 * **title** (string)   `Required` 
@@ -82,15 +82,12 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 * **writer** (string)  
 
 
-* **domain_id** (string)  
-
-
 
 
 
 {{< highlight json >}}
 {
-   "board_id": "board-123456789012",
+   "board_type": "NOTICE",
    "category": "developer",
    "title": "title",
    "contents": "This is contents.",
@@ -98,7 +95,6 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
    "options": {"is_popup": true},
    "writer": "user1",
    "resource_group": "DOMAIN",
-   "domain_id": "domain-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -107,13 +103,15 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
+* **board_type** (string)   `Required` 
+
 * **post_id** (string)   `Required` 
+
+* **category** (string)   `Required` 
 
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
-
-* **category** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -129,8 +127,6 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 * **user_id** (string)   `Required` 
 
-* **board_id** (string)   `Required` 
-
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -139,7 +135,7 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 
 {{< highlight json >}}
 {
-         "board_id": "board-123456789012",
+         "board_type": "NOTICE",
          "post_id": "post-123456789012",
          "category": "developer",
          "title": "title",
@@ -150,6 +146,7 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
          },
          "view_count": 0,
          "writer": "user1",
+         "resource_group": "DOMAIN",
          "domain_id": "domain-123456789012",
          "user_id": "user1@email.com",
          "created_at": "2022-01-01T01:06:23.732Z",
@@ -189,9 +186,6 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 * **post_id** (string)   `Required` 
 
 
-* **board_id** (string)   `Required` 
-
-
 * **title** (string)  
 
 
@@ -215,11 +209,10 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 {{< highlight json >}}
 {
-     "board_id": "board-123456789012",
      "post_id": "post-2118473ce15e",
-     "category": "developer",
      "title": "title2",
      "contents": "this is contents2.",
+     "category": "developer",
      "options": {
          "is_popup": false,
          "is_pinned": true
@@ -233,13 +226,15 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
+* **board_type** (string)   `Required` 
+
 * **post_id** (string)   `Required` 
+
+* **category** (string)   `Required` 
 
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
-
-* **category** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -255,8 +250,6 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 * **user_id** (string)   `Required` 
 
-* **board_id** (string)   `Required` 
-
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -265,7 +258,7 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 {{< highlight json >}}
 {
-         "board_id": "board-123456789012",
+         "board_type": "NOTICE",
          "post_id": "post-123456789012",
          "category": "developer",
          "title": "title",
@@ -276,6 +269,7 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
          },
          "view_count": 0,
          "writer": "user1",
+         "resource_group": "DOMAIN",
          "domain_id": "domain-123456789012",
          "user_id": "user1@email.com",
          "created_at": "2022-01-01T01:06:23.732Z",
@@ -312,9 +306,6 @@ Not Implemented
 
 [PostRequest](./Post#postrequest)
 
-* **board_id** (string)   `Required` 
-
-
 * **post_id** (string)   `Required` 
 
 
@@ -323,7 +314,6 @@ Not Implemented
 
 {{< highlight json >}}
 {
-   "board_id": "board-b9aa34e65c60",
    "post_id": "post-2118473ce15e"
 }
 {{< /highlight >}}
@@ -358,9 +348,6 @@ Deletes a specific Post. You must specify the `post_id` of the Post to delete, a
 
 [PostRequest](./Post#postrequest)
 
-* **board_id** (string)   `Required` 
-
-
 * **post_id** (string)   `Required` 
 
 
@@ -369,7 +356,6 @@ Deletes a specific Post. You must specify the `post_id` of the Post to delete, a
 
 {{< highlight json >}}
 {
-   "board_id": "board-b9aa34e65c60",
    "post_id": "post-2118473ce15e"
 }
 {{< /highlight >}}
@@ -404,9 +390,6 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 [PostRequest](./Post#postrequest)
 
-* **board_id** (string)   `Required` 
-
-
 * **post_id** (string)   `Required` 
 
 
@@ -415,7 +398,6 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 {{< highlight json >}}
 {
-   "board_id": "board-b9aa34e65c60",
    "post_id": "post-2118473ce15e"
 }
 {{< /highlight >}}
@@ -425,13 +407,15 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
  {{< tab "Response Example" >}}
 
 [PostInfo](#POSTINFO)
+* **board_type** (string)   `Required` 
+
 * **post_id** (string)   `Required` 
+
+* **category** (string)   `Required` 
 
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
-
-* **category** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -447,8 +431,6 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 * **user_id** (string)   `Required` 
 
-* **board_id** (string)   `Required` 
-
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -457,7 +439,7 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 {{< highlight json >}}
 {
-         "board_id": "board-123456789012",
+         "board_type": "NOTICE",
          "post_id": "post-123456789012",
          "category": "developer",
          "title": "title",
@@ -468,6 +450,7 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
          },
          "view_count": 0,
          "writer": "user1",
+         "resource_group": "DOMAIN",
          "domain_id": "domain-123456789012",
          "user_id": "user1@email.com",
          "created_at": "2022-01-01T01:06:23.732Z",
@@ -504,10 +487,10 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 [PostSearchQuery](./Post#postsearchquery)
 
-* **board_id** (string)   `Required` 
-
-
 * **query** (Query)  
+
+
+* **board_type** (string)  
 
 
 * **post_id** (string)  
@@ -533,7 +516,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 {{< highlight json >}}
 {
-   "board_id": "board-b9aa34e65c60",
    "query": {}
 }
 {{< /highlight >}}
@@ -626,7 +608,7 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 ### CreatePostRequest
-* **board_id** (string)   `Required` 
+* **board_type** (string)   `Required` 
 
     
 * **title** (string)   `Required` 
@@ -649,22 +631,22 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     
 * **writer** (string)  
 
-    
-* **domain_id** (string)  
-
     <br>
 
 ### PostInfo
+* **board_type** (string)   `Required` 
+
+    
 * **post_id** (string)   `Required` 
+
+    
+* **category** (string)   `Required` 
 
     
 * **title** (string)   `Required` 
 
     
 * **contents** (string)   `Required` 
-
-    
-* **category** (string)   `Required` 
 
     
 * **options** (Struct)   `Required` 
@@ -688,9 +670,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **user_id** (string)   `Required` 
 
     
-* **board_id** (string)   `Required` 
-
-    
 * **created_at** (string)   `Required` 
 
     
@@ -699,18 +678,15 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     <br>
 
 ### PostRequest
-* **board_id** (string)   `Required` 
-
-    
 * **post_id** (string)   `Required` 
 
     <br>
 
 ### PostSearchQuery
-* **board_id** (string)   `Required` 
+* **query** (Query)  
 
     
-* **query** (Query)  
+* **board_type** (string)  
 
     
 * **post_id** (string)  
@@ -747,9 +723,6 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 ### UpdatePostRequest
 * **post_id** (string)   `Required` 
-
-    
-* **board_id** (string)   `Required` 
 
     
 * **title** (string)  
