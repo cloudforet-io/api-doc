@@ -154,6 +154,9 @@ bookFlatSection: true
     
 * **resource_group** (ResourceGroup)   `Required` 
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### RoleBindingInfo

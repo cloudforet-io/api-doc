@@ -89,6 +89,9 @@ Registers a DataSource with information of the plugin to use. Information of the
 * **tags** (Struct)  
 
 
+* **workspace_id** (string)  
+
+
 
 
 
@@ -1390,6 +1393,9 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     
 * **tags** (Struct)  
+
+    
+* **workspace_id** (string)  
 
     <br>
 

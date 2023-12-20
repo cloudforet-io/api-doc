@@ -77,6 +77,9 @@ It can be used to link to a trusted secret if you request it with 'trusted_secre
 * **tags** (Struct)  
 
 
+* **workspace_id** (string)  
+
+
 * **project_id** (string)  
 
 
@@ -626,6 +629,9 @@ You can use a query to get a filtered list of secrets.
 
     
 * **tags** (Struct)  
+
+    
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  

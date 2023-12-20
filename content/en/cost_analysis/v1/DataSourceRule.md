@@ -67,6 +67,12 @@ Creates a new DataSourceRule. When creating the resource, this method can apply 
 * **actions** (DataSourceRuleActions)   `Required` 
 
 
+* **resource_group** (ResourceGroup)   `Required` 
+
+
+* **workspace_id** (string)   `Required` 
+
+
 * **name** (string)  
 
 
@@ -695,6 +701,12 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
 
     
 * **actions** (DataSourceRuleActions)   `Required` 
+
+    
+* **resource_group** (ResourceGroup)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **name** (string)  

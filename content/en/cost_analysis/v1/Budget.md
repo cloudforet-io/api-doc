@@ -91,6 +91,9 @@ Creates a new Budget. When creating a Budget, it should be set for a specific Pr
 * **tags** (Struct)  
 
 
+* **workspace_id** (string)  
+
+
 * **project_id** (string)  
 
 
@@ -1118,6 +1121,9 @@ Gets a list of all Budgets. You can use a query to get a filtered list of Budget
 
     
 * **tags** (Struct)  
+
+    
+* **workspace_id** (string)  
 
     
 * **project_id** (string)  

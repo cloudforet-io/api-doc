@@ -81,6 +81,9 @@ Creates a new Collector with information of the plugin to use. Information of th
 * **tags** (Struct)  
 
 
+* **workspace_id** (string)  
+
+
 
 
 
@@ -976,6 +979,9 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
     
 * **tags** (Struct)  
+
+    
+* **workspace_id** (string)  
 
     <br>
 

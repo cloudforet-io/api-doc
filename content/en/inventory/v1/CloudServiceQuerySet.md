@@ -86,6 +86,9 @@ Create a new query set. Periodic statistics data is created based on the query s
 * **tags** (Struct)  
 
 
+* **workspace_id** (string)  
+
+
 
 
 
@@ -1062,6 +1065,9 @@ You can use a query to get a filtered list of query sets.
 
     
 * **tags** (Struct)  
+
+    
+* **workspace_id** (string)  
 
     <br>
 

@@ -271,6 +271,9 @@ description of dashboard
 * **domain_id** (string)   `Required` 
 
     
+* **workspace_id** (string)   `Required` 
+
+    
 * **user_id** (string)   `Required` 
 
     

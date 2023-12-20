@@ -31,7 +31,7 @@ bookFlatSection: true
 | [**disable**](./App#disable) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
 | [**delete**](./App#delete) | [AppRequest](App#apprequest) | [Empty](App#empty) |
 | [**get**](./App#get) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
-| [**check**](./App#check) | [AppCheckRequest](App#appcheckrequest) | [Empty](App#empty) |
+| [**check**](./App#check) | [AppCheckRequest](App#appcheckrequest) | [CheckAppInfo](App#checkappinfo) |
 | [**list**](./App#list) | [AppSearchQuery](App#appsearchquery) | [AppsInfo](App#appsinfo) |
 | [**stat**](./App#stat) | [AppStatQuery](App#appstatquery) | [Struct](App#struct) |
 
@@ -307,6 +307,11 @@ bookFlatSection: true
 
     <br>
 
+### CheckAppInfo
+* **permissions** (string)  `Repeated`    `Required` 
+
+    <br>
+
 ### CreateAppRequest
 * **name** (string)   `Required` 
 
@@ -321,6 +326,9 @@ bookFlatSection: true
 
     
 * **expired_at** (string)  
+
+    
+* **workspace_id** (string)  
 
     <br>
 

@@ -73,10 +73,10 @@ Creates a new EscalationPolicy. When creating an EscalationPolicy, if the projec
 * **finish_condition** (EscalationFinishCondition)  
 
 
-* **project_id** (string)  
-
-
 * **tags** (Struct)  
+
+
+* **project_id** (string)  
 
 
 
@@ -658,10 +658,10 @@ Gets a list of all EscalationPolicies. You can use a query to get a filtered lis
 * **finish_condition** (EscalationFinishCondition)  
 
     
-* **project_id** (string)  
+* **tags** (Struct)  
 
     
-* **tags** (Struct)  
+* **project_id** (string)  
 
     <br>
 

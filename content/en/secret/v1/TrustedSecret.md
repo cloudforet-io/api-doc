@@ -75,6 +75,9 @@ Created trusted secret is encrypted and stored securely.
 * **tags** (Struct)  
 
 
+* **workspace_id** (string)  
+
+
 * **trusted_account_id** (string)  
 
 
@@ -547,6 +550,9 @@ You can use a query to get a filtered list of trusted secrets.
 
     
 * **tags** (Struct)  
+
+    
+* **workspace_id** (string)  
 
     
 * **trusted_account_id** (string)  

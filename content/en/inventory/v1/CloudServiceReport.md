@@ -266,6 +266,9 @@ bookFlatSection: true
     
 * **tags** (Struct)  
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### ReportSchedule

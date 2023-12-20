@@ -242,6 +242,9 @@ description of dashboard
 * **tags** (Struct)  
 
     
+* **workspace_id** (string)  
+
+    
 * **project_id** (string)  
 
     <br>
