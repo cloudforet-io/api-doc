@@ -44,7 +44,7 @@ bookFlatSection: true
 * **metadata** (Struct)   `Required` 
 
     
-* **schema** (string)   `Required` 
+* **schema_id** (string)   `Required` 
 
     
 * **secret_id** (string)   `Required` 
@@ -64,7 +64,7 @@ bookFlatSection: true
 * **options** (Struct)   `Required` 
 
     
-* **schema** (string)   `Required` 
+* **schema_id** (string)   `Required` 
 
     
 * **secret_data** (Struct)   `Required` 

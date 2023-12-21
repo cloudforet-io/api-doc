@@ -339,7 +339,7 @@ bookFlatSection: true
 * **secret_data** (Struct)   `Required` 
 
     
-* **schema** (string)   `Required` 
+* **schema_id** (string)   `Required` 
 
     
 * **metadata** (Struct)   `Required` 

@@ -1357,7 +1357,7 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **secret_data** (Struct)   `Required` 
 
     
-* **schema** (string)   `Required` 
+* **schema_id** (string)   `Required` 
 
     
 * **secret_id** (string)   `Required` 
