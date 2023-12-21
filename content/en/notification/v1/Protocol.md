@@ -1219,7 +1219,7 @@ If the upgrade_mode is AUTO, check the latest plugin version when running the pl
   *The data for using plugin if necessary. This data is encrypted and stored in the Secret service.*
 
     
-* **schema** (string)  
+* **schema_id** (string)  
 
   *The name of schema.
 When the secret_data is stored in the Secret service, it can be set with schema if the schema is existed.
