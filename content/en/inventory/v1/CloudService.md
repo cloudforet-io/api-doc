@@ -736,9 +736,6 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **project_id** (string)  
 
 
-* **project_group_id** (string)  
-
-
 
 
 
@@ -1030,9 +1027,6 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 
     
 * **project_id** (string)  
-
-    
-* **project_group_id** (string)  
 
     <br>
 
