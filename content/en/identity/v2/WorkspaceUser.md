@@ -75,7 +75,7 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v2/user/find
+> **POST** /identity/v2/workspace-user/find
 >
 
 
