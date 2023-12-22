@@ -257,6 +257,9 @@ bookFlatSection: true
     
 * **metadata** (Struct)   `Required` 
 
+    
+* **config** (Struct)   `Required` 
+
     <br>
 
 ### DomainInfo
