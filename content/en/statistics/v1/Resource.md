@@ -44,77 +44,6 @@ Enables data preprocessing of different services. Although limited, it is possib
 
 
 
- {{< tabs " stat " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[ResourceStatRequest](./Resource#resourcestatrequest)
-
-* **aggregate** (StatAggregate)  `Repeated`    `Required` 
-
-
-* **page** (StatPage)  
-
-
-
-
-
-{{< highlight json >}}
-{
-   "aggregate": [
-       {"query": {"resource_type": "inventory.CloudServiceType",
-                  "query": {
-                      "filter": [{"k": "labels", "v": ["Server"], "o": "in"},
-                                 {"k": "is_primary", "v": true, "o": "eq"}], "aggregate": [{
-                          "group": {
-                              "keys": [
-                                  {
-                                      "key": "cloud_service_type_id",
-                                      "name": "cloud_service_type_id"},
-                                  {
-                                      "key": "name",
-                                      "name": "cloud_service_type"},
-                                  {
-                                      "key": "group",
-                                      "name": "cloud_service_group"},
-                                  {
-                                      "key": "provider",
-                                      "name": "provider"},
-                                  {
-                                      "key": "cloud_service_type_id",
-                                      "name": "cloud_service_type_id"}],
-                              "fields": [
-                                  {
-                                      "key": "tags",
-                                      "name": "tags",
-                                      "operator": "first"},
-                                  {
-                                      "key": "labels",
-                                      "name": "labels",
-                                      "operator": "first"}]}}]}}},
-       {"join": {"resource_type": "inventory.CloudService", "query": {"filter": [
-           {"k": "ref_cloud_service_type.cloud_service_type_id",
-            "v": ["cloud-svc-type-58c926b19aca", "cloud-svc-type-c7e5bc38d911",
-                  "cloud-svc-type-8dd4d7a13b95", "cloud-svc-type-719e705cb529",
-                  "cloud-svc-type-50bd62cf6e0e"], "o": "in"}], "aggregate": [{"group": {
-           "keys": [{"key": "cloud_service_type", "name": "cloud_service_type"},
-                    {"key": "cloud_service_group", "name": "cloud_service_group"},
-                    {"key": "provider", "name": "provider"}],
-           "fields": [{"name": "count", "operator": "count"}]}}]},
-                 "keys": ["cloud_service_type", "cloud_service_group", "provider"]}},
-       {"fill_na": {"data": {"count": 0.0}}}, {"formula": {"query": "count > 0"}},
-       {"sort": {"key": "count", "desc": true}}],
-   "domain_id": "domain-58010aa2e451"
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-
-{{< /tabs >}}
-
 
     
 
@@ -134,7 +63,7 @@ Enables data preprocessing of different services. Although limited, it is possib
 
     <br>
 
-### SortKey
+### Sort
 * **key** (string)   `Required` 
 
     
@@ -215,13 +144,7 @@ Enables data preprocessing of different services. Although limited, it is possib
     <br>
 
 ### StatAggregateSort
-* **key** (string)  
-
-    
-* **desc** (bool)  
-
-    
-* **keys** (SortKey)  `Repeated`   
+* **keys** (Sort)  `Repeated`    `Required` 
 
     <br>
 

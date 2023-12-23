@@ -127,13 +127,7 @@ bookFlatSection: true
     <br>
 
 ### AggregateSort
-* **key** (string)   `Required` 
-
-    
-* **desc** (bool)   `Required` 
-
-    
-* **keys** (SortKey)  `Repeated`    `Required` 
+* **keys** (Sort)  `Repeated`    `Required` 
 
     <br>
 
@@ -178,7 +172,7 @@ bookFlatSection: true
 * **page** (Page)   `Required` 
 
     
-* **sort** (SortKey)  `Repeated`    `Required` 
+* **sort** (Sort)  `Repeated`    `Required` 
 
     
 * **fields** (Struct)   `Required` 
@@ -201,7 +195,7 @@ bookFlatSection: true
 * **keyword** (string)   `Required` 
 
     
-* **sort** (SortKey)  `Repeated`    `Required` 
+* **sort** (Sort)  `Repeated`    `Required` 
 
     
 * **group_by** (string)  `Repeated`    `Required` 
@@ -244,7 +238,7 @@ bookFlatSection: true
 * **keyword** (string)   `Required` 
 
     
-* **sort** (SortKey)  `Repeated`    `Required` 
+* **sort** (Sort)  `Repeated`    `Required` 
 
     
 * **fields** (ListValue)   `Required` 
@@ -292,7 +286,7 @@ bookFlatSection: true
 * **filter_or** (Filter)  `Repeated`    `Required` 
 
     
-* **sort** (Sort)   `Required` 
+* **sort** (Sort)  `Repeated`    `Required` 
 
     
 * **page** (Page)   `Required` 
@@ -315,17 +309,6 @@ bookFlatSection: true
     <br>
 
 ### Sort
-* **key** (string)   `Required` 
-
-    
-* **desc** (bool)   `Required` 
-
-    
-* **keys** (SortKey)  `Repeated`    `Required` 
-
-    <br>
-
-### SortKey
 * **key** (string)   `Required` 
 
     
@@ -401,7 +384,7 @@ bookFlatSection: true
 * **page** (Page)   `Required` 
 
     
-* **sort** (SortKey)  `Repeated`    `Required` 
+* **sort** (Sort)  `Repeated`    `Required` 
 
     
 * **fields** (Struct)   `Required` 
