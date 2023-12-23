@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [Secret](#Secret)
-Secret is a service that stores and manages credentials.
+Secret is a resource that stores and manages credentials.
 Secret is used to access data in other microservices.
 
 
@@ -353,7 +353,7 @@ Updated secret is encrypted and stored securely.
 
 ### get_data
 
-Updates a specific secret's data.
+Get a specific secret's data.
 This API is for internal system use only.
 
 
@@ -537,8 +537,7 @@ You can use a query to get a filtered list of secrets.
 
 {{< highlight json >}}
 {
-   "query": {},
-   "domain_id": "domain-12345abcde"
+   "query": {}
 }
 {{< /highlight >}}
 {{< /tab >}}

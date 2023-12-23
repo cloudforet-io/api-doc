@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [TrustedSecret](#TrustedSecret)
-Trusted secret is a service that stores and manages credentials.
+Trusted secret is a resource that stores and manages credentials.
 Trusted secret is merged with linked secret and used to access data in other microservices.
 
 
@@ -458,8 +458,7 @@ You can use a query to get a filtered list of trusted secrets.
 
 {{< highlight json >}}
 {
-   "query": {},
-   "domain_id": "domain-123456789012"
+   "query": {}
 }
 {{< /highlight >}}
 {{< /tab >}}
