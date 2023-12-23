@@ -126,11 +126,6 @@ bookFlatSection: true
 
     <br>
 
-### AggregateSort
-* **keys** (Sort)  `Repeated`    `Required` 
-
-    <br>
-
 ### AggregateSubCondition
 * **key** (string)   `Required` 
 
@@ -326,7 +321,7 @@ bookFlatSection: true
 * **count** (AggregateCount)   `Required` 
 
     
-* **sort** (AggregateSort)   `Required` 
+* **sort** (ListValue)   `Required` 
 
     
 * **project** (AggregateProject)   `Required` 

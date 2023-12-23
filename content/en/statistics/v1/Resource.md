@@ -81,7 +81,7 @@ Enables data preprocessing of different services. Although limited, it is possib
 * **concat** (StatAggregateConcat)   `Required` 
 
     
-* **sort** (StatAggregateSort)   `Required` 
+* **sort** (ListValue)   `Required` 
 
     
 * **formula** (StatAggregateFormula)   `Required` 
@@ -140,11 +140,6 @@ Enables data preprocessing of different services. Although limited, it is possib
 
     
 * **extend_data** (Struct)  
-
-    <br>
-
-### StatAggregateSort
-* **keys** (Sort)  `Repeated`    `Required` 
 
     <br>
 
