@@ -43,7 +43,7 @@ bookFlatSection: true
 
 
 
-> **POST** /file-manager/v1/file/add
+> **POST** /file-manager/v2/file/add
 >
 
 
