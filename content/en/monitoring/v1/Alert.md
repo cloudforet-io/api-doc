@@ -210,6 +210,9 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 * **description** (string)  
 
 
+* **reset_description** (bool)  
+
+
 * **urgency** (AlertUrgency)  
 
 
@@ -1102,6 +1105,9 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 
     
 * **description** (string)  
+
+    
+* **reset_description** (bool)  
 
     
 * **urgency** (AlertUrgency)  
