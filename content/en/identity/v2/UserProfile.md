@@ -27,7 +27,7 @@ bookFlatSection: true
 | [**update**](./UserProfile#update) | [UpdateUserProfileRequest](UserProfile#updateuserprofilerequest) | [UserInfo](UserProfile#userinfo) |
 | [**verify_email**](./UserProfile#verify_email) | [VerifyEmailRequest](UserProfile#verifyemailrequest) | [Empty](UserProfile#empty) |
 | [**confirm_email**](./UserProfile#confirm_email) | [ConfirmEmailRequest](UserProfile#confirmemailrequest) | [UserInfo](UserProfile#userinfo) |
-| [**reset_password**](./UserProfile#reset_password) | [UserProfileRequest](UserProfile#userprofilerequest) | [Empty](UserProfile#empty) |
+| [**reset_password**](./UserProfile#reset_password) | [UserPasswordResetRequest](UserProfile#userpasswordresetrequest) | [Empty](UserProfile#empty) |
 | [**enable_mfa**](./UserProfile#enable_mfa) | [EnableMFARequest](UserProfile#enablemfarequest) | [UserInfo](UserProfile#userinfo) |
 | [**disable_mfa**](./UserProfile#disable_mfa) | [DisableMFARequest](UserProfile#disablemfarequest) | [UserInfo](UserProfile#userinfo) |
 | [**confirm_mfa**](./UserProfile#confirm_mfa) | [ConfirmMFARequest](UserProfile#confirmmfarequest) | [UserInfo](UserProfile#userinfo) |
