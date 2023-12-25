@@ -122,9 +122,6 @@ bookFlatSection: true
 * **record_id** (string)   `Required` 
 
     
-* **cloud_service_id** (string)   `Required` 
-
-    
 * **action** (RecordAction)   `Required` 
 
     
@@ -134,7 +131,13 @@ bookFlatSection: true
 * **diff_count** (int32)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **updated_by** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **cloud_service_id** (string)   `Required` 
 
     
 * **collector_id** (string)   `Required` 
@@ -143,16 +146,7 @@ bookFlatSection: true
 * **job_id** (string)   `Required` 
 
     
-* **updated_by** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **project_id** (string)   `Required` 
+* **user_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
