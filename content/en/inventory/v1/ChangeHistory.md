@@ -102,12 +102,6 @@ bookFlatSection: true
     
 * **updated_by** (string)  
 
-    
-* **workspace_id** (string)  
-
-    
-* **project_id** (string)  
-
     <br>
 
 ### ChangeHistoryStatQuery
