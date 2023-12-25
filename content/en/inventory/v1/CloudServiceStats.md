@@ -115,7 +115,7 @@ You can use a query to get a filtered list of statistics data.
        {
            "query_set_id": "query-set-abcd1234",
            "key": "Disk Size",
-           "values": {
+           "data": {
                "Disk Size": 1040,
                "Memory Size": 1024,
                "CPU": 2
@@ -196,7 +196,7 @@ You can use a query to get a filtered list of statistics data.
 * **query_set_id** (string)   `Required` 
 
     
-* **values** (Struct)   `Required` 
+* **data** (Struct)   `Required` 
 
     
 * **unit** (Struct)   `Required` 
