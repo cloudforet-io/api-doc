@@ -322,7 +322,7 @@ Disable MFA for user. If this api is called, send email to user.
 * **user_id** (string)   `Required` 
 
     
-* **actions** (UserRequiredAction)  `Repeated`    `Required` 
+* **required_actions** (UserRequiredAction)  `Repeated`    `Required` 
 
     <br>
 
