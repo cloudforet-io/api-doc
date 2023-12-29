@@ -71,9 +71,6 @@ bookFlatSection: true
 * **options** (Struct)   `Required` 
 
     
-* **secret_data** (Struct)   `Required` 
-
-    
 * **credentials** (Struct)   `Required` 
 
     
@@ -81,6 +78,12 @@ bookFlatSection: true
 
     
 * **schema_id** (string)  
+
+    
+* **secret_data** (Struct)  
+
+    
+* **metadata** (Struct)  
 
     <br>
 
