@@ -26,7 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./App#create) | [CreateAppRequest](App#createapprequest) | [AppInfo](App#appinfo) |
 | [**update**](./App#update) | [UpdateAppRequest](App#updateapprequest) | [AppInfo](App#appinfo) |
-| [**generate_api_key**](./App#generate_api_key) | [GenerateAPIKeyAppRequest](App#generateapikeyapprequest) | [AppInfo](App#appinfo) |
+| [**generate_client_secret**](./App#generate_client_secret) | [GenerateAPIKeyAppRequest](App#generateapikeyapprequest) | [AppInfo](App#appinfo) |
 | [**enable**](./App#enable) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
 | [**disable**](./App#disable) | [AppRequest](App#apprequest) | [AppInfo](App#appinfo) |
 | [**delete**](./App#delete) | [AppRequest](App#apprequest) | [Empty](App#empty) |
@@ -74,13 +74,13 @@ bookFlatSection: true
     
 <br>
 
-### generate_api_key
+### generate_client_secret
 
 
 
 
 
-> **POST** /identity/v2/app/generate-api-key
+> **POST** /identity/v2/app/generate-client-secret
 >
 
 
@@ -215,7 +215,7 @@ bookFlatSection: true
 
 
 ### AppCheckRequest
-* **api_key_id** (string)   `Required` 
+* **client_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -226,7 +226,7 @@ bookFlatSection: true
 * **app_id** (string)   `Required` 
 
     
-* **api_key** (string)   `Required` 
+* **client_secret** (string)   `Required` 
 
     
 * **name** (string)   `Required` 
@@ -253,7 +253,7 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **api_key_id** (string)   `Required` 
+* **client_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -290,7 +290,7 @@ bookFlatSection: true
 * **role_id** (string)  
 
     
-* **api_key_id** (string)  
+* **client_id** (string)  
 
     <br>
 
