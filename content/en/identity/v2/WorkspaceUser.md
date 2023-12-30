@@ -244,6 +244,9 @@ bookFlatSection: true
 ### WorkspaceUserRequest
 * **user_id** (string)   `Required` 
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### WorkspaceUserSearchQuery
