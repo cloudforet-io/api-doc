@@ -245,11 +245,14 @@ bookFlatSection: true
 * **user_id** (string)   `Required` 
 
     
-* **workspace_id** (string)  
+* **workspace_id** (string)   `Required` 
 
     <br>
 
 ### WorkspaceUserSearchQuery
+* **workspace_id** (string)   `Required` 
+
+    
 * **query** (Query)  
 
     
@@ -267,13 +270,13 @@ bookFlatSection: true
     
 * **auth_type** (AuthType)  
 
-    
-* **workspace_id** (string)  
-
     <br>
 
 ### WorkspaceUserStatQuery
 * **query** (StatisticsQuery)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     <br>
 
