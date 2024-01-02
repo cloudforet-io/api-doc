@@ -261,6 +261,9 @@ bookFlatSection: true
     
 * **expired_at** (string)   `Required` 
 
+    
+* **last_accessed_at** (string)   `Required` 
+
     <br>
 
 ### AppRequest
