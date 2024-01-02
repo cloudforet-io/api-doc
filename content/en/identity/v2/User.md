@@ -371,6 +371,9 @@ Disable MFA for user. If this api is called, send email to user.
 * **auth_type** (AuthType)   `Required` 
 
     
+* **role_id** (string)   `Required` 
+
+    
 * **role_type** (RoleType)   `Required` 
 
     
