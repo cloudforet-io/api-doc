@@ -95,6 +95,8 @@ Creates a new CostQuerySet. You can make your own custom query that meets your n
 
 * **domain_id** (string)   `Required` 
 
+* **workspace_id** (string)   `Required` 
+
 * **user_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
@@ -190,6 +192,8 @@ Updates a specific CostQuerySet. You can make changes in the details of queries.
 * **tags** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -314,6 +318,8 @@ Gets a specific CostQuerySet. Prints detailed information about the CostQuerySet
 * **tags** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -473,6 +479,9 @@ Gets a list of all CostQuerySets. You can use a query to get a filtered list of 
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **user_id** (string)   `Required` 
