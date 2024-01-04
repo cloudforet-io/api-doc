@@ -171,7 +171,7 @@ If is_subscribe is set to false, this value is ignored.*
 
   The ID of protocol set in the user channel.
 
-* **secret_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
@@ -323,7 +323,7 @@ If a notification has a level and a notification level that this channel can rec
 
   The ID of protocol set in the user channel.
 
-* **secret_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
@@ -465,7 +465,7 @@ Sets a schedule for a UserChannel. A schedule defines the time to receive a Noti
 
   The ID of protocol set in the user channel.
 
-* **secret_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
@@ -600,7 +600,7 @@ Sets a subscription for a UserChannel. A subscription is a topic for channels to
 
   The ID of protocol set in the user channel.
 
-* **secret_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
@@ -721,7 +721,7 @@ Enables a specific UserChannel. If a UserChannel is enabled, the UserChannel can
 
   The ID of protocol set in the user channel.
 
-* **secret_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
@@ -842,7 +842,7 @@ Disables a specific UserChannel. If a UserChannel is disabled, the Notification 
 
   The ID of protocol set in the user channel.
 
-* **secret_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
@@ -1007,7 +1007,7 @@ Gets a specific UserChannel. Prints detailed information about the UserChannel, 
 
   The ID of protocol set in the user channel.
 
-* **secret_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
   The ID of secret encrypted data in the security service
 
@@ -1096,7 +1096,7 @@ Gets a list of all UserChannels. You can use a query to get a filtered list of U
   *The ID of protocol set in the user channel.*
 
 
-* **secret_id** (string)  
+* **user_secret_id** (string)  
 
   *The ID of secret encrypted data in the security service*
 
@@ -1373,7 +1373,7 @@ If a notification has a level and a notification level that this channel can rec
   *The ID of protocol set in the user channel.*
 
     
-* **secret_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
   *The ID of secret encrypted data in the security service*
 
@@ -1420,7 +1420,7 @@ If a notification has a level and a notification level that this channel can rec
   *The ID of protocol set in the user channel.*
 
     
-* **secret_id** (string)  
+* **user_secret_id** (string)  
 
   *The ID of secret encrypted data in the security service*
 
