@@ -190,6 +190,9 @@ bookFlatSection: true
 * **keyword** (string)   `Required` 
 
     
+* **workspace_id** (string)   `Required` 
+
+    
 * **state** (State)  
 
     
