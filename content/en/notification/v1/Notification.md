@@ -43,9 +43,6 @@ Creates a new Notification. When a Notification is created, it is delivered to a
 
 
 
-> **POST** /notification/v1/notification/create
->
-
 
 
 
@@ -130,9 +127,6 @@ If resource_type is "identity.User", then resource_id requires a user ID value.*
 Manually raises a Notification. A Notification is raised with a message to be sent using a valid specific Protocol, and data used for a specific Protocol such as a phone number.
 
 
-
-> **POST** /notification/v1/notification/push
->
 
 
 
