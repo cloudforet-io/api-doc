@@ -32,7 +32,6 @@ A Plugin is a resource containing data of deployable plugins such as container i
 | [**get_versions**](./Plugin#get_versions) | [RepositoryPluginRequest](Plugin#repositorypluginrequest) | [VersionsInfo](Plugin#versionsinfo) |
 | [**get**](./Plugin#get) | [RepositoryPluginRequest](Plugin#repositorypluginrequest) | [PluginInfo](Plugin#plugininfo) |
 | [**list**](./Plugin#list) | [PluginQuery](Plugin#pluginquery) | [PluginsInfo](Plugin#pluginsinfo) |
-| [**stat**](./Plugin#stat) | [PluginStatQuery](Plugin#pluginstatquery) | [Struct](Plugin#struct) |
 
 
 
@@ -1068,23 +1067,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 
 
 {{< /tabs >}}
-
-
-    
-<br>
-
-### stat
-
-
-
-
-
-> **POST** /repository/v1/plugin/stat
->
-
-
-
-
 
 
     

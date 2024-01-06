@@ -47,9 +47,6 @@ Creates a new Supervisor. Only Users with the `MANAGED` permission can set the S
 
 
 
-> **POST** /plugin/v1/supervisor/publish
->
-
 
 
 
@@ -155,9 +152,6 @@ Creates a new Supervisor. Only Users with the `MANAGED` permission can set the S
 Registers a specific Supervisor. You must specify the `supervisor_id` of the Supervisor to register. The `state` of the Supervisor changes from `PENDING` to `ENABLED`.
 
 
-
-> **POST** /plugin/v1/supervisor/register
->
 
 
 
@@ -266,9 +260,6 @@ Updates a specific Supervisor. You can make changes in Supervisor settings, incl
 
 
 
-> **POST** /plugin/v1/supervisor/update
->
-
 
 
 
@@ -376,9 +367,6 @@ Deregisters and deletes a specific Supervisor. You must specify the `supervisor_
 
 
 
-> **POST** /plugin/v1/supervisor/deregister
->
-
 
 
 
@@ -420,9 +408,6 @@ Deregisters and deletes a specific Supervisor. You must specify the `supervisor_
 Enables a specific Supervisor. By changing the `state` parameter to `ENABLED`, the Supervisor can deploy or delete the `pod` of the plugin instance.
 
 
-
-> **POST** /plugin/v1/supervisor/enable
->
 
 
 
@@ -507,9 +492,6 @@ Disables a specific Supervisor. By changing the `state` parameter to `DISABLED`,
 
 
 
-> **POST** /plugin/v1/supervisor/disable
->
-
 
 
 
@@ -593,9 +575,6 @@ Recovers a specific plugin instance in a specific Supervisor. Changes the `state
 
 
 
-> **POST** /plugin/v1/supervisor/recover-plugin
->
-
 
 
 
@@ -645,9 +624,6 @@ Recovers a specific plugin instance in a specific Supervisor. Changes the `state
 
 
 
-
-> **POST** /plugin/v1/supervisor/get
->
 
 
 
@@ -731,9 +707,6 @@ Recovers a specific plugin instance in a specific Supervisor. Changes the `state
 Gets a list of all Supervisors. You can use a query to get a filtered list of Supervisors.
 
 
-
-> **POST** /plugin/v1/supervisor/list
->
 
 
 
@@ -826,9 +799,6 @@ Gets a list of all Supervisors. You can use a query to get a filtered list of Su
 
 
 
-> **POST** /plugin/v1/supervisor/stat
->
-
 
 
 
@@ -842,9 +812,6 @@ Gets a list of all Supervisors. You can use a query to get a filtered list of Su
 Gets a list of all plugin instances regardless of Supervisors. Prints detailed information about the plugin instances, including `version`, `state`, and the relevant Supervisor.
 
 
-
-> **POST** /plugin/v1/supervisor/list-plugins
->
 
 
 
