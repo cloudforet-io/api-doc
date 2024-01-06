@@ -166,8 +166,6 @@ Registers a Plugin. The parameter `registry_type`, meaning container registry ty
 
 * **domain_id** (string)   `Required` 
 
-* **repository_info** (RepositoryInfo)   `Required` 
-
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -348,8 +346,6 @@ Updates a specific Plugin registered. A Plugin can be updated only if its Reposi
 
 * **domain_id** (string)   `Required` 
 
-* **repository_info** (RepositoryInfo)   `Required` 
-
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -526,8 +522,6 @@ Enables a specific Plugin. If the Plugin is enabled, the Plugin can be used as i
 
 * **domain_id** (string)   `Required` 
 
-* **repository_info** (RepositoryInfo)   `Required` 
-
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -661,8 +655,6 @@ Disables a specific Plugin. If the Plugin is disabled, the Plugin cannot be used
 * **tags** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
-
-* **repository_info** (RepositoryInfo)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -872,8 +864,6 @@ Gets a specific Plugin. Prints detailed information about the Plugin, including 
 * **tags** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
-
-* **repository_info** (RepositoryInfo)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -1164,9 +1154,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 
     
 * **domain_id** (string)   `Required` 
-
-    
-* **repository_info** (RepositoryInfo)   `Required` 
 
     
 * **created_at** (string)   `Required` 
