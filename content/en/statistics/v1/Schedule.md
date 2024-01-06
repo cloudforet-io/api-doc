@@ -244,9 +244,6 @@ Gets a list of all Schedules. You can use a query to get a filtered list of Sche
     
 * **state** (string)  
 
-    
-* **resource_type** (string)  
-
     <br>
 
 ### ScheduleRequest
