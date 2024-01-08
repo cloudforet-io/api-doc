@@ -127,6 +127,10 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 
 * **failure_tasks** (int32)   `Required` 
 
+* **request_secret_id** (string)   `Required` 
+
+* **request_workspace_id** (string)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -134,8 +138,6 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 * **workspace_id** (string)   `Required` 
 
 * **collector_id** (string)   `Required` 
-
-* **secret_id** (string)   `Required` 
 
 * **plugin_id** (string)   `Required` 
 
@@ -214,9 +216,6 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 
 * **collector_id** (string)  
-
-
-* **secret_id** (string)  
 
 
 * **plugin_id** (string)  
@@ -377,6 +376,12 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 * **failure_tasks** (int32)   `Required` 
 
     
+* **request_secret_id** (string)   `Required` 
+
+    
+* **request_workspace_id** (string)   `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
@@ -387,9 +392,6 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
     
 * **collector_id** (string)   `Required` 
-
-    
-* **secret_id** (string)   `Required` 
 
     
 * **plugin_id** (string)   `Required` 
@@ -437,9 +439,6 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
     
 * **collector_id** (string)  
-
-    
-* **secret_id** (string)  
 
     
 * **plugin_id** (string)  
