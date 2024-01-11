@@ -409,6 +409,9 @@ Gets a list of all Costs. You can use a query to get a filtered list of Costs.
 * **project_id** (string)  
 
 
+* **project_group_id** (string)  
+
+
 * **service_account_id** (string)  
 
 
@@ -639,6 +642,9 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
     
 * **project_id** (string)  
+
+    
+* **project_group_id** (string)  
 
     
 * **service_account_id** (string)  

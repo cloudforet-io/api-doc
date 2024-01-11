@@ -331,6 +331,9 @@ bookFlatSection: true
 * **created_by** (string)  
 
     
+* **include_children** (bool)  
+
+    
 * **workspace_id** (string)  
 
     
