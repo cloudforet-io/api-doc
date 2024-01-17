@@ -232,6 +232,9 @@ bookFlatSection: true
     
 * **tags** (Struct)  
 
+    
+* **reset_password** (bool)  
+
     <br>
 
 ### CreateDomainRequest
