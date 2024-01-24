@@ -24,101 +24,11 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./CostReport#create) | [CreateCostReportRequest](CostReport#createcostreportrequest) | [CostReportInfo](CostReport#costreportinfo) |
-| [**update**](./CostReport#update) | [UpdateCostReportRequest](CostReport#updatecostreportrequest) | [CostReportInfo](CostReport#costreportinfo) |
-| [**enable**](./CostReport#enable) | [CostReportRequest](CostReport#costreportrequest) | [CostReportInfo](CostReport#costreportinfo) |
-| [**disable**](./CostReport#disable) | [CostReportRequest](CostReport#costreportrequest) | [CostReportInfo](CostReport#costreportinfo) |
-| [**delete**](./CostReport#delete) | [CostReportRequest](CostReport#costreportrequest) | [Empty](CostReport#empty) |
-| [**send**](./CostReport#send) | [SendCostReportRequest](CostReport#sendcostreportrequest) | [Struct](CostReport#struct) |
-| [**run**](./CostReport#run) | [RunCostReportRequest](CostReport#runcostreportrequest) | [Empty](CostReport#empty) |
+| [**send**](./CostReport#send) | [CostReportRequest](CostReport#costreportrequest) | [CostReportInfo](CostReport#costreportinfo) |
+| [**get_url**](./CostReport#get_url) | [GetUrlCostReportRequest](CostReport#geturlcostreportrequest) | [Struct](CostReport#struct) |
 | [**get**](./CostReport#get) | [CostReportRequest](CostReport#costreportrequest) | [CostReportInfo](CostReport#costreportinfo) |
-| [**list**](./CostReport#list) | [CostReportAnalyzeQuery](CostReport#costreportanalyzequery) | [CostReportInfos](CostReport#costreportinfos) |
-| [**stat**](./CostReport#stat) | [CostReportStatQuery](CostReport#costreportstatquery) | [CostReportInfos](CostReport#costreportinfos) |
-
-
-
-    
-<br>
-
-### create
-
-
-
-
-
-> **POST** /cost-analysis/v1/cost-report/create
->
-
-
-
-
-
-
-    
-<br>
-
-### update
-
-
-
-
-
-> **POST** /cost-analysis/v1/cost-report/update
->
-
-
-
-
-
-
-    
-<br>
-
-### enable
-
-
-
-
-
-> **POST** /cost-analysis/v1/cost-report/enable
->
-
-
-
-
-
-
-    
-<br>
-
-### disable
-
-
-
-
-
-> **POST** /cost-analysis/v1/cost-report/disable
->
-
-
-
-
-
-
-    
-<br>
-
-### delete
-
-
-
-
-
-> **POST** /cost-analysis/v1/cost-report/delete
->
-
-
-
+| [**list**](./CostReport#list) | [CostReportQuery](CostReport#costreportquery) | [CostReportsInfo](CostReport#costreportsinfo) |
+| [**stat**](./CostReport#stat) | [CostReportStatQuery](CostReport#costreportstatquery) | [Struct](CostReport#struct) |
 
 
 
@@ -142,13 +52,13 @@ bookFlatSection: true
     
 <br>
 
-### run
+### get_url
 
 
 
 
 
-> **POST** /cost-analysis/v1/cost-report/run
+> **POST** /cost-analysis/v1/cost-report/get-url
 >
 
 
@@ -217,47 +127,42 @@ bookFlatSection: true
 
 
 
-### CostReportAnalyzeQuery
-* **cost_report_id** (string)   `Required` 
-
-  *The ID of cost report in the Protocol.*
-
-    
-* **query** (Query)  
-
-    
-* **issue_day** (string)  
-
-    
-* **recipients** (string)  `Repeated`   
-
-    <br>
-
 ### CostReportInfo
 * **cost_report_id** (string)   `Required` 
 
-  *The ID of cost report in the Protocol.*
+    
+* **cost** (Struct)   `Required` 
 
     
-* **start** (string)   `Required` 
+* **status** (Status)   `Required` 
 
     
-* **end** (string)   `Required` 
-
-    
-* **issue_day** (string)   `Required` 
-
-    
-* **is_last_day** (bool)   `Required` 
+* **cost_report_number** (string)   `Required` 
 
     
 * **currency** (string)   `Required` 
 
     
-* **recipients** (string)  `Repeated`    `Required` 
+* **issue_date** (string)   `Required` 
 
     
-* **data_sources** (string)  `Repeated`    `Required` 
+* **report_year** (string)   `Required` 
+
+  *YYYY*
+
+    
+* **report_month** (string)   `Required` 
+
+  *YYYY-mm*
+
+    
+* **workspace_name** (string)   `Required` 
+
+    
+* **cost_report_config_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -265,16 +170,19 @@ bookFlatSection: true
     
 * **created_at** (string)   `Required` 
 
-    
-* **updated_at** (string)   `Required` 
-
     <br>
 
-### CostReportInfos
-* **results** (CostReportInfo)  `Repeated`    `Required` 
+### CostReportQuery
+* **cost_report_id** (string)   `Required` 
 
     
-* **total_count** (int32)   `Required` 
+* **query** (Query)  
+
+    
+* **workspace_name** (string)  
+
+    
+* **issue_date** (string)  
 
     <br>
 
@@ -290,68 +198,17 @@ bookFlatSection: true
 
     <br>
 
-### CreateCostReportRequest
-* **currency** (string)   `Required` 
+### CostReportsInfo
+* **results** (CostReportInfo)  `Repeated`    `Required` 
 
     
-* **recipients** (string)  `Repeated`    `Required` 
-
-    
-* **issue_day** (string)  
-
-    
-* **is_last_day** (bool)  
-
-    
-* **data_source_filter** (Struct)  
+* **total_count** (int32)   `Required` 
 
     <br>
 
-### RunCostReportRequest
+### GetUrlCostReportRequest
 * **cost_report_id** (string)   `Required` 
 
-  *The ID of cost report in the Protocol.*
-
-    
-* **report_date** (string)  
-
-  *The report date is the Cost Report generated.*
-
-    <br>
-
-### SendCostReportRequest
-* **cost_report_id** (string)   `Required` 
-
-  *The ID of cost report in the Protocol.*
-
-    
-* **workspace_id** (string)  
-
-  *The Workspace ID which is related to cost report.*
-
-    <br>
-
-### UpdateCostReportRequest
-* **cost_report_id** (string)   `Required` 
-
-  *The ID of cost report in the Protocol.*
-
-    
-* **start** (string)  
-
-    
-* **end** (string)  
-
-    
-* **issue_day** (string)  
-
-    
-* **currency** (string)  
-
-    
-* **recipients** (string)  `Repeated`   
-
-    
-* **data_sources** (string)  `Repeated`   
+  *The ID of cost report in the Protocol*
 
     <br>

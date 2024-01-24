@@ -124,19 +124,13 @@ bookFlatSection: true
 * **product** (string)   `Required` 
 
     
-* **project_name** (string)   `Required` 
-
-    
-* **project_id** (string)   `Required` 
-
-    
 * **service_account_name** (string)   `Required` 
 
     
-* **service_account_id** (string)   `Required` 
+* **data_source_name** (string)   `Required` 
 
     
-* **data_source_name** (string)   `Required` 
+* **project_name** (string)   `Required` 
 
     
 * **workspace_name** (string)   `Required` 
@@ -148,16 +142,13 @@ bookFlatSection: true
 * **report_month** (string)   `Required` 
 
     
-* **start** (string)   `Required` 
+* **is_confirmed** (bool)   `Required` 
 
     
-* **end** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
     
-* **icons** (Struct)   `Required` 
-
-    
-* **domain_config** (Struct)   `Required` 
+* **project_id** (string)   `Required` 
 
     
 * **cost_report_id** (string)   `Required` 
@@ -170,6 +161,9 @@ bookFlatSection: true
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
 
     <br>
 
