@@ -137,7 +137,7 @@ bookFlatSection: true
 * **status** (Status)   `Required` 
 
     
-* **cost_report_number** (string)   `Required` 
+* **report_number** (string)   `Required` 
 
     
 * **currency** (string)   `Required` 
