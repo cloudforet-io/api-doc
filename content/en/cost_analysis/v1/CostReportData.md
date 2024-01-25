@@ -211,6 +211,9 @@ bookFlatSection: true
     
 * **cost_report_id** (string)  
 
+    
+* **cost_report_config_id** (string)  
+
     <br>
 
 ### CostReportsDataInfo
@@ -218,10 +221,5 @@ bookFlatSection: true
 
     
 * **total_count** (string)   `Required` 
-
-    <br>
-
-### StatInfo
-* **results** (string)  `Repeated`    `Required` 
 
     <br>
