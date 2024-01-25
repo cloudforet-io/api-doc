@@ -24,7 +24,7 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**send**](./CostReport#send) | [CostReportRequest](CostReport#costreportrequest) | [CostReportInfo](CostReport#costreportinfo) |
+| [**send**](./CostReport#send) | [CostReportRequest](CostReport#costreportrequest) | [Empty](CostReport#empty) |
 | [**get_url**](./CostReport#get_url) | [GetUrlCostReportRequest](CostReport#geturlcostreportrequest) | [Struct](CostReport#struct) |
 | [**get**](./CostReport#get) | [CostReportRequest](CostReport#costreportrequest) | [CostReportInfo](CostReport#costreportinfo) |
 | [**list**](./CostReport#list) | [CostReportQuery](CostReport#costreportquery) | [CostReportsInfo](CostReport#costreportsinfo) |
@@ -159,6 +159,9 @@ bookFlatSection: true
 
     
 * **workspace_name** (string)   `Required` 
+
+    
+* **bank_name** (string)   `Required` 
 
     
 * **cost_report_config_id** (string)   `Required` 

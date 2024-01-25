@@ -226,7 +226,7 @@ bookFlatSection: true
 * **state** (State)   `Required` 
 
     
-* **issue_day** (string)   `Required` 
+* **issue_day** (int32)   `Required` 
 
     
 * **is_last_day** (bool)   `Required` 
