@@ -46,7 +46,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/create
+> **POST** /cost-analysis/v1/cost-report-config/create
 >
 
 
@@ -63,7 +63,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/update
+> **POST** /cost-analysis/v1/cost-report-config/update
 >
 
 
@@ -80,7 +80,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/update-recipients
+> **POST** /cost-analysis/v1/cost-report-config/update-recipients
 >
 
 
@@ -97,7 +97,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/enable
+> **POST** /cost-analysis/v1/cost-report-config/enable
 >
 
 
@@ -114,7 +114,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/disable
+> **POST** /cost-analysis/v1/cost-report-config/disable
 >
 
 
@@ -131,7 +131,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/delete
+> **POST** /cost-analysis/v1/cost-report-config/delete
 >
 
 
@@ -148,7 +148,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/run
+> **POST** /cost-analysis/v1/cost-report-config/run
 >
 
 
@@ -165,7 +165,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/get
+> **POST** /cost-analysis/v1/cost-report-config/get
 >
 
 
@@ -182,7 +182,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/list
+> **POST** /cost-analysis/v1/cost-report-config/list
 >
 
 
@@ -199,7 +199,7 @@ bookFlatSection: true
 
 
 
-> **POST** /cost-analysis/v1/cost-report/stat
+> **POST** /cost-analysis/v1/cost-report-config/stat
 >
 
 
@@ -223,10 +223,7 @@ bookFlatSection: true
   *The ID of cost report in the Protocol.*
 
     
-* **start** (string)   `Required` 
-
-    
-* **end** (string)   `Required` 
+* **state** (State)   `Required` 
 
     
 * **issue_day** (string)   `Required` 
@@ -238,10 +235,10 @@ bookFlatSection: true
 * **currency** (string)   `Required` 
 
     
-* **recipients** (string)  `Repeated`    `Required` 
+* **recipients** (Struct)   `Required` 
 
     
-* **data_sources** (string)  `Repeated`    `Required` 
+* **data_source_filter** (Struct)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -255,12 +252,12 @@ bookFlatSection: true
     <br>
 
 ### CostReportConfigQuery
-* **cost_report_config_id** (string)   `Required` 
-
-  *The ID of cost report in the Protocol.*
+* **query** (Query)  
 
     
-* **query** (Query)  
+* **cost_report_config_id** (string)  
+
+  *The ID of cost report in the Protocol.*
 
     
 * **state** (State)  
@@ -275,7 +272,7 @@ bookFlatSection: true
     <br>
 
 ### CostReportConfigStatQuery
-* **query** (StatisticsQuery)  
+* **query** (StatisticsQuery)   `Required` 
 
     <br>
 
@@ -301,18 +298,6 @@ bookFlatSection: true
 
     
 * **data_source_filter** (Struct)  
-
-    <br>
-
-### SendCostReportConfigRequest
-* **cost_report_config_id** (string)   `Required` 
-
-  *The ID of cost report in the Protocol.*
-
-    
-* **workspace_id** (string)  
-
-  *The Workspace ID which is related to cost report.*
 
     <br>
 

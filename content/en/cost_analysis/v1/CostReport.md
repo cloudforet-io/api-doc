@@ -145,6 +145,8 @@ bookFlatSection: true
     
 * **issue_date** (string)   `Required` 
 
+  *YYYY-mm 2023-12*
+
     
 * **report_year** (string)   `Required` 
 
@@ -153,7 +155,7 @@ bookFlatSection: true
     
 * **report_month** (string)   `Required` 
 
-  *YYYY-mm*
+  *YYYY-mm 2023-12*
 
     
 * **workspace_name** (string)   `Required` 
@@ -173,16 +175,21 @@ bookFlatSection: true
     <br>
 
 ### CostReportQuery
-* **cost_report_id** (string)   `Required` 
-
-    
 * **query** (Query)  
 
     
-* **workspace_name** (string)  
+* **cost_report_id** (string)  
+
+    
+* **status** (Status)  
 
     
 * **issue_date** (string)  
+
+  *YYYY-mm 2023-12*
+
+    
+* **workspace_name** (string)  
 
     <br>
 
@@ -194,7 +201,10 @@ bookFlatSection: true
     <br>
 
 ### CostReportStatQuery
-* **query** (StatisticsQuery)  
+* **query** (StatisticsQuery)   `Required` 
+
+    
+* **cost_report_id** (string)  
 
     <br>
 

@@ -92,9 +92,6 @@ bookFlatSection: true
 
 
 ### CostReportDataAnalyzeQuery
-* **cost_report_id** (string)   `Required` 
-
-    
 * **query** (TimeSeriesAnalyzeQuery)  
 
     
@@ -107,15 +104,33 @@ bookFlatSection: true
 * **workspace_id** (string)  
 
     
+* **cost_report_config_id** (string)  
+
+    
 * **data_source_id** (string)  
 
     <br>
 
 ### CostReportDataInfo
+* **cost_report_data_id** (string)   `Required` 
+
+    
 * **cost** (Struct)   `Required` 
 
     
 * **cost_report_name** (string)   `Required` 
+
+    
+* **issue_date** (string)   `Required` 
+
+    
+* **report_year** (string)   `Required` 
+
+    
+* **report_month** (string)   `Required` 
+
+    
+* **is_confirmed** (bool)   `Required` 
 
     
 * **provider** (string)   `Required` 
@@ -136,19 +151,16 @@ bookFlatSection: true
 * **workspace_name** (string)   `Required` 
 
     
-* **report_year** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
-* **report_month** (string)   `Required` 
-
-    
-* **is_confirmed** (bool)   `Required` 
-
-    
-* **service_account_id** (string)   `Required` 
+* **workspace_id** (string)   `Required` 
 
     
 * **project_id** (string)   `Required` 
+
+    
+* **cost_report_config_id** (string)   `Required` 
 
     
 * **cost_report_id** (string)   `Required` 
@@ -157,10 +169,7 @@ bookFlatSection: true
 * **data_source_id** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -171,7 +180,7 @@ bookFlatSection: true
 * **query** (Query)  
 
     
-* **cost_report_id** (string)  
+* **cost_report_data_id** (string)  
 
     
 * **product** (string)  
@@ -180,7 +189,16 @@ bookFlatSection: true
 * **provider** (string)  
 
     
+* **is_confirmed** (bool)  
+
+    
 * **workspace_id** (string)  
+
+    
+* **cost_report_config_id** (string)  
+
+    
+* **cost_report_id** (string)  
 
     
 * **data_source_id** (string)  
@@ -188,7 +206,7 @@ bookFlatSection: true
     <br>
 
 ### CostReportDataStatQuery
-* **query** (StatisticsQuery)  
+* **query** (StatisticsQuery)   `Required` 
 
     
 * **cost_report_id** (string)  
