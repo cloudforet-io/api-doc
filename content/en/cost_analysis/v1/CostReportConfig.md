@@ -315,7 +315,7 @@ bookFlatSection: true
   *The ID of cost report in the Protocol.*
 
     
-* **issue_day** (string)  
+* **issue_day** (int32)  
 
     
 * **is_last_day** (bool)  
