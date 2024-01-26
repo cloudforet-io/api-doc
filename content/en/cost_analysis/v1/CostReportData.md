@@ -101,6 +101,9 @@ bookFlatSection: true
 * **provider** (string)  
 
     
+* **is_confirmed** (bool)  
+
+    
 * **workspace_id** (string)  
 
     
