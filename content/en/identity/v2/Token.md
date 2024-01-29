@@ -105,6 +105,12 @@ bookFlatSection: true
     
 * **workspace_id** (string)  
 
+    
+* **domain_id** (string)  
+
+    
+* **permissions** (string)  `Repeated`   
+
     <br>
 
 ### IssueTokenRequest
