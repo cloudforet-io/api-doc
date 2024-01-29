@@ -223,6 +223,6 @@ bookFlatSection: true
 * **results** (CostReportDataInfo)  `Repeated`    `Required` 
 
     
-* **total_count** (string)   `Required` 
+* **total_count** (int32)   `Required` 
 
     <br>
