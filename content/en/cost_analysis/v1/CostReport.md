@@ -143,6 +143,11 @@ bookFlatSection: true
 * **currency** (string)   `Required` 
 
     
+* **currency_date** (string)   `Required` 
+
+  *YYYY-mm-dd 00:00:00 2023-12-31 00:00:00*
+
+    
 * **issue_date** (string)   `Required` 
 
   *YYYY-mm 2023-12*
