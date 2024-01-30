@@ -241,6 +241,9 @@ bookFlatSection: true
 * **data_source_filter** (Struct)   `Required` 
 
     
+* **language** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -285,9 +288,6 @@ bookFlatSection: true
     <br>
 
 ### CreateCostReportConfigRequest
-* **currency** (string)   `Required` 
-
-    
 * **recipients** (Struct)   `Required` 
 
     
@@ -297,7 +297,15 @@ bookFlatSection: true
 * **is_last_day** (bool)  
 
     
+* **currency** (string)  
+
+    
 * **data_source_filter** (Struct)  
+
+    
+* **language** (string)  
+
+  *Default `en`*
 
     <br>
 
@@ -325,5 +333,8 @@ bookFlatSection: true
 
     
 * **data_source_filter** (Struct)  
+
+    
+* **language** (string)  
 
     <br>
