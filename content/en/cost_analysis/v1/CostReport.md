@@ -169,9 +169,6 @@ bookFlatSection: true
 * **bank_name** (string)   `Required` 
 
     
-* **language** (string)   `Required` 
-
-    
 * **cost_report_config_id** (string)   `Required` 
 
     

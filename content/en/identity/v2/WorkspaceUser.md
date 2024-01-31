@@ -273,6 +273,9 @@ bookFlatSection: true
     
 * **auth_type** (AuthType)  
 
+    
+* **role_type** (string)  
+
     <br>
 
 ### WorkspaceUserStatQuery
