@@ -151,6 +151,8 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 * **additional_info** (Struct)   `Required` 
 
+* **data** (Struct)   `Required` 
+
 * **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
@@ -304,6 +306,8 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 * **tags** (Struct)   `Required` 
 
 * **additional_info** (Struct)   `Required` 
+
+* **data** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -583,6 +587,9 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
     
 * **additional_info** (Struct)   `Required` 
+
+    
+* **data** (Struct)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
