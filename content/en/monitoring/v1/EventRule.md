@@ -773,12 +773,6 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
     
 * **no_notification** (bool)   `Required` 
 
-    
-* **load_json** (string)   `Required` 
-
-    
-* **convert_message** (Struct)   `Required` 
-
     <br>
 
 ### EventRuleCondition
