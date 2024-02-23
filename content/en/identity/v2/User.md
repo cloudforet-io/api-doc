@@ -91,6 +91,35 @@ Update user info by given user_id
 
 
 
+ {{< tabs " verify_email " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[VerifyUserEmailRequest](./User#verifyuseremailrequest)
+
+* **user_id** (string)   `Required` 
+
+
+* **email** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "example@cloudforet.com",
+ "email": "example@cloudforet.com",
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -124,9 +153,7 @@ Disable MFA for user. If this api is called, send email to user.
 
 {{< highlight json >}}
 {
- "user_id": "example@cloudforet.com",
- "force": false,
- "domain_id": "domain-a1b2c3d4e5f6"
+ "user_id": "example@cloudforet.com"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -152,6 +179,35 @@ Disable MFA for user. If this api is called, send email to user.
 
 
 
+ {{< tabs " set_required_actions " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[SetRequiredActionsRequest](./User#setrequiredactionsrequest)
+
+* **user_id** (string)   `Required` 
+
+
+* **required_actions** (UserRequiredAction)  `Repeated`    `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "example@cloudforet.com",
+ "required_actions": ["UPDATE_PASSWORD"]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -168,6 +224,31 @@ Disable MFA for user. If this api is called, send email to user.
 
 
 
+
+ {{< tabs " enable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UserRequest](./User#userrequest)
+
+* **user_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "example@cloudforet.com"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -186,6 +267,31 @@ Disable MFA for user. If this api is called, send email to user.
 
 
 
+ {{< tabs " disable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UserRequest](./User#userrequest)
+
+* **user_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "example@cloudforet.com"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -203,6 +309,31 @@ Disable MFA for user. If this api is called, send email to user.
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UserRequest](./User#userrequest)
+
+* **user_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "example@cloudforet.com"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -219,6 +350,31 @@ Disable MFA for user. If this api is called, send email to user.
 
 
 
+
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UserRequest](./User#userrequest)
+
+* **user_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "example@cloudforet.com"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
