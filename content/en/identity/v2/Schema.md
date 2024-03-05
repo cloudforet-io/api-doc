@@ -155,10 +155,10 @@ bookFlatSection: true
 * **schema_type** (SchemaType)   `Required` 
 
     
-* **schema** (Struct)   `Required` 
+* **provider** (string)   `Required` 
 
     
-* **provider** (string)   `Required` 
+* **schema** (Struct)  
 
     
 * **related_schemas** (string)  `Repeated`   

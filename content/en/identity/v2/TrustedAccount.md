@@ -28,6 +28,7 @@ bookFlatSection: true
 | [**update**](./TrustedAccount#update) | [UpdateTrustedAccountRequest](TrustedAccount#updatetrustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
 | [**update_secret_data**](./TrustedAccount#update_secret_data) | [UpdateTrustedAccountSecretRequest](TrustedAccount#updatetrustedaccountsecretrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
 | [**delete**](./TrustedAccount#delete) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [Empty](TrustedAccount#empty) |
+| [**sync**](./TrustedAccount#sync) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [Empty](TrustedAccount#empty) |
 | [**get**](./TrustedAccount#get) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
 | [**list**](./TrustedAccount#list) | [TrustedAccountSearchQuery](TrustedAccount#trustedaccountsearchquery) | [TrustedAccountsInfo](TrustedAccount#trustedaccountsinfo) |
 | [**stat**](./TrustedAccount#stat) | [TrustedAccountStatQuery](TrustedAccount#trustedaccountstatquery) | [Struct](TrustedAccount#struct) |
@@ -49,6 +50,71 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateTrustedAccountRequest](./TrustedAccount#createtrustedaccountrequest)
+
+* **name** (string)   `Required` 
+
+
+* **data** (Struct)   `Required` 
+
+  *Base Information of Trusted Account. It depends on provider.*
+
+
+* **provider** (string)   `Required` 
+
+
+* **secret_schema_id** (string)   `Required` 
+
+
+* **secret_data** (Struct)   `Required` 
+
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+
+* **schedule** (Scheduled)  
+
+
+* **sync_options** (Struct)  
+
+
+* **tags** (Struct)  
+
+
+* **workspace_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "name": "Trusted Account",
+ "data": {
+   "account_id": "123456789",
+  }
+ "provider": "aws",
+ "secret_schema_id": "aws-secret-access-key",
+ "schedule": {
+   "state": "ENABLED",
+   "hours": [3, 15]
+ },
+ "resource_group": "DOMAIN",
+ "workspace_id": "*"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -95,6 +161,23 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/trusted-account/delete
+>
+
+
+
+
+
+
+    
+<br>
+
+### sync
+
+
+
+
+
+> **POST** /identity/v2/trusted-account/sync
 >
 
 
@@ -169,6 +252,8 @@ bookFlatSection: true
     
 * **data** (Struct)   `Required` 
 
+  *Base Information of Trusted Account. It depends on provider.*
+
     
 * **provider** (string)   `Required` 
 
@@ -182,10 +267,24 @@ bookFlatSection: true
 * **resource_group** (ResourceGroup)   `Required` 
 
     
+* **schedule** (Scheduled)  
+
+    
+* **sync_options** (Struct)  
+
+    
 * **tags** (Struct)  
 
     
 * **workspace_id** (string)  
+
+    <br>
+
+### Scheduled
+* **state** (ScheduledState)   `Required` 
+
+    
+* **hours** (int32)  `Repeated`    `Required` 
 
     <br>
 
@@ -200,6 +299,12 @@ bookFlatSection: true
 
     
 * **provider** (string)   `Required` 
+
+    
+* **schedule** (Scheduled)   `Required` 
+
+    
+* **sync_options** (Struct)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -273,6 +378,12 @@ bookFlatSection: true
 
     
 * **data** (Struct)  
+
+    
+* **schedule** (Scheduled)  
+
+    
+* **sync_options** (Struct)  
 
     
 * **tags** (Struct)  

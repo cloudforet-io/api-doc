@@ -62,6 +62,9 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **description** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     

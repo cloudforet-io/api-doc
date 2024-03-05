@@ -49,6 +49,66 @@ bookFlatSection: true
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateProviderRequest](./Provider#createproviderrequest)
+
+* **provider** (string)   `Required` 
+
+
+* **name** (string)   `Required` 
+
+
+* **alias** (string)  
+
+
+* **plugin_info** (PluginInfo)  
+
+  *If plugin_info is not empty, your provider support trusted account and support auto sync for Cloudforet.
+These two options are located in options field. not in plugin_info.*
+
+
+* **color** (string)  
+
+
+* **icon** (string)  
+
+
+* **order** (int32)  
+
+
+* **options** (Struct)  
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "provider": "aws",
+ "name": "AWS",
+ "alias": "AWS",
+ "color": "#FF9900",
+ "icon": "https://cloudforet.io/icons/aws.svg",
+ "order": 1,
+ "options": {
+      "supported_trusted_account": false
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -65,6 +125,63 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateProviderRequest](./Provider#updateproviderrequest)
+
+* **provider** (string)   `Required` 
+
+
+* **name** (string)  
+
+
+* **alias** (string)  
+
+
+* **plugin_info** (PluginInfo)  
+
+
+* **color** (string)  
+
+
+* **icon** (string)  
+
+
+* **order** (int32)  
+
+
+* **options** (Struct)  
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "provider": "aws",
+ "name": "AWS",
+ "alias": "AWS",
+ "color": "#FF9900",
+ "icon": "https://cloudforet.io/icons/aws.svg",
+ "order": 2,
+ "options": {
+      "supported_trusted_account": false
+ },
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -83,6 +200,31 @@ bookFlatSection: true
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProviderRequest](./Provider#providerrequest)
+
+* **provider** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "provider": "aws"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -99,6 +241,31 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProviderRequest](./Provider#providerrequest)
+
+* **provider** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "provider": "aws"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -155,6 +322,12 @@ bookFlatSection: true
 * **alias** (string)  
 
     
+* **plugin_info** (PluginInfo)  
+
+  *If plugin_info is not empty, your provider support trusted account and support auto sync for Cloudforet.
+These two options are located in options field. not in plugin_info.*
+
+    
 * **color** (string)  
 
     
@@ -171,6 +344,20 @@ bookFlatSection: true
 
     <br>
 
+### PluginInfo
+* **plugin_id** (string)   `Required` 
+
+    
+* **version** (string)   `Required` 
+
+    
+* **upgrade_mode** (UpgradeMode)   `Required` 
+
+    
+* **options** (Struct)   `Required` 
+
+    <br>
+
 ### ProviderInfo
 * **provider** (string)   `Required` 
 
@@ -179,6 +366,9 @@ bookFlatSection: true
 
     
 * **alias** (string)   `Required` 
+
+    
+* **plugin_info** (PluginInfo)   `Required` 
 
     
 * **color** (string)   `Required` 
@@ -211,9 +401,6 @@ bookFlatSection: true
 
 ### ProviderRequest
 * **provider** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
 
     <br>
 
@@ -255,6 +442,9 @@ bookFlatSection: true
 
     
 * **alias** (string)  
+
+    
+* **plugin_info** (PluginInfo)  
 
     
 * **color** (string)  

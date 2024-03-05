@@ -57,6 +57,69 @@ External type user do not need password.
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateUserRequest](./User#createuserrequest)
+
+* **user_id** (string)   `Required` 
+
+
+* **auth_type** (AuthType)   `Required` 
+
+
+* **reset_password** (bool)   `Required` 
+
+  *If reset_password is true, send email*
+
+
+* **password** (string)  
+
+  *When auth_type is LOCAL, password is required.*
+
+
+* **name** (string)  
+
+
+* **email** (string)  
+
+
+* **language** (string)  
+
+  *en,ko*
+
+
+* **timezone** (string)  
+
+  *UTC, Asia/Seoul*
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
