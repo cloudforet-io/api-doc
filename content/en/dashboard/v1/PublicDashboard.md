@@ -236,6 +236,9 @@ description of dashboard
 * **variables_schema** (Struct)  
 
     
+* **display_info** (Struct)  
+
+    
 * **labels** (ListValue)  
 
     
@@ -269,6 +272,9 @@ description of dashboard
 
     
 * **variables_schema** (Struct)   `Required` 
+
+    
+* **display_info** (Struct)   `Required` 
 
     
 * **labels** (ListValue)   `Required` 
@@ -404,6 +410,9 @@ description of dashboard
 
     
 * **variables_schema** (Struct)  
+
+    
+* **display_info** (Struct)  
 
     
 * **labels** (ListValue)  
