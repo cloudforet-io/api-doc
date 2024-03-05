@@ -221,6 +221,12 @@ description of dashboard
 * **name** (string)   `Required` 
 
     
+* **template_id** (string)   `Required` 
+
+    
+* **template_type** (TemplateType)   `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
@@ -257,6 +263,12 @@ description of dashboard
 
     
 * **name** (string)   `Required` 
+
+    
+* **template_id** (string)   `Required` 
+
+    
+* **template_type** (TemplateType)   `Required` 
 
     
 * **version** (int32)   `Required` 
@@ -398,6 +410,12 @@ description of dashboard
 
     
 * **name** (string)  
+
+    
+* **template_id** (string)  
+
+    
+* **template_type** (TemplateType)  
 
     
 * **layouts** (ListValue)  

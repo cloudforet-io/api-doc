@@ -221,6 +221,12 @@ description of dashboard
 * **name** (string)   `Required` 
 
     
+* **template_id** (string)   `Required` 
+
+    
+* **template_type** (TemplateType)   `Required` 
+
+    
 * **layouts** (ListValue)  
 
     
@@ -251,6 +257,12 @@ description of dashboard
 
     
 * **version** (int32)   `Required` 
+
+    
+* **template_id** (string)   `Required` 
+
+    
+* **template_type** (TemplateType)   `Required` 
 
     
 * **layouts** (ListValue)   `Required` 
@@ -386,6 +398,12 @@ description of dashboard
 
     
 * **name** (string)  
+
+    
+* **template_id** (string)  
+
+    
+* **template_type** (TemplateType)  
 
     
 * **layouts** (ListValue)  
