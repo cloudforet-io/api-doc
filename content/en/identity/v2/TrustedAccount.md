@@ -28,7 +28,7 @@ bookFlatSection: true
 | [**update**](./TrustedAccount#update) | [UpdateTrustedAccountRequest](TrustedAccount#updatetrustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
 | [**update_secret_data**](./TrustedAccount#update_secret_data) | [UpdateTrustedAccountSecretRequest](TrustedAccount#updatetrustedaccountsecretrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
 | [**delete**](./TrustedAccount#delete) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [Empty](TrustedAccount#empty) |
-| [**sync**](./TrustedAccount#sync) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [Empty](TrustedAccount#empty) |
+| [**sync**](./TrustedAccount#sync) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [JobInfo](TrustedAccount#jobinfo) |
 | [**get**](./TrustedAccount#get) | [TrustedAccountRequest](TrustedAccount#trustedaccountrequest) | [TrustedAccountInfo](TrustedAccount#trustedaccountinfo) |
 | [**list**](./TrustedAccount#list) | [TrustedAccountSearchQuery](TrustedAccount#trustedaccountsearchquery) | [TrustedAccountsInfo](TrustedAccount#trustedaccountsinfo) |
 | [**stat**](./TrustedAccount#stat) | [TrustedAccountStatQuery](TrustedAccount#trustedaccountstatquery) | [Struct](TrustedAccount#struct) |
