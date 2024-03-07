@@ -65,6 +65,9 @@ bookFlatSection: true
 * **description** (string)   `Required` 
 
     
+* **tags** (Struct)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
