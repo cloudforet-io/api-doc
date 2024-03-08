@@ -26,6 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./Provider#create) | [CreateProviderRequest](Provider#createproviderrequest) | [ProviderInfo](Provider#providerinfo) |
 | [**update**](./Provider#update) | [UpdateProviderRequest](Provider#updateproviderrequest) | [ProviderInfo](Provider#providerinfo) |
+| [**update_plugin**](./Provider#update_plugin) | [UpdatePluginProviderRequest](Provider#updatepluginproviderrequest) | [ProviderInfo](Provider#providerinfo) |
 | [**delete**](./Provider#delete) | [ProviderRequest](Provider#providerrequest) | [Empty](Provider#empty) |
 | [**get**](./Provider#get) | [ProviderRequest](Provider#providerrequest) | [ProviderInfo](Provider#providerinfo) |
 | [**list**](./Provider#list) | [ProviderSearchQuery](Provider#providersearchquery) | [ProvidersInfo](Provider#providersinfo) |
@@ -175,6 +176,62 @@ These two options are located in options field. not in plugin_info.*
  "options": {
       "supported_trusted_account": false
  },
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### update_plugin
+
+
+
+
+
+> **POST** /identity/v2/provider/update-plugin
+>
+
+
+
+
+
+ {{< tabs " update_plugin " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdatePluginProviderRequest](./Provider#updatepluginproviderrequest)
+
+* **provider** (string)   `Required` 
+
+  *Managed provider are aws, azure, google_cloud and kubernetes. Maybe more in the future.*
+
+
+* **version** (string)  
+
+
+* **options** (Struct)  
+
+
+* **upgrade_mode** (UpgradeMode)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "provider": "aws",
+ "version": "1.0.0",
+ "options": {},
+ "upgrade_mode": "AUTO"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -431,6 +488,22 @@ These two options are located in options field. not in plugin_info.*
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### UpdatePluginProviderRequest
+* **provider** (string)   `Required` 
+
+  *Managed provider are aws, azure, google_cloud and kubernetes. Maybe more in the future.*
+
+    
+* **version** (string)  
+
+    
+* **options** (Struct)  
+
+    
+* **upgrade_mode** (UpgradeMode)  
 
     <br>
 
