@@ -29,6 +29,7 @@ Trusted secret is merged with linked secret and used to access data in other mic
 | [**update**](./TrustedSecret#update) | [UpdateTrustedSecretRequest](TrustedSecret#updatetrustedsecretrequest) | [TrustedSecretInfo](TrustedSecret#trustedsecretinfo) |
 | [**delete**](./TrustedSecret#delete) | [TrustedSecretRequest](TrustedSecret#trustedsecretrequest) | [Empty](TrustedSecret#empty) |
 | [**update_data**](./TrustedSecret#update_data) | [UpdateTrustedSecretDataRequest](TrustedSecret#updatetrustedsecretdatarequest) | [Empty](TrustedSecret#empty) |
+| [**get_data**](./TrustedSecret#get_data) | [GetTrustedSecretDataRequest](TrustedSecret#gettrustedsecretdatarequest) | [TrustedSecretDataInfo](TrustedSecret#trustedsecretdatainfo) |
 | [**get**](./TrustedSecret#get) | [TrustedSecretRequest](TrustedSecret#trustedsecretrequest) | [TrustedSecretInfo](TrustedSecret#trustedsecretinfo) |
 | [**list**](./TrustedSecret#list) | [TrustedSecretQuery](TrustedSecret#trustedsecretquery) | [TrustedSecretsInfo](TrustedSecret#trustedsecretsinfo) |
 | [**stat**](./TrustedSecret#stat) | [TrustedSecretStatQuery](TrustedSecret#trustedsecretstatquery) | [Struct](TrustedSecret#struct) |
@@ -328,6 +329,50 @@ Updated trusted secret is encrypted and stored securely.
     
 <br>
 
+### get_data
+
+Get a specific secret's data.
+This API is for internal system use only.
+
+
+
+
+
+
+
+ {{< tabs " get_data " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GetTrustedSecretDataRequest](./TrustedSecret#gettrustedsecretdatarequest)
+
+* **trusted_secret_id** (string)   `Required` 
+
+
+* **domain_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "trusted_secret_id": "ta-123456789012",
+   "domain_id": "domain-12345abcde"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
 ### get
 
 Get a specific trusted secret's information.
@@ -555,6 +600,25 @@ You can use a query to get a filtered list of trusted secrets.
 
     
 * **trusted_account_id** (string)  
+
+    <br>
+
+### GetTrustedSecretDataRequest
+* **trusted_secret_id** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    <br>
+
+### TrustedSecretDataInfo
+* **encrypted** (bool)   `Required` 
+
+    
+* **encrypt_options** (Struct)   `Required` 
+
+    
+* **data** (Struct)   `Required` 
 
     <br>
 
