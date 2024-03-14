@@ -28,6 +28,8 @@ bookFlatSection: true
 | [**update**](./ProjectGroup#update) | [UpdateProjectGroupRequest](ProjectGroup#updateprojectgrouprequest) | [ProjectGroupInfo](ProjectGroup#projectgroupinfo) |
 | [**change_parent_group**](./ProjectGroup#change_parent_group) | [ChangeParentGroupRequest](ProjectGroup#changeparentgrouprequest) | [ProjectGroupInfo](ProjectGroup#projectgroupinfo) |
 | [**delete**](./ProjectGroup#delete) | [ProjectGroupRequest](ProjectGroup#projectgrouprequest) | [Empty](ProjectGroup#empty) |
+| [**add_users**](./ProjectGroup#add_users) | [UsersProjectGroupRequest](ProjectGroup#usersprojectgrouprequest) | [ProjectGroupInfo](ProjectGroup#projectgroupinfo) |
+| [**remove_users**](./ProjectGroup#remove_users) | [UsersProjectGroupRequest](ProjectGroup#usersprojectgrouprequest) | [ProjectGroupInfo](ProjectGroup#projectgroupinfo) |
 | [**get**](./ProjectGroup#get) | [ProjectGroupRequest](ProjectGroup#projectgrouprequest) | [ProjectGroupInfo](ProjectGroup#projectgroupinfo) |
 | [**list**](./ProjectGroup#list) | [ProjectGroupSearchQuery](ProjectGroup#projectgroupsearchquery) | [ProjectGroupsInfo](ProjectGroup#projectgroupsinfo) |
 | [**stat**](./ProjectGroup#stat) | [ProjectGroupStatQuery](ProjectGroup#projectgroupstatquery) | [Struct](ProjectGroup#struct) |
@@ -95,6 +97,40 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/project-group/delete
+>
+
+
+
+
+
+
+    
+<br>
+
+### add_users
+
+
+
+
+
+> **POST** /identity/v2/project-group/add-users
+>
+
+
+
+
+
+
+    
+<br>
+
+### remove_users
+
+
+
+
+
+> **POST** /identity/v2/project-group/remove-users
 >
 
 
@@ -192,6 +228,9 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
+* **users** (string)  `Repeated`    `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -248,5 +287,13 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### UsersProjectGroupRequest
+* **project_group_id** (string)   `Required` 
+
+    
+* **users** (string)  `Repeated`    `Required` 
 
     <br>
