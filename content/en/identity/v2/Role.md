@@ -26,6 +26,8 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./Role#create) | [CreateRoleRequest](Role#createrolerequest) | [RoleInfo](Role#roleinfo) |
 | [**update**](./Role#update) | [UpdateRoleRequest](Role#updaterolerequest) | [RoleInfo](Role#roleinfo) |
+| [**enable**](./Role#enable) | [RoleRequest](Role#rolerequest) | [RoleInfo](Role#roleinfo) |
+| [**disable**](./Role#disable) | [RoleRequest](Role#rolerequest) | [RoleInfo](Role#roleinfo) |
 | [**delete**](./Role#delete) | [RoleRequest](Role#rolerequest) | [Empty](Role#empty) |
 | [**get**](./Role#get) | [RoleRequest](Role#rolerequest) | [RoleInfo](Role#roleinfo) |
 | [**list**](./Role#list) | [RoleSearchQuery](Role#rolesearchquery) | [RolesInfo](Role#rolesinfo) |
@@ -70,6 +72,90 @@ bookFlatSection: true
     
 <br>
 
+### enable
+
+
+
+
+
+> **POST** /identity/v2/role/enable
+>
+
+
+
+
+
+ {{< tabs " enable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[RoleRequest](./Role#rolerequest)
+
+* **role_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "role_id": "role-a12335a6a4fe"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### disable
+
+
+
+
+
+> **POST** /identity/v2/role/disable
+>
+
+
+
+
+
+ {{< tabs " disable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[RoleRequest](./Role#rolerequest)
+
+* **role_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "role_id": "role-a12335a6a4fe"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
 ### delete
 
 
@@ -82,6 +168,31 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[RoleRequest](./Role#rolerequest)
+
+* **role_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "role_id": "role-a12335a6a4fe"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -99,6 +210,31 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[RoleRequest](./Role#rolerequest)
+
+* **role_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "role_id": "role-a12335a6a4fe"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -184,6 +320,9 @@ bookFlatSection: true
 * **is_managed** (bool)   `Required` 
 
     
+* **state** (State)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -210,6 +349,9 @@ bookFlatSection: true
 
     
 * **role_type** (RoleType)  
+
+    
+* **state** (State)  
 
     <br>
 
