@@ -235,6 +235,9 @@ bookFlatSection: true
 * **state** (State)   `Required` 
 
     
+* **is_managed** (bool)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
@@ -254,6 +257,9 @@ bookFlatSection: true
 
     
 * **client_id** (string)   `Required` 
+
+    
+* **service_account_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
