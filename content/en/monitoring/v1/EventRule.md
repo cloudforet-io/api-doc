@@ -759,10 +759,7 @@ Gets a list of all EventRules. You can use a query to get a filtered list of Eve
 * **change_project** (string)   `Required` 
 
     
-* **add_project_dependency** (string)  `Repeated`    `Required` 
-
-    
-* **add_responder** (EventRuleActionResponder)  `Repeated`    `Required` 
+* **change_escalation_policy** (string)   `Required` 
 
     
 * **match_service_account** (MatchRule)   `Required` 

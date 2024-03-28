@@ -120,6 +120,8 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 
 * **resource_group** (ResourceGroup)   `Required` 
 
+* **error_message** (string)   `Required` 
+
 * **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
@@ -287,6 +289,9 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
     
 * **resource_group** (ResourceGroup)   `Required` 
+
+    
+* **error_message** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
