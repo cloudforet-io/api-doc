@@ -74,6 +74,9 @@ bookFlatSection: true
 * **data** (Struct)   `Required` 
 
     
+* **resource_id** (string)   `Required` 
+
+    
 * **secret_schema_id** (string)   `Required` 
 
     
