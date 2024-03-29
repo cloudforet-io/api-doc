@@ -231,6 +231,12 @@ bookFlatSection: true
 * **users** (string)  `Repeated`    `Required` 
 
     
+* **reference_id** (string)   `Required` 
+
+    
+* **is_managed** (bool)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -241,6 +247,9 @@ bookFlatSection: true
 
     
 * **created_at** (string)   `Required` 
+
+    
+* **last_synced_at** (string)   `Required` 
 
     <br>
 

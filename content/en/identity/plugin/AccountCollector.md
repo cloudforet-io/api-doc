@@ -83,7 +83,7 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
-* **location** (string)  `Repeated`    `Required` 
+* **location** (Struct)  `Repeated`    `Required` 
 
     <br>
 
