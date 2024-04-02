@@ -32,7 +32,7 @@ bookFlatSection: true
 | [**disable_mfa**](./UserProfile#disable_mfa) | [DisableMFARequest](UserProfile#disablemfarequest) | [UserInfo](UserProfile#userinfo) |
 | [**confirm_mfa**](./UserProfile#confirm_mfa) | [ConfirmMFARequest](UserProfile#confirmmfarequest) | [UserInfo](UserProfile#userinfo) |
 | [**get**](./UserProfile#get) | [UserProfileRequest](UserProfile#userprofilerequest) | [UserInfo](UserProfile#userinfo) |
-| [**get_workspaces**](./UserProfile#get_workspaces) | [UserProfileRequest](UserProfile#userprofilerequest) | [WorkspacesInfo](UserProfile#workspacesinfo) |
+| [**get_workspaces**](./UserProfile#get_workspaces) | [UserProfileRequest](UserProfile#userprofilerequest) | [MyWorkspacesInfo](UserProfile#myworkspacesinfo) |
 
 
 
@@ -306,6 +306,52 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **options** (Struct)   `Required` 
 
   *If mfa_type is EMAIL, email is required in options. options will be saved in mfa's options field.*
+
+    <br>
+
+### MyWorkspaceInfo
+* **workspace_id** (string)   `Required` 
+
+    
+* **name** (string)   `Required` 
+
+    
+* **state** (State)   `Required` 
+
+    
+* **role_type** (RoleType)   `Required` 
+
+    
+* **tags** (Struct)   `Required` 
+
+    
+* **created_by** (string)   `Required` 
+
+    
+* **reference_id** (string)   `Required` 
+
+    
+* **is_managed** (bool)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **role_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    
+* **last_synced_at** (string)   `Required` 
+
+    <br>
+
+### MyWorkspacesInfo
+* **results** (MyWorkspaceInfo)  `Repeated`    `Required` 
+
+    
+* **total_count** (int32)   `Required` 
 
     <br>
 
