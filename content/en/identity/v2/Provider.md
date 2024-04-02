@@ -413,6 +413,9 @@ These two options are located in options field. not in plugin_info.*
     
 * **options** (Struct)   `Required` 
 
+    
+* **metadata** (Struct)   `Required` 
+
     <br>
 
 ### ProviderInfo

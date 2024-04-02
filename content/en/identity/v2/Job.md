@@ -118,6 +118,8 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 
 * **status** (Status)   `Required` 
 
+* **options** (Struct)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **error_message** (string)   `Required` 
@@ -286,6 +288,9 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
     
 * **status** (Status)   `Required` 
+
+    
+* **options** (Struct)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 

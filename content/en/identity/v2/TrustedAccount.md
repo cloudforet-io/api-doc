@@ -85,6 +85,9 @@ bookFlatSection: true
 * **sync_options** (Struct)  
 
 
+* **plugin_options** (Struct)  
+
+
 * **tags** (Struct)  
 
 
@@ -273,6 +276,9 @@ bookFlatSection: true
 * **sync_options** (Struct)  
 
     
+* **plugin_options** (Struct)  
+
+    
 * **tags** (Struct)  
 
     
@@ -305,6 +311,9 @@ bookFlatSection: true
 
     
 * **sync_options** (Struct)   `Required` 
+
+    
+* **plugin_options** (Struct)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -374,6 +383,9 @@ bookFlatSection: true
 * **trusted_account_id** (string)   `Required` 
 
     
+* **tags** (Struct)   `Required` 
+
+    
 * **name** (string)  
 
     
@@ -386,7 +398,7 @@ bookFlatSection: true
 * **sync_options** (Struct)  
 
     
-* **tags** (Struct)  
+* **plugin_options** (Struct)  
 
     <br>
 
