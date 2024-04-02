@@ -319,9 +319,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **state** (State)   `Required` 
 
     
-* **role_type** (RoleType)   `Required` 
-
-    
 * **tags** (Struct)   `Required` 
 
     
@@ -332,6 +329,9 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **is_managed** (bool)   `Required` 
+
+    
+* **role_type** (RoleType)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
