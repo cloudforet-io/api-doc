@@ -319,6 +319,9 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **state** (State)   `Required` 
 
     
+* **role_name** (string)   `Required` 
+
+    
 * **role_type** (RoleType)   `Required` 
 
     
