@@ -318,6 +318,9 @@ bookFlatSection: true
 * **provider** (string)   `Required` 
 
     
+* **options** (Struct)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
@@ -325,9 +328,6 @@ bookFlatSection: true
 
     
 * **is_managed** (bool)   `Required` 
-
-    
-* **options** (Struct)   `Required` 
 
     
 * **domain_id** (string)   `Required` 

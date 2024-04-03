@@ -235,13 +235,13 @@ bookFlatSection: true
 * **state** (State)   `Required` 
 
     
+* **is_managed** (bool)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
 * **role_type** (RoleType)   `Required` 
-
-    
-* **is_managed** (bool)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 
