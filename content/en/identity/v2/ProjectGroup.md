@@ -246,6 +246,9 @@ bookFlatSection: true
 * **parent_group_id** (string)   `Required` 
 
     
+* **trusted_account_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
