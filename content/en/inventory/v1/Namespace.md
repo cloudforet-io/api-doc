@@ -63,6 +63,9 @@ bookFlatSection: true
 * **category** (string)   `Required` 
 
 
+* **namespace_id** (string)  
+
+
 * **provider** (string)  
 
 
@@ -96,8 +99,6 @@ bookFlatSection: true
 * **is_managed** (bool)   `Required` 
 
 * **domain_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -179,8 +180,6 @@ bookFlatSection: true
 * **is_managed** (bool)   `Required` 
 
 * **domain_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -296,8 +295,6 @@ bookFlatSection: true
 
 * **domain_id** (string)   `Required` 
 
-* **workspace_id** (string)   `Required` 
-
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -406,6 +403,9 @@ bookFlatSection: true
 * **category** (string)   `Required` 
 
     
+* **namespace_id** (string)  
+
+    
 * **provider** (string)  
 
     
@@ -433,9 +433,6 @@ bookFlatSection: true
 
     
 * **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
