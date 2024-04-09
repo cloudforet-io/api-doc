@@ -197,6 +197,9 @@ bookFlatSection: true
 * **workspace_id** (string)   `Required` 
 
     
+* **service_account_id** (string)   `Required` 
+
+    
 * **app_id** (string)   `Required` 
 
     
@@ -204,9 +207,6 @@ bookFlatSection: true
 
     
 * **client_id** (string)   `Required` 
-
-    
-* **service_account_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
