@@ -25,15 +25,10 @@ bookFlatSection: true
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./ServiceAccount#create) | [CreateServiceAccountRequest](ServiceAccount#createserviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
-| [**create_app**](./ServiceAccount#create_app) | [CreateAppServiceAccountRequest](ServiceAccount#createappserviceaccountrequest) | [AppInfo](ServiceAccount#appinfo) |
 | [**update**](./ServiceAccount#update) | [UpdateServiceAccountRequest](ServiceAccount#updateserviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**update_secret_data**](./ServiceAccount#update_secret_data) | [UpdateServiceAccountSecretRequest](ServiceAccount#updateserviceaccountsecretrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**delete_secret_data**](./ServiceAccount#delete_secret_data) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**delete**](./ServiceAccount#delete) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [Empty](ServiceAccount#empty) |
-| [**enable_app**](./ServiceAccount#enable_app) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [AppInfo](ServiceAccount#appinfo) |
-| [**disable_app**](./ServiceAccount#disable_app) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [AppInfo](ServiceAccount#appinfo) |
-| [**regenerate_app**](./ServiceAccount#regenerate_app) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [AppInfo](ServiceAccount#appinfo) |
-| [**delete_app**](./ServiceAccount#delete_app) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [Empty](ServiceAccount#empty) |
 | [**get**](./ServiceAccount#get) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**list**](./ServiceAccount#list) | [ServiceAccountSearchQuery](ServiceAccount#serviceaccountsearchquery) | [ServiceAccountsInfo](ServiceAccount#serviceaccountsinfo) |
 | [**stat**](./ServiceAccount#stat) | [ServiceAccountStatQuery](ServiceAccount#serviceaccountstatquery) | [Struct](ServiceAccount#struct) |
@@ -50,23 +45,6 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/service-account/create
->
-
-
-
-
-
-
-    
-<br>
-
-### create_app
-
-
-
-
-
-> **POST** /identity/v2/service-account/create-app
 >
 
 
@@ -145,74 +123,6 @@ bookFlatSection: true
     
 <br>
 
-### enable_app
-
-
-
-
-
-> **POST** /identity/v2/service-account/enable-app
->
-
-
-
-
-
-
-    
-<br>
-
-### disable_app
-
-
-
-
-
-> **POST** /identity/v2/service-account/disable-app
->
-
-
-
-
-
-
-    
-<br>
-
-### regenerate_app
-
-
-
-
-
-> **POST** /identity/v2/service-account/regenerate-app
->
-
-
-
-
-
-
-    
-<br>
-
-### delete_app
-
-
-
-
-
-> **POST** /identity/v2/service-account/delete-app
->
-
-
-
-
-
-
-    
-<br>
-
 ### get
 
 
@@ -271,14 +181,6 @@ bookFlatSection: true
 
 
 
-### CreateAppServiceAccountRequest
-* **service_account_id** (string)   `Required` 
-
-    
-* **options** (Struct)  
-
-    <br>
-
 ### CreateServiceAccountRequest
 * **name** (string)   `Required` 
 
@@ -318,9 +220,6 @@ bookFlatSection: true
 * **provider** (string)   `Required` 
 
     
-* **options** (Struct)   `Required` 
-
-    
 * **tags** (Struct)   `Required` 
 
     
@@ -346,9 +245,6 @@ bookFlatSection: true
 
     
 * **secret_id** (string)   `Required` 
-
-    
-* **app_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 

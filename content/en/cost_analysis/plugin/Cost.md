@@ -53,10 +53,10 @@ bookFlatSection: true
 
 
 ### CostInfo
-* **cost** (float)   `Required` 
+* **cost** (double)   `Required` 
 
     
-* **usage_quantity** (float)   `Required` 
+* **usage_quantity** (double)   `Required` 
 
     
 * **usage_unit** (string)   `Required` 
