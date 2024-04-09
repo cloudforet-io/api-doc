@@ -103,8 +103,6 @@ bookFlatSection: true
 
 * **resource_type** (string)   `Required` 
 
-* **category** (string)   `Required` 
-
 * **query_options** (AnalyzeQuery)   `Required` 
 
 * **unit** (string)   `Required` 
@@ -196,8 +194,6 @@ bookFlatSection: true
 * **metric_type** (MetricType)   `Required` 
 
 * **resource_type** (string)   `Required` 
-
-* **category** (string)   `Required` 
 
 * **query_options** (AnalyzeQuery)   `Required` 
 
@@ -321,8 +317,6 @@ bookFlatSection: true
 
 * **resource_type** (string)   `Required` 
 
-* **category** (string)   `Required` 
-
 * **query_options** (AnalyzeQuery)   `Required` 
 
 * **unit** (string)   `Required` 
@@ -388,9 +382,6 @@ bookFlatSection: true
 
 
 * **resource_type** (string)  
-
-
-* **category** (string)  
 
 
 * **is_managed** (string)  
@@ -483,9 +474,6 @@ bookFlatSection: true
 * **resource_type** (string)   `Required` 
 
     
-* **category** (string)   `Required` 
-
-    
 * **query_options** (AnalyzeQuery)   `Required` 
 
     
@@ -525,9 +513,6 @@ bookFlatSection: true
 
     
 * **resource_type** (string)  
-
-    
-* **category** (string)  
 
     
 * **is_managed** (string)  

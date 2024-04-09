@@ -147,9 +147,6 @@ bookFlatSection: true
 * **name** (string)  
 
 
-* **category** (string)  
-
-
 * **tags** (Struct)  
 
 
@@ -485,9 +482,6 @@ bookFlatSection: true
 
     
 * **name** (string)  
-
-    
-* **category** (string)  
 
     
 * **tags** (Struct)  
