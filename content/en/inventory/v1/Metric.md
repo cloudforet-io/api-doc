@@ -27,6 +27,8 @@ bookFlatSection: true
 | [**create**](./Metric#create) | [CreateMetricRequest](Metric#createmetricrequest) | [MetricInfo](Metric#metricinfo) |
 | [**update**](./Metric#update) | [UpdateMetricRequest](Metric#updatemetricrequest) | [MetricInfo](Metric#metricinfo) |
 | [**delete**](./Metric#delete) | [MetricRequest](Metric#metricrequest) | [Empty](Metric#empty) |
+| [**run**](./Metric#run) | [MetricRequest](Metric#metricrequest) | [Empty](Metric#empty) |
+| [**test**](./Metric#test) | [MetricRequest](Metric#metricrequest) | [Struct](Metric#struct) |
 | [**get**](./Metric#get) | [MetricRequest](Metric#metricrequest) | [MetricInfo](Metric#metricinfo) |
 | [**list**](./Metric#list) | [MetricQuery](Metric#metricquery) | [MetricsInfo](Metric#metricsinfo) |
 | [**stat**](./Metric#stat) | [MetricStatQuery](Metric#metricstatquery) | [Struct](Metric#struct) |
@@ -243,6 +245,90 @@ bookFlatSection: true
 
 
  {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[MetricRequest](./Metric#metricrequest)
+
+* **metric_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### run
+
+
+
+
+
+> **POST** /inventory/v1/metric/run
+>
+
+
+
+
+
+ {{< tabs " run " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[MetricRequest](./Metric#metricrequest)
+
+* **metric_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### test
+
+
+
+
+
+> **POST** /inventory/v1/metric/test
+>
+
+
+
+
+
+ {{< tabs " test " >}}
 
  {{< tab "Request Example" >}}
 
