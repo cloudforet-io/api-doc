@@ -182,9 +182,6 @@ bookFlatSection: true
 * **is_managed** (bool)   `Required` 
 
     
-* **tags** (Struct)   `Required` 
-
-    
 * **role_type** (RoleType)   `Required` 
 
     
