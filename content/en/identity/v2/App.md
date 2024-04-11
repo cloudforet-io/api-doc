@@ -259,9 +259,6 @@ bookFlatSection: true
 * **client_id** (string)   `Required` 
 
     
-* **service_account_id** (string)   `Required` 
-
-    
 * **created_at** (string)   `Required` 
 
     
