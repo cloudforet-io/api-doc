@@ -185,13 +185,13 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **resource_group** (ResourceGroup)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
 
     
 * **service_account_id** (string)   `Required` 
