@@ -173,9 +173,6 @@ bookFlatSection: true
 * **client_secret** (string)   `Required` 
 
     
-* **name** (string)   `Required` 
-
-    
 * **state** (State)   `Required` 
 
     
