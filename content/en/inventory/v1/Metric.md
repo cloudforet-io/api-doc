@@ -28,7 +28,7 @@ bookFlatSection: true
 | [**update**](./Metric#update) | [UpdateMetricRequest](Metric#updatemetricrequest) | [MetricInfo](Metric#metricinfo) |
 | [**delete**](./Metric#delete) | [MetricRequest](Metric#metricrequest) | [Empty](Metric#empty) |
 | [**run**](./Metric#run) | [MetricRequest](Metric#metricrequest) | [Empty](Metric#empty) |
-| [**test**](./Metric#test) | [MetricRequest](Metric#metricrequest) | [Struct](Metric#struct) |
+| [**test**](./Metric#test) | [MetricTestRequest](Metric#metrictestrequest) | [Struct](Metric#struct) |
 | [**get**](./Metric#get) | [MetricRequest](Metric#metricrequest) | [MetricInfo](Metric#metricinfo) |
 | [**list**](./Metric#list) | [MetricQuery](Metric#metricquery) | [MetricsInfo](Metric#metricsinfo) |
 | [**stat**](./Metric#stat) | [MetricStatQuery](Metric#metricstatquery) | [Struct](Metric#struct) |
@@ -334,9 +334,12 @@ bookFlatSection: true
 
 
 
-[MetricRequest](./Metric#metricrequest)
+[MetricTestRequest](./Metric#metrictestrequest)
 
 * **metric_id** (string)   `Required` 
+
+
+* **query_options** (AnalyzeQuery)   `Required` 
 
 
 
@@ -618,6 +621,14 @@ bookFlatSection: true
 
 ### MetricStatQuery
 * **query** (StatisticsQuery)   `Required` 
+
+    <br>
+
+### MetricTestRequest
+* **metric_id** (string)   `Required` 
+
+    
+* **query_options** (AnalyzeQuery)   `Required` 
 
     <br>
 
