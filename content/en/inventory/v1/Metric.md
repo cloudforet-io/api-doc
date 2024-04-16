@@ -77,6 +77,9 @@ bookFlatSection: true
 * **metric_id** (string)  
 
 
+* **date_field** (string)  
+
+
 * **unit** (string)  
 
 
@@ -106,6 +109,8 @@ bookFlatSection: true
 * **resource_type** (string)   `Required` 
 
 * **query_options** (AnalyzeQuery)   `Required` 
+
+* **date_field** (string)   `Required` 
 
 * **unit** (string)   `Required` 
 
@@ -169,6 +174,9 @@ bookFlatSection: true
 * **query_options** (AnalyzeQuery)  
 
 
+* **date_field** (string)  
+
+
 * **unit** (string)  
 
 
@@ -198,6 +206,8 @@ bookFlatSection: true
 * **resource_type** (string)   `Required` 
 
 * **query_options** (AnalyzeQuery)   `Required` 
+
+* **date_field** (string)   `Required` 
 
 * **unit** (string)   `Required` 
 
@@ -408,6 +418,8 @@ bookFlatSection: true
 
 * **query_options** (AnalyzeQuery)   `Required` 
 
+* **date_field** (string)   `Required` 
+
 * **unit** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
@@ -543,6 +555,9 @@ bookFlatSection: true
 * **metric_id** (string)  
 
     
+* **date_field** (string)  
+
+    
 * **unit** (string)  
 
     
@@ -564,6 +579,9 @@ bookFlatSection: true
 
     
 * **query_options** (AnalyzeQuery)   `Required` 
+
+    
+* **date_field** (string)   `Required` 
 
     
 * **unit** (string)   `Required` 
@@ -648,6 +666,9 @@ bookFlatSection: true
 
     
 * **query_options** (AnalyzeQuery)  
+
+    
+* **date_field** (string)  
 
     
 * **unit** (string)  
