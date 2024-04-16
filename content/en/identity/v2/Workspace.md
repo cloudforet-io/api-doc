@@ -26,7 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./Workspace#create) | [CreateWorkSpaceRequest](Workspace#createworkspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**update**](./Workspace#update) | [UpdateWorkSpaceRequest](Workspace#updateworkspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
-| [**delete**](./Workspace#delete) | [WorkspaceRequest](Workspace#workspacerequest) | [Empty](Workspace#empty) |
+| [**delete**](./Workspace#delete) | [WorkspaceDeleteRequest](Workspace#workspacedeleterequest) | [Empty](Workspace#empty) |
 | [**enable**](./Workspace#enable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**disable**](./Workspace#disable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**get**](./Workspace#get) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
@@ -220,6 +220,14 @@ bookFlatSection: true
 
     
 * **domain_id** (string)   `Required` 
+
+    <br>
+
+### WorkspaceDeleteRequest
+* **workspace_id** (string)   `Required` 
+
+    
+* **force** (bool)   `Required` 
 
     <br>
 
