@@ -24,7 +24,22 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
+| [**get_linked_accounts**](./Cost#get_linked_accounts) | [GetLinkedAccountsRequest](Cost#getlinkedaccountsrequest) | [AccountsInfo](Cost#accountsinfo) |
 | [**get_data**](./Cost#get_data) | [GetDataRequest](Cost#getdatarequest) | [CostsInfo](Cost#costsinfo) |
+
+
+
+    
+<br>
+
+### get_linked_accounts
+
+
+
+
+
+
+
 
 
 
@@ -51,6 +66,19 @@ bookFlatSection: true
 ## Message
 
 
+
+### AccountInfo
+* **account_id** (string)   `Required` 
+
+    
+* **name** (string)   `Required` 
+
+    <br>
+
+### AccountsInfo
+* **results** (AccountInfo)  `Repeated`    `Required` 
+
+    <br>
 
 ### CostInfo
 * **cost** (double)   `Required` 
@@ -109,5 +137,19 @@ bookFlatSection: true
 
     
 * **task_options** (Struct)  
+
+    <br>
+
+### GetLinkedAccountsRequest
+* **options** (Struct)   `Required` 
+
+    
+* **schema** (Struct)   `Required` 
+
+    
+* **secret_data** (Struct)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
 
     <br>
