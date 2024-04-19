@@ -27,6 +27,7 @@ A DataSource is a plugin instance collecting external cost data. External cost d
 | [**register**](./DataSource#register) | [RegisterDataSourceRequest](DataSource#registerdatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**update**](./DataSource#update) | [UpdateDataSourceRequest](DataSource#updatedatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**update_plugin**](./DataSource#update_plugin) | [UpdateDataSourcePluginRequest](DataSource#updatedatasourcepluginrequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**update_secret_data**](./DataSource#update_secret_data) | [UpdateSecretDataSourceRequest](DataSource#updatesecretdatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**verify_plugin**](./DataSource#verify_plugin) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](DataSource#empty) |
 | [**enable**](./DataSource#enable) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**disable**](./DataSource#disable) | [DataSourceRequest](DataSource#datasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
@@ -439,6 +440,129 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 }
 {{< /highlight >}}
 {{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DataSourceInfo](#DATASOURCEINFO)
+* **data_source_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **data_source_type** (DataSourceType)   `Required` 
+
+* **provider** (string)   `Required` 
+
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **template** (Struct)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **cost_tag_keys** (string)  `Repeated`   `Required` 
+
+* **cost_additional_info_keys** (string)  `Repeated`   `Required` 
+
+* **cost_data_keys** (string)  `Repeated`   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synchronized_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+       "data_source_id": "ds-085d1e872789",
+       "name": "AWS HyperBilling Data Source test",
+       "state": "ENABLED",
+       "data_source_type": "EXTERNAL",
+       "plugin_info": {
+           "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+           "version": "1.0.4",
+           "options": {},
+           "metadata": {
+               "data_source_rules": [
+                   {
+                       "options": {
+                           "stop_processing": true
+                       },
+                       "actions": {
+                           "match_service_account": {
+                               "source": "account",
+                               "target": "data.account_id"
+                           }
+                       },
+                       "domain_id": "domain-58010aa2e451",
+                       "conditions": [],
+                       "name": "match_service_account",
+                       "tags": {},
+                       "data_source_id": "ds-085d1e872789",
+                       "conditions_policy": "ALWAYS"
+                   }
+               ]
+           },
+           "secret_id": "secret-ca134639483",
+           "upgrade_mode": "AUTO"
+       },
+       "template": {},
+       "tags": {
+           "a": "b"
+       },
+       "cost_tag_keys": [
+           "Name",
+           "Environment",
+           "Role",
+           "Service"
+       ],
+       "cost_additional_info_keys": [
+           "Instance Type",
+           "Usage Type Details"
+       ],
+       "cost_data_keys": [
+           "AmortizedCost",
+           "BlendedCost",
+       ]
+       "domain_id": "domain-58010aa2e451",
+       "created_at": "2022-07-19T10:58:36.080Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### update_secret_data
+
+Updates the secret data of plugin for DataSource. This method updates the secret data in the DataSource to update the `secret_data`.
+
+
+
+> **POST** /cost-analysis/v1/data-source/update-secret-data
+>
+
+
+
+
+
+ {{< tabs " update_secret_data " >}}
+
 
 
  {{< tab "Response Example" >}}
@@ -1452,5 +1576,16 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### UpdateSecretDataSourceRequest
+* **data_source_id** (string)   `Required` 
+
+    
+* **secret_schema_id** (string)   `Required` 
+
+    
+* **secret_data** (Struct)   `Required` 
 
     <br>
