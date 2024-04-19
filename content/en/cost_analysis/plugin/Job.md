@@ -58,6 +58,9 @@ bookFlatSection: true
 * **domain_id** (string)   `Required` 
 
 
+* **linked_accounts** (Struct)  `Repeated`    `Required` 
+
+
 * **schema** (string)  
 
 
@@ -127,6 +130,9 @@ bookFlatSection: true
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **linked_accounts** (Struct)  `Repeated`    `Required` 
 
     
 * **schema** (string)  

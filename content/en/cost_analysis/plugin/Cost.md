@@ -144,7 +144,7 @@ bookFlatSection: true
 * **options** (Struct)   `Required` 
 
     
-* **schema** (Struct)   `Required` 
+* **schema** (string)   `Required` 
 
     
 * **secret_data** (Struct)   `Required` 
