@@ -88,6 +88,8 @@ bookFlatSection: true
 
 * **changed** (ChangedInfo)  `Repeated`   `Required` 
 
+* **synced_accounts** (SyncedAccountInfo)  `Repeated`   `Required` 
+
 
 
 {{< highlight json >}}
@@ -145,6 +147,11 @@ bookFlatSection: true
 
     <br>
 
+### SyncedAccountInfo
+* **account_id** (string)   `Required` 
+
+    <br>
+
 ### TaskInfo
 * **task_options** (Struct)   `Required` 
 
@@ -155,5 +162,8 @@ bookFlatSection: true
 
     
 * **changed** (ChangedInfo)  `Repeated`    `Required` 
+
+    
+* **synced_accounts** (SyncedAccountInfo)  `Repeated`    `Required` 
 
     <br>

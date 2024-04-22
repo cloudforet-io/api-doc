@@ -152,10 +152,22 @@ Get a DataSourceAccount with the specified DataSourceAccount ID related to the D
 * **service_account_id** (string)   `Required` 
 
     
+* **v_workspace_id** (string)   `Required` 
+
+    
+* **v_project_id** (string)   `Required` 
+
+    
+* **v_service_account_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
 * **updated_at** (string)   `Required` 
+
+    
+* **last_synced_at** (string)   `Required` 
 
     <br>
 

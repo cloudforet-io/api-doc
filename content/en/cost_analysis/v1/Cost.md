@@ -163,6 +163,8 @@ Creates a new Cost. When creating a Cost, if the parameter `provider` is not ent
 
 * **data_source_id** (string)   `Required` 
 
+* **account_id** (string)   `Required` 
+
 * **billed_year** (string)   `Required` 
 
 * **billed_month** (string)   `Required` 
@@ -318,6 +320,8 @@ Gets a specific Cost. Prints detailed information about the Cost, including  `re
 * **service_account_id** (string)   `Required` 
 
 * **data_source_id** (string)   `Required` 
+
+* **account_id** (string)   `Required` 
 
 * **billed_year** (string)   `Required` 
 
@@ -605,6 +609,9 @@ Gets the Cost information of specific `product`s based on the time granularity: 
 
     
 * **data_source_id** (string)   `Required` 
+
+    
+* **account_id** (string)   `Required` 
 
     
 * **billed_year** (string)   `Required` 
