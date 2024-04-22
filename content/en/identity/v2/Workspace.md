@@ -247,7 +247,7 @@ bookFlatSection: true
 * **created_by** (string)   `Required` 
 
     
-* **reference_id** (string)   `Required` 
+* **references** (string)  `Repeated`    `Required` 
 
     
 * **is_managed** (bool)   `Required` 
