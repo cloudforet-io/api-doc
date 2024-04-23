@@ -88,6 +88,8 @@ Cancels a specific Job. You can manually cease a Job in run with this method.
 
 * **changed** (ChangedInfo)  `Repeated`   `Required` 
 
+* **synced_accounts** (SyncedAccountInfo)  `Repeated`   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -188,6 +190,8 @@ Gets a specific Job. Prints detailed information about the Job, including the pl
 * **remained_tasks** (int32)   `Required` 
 
 * **changed** (ChangedInfo)  `Repeated`   `Required` 
+
+* **synced_accounts** (SyncedAccountInfo)  `Repeated`   `Required` 
 
 * **resource_group** (ResourceGroup)   `Required` 
 
@@ -406,6 +410,9 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 * **changed** (ChangedInfo)  `Repeated`    `Required` 
 
     
+* **synced_accounts** (SyncedAccountInfo)  `Repeated`    `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
@@ -460,5 +467,10 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### SyncedAccountInfo
+* **account_id** (string)   `Required` 
 
     <br>
