@@ -69,6 +69,9 @@ bookFlatSection: true
 * **provider** (string)  
 
 
+* **icon** (string)  
+
+
 * **tags** (Struct)  
 
 
@@ -93,6 +96,8 @@ bookFlatSection: true
 * **category** (string)   `Required` 
 
 * **provider** (string)   `Required` 
+
+* **icon** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
@@ -147,6 +152,9 @@ bookFlatSection: true
 * **name** (string)  
 
 
+* **icon** (string)  
+
+
 * **tags** (Struct)  
 
 
@@ -171,6 +179,8 @@ bookFlatSection: true
 * **category** (string)   `Required` 
 
 * **provider** (string)   `Required` 
+
+* **icon** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
@@ -285,6 +295,8 @@ bookFlatSection: true
 * **category** (string)   `Required` 
 
 * **provider** (string)   `Required` 
+
+* **icon** (string)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
@@ -406,6 +418,9 @@ bookFlatSection: true
 * **provider** (string)  
 
     
+* **icon** (string)  
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -421,6 +436,9 @@ bookFlatSection: true
 
     
 * **provider** (string)   `Required` 
+
+    
+* **icon** (string)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -482,6 +500,9 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    
+* **icon** (string)  
 
     
 * **tags** (Struct)  
