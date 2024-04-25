@@ -60,10 +60,10 @@ bookFlatSection: true
 * **metric_id** (string)   `Required` 
 
 
+* **name** (string)   `Required` 
+
+
 * **options** (Struct)   `Required` 
-
-
-* **name** (string)  
 
 
 * **tags** (Struct)  
@@ -92,6 +92,8 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -173,6 +175,8 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -288,6 +292,8 @@ bookFlatSection: true
 
 * **domain_id** (string)   `Required` 
 
+* **workspace_id** (string)   `Required` 
+
 * **user_id** (string)   `Required` 
 
 * **metric_id** (string)   `Required` 
@@ -391,10 +397,10 @@ bookFlatSection: true
 * **metric_id** (string)   `Required` 
 
     
-* **options** (Struct)   `Required` 
+* **name** (string)   `Required` 
 
     
-* **name** (string)  
+* **options** (Struct)   `Required` 
 
     
 * **tags** (Struct)  
@@ -415,6 +421,9 @@ bookFlatSection: true
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **user_id** (string)   `Required` 
