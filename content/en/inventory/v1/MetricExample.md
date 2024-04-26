@@ -99,6 +99,8 @@ bookFlatSection: true
 
 * **metric_id** (string)   `Required` 
 
+* **namespace_id** (string)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -181,6 +183,8 @@ bookFlatSection: true
 * **user_id** (string)   `Required` 
 
 * **metric_id** (string)   `Required` 
+
+* **namespace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
 
@@ -298,6 +302,8 @@ bookFlatSection: true
 
 * **metric_id** (string)   `Required` 
 
+* **namespace_id** (string)   `Required` 
+
 * **created_at** (string)   `Required` 
 
 * **updated_at** (string)   `Required` 
@@ -349,6 +355,9 @@ bookFlatSection: true
 
 
 * **metric_id** (string)  
+
+
+* **namespace_id** (string)  
 
 
 
@@ -432,6 +441,9 @@ bookFlatSection: true
 * **metric_id** (string)   `Required` 
 
     
+* **namespace_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
@@ -450,6 +462,9 @@ bookFlatSection: true
 
     
 * **metric_id** (string)  
+
+    
+* **namespace_id** (string)  
 
     <br>
 
