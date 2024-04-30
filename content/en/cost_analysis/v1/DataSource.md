@@ -161,6 +161,10 @@ Registers a DataSource with information of the plugin to use. Information of the
 
 * **cost_data_keys** (string)  `Repeated`   `Required` 
 
+* **data_source_account_count** (int32)   `Required` 
+
+* **connected_workspace_count** (int32)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -318,6 +322,10 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 
 * **cost_data_keys** (string)  `Repeated`   `Required` 
 
+* **data_source_account_count** (int32)   `Required` 
+
+* **connected_workspace_count** (int32)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -471,6 +479,10 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 
 * **cost_data_keys** (string)  `Repeated`   `Required` 
 
+* **data_source_account_count** (int32)   `Required` 
+
+* **connected_workspace_count** (int32)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -593,6 +605,10 @@ Updates the secret data of plugin for DataSource. This method updates the secret
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
 * **cost_data_keys** (string)  `Repeated`   `Required` 
+
+* **data_source_account_count** (int32)   `Required` 
+
+* **connected_workspace_count** (int32)   `Required` 
 
 * **resource_group** (ResourceGroup)   `Required` 
 
@@ -777,6 +793,10 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 
 * **cost_data_keys** (string)  `Repeated`   `Required` 
 
+* **data_source_account_count** (int32)   `Required` 
+
+* **connected_workspace_count** (int32)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -917,6 +937,10 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 * **cost_additional_info_keys** (string)  `Repeated`   `Required` 
 
 * **cost_data_keys** (string)  `Repeated`   `Required` 
+
+* **data_source_account_count** (int32)   `Required` 
+
+* **connected_workspace_count** (int32)   `Required` 
 
 * **resource_group** (ResourceGroup)   `Required` 
 
@@ -1125,6 +1149,10 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 
 * **cost_data_keys** (string)  `Repeated`   `Required` 
 
+* **data_source_account_count** (int32)   `Required` 
+
+* **connected_workspace_count** (int32)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -1223,6 +1251,9 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
 [DataSourceQuery](./DataSource#datasourcequery)
 
+* **workspace_id** (string)   `Required` 
+
+
 * **query** (Query)  
 
 
@@ -1241,7 +1272,7 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **provider** (string)  
 
 
-* **workspace_id** (string)  
+* **connected_workspace_id** (string)  
 
 
 
@@ -1398,6 +1429,12 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **cost_data_keys** (string)  `Repeated`    `Required` 
 
     
+* **data_source_account_count** (int32)   `Required` 
+
+    
+* **connected_workspace_count** (int32)   `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
@@ -1415,6 +1452,9 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
     <br>
 
 ### DataSourceQuery
+* **workspace_id** (string)   `Required` 
+
+    
 * **query** (Query)  
 
     
@@ -1433,7 +1473,7 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **provider** (string)  
 
     
-* **workspace_id** (string)  
+* **connected_workspace_id** (string)  
 
     <br>
 
