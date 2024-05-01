@@ -152,7 +152,7 @@ bookFlatSection: true
     <br>
 
 ### AnalyzeQuery
-* **group_by** (string)  `Repeated`    `Required` 
+* **group_by** (ListValue)   `Required` 
 
     
 * **field_group** (string)  `Repeated`    `Required` 
@@ -193,7 +193,7 @@ bookFlatSection: true
 * **sort** (Sort)  `Repeated`    `Required` 
 
     
-* **group_by** (string)  `Repeated`    `Required` 
+* **group_by** (ListValue)   `Required` 
 
     
 * **fields** (Struct)   `Required` 
@@ -364,7 +364,7 @@ bookFlatSection: true
 * **end** (string)   `Required` 
 
     
-* **group_by** (string)  `Repeated`    `Required` 
+* **group_by** (ListValue)   `Required` 
 
     
 * **field_group** (string)  `Repeated`    `Required` 
