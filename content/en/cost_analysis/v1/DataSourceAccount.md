@@ -25,7 +25,7 @@ A DataSourceAccount is a resource that for routing cost data from a specific acc
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**update**](./DataSourceAccount#update) | [UpdateDataSourceAccountRequest](DataSourceAccount#updatedatasourceaccountrequest) | [DataSourceAccountInfo](DataSourceAccount#datasourceaccountinfo) |
-| [**reset**](./DataSourceAccount#reset) | [ResetDataSourceAccountRequest](DataSourceAccount#resetdatasourceaccountrequest) | [DataSourceAccountsInfo](DataSourceAccount#datasourceaccountsinfo) |
+| [**reset**](./DataSourceAccount#reset) | [ResetDataSourceAccountRequest](DataSourceAccount#resetdatasourceaccountrequest) | [Empty](DataSourceAccount#empty) |
 | [**get**](./DataSourceAccount#get) | [DataSourceAccountRequest](DataSourceAccount#datasourceaccountrequest) | [DataSourceAccountInfo](DataSourceAccount#datasourceaccountinfo) |
 | [**list**](./DataSourceAccount#list) | [DataSourceAccountQuery](DataSourceAccount#datasourceaccountquery) | [DataSourceAccountsInfo](DataSourceAccount#datasourceaccountsinfo) |
 | [**stat**](./DataSourceAccount#stat) | [DataSourceAccountStatQuery](DataSourceAccount#datasourceaccountstatquery) | [Struct](DataSourceAccount#struct) |
@@ -201,7 +201,10 @@ Get a DataSourceAccount with the specified DataSourceAccount ID related to the D
     <br>
 
 ### ResetDataSourceAccountRequest
-* **data_source_account_id** (string)   `Required` 
+* **data_source_id** (string)   `Required` 
+
+    
+* **account_id** (string)  
 
     <br>
 
