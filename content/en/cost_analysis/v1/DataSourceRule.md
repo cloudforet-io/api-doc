@@ -840,6 +840,9 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
     
 * **target** (string)   `Required` 
 
+    
+* **all_workspaces** (bool)   `Required` 
+
     <br>
 
 ### UpdateDataSourceRuleRequest
