@@ -28,6 +28,7 @@ A DataSourceAccount is a resource that for routing cost data from a specific acc
 | [**reset**](./DataSourceAccount#reset) | [ResetDataSourceAccountRequest](DataSourceAccount#resetdatasourceaccountrequest) | [Empty](DataSourceAccount#empty) |
 | [**get**](./DataSourceAccount#get) | [DataSourceAccountRequest](DataSourceAccount#datasourceaccountrequest) | [DataSourceAccountInfo](DataSourceAccount#datasourceaccountinfo) |
 | [**list**](./DataSourceAccount#list) | [DataSourceAccountQuery](DataSourceAccount#datasourceaccountquery) | [DataSourceAccountsInfo](DataSourceAccount#datasourceaccountsinfo) |
+| [**analyze**](./DataSourceAccount#analyze) | [DataSourceAccountAnalyzeQuery](DataSourceAccount#datasourceaccountanalyzequery) | [Struct](DataSourceAccount#struct) |
 | [**stat**](./DataSourceAccount#stat) | [DataSourceAccountStatQuery](DataSourceAccount#datasourceaccountstatquery) | [Struct](DataSourceAccount#struct) |
 
 
@@ -103,6 +104,23 @@ Get a DataSourceAccount with the specified DataSourceAccount ID related to the D
     
 <br>
 
+### analyze
+
+
+
+
+
+> **POST** /cost-analysis/v1/data-source-account/analyze
+>
+
+
+
+
+
+
+    
+<br>
+
 ### stat
 
 
@@ -126,6 +144,20 @@ Get a DataSourceAccount with the specified DataSourceAccount ID related to the D
 ## Message
 
 
+
+### DataSourceAccountAnalyzeQuery
+* **query** (TimeSeriesAnalyzeQuery)   `Required` 
+
+    
+* **data_source_id** (string)   `Required` 
+
+    
+* **account_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    <br>
 
 ### DataSourceAccountInfo
 * **account_id** (string)   `Required` 
