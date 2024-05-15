@@ -116,7 +116,7 @@ bookFlatSection: true
 
 * **tags** (Struct)   `Required` 
 
-* **label_keys** (Struct)  `Repeated`   `Required` 
+* **labels_info** (Struct)  `Repeated`   `Required` 
 
 * **is_managed** (bool)   `Required` 
 
@@ -213,7 +213,7 @@ bookFlatSection: true
 
 * **tags** (Struct)   `Required` 
 
-* **label_keys** (Struct)  `Repeated`   `Required` 
+* **labels_info** (Struct)  `Repeated`   `Required` 
 
 * **is_managed** (bool)   `Required` 
 
@@ -424,7 +424,7 @@ bookFlatSection: true
 
 * **tags** (Struct)   `Required` 
 
-* **label_keys** (Struct)  `Repeated`   `Required` 
+* **labels_info** (Struct)  `Repeated`   `Required` 
 
 * **is_managed** (bool)   `Required` 
 
@@ -590,7 +590,7 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
-* **label_keys** (Struct)  `Repeated`    `Required` 
+* **labels_info** (Struct)  `Repeated`    `Required` 
 
     
 * **is_managed** (bool)   `Required` 
