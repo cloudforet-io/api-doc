@@ -189,7 +189,7 @@ Creates a new CloudService. A CloudService instance is created based on data inc
 
 * **tag_keys** (Struct)   `Required` 
 
-* **collection_info** (CollectionInfo)  `Repeated`   `Required` 
+* **collection_info** (CollectionInfo)   `Required` 
 
 * **region_code** (string)   `Required` 
 
@@ -256,9 +256,10 @@ Creates a new CloudService. A CloudService instance is created based on data inc
        "a": "b"
    },
    "collection_info": {
-       "collectors": [],
-       "service_accounts": [],
-       "secrets": []
+       "service_account_id": "sa-abcd1234",
+       "secret_id": "secret-abcd1234",
+       "collector_id": "collector-abcd1234",
+       "last_collected_at": "2022-06-22T06:38:48.989Z"
    },
    "ip_addresses": [],
    "region_code": "ap-northeast-1",
@@ -388,7 +389,7 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
 
 * **tag_keys** (Struct)   `Required` 
 
-* **collection_info** (CollectionInfo)  `Repeated`   `Required` 
+* **collection_info** (CollectionInfo)   `Required` 
 
 * **region_code** (string)   `Required` 
 
@@ -455,9 +456,10 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
        "a": "b"
    },
    "collection_info": {
-       "collectors": [],
-       "service_accounts": [],
-       "secrets": []
+       "service_account_id": "sa-abcd1234",
+       "secret_id": "secret-abcd1234",
+       "collector_id": "collector-abcd1234",
+       "last_collected_at": "2022-06-22T06:38:48.989Z"
    },
    "ip_addresses": [],
    "region_code": "ap-northeast-1",
@@ -587,7 +589,7 @@ Gets a specific CloudService. Prints detailed information about the CloudService
 
 * **tag_keys** (Struct)   `Required` 
 
-* **collection_info** (CollectionInfo)  `Repeated`   `Required` 
+* **collection_info** (CollectionInfo)   `Required` 
 
 * **region_code** (string)   `Required` 
 
@@ -654,9 +656,10 @@ Gets a specific CloudService. Prints detailed information about the CloudService
        "a": "b"
    },
    "collection_info": {
-       "collectors": [],
-       "service_accounts": [],
-       "secrets": []
+       "service_account_id": "sa-abcd1234",
+       "secret_id": "secret-abcd1234",
+       "collector_id": "collector-abcd1234",
+       "last_collected_at": "2022-06-22T06:38:48.989Z"
    },
    "ip_addresses": [],
    "region_code": "ap-northeast-1",
@@ -817,9 +820,10 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
            "description": "spaceone"
        },
        "collection_info": {
-           "collectors": [],
-           "service_accounts": [],
-           "secrets": []
+            "service_account_id": "sa-abcd1234",
+            "secret_id": "secret-abcd1234",
+            "collector_id": "collector-abcd1234",
+            "last_collected_at": "2022-06-22T06:38:48.989Z"
        },
        "ip_addresses": [
            "1.1.1.1",
@@ -967,7 +971,7 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 * **tag_keys** (Struct)   `Required` 
 
     
-* **collection_info** (CollectionInfo)  `Repeated`    `Required` 
+* **collection_info** (CollectionInfo)   `Required` 
 
     
 * **region_code** (string)   `Required` 
@@ -1063,9 +1067,6 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
     <br>
 
 ### CollectionInfo
-* **provider** (string)   `Required` 
-
-    
 * **service_account_id** (string)   `Required` 
 
     
