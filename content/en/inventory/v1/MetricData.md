@@ -155,10 +155,10 @@ bookFlatSection: true
 * **project_id** (string)   `Required` 
 
     
-* **namespace_id** (string)   `Required` 
+* **service_account_id** (string)   `Required` 
 
     
-* **created_at** (string)   `Required` 
+* **namespace_id** (string)   `Required` 
 
     
 * **created_year** (string)   `Required` 
