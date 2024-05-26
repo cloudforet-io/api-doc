@@ -28,10 +28,6 @@ description of dashboard
 | [**update**](./PublicDashboard#update) | [UpdatePublicDashboardRequest](PublicDashboard#updatepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**delete**](./PublicDashboard#delete) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [Empty](PublicDashboard#empty) |
 | [**get**](./PublicDashboard#get) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
-| [**delete_version**](./PublicDashboard#delete_version) | [PublicDashboardVersionRequest](PublicDashboard#publicdashboardversionrequest) | [Empty](PublicDashboard#empty) |
-| [**revert_version**](./PublicDashboard#revert_version) | [PublicDashboardVersionRequest](PublicDashboard#publicdashboardversionrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
-| [**get_version**](./PublicDashboard#get_version) | [PublicDashboardVersionRequest](PublicDashboard#publicdashboardversionrequest) | [PublicDashboardVersionInfo](PublicDashboard#publicdashboardversioninfo) |
-| [**list_versions**](./PublicDashboard#list_versions) | [PublicDashboardVersionSearchQuery](PublicDashboard#publicdashboardversionsearchquery) | [PublicDashboardVersionsInfo](PublicDashboard#publicdashboardversionsinfo) |
 | [**list**](./PublicDashboard#list) | [PublicDashboardQuery](PublicDashboard#publicdashboardquery) | [PublicDashboardsInfo](PublicDashboard#publicdashboardsinfo) |
 | [**stat**](./PublicDashboard#stat) | [PublicDashboardStatQuery](PublicDashboard#publicdashboardstatquery) | [Struct](PublicDashboard#struct) |
 
@@ -108,74 +104,6 @@ description of dashboard
     
 <br>
 
-### delete_version
-
-
-
-
-
-> **POST** /dashboard/v1/public-dashboard/delete-version
->
-
-
-
-
-
-
-    
-<br>
-
-### revert_version
-
-
-
-
-
-> **POST** /dashboard/v1/public-dashboard/revert-version
->
-
-
-
-
-
-
-    
-<br>
-
-### get_version
-
-
-
-
-
-> **POST** /dashboard/v1/public-dashboard/get-version
->
-
-
-
-
-
-
-    
-<br>
-
-### list_versions
-
-
-
-
-
-> **POST** /dashboard/v1/public-dashboard/list-versions
->
-
-
-
-
-
-
-    
-<br>
-
 ### list
 
 
@@ -221,28 +149,22 @@ description of dashboard
 * **name** (string)   `Required` 
 
     
-* **template_id** (string)   `Required` 
-
-    
-* **template_type** (TemplateType)   `Required` 
-
-    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
 * **layouts** (ListValue)  
 
     
-* **variables** (Struct)  
+* **vars** (Struct)  
 
     
 * **settings** (Struct)  
 
     
-* **variables_schema** (Struct)  
+* **variables** (Struct)  
 
     
-* **display_info** (Struct)  
+* **variables_schema** (Struct)  
 
     
 * **labels** (ListValue)  
@@ -265,28 +187,22 @@ description of dashboard
 * **name** (string)   `Required` 
 
     
-* **template_id** (string)   `Required` 
-
-    
-* **template_type** (TemplateType)   `Required` 
-
-    
-* **version** (int32)   `Required` 
+* **version** (string)   `Required` 
 
     
 * **layouts** (ListValue)   `Required` 
 
     
-* **variables** (Struct)   `Required` 
+* **vars** (Struct)   `Required` 
 
     
 * **settings** (Struct)   `Required` 
 
     
-* **variables_schema** (Struct)   `Required` 
+* **variables** (Struct)   `Required` 
 
     
-* **display_info** (Struct)   `Required` 
+* **variables_schema** (Struct)   `Required` 
 
     
 * **labels** (ListValue)   `Required` 
@@ -341,62 +257,6 @@ description of dashboard
 
     <br>
 
-### PublicDashboardVersionInfo
-* **public_dashboard_id** (string)   `Required` 
-
-    
-* **version** (int32)   `Required` 
-
-    
-* **latest** (bool)   `Required` 
-
-    
-* **layouts** (ListValue)   `Required` 
-
-    
-* **variables** (Struct)   `Required` 
-
-    
-* **settings** (Struct)   `Required` 
-
-    
-* **variables_schema** (Struct)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    <br>
-
-### PublicDashboardVersionRequest
-* **public_dashboard_id** (string)   `Required` 
-
-    
-* **version** (int32)   `Required` 
-
-    <br>
-
-### PublicDashboardVersionSearchQuery
-* **public_dashboard_id** (string)   `Required` 
-
-    
-* **query** (Query)  
-
-    
-* **version** (int32)  
-
-    <br>
-
-### PublicDashboardVersionsInfo
-* **results** (PublicDashboardVersionInfo)  `Repeated`    `Required` 
-
-    
-* **total_count** (int32)   `Required` 
-
-    <br>
-
 ### PublicDashboardsInfo
 * **results** (PublicDashboardInfo)  `Repeated`    `Required` 
 
@@ -412,25 +272,19 @@ description of dashboard
 * **name** (string)  
 
     
-* **template_id** (string)  
-
-    
-* **template_type** (TemplateType)  
-
-    
 * **layouts** (ListValue)  
 
     
-* **variables** (Struct)  
+* **vars** (Struct)  
 
     
 * **settings** (Struct)  
 
     
-* **variables_schema** (Struct)  
+* **variables** (Struct)  
 
     
-* **display_info** (Struct)  
+* **variables_schema** (Struct)  
 
     
 * **labels** (ListValue)  

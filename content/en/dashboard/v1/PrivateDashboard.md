@@ -24,14 +24,10 @@ description of dashboard
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./PrivateDashboard#create) | [PrivateCreateDashboardRequest](PrivateDashboard#privatecreatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
-| [**update**](./PrivateDashboard#update) | [PrivateUpdateDashboardRequest](PrivateDashboard#privateupdatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
+| [**create**](./PrivateDashboard#create) | [CreatePrivateDashboardRequest](PrivateDashboard#createprivatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
+| [**update**](./PrivateDashboard#update) | [UpdatePrivateDashboardRequest](PrivateDashboard#updateprivatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
 | [**delete**](./PrivateDashboard#delete) | [PrivateDashboardRequest](PrivateDashboard#privatedashboardrequest) | [Empty](PrivateDashboard#empty) |
 | [**get**](./PrivateDashboard#get) | [PrivateDashboardRequest](PrivateDashboard#privatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
-| [**delete_version**](./PrivateDashboard#delete_version) | [PrivateDashboardVersionRequest](PrivateDashboard#privatedashboardversionrequest) | [Empty](PrivateDashboard#empty) |
-| [**revert_version**](./PrivateDashboard#revert_version) | [PrivateDashboardVersionRequest](PrivateDashboard#privatedashboardversionrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
-| [**get_version**](./PrivateDashboard#get_version) | [PrivateDashboardVersionRequest](PrivateDashboard#privatedashboardversionrequest) | [PrivateDashboardVersionInfo](PrivateDashboard#privatedashboardversioninfo) |
-| [**list_versions**](./PrivateDashboard#list_versions) | [PrivateDashboardVersionSearchQuery](PrivateDashboard#privatedashboardversionsearchquery) | [PrivateDashboardVersionsInfo](PrivateDashboard#privatedashboardversionsinfo) |
 | [**list**](./PrivateDashboard#list) | [PrivateDashboardQuery](PrivateDashboard#privatedashboardquery) | [PrivateDashboardsInfo](PrivateDashboard#privatedashboardsinfo) |
 | [**stat**](./PrivateDashboard#stat) | [PrivateDashboardStatQuery](PrivateDashboard#privatedashboardstatquery) | [Struct](PrivateDashboard#struct) |
 
@@ -108,74 +104,6 @@ description of dashboard
     
 <br>
 
-### delete_version
-
-
-
-
-
-> **POST** /dashboard/v1/private-dashboard/delete-version
->
-
-
-
-
-
-
-    
-<br>
-
-### revert_version
-
-
-
-
-
-> **POST** /dashboard/v1/private-dashboard/revert-version
->
-
-
-
-
-
-
-    
-<br>
-
-### get_version
-
-
-
-
-
-> **POST** /dashboard/v1/private-dashboard/get-version
->
-
-
-
-
-
-
-    
-<br>
-
-### list_versions
-
-
-
-
-
-> **POST** /dashboard/v1/private-dashboard/list-versions
->
-
-
-
-
-
-
-    
-<br>
-
 ### list
 
 
@@ -217,29 +145,26 @@ description of dashboard
 
 
 
-### PrivateCreateDashboardRequest
+### CreatePrivateDashboardRequest
 * **name** (string)   `Required` 
 
     
-* **template_id** (string)   `Required` 
-
-    
-* **template_type** (TemplateType)   `Required` 
+* **workspace_id** (string)   `Required` 
 
     
 * **layouts** (ListValue)  
 
     
-* **variables** (Struct)  
+* **vars** (Struct)  
 
     
 * **settings** (Struct)  
 
     
-* **variables_schema** (Struct)  
+* **variables** (Struct)  
 
     
-* **display_info** (Struct)  
+* **variables_schema** (Struct)  
 
     
 * **labels** (ListValue)  
@@ -256,28 +181,22 @@ description of dashboard
 * **name** (string)   `Required` 
 
     
-* **version** (int32)   `Required` 
-
-    
-* **template_id** (string)   `Required` 
-
-    
-* **template_type** (TemplateType)   `Required` 
+* **version** (string)   `Required` 
 
     
 * **layouts** (ListValue)   `Required` 
 
     
-* **variables** (Struct)   `Required` 
+* **vars** (Struct)   `Required` 
 
     
 * **settings** (Struct)   `Required` 
 
     
-* **variables_schema** (Struct)   `Required` 
+* **variables** (Struct)   `Required` 
 
     
-* **display_info** (Struct)   `Required` 
+* **variables_schema** (Struct)   `Required` 
 
     
 * **labels** (ListValue)   `Required` 
@@ -314,9 +233,6 @@ description of dashboard
     
 * **workspace_id** (string)  
 
-    
-* **project_id** (string)  
-
     <br>
 
 ### PrivateDashboardRequest
@@ -329,62 +245,6 @@ description of dashboard
 
     <br>
 
-### PrivateDashboardVersionInfo
-* **private_dashboard_id** (string)   `Required` 
-
-    
-* **version** (int32)   `Required` 
-
-    
-* **latest** (bool)   `Required` 
-
-    
-* **layouts** (ListValue)   `Required` 
-
-    
-* **variables** (Struct)   `Required` 
-
-    
-* **settings** (Struct)   `Required` 
-
-    
-* **variables_schema** (Struct)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    <br>
-
-### PrivateDashboardVersionRequest
-* **private_dashboard_id** (string)   `Required` 
-
-    
-* **version** (int32)   `Required` 
-
-    <br>
-
-### PrivateDashboardVersionSearchQuery
-* **private_dashboard_id** (string)   `Required` 
-
-    
-* **query** (Query)  
-
-    
-* **version** (int32)  
-
-    <br>
-
-### PrivateDashboardVersionsInfo
-* **results** (PrivateDashboardVersionInfo)  `Repeated`    `Required` 
-
-    
-* **total_count** (int32)   `Required` 
-
-    <br>
-
 ### PrivateDashboardsInfo
 * **results** (PrivateDashboardInfo)  `Repeated`    `Required` 
 
@@ -393,32 +253,26 @@ description of dashboard
 
     <br>
 
-### PrivateUpdateDashboardRequest
+### UpdatePrivateDashboardRequest
 * **private_dashboard_id** (string)   `Required` 
 
     
 * **name** (string)  
 
     
-* **template_id** (string)  
-
-    
-* **template_type** (TemplateType)  
-
-    
 * **layouts** (ListValue)  
 
     
-* **variables** (Struct)  
+* **vars** (Struct)  
 
     
 * **settings** (Struct)  
 
     
-* **variables_schema** (Struct)  
+* **variables** (Struct)  
 
     
-* **display_info** (Struct)  
+* **variables_schema** (Struct)  
 
     
 * **labels** (ListValue)  
