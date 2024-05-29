@@ -172,6 +172,9 @@ Get a DataSourceAccount with the specified DataSourceAccount ID related to the D
 * **is_sync** (bool)   `Required` 
 
     
+* **is_linked** (bool)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
