@@ -93,8 +93,6 @@ bookFlatSection: true
 
 * **domain_id** (string)   `Required` 
 
-* **workspace_id** (string)   `Required` 
-
 * **user_id** (string)   `Required` 
 
 * **metric_id** (string)   `Required` 
@@ -177,8 +175,6 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -295,8 +291,6 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
 * **domain_id** (string)   `Required` 
-
-* **workspace_id** (string)   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -430,9 +424,6 @@ bookFlatSection: true
 
     
 * **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
 
     
 * **user_id** (string)   `Required` 
