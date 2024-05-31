@@ -65,9 +65,6 @@ bookFlatSection: true
 * **metric_type** (MetricType)   `Required` 
 
 
-* **resource_type** (string)   `Required` 
-
-
 * **query_options** (AnalyzeQuery)   `Required` 
 
 
@@ -78,6 +75,9 @@ bookFlatSection: true
 
 
 * **metric_id** (string)  
+
+
+* **resource_type** (string)  
 
 
 * **date_field** (string)  
@@ -561,9 +561,6 @@ bookFlatSection: true
 * **metric_type** (MetricType)   `Required` 
 
     
-* **resource_type** (string)   `Required` 
-
-    
 * **query_options** (AnalyzeQuery)   `Required` 
 
     
@@ -574,6 +571,9 @@ bookFlatSection: true
 
     
 * **metric_id** (string)  
+
+    
+* **resource_type** (string)  
 
     
 * **date_field** (string)  

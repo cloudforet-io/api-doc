@@ -63,13 +63,16 @@ bookFlatSection: true
 * **category** (string)   `Required` 
 
 
+* **resource_type** (string)   `Required` 
+
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 
 * **namespace_id** (string)  
 
 
-* **provider** (string)  
+* **group** (string)  
 
 
 * **icon** (string)  
@@ -101,7 +104,9 @@ bookFlatSection: true
 
 * **category** (string)   `Required` 
 
-* **provider** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+* **group** (string)   `Required` 
 
 * **icon** (string)   `Required` 
 
@@ -188,7 +193,9 @@ bookFlatSection: true
 
 * **category** (string)   `Required` 
 
-* **provider** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+* **group** (string)   `Required` 
 
 * **icon** (string)   `Required` 
 
@@ -308,7 +315,9 @@ bookFlatSection: true
 
 * **category** (string)   `Required` 
 
-* **provider** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+* **group** (string)   `Required` 
 
 * **icon** (string)   `Required` 
 
@@ -372,7 +381,10 @@ bookFlatSection: true
 * **category** (string)  
 
 
-* **provider** (string)  
+* **resource_type** (string)  
+
+
+* **group** (string)  
 
 
 * **is_managed** (string)  
@@ -430,13 +442,16 @@ bookFlatSection: true
 * **category** (string)   `Required` 
 
     
+* **resource_type** (string)   `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
 * **namespace_id** (string)  
 
     
-* **provider** (string)  
+* **group** (string)  
 
     
 * **icon** (string)  
@@ -459,7 +474,10 @@ bookFlatSection: true
 * **category** (string)   `Required` 
 
     
-* **provider** (string)   `Required` 
+* **resource_type** (string)   `Required` 
+
+    
+* **group** (string)   `Required` 
 
     
 * **icon** (string)   `Required` 
@@ -497,7 +515,10 @@ bookFlatSection: true
 * **category** (string)  
 
     
-* **provider** (string)  
+* **resource_type** (string)  
+
+    
+* **group** (string)  
 
     
 * **is_managed** (string)  
