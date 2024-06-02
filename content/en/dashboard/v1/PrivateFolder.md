@@ -154,6 +154,9 @@ description of dashboard
     
 * **dashboards** (Struct)  `Repeated`   
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### PrivateFolderInfo
@@ -167,6 +170,9 @@ description of dashboard
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
 
     
 * **user_id** (string)   `Required` 
@@ -187,6 +193,9 @@ description of dashboard
 
     
 * **name** (string)  
+
+    
+* **workspace_id** (string)  
 
     <br>
 
