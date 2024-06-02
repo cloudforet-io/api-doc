@@ -28,7 +28,7 @@ description of data table
 | [**transform**](./PrivateDataTable#transform) | [TransformPrivateDataTableRequest](PrivateDataTable#transformprivatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
 | [**update**](./PrivateDataTable#update) | [UpdatePrivateDataTableRequest](PrivateDataTable#updateprivatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
 | [**delete**](./PrivateDataTable#delete) | [PrivateDataTableRequest](PrivateDataTable#privatedatatablerequest) | [Empty](PrivateDataTable#empty) |
-| [**load**](./PrivateDataTable#load) | [LoadPrivateDataTableRequest](PrivateDataTable#loadprivatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
+| [**load**](./PrivateDataTable#load) | [LoadPrivateDataTableRequest](PrivateDataTable#loadprivatedatatablerequest) | [Struct](PrivateDataTable#struct) |
 | [**get**](./PrivateDataTable#get) | [PrivateDataTableRequest](PrivateDataTable#privatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
 | [**list**](./PrivateDataTable#list) | [PrivateDataTableQuery](PrivateDataTable#privatedatatablequery) | [PrivateDataTablesInfo](PrivateDataTable#privatedatatablesinfo) |
 

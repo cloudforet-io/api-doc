@@ -27,7 +27,7 @@ description of widget
 | [**create**](./PublicWidget#create) | [CreatePublicWidgetRequest](PublicWidget#createpublicwidgetrequest) | [PublicWidgetInfo](PublicWidget#publicwidgetinfo) |
 | [**update**](./PublicWidget#update) | [UpdatePublicWidgetRequest](PublicWidget#updatepublicwidgetrequest) | [PublicWidgetInfo](PublicWidget#publicwidgetinfo) |
 | [**delete**](./PublicWidget#delete) | [PublicWidgetRequest](PublicWidget#publicwidgetrequest) | [Empty](PublicWidget#empty) |
-| [**load**](./PublicWidget#load) | [LoadPublicWidgetRequest](PublicWidget#loadpublicwidgetrequest) | [PublicWidgetInfo](PublicWidget#publicwidgetinfo) |
+| [**load**](./PublicWidget#load) | [LoadPublicWidgetRequest](PublicWidget#loadpublicwidgetrequest) | [Struct](PublicWidget#struct) |
 | [**get**](./PublicWidget#get) | [PublicWidgetRequest](PublicWidget#publicwidgetrequest) | [PublicWidgetInfo](PublicWidget#publicwidgetinfo) |
 | [**list**](./PublicWidget#list) | [PublicWidgetQuery](PublicWidget#publicwidgetquery) | [PublicWidgetsInfo](PublicWidget#publicwidgetsinfo) |
 
@@ -169,7 +169,7 @@ description of widget
 * **widget_id** (string)   `Required` 
 
     
-* **query** (TimeSeriesAnalyzeQuery)  
+* **query** (TimeSeriesAnalyzeQuery)   `Required` 
 
     
 * **vars** (Struct)  

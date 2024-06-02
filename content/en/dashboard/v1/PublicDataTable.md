@@ -28,7 +28,7 @@ description of data table
 | [**transform**](./PublicDataTable#transform) | [TransformPublicDataTableRequest](PublicDataTable#transformpublicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
 | [**update**](./PublicDataTable#update) | [UpdatePublicDataTableRequest](PublicDataTable#updatepublicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
 | [**delete**](./PublicDataTable#delete) | [PublicDataTableRequest](PublicDataTable#publicdatatablerequest) | [Empty](PublicDataTable#empty) |
-| [**load**](./PublicDataTable#load) | [LoadPublicDataTableRequest](PublicDataTable#loadpublicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
+| [**load**](./PublicDataTable#load) | [LoadPublicDataTableRequest](PublicDataTable#loadpublicdatatablerequest) | [Struct](PublicDataTable#struct) |
 | [**get**](./PublicDataTable#get) | [PublicDataTableRequest](PublicDataTable#publicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
 | [**list**](./PublicDataTable#list) | [PublicDataTableQuery](PublicDataTable#publicdatatablequery) | [PublicDataTablesInfo](PublicDataTable#publicdatatablesinfo) |
 

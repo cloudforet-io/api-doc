@@ -27,7 +27,7 @@ description of widget
 | [**create**](./PrivateWidget#create) | [CreatePrivateWidgetRequest](PrivateWidget#createprivatewidgetrequest) | [PrivateWidgetInfo](PrivateWidget#privatewidgetinfo) |
 | [**update**](./PrivateWidget#update) | [UpdatePrivateWidgetRequest](PrivateWidget#updateprivatewidgetrequest) | [PrivateWidgetInfo](PrivateWidget#privatewidgetinfo) |
 | [**delete**](./PrivateWidget#delete) | [PrivateWidgetRequest](PrivateWidget#privatewidgetrequest) | [Empty](PrivateWidget#empty) |
-| [**load**](./PrivateWidget#load) | [LoadPrivateWidgetRequest](PrivateWidget#loadprivatewidgetrequest) | [PrivateWidgetInfo](PrivateWidget#privatewidgetinfo) |
+| [**load**](./PrivateWidget#load) | [LoadPrivateWidgetRequest](PrivateWidget#loadprivatewidgetrequest) | [Struct](PrivateWidget#struct) |
 | [**get**](./PrivateWidget#get) | [PrivateWidgetRequest](PrivateWidget#privatewidgetrequest) | [PrivateWidgetInfo](PrivateWidget#privatewidgetinfo) |
 | [**list**](./PrivateWidget#list) | [PrivateWidgetQuery](PrivateWidget#privatewidgetquery) | [PrivateWidgetsInfo](PrivateWidget#privatewidgetsinfo) |
 
@@ -169,7 +169,7 @@ description of widget
 * **widget_id** (string)   `Required` 
 
     
-* **query** (TimeSeriesAnalyzeQuery)  
+* **query** (TimeSeriesAnalyzeQuery)   `Required` 
 
     
 * **vars** (Struct)  
