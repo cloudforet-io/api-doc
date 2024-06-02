@@ -152,13 +152,16 @@ description of dashboard
 * **resource_group** (ResourceGroup)   `Required` 
 
     
+* **description** (string)  
+
+    
 * **layouts** (ListValue)  
 
     
 * **vars** (Struct)  
 
     
-* **settings** (Struct)  
+* **options** (Struct)  
 
     
 * **variables** (Struct)  
@@ -178,13 +181,19 @@ description of dashboard
     
 * **project_id** (string)  
 
+    
+* **folder_id** (string)  
+
     <br>
 
 ### PublicDashboardInfo
-* **public_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **name** (string)   `Required` 
+
+    
+* **description** (string)   `Required` 
 
     
 * **version** (string)   `Required` 
@@ -196,7 +205,7 @@ description of dashboard
 * **vars** (Struct)   `Required` 
 
     
-* **settings** (Struct)   `Required` 
+* **options** (Struct)   `Required` 
 
     
 * **variables** (Struct)   `Required` 
@@ -223,6 +232,9 @@ description of dashboard
 * **project_id** (string)   `Required` 
 
     
+* **folder_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
@@ -234,7 +246,7 @@ description of dashboard
 * **query** (Query)  
 
     
-* **public_dashboard_id** (string)  
+* **dashboard_id** (string)  
 
     
 * **name** (string)  
@@ -245,10 +257,13 @@ description of dashboard
     
 * **project_id** (string)  
 
+    
+* **folder_id** (string)  
+
     <br>
 
 ### PublicDashboardRequest
-* **public_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     <br>
 
@@ -266,10 +281,13 @@ description of dashboard
     <br>
 
 ### UpdatePublicDashboardRequest
-* **public_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **name** (string)  
+
+    
+* **description** (string)  
 
     
 * **layouts** (ListValue)  
@@ -278,7 +296,7 @@ description of dashboard
 * **vars** (Struct)  
 
     
-* **settings** (Struct)  
+* **options** (Struct)  
 
     
 * **variables** (Struct)  
@@ -291,5 +309,8 @@ description of dashboard
 
     
 * **tags** (Struct)  
+
+    
+* **folder_id** (string)  
 
     <br>

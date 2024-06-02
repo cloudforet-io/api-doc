@@ -8,7 +8,7 @@ bookFlatSection: true
 description of widget
 
 
->  **Package : spaceone.api.widget.v1**
+>  **Package : spaceone.api.dashboard.v1**
 
 <br>
 <br>
@@ -146,7 +146,7 @@ description of widget
 
 
 ### CreatePrivateWidgetRequest
-* **private_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **name** (string)  
@@ -169,10 +169,7 @@ description of widget
 * **widget_id** (string)   `Required` 
 
     
-* **sort** (Sort)  `Repeated`   
-
-    
-* **page** (Page)  
+* **query** (TimeSeriesAnalyzeQuery)  
 
     
 * **vars** (Struct)  
@@ -201,13 +198,10 @@ description of widget
 * **domain_id** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
-
-    
 * **user_id** (string)   `Required` 
 
     
-* **private_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -218,7 +212,7 @@ description of widget
     <br>
 
 ### PrivateWidgetQuery
-* **private_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **query** (Query)  

@@ -8,7 +8,7 @@ bookFlatSection: true
 description of data table
 
 
->  **Package : spaceone.api.data_table.v1**
+>  **Package : spaceone.api.dashboard.v1**
 
 <br>
 <br>
@@ -24,7 +24,8 @@ description of data table
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./PublicDataTable#create) | [CreatePublicDataTableRequest](PublicDataTable#createpublicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
+| [**add**](./PublicDataTable#add) | [AddPublicDataTableRequest](PublicDataTable#addpublicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
+| [**transform**](./PublicDataTable#transform) | [TransformPublicDataTableRequest](PublicDataTable#transformpublicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
 | [**update**](./PublicDataTable#update) | [UpdatePublicDataTableRequest](PublicDataTable#updatepublicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
 | [**delete**](./PublicDataTable#delete) | [PublicDataTableRequest](PublicDataTable#publicdatatablerequest) | [Empty](PublicDataTable#empty) |
 | [**load**](./PublicDataTable#load) | [LoadPublicDataTableRequest](PublicDataTable#loadpublicdatatablerequest) | [PublicDataTableInfo](PublicDataTable#publicdatatableinfo) |
@@ -36,13 +37,30 @@ description of data table
     
 <br>
 
-### create
+### add
 
 
 
 
 
-> **POST** /data_table/v1/public-data-table/create
+> **POST** /data_table/v1/public-data-table/add
+>
+
+
+
+
+
+
+    
+<br>
+
+### transform
+
+
+
+
+
+> **POST** /data_table/v1/public-data-table/transform
 >
 
 
@@ -145,25 +163,102 @@ description of data table
 
 
 
-### CreatePublicDataTableRequest
+### AddOptions
+* **ASSET** (AssetSource)   `Required` 
+
+    
+* **COST** (CostSource)   `Required` 
+
+    
+* **group_by** (string)  `Repeated`   
+
+    
+* **data_name** (string)  
+
+    
+* **date_format** (DateFormat)  
+
+    
+* **additional_labels** (Struct)  
+
+    
+* **time_diff** (TimeDiff)  
+
+    <br>
+
+### AddPublicDataTableRequest
 * **widget_id** (string)   `Required` 
 
     
+* **source_type** (SourceType)   `Required` 
+
+    
+* **options** (AddOptions)   `Required` 
+
+    
 * **name** (string)  
-
-    
-* **source_type** (SourceType)  
-
-    
-* **options** (Struct)  
 
     
 * **tags** (Struct)  
 
     <br>
 
+### AggregateOperator
+* **data_table_id** (string)   `Required` 
+
+    
+* **operator** (AggregateType)   `Required` 
+
+    
+* **group_by** (string)  
+
+    <br>
+
+### AssetSource
+* **metric_id** (string)   `Required` 
+
+    <br>
+
+### ConcatOperator
+* **data_tables** (string)  `Repeated`    `Required` 
+
+    <br>
+
+### CostSource
+* **data_source_id** (string)   `Required` 
+
+    
+* **data_key** (string)   `Required` 
+
+    <br>
+
+### EvaluateOperator
+* **data_table_id** (string)   `Required` 
+
+    
+* **expressions** (string)  `Repeated`    `Required` 
+
+    <br>
+
+### JoinOperator
+* **data_tables** (string)  `Repeated`    `Required` 
+
+    
+* **on** (JoinType)  
+
+    <br>
+
 ### LoadPublicDataTableRequest
 * **data_table_id** (string)   `Required` 
+
+    
+* **granularity** (Granularity)   `Required` 
+
+    
+* **start** (string)  
+
+    
+* **end** (string)  
 
     
 * **sort** (Sort)  `Repeated`   
@@ -180,7 +275,13 @@ description of data table
 * **name** (string)   `Required` 
 
     
+* **data_type** (DataType)   `Required` 
+
+    
 * **source_type** (SourceType)   `Required` 
+
+    
+* **operator** (Operator)   `Required` 
 
     
 * **options** (Struct)   `Required` 
@@ -190,6 +291,9 @@ description of data table
 
     
 * **labels_info** (Struct)   `Required` 
+
+    
+* **data_info** (Struct)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 
@@ -204,7 +308,7 @@ description of data table
 * **project_id** (string)   `Required` 
 
     
-* **public_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **widget_id** (string)   `Required` 
@@ -230,7 +334,13 @@ description of data table
 * **name** (string)  
 
     
+* **data_type** (DataType)  
+
+    
 * **source_type** (SourceType)  
+
+    
+* **operator** (Operator)  
 
     <br>
 
@@ -247,6 +357,51 @@ description of data table
 
     <br>
 
+### TimeDiff
+* **years** (int32)   `Required` 
+
+    
+* **months** (int32)   `Required` 
+
+    
+* **days** (int32)   `Required` 
+
+    <br>
+
+### TransformOptions
+* **JOIN** (JoinOperator)   `Required` 
+
+    
+* **CONCAT** (ConcatOperator)   `Required` 
+
+    
+* **AGGREGATE** (AggregateOperator)   `Required` 
+
+    
+* **WHERE** (WhereOperator)   `Required` 
+
+    
+* **EVALUATE** (EvaluateOperator)   `Required` 
+
+    <br>
+
+### TransformPublicDataTableRequest
+* **widget_id** (string)   `Required` 
+
+    
+* **operator** (Operator)   `Required` 
+
+    
+* **options** (TransformOptions)   `Required` 
+
+    
+* **name** (string)  
+
+    
+* **tags** (Struct)  
+
+    <br>
+
 ### UpdatePublicDataTableRequest
 * **data_table_id** (string)   `Required` 
 
@@ -258,5 +413,13 @@ description of data table
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### WhereOperator
+* **data_table_id** (string)   `Required` 
+
+    
+* **conditions** (string)  `Repeated`    `Required` 
 
     <br>

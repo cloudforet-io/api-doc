@@ -149,7 +149,7 @@ description of dashboard
 * **name** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
+* **description** (string)  
 
     
 * **layouts** (ListValue)  
@@ -158,7 +158,7 @@ description of dashboard
 * **vars** (Struct)  
 
     
-* **settings** (Struct)  
+* **options** (Struct)  
 
     
 * **variables** (Struct)  
@@ -172,13 +172,22 @@ description of dashboard
     
 * **tags** (Struct)  
 
+    
+* **user_id** (string)  
+
+    
+* **folder_id** (string)  
+
     <br>
 
 ### PrivateDashboardInfo
-* **private_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **name** (string)   `Required` 
+
+    
+* **description** (string)   `Required` 
 
     
 * **version** (string)   `Required` 
@@ -190,7 +199,7 @@ description of dashboard
 * **vars** (Struct)   `Required` 
 
     
-* **settings** (Struct)   `Required` 
+* **options** (Struct)   `Required` 
 
     
 * **variables** (Struct)   `Required` 
@@ -208,10 +217,10 @@ description of dashboard
 * **domain_id** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **folder_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -225,18 +234,18 @@ description of dashboard
 * **query** (Query)  
 
     
-* **private_dashboard_id** (string)  
+* **dashboard_id** (string)  
 
     
 * **name** (string)  
 
     
-* **workspace_id** (string)  
+* **folder_id** (string)  
 
     <br>
 
 ### PrivateDashboardRequest
-* **private_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     <br>
 
@@ -254,10 +263,13 @@ description of dashboard
     <br>
 
 ### UpdatePrivateDashboardRequest
-* **private_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **name** (string)  
+
+    
+* **description** (string)  
 
     
 * **layouts** (ListValue)  
@@ -266,7 +278,7 @@ description of dashboard
 * **vars** (Struct)  
 
     
-* **settings** (Struct)  
+* **options** (Struct)  
 
     
 * **variables** (Struct)  
@@ -279,5 +291,8 @@ description of dashboard
 
     
 * **tags** (Struct)  
+
+    
+* **folder_id** (string)  
 
     <br>

@@ -8,7 +8,7 @@ bookFlatSection: true
 description of data table
 
 
->  **Package : spaceone.api.data_table.v1**
+>  **Package : spaceone.api.dashboard.v1**
 
 <br>
 <br>
@@ -24,7 +24,8 @@ description of data table
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./PrivateDataTable#create) | [CreatePrivateDataTableRequest](PrivateDataTable#createprivatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
+| [**add**](./PrivateDataTable#add) | [AddPrivateDataTableRequest](PrivateDataTable#addprivatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
+| [**transform**](./PrivateDataTable#transform) | [TransformPrivateDataTableRequest](PrivateDataTable#transformprivatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
 | [**update**](./PrivateDataTable#update) | [UpdatePrivateDataTableRequest](PrivateDataTable#updateprivatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
 | [**delete**](./PrivateDataTable#delete) | [PrivateDataTableRequest](PrivateDataTable#privatedatatablerequest) | [Empty](PrivateDataTable#empty) |
 | [**load**](./PrivateDataTable#load) | [LoadPrivateDataTableRequest](PrivateDataTable#loadprivatedatatablerequest) | [PrivateDataTableInfo](PrivateDataTable#privatedatatableinfo) |
@@ -36,13 +37,30 @@ description of data table
     
 <br>
 
-### create
+### add
 
 
 
 
 
-> **POST** /data_table/v1/private-data-table/create
+> **POST** /data_table/v1/private-data-table/add
+>
+
+
+
+
+
+
+    
+<br>
+
+### transform
+
+
+
+
+
+> **POST** /data_table/v1/private-data-table/transform
 >
 
 
@@ -145,17 +163,17 @@ description of data table
 
 
 
-### CreatePrivateDataTableRequest
+### AddPrivateDataTableRequest
 * **widget_id** (string)   `Required` 
 
     
+* **source_type** (SourceType)   `Required` 
+
+    
+* **options** (AddOptions)   `Required` 
+
+    
 * **name** (string)  
-
-    
-* **source_type** (SourceType)  
-
-    
-* **options** (Struct)  
 
     
 * **tags** (Struct)  
@@ -164,6 +182,15 @@ description of data table
 
 ### LoadPrivateDataTableRequest
 * **data_table_id** (string)   `Required` 
+
+    
+* **granularity** (Granularity)   `Required` 
+
+    
+* **start** (string)  
+
+    
+* **end** (string)  
 
     
 * **sort** (Sort)  `Repeated`   
@@ -180,7 +207,13 @@ description of data table
 * **name** (string)   `Required` 
 
     
+* **data_type** (DataType)   `Required` 
+
+    
 * **source_type** (SourceType)   `Required` 
+
+    
+* **operator** (Operator)   `Required` 
 
     
 * **options** (Struct)   `Required` 
@@ -192,16 +225,16 @@ description of data table
 * **labels_info** (Struct)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **data_info** (Struct)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **user_id** (string)   `Required` 
 
     
-* **private_dashboard_id** (string)   `Required` 
+* **dashboard_id** (string)   `Required` 
 
     
 * **widget_id** (string)   `Required` 
@@ -227,7 +260,13 @@ description of data table
 * **name** (string)  
 
     
+* **data_type** (DataType)  
+
+    
 * **source_type** (SourceType)  
+
+    
+* **operator** (Operator)  
 
     <br>
 
@@ -241,6 +280,23 @@ description of data table
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### TransformPrivateDataTableRequest
+* **widget_id** (string)   `Required` 
+
+    
+* **operator** (Operator)   `Required` 
+
+    
+* **options** (TransformOptions)   `Required` 
+
+    
+* **name** (string)  
+
+    
+* **tags** (Struct)  
 
     <br>
 
