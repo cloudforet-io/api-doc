@@ -1,20 +1,49 @@
 {
   "files": [
     {
-      "name": "spaceone/api/dashboard/v1/private_widget.proto",
-      "description": "description of widget",
+      "name": "spaceone/api/dashboard/v1/private_folder.proto",
+      "description": "description of dashboard",
       "package": "spaceone.api.dashboard.v1",
       "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
-      "enums": [],
+      "enums": [
+        {
+          "name": "ResourceGroup",
+          "longName": "CreatePrivateFolderRequest.ResourceGroup",
+          "fullName": "spaceone.api.dashboard.v1.CreatePrivateFolderRequest.ResourceGroup",
+          "description": "",
+          "values": [
+            {
+              "name": "RESOURCE_GROUP_NONE",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "DOMAIN",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "WORKSPACE",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "PROJECT",
+              "number": "3",
+              "description": ""
+            }
+          ]
+        }
+      ],
       "extensions": [],
       "messages": [
         {
-          "name": "CreatePrivateWidgetRequest",
-          "longName": "CreatePrivateWidgetRequest",
-          "fullName": "spaceone.api.dashboard.v1.CreatePrivateWidgetRequest",
+          "name": "CreatePrivateFolderRequest",
+          "longName": "CreatePrivateFolderRequest",
+          "fullName": "spaceone.api.dashboard.v1.CreatePrivateFolderRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -22,60 +51,12 @@
           "extensions": [],
           "fields": [
             {
-              "name": "dashboard_id",
+              "name": "name",
               "description": "",
               "label": "",
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "name",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "description",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "widget_type",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "options",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -92,47 +73,11 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "LoadPrivateWidgetRequest",
-          "longName": "LoadPrivateWidgetRequest",
-          "fullName": "spaceone.api.dashboard.v1.LoadPrivateWidgetRequest",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "widget_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
             },
             {
-              "name": "query",
+              "name": "dashboards",
               "description": "+optional",
-              "label": "",
-              "type": "TimeSeriesAnalyzeQuery",
-              "longType": "spaceone.api.core.v2.TimeSeriesAnalyzeQuery",
-              "fullType": "spaceone.api.core.v2.TimeSeriesAnalyzeQuery",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "vars",
-              "description": "+optional",
-              "label": "",
+              "label": "repeated",
               "type": "Struct",
               "longType": "google.protobuf.Struct",
               "fullType": "google.protobuf.Struct",
@@ -144,9 +89,9 @@
           ]
         },
         {
-          "name": "PrivateWidgetInfo",
-          "longName": "PrivateWidgetInfo",
-          "fullName": "spaceone.api.dashboard.v1.PrivateWidgetInfo",
+          "name": "PrivateFolderInfo",
+          "longName": "PrivateFolderInfo",
+          "fullName": "spaceone.api.dashboard.v1.PrivateFolderInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -154,7 +99,7 @@
           "extensions": [],
           "fields": [
             {
-              "name": "widget_id",
+              "name": "folder_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -172,42 +117,6 @@
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "description",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "widget_type",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "options",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -250,18 +159,6 @@
               "defaultValue": ""
             },
             {
-              "name": "dashboard_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
               "name": "created_at",
               "description": "",
               "label": "",
@@ -288,9 +185,9 @@
           ]
         },
         {
-          "name": "PrivateWidgetQuery",
-          "longName": "PrivateWidgetQuery",
-          "fullName": "spaceone.api.dashboard.v1.PrivateWidgetQuery",
+          "name": "PrivateFolderQuery",
+          "longName": "PrivateFolderQuery",
+          "fullName": "spaceone.api.dashboard.v1.PrivateFolderQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -310,19 +207,7 @@
               "defaultValue": ""
             },
             {
-              "name": "dashboard_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "widget_id",
+              "name": "folder_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -348,9 +233,9 @@
           ]
         },
         {
-          "name": "PrivateWidgetRequest",
-          "longName": "PrivateWidgetRequest",
-          "fullName": "spaceone.api.dashboard.v1.PrivateWidgetRequest",
+          "name": "PrivateFolderRequest",
+          "longName": "PrivateFolderRequest",
+          "fullName": "spaceone.api.dashboard.v1.PrivateFolderRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -358,7 +243,7 @@
           "extensions": [],
           "fields": [
             {
-              "name": "widget_id",
+              "name": "folder_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -372,9 +257,33 @@
           ]
         },
         {
-          "name": "PrivateWidgetsInfo",
-          "longName": "PrivateWidgetsInfo",
-          "fullName": "spaceone.api.dashboard.v1.PrivateWidgetsInfo",
+          "name": "PrivateFolderStatQuery",
+          "longName": "PrivateFolderStatQuery",
+          "fullName": "spaceone.api.dashboard.v1.PrivateFolderStatQuery",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "query",
+              "description": "",
+              "label": "",
+              "type": "StatisticsQuery",
+              "longType": "spaceone.api.core.v2.StatisticsQuery",
+              "fullType": "spaceone.api.core.v2.StatisticsQuery",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "PrivateFoldersInfo",
+          "longName": "PrivateFoldersInfo",
+          "fullName": "spaceone.api.dashboard.v1.PrivateFoldersInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -385,9 +294,9 @@
               "name": "results",
               "description": "",
               "label": "repeated",
-              "type": "PrivateWidgetInfo",
-              "longType": "PrivateWidgetInfo",
-              "fullType": "spaceone.api.dashboard.v1.PrivateWidgetInfo",
+              "type": "PrivateFolderInfo",
+              "longType": "PrivateFolderInfo",
+              "fullType": "spaceone.api.dashboard.v1.PrivateFolderInfo",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -408,9 +317,9 @@
           ]
         },
         {
-          "name": "UpdatePrivateWidgetRequest",
-          "longName": "UpdatePrivateWidgetRequest",
-          "fullName": "spaceone.api.dashboard.v1.UpdatePrivateWidgetRequest",
+          "name": "UpdatePrivateFolderRequest",
+          "longName": "UpdatePrivateFolderRequest",
+          "fullName": "spaceone.api.dashboard.v1.UpdatePrivateFolderRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -418,7 +327,7 @@
           "extensions": [],
           "fields": [
             {
-              "name": "widget_id",
+              "name": "folder_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -436,42 +345,6 @@
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "description",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "widget_type",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "options",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -494,28 +367,28 @@
       ],
       "services": [
         {
-          "name": "PrivateWidget",
-          "longName": "PrivateWidget",
-          "fullName": "spaceone.api.dashboard.v1.PrivateWidget",
+          "name": "PrivateFolder",
+          "longName": "PrivateFolder",
+          "fullName": "spaceone.api.dashboard.v1.PrivateFolder",
           "description": "",
           "methods": [
             {
               "name": "create",
               "description": "",
-              "requestType": "CreatePrivateWidgetRequest",
-              "requestLongType": "CreatePrivateWidgetRequest",
-              "requestFullType": "spaceone.api.dashboard.v1.CreatePrivateWidgetRequest",
+              "requestType": "CreatePrivateFolderRequest",
+              "requestLongType": "CreatePrivateFolderRequest",
+              "requestFullType": "spaceone.api.dashboard.v1.CreatePrivateFolderRequest",
               "requestStreaming": false,
-              "responseType": "PrivateWidgetInfo",
-              "responseLongType": "PrivateWidgetInfo",
-              "responseFullType": "spaceone.api.dashboard.v1.PrivateWidgetInfo",
+              "responseType": "PrivateFolderInfo",
+              "responseLongType": "PrivateFolderInfo",
+              "responseFullType": "spaceone.api.dashboard.v1.PrivateFolderInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/widget/v1/private-widget/create",
+                      "pattern": "/dashboard/v1/private-folder/create",
                       "body": "*"
                     }
                   ]
@@ -525,20 +398,20 @@
             {
               "name": "update",
               "description": "",
-              "requestType": "UpdatePrivateWidgetRequest",
-              "requestLongType": "UpdatePrivateWidgetRequest",
-              "requestFullType": "spaceone.api.dashboard.v1.UpdatePrivateWidgetRequest",
+              "requestType": "UpdatePrivateFolderRequest",
+              "requestLongType": "UpdatePrivateFolderRequest",
+              "requestFullType": "spaceone.api.dashboard.v1.UpdatePrivateFolderRequest",
               "requestStreaming": false,
-              "responseType": "PrivateWidgetInfo",
-              "responseLongType": "PrivateWidgetInfo",
-              "responseFullType": "spaceone.api.dashboard.v1.PrivateWidgetInfo",
+              "responseType": "PrivateFolderInfo",
+              "responseLongType": "PrivateFolderInfo",
+              "responseFullType": "spaceone.api.dashboard.v1.PrivateFolderInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/widget/v1/private-widget/update",
+                      "pattern": "/dashboard/v1/private-folder/update",
                       "body": "*"
                     }
                   ]
@@ -548,9 +421,9 @@
             {
               "name": "delete",
               "description": "",
-              "requestType": "PrivateWidgetRequest",
-              "requestLongType": "PrivateWidgetRequest",
-              "requestFullType": "spaceone.api.dashboard.v1.PrivateWidgetRequest",
+              "requestType": "PrivateFolderRequest",
+              "requestLongType": "PrivateFolderRequest",
+              "requestFullType": "spaceone.api.dashboard.v1.PrivateFolderRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
@@ -561,30 +434,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/widget/v1/private-widget/delete",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "load",
-              "description": "",
-              "requestType": "LoadPrivateWidgetRequest",
-              "requestLongType": "LoadPrivateWidgetRequest",
-              "requestFullType": "spaceone.api.dashboard.v1.LoadPrivateWidgetRequest",
-              "requestStreaming": false,
-              "responseType": "PrivateWidgetInfo",
-              "responseLongType": "PrivateWidgetInfo",
-              "responseFullType": "spaceone.api.dashboard.v1.PrivateWidgetInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/widget/v1/private-widget/load",
+                      "pattern": "/dashboard/v1/private-folder/delete",
                       "body": "*"
                     }
                   ]
@@ -594,20 +444,20 @@
             {
               "name": "get",
               "description": "",
-              "requestType": "PrivateWidgetRequest",
-              "requestLongType": "PrivateWidgetRequest",
-              "requestFullType": "spaceone.api.dashboard.v1.PrivateWidgetRequest",
+              "requestType": "PrivateFolderRequest",
+              "requestLongType": "PrivateFolderRequest",
+              "requestFullType": "spaceone.api.dashboard.v1.PrivateFolderRequest",
               "requestStreaming": false,
-              "responseType": "PrivateWidgetInfo",
-              "responseLongType": "PrivateWidgetInfo",
-              "responseFullType": "spaceone.api.dashboard.v1.PrivateWidgetInfo",
+              "responseType": "PrivateFolderInfo",
+              "responseLongType": "PrivateFolderInfo",
+              "responseFullType": "spaceone.api.dashboard.v1.PrivateFolderInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/widget/v1/private-widget/get",
+                      "pattern": "/dashboard/v1/private-folder/get",
                       "body": "*"
                     }
                   ]
@@ -617,20 +467,43 @@
             {
               "name": "list",
               "description": "",
-              "requestType": "PrivateWidgetQuery",
-              "requestLongType": "PrivateWidgetQuery",
-              "requestFullType": "spaceone.api.dashboard.v1.PrivateWidgetQuery",
+              "requestType": "PrivateFolderQuery",
+              "requestLongType": "PrivateFolderQuery",
+              "requestFullType": "spaceone.api.dashboard.v1.PrivateFolderQuery",
               "requestStreaming": false,
-              "responseType": "PrivateWidgetsInfo",
-              "responseLongType": "PrivateWidgetsInfo",
-              "responseFullType": "spaceone.api.dashboard.v1.PrivateWidgetsInfo",
+              "responseType": "PrivateFoldersInfo",
+              "responseLongType": "PrivateFoldersInfo",
+              "responseFullType": "spaceone.api.dashboard.v1.PrivateFoldersInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/widget/v1/private-widget/list",
+                      "pattern": "/dashboard/v1/private-folder/list",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "stat",
+              "description": "",
+              "requestType": "PrivateFolderStatQuery",
+              "requestLongType": "PrivateFolderStatQuery",
+              "requestFullType": "spaceone.api.dashboard.v1.PrivateFolderStatQuery",
+              "requestStreaming": false,
+              "responseType": "Struct",
+              "responseLongType": ".google.protobuf.Struct",
+              "responseFullType": "google.protobuf.Struct",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/dashboard/v1/private-folder/stat",
                       "body": "*"
                     }
                   ]
