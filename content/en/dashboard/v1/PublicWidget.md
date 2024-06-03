@@ -42,7 +42,7 @@ description of widget
 
 
 
-> **POST** /widget/v1/public-widget/create
+> **POST** /dashboard/v1/public-widget/create
 >
 
 
@@ -59,7 +59,7 @@ description of widget
 
 
 
-> **POST** /widget/v1/public-widget/update
+> **POST** /dashboard/v1/public-widget/update
 >
 
 
@@ -76,7 +76,7 @@ description of widget
 
 
 
-> **POST** /widget/v1/public-widget/delete
+> **POST** /dashboard/v1/public-widget/delete
 >
 
 
@@ -93,7 +93,7 @@ description of widget
 
 
 
-> **POST** /widget/v1/public-widget/load
+> **POST** /dashboard/v1/public-widget/load
 >
 
 
@@ -110,7 +110,7 @@ description of widget
 
 
 
-> **POST** /widget/v1/public-widget/get
+> **POST** /dashboard/v1/public-widget/get
 >
 
 
@@ -127,7 +127,7 @@ description of widget
 
 
 
-> **POST** /widget/v1/public-widget/list
+> **POST** /dashboard/v1/public-widget/list
 >
 
 

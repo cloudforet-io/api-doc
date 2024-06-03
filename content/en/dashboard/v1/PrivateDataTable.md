@@ -43,7 +43,7 @@ description of data table
 
 
 
-> **POST** /data_table/v1/private-data-table/add
+> **POST** /dashboard/v1/private-data-table/add
 >
 
 
@@ -60,7 +60,7 @@ description of data table
 
 
 
-> **POST** /data_table/v1/private-data-table/transform
+> **POST** /dashboard/v1/private-data-table/transform
 >
 
 
@@ -77,7 +77,7 @@ description of data table
 
 
 
-> **POST** /data_table/v1/private-data-table/update
+> **POST** /dashboard/v1/private-data-table/update
 >
 
 
@@ -94,7 +94,7 @@ description of data table
 
 
 
-> **POST** /data_table/v1/private-data-table/delete
+> **POST** /dashboard/v1/private-data-table/delete
 >
 
 
@@ -111,7 +111,7 @@ description of data table
 
 
 
-> **POST** /data_table/v1/private-data-table/load
+> **POST** /dashboard/v1/private-data-table/load
 >
 
 
@@ -128,7 +128,7 @@ description of data table
 
 
 
-> **POST** /data_table/v1/private-data-table/get
+> **POST** /dashboard/v1/private-data-table/get
 >
 
 
@@ -145,7 +145,7 @@ description of data table
 
 
 
-> **POST** /data_table/v1/private-data-table/list
+> **POST** /dashboard/v1/private-data-table/list
 >
 
 
