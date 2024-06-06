@@ -184,6 +184,12 @@ description of data table
     
 * **time_diff** (TimeDiff)  
 
+    
+* **filter** (Filter)  `Repeated`   
+
+    
+* **filter_or** (Filter)  `Repeated`   
+
     <br>
 
 ### AddPublicDataTableRequest
