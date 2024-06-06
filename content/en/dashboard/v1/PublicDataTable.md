@@ -170,7 +170,7 @@ description of data table
 * **COST** (CostSource)   `Required` 
 
     
-* **group_by** (string)  `Repeated`   
+* **group_by** (ListValue)  
 
     
 * **data_name** (string)  
