@@ -152,7 +152,7 @@ description of dashboard
 * **description** (string)  
 
     
-* **layouts** (ListValue)  
+* **layouts** (Layout)  `Repeated`   
 
     
 * **vars** (Struct)  
@@ -193,7 +193,7 @@ description of dashboard
 * **version** (string)   `Required` 
 
     
-* **layouts** (ListValue)   `Required` 
+* **layouts** (Layout)  `Repeated`    `Required` 
 
     
 * **vars** (Struct)   `Required` 
@@ -278,7 +278,7 @@ description of dashboard
 * **description** (string)  
 
     
-* **layouts** (ListValue)  
+* **layouts** (Layout)  `Repeated`   
 
     
 * **vars** (Struct)  

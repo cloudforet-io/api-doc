@@ -155,7 +155,7 @@ description of dashboard
 * **description** (string)  
 
     
-* **layouts** (ListValue)  
+* **layouts** (Layout)  `Repeated`   
 
     
 * **vars** (Struct)  
@@ -186,6 +186,17 @@ description of dashboard
 
     <br>
 
+### Layout
+* **name** (string)   `Required` 
+
+    
+* **options** (Struct)   `Required` 
+
+    
+* **widgets** (Struct)  `Repeated`    `Required` 
+
+    <br>
+
 ### PublicDashboardInfo
 * **dashboard_id** (string)   `Required` 
 
@@ -199,7 +210,7 @@ description of dashboard
 * **version** (string)   `Required` 
 
     
-* **layouts** (ListValue)   `Required` 
+* **layouts** (Layout)  `Repeated`    `Required` 
 
     
 * **vars** (Struct)   `Required` 
@@ -290,7 +301,7 @@ description of dashboard
 * **description** (string)  
 
     
-* **layouts** (ListValue)  
+* **layouts** (Layout)  `Repeated`   
 
     
 * **vars** (Struct)  
