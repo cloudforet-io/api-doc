@@ -182,7 +182,7 @@ description of data table
 * **additional_labels** (Struct)  
 
     
-* **time_diff** (TimeDiff)  
+* **timediff** (TimeDiff)  
 
     
 * **filter** (Filter)  `Repeated`   
