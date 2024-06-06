@@ -170,10 +170,19 @@ description of data table
 * **COST** (CostSource)   `Required` 
 
     
+* **data_name** (string)   `Required` 
+
+    
+* **data_unit** (string)  
+
+    
 * **group_by** (ListValue)  
 
     
-* **data_name** (string)  
+* **filter** (Filter)  `Repeated`   
+
+    
+* **filter_or** (Filter)  `Repeated`   
 
     
 * **date_format** (DateFormat)  
@@ -183,12 +192,6 @@ description of data table
 
     
 * **timediff** (TimeDiff)  
-
-    
-* **filter** (Filter)  `Repeated`   
-
-    
-* **filter_or** (Filter)  `Repeated`   
 
     <br>
 
