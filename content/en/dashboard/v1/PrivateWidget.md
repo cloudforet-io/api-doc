@@ -172,7 +172,7 @@ description of widget
 * **data_table_id** (string)   `Required` 
 
     
-* **query** (AnalyzeQuery)   `Required` 
+* **query** (TimeSeriesAnalyzeQuery)   `Required` 
 
     
 * **vars** (Struct)  
