@@ -145,7 +145,7 @@ description of data table
 
 
 
-> **POST** /data_table/v1/public-data-table/list
+> **POST** /dashboard/v1/public-data-table/list
 >
 
 
