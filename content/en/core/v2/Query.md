@@ -178,6 +178,14 @@ bookFlatSection: true
     
 * **keyword** (string)   `Required` 
 
+    
+* **unwind** (AnalyzeUnwind)   `Required` 
+
+    <br>
+
+### AnalyzeUnwind
+* **path** (string)   `Required` 
+
     <br>
 
 ### ExportAnalyzeQuery
@@ -389,6 +397,9 @@ bookFlatSection: true
 
     
 * **keyword** (string)   `Required` 
+
+    
+* **unwind** (AnalyzeUnwind)   `Required` 
 
     <br>
 
