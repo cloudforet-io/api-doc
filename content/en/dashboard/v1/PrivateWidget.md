@@ -158,6 +158,9 @@ description of widget
 * **widget_type** (string)  
 
     
+* **size** (string)  
+
+    
 * **options** (Struct)  
 
     
@@ -189,10 +192,10 @@ description of widget
 * **widget_type** (string)   `Required` 
 
     
-* **options** (Struct)   `Required` 
+* **size** (string)   `Required` 
 
     
-* **data_table_id** (string)   `Required` 
+* **options** (Struct)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -205,6 +208,9 @@ description of widget
 
     
 * **dashboard_id** (string)   `Required` 
+
+    
+* **data_table_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -252,6 +258,9 @@ description of widget
 
     
 * **widget_type** (string)  
+
+    
+* **size** (string)  
 
     
 * **options** (Struct)  

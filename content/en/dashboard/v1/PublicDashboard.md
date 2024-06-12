@@ -193,7 +193,7 @@ description of dashboard
 * **options** (Struct)   `Required` 
 
     
-* **widgets** (Struct)  `Repeated`    `Required` 
+* **widgets** (ListValue)   `Required` 
 
     <br>
 
