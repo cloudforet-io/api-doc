@@ -169,9 +169,6 @@ description of widget
 * **widget_id** (string)   `Required` 
 
     
-* **data_table_id** (string)   `Required` 
-
-    
 * **query** (TimeSeriesAnalyzeQuery)   `Required` 
 
     
@@ -193,6 +190,9 @@ description of widget
 
     
 * **options** (Struct)   `Required` 
+
+    
+* **data_table_id** (string)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -255,6 +255,9 @@ description of widget
 
     
 * **options** (Struct)  
+
+    
+* **data_table_id** (string)  
 
     
 * **tags** (Struct)  
