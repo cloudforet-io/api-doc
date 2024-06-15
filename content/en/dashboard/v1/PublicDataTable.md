@@ -253,7 +253,7 @@ description of data table
 * **data_tables** (string)  `Repeated`    `Required` 
 
     
-* **on** (JoinType)  
+* **how** (JoinType)  
 
     <br>
 
