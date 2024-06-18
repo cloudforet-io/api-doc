@@ -25,8 +25,7 @@ DomainConfig API which configure environments for domain
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./PublicConfig#create) | [CreatePublicConfigRequest](PublicConfig#createpublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
-| [**update**](./PublicConfig#update) | [CreatePublicConfigRequest](PublicConfig#createpublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
-| [**set**](./PublicConfig#set) | [CreatePublicConfigRequest](PublicConfig#createpublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
+| [**update**](./PublicConfig#update) | [UpdatePublicConfigRequest](PublicConfig#updatepublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
 | [**delete**](./PublicConfig#delete) | [PublicConfigRequest](PublicConfig#publicconfigrequest) | [Empty](PublicConfig#empty) |
 | [**get**](./PublicConfig#get) | [PublicConfigRequest](PublicConfig#publicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
 | [**list**](./PublicConfig#list) | [PublicConfigSearchQuery](PublicConfig#publicconfigsearchquery) | [PublicConfigsInfo](PublicConfig#publicconfigsinfo) |
@@ -61,23 +60,6 @@ DomainConfig API which configure environments for domain
 
 
 > **POST** /config/v1/public-config/update
->
-
-
-
-
-
-
-    
-<br>
-
-### set
-
-
-
-
-
-> **POST** /config/v1/public-config/set
 >
 
 
@@ -175,6 +157,12 @@ DomainConfig API which configure environments for domain
     
 * **tags** (Struct)  
 
+    
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
+
     <br>
 
 ### PublicConfigInfo
@@ -209,6 +197,12 @@ DomainConfig API which configure environments for domain
 ### PublicConfigRequest
 * **name** (string)   `Required` 
 
+    
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
+
     <br>
 
 ### PublicConfigSearchQuery
@@ -240,5 +234,11 @@ DomainConfig API which configure environments for domain
 
     
 * **tags** (Struct)  
+
+    
+* **workspace_id** (string)  
+
+    
+* **project_id** (string)  
 
     <br>
