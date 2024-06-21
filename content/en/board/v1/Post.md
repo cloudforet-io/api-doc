@@ -26,7 +26,7 @@ A Post is a message published on a Board. It also provides notifications to Proj
 | :----- | :-------- | :-------- |
 | [**create**](./Post#create) | [CreatePostRequest](Post#createpostrequest) | [PostInfo](Post#postinfo) |
 | [**update**](./Post#update) | [UpdatePostRequest](Post#updatepostrequest) | [PostInfo](Post#postinfo) |
-| [**send_notification**](./Post#send_notification) | [PostRequest](Post#postrequest) | [Empty](Post#empty) |
+| [**send**](./Post#send) | [PostRequest](Post#postrequest) | [Empty](Post#empty) |
 | [**delete**](./Post#delete) | [PostRequest](Post#postrequest) | [Empty](Post#empty) |
 | [**get**](./Post#get) | [PostRequest](Post#postrequest) | [PostInfo](Post#postinfo) |
 | [**list**](./Post#list) | [PostSearchQuery](Post#postsearchquery) | [PostsInfo](Post#postsinfo) |
@@ -82,6 +82,9 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 * **writer** (string)  
 
 
+* **workspaces** (string)  `Repeated`   
+
+
 
 
 
@@ -124,6 +127,8 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
+
+* **workspaces** (string)  `Repeated`   `Required` 
 
 * **user_id** (string)   `Required` 
 
@@ -204,6 +209,9 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 * **writer** (string)  
 
 
+* **workspaces** (string)  `Repeated`   
+
+
 
 
 
@@ -248,6 +256,8 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 
 * **domain_id** (string)   `Required` 
 
+* **workspaces** (string)  `Repeated`   `Required` 
+
 * **user_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
@@ -285,20 +295,20 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
     
 <br>
 
-### send_notification
+### send
 
 Not Implemented
 
 
 
-> **POST** /board/v1/post/send-notification
+> **POST** /board/v1/post/send
 >
 
 
 
 
 
- {{< tabs " send_notification " >}}
+ {{< tabs " send " >}}
 
  {{< tab "Request Example" >}}
 
@@ -429,6 +439,8 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 
 * **domain_id** (string)   `Required` 
 
+* **workspaces** (string)  `Repeated`   `Required` 
+
 * **user_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
@@ -509,6 +521,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
 
 * **domain_id** (string)  
+
+
+* **workspace_id** (string)  
 
 
 
@@ -631,6 +646,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     
 * **writer** (string)  
 
+    
+* **workspaces** (string)  `Repeated`   
+
     <br>
 
 ### PostInfo
@@ -665,6 +683,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **domain_id** (string)   `Required` 
+
+    
+* **workspaces** (string)  `Repeated`    `Required` 
 
     
 * **user_id** (string)   `Required` 
@@ -706,6 +727,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
     
 * **domain_id** (string)  
 
+    
+* **workspace_id** (string)  
+
     <br>
 
 ### PostStatQuery
@@ -741,5 +765,8 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **writer** (string)  
+
+    
+* **workspaces** (string)  `Repeated`   
 
     <br>
