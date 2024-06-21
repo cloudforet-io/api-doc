@@ -107,6 +107,9 @@ bookFlatSection: true
 * **workspace_id** (string)  
 
     
+* **project_id** (string)  
+
+    
 * **cost_report_config_id** (string)  
 
     

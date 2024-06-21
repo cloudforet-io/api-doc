@@ -189,6 +189,9 @@ bookFlatSection: true
 * **cost_report_id** (string)  
 
     
+* **cost_report_config_id** (string)  
+
+    
 * **status** (Status)  
 
     

@@ -26,6 +26,7 @@ A DataSource is a plugin instance collecting external cost data. External cost d
 | :----- | :-------- | :-------- |
 | [**register**](./DataSource#register) | [RegisterDataSourceRequest](DataSource#registerdatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**update**](./DataSource#update) | [UpdateDataSourceRequest](DataSource#updatedatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
+| [**update_permissions**](./DataSource#update_permissions) | [UpdateDataSourcePermissionsRequest](DataSource#updatedatasourcepermissionsrequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**update_plugin**](./DataSource#update_plugin) | [UpdateDataSourcePluginRequest](DataSource#updatedatasourcepluginrequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**update_secret_data**](./DataSource#update_secret_data) | [UpdateSecretDataSourceRequest](DataSource#updatesecretdatasourcerequest) | [DataSourceInfo](DataSource#datasourceinfo) |
 | [**verify_plugin**](./DataSource#verify_plugin) | [DataSourceRequest](DataSource#datasourcerequest) | [Empty](DataSource#empty) |
@@ -143,6 +144,8 @@ Registers a DataSource with information of the plugin to use. Information of the
 
 * **data_source_type** (DataSourceType)   `Required` 
 
+* **permissions** (Struct)   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **secret_type** (SecretType)   `Required` 
@@ -172,6 +175,8 @@ Registers a DataSource with information of the plugin to use. Information of the
 * **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
 
@@ -304,6 +309,8 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 
 * **data_source_type** (DataSourceType)   `Required` 
 
+* **permissions** (Struct)   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **secret_type** (SecretType)   `Required` 
@@ -333,6 +340,161 @@ Updates a specific DataSource. You can make changes in DataSource settings, incl
 * **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+* **last_synchronized_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+       "data_source_id": "ds-085d1e872789",
+       "name": "AWS HyperBilling Data Source test",
+       "state": "ENABLED",
+       "data_source_type": "EXTERNAL",
+       "plugin_info": {
+           "plugin_id": "plugin-aws-hyperbilling-cost-datasource",
+           "version": "1.0.4",
+           "options": {},
+           "metadata": {
+               "data_source_rules": [
+                   {
+                       "options": {
+                           "stop_processing": true
+                       },
+                       "actions": {
+                           "match_service_account": {
+                               "source": "account",
+                               "target": "data.account_id"
+                           }
+                       },
+                       "domain_id": "domain-58010aa2e451",
+                       "conditions": [],
+                       "name": "match_service_account",
+                       "tags": {},
+                       "data_source_id": "ds-085d1e872789",
+                       "conditions_policy": "ALWAYS"
+                   }
+               ]
+           },
+           "secret_id": "secret-ca134639483",
+           "upgrade_mode": "AUTO"
+       },
+       "template": {},
+       "tags": {
+           "a": "b"
+       },
+       "cost_tag_keys": [
+           "Name",
+           "Environment",
+           "Role",
+           "Service"
+       ],
+       "cost_additional_info_keys": [
+           "Instance Type",
+           "Usage Type Details"
+       ],
+       "cost_data_keys": [
+           "AmortizedCost",
+           "BlendedCost",
+       ]
+       "domain_id": "domain-58010aa2e451",
+       "created_at": "2022-07-19T10:58:36.080Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### update_permissions
+
+
+
+
+
+> **POST** /cost-analysis/v1/data-source/update-permissions
+>
+
+
+
+
+
+ {{< tabs " update_permissions " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateDataSourcePermissionsRequest](./DataSource#updatedatasourcepermissionsrequest)
+
+* **data_source_id** (string)   `Required` 
+
+
+* **permissions** (Struct)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "data_source_id" : "ds-12331222",
+ "permissions" : {"deny": ["data.PayAsYouGo", "data.ActualCost"]}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DataSourceInfo](#DATASOURCEINFO)
+* **data_source_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **data_source_type** (DataSourceType)   `Required` 
+
+* **permissions** (Struct)   `Required` 
+
+* **provider** (string)   `Required` 
+
+* **secret_type** (SecretType)   `Required` 
+
+* **secret_filter** (SecretFilter)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **template** (Struct)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **cost_tag_keys** (string)  `Repeated`   `Required` 
+
+* **cost_additional_info_keys** (string)  `Repeated`   `Required` 
+
+* **cost_data_keys** (string)  `Repeated`   `Required` 
+
+* **data_source_account_count** (int32)   `Required` 
+
+* **connected_workspace_count** (int32)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
 
@@ -461,6 +623,8 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 
 * **data_source_type** (DataSourceType)   `Required` 
 
+* **permissions** (Struct)   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **secret_type** (SecretType)   `Required` 
@@ -490,6 +654,8 @@ Updates the plugin of a specific DataSource. This method resets the plugin data 
 * **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
 
@@ -588,6 +754,8 @@ Updates the secret data of plugin for DataSource. This method updates the secret
 
 * **data_source_type** (DataSourceType)   `Required` 
 
+* **permissions** (Struct)   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **secret_type** (SecretType)   `Required` 
@@ -617,6 +785,8 @@ Updates the secret data of plugin for DataSource. This method updates the secret
 * **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
 
@@ -775,6 +945,8 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 
 * **data_source_type** (DataSourceType)   `Required` 
 
+* **permissions** (Struct)   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **secret_type** (SecretType)   `Required` 
@@ -804,6 +976,8 @@ Enables a specific DataSource. By enabling a DataSource, you can communicate wit
 * **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
 
@@ -920,6 +1094,8 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 
 * **data_source_type** (DataSourceType)   `Required` 
 
+* **permissions** (Struct)   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **secret_type** (SecretType)   `Required` 
@@ -949,6 +1125,8 @@ Disables a specific DataSource. By disabling a DataSource, you can block communi
 * **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
 
@@ -1131,6 +1309,8 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 
 * **data_source_type** (DataSourceType)   `Required` 
 
+* **permissions** (Struct)   `Required` 
+
 * **provider** (string)   `Required` 
 
 * **secret_type** (SecretType)   `Required` 
@@ -1160,6 +1340,8 @@ Gets a specific DataSource. Prints detailed information about the DataSource, in
 * **workspace_id** (string)   `Required` 
 
 * **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
 
 * **last_synchronized_at** (string)   `Required` 
 
@@ -1402,6 +1584,9 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 * **data_source_type** (DataSourceType)   `Required` 
 
     
+* **permissions** (Struct)   `Required` 
+
+    
 * **provider** (string)   `Required` 
 
     
@@ -1445,6 +1630,9 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     
 * **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
 
     
 * **last_synchronized_at** (string)   `Required` 
@@ -1585,6 +1773,14 @@ Gets a list of all DataSources. You can use a query to get a filtered list of Da
 
     
 * **no_preload_cache** (bool)  
+
+    <br>
+
+### UpdateDataSourcePermissionsRequest
+* **data_source_id** (string)   `Required` 
+
+    
+* **permissions** (Struct)   `Required` 
 
     <br>
 
