@@ -216,7 +216,7 @@ description of data table
 * **data_table_id** (string)   `Required` 
 
     
-* **operator** (AggregateType)   `Required` 
+* **function** (Struct)   `Required` 
 
     
 * **group_by** (string)  
@@ -366,6 +366,14 @@ description of data table
 
     <br>
 
+### QueryOperator
+* **data_table_id** (string)   `Required` 
+
+    
+* **conditions** (string)  `Repeated`    `Required` 
+
+    <br>
+
 ### TimeDiff
 * **years** (int32)   `Required` 
 
@@ -387,10 +395,10 @@ description of data table
 * **AGGREGATE** (AggregateOperator)   `Required` 
 
     
-* **WHERE** (WhereOperator)   `Required` 
+* **QUERY** (QueryOperator)   `Required` 
 
     
-* **EVALUATE** (EvaluateOperator)   `Required` 
+* **EVAL** (EvaluateOperator)   `Required` 
 
     <br>
 
@@ -422,13 +430,5 @@ description of data table
 
     
 * **tags** (Struct)  
-
-    <br>
-
-### WhereOperator
-* **data_table_id** (string)   `Required` 
-
-    
-* **conditions** (string)  `Repeated`    `Required` 
 
     <br>
