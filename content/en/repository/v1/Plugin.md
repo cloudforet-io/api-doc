@@ -1125,14 +1125,6 @@ Gets a list of all Plugins registered in a specific Repository. The parameter `r
 
     <br>
 
-### PluginStatQuery
-* **query** (StatisticsQuery)   `Required` 
-
-    
-* **repository_id** (string)   `Required` 
-
-    <br>
-
 ### PluginsInfo
 * **results** (PluginInfo)  `Repeated`    `Required` 
 
