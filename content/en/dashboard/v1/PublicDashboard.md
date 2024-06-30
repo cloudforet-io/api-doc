@@ -26,7 +26,8 @@ description of dashboard
 | :----- | :-------- | :-------- |
 | [**create**](./PublicDashboard#create) | [CreatePublicDashboardRequest](PublicDashboard#createpublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**update**](./PublicDashboard#update) | [UpdatePublicDashboardRequest](PublicDashboard#updatepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
-| [**share**](./PublicDashboard#share) | [SharePublicDashboardRequest](PublicDashboard#sharepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
+| [**share**](./PublicDashboard#share) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
+| [**unshare**](./PublicDashboard#unshare) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**delete**](./PublicDashboard#delete) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [Empty](PublicDashboard#empty) |
 | [**get**](./PublicDashboard#get) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**list**](./PublicDashboard#list) | [PublicDashboardQuery](PublicDashboard#publicdashboardquery) | [PublicDashboardsInfo](PublicDashboard#publicdashboardsinfo) |
@@ -78,6 +79,23 @@ description of dashboard
 
 
 > **POST** /dashboard/v1/public-dashboard/share
+>
+
+
+
+
+
+
+    
+<br>
+
+### unshare
+
+
+
+
+
+> **POST** /dashboard/v1/public-dashboard/unshare
 >
 
 
@@ -249,7 +267,7 @@ description of dashboard
 * **tags** (Struct)   `Required` 
 
     
-* **shared** (SharedDashboard)   `Required` 
+* **shared** (bool)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 
@@ -309,25 +327,6 @@ description of dashboard
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### SharePublicDashboardRequest
-* **dashboard_id** (string)   `Required` 
-
-    
-* **workspace** (bool)   `Required` 
-
-    
-* **project** (bool)   `Required` 
-
-    <br>
-
-### SharedDashboard
-* **workspace** (bool)   `Required` 
-
-    
-* **project** (bool)   `Required` 
 
     <br>
 
