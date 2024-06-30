@@ -237,6 +237,9 @@ description of data table
 * **data_source_id** (string)   `Required` 
 
     
+* **plugin_id** (string)   `Required` 
+
+    
 * **data_key** (string)   `Required` 
 
     <br>
