@@ -26,6 +26,7 @@ description of dashboard
 | :----- | :-------- | :-------- |
 | [**create**](./PublicFolder#create) | [CreatePublicFolderRequest](PublicFolder#createpublicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
 | [**update**](./PublicFolder#update) | [UpdatePublicFolderRequest](PublicFolder#updatepublicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
+| [**share**](./PublicFolder#share) | [SharePublicFolderRequest](PublicFolder#sharepublicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
 | [**delete**](./PublicFolder#delete) | [PublicFolderRequest](PublicFolder#publicfolderrequest) | [Empty](PublicFolder#empty) |
 | [**get**](./PublicFolder#get) | [PublicFolderRequest](PublicFolder#publicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
 | [**list**](./PublicFolder#list) | [PublicFolderQuery](PublicFolder#publicfolderquery) | [PublicFoldersInfo](PublicFolder#publicfoldersinfo) |
@@ -60,6 +61,23 @@ description of dashboard
 
 
 > **POST** /dashboard/v1/public-folder/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### share
+
+
+
+
+
+> **POST** /dashboard/v1/public-folder/share
 >
 
 
@@ -175,6 +193,9 @@ description of dashboard
 * **tags** (Struct)   `Required` 
 
     
+* **shared** (SharedFolder)   `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
@@ -226,6 +247,25 @@ description of dashboard
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### SharePublicFolderRequest
+* **folder_id** (string)   `Required` 
+
+    
+* **workspace** (bool)   `Required` 
+
+    
+* **project** (bool)   `Required` 
+
+    <br>
+
+### SharedFolder
+* **workspace** (bool)   `Required` 
+
+    
+* **project** (bool)   `Required` 
 
     <br>
 

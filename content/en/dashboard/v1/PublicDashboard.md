@@ -26,6 +26,7 @@ description of dashboard
 | :----- | :-------- | :-------- |
 | [**create**](./PublicDashboard#create) | [CreatePublicDashboardRequest](PublicDashboard#createpublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**update**](./PublicDashboard#update) | [UpdatePublicDashboardRequest](PublicDashboard#updatepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
+| [**share**](./PublicDashboard#share) | [SharePublicDashboardRequest](PublicDashboard#sharepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**delete**](./PublicDashboard#delete) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [Empty](PublicDashboard#empty) |
 | [**get**](./PublicDashboard#get) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**list**](./PublicDashboard#list) | [PublicDashboardQuery](PublicDashboard#publicdashboardquery) | [PublicDashboardsInfo](PublicDashboard#publicdashboardsinfo) |
@@ -60,6 +61,23 @@ description of dashboard
 
 
 > **POST** /dashboard/v1/public-dashboard/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### share
+
+
+
+
+
+> **POST** /dashboard/v1/public-dashboard/share
 >
 
 
@@ -231,6 +249,9 @@ description of dashboard
 * **tags** (Struct)   `Required` 
 
     
+* **shared** (SharedDashboard)   `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
@@ -288,6 +309,25 @@ description of dashboard
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### SharePublicDashboardRequest
+* **dashboard_id** (string)   `Required` 
+
+    
+* **workspace** (bool)   `Required` 
+
+    
+* **project** (bool)   `Required` 
+
+    <br>
+
+### SharedDashboard
+* **workspace** (bool)   `Required` 
+
+    
+* **project** (bool)   `Required` 
 
     <br>
 
