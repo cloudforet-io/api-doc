@@ -234,6 +234,9 @@ bookFlatSection: true
 * **role_binding_info** (RoleBindingInfo)   `Required` 
 
     
+* **email_verified** (bool)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
