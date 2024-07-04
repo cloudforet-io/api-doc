@@ -152,6 +152,9 @@ description of widget
 * **name** (string)  
 
     
+* **state** (State)  
+
+    
 * **description** (string)  
 
     
@@ -184,6 +187,9 @@ description of widget
 
     
 * **name** (string)   `Required` 
+
+    
+* **state** (State)   `Required` 
 
     
 * **description** (string)   `Required` 
@@ -252,6 +258,9 @@ description of widget
 
     
 * **name** (string)  
+
+    
+* **state** (State)  
 
     
 * **description** (string)  
