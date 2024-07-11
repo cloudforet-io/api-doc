@@ -28,6 +28,8 @@ Secret is used to access data in other microservices.
 | [**create**](./Secret#create) | [CreateSecretRequest](Secret#createsecretrequest) | [SecretInfo](Secret#secretinfo) |
 | [**update**](./Secret#update) | [UpdateSecretRequest](Secret#updatesecretrequest) | [SecretInfo](Secret#secretinfo) |
 | [**delete**](./Secret#delete) | [SecretRequest](Secret#secretrequest) | [Empty](Secret#empty) |
+| [**enable**](./Secret#enable) | [SecretRequest](Secret#secretrequest) | [SecretInfo](Secret#secretinfo) |
+| [**disable**](./Secret#disable) | [SecretRequest](Secret#secretrequest) | [SecretInfo](Secret#secretinfo) |
 | [**update_data**](./Secret#update_data) | [UpdateSecretDataRequest](Secret#updatesecretdatarequest) | [Empty](Secret#empty) |
 | [**get_data**](./Secret#get_data) | [GetSecretDataRequest](Secret#getsecretdatarequest) | [SecretDataInfo](Secret#secretdatainfo) |
 | [**get**](./Secret#get) | [SecretRequest](Secret#secretrequest) | [SecretInfo](Secret#secretinfo) |
@@ -112,6 +114,8 @@ It can be used to link to a trusted secret if you request it with 'trusted_secre
 
 * **name** (string)   `Required` 
 
+* **state** (State)   `Required` 
+
 * **schema_id** (string)   `Required` 
 
 * **provider** (string)   `Required` 
@@ -138,6 +142,7 @@ It can be used to link to a trusted secret if you request it with 'trusted_secre
 {
    "secret_id": "secret-123456789012",
    "name": "aws-dev",
+   "state": "ENABLED",
    "tags": {},
    "schema_id": "aws_access_key",
    "provider": "aws",
@@ -213,6 +218,8 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 
 * **name** (string)   `Required` 
 
+* **state** (State)   `Required` 
+
 * **schema_id** (string)   `Required` 
 
 * **provider** (string)   `Required` 
@@ -239,6 +246,7 @@ You can only change the 'name' and 'tags', and to change the data you must use t
 {
    "secret_id": "secret-123456789012",
    "name": "aws-dev",
+   "state": "ENABLED",
    "tags": {},
    "schema_id": "aws_access_key",
    "provider": "aws",
@@ -293,6 +301,188 @@ Deletes a specific secret.
 {{< /highlight >}}
 {{< /tab >}}
 
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### enable
+
+Enables a specific secret.
+
+
+
+> **POST** /secret/v1/secret/enable
+>
+
+
+
+
+
+ {{< tabs " enable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[SecretRequest](./Secret#secretrequest)
+
+* **secret_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[SecretInfo](#SECRETINFO)
+* **secret_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **schema_id** (string)   `Required` 
+
+* **provider** (string)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
+
+* **service_account_id** (string)   `Required` 
+
+* **trusted_secret_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev",
+   "state": "ENABLED",
+   "tags": {},
+   "schema_id": "aws_access_key",
+   "provider": "aws",
+   "service_account_id": "sa-123456789012",
+   "resource_group": "PROJECT",
+   "project_id": "project-123456789012",
+   "workspace_id": "workspace-123456789012",
+   "domain_id": "domain-123456789012",
+   "created_at": "2022-01-01T06:10:14.851Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### disable
+
+Disables a specific secret.
+
+
+
+> **POST** /secret/v1/secret/disable
+>
+
+
+
+
+
+ {{< tabs " disable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[SecretRequest](./Secret#secretrequest)
+
+* **secret_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[SecretInfo](#SECRETINFO)
+* **secret_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **schema_id** (string)   `Required` 
+
+* **provider** (string)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **resource_group** (ResourceGroup)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_id** (string)   `Required` 
+
+* **service_account_id** (string)   `Required` 
+
+* **trusted_secret_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "secret_id": "secret-123456789012",
+   "name": "aws-dev",
+   "state": "ENABLED",
+   "tags": {},
+   "schema_id": "aws_access_key",
+   "provider": "aws",
+   "service_account_id": "sa-123456789012",
+   "resource_group": "PROJECT",
+   "project_id": "project-123456789012",
+   "workspace_id": "workspace-123456789012",
+   "domain_id": "domain-123456789012",
+   "created_at": "2022-01-01T06:10:14.851Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -437,6 +627,8 @@ Get a specific secret's information.
 
 * **name** (string)   `Required` 
 
+* **state** (State)   `Required` 
+
 * **schema_id** (string)   `Required` 
 
 * **provider** (string)   `Required` 
@@ -463,6 +655,7 @@ Get a specific secret's information.
 {
    "secret_id": "secret-123456789012",
    "name": "aws-dev",
+   "state": "ENABLED",
    "tags": {},
    "schema_id": "aws_access_key",
    "provider": "aws",
@@ -514,6 +707,9 @@ You can use a query to get a filtered list of secrets.
 * **name** (string)  
 
 
+* **state** (State)  
+
+
 * **schema_id** (string)  
 
 
@@ -556,21 +752,23 @@ You can use a query to get a filtered list of secrets.
 {
    "results": [
        {
-          "secret_id": "secret-123456789012",
-          "name": "aws-dev",
-          "tags": {},
-          "schema": "aws_access_key",
-          "provider": "aws",
-          "service_account_id": "sa-123456789012",
-          "resource_group": "PROJECT",
-          "workspace_id": "workspace-123456789012",
-          "project_id": "project-123456789012",
-          "domain_id": "domain-123456789012",
-          "created_at": "2022-01-01T06:10:14.851Z"
+           "secret_id": "secret-123456789012",
+           "name": "aws-dev",
+           "state": "ENABLED",
+           "tags": {},
+           "schema": "aws_access_key",
+           "provider": "aws",
+           "service_account_id": "sa-123456789012",
+           "resource_group": "PROJECT",
+           "workspace_id": "workspace-123456789012",
+           "project_id": "project-123456789012",
+           "domain_id": "domain-123456789012",
+           "created_at": "2022-01-01T06:10:14.851Z"
        },
        {
            "secret_id": "secret-987654321098",
            "name": "plugin-credentials",
+           "state": "ENABLED",
            "tags": {},
            "resource_group": "WORKSPACE",
            "workspace_id": "workspace-123456789012",
@@ -669,6 +867,9 @@ You can use a query to get a filtered list of secrets.
 * **name** (string)   `Required` 
 
     
+* **state** (State)   `Required` 
+
+    
 * **schema_id** (string)   `Required` 
 
     
@@ -708,6 +909,9 @@ You can use a query to get a filtered list of secrets.
 
     
 * **name** (string)  
+
+    
+* **state** (State)  
 
     
 * **schema_id** (string)  

@@ -31,8 +31,6 @@ bookFlatSection: true
 | [**delete**](./Project#delete) | [ProjectRequest](Project#projectrequest) | [Empty](Project#empty) |
 | [**add_users**](./Project#add_users) | [UsersProjectRequest](Project#usersprojectrequest) | [ProjectInfo](Project#projectinfo) |
 | [**remove_users**](./Project#remove_users) | [UsersProjectRequest](Project#usersprojectrequest) | [ProjectInfo](Project#projectinfo) |
-| [**add_user_groups**](./Project#add_user_groups) | [UserGroupsProjectRequest](Project#usergroupsprojectrequest) | [ProjectInfo](Project#projectinfo) |
-| [**remove_user_groups**](./Project#remove_user_groups) | [UserGroupsProjectRequest](Project#usergroupsprojectrequest) | [ProjectInfo](Project#projectinfo) |
 | [**get**](./Project#get) | [ProjectRequest](Project#projectrequest) | [ProjectInfo](Project#projectinfo) |
 | [**list**](./Project#list) | [ProjectSearchQuery](Project#projectsearchquery) | [ProjectsInfo](Project#projectsinfo) |
 | [**stat**](./Project#stat) | [ProjectStatQuery](Project#projectstatquery) | [Struct](Project#struct) |
@@ -161,40 +159,6 @@ bookFlatSection: true
     
 <br>
 
-### add_user_groups
-
-
-
-
-
-> **POST** /identity/v2/project/add-user-groups
->
-
-
-
-
-
-
-    
-<br>
-
-### remove_user_groups
-
-
-
-
-
-> **POST** /identity/v2/project/remove-user-groups
->
-
-
-
-
-
-
-    
-<br>
-
 ### get
 
 
@@ -291,9 +255,6 @@ bookFlatSection: true
 * **users** (string)  `Repeated`    `Required` 
 
     
-* **user_groups** (string)  `Repeated`    `Required` 
-
-    
 * **created_by** (string)   `Required` 
 
     
@@ -352,9 +313,6 @@ bookFlatSection: true
 * **project_group_id** (string)  
 
     
-* **user_group_id** (string)  
-
-    
 * **user_id** (string)  
 
     <br>
@@ -388,14 +346,6 @@ bookFlatSection: true
 
     
 * **project_type** (ProjectType)   `Required` 
-
-    <br>
-
-### UserGroupsProjectRequest
-* **project_id** (string)   `Required` 
-
-    
-* **user_groups** (string)  `Repeated`    `Required` 
 
     <br>
 

@@ -337,6 +337,9 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **is_managed** (bool)   `Required` 
 
     
+* **is_dormant** (bool)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -347,6 +350,9 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **last_synced_at** (string)   `Required` 
+
+    
+* **dormant_updated_at** (string)   `Required` 
 
     <br>
 

@@ -223,6 +223,14 @@ bookFlatSection: true
 
     <br>
 
+### WorkspaceCostInfo
+* **day** (float)   `Required` 
+
+    
+* **month** (float)   `Required` 
+
+    <br>
+
 ### WorkspaceDeleteRequest
 * **workspace_id** (string)   `Required` 
 
@@ -253,6 +261,18 @@ bookFlatSection: true
 * **is_managed** (bool)   `Required` 
 
     
+* **is_dormant** (bool)   `Required` 
+
+    
+* **dormant_ttl** (int32)   `Required` 
+
+    
+* **service_account_count** (int32)   `Required` 
+
+    
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -263,6 +283,9 @@ bookFlatSection: true
 
     
 * **last_synced_at** (string)   `Required` 
+
+    
+* **dormant_updated_at** (string)   `Required` 
 
     <br>
 
@@ -281,7 +304,16 @@ bookFlatSection: true
 * **name** (string)  
 
     
+* **state** (State)  
+
+    
 * **created_by** (string)  
+
+    
+* **is_managed** (bool)  
+
+    
+* **is_dormant** (bool)  
 
     <br>
 
