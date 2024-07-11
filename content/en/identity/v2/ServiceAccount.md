@@ -281,6 +281,9 @@ bookFlatSection: true
 * **last_synced_at** (string)   `Required` 
 
     
+* **deleted_at** (string)   `Required` 
+
+    
 * **inactivated_at** (string)   `Required` 
 
     <br>
