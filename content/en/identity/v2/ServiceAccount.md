@@ -207,25 +207,6 @@ bookFlatSection: true
 
     <br>
 
-### ServiceAccountAssetInfo
-* **server_count** (float)   `Required` 
-
-    
-* **database_count** (float)   `Required` 
-
-    
-* **storage_size** (float)   `Required` 
-
-    <br>
-
-### ServiceAccountCostInfo
-* **day** (float)   `Required` 
-
-    
-* **month** (float)   `Required` 
-
-    <br>
-
 ### ServiceAccountInfo
 * **service_account_id** (string)   `Required` 
 
@@ -249,12 +230,6 @@ bookFlatSection: true
 
     
 * **is_managed** (bool)   `Required` 
-
-    
-* **asset_info** (ServiceAccountAssetInfo)   `Required` 
-
-    
-* **cost_info** (ServiceAccountCostInfo)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
