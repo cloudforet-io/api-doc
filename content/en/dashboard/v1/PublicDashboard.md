@@ -270,6 +270,9 @@ description of dashboard
 * **shared** (bool)   `Required` 
 
     
+* **scope** (DashboardScope)   `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
@@ -302,6 +305,12 @@ description of dashboard
 * **name** (string)  
 
     
+* **shared** (bool)  
+
+    
+* **scope** (DashboardScope)  
+
+    
 * **workspace_id** (string)  
 
     
@@ -316,7 +325,7 @@ description of dashboard
 * **dashboard_id** (string)   `Required` 
 
     
-* **scope** (Scope)  
+* **scope** (DashboardScope)  
 
     <br>
 
