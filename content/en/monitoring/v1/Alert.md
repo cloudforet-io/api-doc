@@ -104,6 +104,8 @@ Creates a new Alert. Alerts generated with `create` method are made in a manual 
 
 * **assignee** (string)   `Required` 
 
+* **responder** (string)   `Required` 
+
 * **urgency** (AlertUrgency)   `Required` 
 
 * **severity** (string)   `Required` 
@@ -249,6 +251,8 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 
 * **assignee** (string)   `Required` 
 
+* **responder** (string)   `Required` 
+
 * **urgency** (AlertUrgency)   `Required` 
 
 * **severity** (string)   `Required` 
@@ -353,6 +357,8 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 * **description** (string)   `Required` 
 
 * **assignee** (string)   `Required` 
+
+* **responder** (string)   `Required` 
 
 * **urgency** (AlertUrgency)   `Required` 
 
@@ -482,6 +488,8 @@ Updates the state of an Alert via callback URL by creating a temporary `access_k
 * **description** (string)   `Required` 
 
 * **assignee** (string)   `Required` 
+
+* **responder** (string)   `Required` 
 
 * **urgency** (AlertUrgency)   `Required` 
 
@@ -648,6 +656,8 @@ Gets a specific Alert. Prints detailed information about the Alert.
 
 * **assignee** (string)   `Required` 
 
+* **responder** (string)   `Required` 
+
 * **urgency** (AlertUrgency)   `Required` 
 
 * **severity** (string)   `Required` 
@@ -758,6 +768,9 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 
 
 * **assignee** (string)  
+
+
+* **responder** (string)  
 
 
 * **urgency** (AlertUrgency)  
@@ -926,6 +939,9 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **assignee** (string)   `Required` 
 
     
+* **responder** (string)   `Required` 
+
+    
 * **urgency** (AlertUrgency)   `Required` 
 
     
@@ -1007,6 +1023,9 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 
     
 * **assignee** (string)  
+
+    
+* **responder** (string)  
 
     
 * **urgency** (AlertUrgency)  
