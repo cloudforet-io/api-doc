@@ -315,6 +315,9 @@ description of dashboard
 ### PublicDashboardRequest
 * **dashboard_id** (string)   `Required` 
 
+    
+* **scope** (Scope)  
+
     <br>
 
 ### PublicDashboardStatQuery
