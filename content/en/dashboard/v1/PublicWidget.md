@@ -167,6 +167,9 @@ description of widget
 * **options** (Struct)  
 
     
+* **data_table_id** (int32)  
+
+    
 * **data_tables** (Struct)  `Repeated`   
 
     
