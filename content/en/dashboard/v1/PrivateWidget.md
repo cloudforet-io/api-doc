@@ -167,6 +167,9 @@ description of widget
 * **options** (Struct)  
 
     
+* **data_tables** (Struct)  `Repeated`   
+
+    
 * **tags** (Struct)  
 
     <br>
