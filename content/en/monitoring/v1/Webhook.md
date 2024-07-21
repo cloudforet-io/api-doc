@@ -109,6 +109,8 @@ Creates a new Webhook. A Webhook collects data from an external monitoring syste
 
 * **tags** (Struct)   `Required` 
 
+* **requests** (WebhookRequests)   `Required` 
+
 * **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
@@ -209,6 +211,8 @@ Updates a specific Webhook. You can make changes in Webhook settings, including 
 * **plugin_info** (WebhookPluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **requests** (WebhookRequests)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -315,6 +319,8 @@ Updates the plugin of a specific DataSource. You can change the `version` of the
 * **plugin_info** (WebhookPluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **requests** (WebhookRequests)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -453,6 +459,8 @@ Enables a specific Webhook. By enabling a Webhook, you can communicate with an e
 
 * **tags** (Struct)   `Required` 
 
+* **requests** (WebhookRequests)   `Required` 
+
 * **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
@@ -546,6 +554,8 @@ Disables a specific Webhook. By disabling a Webhook, you cannot communicate with
 * **plugin_info** (WebhookPluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **requests** (WebhookRequests)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -683,6 +693,8 @@ Gets a specific Webhook. Prints detailed information about the Webhook, includin
 * **plugin_info** (WebhookPluginInfo)   `Required` 
 
 * **tags** (Struct)   `Required` 
+
+* **requests** (WebhookRequests)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
@@ -927,6 +939,9 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 * **tags** (Struct)   `Required` 
 
     
+* **requests** (WebhookRequests)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -982,6 +997,14 @@ Gets a list of all Webhooks. You can use a query to get a filtered list of Webho
 
 ### WebhookRequest
 * **webhook_id** (string)   `Required` 
+
+    <br>
+
+### WebhookRequests
+* **total** (int64)   `Required` 
+
+    
+* **error** (int64)   `Required` 
 
     <br>
 

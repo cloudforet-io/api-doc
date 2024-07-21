@@ -102,7 +102,7 @@ Gets a specific Event matching the input parameters, `event_id` and `domain_id`.
 
 * **image_url** (string)   `Required` 
 
-* **resource** (EventResource)   `Required` 
+* **resource** (string)  `Repeated`   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -213,7 +213,7 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **severity** (string)  
 
 
-* **resource_id** (string)  
+* **resource** (string)  
 
 
 * **provider** (string)  
@@ -409,7 +409,7 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **image_url** (string)   `Required` 
 
     
-* **resource** (EventResource)   `Required` 
+* **resource** (string)  `Repeated`    `Required` 
 
     
 * **provider** (string)   `Required` 
@@ -462,7 +462,7 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **severity** (string)  
 
     
-* **resource_id** (string)  
+* **resource** (string)  
 
     
 * **provider** (string)  
@@ -486,17 +486,6 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 
 ### EventRequest
 * **event_id** (string)   `Required` 
-
-    <br>
-
-### EventResource
-* **resource_id** (string)   `Required` 
-
-    
-* **resource_type** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
 
     <br>
 

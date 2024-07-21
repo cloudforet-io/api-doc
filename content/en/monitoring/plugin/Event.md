@@ -88,6 +88,9 @@ Parses a specific Event resource and transforms the resource from external data 
     
 * **account** (string)   `Required` 
 
+    
+* **resources** (string)  `Repeated`    `Required` 
+
     <br>
 
 ### EventsInfo

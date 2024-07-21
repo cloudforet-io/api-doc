@@ -114,7 +114,7 @@ Creates a new Alert. Alerts generated with `create` method are made in a manual 
 
 * **image_url** (string)   `Required` 
 
-* **resource** (AlertResource)   `Required` 
+* **resources** (AlertResource)  `Repeated`   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -261,7 +261,7 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 
 * **image_url** (string)   `Required` 
 
-* **resource** (AlertResource)   `Required` 
+* **resources** (AlertResource)  `Repeated`   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -368,7 +368,7 @@ Updates a specific Alert. You can make changes in Alert settings, including the 
 
 * **image_url** (string)   `Required` 
 
-* **resource** (AlertResource)   `Required` 
+* **resources** (AlertResource)  `Repeated`   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -458,7 +458,7 @@ Updates the state of an Alert via callback URL by creating a temporary `access_k
 * **access_key** (string)   `Required` 
 
 
-* **state** (string)   `Required` 
+* **responder** (string)  
 
 
 
@@ -499,7 +499,7 @@ Updates the state of an Alert via callback URL by creating a temporary `access_k
 
 * **image_url** (string)   `Required` 
 
-* **resource** (AlertResource)   `Required` 
+* **resources** (AlertResource)  `Repeated`   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -666,7 +666,7 @@ Gets a specific Alert. Prints detailed information about the Alert.
 
 * **image_url** (string)   `Required` 
 
-* **resource** (AlertResource)   `Required` 
+* **resources** (AlertResource)  `Repeated`   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -779,7 +779,7 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **severity** (string)  
 
 
-* **resource_id** (string)  
+* **resource** (string)  
 
 
 * **provider** (string)  
@@ -835,16 +835,16 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
      "description": "SSH Access to stargate-dev from adm",
      "urgency": "LOW",
      "severity": "INFO",
-     "resource": {
-     "resource_id": "server-123456789012",
-     "resource_type": "inventory.Server",
-     "name": "stargate-dev"
-     },
+     "resources": [{
+           "resource_id": "server-123456789012",
+           "resource_type": "inventory.Server",
+           "name": "stargate-dev"
+     }],
      "escalation_step": 1,
      "escalation_ttl": 1,
      "additional_info": {
-     "host": "[]",
-     "user": "user1"
+         "user": "user1"
+         "host": "['2.2.2.2']"
      },
      "triggered_by": "webhook-123456789012",
      "webhook_id": "webhook-123456789012",
@@ -863,16 +863,16 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
      "description": "SSH Access to stargate-dev from user3@email.com",
      "urgency": "LOW",
      "severity": "INFO",
-     "resource": {
-     "resource_id": "server-123456789012",
-     "resource_type": "inventory.Server",
-     "name": "stargate-dev"
-     },
+     "resource": [{
+           "resource_id": "server-123456789012",
+           "resource_type": "inventory.Server",
+           "name": "stargate-dev"
+     }],
      "escalation_step": 1,
      "escalation_ttl": 1,
      "additional_info": {
-     "user": "user3@email.com",
-     "host": "['111.111.111.11']"
+         "user": "user3@email.com",
+         "host": "['1.1.1.1']"
      },
      "triggered_by": "webhook-123456789012",
      "webhook_id": "webhook-123456789012",
@@ -954,7 +954,7 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **image_url** (string)   `Required` 
 
     
-* **resource** (AlertResource)   `Required` 
+* **resources** (AlertResource)  `Repeated`    `Required` 
 
     
 * **provider** (string)   `Required` 
@@ -1034,7 +1034,7 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **severity** (string)  
 
     
-* **resource_id** (string)  
+* **resource** (string)  
 
     
 * **provider** (string)  
@@ -1143,6 +1143,6 @@ Gets a list of all Alerts. You can use a query to get a filtered list of Alerts.
 * **access_key** (string)   `Required` 
 
     
-* **state** (string)   `Required` 
+* **responder** (string)  
 
     <br>
