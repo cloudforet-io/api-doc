@@ -102,7 +102,7 @@ Gets a specific Event matching the input parameters, `event_id` and `domain_id`.
 
 * **image_url** (string)   `Required` 
 
-* **resource** (string)  `Repeated`   `Required` 
+* **resources** (string)  `Repeated`   `Required` 
 
 * **provider** (string)   `Required` 
 
@@ -409,7 +409,7 @@ Gets a list of all Events. You must specify the `domain_id`. You can use a query
 * **image_url** (string)   `Required` 
 
     
-* **resource** (string)  `Repeated`    `Required` 
+* **resources** (string)  `Repeated`    `Required` 
 
     
 * **provider** (string)   `Required` 
