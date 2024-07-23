@@ -383,9 +383,6 @@ description of data table
     
 * **months** (int32)   `Required` 
 
-    
-* **days** (int32)   `Required` 
-
     <br>
 
 ### TransformOptions
