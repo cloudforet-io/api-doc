@@ -236,17 +236,6 @@ bookFlatSection: true
 
     <br>
 
-### UserInfo
-* **user_id** (string)   `Required` 
-
-    
-* **role_id** (string)   `Required` 
-
-    
-* **role_type** (string)   `Required` 
-
-    <br>
-
 ### UsersWorkspaceGroupRequest
 * **workspace_group_id** (string)   `Required` 
 
@@ -265,7 +254,7 @@ bookFlatSection: true
 * **workspaces** (string)  `Repeated`    `Required` 
 
     
-* **users** (UserInfo)  `Repeated`    `Required` 
+* **users** (WorkspaceGroupUserInfo)  `Repeated`    `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -311,6 +300,17 @@ bookFlatSection: true
 
 ### WorkspaceGroupStatQuery
 * **query** (StatisticsQuery)   `Required` 
+
+    <br>
+
+### WorkspaceGroupUserInfo
+* **user_id** (string)   `Required` 
+
+    
+* **role_id** (string)   `Required` 
+
+    
+* **role_type** (string)   `Required` 
 
     <br>
 
