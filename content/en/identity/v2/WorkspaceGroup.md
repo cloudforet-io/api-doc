@@ -240,7 +240,7 @@ bookFlatSection: true
 * **workspace_group_id** (string)   `Required` 
 
     
-* **users** (string)  `Repeated`    `Required` 
+* **users** (Struct)  `Repeated`    `Required` 
 
     <br>
 
