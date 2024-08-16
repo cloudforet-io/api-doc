@@ -29,6 +29,7 @@ bookFlatSection: true
 | [**delete**](./WorkspaceGroup#delete) | [WorkspaceGroupRequest](WorkspaceGroup#workspacegrouprequest) | [Empty](WorkspaceGroup#empty) |
 | [**add_workspaces**](./WorkspaceGroup#add_workspaces) | [WorkspacesWorkspaceGroupRequest](WorkspaceGroup#workspacesworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**remove_workspaces**](./WorkspaceGroup#remove_workspaces) | [WorkspacesWorkspaceGroupRequest](WorkspaceGroup#workspacesworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
+| [**find_users**](./WorkspaceGroup#find_users) | [WorkspaceGroupFindRequest](WorkspaceGroup#workspacegroupfindrequest) | [WorkspaceGroupUsersSummaryInfo](WorkspaceGroup#workspacegroupuserssummaryinfo) |
 | [**add_users**](./WorkspaceGroup#add_users) | [UsersWorkspaceGroupRequest](WorkspaceGroup#usersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**remove_users**](./WorkspaceGroup#remove_users) | [UsersWorkspaceGroupRequest](WorkspaceGroup#usersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**get**](./WorkspaceGroup#get) | [WorkspaceGroupRequest](WorkspaceGroup#workspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
@@ -115,6 +116,23 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/workspace-group/remove-workspaces
+>
+
+
+
+
+
+
+    
+<br>
+
+### find_users
+
+
+
+
+
+> **POST** /identity/v2/workspace-group/find-users
 >
 
 
@@ -244,6 +262,20 @@ bookFlatSection: true
 
     <br>
 
+### WorkspaceGroupFindRequest
+* **keyword** (string)   `Required` 
+
+    
+* **workspace_group_id** (string)   `Required` 
+
+    
+* **state** (State)  
+
+    
+* **page** (Page)  
+
+    <br>
+
 ### WorkspaceGroupInfo
 * **workspace_group_id** (string)   `Required` 
 
@@ -311,6 +343,25 @@ bookFlatSection: true
 
     
 * **role_type** (string)   `Required` 
+
+    <br>
+
+### WorkspaceGroupUserSummaryInfo
+* **user_id** (string)   `Required` 
+
+    
+* **name** (string)   `Required` 
+
+    
+* **state** (State)   `Required` 
+
+    <br>
+
+### WorkspaceGroupUsersSummaryInfo
+* **results** (WorkspaceGroupUserSummaryInfo)  `Repeated`    `Required` 
+
+    
+* **total_count** (int32)   `Required` 
 
     <br>
 
