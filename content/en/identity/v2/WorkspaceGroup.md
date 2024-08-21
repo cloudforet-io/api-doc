@@ -239,7 +239,7 @@ bookFlatSection: true
 * **workspace_group_id** (string)   `Required` 
 
     
-* **users** (Struct)  `Repeated`    `Required` 
+* **users** (WorkspaceGroupUser)  `Repeated`    `Required` 
 
     <br>
 
@@ -294,7 +294,7 @@ bookFlatSection: true
 * **workspaces** (string)  `Repeated`    `Required` 
 
     
-* **users** (WorkspaceGroupUserInfo)  `Repeated`    `Required` 
+* **users** (string)  `Repeated`    `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -343,7 +343,7 @@ bookFlatSection: true
 
     <br>
 
-### WorkspaceGroupUserInfo
+### WorkspaceGroupUser
 * **user_id** (string)   `Required` 
 
     
