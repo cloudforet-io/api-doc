@@ -259,6 +259,12 @@ bookFlatSection: true
 * **client_id** (string)   `Required` 
 
     
+* **project_group_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
@@ -316,6 +322,9 @@ bookFlatSection: true
 ### CheckAppInfo
 * **permissions** (string)  `Repeated`    `Required` 
 
+    
+* **projects** (string)  `Repeated`    `Required` 
+
     <br>
 
 ### CreateAppRequest
@@ -326,6 +335,12 @@ bookFlatSection: true
 
     
 * **resource_group** (ResourceGroup)   `Required` 
+
+    
+* **project_group_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
 
     
 * **tags** (Struct)  
