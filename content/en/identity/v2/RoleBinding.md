@@ -172,6 +172,9 @@ bookFlatSection: true
 * **domain_id** (string)   `Required` 
 
     
+* **workspace_group_id** (string)   `Required` 
+
+    
 * **workspace_id** (string)   `Required` 
 
     
