@@ -163,7 +163,7 @@ bookFlatSection: true
 
 
 
-> **POST** /identity/v2/workspace-group-details/get-workspace-group-details
+> **POST** /identity/v2/workspace-group-details/get-workspace-groups
 >
 
 
