@@ -29,9 +29,9 @@ bookFlatSection: true
 | [**delete**](./WorkspaceGroup#delete) | [WorkspaceGroupRequest](WorkspaceGroup#workspacegrouprequest) | [Empty](WorkspaceGroup#empty) |
 | [**add_workspaces**](./WorkspaceGroup#add_workspaces) | [WorkspacesWorkspaceGroupRequest](WorkspaceGroup#workspacesworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**remove_workspaces**](./WorkspaceGroup#remove_workspaces) | [WorkspacesWorkspaceGroupRequest](WorkspaceGroup#workspacesworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
-| [**find_users**](./WorkspaceGroup#find_users) | [WorkspaceGroupFindRequest](WorkspaceGroup#workspacegroupfindrequest) | [WorkspaceGroupUsersSummaryInfo](WorkspaceGroup#workspacegroupuserssummaryinfo) |
 | [**add_users**](./WorkspaceGroup#add_users) | [UsersWorkspaceGroupRequest](WorkspaceGroup#usersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**remove_users**](./WorkspaceGroup#remove_users) | [UsersWorkspaceGroupRequest](WorkspaceGroup#usersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
+| [**update_role**](./WorkspaceGroup#update_role) | [WorkspaceGroupUpdateRoleRequest](WorkspaceGroup#workspacegroupupdaterolerequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**get**](./WorkspaceGroup#get) | [WorkspaceGroupRequest](WorkspaceGroup#workspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**list**](./WorkspaceGroup#list) | [WorkspaceGroupSearchQuery](WorkspaceGroup#workspacegroupsearchquery) | [WorkspaceGroupsInfo](WorkspaceGroup#workspacegroupsinfo) |
 | [**stat**](./WorkspaceGroup#stat) | [WorkspaceGroupStatQuery](WorkspaceGroup#workspacegroupstatquery) | [Struct](WorkspaceGroup#struct) |
@@ -126,23 +126,6 @@ bookFlatSection: true
     
 <br>
 
-### find_users
-
-
-
-
-
-> **POST** /identity/v2/workspace-group/find-users
->
-
-
-
-
-
-
-    
-<br>
-
 ### add_users
 
 
@@ -167,6 +150,23 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/workspace-group/remove-users
+>
+
+
+
+
+
+
+    
+<br>
+
+### update_role
+
+
+
+
+
+> **POST** /identity/v2/workspace-group/update-role
 >
 
 
@@ -262,20 +262,6 @@ bookFlatSection: true
 
     <br>
 
-### WorkspaceGroupFindRequest
-* **keyword** (string)   `Required` 
-
-    
-* **workspace_group_id** (string)   `Required` 
-
-    
-* **state** (State)  
-
-    
-* **page** (Page)  
-
-    <br>
-
 ### WorkspaceGroupInfo
 * **workspace_group_id** (string)   `Required` 
 
@@ -335,6 +321,17 @@ bookFlatSection: true
 
     <br>
 
+### WorkspaceGroupUpdateRoleRequest
+* **workspace_group_id** (string)   `Required` 
+
+    
+* **user_id** (string)   `Required` 
+
+    
+* **role_id** (string)   `Required` 
+
+    <br>
+
 ### WorkspaceGroupUser
 * **user_id** (string)   `Required` 
 
@@ -345,26 +342,10 @@ bookFlatSection: true
 * **role_type** (string)   `Required` 
 
     
-* **role_binding_info** (RoleBindingInfo)   `Required` 
-
-    <br>
-
-### WorkspaceGroupUserSummaryInfo
-* **user_id** (string)   `Required` 
+* **user_name** (string)   `Required` 
 
     
-* **name** (string)   `Required` 
-
-    
-* **state** (State)   `Required` 
-
-    <br>
-
-### WorkspaceGroupUsersSummaryInfo
-* **results** (WorkspaceGroupUserSummaryInfo)  `Repeated`    `Required` 
-
-    
-* **total_count** (int32)   `Required` 
+* **state** (string)   `Required` 
 
     <br>
 

@@ -33,6 +33,7 @@ bookFlatSection: true
 | [**confirm_mfa**](./UserProfile#confirm_mfa) | [ConfirmMFARequest](UserProfile#confirmmfarequest) | [UserInfo](UserProfile#userinfo) |
 | [**get**](./UserProfile#get) | [UserProfileRequest](UserProfile#userprofilerequest) | [UserInfo](UserProfile#userinfo) |
 | [**get_workspaces**](./UserProfile#get_workspaces) | [UserProfileRequest](UserProfile#userprofilerequest) | [MyWorkspacesInfo](UserProfile#myworkspacesinfo) |
+| [**get_workspace_groups**](./UserProfile#get_workspace_groups) | [UserProfileRequest](UserProfile#userprofilerequest) | [MyWorkspaceGroupsInfo](UserProfile#myworkspacegroupsinfo) |
 
 
 
@@ -276,6 +277,23 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
 
     
+<br>
+
+### get_workspace_groups
+
+
+
+
+
+> **POST** /identity/v2/user-profile/get-workspace-groups
+>
+
+
+
+
+
+
+    
 
 
 <br>
@@ -306,6 +324,14 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **options** (Struct)   `Required` 
 
   *If mfa_type is EMAIL, email is required in options. options will be saved in mfa's options field.*
+
+    <br>
+
+### MyWorkspaceGroupsInfo
+* **results** (WorkspaceGroupInfo)  `Repeated`    `Required` 
+
+    
+* **total_count** (int32)   `Required` 
 
     <br>
 
@@ -392,7 +418,10 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     <br>
 
-### UserProfileRequest<br>
+### UserProfileRequest
+* **workspace_group_id** (string)  
+
+    <br>
 
 ### VerifyEmailRequest
 * **email** (string)  
