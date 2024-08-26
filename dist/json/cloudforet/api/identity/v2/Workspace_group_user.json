@@ -1,7 +1,7 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/user_profile.proto",
+      "name": "spaceone/api/identity/v2/workspace_group_user.proto",
       "description": "",
       "package": "spaceone.api.identity.v2",
       "hasEnums": false,
@@ -10,37 +10,9 @@
       "hasServices": true,
       "enums": [
         {
-          "name": "RoleType",
-          "longName": "MyWorkspaceInfo.RoleType",
-          "fullName": "spaceone.api.identity.v2.MyWorkspaceInfo.RoleType",
-          "description": "",
-          "values": [
-            {
-              "name": "ROLE_TYPE_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "DOMAIN_ADMIN",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE_OWNER",
-              "number": "2",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE_MEMBER",
-              "number": "3",
-              "description": ""
-            }
-          ]
-        },
-        {
           "name": "State",
-          "longName": "MyWorkspaceInfo.State",
-          "fullName": "spaceone.api.identity.v2.MyWorkspaceInfo.State",
+          "longName": "WorkspaceGroupUserFindRequest.State",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserFindRequest.State",
           "description": "",
           "values": [
             {
@@ -57,6 +29,39 @@
               "name": "DISABLED",
               "number": "2",
               "description": ""
+            },
+            {
+              "name": "PENDING",
+              "number": "3",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "name": "State",
+          "longName": "WorkspaceGroupUserSummaryInfo.State",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserSummaryInfo.State",
+          "description": "",
+          "values": [
+            {
+              "name": "STATE_NONE",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "ENABLED",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "DISABLED",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "PENDING",
+              "number": "3",
+              "description": ""
             }
           ]
         }
@@ -64,9 +69,9 @@
       "extensions": [],
       "messages": [
         {
-          "name": "ConfirmEmailRequest",
-          "longName": "ConfirmEmailRequest",
-          "fullName": "spaceone.api.identity.v2.ConfirmEmailRequest",
+          "name": "WorkspaceGroupUserFindRequest",
+          "longName": "WorkspaceGroupUserFindRequest",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserFindRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -74,67 +79,8 @@
           "extensions": [],
           "fields": [
             {
-              "name": "verify_code",
+              "name": "workspace_group_id",
               "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "ConfirmMFARequest",
-          "longName": "ConfirmMFARequest",
-          "fullName": "spaceone.api.identity.v2.ConfirmMFARequest",
-          "description": "{\n \"user_id\": \"example@cloudforet\",\n \"verify_code\": \"123456\",\n \"domain_id\": \"domain-a1b2c3d4e5f6\"\n}",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "verify_code",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "DisableMFARequest",
-          "longName": "DisableMFARequest",
-          "fullName": "spaceone.api.identity.v2.DisableMFARequest",
-          "description": "{\n \"user_id\": \"example@cloudforet.com\",\n \"force\": false,\n \"domain_id\": \"domain-a1b2c3d4e5f6\"\n}",
-          "hasExtensions": false,
-          "hasFields": false,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": []
-        },
-        {
-          "name": "EnableMFARequest",
-          "longName": "EnableMFARequest",
-          "fullName": "spaceone.api.identity.v2.EnableMFARequest",
-          "description": "{\n \"user_id\": \"example@cloudforet.com\",\n \"mfa_type\": \"EMAIL\",\n \"options\": {\"email\": \"wonny@cloudforet.com\"},\n \"domain_id\": \"domain-a1b2c3d4e5f6\"\n}",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "mfa_type",
-              "description": "EMAIL",
               "label": "",
               "type": "string",
               "longType": "string",
@@ -145,48 +91,36 @@
               "defaultValue": ""
             },
             {
-              "name": "options",
-              "description": "If mfa_type is EMAIL, email is required in options. options will be saved in mfa's options field.",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "MyWorkspaceGroupsInfo",
-          "longName": "MyWorkspaceGroupsInfo",
-          "fullName": "spaceone.api.identity.v2.MyWorkspaceGroupsInfo",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "results",
+              "name": "keyword",
               "description": "",
-              "label": "repeated",
-              "type": "WorkspaceGroupInfo",
-              "longType": "WorkspaceGroupInfo",
-              "fullType": "spaceone.api.identity.v2.WorkspaceGroupInfo",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "total_count",
-              "description": "",
+              "name": "state",
+              "description": "+optional",
               "label": "",
-              "type": "int32",
-              "longType": "int32",
-              "fullType": "int32",
+              "type": "State",
+              "longType": "WorkspaceGroupUserFindRequest.State",
+              "fullType": "spaceone.api.identity.v2.WorkspaceGroupUserFindRequest.State",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "page",
+              "description": "+optional",
+              "label": "",
+              "type": "Page",
+              "longType": "spaceone.api.core.v2.Page",
+              "fullType": "spaceone.api.core.v2.Page",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -195,9 +129,9 @@
           ]
         },
         {
-          "name": "MyWorkspaceInfo",
-          "longName": "MyWorkspaceInfo",
-          "fullName": "spaceone.api.identity.v2.MyWorkspaceInfo",
+          "name": "WorkspaceGroupUserInfo",
+          "longName": "WorkspaceGroupUserInfo",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -205,7 +139,7 @@
           "extensions": [],
           "fields": [
             {
-              "name": "workspace_id",
+              "name": "workspace_group_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -229,21 +163,9 @@
               "defaultValue": ""
             },
             {
-              "name": "state",
+              "name": "workspaces",
               "description": "",
-              "label": "",
-              "type": "State",
-              "longType": "MyWorkspaceInfo.State",
-              "fullType": "spaceone.api.identity.v2.MyWorkspaceInfo.State",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "role_name",
-              "description": "",
-              "label": "",
+              "label": "repeated",
               "type": "string",
               "longType": "string",
               "fullType": "string",
@@ -253,12 +175,12 @@
               "defaultValue": ""
             },
             {
-              "name": "role_type",
+              "name": "users",
               "description": "",
-              "label": "",
-              "type": "RoleType",
-              "longType": "MyWorkspaceInfo.RoleType",
-              "fullType": "spaceone.api.identity.v2.MyWorkspaceInfo.RoleType",
+              "label": "repeated",
+              "type": "WorkspaceGroupUsers",
+              "longType": "WorkspaceGroupUsers",
+              "fullType": "spaceone.api.identity.v2.WorkspaceGroupUsers",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -289,36 +211,12 @@
               "defaultValue": ""
             },
             {
-              "name": "reference_id",
+              "name": "updated_by",
               "description": "",
               "label": "",
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "is_managed",
-              "description": "",
-              "label": "",
-              "type": "bool",
-              "longType": "bool",
-              "fullType": "bool",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "is_dormant",
-              "description": "",
-              "label": "",
-              "type": "bool",
-              "longType": "bool",
-              "fullType": "bool",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -326,18 +224,6 @@
             },
             {
               "name": "domain_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "role_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -361,19 +247,7 @@
               "defaultValue": ""
             },
             {
-              "name": "last_synced_at",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "dormant_updated_at",
+              "name": "updated_at",
               "description": "",
               "label": "",
               "type": "string",
@@ -387,9 +261,9 @@
           ]
         },
         {
-          "name": "MyWorkspacesInfo",
-          "longName": "MyWorkspacesInfo",
-          "fullName": "spaceone.api.identity.v2.MyWorkspacesInfo",
+          "name": "WorkspaceGroupUserRequest",
+          "longName": "WorkspaceGroupUserRequest",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -397,24 +271,12 @@
           "extensions": [],
           "fields": [
             {
-              "name": "results",
-              "description": "",
-              "label": "repeated",
-              "type": "MyWorkspaceInfo",
-              "longType": "MyWorkspaceInfo",
-              "fullType": "spaceone.api.identity.v2.MyWorkspaceInfo",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "total_count",
+              "name": "workspace_group_id",
               "description": "",
               "label": "",
-              "type": "int32",
-              "longType": "int32",
-              "fullType": "int32",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -423,9 +285,9 @@
           ]
         },
         {
-          "name": "UpdateUserProfileRequest",
-          "longName": "UpdateUserProfileRequest",
-          "fullName": "spaceone.api.identity.v2.UpdateUserProfileRequest",
+          "name": "WorkspaceGroupUserSearchQuery",
+          "longName": "WorkspaceGroupUserSearchQuery",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserSearchQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -433,7 +295,19 @@
           "extensions": [],
           "fields": [
             {
-              "name": "password",
+              "name": "query",
+              "description": "+optional",
+              "label": "",
+              "type": "Query",
+              "longType": "spaceone.api.core.v2.Query",
+              "fullType": "spaceone.api.core.v2.Query",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "workspace_group_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -457,7 +331,7 @@
               "defaultValue": ""
             },
             {
-              "name": "email",
+              "name": "created_by",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -469,36 +343,12 @@
               "defaultValue": ""
             },
             {
-              "name": "language",
+              "name": "updated_by",
               "description": "+optional",
               "label": "",
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "timezone",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -507,9 +357,33 @@
           ]
         },
         {
-          "name": "UserPasswordResetRequest",
-          "longName": "UserPasswordResetRequest",
-          "fullName": "spaceone.api.identity.v2.UserPasswordResetRequest",
+          "name": "WorkspaceGroupUserStatQuery",
+          "longName": "WorkspaceGroupUserStatQuery",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserStatQuery",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "query",
+              "description": "",
+              "label": "",
+              "type": "StatisticsQuery",
+              "longType": "spaceone.api.core.v2.StatisticsQuery",
+              "fullType": "spaceone.api.core.v2.StatisticsQuery",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "WorkspaceGroupUserSummaryInfo",
+          "longName": "WorkspaceGroupUserSummaryInfo",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserSummaryInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -529,7 +403,67 @@
               "defaultValue": ""
             },
             {
-              "name": "domain_id",
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "state",
+              "description": "",
+              "label": "",
+              "type": "State",
+              "longType": "WorkspaceGroupUserSummaryInfo.State",
+              "fullType": "spaceone.api.identity.v2.WorkspaceGroupUserSummaryInfo.State",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "WorkspaceGroupUserUpdateRoleRequest",
+          "longName": "WorkspaceGroupUserUpdateRoleRequest",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUserUpdateRoleRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "workspace_group_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "user_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "role_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -543,9 +477,9 @@
           ]
         },
         {
-          "name": "UserProfileRequest",
-          "longName": "UserProfileRequest",
-          "fullName": "spaceone.api.identity.v2.UserProfileRequest",
+          "name": "WorkspaceGroupUsers",
+          "longName": "WorkspaceGroupUsers",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUsers",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -553,8 +487,56 @@
           "extensions": [],
           "fields": [
             {
-              "name": "workspace_group_id",
-              "description": "+optional",
+              "name": "user_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "role_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "role_type",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "user_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "state",
+              "description": "",
               "label": "",
               "type": "string",
               "longType": "string",
@@ -567,9 +549,9 @@
           ]
         },
         {
-          "name": "VerifyEmailRequest",
-          "longName": "VerifyEmailRequest",
-          "fullName": "spaceone.api.identity.v2.VerifyEmailRequest",
+          "name": "WorkspaceGroupUsersInfo",
+          "longName": "WorkspaceGroupUsersInfo",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUsersInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -577,12 +559,96 @@
           "extensions": [],
           "fields": [
             {
-              "name": "email",
-              "description": "+optional",
+              "name": "results",
+              "description": "",
+              "label": "repeated",
+              "type": "WorkspaceGroupUserInfo",
+              "longType": "WorkspaceGroupUserInfo",
+              "fullType": "spaceone.api.identity.v2.WorkspaceGroupUserInfo",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "total_count",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "WorkspaceGroupUsersRequest",
+          "longName": "WorkspaceGroupUsersRequest",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUsersRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "workspace_group_id",
+              "description": "",
               "label": "",
               "type": "string",
               "longType": "string",
               "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "users",
+              "description": "",
+              "label": "repeated",
+              "type": "WorkspaceGroupUsers",
+              "longType": "WorkspaceGroupUsers",
+              "fullType": "spaceone.api.identity.v2.WorkspaceGroupUsers",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "WorkspaceGroupUsersSummaryInfo",
+          "longName": "WorkspaceGroupUsersSummaryInfo",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUsersSummaryInfo",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "results",
+              "description": "",
+              "label": "repeated",
+              "type": "WorkspaceGroupUserSummaryInfo",
+              "longType": "WorkspaceGroupUserSummaryInfo",
+              "fullType": "spaceone.api.identity.v2.WorkspaceGroupUserSummaryInfo",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "total_count",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -593,28 +659,28 @@
       ],
       "services": [
         {
-          "name": "UserProfile",
-          "longName": "UserProfile",
-          "fullName": "spaceone.api.identity.v2.UserProfile",
+          "name": "WorkspaceGroupUser",
+          "longName": "WorkspaceGroupUser",
+          "fullName": "spaceone.api.identity.v2.WorkspaceGroupUser",
           "description": "",
           "methods": [
             {
-              "name": "update",
+              "name": "add",
               "description": "",
-              "requestType": "UpdateUserProfileRequest",
-              "requestLongType": "UpdateUserProfileRequest",
-              "requestFullType": "spaceone.api.identity.v2.UpdateUserProfileRequest",
+              "requestType": "WorkspaceGroupUsersRequest",
+              "requestLongType": "WorkspaceGroupUsersRequest",
+              "requestFullType": "spaceone.api.identity.v2.WorkspaceGroupUsersRequest",
               "requestStreaming": false,
-              "responseType": "UserInfo",
-              "responseLongType": "UserInfo",
-              "responseFullType": "spaceone.api.identity.v2.UserInfo",
+              "responseType": "WorkspaceGroupUserInfo",
+              "responseLongType": "WorkspaceGroupUserInfo",
+              "responseFullType": "spaceone.api.identity.v2.WorkspaceGroupUserInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/user-profile/update",
+                      "pattern": "/identity/v2/workspace-group-user/add",
                       "body": "*"
                     }
                   ]
@@ -622,22 +688,22 @@
               }
             },
             {
-              "name": "verify_email",
+              "name": "remove",
               "description": "",
-              "requestType": "VerifyEmailRequest",
-              "requestLongType": "VerifyEmailRequest",
-              "requestFullType": "spaceone.api.identity.v2.VerifyEmailRequest",
+              "requestType": "WorkspaceGroupUsersRequest",
+              "requestLongType": "WorkspaceGroupUsersRequest",
+              "requestFullType": "spaceone.api.identity.v2.WorkspaceGroupUsersRequest",
               "requestStreaming": false,
-              "responseType": "Empty",
-              "responseLongType": ".google.protobuf.Empty",
-              "responseFullType": "google.protobuf.Empty",
+              "responseType": "WorkspaceGroupUserInfo",
+              "responseLongType": "WorkspaceGroupUserInfo",
+              "responseFullType": "spaceone.api.identity.v2.WorkspaceGroupUserInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/user-profile/verify-email",
+                      "pattern": "/identity/v2/workspace-group-user/remove",
                       "body": "*"
                     }
                   ]
@@ -645,22 +711,22 @@
               }
             },
             {
-              "name": "confirm_email",
+              "name": "update_role",
               "description": "",
-              "requestType": "ConfirmEmailRequest",
-              "requestLongType": "ConfirmEmailRequest",
-              "requestFullType": "spaceone.api.identity.v2.ConfirmEmailRequest",
+              "requestType": "WorkspaceGroupUserUpdateRoleRequest",
+              "requestLongType": "WorkspaceGroupUserUpdateRoleRequest",
+              "requestFullType": "spaceone.api.identity.v2.WorkspaceGroupUserUpdateRoleRequest",
               "requestStreaming": false,
-              "responseType": "UserInfo",
-              "responseLongType": "UserInfo",
-              "responseFullType": "spaceone.api.identity.v2.UserInfo",
+              "responseType": "WorkspaceGroupUserInfo",
+              "responseLongType": "WorkspaceGroupUserInfo",
+              "responseFullType": "spaceone.api.identity.v2.WorkspaceGroupUserInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/user-profile/confirm-email",
+                      "pattern": "/identity/v2/workspace-group-user/update-role",
                       "body": "*"
                     }
                   ]
@@ -668,91 +734,22 @@
               }
             },
             {
-              "name": "reset_password",
-              "description": "+noauth",
-              "requestType": "UserPasswordResetRequest",
-              "requestLongType": "UserPasswordResetRequest",
-              "requestFullType": "spaceone.api.identity.v2.UserPasswordResetRequest",
+              "name": "find",
+              "description": "",
+              "requestType": "WorkspaceGroupUserFindRequest",
+              "requestLongType": "WorkspaceGroupUserFindRequest",
+              "requestFullType": "spaceone.api.identity.v2.WorkspaceGroupUserFindRequest",
               "requestStreaming": false,
-              "responseType": "Empty",
-              "responseLongType": ".google.protobuf.Empty",
-              "responseFullType": "google.protobuf.Empty",
+              "responseType": "WorkspaceGroupUsersSummaryInfo",
+              "responseLongType": "WorkspaceGroupUsersSummaryInfo",
+              "responseFullType": "spaceone.api.identity.v2.WorkspaceGroupUsersSummaryInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/user-profile/reset-password",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "enable_mfa",
-              "description": "Enable MFA for user. If this api is called, send email to user.",
-              "requestType": "EnableMFARequest",
-              "requestLongType": "EnableMFARequest",
-              "requestFullType": "spaceone.api.identity.v2.EnableMFARequest",
-              "requestStreaming": false,
-              "responseType": "UserInfo",
-              "responseLongType": "UserInfo",
-              "responseFullType": "spaceone.api.identity.v2.UserInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/user-profile/enable-mfa",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "disable_mfa",
-              "description": "Disable MFA for user. If this api is called, send email to user.",
-              "requestType": "DisableMFARequest",
-              "requestLongType": "DisableMFARequest",
-              "requestFullType": "spaceone.api.identity.v2.DisableMFARequest",
-              "requestStreaming": false,
-              "responseType": "UserInfo",
-              "responseLongType": "UserInfo",
-              "responseFullType": "spaceone.api.identity.v2.UserInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/user-profile/disable-mfa",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "confirm_mfa",
-              "description": "Confirm MFA for user by given verify_code which is sent by your authentication method.",
-              "requestType": "ConfirmMFARequest",
-              "requestLongType": "ConfirmMFARequest",
-              "requestFullType": "spaceone.api.identity.v2.ConfirmMFARequest",
-              "requestStreaming": false,
-              "responseType": "UserInfo",
-              "responseLongType": "UserInfo",
-              "responseFullType": "spaceone.api.identity.v2.UserInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/user-profile/confirm-mfa",
+                      "pattern": "/identity/v2/workspace-group-user/find",
                       "body": "*"
                     }
                   ]
@@ -762,20 +759,20 @@
             {
               "name": "get",
               "description": "",
-              "requestType": "UserProfileRequest",
-              "requestLongType": "UserProfileRequest",
-              "requestFullType": "spaceone.api.identity.v2.UserProfileRequest",
+              "requestType": "WorkspaceGroupUserRequest",
+              "requestLongType": "WorkspaceGroupUserRequest",
+              "requestFullType": "spaceone.api.identity.v2.WorkspaceGroupUserRequest",
               "requestStreaming": false,
-              "responseType": "UserInfo",
-              "responseLongType": "UserInfo",
-              "responseFullType": "spaceone.api.identity.v2.UserInfo",
+              "responseType": "WorkspaceGroupUserInfo",
+              "responseLongType": "WorkspaceGroupUserInfo",
+              "responseFullType": "spaceone.api.identity.v2.WorkspaceGroupUserInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/user-profile/get",
+                      "pattern": "/identity/v2/workspace-group-user/get",
                       "body": "*"
                     }
                   ]
@@ -783,22 +780,22 @@
               }
             },
             {
-              "name": "get_workspaces",
+              "name": "list",
               "description": "",
-              "requestType": "UserProfileRequest",
-              "requestLongType": "UserProfileRequest",
-              "requestFullType": "spaceone.api.identity.v2.UserProfileRequest",
+              "requestType": "WorkspaceGroupUserSearchQuery",
+              "requestLongType": "WorkspaceGroupUserSearchQuery",
+              "requestFullType": "spaceone.api.identity.v2.WorkspaceGroupUserSearchQuery",
               "requestStreaming": false,
-              "responseType": "MyWorkspacesInfo",
-              "responseLongType": "MyWorkspacesInfo",
-              "responseFullType": "spaceone.api.identity.v2.MyWorkspacesInfo",
+              "responseType": "WorkspaceGroupUsersInfo",
+              "responseLongType": "WorkspaceGroupUsersInfo",
+              "responseFullType": "spaceone.api.identity.v2.WorkspaceGroupUsersInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/user-profile/get-workspaces",
+                      "pattern": "/identity/v2/workspace-group-user/list",
                       "body": "*"
                     }
                   ]
@@ -806,22 +803,22 @@
               }
             },
             {
-              "name": "get_workspace_groups",
+              "name": "stat",
               "description": "",
-              "requestType": "UserProfileRequest",
-              "requestLongType": "UserProfileRequest",
-              "requestFullType": "spaceone.api.identity.v2.UserProfileRequest",
+              "requestType": "WorkspaceGroupUserStatQuery",
+              "requestLongType": "WorkspaceGroupUserStatQuery",
+              "requestFullType": "spaceone.api.identity.v2.WorkspaceGroupUserStatQuery",
               "requestStreaming": false,
-              "responseType": "MyWorkspaceGroupsInfo",
-              "responseLongType": "MyWorkspaceGroupsInfo",
-              "responseFullType": "spaceone.api.identity.v2.MyWorkspaceGroupsInfo",
+              "responseType": "Struct",
+              "responseLongType": ".google.protobuf.Struct",
+              "responseFullType": "google.protobuf.Struct",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/user-profile/get-workspace-groups",
+                      "pattern": "/identity/v1/workspace-group-user/stat",
                       "body": "*"
                     }
                   ]
