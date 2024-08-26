@@ -30,8 +30,8 @@ bookFlatSection: true
 | [**add_workspaces**](./WorkspaceGroup#add_workspaces) | [WorkspacesWorkspaceGroupRequest](WorkspaceGroup#workspacesworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**remove_workspaces**](./WorkspaceGroup#remove_workspaces) | [WorkspacesWorkspaceGroupRequest](WorkspaceGroup#workspacesworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**find_users**](./WorkspaceGroup#find_users) | [WorkspaceGroupFindRequest](WorkspaceGroup#workspacegroupfindrequest) | [WorkspaceGroupUsersSummaryInfo](WorkspaceGroup#workspacegroupuserssummaryinfo) |
-| [**add_users**](./WorkspaceGroup#add_users) | [AddUsersWorkspaceGroupRequest](WorkspaceGroup#addusersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
-| [**remove_users**](./WorkspaceGroup#remove_users) | [RemoveUsersWorkspaceGroupRequest](WorkspaceGroup#removeusersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
+| [**add_users**](./WorkspaceGroup#add_users) | [UsersWorkspaceGroupRequest](WorkspaceGroup#usersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
+| [**remove_users**](./WorkspaceGroup#remove_users) | [UsersWorkspaceGroupRequest](WorkspaceGroup#usersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**get**](./WorkspaceGroup#get) | [WorkspaceGroupRequest](WorkspaceGroup#workspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**list**](./WorkspaceGroup#list) | [WorkspaceGroupSearchQuery](WorkspaceGroup#workspacegroupsearchquery) | [WorkspaceGroupsInfo](WorkspaceGroup#workspacegroupsinfo) |
 | [**stat**](./WorkspaceGroup#stat) | [WorkspaceGroupStatQuery](WorkspaceGroup#workspacegroupstatquery) | [Struct](WorkspaceGroup#struct) |
@@ -235,27 +235,11 @@ bookFlatSection: true
 
 
 
-### AddUsersWorkspaceGroupRequest
-* **workspace_group_id** (string)   `Required` 
-
-    
-* **users** (WorkspaceGroupUser)  `Repeated`    `Required` 
-
-    <br>
-
 ### CreateWorkspaceGroupRequest
 * **name** (string)   `Required` 
 
     
 * **tags** (Struct)  
-
-    <br>
-
-### RemoveUsersWorkspaceGroupRequest
-* **workspace_group_id** (string)   `Required` 
-
-    
-* **users** (string)  `Repeated`    `Required` 
 
     <br>
 
@@ -267,6 +251,14 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### UsersWorkspaceGroupRequest
+* **workspace_group_id** (string)   `Required` 
+
+    
+* **users** (WorkspaceGroupUser)  `Repeated`    `Required` 
 
     <br>
 
@@ -294,10 +286,13 @@ bookFlatSection: true
 * **workspaces** (string)  `Repeated`    `Required` 
 
     
-* **users** (string)  `Repeated`    `Required` 
+* **users** (WorkspaceGroupUser)  `Repeated`    `Required` 
 
     
 * **tags** (Struct)   `Required` 
+
+    
+* **role_binding_info** (Struct)   `Required` 
 
     
 * **created_by** (string)   `Required` 
