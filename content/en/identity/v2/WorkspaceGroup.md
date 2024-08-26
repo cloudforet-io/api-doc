@@ -292,7 +292,7 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
-* **role_binding_info** (Struct)   `Required` 
+* **role_binding_info** (RoleBindingInfo)   `Required` 
 
     
 * **created_by** (string)   `Required` 
