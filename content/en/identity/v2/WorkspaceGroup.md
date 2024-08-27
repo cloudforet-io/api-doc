@@ -254,11 +254,28 @@ bookFlatSection: true
 
     <br>
 
+### UserWorkspaceGroup
+* **user_id** (string)   `Required` 
+
+    
+* **role_id** (string)   `Required` 
+
+    
+* **role_type** (string)   `Required` 
+
+    
+* **user_name** (string)   `Required` 
+
+    
+* **state** (string)   `Required` 
+
+    <br>
+
 ### UsersWorkspaceGroupRequest
 * **workspace_group_id** (string)   `Required` 
 
     
-* **users** (WorkspaceGroupUser)  `Repeated`    `Required` 
+* **users** (UserWorkspaceGroup)  `Repeated`    `Required` 
 
     <br>
 
@@ -272,7 +289,7 @@ bookFlatSection: true
 * **workspaces** (string)  `Repeated`    `Required` 
 
     
-* **users** (WorkspaceGroupUser)  `Repeated`    `Required` 
+* **users** (UserWorkspaceGroup)  `Repeated`    `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -329,23 +346,6 @@ bookFlatSection: true
 
     
 * **role_id** (string)   `Required` 
-
-    <br>
-
-### WorkspaceGroupUser
-* **user_id** (string)   `Required` 
-
-    
-* **role_id** (string)   `Required` 
-
-    
-* **role_type** (string)   `Required` 
-
-    
-* **user_name** (string)   `Required` 
-
-    
-* **state** (string)   `Required` 
 
     <br>
 
