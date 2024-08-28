@@ -234,6 +234,9 @@ bookFlatSection: true
 ### WorkspaceGroupUserStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
+    
+* **workspace_group_id** (string)   `Required` 
+
     <br>
 
 ### WorkspaceGroupUserSummaryInfo
