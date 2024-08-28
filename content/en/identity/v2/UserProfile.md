@@ -33,7 +33,7 @@ bookFlatSection: true
 | [**confirm_mfa**](./UserProfile#confirm_mfa) | [ConfirmMFARequest](UserProfile#confirmmfarequest) | [UserInfo](UserProfile#userinfo) |
 | [**get**](./UserProfile#get) | [UserProfileRequest](UserProfile#userprofilerequest) | [UserInfo](UserProfile#userinfo) |
 | [**get_workspaces**](./UserProfile#get_workspaces) | [UserProfileRequest](UserProfile#userprofilerequest) | [MyWorkspacesInfo](UserProfile#myworkspacesinfo) |
-| [**get_workspace_groups**](./UserProfile#get_workspace_groups) | [UserProfileRequest](UserProfile#userprofilerequest) | [MyWorkspaceGroupsInfo](UserProfile#myworkspacegroupsinfo) |
+| [**get_workspace_groups**](./UserProfile#get_workspace_groups) | [WorkspaceGroupUserProfileRequest](UserProfile#workspacegroupuserprofilerequest) | [MyWorkspaceGroupsInfo](UserProfile#myworkspacegroupsinfo) |
 
 
 
@@ -327,8 +327,43 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     <br>
 
+### MyWorkspaceGroupInfo
+* **workspace_group_id** (string)   `Required` 
+
+    
+* **name** (string)   `Required` 
+
+    
+* **workspaces** (string)  `Repeated`    `Required` 
+
+    
+* **users** (UserWorkspaceGroup)  `Repeated`    `Required` 
+
+    
+* **tags** (Struct)   `Required` 
+
+    
+* **role_binding_info** (RoleBindingInfo)   `Required` 
+
+    
+* **created_by** (string)   `Required` 
+
+    
+* **updated_by** (string)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
+
+    <br>
+
 ### MyWorkspaceGroupsInfo
-* **results** (WorkspaceGroupInfo)  `Repeated`    `Required` 
+* **results** (MyWorkspaceGroupInfo)  `Repeated`    `Required` 
 
     
 * **total_count** (int32)   `Required` 
@@ -427,3 +462,5 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **email** (string)  
 
     <br>
+
+### WorkspaceGroupUserProfileRequest<br>
