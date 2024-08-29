@@ -254,7 +254,7 @@ bookFlatSection: true
 * **workspace_group_id** (string)   `Required` 
 
     
-* **params_user_id** (string)   `Required` 
+* **target_user_id** (string)   `Required` 
 
     
 * **role_id** (string)   `Required` 
