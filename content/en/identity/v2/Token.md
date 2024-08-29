@@ -80,13 +80,16 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **role_id** (string)   `Required` 
+* **page_access** (string)  `Repeated`    `Required` 
 
     
 * **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
+
+    
+* **role_id** (string)   `Required` 
 
     <br>
 
@@ -103,13 +106,13 @@ bookFlatSection: true
 * **timeout** (int32)  
 
     
-* **workspace_id** (string)  
+* **permissions** (string)  `Repeated`   
 
     
 * **domain_id** (string)  
 
     
-* **permissions** (string)  `Repeated`   
+* **workspace_id** (string)  
 
     <br>
 
