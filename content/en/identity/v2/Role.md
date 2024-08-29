@@ -311,6 +311,15 @@ bookFlatSection: true
     
 * **role_type** (RoleType)   `Required` 
 
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
+
     <br>
 
 ### BasicRolesInfo
