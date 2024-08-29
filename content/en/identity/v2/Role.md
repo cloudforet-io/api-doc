@@ -306,6 +306,9 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **state** (State)   `Required` 
+
+    
 * **role_type** (RoleType)   `Required` 
 
     <br>
