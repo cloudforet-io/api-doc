@@ -270,6 +270,9 @@ bookFlatSection: true
 * **service_account_count** (int32)   `Required` 
 
     
+* **user_count** (int32)   `Required` 
+
+    
 * **cost_info** (WorkspaceCostInfo)   `Required` 
 
     

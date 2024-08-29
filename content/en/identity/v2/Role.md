@@ -31,7 +31,7 @@ bookFlatSection: true
 | [**delete**](./Role#delete) | [RoleRequest](Role#rolerequest) | [Empty](Role#empty) |
 | [**get**](./Role#get) | [RoleRequest](Role#rolerequest) | [RoleInfo](Role#roleinfo) |
 | [**list**](./Role#list) | [RoleSearchQuery](Role#rolesearchquery) | [RolesInfo](Role#rolesinfo) |
-| [**list_basic_role**](./Role#list_basic_role) | [RoleSearchQuery](Role#rolesearchquery) | [BasicRolesInfo](Role#basicrolesinfo) |
+| [**list_basic_role**](./Role#list_basic_role) | [RoleSearchQuery](Role#rolesearchquery) | [RolesInfo](Role#rolesinfo) |
 | [**stat**](./Role#stat) | [RoleStatQuery](Role#rolestatquery) | [Struct](Role#struct) |
 
 
@@ -298,37 +298,6 @@ bookFlatSection: true
 ## Message
 
 
-
-### BasicRoleInfo
-* **role_id** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **state** (State)   `Required` 
-
-    
-* **role_type** (RoleType)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    
-* **updated_at** (string)   `Required` 
-
-    <br>
-
-### BasicRolesInfo
-* **results** (BasicRoleInfo)  `Repeated`    `Required` 
-
-    
-* **total_count** (int32)   `Required` 
-
-    <br>
 
 ### CreateRoleRequest
 * **name** (string)   `Required` 
