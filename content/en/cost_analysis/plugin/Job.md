@@ -150,6 +150,9 @@ bookFlatSection: true
 ### SyncedAccountInfo
 * **account_id** (string)   `Required` 
 
+    
+* **name** (string)   `Required` 
+
     <br>
 
 ### TaskInfo
