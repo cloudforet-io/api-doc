@@ -248,7 +248,7 @@ description of data table
 * **data_table_id** (string)   `Required` 
 
     
-* **expressions** (string)  `Repeated`    `Required` 
+* **expressions** (ListValue)   `Required` 
 
     <br>
 
