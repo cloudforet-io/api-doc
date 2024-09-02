@@ -723,13 +723,16 @@ Gets a list of all DataSourceRules. You can use a query to get a filtered list o
     <br>
 
 ### DataSourceRuleActions
-* **change_project** (string)   `Required` 
+* **match_service_account** (MatchRule)   `Required` 
 
     
 * **match_project** (MatchRule)   `Required` 
 
     
-* **match_service_account** (MatchRule)   `Required` 
+* **change_project** (string)   `Required` 
+
+    
+* **match_workspace** (MatchRule)   `Required` 
 
     
 * **add_additional_info** (Struct)   `Required` 
