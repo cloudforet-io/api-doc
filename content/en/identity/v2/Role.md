@@ -393,10 +393,10 @@ bookFlatSection: true
 * **name** (string)  
 
     
-* **permissions** (string)  `Repeated`   
+* **permissions** (ListValue)  
 
     
-* **page_access** (string)  `Repeated`   
+* **page_access** (ListValue)  
 
     
 * **tags** (Struct)  
