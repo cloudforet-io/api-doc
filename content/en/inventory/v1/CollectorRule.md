@@ -548,7 +548,7 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 
 
 
-> **POST** /inventory/v1/collector-rules/list
+> **POST** /inventory/v1/collector-rule/list
 >
 
 
@@ -661,7 +661,7 @@ Gets a list of all CollectorRules. You can use a query to get a filtered list of
 
 
 
-> **POST** /inventory/v1/collector-rules/stat
+> **POST** /inventory/v1/collector-rule/stat
 >
 
 
