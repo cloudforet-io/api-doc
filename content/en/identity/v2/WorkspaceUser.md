@@ -231,7 +231,7 @@ bookFlatSection: true
 * **tags** (Struct)   `Required` 
 
     
-* **role_bindings_info** (RoleBindingInfo)  `Repeated`    `Required` 
+* **role_binding_info** (RoleBindingInfo)   `Required` 
 
     
 * **email_verified** (bool)   `Required` 
