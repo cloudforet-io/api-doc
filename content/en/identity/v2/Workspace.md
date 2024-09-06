@@ -26,6 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./Workspace#create) | [CreateWorkSpaceRequest](Workspace#createworkspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**update**](./Workspace#update) | [UpdateWorkSpaceRequest](Workspace#updateworkspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
+| [**change_workspace_group**](./Workspace#change_workspace_group) | [ChangeWorkspaceGroupRequest](Workspace#changeworkspacegrouprequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**delete**](./Workspace#delete) | [WorkspaceDeleteRequest](Workspace#workspacedeleterequest) | [Empty](Workspace#empty) |
 | [**enable**](./Workspace#enable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**disable**](./Workspace#disable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
@@ -63,6 +64,23 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/workspace/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### change_workspace_group
+
+
+
+
+
+> **POST** /identity/v2/workspace/change-workspace-group
 >
 
 
@@ -196,6 +214,14 @@ bookFlatSection: true
 
 
 
+### ChangeWorkspaceGroupRequest
+* **workspace_id** (string)   `Required` 
+
+    
+* **workspace_group_id** (string)  
+
+    <br>
+
 ### CreateWorkSpaceRequest
 * **name** (string)   `Required` 
 
@@ -276,6 +302,9 @@ bookFlatSection: true
 * **cost_info** (WorkspaceCostInfo)   `Required` 
 
     
+* **workspace_group_id** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -317,6 +346,9 @@ bookFlatSection: true
 
     
 * **is_dormant** (bool)  
+
+    
+* **workspace_group_id** (string)  
 
     <br>
 

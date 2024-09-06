@@ -27,8 +27,6 @@ bookFlatSection: true
 | [**create**](./WorkspaceGroup#create) | [CreateWorkspaceGroupRequest](WorkspaceGroup#createworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**update**](./WorkspaceGroup#update) | [UpdateWorkspaceGroupRequest](WorkspaceGroup#updateworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**delete**](./WorkspaceGroup#delete) | [WorkspaceGroupRequest](WorkspaceGroup#workspacegrouprequest) | [Empty](WorkspaceGroup#empty) |
-| [**add_workspaces**](./WorkspaceGroup#add_workspaces) | [WorkspacesWorkspaceGroupRequest](WorkspaceGroup#workspacesworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
-| [**remove_workspaces**](./WorkspaceGroup#remove_workspaces) | [WorkspacesWorkspaceGroupRequest](WorkspaceGroup#workspacesworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**add_users**](./WorkspaceGroup#add_users) | [UsersWorkspaceGroupRequest](WorkspaceGroup#usersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**remove_users**](./WorkspaceGroup#remove_users) | [UsersWorkspaceGroupRequest](WorkspaceGroup#usersworkspacegrouprequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
 | [**update_role**](./WorkspaceGroup#update_role) | [WorkspaceGroupUpdateRoleRequest](WorkspaceGroup#workspacegroupupdaterolerequest) | [WorkspaceGroupInfo](WorkspaceGroup#workspacegroupinfo) |
@@ -82,40 +80,6 @@ bookFlatSection: true
 
 
 > **POST** /identity/v2/workspace-group/delete
->
-
-
-
-
-
-
-    
-<br>
-
-### add_workspaces
-
-
-
-
-
-> **POST** /identity/v2/workspace-group/add-workspaces
->
-
-
-
-
-
-
-    
-<br>
-
-### remove_workspaces
-
-
-
-
-
-> **POST** /identity/v2/workspace-group/remove-workspaces
 >
 
 
@@ -286,9 +250,6 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **workspaces** (string)  `Repeated`    `Required` 
-
-    
 * **users** (UserWorkspaceGroup)  `Repeated`    `Required` 
 
     
@@ -354,13 +315,5 @@ bookFlatSection: true
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### WorkspacesWorkspaceGroupRequest
-* **workspace_group_id** (string)   `Required` 
-
-    
-* **workspaces** (string)  `Repeated`    `Required` 
 
     <br>
