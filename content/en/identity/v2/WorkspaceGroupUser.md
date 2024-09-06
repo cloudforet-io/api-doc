@@ -184,9 +184,6 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **workspaces** (string)  `Repeated`    `Required` 
-
-    
 * **users** (UserWorkspaceGroup)  `Repeated`    `Required` 
 
     
