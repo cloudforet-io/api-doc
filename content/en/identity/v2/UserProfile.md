@@ -334,9 +334,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 * **name** (string)   `Required` 
 
     
-* **workspaces** (string)  `Repeated`    `Required` 
-
-    
 * **users** (UserWorkspaceGroup)  `Repeated`    `Required` 
 
     
