@@ -225,13 +225,13 @@ bookFlatSection: true
 * **role_id** (string)   `Required` 
 
     
-* **role_type** (string)   `Required` 
+* **role_type** (string)  
 
     
-* **user_name** (string)   `Required` 
+* **user_name** (string)  
 
     
-* **state** (string)   `Required` 
+* **state** (string)  
 
     <br>
 

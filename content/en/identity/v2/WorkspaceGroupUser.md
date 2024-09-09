@@ -24,12 +24,12 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**add**](./WorkspaceGroupUser#add) | [WorkspaceGroupUsersRequest](WorkspaceGroupUser#workspacegroupusersrequest) | [WorkspaceGroupUserInfo](WorkspaceGroupUser#workspacegroupuserinfo) |
-| [**remove**](./WorkspaceGroupUser#remove) | [WorkspaceGroupUsersRequest](WorkspaceGroupUser#workspacegroupusersrequest) | [WorkspaceGroupUserInfo](WorkspaceGroupUser#workspacegroupuserinfo) |
-| [**update_role**](./WorkspaceGroupUser#update_role) | [WorkspaceGroupUserUpdateRoleRequest](WorkspaceGroupUser#workspacegroupuserupdaterolerequest) | [WorkspaceGroupUserInfo](WorkspaceGroupUser#workspacegroupuserinfo) |
+| [**add**](./WorkspaceGroupUser#add) | [WorkspaceGroupUsersRequest](WorkspaceGroupUser#workspacegroupusersrequest) | [WorkspaceGroupInfo](WorkspaceGroupUser#workspacegroupinfo) |
+| [**remove**](./WorkspaceGroupUser#remove) | [WorkspaceGroupUsersRequest](WorkspaceGroupUser#workspacegroupusersrequest) | [WorkspaceGroupInfo](WorkspaceGroupUser#workspacegroupinfo) |
+| [**update_role**](./WorkspaceGroupUser#update_role) | [WorkspaceGroupUserUpdateRoleRequest](WorkspaceGroupUser#workspacegroupuserupdaterolerequest) | [WorkspaceGroupInfo](WorkspaceGroupUser#workspacegroupinfo) |
 | [**find**](./WorkspaceGroupUser#find) | [WorkspaceGroupUserFindRequest](WorkspaceGroupUser#workspacegroupuserfindrequest) | [WorkspaceGroupUsersSummaryInfo](WorkspaceGroupUser#workspacegroupuserssummaryinfo) |
-| [**get**](./WorkspaceGroupUser#get) | [WorkspaceGroupUserRequest](WorkspaceGroupUser#workspacegroupuserrequest) | [WorkspaceGroupUserInfo](WorkspaceGroupUser#workspacegroupuserinfo) |
-| [**list**](./WorkspaceGroupUser#list) | [WorkspaceGroupUserSearchQuery](WorkspaceGroupUser#workspacegroupusersearchquery) | [WorkspaceGroupUsersInfo](WorkspaceGroupUser#workspacegroupusersinfo) |
+| [**get**](./WorkspaceGroupUser#get) | [WorkspaceGroupUserRequest](WorkspaceGroupUser#workspacegroupuserrequest) | [WorkspaceGroupInfo](WorkspaceGroupUser#workspacegroupinfo) |
+| [**list**](./WorkspaceGroupUser#list) | [WorkspaceGroupUserSearchQuery](WorkspaceGroupUser#workspacegroupusersearchquery) | [WorkspaceGroupsInfo](WorkspaceGroupUser#workspacegroupsinfo) |
 | [**stat**](./WorkspaceGroupUser#stat) | [WorkspaceGroupUserStatQuery](WorkspaceGroupUser#workspacegroupuserstatquery) | [Struct](WorkspaceGroupUser#struct) |
 
 
@@ -177,35 +177,6 @@ bookFlatSection: true
 
     <br>
 
-### WorkspaceGroupUserInfo
-* **workspace_group_id** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **users** (UserWorkspaceGroup)  `Repeated`    `Required` 
-
-    
-* **tags** (Struct)   `Required` 
-
-    
-* **created_by** (string)   `Required` 
-
-    
-* **updated_by** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    
-* **updated_at** (string)   `Required` 
-
-    <br>
-
 ### WorkspaceGroupUserRequest
 * **workspace_group_id** (string)   `Required` 
 
@@ -255,14 +226,6 @@ bookFlatSection: true
 
     
 * **role_id** (string)   `Required` 
-
-    <br>
-
-### WorkspaceGroupUsersInfo
-* **results** (WorkspaceGroupUserInfo)  `Repeated`    `Required` 
-
-    
-* **total_count** (int32)   `Required` 
 
     <br>
 
