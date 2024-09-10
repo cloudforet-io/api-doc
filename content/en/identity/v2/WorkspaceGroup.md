@@ -250,6 +250,9 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **workspace_count** (int32)   `Required` 
+
+    
 * **users** (UserWorkspaceGroup)  `Repeated`    `Required` 
 
     
