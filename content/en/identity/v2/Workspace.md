@@ -319,6 +319,9 @@ bookFlatSection: true
     
 * **dormant_updated_at** (string)   `Required` 
 
+    
+* **changed_at** (string)   `Required` 
+
     <br>
 
 ### WorkspaceRequest
