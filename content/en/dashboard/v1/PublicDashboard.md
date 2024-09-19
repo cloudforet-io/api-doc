@@ -26,6 +26,7 @@ description of dashboard
 | :----- | :-------- | :-------- |
 | [**create**](./PublicDashboard#create) | [CreatePublicDashboardRequest](PublicDashboard#createpublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**update**](./PublicDashboard#update) | [UpdatePublicDashboardRequest](PublicDashboard#updatepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
+| [**change_folder**](./PublicDashboard#change_folder) | [ChangeFolderPublicDashboardRequest](PublicDashboard#changefolderpublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**share**](./PublicDashboard#share) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**unshare**](./PublicDashboard#unshare) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**delete**](./PublicDashboard#delete) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [Empty](PublicDashboard#empty) |
@@ -62,6 +63,23 @@ description of dashboard
 
 
 > **POST** /dashboard/v1/public-dashboard/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### change_folder
+
+
+
+
+
+> **POST** /dashboard/v1/public-dashboard/change-folder
 >
 
 
@@ -180,6 +198,14 @@ description of dashboard
 ## Message
 
 
+
+### ChangeFolderPublicDashboardRequest
+* **dashboard_id** (string)   `Required` 
+
+    
+* **folder_id** (string)  
+
+    <br>
 
 ### CreatePublicDashboardRequest
 * **name** (string)   `Required` 

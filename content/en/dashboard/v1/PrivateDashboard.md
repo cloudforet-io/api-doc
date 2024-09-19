@@ -26,6 +26,7 @@ description of dashboard
 | :----- | :-------- | :-------- |
 | [**create**](./PrivateDashboard#create) | [CreatePrivateDashboardRequest](PrivateDashboard#createprivatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
 | [**update**](./PrivateDashboard#update) | [UpdatePrivateDashboardRequest](PrivateDashboard#updateprivatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
+| [**change_folder**](./PrivateDashboard#change_folder) | [ChangeFolderPrivateDashboardRequest](PrivateDashboard#changefolderprivatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
 | [**delete**](./PrivateDashboard#delete) | [PrivateDashboardRequest](PrivateDashboard#privatedashboardrequest) | [Empty](PrivateDashboard#empty) |
 | [**get**](./PrivateDashboard#get) | [PrivateDashboardRequest](PrivateDashboard#privatedashboardrequest) | [PrivateDashboardInfo](PrivateDashboard#privatedashboardinfo) |
 | [**list**](./PrivateDashboard#list) | [PrivateDashboardQuery](PrivateDashboard#privatedashboardquery) | [PrivateDashboardsInfo](PrivateDashboard#privatedashboardsinfo) |
@@ -60,6 +61,23 @@ description of dashboard
 
 
 > **POST** /dashboard/v1/private-dashboard/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### change_folder
+
+
+
+
+
+> **POST** /dashboard/v1/private-dashboard/change-folder
 >
 
 
@@ -144,6 +162,14 @@ description of dashboard
 ## Message
 
 
+
+### ChangeFolderPrivateDashboardRequest
+* **dashboard_id** (string)   `Required` 
+
+    
+* **folder_id** (string)  
+
+    <br>
 
 ### CreatePrivateDashboardRequest
 * **name** (string)   `Required` 
