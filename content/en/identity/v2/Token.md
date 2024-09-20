@@ -80,9 +80,6 @@ bookFlatSection: true
 * **role_type** (RoleType)   `Required` 
 
     
-* **page_access** (string)  `Repeated`    `Required` 
-
-    
 * **domain_id** (string)   `Required` 
 
     
