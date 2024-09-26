@@ -278,7 +278,7 @@ description of dashboard
     <br>
 
 ### SharePublicFolderRequest
-* **dashboard_id** (string)   `Required` 
+* **folder_id** (string)   `Required` 
 
     
 * **scope** (DashboardScope)  
