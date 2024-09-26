@@ -27,7 +27,7 @@ description of dashboard
 | [**create**](./PublicDashboard#create) | [CreatePublicDashboardRequest](PublicDashboard#createpublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**update**](./PublicDashboard#update) | [UpdatePublicDashboardRequest](PublicDashboard#updatepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**change_folder**](./PublicDashboard#change_folder) | [ChangeFolderPublicDashboardRequest](PublicDashboard#changefolderpublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
-| [**share**](./PublicDashboard#share) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
+| [**share**](./PublicDashboard#share) | [SharePublicDashboardRequest](PublicDashboard#sharepublicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**unshare**](./PublicDashboard#unshare) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
 | [**delete**](./PublicDashboard#delete) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [Empty](PublicDashboard#empty) |
 | [**get**](./PublicDashboard#get) | [PublicDashboardRequest](PublicDashboard#publicdashboardrequest) | [PublicDashboardInfo](PublicDashboard#publicdashboardinfo) |
@@ -350,9 +350,6 @@ description of dashboard
 ### PublicDashboardRequest
 * **dashboard_id** (string)   `Required` 
 
-    
-* **scope** (DashboardScope)  
-
     <br>
 
 ### PublicDashboardStatQuery
@@ -365,6 +362,14 @@ description of dashboard
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### SharePublicDashboardRequest
+* **dashboard_id** (string)   `Required` 
+
+    
+* **scope** (DashboardScope)  
 
     <br>
 

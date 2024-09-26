@@ -26,7 +26,7 @@ description of dashboard
 | :----- | :-------- | :-------- |
 | [**create**](./PublicFolder#create) | [CreatePublicFolderRequest](PublicFolder#createpublicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
 | [**update**](./PublicFolder#update) | [UpdatePublicFolderRequest](PublicFolder#updatepublicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
-| [**share**](./PublicFolder#share) | [PublicFolderRequest](PublicFolder#publicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
+| [**share**](./PublicFolder#share) | [SharePublicFolderRequest](PublicFolder#sharepublicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
 | [**unshare**](./PublicFolder#unshare) | [PublicFolderRequest](PublicFolder#publicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
 | [**delete**](./PublicFolder#delete) | [PublicFolderRequest](PublicFolder#publicfolderrequest) | [Empty](PublicFolder#empty) |
 | [**get**](./PublicFolder#get) | [PublicFolderRequest](PublicFolder#publicfolderrequest) | [PublicFolderInfo](PublicFolder#publicfolderinfo) |
@@ -214,6 +214,9 @@ description of dashboard
 * **shared** (bool)   `Required` 
 
     
+* **scope** (FolderScope)   `Required` 
+
+    
 * **resource_group** (ResourceGroup)   `Required` 
 
     
@@ -243,6 +246,12 @@ description of dashboard
 * **name** (string)  
 
     
+* **shared** (bool)  
+
+    
+* **scope** (FolderScope)  
+
+    
 * **workspace_id** (string)  
 
     
@@ -265,6 +274,14 @@ description of dashboard
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### SharePublicFolderRequest
+* **dashboard_id** (string)   `Required` 
+
+    
+* **scope** (FolderScope)  
 
     <br>
 
