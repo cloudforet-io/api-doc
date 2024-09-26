@@ -214,7 +214,7 @@ description of dashboard
 * **shared** (bool)   `Required` 
 
     
-* **scope** (FolderScope)   `Required` 
+* **scope** (DashboardScope)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 
@@ -249,7 +249,7 @@ description of dashboard
 * **shared** (bool)  
 
     
-* **scope** (FolderScope)  
+* **scope** (DashboardScope)  
 
     
 * **workspace_id** (string)  
@@ -281,7 +281,7 @@ description of dashboard
 * **dashboard_id** (string)   `Required` 
 
     
-* **scope** (FolderScope)  
+* **scope** (DashboardScope)  
 
     <br>
 
