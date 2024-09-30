@@ -161,43 +161,77 @@ Creates a new CloudService. A CloudService instance is created based on data inc
 [CloudServiceInfo](#CLOUDSERVICEINFO)
 * **cloud_service_id** (string)   `Required` 
 
+  This id value is unique at each domain.
+
 * **name** (string)   `Required` 
+
+  Name of cloud resource from CSP like AWS, Azure, GCP
 
 * **state** (string)   `Required` 
 
+  State of cloud resource
+
 * **ip_addresses** (string)  `Repeated`   `Required` 
+
+  IP addresses of cloud resource having public IP
 
 * **account** (string)   `Required` 
 
+  Account ID of cloud resource
+
 * **instance_type** (string)   `Required` 
+
+  Instance type of cloud resource
 
 * **instance_size** (float)   `Required` 
 
+  Instance size of cloud resource
+
 * **cloud_service_type** (string)   `Required` 
+
+  Classification of cloud resource
 
 * **cloud_service_group** (string)   `Required` 
 
+  Group of cloud resource that is parent of cloud_service_type
+
 * **provider** (string)   `Required` 
+
+  Cloud Service provider like AWS, Azure, GCP
 
 * **data** (Struct)   `Required` 
 
+  Original data from CSP
+
 * **metadata** (Struct)   `Required` 
+
+  Metadata for Dynamic UI converting at SpaceONE
 
 * **reference** (CloudServiceReference)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
+  Tags from CSP
+
 * **tag_keys** (Struct)   `Required` 
 
 * **collection_info** (CollectionInfo)   `Required` 
+
+  Collection information
 
 * **region_code** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
+  Domain Id
+
 * **workspace_id** (string)   `Required` 
 
+  Workspace Id
+
 * **project_id** (string)   `Required` 
+
+  Project Id
 
 * **created_at** (string)   `Required` 
 
@@ -253,7 +287,12 @@ Creates a new CloudService. A CloudService instance is created based on data inc
        "external_link": "https://console.aws.amazon.com/kms/home?region=ap-northeast-1#/kms/defaultKeys/0drda5e1-c40f-45d7-a647-xxxxxxx/"
    },
    "tags": {
-       "a": "b"
+       "custom": {
+             "b" : "c"
+       },
+       "aws" : {
+             "env": "dev"
+       }
    },
    "collection_info": {
        "service_account_id": "sa-abcd1234",
@@ -361,43 +400,77 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
 [CloudServiceInfo](#CLOUDSERVICEINFO)
 * **cloud_service_id** (string)   `Required` 
 
+  This id value is unique at each domain.
+
 * **name** (string)   `Required` 
+
+  Name of cloud resource from CSP like AWS, Azure, GCP
 
 * **state** (string)   `Required` 
 
+  State of cloud resource
+
 * **ip_addresses** (string)  `Repeated`   `Required` 
+
+  IP addresses of cloud resource having public IP
 
 * **account** (string)   `Required` 
 
+  Account ID of cloud resource
+
 * **instance_type** (string)   `Required` 
+
+  Instance type of cloud resource
 
 * **instance_size** (float)   `Required` 
 
+  Instance size of cloud resource
+
 * **cloud_service_type** (string)   `Required` 
+
+  Classification of cloud resource
 
 * **cloud_service_group** (string)   `Required` 
 
+  Group of cloud resource that is parent of cloud_service_type
+
 * **provider** (string)   `Required` 
+
+  Cloud Service provider like AWS, Azure, GCP
 
 * **data** (Struct)   `Required` 
 
+  Original data from CSP
+
 * **metadata** (Struct)   `Required` 
+
+  Metadata for Dynamic UI converting at SpaceONE
 
 * **reference** (CloudServiceReference)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
+  Tags from CSP
+
 * **tag_keys** (Struct)   `Required` 
 
 * **collection_info** (CollectionInfo)   `Required` 
+
+  Collection information
 
 * **region_code** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
+  Domain Id
+
 * **workspace_id** (string)   `Required` 
 
+  Workspace Id
+
 * **project_id** (string)   `Required` 
+
+  Project Id
 
 * **created_at** (string)   `Required` 
 
@@ -453,7 +526,12 @@ Updates a specific CloudService. You can make changes in CloudService settings, 
        "external_link": "https://console.aws.amazon.com/kms/home?region=ap-northeast-1#/kms/defaultKeys/0drda5e1-c40f-45d7-a647-xxxxxxx/"
    },
    "tags": {
-       "a": "b"
+       "custom": {
+             "b" : "c"
+       },
+       "aws" : {
+             "env": "dev"
+       }
    },
    "collection_info": {
        "service_account_id": "sa-abcd1234",
@@ -561,43 +639,77 @@ Gets a specific CloudService. Prints detailed information about the CloudService
 [CloudServiceInfo](#CLOUDSERVICEINFO)
 * **cloud_service_id** (string)   `Required` 
 
+  This id value is unique at each domain.
+
 * **name** (string)   `Required` 
+
+  Name of cloud resource from CSP like AWS, Azure, GCP
 
 * **state** (string)   `Required` 
 
+  State of cloud resource
+
 * **ip_addresses** (string)  `Repeated`   `Required` 
+
+  IP addresses of cloud resource having public IP
 
 * **account** (string)   `Required` 
 
+  Account ID of cloud resource
+
 * **instance_type** (string)   `Required` 
+
+  Instance type of cloud resource
 
 * **instance_size** (float)   `Required` 
 
+  Instance size of cloud resource
+
 * **cloud_service_type** (string)   `Required` 
+
+  Classification of cloud resource
 
 * **cloud_service_group** (string)   `Required` 
 
+  Group of cloud resource that is parent of cloud_service_type
+
 * **provider** (string)   `Required` 
+
+  Cloud Service provider like AWS, Azure, GCP
 
 * **data** (Struct)   `Required` 
 
+  Original data from CSP
+
 * **metadata** (Struct)   `Required` 
+
+  Metadata for Dynamic UI converting at SpaceONE
 
 * **reference** (CloudServiceReference)   `Required` 
 
 * **tags** (Struct)   `Required` 
 
+  Tags from CSP
+
 * **tag_keys** (Struct)   `Required` 
 
 * **collection_info** (CollectionInfo)   `Required` 
+
+  Collection information
 
 * **region_code** (string)   `Required` 
 
 * **domain_id** (string)   `Required` 
 
+  Domain Id
+
 * **workspace_id** (string)   `Required` 
 
+  Workspace Id
+
 * **project_id** (string)   `Required` 
+
+  Project Id
 
 * **created_at** (string)   `Required` 
 
@@ -653,7 +765,12 @@ Gets a specific CloudService. Prints detailed information about the CloudService
        "external_link": "https://console.aws.amazon.com/kms/home?region=ap-northeast-1#/kms/defaultKeys/0drda5e1-c40f-45d7-a647-xxxxxxx/"
    },
    "tags": {
-       "a": "b"
+       "custom": {
+             "b" : "c"
+       },
+       "aws" : {
+             "env": "dev"
+       }
    },
    "collection_info": {
        "service_account_id": "sa-abcd1234",
@@ -928,38 +1045,62 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
 ### CloudServiceInfo
 * **cloud_service_id** (string)   `Required` 
 
+  *This id value is unique at each domain.*
+
     
 * **name** (string)   `Required` 
+
+  *Name of cloud resource from CSP like AWS, Azure, GCP*
 
     
 * **state** (string)   `Required` 
 
+  *State of cloud resource*
+
     
 * **ip_addresses** (string)  `Repeated`    `Required` 
+
+  *IP addresses of cloud resource having public IP*
 
     
 * **account** (string)   `Required` 
 
+  *Account ID of cloud resource*
+
     
 * **instance_type** (string)   `Required` 
+
+  *Instance type of cloud resource*
 
     
 * **instance_size** (float)   `Required` 
 
+  *Instance size of cloud resource*
+
     
 * **cloud_service_type** (string)   `Required` 
+
+  *Classification of cloud resource*
 
     
 * **cloud_service_group** (string)   `Required` 
 
+  *Group of cloud resource that is parent of cloud_service_type*
+
     
 * **provider** (string)   `Required` 
+
+  *Cloud Service provider like AWS, Azure, GCP*
 
     
 * **data** (Struct)   `Required` 
 
+  *Original data from CSP*
+
     
 * **metadata** (Struct)   `Required` 
+
+  *Metadata for Dynamic UI converting at SpaceONE*
 
     
 * **reference** (CloudServiceReference)   `Required` 
@@ -967,11 +1108,15 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
     
 * **tags** (Struct)   `Required` 
 
+  *Tags from CSP*
+
     
 * **tag_keys** (Struct)   `Required` 
 
     
 * **collection_info** (CollectionInfo)   `Required` 
+
+  *Collection information*
 
     
 * **region_code** (string)   `Required` 
@@ -979,11 +1124,17 @@ Gets a list of all CloudServices. You can use a query to get a filtered list of 
     
 * **domain_id** (string)   `Required` 
 
+  *Domain Id*
+
     
 * **workspace_id** (string)   `Required` 
 
+  *Workspace Id*
+
     
 * **project_id** (string)   `Required` 
+
+  *Project Id*
 
     
 * **created_at** (string)   `Required` 
