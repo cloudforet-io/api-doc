@@ -49,6 +49,24 @@ Unified Cost service is a service that provides unified cost based on the cost d
 
  {{< tabs " get " >}}
 
+ {{< tab "Request Example" >}}
+
+
+
+[UnifiedCostRequest](./UnifiedCost#unifiedcostrequest)
+
+* **unified_cost_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "unified_cost_id": "unified-cost-11153fceca11"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
  {{< tab "Response Example" >}}
@@ -166,6 +184,78 @@ Unified Cost service is a service that provides unified cost based on the cost d
 
 
 
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UnifiedCostQuery](./UnifiedCost#unifiedcostquery)
+
+* **query** (Query)  
+
+
+* **unified_cost_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[UnifiedCostsInfo](#UNIFIEDCOSTSINFO)
+* **results** (UnifiedCostInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "results": [
+ {
+   "unified_cost_id": "unified-cost-11153fceca11",
+   "cost": {
+     "KRW": 13000,
+     "USD": 1,
+     "JPY": 100
+   },
+  "billed_month": "2024-08",
+  "billed_year": "2024",
+  "exchange_date": "2024-08-14",
+  "exchange_source": "Yahoo Finance!",
+  "aggregation_date": "2024-08-15",
+  "currency": "USD",
+  "is_confirmed": true,
+  "provider": "aws",
+  "region_code": "AP2",
+  "region_key": "aws.AP2",
+  "product": "AmazonS3",
+  "data_source_name": "AWS",
+  "workspace_name": "SpaceONE",
+  "data_source_id": "ds-1acca85666c1",
+  "project_id": project-1acca85666c1,
+  "workspace_id": "workspace-1acca85666c1",
+  "domain_id": "domain-1acca85666c1",
+  "created_at": "2024-09-30T08:00:03.945Z"
+   }
+ ],
+ "total_count": 1
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -183,6 +273,34 @@ Unified Cost service is a service that provides unified cost based on the cost d
 
 
 
+ {{< tabs " analyze " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UnifiedCostAnalyzeQuery](./UnifiedCost#unifiedcostanalyzequery)
+
+* **query** (TimeSeriesAnalyzeQuery)   `Required` 
+
+
+* **is_confirmed** (bool)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -199,6 +317,31 @@ Unified Cost service is a service that provides unified cost based on the cost d
 
 
 
+
+ {{< tabs " stat " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UnifiedCostStatQuery](./UnifiedCost#unifiedcoststatquery)
+
+* **query** (StatisticsQuery)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
