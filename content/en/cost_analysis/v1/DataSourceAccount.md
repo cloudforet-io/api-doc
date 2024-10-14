@@ -49,13 +49,48 @@ Update a DataSourceAccount with the specified DataSourceAccount ID related to th
 
 
 
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateDataSourceAccountRequest](./DataSourceAccount#updatedatasourceaccountrequest)
+
+* **data_source_id** (string)   `Required` 
+
+
+* **account_id** (string)   `Required` 
+
+  *account_id is the unique identifier of each CSP account.(e.g. Azure Tenant ID)*
+
+
+* **workspace_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+   "data_source_id": "ds-faaa11aa1111",
+   "account_id": "111069360300",
+   "workspace_id": "ws-aaaa11aa1111"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### reset
 
-
+Reset a DataSourceAccount state and linked workspace with the specified DataSourceAccount ID related to the DataSource.
 
 
 
@@ -65,6 +100,43 @@ Update a DataSourceAccount with the specified DataSourceAccount ID related to th
 
 
 
+
+ {{< tabs " reset " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ResetDataSourceAccountRequest](./DataSourceAccount#resetdatasourceaccountrequest)
+
+* **data_source_id** (string)   `Required` 
+
+  *data_source_id is the unique identifier of each data source.*
+
+
+* **account_id** (string)  
+
+
+* **reset_sync** (bool)  
+
+  *if sync_state is true, it will reset the sync state of the data source account.*
+
+
+
+
+
+{{< highlight json >}}
+{
+   "data_source_id": "ds-faaa11aa1111",
+   "account_id": "111069360300",
+   "sync_state": true
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -99,6 +171,46 @@ Get a DataSourceAccount with the specified DataSourceAccount ID related to the D
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[DataSourceAccountQuery](./DataSourceAccount#datasourceaccountquery)
+
+* **query** (Query)  
+
+
+* **data_source_id** (string)  
+
+
+* **account_id** (string)  
+
+
+* **workspace_id** (string)  
+
+
+* **project_id** (string)  
+
+
+* **service_account_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -238,8 +350,15 @@ Get a DataSourceAccount with the specified DataSourceAccount ID related to the D
 ### ResetDataSourceAccountRequest
 * **data_source_id** (string)   `Required` 
 
+  *data_source_id is the unique identifier of each data source.*
+
     
 * **account_id** (string)  
+
+    
+* **reset_sync** (bool)  
+
+  *if sync_state is true, it will reset the sync state of the data source account.*
 
     <br>
 
@@ -253,11 +372,5 @@ Get a DataSourceAccount with the specified DataSourceAccount ID related to the D
 
     
 * **workspace_id** (string)  
-
-    
-* **project_id** (string)  
-
-    
-* **service_account_id** (string)  
 
     <br>
