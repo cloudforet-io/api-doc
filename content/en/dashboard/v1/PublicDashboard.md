@@ -223,6 +223,9 @@ description of dashboard
 * **vars** (Struct)  
 
     
+* **vars_schema** (Struct)  
+
+    
 * **options** (Struct)  
 
     
@@ -276,6 +279,9 @@ description of dashboard
 
     
 * **vars** (Struct)   `Required` 
+
+    
+* **vars_schema** (Struct)   `Required` 
 
     
 * **options** (Struct)   `Required` 
@@ -387,6 +393,9 @@ description of dashboard
 
     
 * **vars** (Struct)  
+
+    
+* **vars_schema** (Struct)  
 
     
 * **options** (Struct)  
