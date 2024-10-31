@@ -27,9 +27,9 @@ note: Administrator must register User first.
 | :----- | :-------- | :-------- |
 | [**create**](./User#create) | [CreateUserRequest](User#createuserrequest) | [UserInfo](User#userinfo) |
 | [**update**](./User#update) | [UpdateUserRequest](User#updateuserrequest) | [UserInfo](User#userinfo) |
-| [**verify_email**](./User#verify_email) | [VerifyUserEmailRequest](User#verifyuseremailrequest) | [Empty](User#empty) |
-| [**disable_mfa**](./User#disable_mfa) | [DisableUserMFARequest](User#disableusermfarequest) | [UserInfo](User#userinfo) |
-| [**set_required_actions**](./User#set_required_actions) | [SetRequiredActionsRequest](User#setrequiredactionsrequest) | [UserInfo](User#userinfo) |
+| [**verify_email**](./User#verify_email) | [VerifyEmailUserRequest](User#verifyemailuserrequest) | [Empty](User#empty) |
+| [**disable_mfa**](./User#disable_mfa) | [DisableMFAUserRequest](User#disablemfauserrequest) | [UserInfo](User#userinfo) |
+| [**set_required_actions**](./User#set_required_actions) | [SetRequiredActionsUserRequest](User#setrequiredactionsuserrequest) | [UserInfo](User#userinfo) |
 | [**enable**](./User#enable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**disable**](./User#disable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**delete**](./User#delete) | [UserRequest](User#userrequest) | [Empty](User#empty) |
@@ -160,7 +160,7 @@ Update user info by given user_id
 
 
 
-[VerifyUserEmailRequest](./User#verifyuseremailrequest)
+[VerifyEmailUserRequest](./User#verifyemailuserrequest)
 
 * **user_id** (string)   `Required` 
 
@@ -206,7 +206,7 @@ Disable MFA for user. If this api is called, send email to user.
 
 
 
-[DisableUserMFARequest](./User#disableusermfarequest)
+[DisableMFAUserRequest](./User#disablemfauserrequest)
 
 * **user_id** (string)   `Required` 
 
@@ -248,7 +248,7 @@ Disable MFA for user. If this api is called, send email to user.
 
 
 
-[SetRequiredActionsRequest](./User#setrequiredactionsrequest)
+[SetRequiredActionsUserRequest](./User#setrequiredactionsuserrequest)
 
 * **user_id** (string)   `Required` 
 
@@ -521,7 +521,7 @@ Disable MFA for user. If this api is called, send email to user.
 
     <br>
 
-### DisableUserMFARequest
+### DisableMFAUserRequest
 * **user_id** (string)   `Required` 
 
     <br>
@@ -537,7 +537,7 @@ Disable MFA for user. If this api is called, send email to user.
 
     <br>
 
-### SetRequiredActionsRequest
+### SetRequiredActionsUserRequest
 * **user_id** (string)   `Required` 
 
     
@@ -608,6 +608,9 @@ Disable MFA for user. If this api is called, send email to user.
 * **required_actions** (UserRequiredAction)  `Repeated`    `Required` 
 
     
+* **refresh_timeout** (int32)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
@@ -659,7 +662,7 @@ Disable MFA for user. If this api is called, send email to user.
 
     <br>
 
-### VerifyUserEmailRequest
+### VerifyEmailUserRequest
 * **user_id** (string)   `Required` 
 
     
