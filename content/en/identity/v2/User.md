@@ -30,6 +30,7 @@ note: Administrator must register User first.
 | [**verify_email**](./User#verify_email) | [VerifyEmailUserRequest](User#verifyemailuserrequest) | [Empty](User#empty) |
 | [**disable_mfa**](./User#disable_mfa) | [DisableMFAUserRequest](User#disablemfauserrequest) | [UserInfo](User#userinfo) |
 | [**set_required_actions**](./User#set_required_actions) | [SetRequiredActionsUserRequest](User#setrequiredactionsuserrequest) | [UserInfo](User#userinfo) |
+| [**set_refresh_timeout**](./User#set_refresh_timeout) | [SetRefreshTimeout](User#setrefreshtimeout) | [UserInfo](User#userinfo) |
 | [**enable**](./User#enable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**disable**](./User#disable) | [UserRequest](User#userrequest) | [UserInfo](User#userinfo) |
 | [**delete**](./User#delete) | [UserRequest](User#userrequest) | [Empty](User#empty) |
@@ -263,6 +264,53 @@ Disable MFA for user. If this api is called, send email to user.
 {
  "user_id": "example@cloudforet.com",
  "required_actions": ["UPDATE_PASSWORD"]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### set_refresh_timeout
+
+Sets the user's refresh token timeout. This API can only be used by users with the `DOMAIN_ADMIN` role.
+Min value is `1800` seconds and max value is `2592000` seconds
+
+
+
+> **POST** /identity/v2/user/set-refresh-timeout
+>
+
+
+
+
+
+ {{< tabs " set_refresh_timeout " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[SetRefreshTimeout](./User#setrefreshtimeout)
+
+* **user_id** (string)   `Required` 
+
+
+* **refresh_timeout** (int32)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+  "user_id": "wony@cloudforet.io"
+  "refresh_token_timout": 10800
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -534,6 +582,14 @@ Disable MFA for user. If this api is called, send email to user.
 
     
 * **options** (Struct)   `Required` 
+
+    <br>
+
+### SetRefreshTimeout
+* **user_id** (string)   `Required` 
+
+    
+* **refresh_timeout** (int32)   `Required` 
 
     <br>
 

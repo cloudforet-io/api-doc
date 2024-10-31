@@ -25,7 +25,6 @@ bookFlatSection: true
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**update**](./UserProfile#update) | [UpdateUserProfileRequest](UserProfile#updateuserprofilerequest) | [UserInfo](UserProfile#userinfo) |
-| [**set_refresh_timeout**](./UserProfile#set_refresh_timeout) | [SetRefreshTimeout](UserProfile#setrefreshtimeout) | [UserInfo](UserProfile#userinfo) |
 | [**verify_email**](./UserProfile#verify_email) | [VerifyEmailRequest](UserProfile#verifyemailrequest) | [Empty](UserProfile#empty) |
 | [**confirm_email**](./UserProfile#confirm_email) | [ConfirmEmailRequest](UserProfile#confirmemailrequest) | [UserInfo](UserProfile#userinfo) |
 | [**reset_password**](./UserProfile#reset_password) | [UserPasswordResetRequest](UserProfile#userpasswordresetrequest) | [Empty](UserProfile#empty) |
@@ -53,49 +52,6 @@ bookFlatSection: true
 
 
 
-
-
-    
-<br>
-
-### set_refresh_timeout
-
-Sets the user's refresh token timeout. This API can only be used by users with the `DOMAIN_ADMIN` role.
-Min value is `1800` seconds and max value is `2592000` seconds
-
-
-
-> **POST** /identity/v2/user-profile/set-refresh-timeout
->
-
-
-
-
-
- {{< tabs " set_refresh_timeout " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[SetRefreshTimeout](./UserProfile#setrefreshtimeout)
-
-* **refresh_timeout** (int32)   `Required` 
-
-
-
-
-
-{{< highlight json >}}
-{
-  "refresh_token_timout": 604800
-}
-{{< /highlight >}}
-{{< /tab >}}
-
-
-
-{{< /tabs >}}
 
 
     
@@ -513,11 +469,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### SetRefreshTimeout
-* **refresh_timeout** (int32)   `Required` 
 
     <br>
 
