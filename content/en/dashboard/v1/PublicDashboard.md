@@ -229,9 +229,6 @@ description of dashboard
 * **options** (Struct)  
 
     
-* **domain_options** (Struct)  
-
-    
 * **variables** (Struct)  
 
     
@@ -288,9 +285,6 @@ description of dashboard
 
     
 * **options** (Struct)   `Required` 
-
-    
-* **domain_options** (Struct)   `Required` 
 
     
 * **variables** (Struct)   `Required` 
@@ -405,9 +399,6 @@ description of dashboard
 
     
 * **options** (Struct)  
-
-    
-* **domain_options** (Struct)  
 
     
 * **variables** (Struct)  
