@@ -293,6 +293,9 @@ description of data table
 * **name** (string)   `Required` 
 
     
+* **state** (State)   `Required` 
+
+    
 * **data_type** (DataType)   `Required` 
 
     
@@ -312,6 +315,9 @@ description of data table
 
     
 * **data_info** (Struct)   `Required` 
+
+    
+* **error_message** (string)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 
