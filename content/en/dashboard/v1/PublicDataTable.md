@@ -208,6 +208,9 @@ description of data table
 * **name** (string)  
 
     
+* **vars** (Struct)  
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -277,6 +280,9 @@ description of data table
 
     
 * **page** (Page)  
+
+    
+* **vars** (Struct)  
 
     <br>
 
@@ -415,6 +421,9 @@ description of data table
 * **name** (string)  
 
     
+* **vars** (Struct)  
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -427,6 +436,9 @@ description of data table
 
     
 * **options** (Struct)  
+
+    
+* **vars** (Struct)  
 
     
 * **tags** (Struct)  
