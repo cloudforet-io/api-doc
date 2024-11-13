@@ -52,6 +52,81 @@ bookFlatSection: true
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateProjectGroupRequest](./ProjectGroup#createprojectgrouprequest)
+
+* **name** (string)   `Required` 
+
+
+* **tags** (Struct)  
+
+
+* **parent_group_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "name": "Cloudforet Company",
+ "tags": {
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectGroupInfo](#PROJECTGROUPINFO)
+* **project_group_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **parent_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_group_id": "pg-7120aabb662c",
+   "name": "Cloudforet Core Team",
+   "tags": {},
+   "domain_id": "domain-186446b1516b",
+   "workspace_id": "workspace-1a02ebcb3eb2",
+   "parent_group_id": "pg-10efea238292",
+   "created_at": "2024-07-12T03:31:02.222Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -68,6 +143,80 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateProjectGroupRequest](./ProjectGroup#updateprojectgrouprequest)
+
+* **project_group_id** (string)   `Required` 
+
+
+* **name** (string)  
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_group_id": "pg-7120aabb662c",
+ "name": "Cloudforet Core Team"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectGroupInfo](#PROJECTGROUPINFO)
+* **project_group_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **parent_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_group_id": "pg-7120aabb662c",
+   "name": "Cloudforet Core Team",
+   "tags": {},
+   "domain_id": "domain-186446b1516b",
+   "workspace_id": "workspace-1a02ebcb3eb2",
+   "parent_group_id": "pg-10efea238292",
+   "created_at": "2024-07-12T03:31:02.222Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -86,6 +235,77 @@ bookFlatSection: true
 
 
 
+ {{< tabs " change_parent_group " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ChangeParentGroupRequest](./ProjectGroup#changeparentgrouprequest)
+
+* **project_group_id** (string)   `Required` 
+
+
+* **parent_group_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_group_id": "pg-7120aabb662c",
+ "parent_group_id": "pg-10efea238292"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectGroupInfo](#PROJECTGROUPINFO)
+* **project_group_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **parent_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_group_id": "pg-7120aabb662c",
+   "name": "Cloudforet Core Team",
+   "tags": {},
+   "domain_id": "domain-186446b1516b",
+   "workspace_id": "workspace-1a02ebcb3eb2",
+   "parent_group_id": "pg-10efea238292",
+   "created_at": "2024-07-12T03:31:02.222Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -102,6 +322,31 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProjectGroupRequest](./ProjectGroup#projectgrouprequest)
+
+* **project_group_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_group_id": "pg-7120aabb662c"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -120,6 +365,77 @@ bookFlatSection: true
 
 
 
+ {{< tabs " add_users " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UsersProjectGroupRequest](./ProjectGroup#usersprojectgrouprequest)
+
+* **project_group_id** (string)   `Required` 
+
+
+* **users** (string)  `Repeated`    `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "project_group_id": "pg-7120aabb662c",
+   "users": ["wonny@cloudforet.io", "bolby@cloudforet.io"]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectGroupInfo](#PROJECTGROUPINFO)
+* **project_group_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **parent_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_group_id": "pg-7120aabb662c",
+   "name": "Cloudforet Core Team",
+   "tags": {},
+   "domain_id": "domain-186446b1516b",
+   "workspace_id": "workspace-1a02ebcb3eb2",
+   "parent_group_id": "pg-10efea238292",
+   "created_at": "2024-07-12T03:31:02.222Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -136,6 +452,77 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " remove_users " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UsersProjectGroupRequest](./ProjectGroup#usersprojectgrouprequest)
+
+* **project_group_id** (string)   `Required` 
+
+
+* **users** (string)  `Repeated`    `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "project_group_id": "pg-7120aabb662c",
+   "users": ["wonny@cloudforet.io", "bolby@cloudforet.io"]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectGroupInfo](#PROJECTGROUPINFO)
+* **project_group_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **parent_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_group_id": "pg-7120aabb662c",
+   "name": "Cloudforet Core Team",
+   "tags": {},
+   "domain_id": "domain-186446b1516b",
+   "workspace_id": "workspace-1a02ebcb3eb2",
+   "parent_group_id": "pg-10efea238292",
+   "created_at": "2024-07-12T03:31:02.222Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -154,6 +541,73 @@ bookFlatSection: true
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProjectGroupRequest](./ProjectGroup#projectgrouprequest)
+
+* **project_group_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_group_id": "pg-7120aabb662c"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectGroupInfo](#PROJECTGROUPINFO)
+* **project_group_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **parent_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "project_group_id": "pg-7120aabb662c",
+   "name": "Cloudforet Core Team",
+   "tags": {},
+   "domain_id": "domain-186446b1516b",
+   "workspace_id": "workspace-1a02ebcb3eb2",
+   "parent_group_id": "pg-10efea238292",
+   "created_at": "2024-07-12T03:31:02.222Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -170,6 +624,75 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProjectGroupSearchQuery](./ProjectGroup#projectgroupsearchquery)
+
+* **query** (Query)  
+
+
+* **project_group_id** (string)  
+
+
+* **name** (string)  
+
+
+* **workspace_id** (string)  
+
+
+* **parent_group_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+   "query": {
+       "page": {
+           "start":1,
+           "limit":10
+       }
+   }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectGroupsInfo](#PROJECTGROUPSINFO)
+* **results** (ProjectGroupInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "results": [
+       {
+           "project_group_id": "pg-7120aabb662c",
+           "name": "Cloudforet Core Team",
+           "tags": {},
+           "domain_id": "domain-186446b1516b",
+           "workspace_id": "workspace-1a02ebcb3eb2",
+           "parent_group_id": "pg-10efea238292",
+           "created_at": "2024-07-12T03:31:02.222Z"
+       }
+   ],
+   "total_count": 1
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     

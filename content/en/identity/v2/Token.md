@@ -45,6 +45,52 @@ bookFlatSection: true
 
 
 
+ {{< tabs " issue " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[IssueTokenRequest](./Token#issuetokenrequest)
+
+* **credentials** (Struct)   `Required` 
+
+
+* **domain_id** (string)   `Required` 
+
+
+* **auth_type** (AuthType)  
+
+  *LOCAL, EXTERNAL*
+
+
+* **timeout** (int32)  
+
+
+* **verify_code** (string)  
+
+  *if MFA is enabled, verify_code is required*
+
+
+
+
+
+{{< highlight json >}}
+{
+ "credentials": {
+     "user_id": "wonny@cloudforet.io",
+     "password": "Password0*"
+ },
+ "auth_type": "LOCAL",
+ "domain_id": "domain-123123a"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -61,6 +107,52 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " grant " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GrantTokenRequest](./Token#granttokenrequest)
+
+* **grant_type** (GrantType)   `Required` 
+
+
+* **token** (string)   `Required` 
+
+
+* **scope** (Scope)   `Required` 
+
+
+* **timeout** (int32)  
+
+
+* **permissions** (string)  `Repeated`   
+
+
+* **domain_id** (string)  
+
+
+* **workspace_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "grant_type": "REFRESH_TOKEN",
+ "token": "your_refresh_token_from_issue",
+ "scope": "DOMAIN",
+ "domain_id": "domain-123123a"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     

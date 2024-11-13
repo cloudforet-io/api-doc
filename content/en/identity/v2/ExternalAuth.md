@@ -35,7 +35,7 @@ bookFlatSection: true
 
 ### set
 
-
+Google OAuth2, Keycloak OIDC, SAML are supported as external authentication.
 
 
 
@@ -46,13 +46,85 @@ bookFlatSection: true
 
 
 
+ {{< tabs " set " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[SetExternalAuthRequest](./ExternalAuth#setexternalauthrequest)
+
+* **plugin_info** (PluginRequest)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "plugin_id": "plugin-googleoauth2-identity-auth",
+ "upgrade_mode": "AUTO",
+ "options": {
+     "client_id": "client_id",
+     "protocol": "oauth2",
+     "identity_provider": "google",
+     "validator": "gmail.com"
+  }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ExternalAuthInfo](#EXTERNALAUTHINFO)
+* **domain_id** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-123456",
+ "plugin_info": {
+     "metadata": {
+         "authorization_endpoint": "https://www.googleapis.com",
+         "client_id": "client_id",
+         "identity_provider": "google",
+         "protocol": "oauth2",
+         "token_endpoint": "https://www.googleapis.com/oauth2/v2/tokeninfo",
+         "userinfo_endpoint": "https://www.googleapis.com/oauth2/v3/userinfo",
+         "validator": "gmail.com"
+     },
+     "options": {
+         "client_id": "client_id",
+         "identity_provider": "google",
+         "protocol": "oauth2",
+         "validator": "gmail.com"
+     },
+     "plugin_id": "plugin-googleoauth2-identity-auth",
+     "upgrade_mode": "AUTO",
+     "version": "1.1.3"
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### unset
 
-
+Unset external authentication information.
 
 
 
@@ -63,13 +135,74 @@ bookFlatSection: true
 
 
 
+ {{< tabs " unset " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ExternalAuthRequest](./ExternalAuth#externalauthrequest)
+
+
+
+
+{{< highlight json >}}
+{
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ExternalAuthInfo](#EXTERNALAUTHINFO)
+* **domain_id** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-123456",
+ "plugin_info": {
+     "metadata": {
+         "authorization_endpoint": "https://www.googleapis.com",
+         "client_id": "client_id",
+         "identity_provider": "google",
+         "protocol": "oauth2",
+         "token_endpoint": "https://www.googleapis.com/oauth2/v2/tokeninfo",
+         "userinfo_endpoint": "https://www.googleapis.com/oauth2/v3/userinfo",
+         "validator": "gmail.com"
+     },
+     "options": {
+         "client_id": "client_id",
+         "identity_provider": "google",
+         "protocol": "oauth2",
+         "validator": "gmail.com"
+     },
+     "plugin_id": "plugin-googleoauth2-identity-auth",
+     "upgrade_mode": "AUTO",
+     "version": "1.1.3"
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
 
 ### get
 
-
+Get external authentication information.
 
 
 
@@ -79,6 +212,67 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ExternalAuthRequest](./ExternalAuth#externalauthrequest)
+
+
+
+
+{{< highlight json >}}
+{
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ExternalAuthInfo](#EXTERNALAUTHINFO)
+* **domain_id** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-123456",
+ "plugin_info": {
+     "metadata": {
+         "authorization_endpoint": "https://www.googleapis.com",
+         "client_id": "client_id",
+         "identity_provider": "google",
+         "protocol": "oauth2",
+         "token_endpoint": "https://www.googleapis.com/oauth2/v2/tokeninfo",
+         "userinfo_endpoint": "https://www.googleapis.com/oauth2/v3/userinfo",
+         "validator": "gmail.com"
+     },
+     "options": {
+         "client_id": "client_id",
+         "identity_provider": "google",
+         "protocol": "oauth2",
+         "validator": "gmail.com"
+     },
+     "plugin_id": "plugin-googleoauth2-identity-auth",
+     "upgrade_mode": "AUTO",
+     "version": "1.1.3"
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
