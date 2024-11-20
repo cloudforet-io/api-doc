@@ -185,6 +185,9 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
+* **description** (string)  
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -196,6 +199,9 @@ bookFlatSection: true
 * **name** (string)  
 
     
+* **description** (string)  
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -205,6 +211,9 @@ bookFlatSection: true
 
     
 * **name** (string)   `Required` 
+
+    
+* **description** (string)   `Required` 
 
     
 * **users** (string)  `Repeated`    `Required` 
