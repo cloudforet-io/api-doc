@@ -1,43 +1,33 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/schema.proto",
+      "name": "spaceone/api/opsflow/v1/comment.proto",
       "description": "",
-      "package": "spaceone.api.identity.v2",
-      "hasEnums": true,
+      "package": "spaceone.api.opsflow.v1",
+      "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
       "enums": [
         {
-          "name": "SchemaType",
-          "longName": "SchemaType",
-          "fullName": "spaceone.api.identity.v2.SchemaType",
+          "name": "CommentType",
+          "longName": "CommentInfo.CommentType",
+          "fullName": "spaceone.api.opsflow.v1.CommentInfo.CommentType",
           "description": "",
           "values": [
             {
-              "name": "SCHEMA_TYPE_NONE",
+              "name": "COMMENT_TYPE_NONE",
               "number": "0",
               "description": ""
             },
             {
-              "name": "SERVICE_ACCOUNT",
+              "name": "TASK_DESCRIPTION",
               "number": "1",
               "description": ""
             },
             {
-              "name": "TRUSTED_ACCOUNT",
+              "name": "COMMENT",
               "number": "2",
-              "description": ""
-            },
-            {
-              "name": "SECRET",
-              "number": "3",
-              "description": ""
-            },
-            {
-              "name": "TRUSTING_SECRET",
-              "number": "4",
               "description": ""
             }
           ]
@@ -46,17 +36,17 @@
       "extensions": [],
       "messages": [
         {
-          "name": "CreateSchemaRequest",
-          "longName": "CreateSchemaRequest",
-          "fullName": "spaceone.api.identity.v2.CreateSchemaRequest",
-          "description": "{\n \"schema_id\": \"aws-secret-access-key\",\n \"name\": \"AWS Access Key\",\n \"schema_type\": \"SECRET\",\n \"provider\": \"aws\"\n}",
+          "name": "CommentCreateRequest",
+          "longName": "CommentCreateRequest",
+          "fullName": "spaceone.api.opsflow.v1.CommentCreateRequest",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "schema_id",
+              "name": "task_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -68,7 +58,7 @@
               "defaultValue": ""
             },
             {
-              "name": "name",
+              "name": "comment",
               "description": "",
               "label": "",
               "type": "string",
@@ -80,72 +70,12 @@
               "defaultValue": ""
             },
             {
-              "name": "schema_type",
-              "description": "",
-              "label": "",
-              "type": "SchemaType",
-              "longType": "SchemaType",
-              "fullType": "spaceone.api.identity.v2.SchemaType",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "schema",
+              "name": "mentions",
               "description": "+optional",
               "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "provider",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "related_schemas",
-              "description": "+optional",
-              "label": "repeated",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "options",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
+              "type": "Mentions",
+              "longType": "Mentions",
+              "fullType": "spaceone.api.opsflow.v1.Mentions",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -154,17 +84,17 @@
           ]
         },
         {
-          "name": "SchemaInfo",
-          "longName": "SchemaInfo",
-          "fullName": "spaceone.api.identity.v2.SchemaInfo",
-          "description": "{\n \"created_at\": \"2024-11-18T01:59:00.407Z\",\n \"domain_id\": \"domain-a1b2c3d4e5f6\",\n \"name\": \"AWS Access Key\",\n \"provider\": \"aws\",\n \"schema\": {\n   \"order\": [\n     \"aws_access_key_id\",\n     \"aws_secret_access_key\"\n   ],\n   \"properties\": {\n     \"aws_access_key_id\": {\n       \"format\": \"password\",\n       \"minLength\": 4.0,\n       \"title\": \"AWS Access Key\",\n       \"type\": \"string\"\n     },\n     \"aws_secret_access_key\": {\n       \"format\": \"password\",\n       \"minLength\": 4.0,\n       \"title\": \"AWS Secret Key\",\n       \"type\": \"string\"\n     }\n   },\n   \"required\": [\n     \"aws_access_key_id\",\n     \"aws_secret_access_key\"\n   ],\n   \"type\": \"object\"\n },\n \"schema_id\": \"aws-secret-access-key\",\n \"schema_type\": \"SECRET\",\n \"updated_at\": \"2024-11-18T02:00:45.792Z\"\n}",
+          "name": "CommentInfo",
+          "longName": "CommentInfo",
+          "fullName": "spaceone.api.opsflow.v1.CommentInfo",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "schema_id",
+              "name": "comment_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -176,7 +106,7 @@
               "defaultValue": ""
             },
             {
-              "name": "name",
+              "name": "comment",
               "description": "",
               "label": "",
               "type": "string",
@@ -188,79 +118,19 @@
               "defaultValue": ""
             },
             {
-              "name": "schema_type",
+              "name": "comment_type",
               "description": "",
               "label": "",
-              "type": "SchemaType",
-              "longType": "SchemaType",
-              "fullType": "spaceone.api.identity.v2.SchemaType",
+              "type": "CommentType",
+              "longType": "CommentInfo.CommentType",
+              "fullType": "spaceone.api.opsflow.v1.CommentInfo.CommentType",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "schema",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "provider",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "related_schemas",
-              "description": "",
-              "label": "repeated",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "options",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "is_managed",
+              "name": "is_edited",
               "description": "",
               "label": "",
               "type": "bool",
@@ -272,7 +142,55 @@
               "defaultValue": ""
             },
             {
+              "name": "mentions",
+              "description": "",
+              "label": "",
+              "type": "Mentions",
+              "longType": "Mentions",
+              "fullType": "spaceone.api.opsflow.v1.Mentions",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
               "name": "domain_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "workspace_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "project_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "task_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -310,17 +228,17 @@
           ]
         },
         {
-          "name": "SchemaRequest",
-          "longName": "SchemaRequest",
-          "fullName": "spaceone.api.identity.v2.SchemaRequest",
-          "description": "{\n \"schema_id\": \"aws-secret-access-key\"\n}",
+          "name": "CommentRequest",
+          "longName": "CommentRequest",
+          "fullName": "spaceone.api.opsflow.v1.CommentRequest",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "schema_id",
+              "name": "comment_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -334,10 +252,10 @@
           ]
         },
         {
-          "name": "SchemaSearchQuery",
-          "longName": "SchemaSearchQuery",
-          "fullName": "spaceone.api.identity.v2.SchemaSearchQuery",
-          "description": "{\n \"provider\": \"aws\",\n \"query\": {\n   \"page\": {\n     \"start\": 1,\n     \"limit\": 10\n   },\n   \"sort\": [\n     {\n       \"key\": \"created_at\",\n       \"desc\": true\n     }\n   ]\n }\n}",
+          "name": "CommentSearchQuery",
+          "longName": "CommentSearchQuery",
+          "fullName": "spaceone.api.opsflow.v1.CommentSearchQuery",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -356,7 +274,7 @@
               "defaultValue": ""
             },
             {
-              "name": "schema_id",
+              "name": "task_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -368,7 +286,7 @@
               "defaultValue": ""
             },
             {
-              "name": "name",
+              "name": "comment_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -380,19 +298,19 @@
               "defaultValue": ""
             },
             {
-              "name": "schema_type",
+              "name": "comment_type",
               "description": "+optional",
               "label": "",
-              "type": "SchemaType",
-              "longType": "SchemaType",
-              "fullType": "spaceone.api.identity.v2.SchemaType",
+              "type": "CommentType",
+              "longType": "CommentInfo.CommentType",
+              "fullType": "spaceone.api.opsflow.v1.CommentInfo.CommentType",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "provider",
+              "name": "user_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -404,7 +322,7 @@
               "defaultValue": ""
             },
             {
-              "name": "related_schema_id",
+              "name": "user_group_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -416,12 +334,24 @@
               "defaultValue": ""
             },
             {
-              "name": "is_managed",
+              "name": "workspace_id",
               "description": "+optional",
               "label": "",
-              "type": "bool",
-              "longType": "bool",
-              "fullType": "bool",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "project_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -430,9 +360,9 @@
           ]
         },
         {
-          "name": "SchemaStatQuery",
-          "longName": "SchemaStatQuery",
-          "fullName": "spaceone.api.identity.v2.SchemaStatQuery",
+          "name": "CommentStatQuery",
+          "longName": "CommentStatQuery",
+          "fullName": "spaceone.api.opsflow.v1.CommentStatQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -454,10 +384,58 @@
           ]
         },
         {
-          "name": "SchemasInfo",
-          "longName": "SchemasInfo",
-          "fullName": "spaceone.api.identity.v2.SchemasInfo",
-          "description": "{\n \"results\": [\n   {\n     \"created_at\": \"2024-11-18T02:08:10.216Z\",\n     \"domain_id\": \"domain-a1b2c3d4e5f6\",\n     \"name\": \"AWS Trusted Account\",\n     \"provider\": \"aws\",\n     \"schema\": {\n       \"properties\": {\n         \"account_id\": {\n           \"minLength\": 4.0,\n           \"title\": \"Account ID\",\n           \"type\": \"string\"\n         }\n       },\n       \"required\": [\n         \"account_id\"\n       ],\n       \"type\": \"object\"\n     },\n     \"schema_id\": \"aws-trusted-account\",\n     \"schema_type\": \"TRUSTED_ACCOUNT\",\n     \"updated_at\": \"2024-11-18T02:08:10.216Z\"\n   },\n   {\n     \"created_at\": \"2024-11-18T01:59:00.407Z\",\n     \"domain_id\": \"domain-a1b2c3d4e5f6\",\n     \"name\": \"AWS Access Key\",\n     \"provider\": \"aws\",\n     \"schema\": {\n       \"order\": [\n         \"aws_access_key_id\",\n         \"aws_secret_access_key\"\n       ],\n       \"properties\": {\n         \"aws_access_key_id\": {\n           \"format\": \"password\",\n           \"minLength\": 4.0,\n           \"title\": \"AWS Access Key\",\n           \"type\": \"string\"\n         },\n         \"aws_secret_access_key\": {\n           \"format\": \"password\",\n           \"minLength\": 4.0,\n           \"title\": \"AWS Secret Key\",\n           \"type\": \"string\"\n         }\n       },\n       \"required\": [\n         \"aws_access_key_id\",\n         \"aws_secret_access_key\"\n       ],\n       \"type\": \"object\"\n     },\n     \"schema_id\": \"aws-secret-access-key\",\n     \"schema_type\": \"SECRET\",\n     \"updated_at\": \"2024-11-18T02:00:45.792Z\"\n   }\n ],\n \"total_count\": 2\n}",
+          "name": "CommentUpdateRequest",
+          "longName": "CommentUpdateRequest",
+          "fullName": "spaceone.api.opsflow.v1.CommentUpdateRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "comment_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "comment",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "mentions",
+              "description": "+optional",
+              "label": "",
+              "type": "Mentions",
+              "longType": "Mentions",
+              "fullType": "spaceone.api.opsflow.v1.Mentions",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CommentsInfo",
+          "longName": "CommentsInfo",
+          "fullName": "spaceone.api.opsflow.v1.CommentsInfo",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -467,9 +445,9 @@
               "name": "results",
               "description": "",
               "label": "repeated",
-              "type": "SchemaInfo",
-              "longType": "SchemaInfo",
-              "fullType": "spaceone.api.identity.v2.SchemaInfo",
+              "type": "CommentInfo",
+              "longType": "CommentInfo",
+              "fullType": "spaceone.api.opsflow.v1.CommentInfo",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -490,54 +468,18 @@
           ]
         },
         {
-          "name": "UpdateSchemaRequest",
-          "longName": "UpdateSchemaRequest",
-          "fullName": "spaceone.api.identity.v2.UpdateSchemaRequest",
-          "description": "{\n \"schema_id\": \"aws-secret-access-key1\",\n \"schema\": {\n   \"order\": [\n     \"aws_access_key_id\",\n     \"aws_secret_access_key\"\n   ],\n   \"properties\": {\n     \"aws_access_key_id\": {\n       \"format\": \"password\",\n       \"minLength\": 4.0,\n       \"title\": \"AWS Access Key\",\n       \"type\": \"string\"\n     },\n     \"aws_secret_access_key\": {\n       \"format\": \"password\",\n       \"minLength\": 4.0,\n       \"title\": \"AWS Secret Key\",\n       \"type\": \"string\"\n     }\n   },\n   \"required\": [\n     \"aws_access_key_id\",\n     \"aws_secret_access_key\"\n   ],\n   \"type\": \"object\"\n }\n}",
+          "name": "Mentions",
+          "longName": "Mentions",
+          "fullName": "spaceone.api.opsflow.v1.Mentions",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "schema_id",
+              "name": "USER",
               "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "name",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "schema",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "related_schemas",
-              "description": "+optional",
               "label": "repeated",
               "type": "string",
               "longType": "string",
@@ -548,24 +490,12 @@
               "defaultValue": ""
             },
             {
-              "name": "options",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
+              "name": "USER_GROUP",
+              "description": "",
+              "label": "repeated",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -576,28 +506,28 @@
       ],
       "services": [
         {
-          "name": "Schema",
-          "longName": "Schema",
-          "fullName": "spaceone.api.identity.v2.Schema",
+          "name": "Comment",
+          "longName": "Comment",
+          "fullName": "spaceone.api.opsflow.v1.Comment",
           "description": "",
           "methods": [
             {
               "name": "create",
               "description": "",
-              "requestType": "CreateSchemaRequest",
-              "requestLongType": "CreateSchemaRequest",
-              "requestFullType": "spaceone.api.identity.v2.CreateSchemaRequest",
+              "requestType": "CommentCreateRequest",
+              "requestLongType": "CommentCreateRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.CommentCreateRequest",
               "requestStreaming": false,
-              "responseType": "SchemaInfo",
-              "responseLongType": "SchemaInfo",
-              "responseFullType": "spaceone.api.identity.v2.SchemaInfo",
+              "responseType": "CommentInfo",
+              "responseLongType": "CommentInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.CommentInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/create",
+                      "pattern": "/opsflow/v1/comment/create",
                       "body": "*"
                     }
                   ]
@@ -607,20 +537,20 @@
             {
               "name": "update",
               "description": "",
-              "requestType": "UpdateSchemaRequest",
-              "requestLongType": "UpdateSchemaRequest",
-              "requestFullType": "spaceone.api.identity.v2.UpdateSchemaRequest",
+              "requestType": "CommentUpdateRequest",
+              "requestLongType": "CommentUpdateRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.CommentUpdateRequest",
               "requestStreaming": false,
-              "responseType": "SchemaInfo",
-              "responseLongType": "SchemaInfo",
-              "responseFullType": "spaceone.api.identity.v2.SchemaInfo",
+              "responseType": "CommentInfo",
+              "responseLongType": "CommentInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.CommentInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/update",
+                      "pattern": "/opsflow/v1/comment/update",
                       "body": "*"
                     }
                   ]
@@ -630,9 +560,9 @@
             {
               "name": "delete",
               "description": "",
-              "requestType": "SchemaRequest",
-              "requestLongType": "SchemaRequest",
-              "requestFullType": "spaceone.api.identity.v2.SchemaRequest",
+              "requestType": "CommentRequest",
+              "requestLongType": "CommentRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.CommentRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
@@ -643,7 +573,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/delete",
+                      "pattern": "/opsflow/v1/comment/delete",
                       "body": "*"
                     }
                   ]
@@ -653,20 +583,20 @@
             {
               "name": "get",
               "description": "",
-              "requestType": "SchemaRequest",
-              "requestLongType": "SchemaRequest",
-              "requestFullType": "spaceone.api.identity.v2.SchemaRequest",
+              "requestType": "CommentRequest",
+              "requestLongType": "CommentRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.CommentRequest",
               "requestStreaming": false,
-              "responseType": "SchemaInfo",
-              "responseLongType": "SchemaInfo",
-              "responseFullType": "spaceone.api.identity.v2.SchemaInfo",
+              "responseType": "CommentInfo",
+              "responseLongType": "CommentInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.CommentInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/get",
+                      "pattern": "/opsflow/v1/comment/get",
                       "body": "*"
                     }
                   ]
@@ -676,20 +606,20 @@
             {
               "name": "list",
               "description": "",
-              "requestType": "SchemaSearchQuery",
-              "requestLongType": "SchemaSearchQuery",
-              "requestFullType": "spaceone.api.identity.v2.SchemaSearchQuery",
+              "requestType": "CommentSearchQuery",
+              "requestLongType": "CommentSearchQuery",
+              "requestFullType": "spaceone.api.opsflow.v1.CommentSearchQuery",
               "requestStreaming": false,
-              "responseType": "SchemasInfo",
-              "responseLongType": "SchemasInfo",
-              "responseFullType": "spaceone.api.identity.v2.SchemasInfo",
+              "responseType": "CommentsInfo",
+              "responseLongType": "CommentsInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.CommentsInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/list",
+                      "pattern": "/opsflow/v1/comment/list",
                       "body": "*"
                     }
                   ]
@@ -699,9 +629,9 @@
             {
               "name": "stat",
               "description": "",
-              "requestType": "SchemaStatQuery",
-              "requestLongType": "SchemaStatQuery",
-              "requestFullType": "spaceone.api.identity.v2.SchemaStatQuery",
+              "requestType": "CommentStatQuery",
+              "requestLongType": "CommentStatQuery",
+              "requestFullType": "spaceone.api.opsflow.v1.CommentStatQuery",
               "requestStreaming": false,
               "responseType": "Struct",
               "responseLongType": ".google.protobuf.Struct",
@@ -712,7 +642,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/stat",
+                      "pattern": "/opsflow/v1/comment/stat",
                       "body": "*"
                     }
                   ]

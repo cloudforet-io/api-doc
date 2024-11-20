@@ -1,43 +1,38 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/schema.proto",
+      "name": "spaceone/api/opsflow/v1/task.proto",
       "description": "",
-      "package": "spaceone.api.identity.v2",
+      "package": "spaceone.api.opsflow.v1",
       "hasEnums": true,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
       "enums": [
         {
-          "name": "SchemaType",
-          "longName": "SchemaType",
-          "fullName": "spaceone.api.identity.v2.SchemaType",
+          "name": "TaskPriority",
+          "longName": "TaskPriority",
+          "fullName": "spaceone.api.opsflow.v1.TaskPriority",
           "description": "",
           "values": [
             {
-              "name": "SCHEMA_TYPE_NONE",
+              "name": "TASK_PRIORITY_NONE",
               "number": "0",
               "description": ""
             },
             {
-              "name": "SERVICE_ACCOUNT",
+              "name": "HIGH",
               "number": "1",
               "description": ""
             },
             {
-              "name": "TRUSTED_ACCOUNT",
+              "name": "MEDIUM",
               "number": "2",
               "description": ""
             },
             {
-              "name": "SECRET",
+              "name": "LOW",
               "number": "3",
-              "description": ""
-            },
-            {
-              "name": "TRUSTING_SECRET",
-              "number": "4",
               "description": ""
             }
           ]
@@ -46,17 +41,17 @@
       "extensions": [],
       "messages": [
         {
-          "name": "CreateSchemaRequest",
-          "longName": "CreateSchemaRequest",
-          "fullName": "spaceone.api.identity.v2.CreateSchemaRequest",
-          "description": "{\n \"schema_id\": \"aws-secret-access-key\",\n \"name\": \"AWS Access Key\",\n \"schema_type\": \"SECRET\",\n \"provider\": \"aws\"\n}",
+          "name": "TaskChangeStatusRequest",
+          "longName": "TaskChangeStatusRequest",
+          "fullName": "spaceone.api.opsflow.v1.TaskChangeStatusRequest",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "schema_id",
+              "name": "task_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -68,7 +63,7 @@
               "defaultValue": ""
             },
             {
-              "name": "name",
+              "name": "status_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -80,72 +75,12 @@
               "defaultValue": ""
             },
             {
-              "name": "schema_type",
-              "description": "",
-              "label": "",
-              "type": "SchemaType",
-              "longType": "SchemaType",
-              "fullType": "spaceone.api.identity.v2.SchemaType",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "schema",
+              "name": "assignee",
               "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "provider",
-              "description": "",
               "label": "",
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "related_schemas",
-              "description": "+optional",
-              "label": "repeated",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "options",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -154,17 +89,149 @@
           ]
         },
         {
-          "name": "SchemaInfo",
-          "longName": "SchemaInfo",
-          "fullName": "spaceone.api.identity.v2.SchemaInfo",
-          "description": "{\n \"created_at\": \"2024-11-18T01:59:00.407Z\",\n \"domain_id\": \"domain-a1b2c3d4e5f6\",\n \"name\": \"AWS Access Key\",\n \"provider\": \"aws\",\n \"schema\": {\n   \"order\": [\n     \"aws_access_key_id\",\n     \"aws_secret_access_key\"\n   ],\n   \"properties\": {\n     \"aws_access_key_id\": {\n       \"format\": \"password\",\n       \"minLength\": 4.0,\n       \"title\": \"AWS Access Key\",\n       \"type\": \"string\"\n     },\n     \"aws_secret_access_key\": {\n       \"format\": \"password\",\n       \"minLength\": 4.0,\n       \"title\": \"AWS Secret Key\",\n       \"type\": \"string\"\n     }\n   },\n   \"required\": [\n     \"aws_access_key_id\",\n     \"aws_secret_access_key\"\n   ],\n   \"type\": \"object\"\n },\n \"schema_id\": \"aws-secret-access-key\",\n \"schema_type\": \"SECRET\",\n \"updated_at\": \"2024-11-18T02:00:45.792Z\"\n}",
+          "name": "TaskCreateRequest",
+          "longName": "TaskCreateRequest",
+          "fullName": "spaceone.api.opsflow.v1.TaskCreateRequest",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "schema_id",
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "status_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "priority",
+              "description": "+optional",
+              "label": "",
+              "type": "TaskPriority",
+              "longType": "TaskPriority",
+              "fullType": "spaceone.api.opsflow.v1.TaskPriority",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "description",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "files",
+              "description": "+optional",
+              "label": "repeated",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "mentions",
+              "description": "+optional",
+              "label": "",
+              "type": "Mentions",
+              "longType": "Mentions",
+              "fullType": "spaceone.api.opsflow.v1.Mentions",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "assignee",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
+              "description": "+optional",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "project_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "task_type_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TaskInfo",
+          "longName": "TaskInfo",
+          "fullName": "spaceone.api.opsflow.v1.TaskInfo",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "task_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -188,31 +255,7 @@
               "defaultValue": ""
             },
             {
-              "name": "schema_type",
-              "description": "",
-              "label": "",
-              "type": "SchemaType",
-              "longType": "SchemaType",
-              "fullType": "spaceone.api.identity.v2.SchemaType",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "schema",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "provider",
+              "name": "status",
               "description": "",
               "label": "",
               "type": "string",
@@ -224,48 +267,72 @@
               "defaultValue": ""
             },
             {
-              "name": "related_schemas",
+              "name": "status_type",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "priority",
+              "description": "",
+              "label": "",
+              "type": "TaskPriority",
+              "longType": "TaskPriority",
+              "fullType": "spaceone.api.opsflow.v1.TaskPriority",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "description",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
+              "description": "",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "files",
               "description": "",
               "label": "repeated",
+              "type": "FileInfo",
+              "longType": "spaceone.api.file_manager.v1.FileInfo",
+              "fullType": "spaceone.api.file_manager.v1.FileInfo",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "assignee",
+              "description": "",
+              "label": "",
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "options",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "is_managed",
-              "description": "",
-              "label": "",
-              "type": "bool",
-              "longType": "bool",
-              "fullType": "bool",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -273,6 +340,54 @@
             },
             {
               "name": "domain_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "workspace_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "project_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "category_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "task_type_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -296,6 +411,18 @@
               "defaultValue": ""
             },
             {
+              "name": "started_at",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
               "name": "updated_at",
               "description": "",
               "label": "",
@@ -306,21 +433,9 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "SchemaRequest",
-          "longName": "SchemaRequest",
-          "fullName": "spaceone.api.identity.v2.SchemaRequest",
-          "description": "{\n \"schema_id\": \"aws-secret-access-key\"\n}",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
+            },
             {
-              "name": "schema_id",
+              "name": "completed_at",
               "description": "",
               "label": "",
               "type": "string",
@@ -334,10 +449,34 @@
           ]
         },
         {
-          "name": "SchemaSearchQuery",
-          "longName": "SchemaSearchQuery",
-          "fullName": "spaceone.api.identity.v2.SchemaSearchQuery",
-          "description": "{\n \"provider\": \"aws\",\n \"query\": {\n   \"page\": {\n     \"start\": 1,\n     \"limit\": 10\n   },\n   \"sort\": [\n     {\n       \"key\": \"created_at\",\n       \"desc\": true\n     }\n   ]\n }\n}",
+          "name": "TaskRequest",
+          "longName": "TaskRequest",
+          "fullName": "spaceone.api.opsflow.v1.TaskRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "task_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TaskSearchQuery",
+          "longName": "TaskSearchQuery",
+          "fullName": "spaceone.api.opsflow.v1.TaskSearchQuery",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -356,7 +495,7 @@
               "defaultValue": ""
             },
             {
-              "name": "schema_id",
+              "name": "task_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -380,19 +519,7 @@
               "defaultValue": ""
             },
             {
-              "name": "schema_type",
-              "description": "+optional",
-              "label": "",
-              "type": "SchemaType",
-              "longType": "SchemaType",
-              "fullType": "spaceone.api.identity.v2.SchemaType",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "provider",
+              "name": "status_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -404,7 +531,7 @@
               "defaultValue": ""
             },
             {
-              "name": "related_schema_id",
+              "name": "status_type",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -416,12 +543,60 @@
               "defaultValue": ""
             },
             {
-              "name": "is_managed",
+              "name": "priority",
               "description": "+optional",
               "label": "",
-              "type": "bool",
-              "longType": "bool",
-              "fullType": "bool",
+              "type": "TaskPriority",
+              "longType": "TaskPriority",
+              "fullType": "spaceone.api.opsflow.v1.TaskPriority",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "workspace_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "project_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "category_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "task_type_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -430,9 +605,9 @@
           ]
         },
         {
-          "name": "SchemaStatQuery",
-          "longName": "SchemaStatQuery",
-          "fullName": "spaceone.api.identity.v2.SchemaStatQuery",
+          "name": "TaskStatQuery",
+          "longName": "TaskStatQuery",
+          "fullName": "spaceone.api.opsflow.v1.TaskStatQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -454,53 +629,17 @@
           ]
         },
         {
-          "name": "SchemasInfo",
-          "longName": "SchemasInfo",
-          "fullName": "spaceone.api.identity.v2.SchemasInfo",
-          "description": "{\n \"results\": [\n   {\n     \"created_at\": \"2024-11-18T02:08:10.216Z\",\n     \"domain_id\": \"domain-a1b2c3d4e5f6\",\n     \"name\": \"AWS Trusted Account\",\n     \"provider\": \"aws\",\n     \"schema\": {\n       \"properties\": {\n         \"account_id\": {\n           \"minLength\": 4.0,\n           \"title\": \"Account ID\",\n           \"type\": \"string\"\n         }\n       },\n       \"required\": [\n         \"account_id\"\n       ],\n       \"type\": \"object\"\n     },\n     \"schema_id\": \"aws-trusted-account\",\n     \"schema_type\": \"TRUSTED_ACCOUNT\",\n     \"updated_at\": \"2024-11-18T02:08:10.216Z\"\n   },\n   {\n     \"created_at\": \"2024-11-18T01:59:00.407Z\",\n     \"domain_id\": \"domain-a1b2c3d4e5f6\",\n     \"name\": \"AWS Access Key\",\n     \"provider\": \"aws\",\n     \"schema\": {\n       \"order\": [\n         \"aws_access_key_id\",\n         \"aws_secret_access_key\"\n       ],\n       \"properties\": {\n         \"aws_access_key_id\": {\n           \"format\": \"password\",\n           \"minLength\": 4.0,\n           \"title\": \"AWS Access Key\",\n           \"type\": \"string\"\n         },\n         \"aws_secret_access_key\": {\n           \"format\": \"password\",\n           \"minLength\": 4.0,\n           \"title\": \"AWS Secret Key\",\n           \"type\": \"string\"\n         }\n       },\n       \"required\": [\n         \"aws_access_key_id\",\n         \"aws_secret_access_key\"\n       ],\n       \"type\": \"object\"\n     },\n     \"schema_id\": \"aws-secret-access-key\",\n     \"schema_type\": \"SECRET\",\n     \"updated_at\": \"2024-11-18T02:00:45.792Z\"\n   }\n ],\n \"total_count\": 2\n}",
+          "name": "TaskUpdateRequest",
+          "longName": "TaskUpdateRequest",
+          "fullName": "spaceone.api.opsflow.v1.TaskUpdateRequest",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "results",
-              "description": "",
-              "label": "repeated",
-              "type": "SchemaInfo",
-              "longType": "SchemaInfo",
-              "fullType": "spaceone.api.identity.v2.SchemaInfo",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "total_count",
-              "description": "",
-              "label": "",
-              "type": "int32",
-              "longType": "int32",
-              "fullType": "int32",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "UpdateSchemaRequest",
-          "longName": "UpdateSchemaRequest",
-          "fullName": "spaceone.api.identity.v2.UpdateSchemaRequest",
-          "description": "{\n \"schema_id\": \"aws-secret-access-key1\",\n \"schema\": {\n   \"order\": [\n     \"aws_access_key_id\",\n     \"aws_secret_access_key\"\n   ],\n   \"properties\": {\n     \"aws_access_key_id\": {\n       \"format\": \"password\",\n       \"minLength\": 4.0,\n       \"title\": \"AWS Access Key\",\n       \"type\": \"string\"\n     },\n     \"aws_secret_access_key\": {\n       \"format\": \"password\",\n       \"minLength\": 4.0,\n       \"title\": \"AWS Secret Key\",\n       \"type\": \"string\"\n     }\n   },\n   \"required\": [\n     \"aws_access_key_id\",\n     \"aws_secret_access_key\"\n   ],\n   \"type\": \"object\"\n }\n}",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "schema_id",
+              "name": "task_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -524,19 +663,31 @@
               "defaultValue": ""
             },
             {
-              "name": "schema",
+              "name": "priority",
               "description": "+optional",
               "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
+              "type": "TaskPriority",
+              "longType": "TaskPriority",
+              "fullType": "spaceone.api.opsflow.v1.TaskPriority",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "related_schemas",
+              "name": "description",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "files",
               "description": "+optional",
               "label": "repeated",
               "type": "string",
@@ -548,7 +699,31 @@
               "defaultValue": ""
             },
             {
-              "name": "options",
+              "name": "mentions",
+              "description": "+optional",
+              "label": "",
+              "type": "Mentions",
+              "longType": "Mentions",
+              "fullType": "spaceone.api.opsflow.v1.Mentions",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "assignee",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
               "description": "+optional",
               "label": "",
               "type": "Struct",
@@ -560,12 +735,48 @@
               "defaultValue": ""
             },
             {
-              "name": "tags",
+              "name": "project_id",
               "description": "+optional",
               "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TasksInfo",
+          "longName": "TasksInfo",
+          "fullName": "spaceone.api.opsflow.v1.TasksInfo",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "results",
+              "description": "",
+              "label": "repeated",
+              "type": "TaskInfo",
+              "longType": "TaskInfo",
+              "fullType": "spaceone.api.opsflow.v1.TaskInfo",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "total_count",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -576,28 +787,28 @@
       ],
       "services": [
         {
-          "name": "Schema",
-          "longName": "Schema",
-          "fullName": "spaceone.api.identity.v2.Schema",
+          "name": "Task",
+          "longName": "Task",
+          "fullName": "spaceone.api.opsflow.v1.Task",
           "description": "",
           "methods": [
             {
               "name": "create",
               "description": "",
-              "requestType": "CreateSchemaRequest",
-              "requestLongType": "CreateSchemaRequest",
-              "requestFullType": "spaceone.api.identity.v2.CreateSchemaRequest",
+              "requestType": "TaskCreateRequest",
+              "requestLongType": "TaskCreateRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.TaskCreateRequest",
               "requestStreaming": false,
-              "responseType": "SchemaInfo",
-              "responseLongType": "SchemaInfo",
-              "responseFullType": "spaceone.api.identity.v2.SchemaInfo",
+              "responseType": "TaskInfo",
+              "responseLongType": "TaskInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.TaskInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/create",
+                      "pattern": "/opsflow/v1/task/create",
                       "body": "*"
                     }
                   ]
@@ -607,20 +818,43 @@
             {
               "name": "update",
               "description": "",
-              "requestType": "UpdateSchemaRequest",
-              "requestLongType": "UpdateSchemaRequest",
-              "requestFullType": "spaceone.api.identity.v2.UpdateSchemaRequest",
+              "requestType": "TaskUpdateRequest",
+              "requestLongType": "TaskUpdateRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.TaskUpdateRequest",
               "requestStreaming": false,
-              "responseType": "SchemaInfo",
-              "responseLongType": "SchemaInfo",
-              "responseFullType": "spaceone.api.identity.v2.SchemaInfo",
+              "responseType": "TaskInfo",
+              "responseLongType": "TaskInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.TaskInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/update",
+                      "pattern": "/opsflow/v1/task/update",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "change_status",
+              "description": "",
+              "requestType": "TaskChangeStatusRequest",
+              "requestLongType": "TaskChangeStatusRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.TaskChangeStatusRequest",
+              "requestStreaming": false,
+              "responseType": "TaskInfo",
+              "responseLongType": "TaskInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.TaskInfo",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/opsflow/v1/task/change_status",
                       "body": "*"
                     }
                   ]
@@ -630,9 +864,9 @@
             {
               "name": "delete",
               "description": "",
-              "requestType": "SchemaRequest",
-              "requestLongType": "SchemaRequest",
-              "requestFullType": "spaceone.api.identity.v2.SchemaRequest",
+              "requestType": "TaskRequest",
+              "requestLongType": "TaskRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.TaskRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
@@ -643,7 +877,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/delete",
+                      "pattern": "/opsflow/v1/task/delete",
                       "body": "*"
                     }
                   ]
@@ -653,20 +887,20 @@
             {
               "name": "get",
               "description": "",
-              "requestType": "SchemaRequest",
-              "requestLongType": "SchemaRequest",
-              "requestFullType": "spaceone.api.identity.v2.SchemaRequest",
+              "requestType": "TaskRequest",
+              "requestLongType": "TaskRequest",
+              "requestFullType": "spaceone.api.opsflow.v1.TaskRequest",
               "requestStreaming": false,
-              "responseType": "SchemaInfo",
-              "responseLongType": "SchemaInfo",
-              "responseFullType": "spaceone.api.identity.v2.SchemaInfo",
+              "responseType": "TaskInfo",
+              "responseLongType": "TaskInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.TaskInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/get",
+                      "pattern": "/opsflow/v1/task/get",
                       "body": "*"
                     }
                   ]
@@ -676,20 +910,20 @@
             {
               "name": "list",
               "description": "",
-              "requestType": "SchemaSearchQuery",
-              "requestLongType": "SchemaSearchQuery",
-              "requestFullType": "spaceone.api.identity.v2.SchemaSearchQuery",
+              "requestType": "TaskSearchQuery",
+              "requestLongType": "TaskSearchQuery",
+              "requestFullType": "spaceone.api.opsflow.v1.TaskSearchQuery",
               "requestStreaming": false,
-              "responseType": "SchemasInfo",
-              "responseLongType": "SchemasInfo",
-              "responseFullType": "spaceone.api.identity.v2.SchemasInfo",
+              "responseType": "TasksInfo",
+              "responseLongType": "TasksInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.TasksInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/list",
+                      "pattern": "/opsflow/v1/task/list",
                       "body": "*"
                     }
                   ]
@@ -699,9 +933,9 @@
             {
               "name": "stat",
               "description": "",
-              "requestType": "SchemaStatQuery",
-              "requestLongType": "SchemaStatQuery",
-              "requestFullType": "spaceone.api.identity.v2.SchemaStatQuery",
+              "requestType": "TaskStatQuery",
+              "requestLongType": "TaskStatQuery",
+              "requestFullType": "spaceone.api.opsflow.v1.TaskStatQuery",
               "requestStreaming": false,
               "responseType": "Struct",
               "responseLongType": ".google.protobuf.Struct",
@@ -712,7 +946,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/schema/stat",
+                      "pattern": "/opsflow/v1/task/stat",
                       "body": "*"
                     }
                   ]

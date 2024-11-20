@@ -1,135 +1,43 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/role_binding.proto",
+      "name": "spaceone/api/opsflow/v1/event.proto",
       "description": "",
-      "package": "spaceone.api.identity.v2",
+      "package": "spaceone.api.opsflow.v1",
       "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
       "enums": [
         {
-          "name": "ResourceGroup",
-          "longName": "CreateRoleBindingRequest.ResourceGroup",
-          "fullName": "spaceone.api.identity.v2.CreateRoleBindingRequest.ResourceGroup",
+          "name": "EventType",
+          "longName": "EventInfo.EventType",
+          "fullName": "spaceone.api.opsflow.v1.EventInfo.EventType",
           "description": "",
           "values": [
             {
-              "name": "NONE",
+              "name": "SELECTION_NONE",
               "number": "0",
               "description": ""
             },
             {
-              "name": "DOMAIN",
+              "name": "CREATED",
               "number": "1",
               "description": ""
             },
             {
-              "name": "WORKSPACE",
-              "number": "2",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "ResourceGroup",
-          "longName": "RoleBindingInfo.ResourceGroup",
-          "fullName": "spaceone.api.identity.v2.RoleBindingInfo.ResourceGroup",
-          "description": "",
-          "values": [
-            {
-              "name": "GROUP_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "DOMAIN",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE",
-              "number": "2",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "RoleType",
-          "longName": "RoleBindingInfo.RoleType",
-          "fullName": "spaceone.api.identity.v2.RoleBindingInfo.RoleType",
-          "description": "",
-          "values": [
-            {
-              "name": "ROLE_TYPE_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "DOMAIN_ADMIN",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE_OWNER",
+              "name": "UPDATED",
               "number": "2",
               "description": ""
             },
             {
-              "name": "WORKSPACE_MEMBER",
+              "name": "CHANGE_STATUS",
               "number": "3",
               "description": ""
-            }
-          ]
-        },
-        {
-          "name": "ResourceGroup",
-          "longName": "RoleBindingSearchQuery.ResourceGroup",
-          "fullName": "spaceone.api.identity.v2.RoleBindingSearchQuery.ResourceGroup",
-          "description": "",
-          "values": [
-            {
-              "name": "GROUP_NONE",
-              "number": "0",
-              "description": ""
             },
             {
-              "name": "DOMAIN",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE",
-              "number": "2",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "RoleType",
-          "longName": "RoleBindingSearchQuery.RoleType",
-          "fullName": "spaceone.api.identity.v2.RoleBindingSearchQuery.RoleType",
-          "description": "",
-          "values": [
-            {
-              "name": "ROLE_TYPE_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "DOMAIN_ADMIN",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE_OWNER",
-              "number": "2",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE_MEMBER",
-              "number": "3",
+              "name": "COMMENTED",
+              "number": "4",
               "description": ""
             }
           ]
@@ -138,15 +46,75 @@
       "extensions": [],
       "messages": [
         {
-          "name": "CreateRoleBindingRequest",
-          "longName": "CreateRoleBindingRequest",
-          "fullName": "spaceone.api.identity.v2.CreateRoleBindingRequest",
-          "description": "{\n \"user_id\": \"wonny@cloudforet.io\",\n \"role_id\": \"managed-workspace-owner\",\n \"resource_group\": \"WORKSPACE\",\n \"workspace_id\": \"workspace-a1b2c3d4e5f6\"\n}",
+          "name": "EventInfo",
+          "longName": "EventInfo",
+          "fullName": "spaceone.api.opsflow.v1.EventInfo",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
+            {
+              "name": "event_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "event_type",
+              "description": "",
+              "label": "",
+              "type": "EventType",
+              "longType": "EventInfo.EventType",
+              "fullType": "spaceone.api.opsflow.v1.EventInfo.EventType",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "description",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "user_type",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
             {
               "name": "user_id",
               "description": "",
@@ -154,90 +122,6 @@
               "type": "string",
               "longType": "string",
               "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "role_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "resource_group",
-              "description": "",
-              "label": "",
-              "type": "ResourceGroup",
-              "longType": "CreateRoleBindingRequest.ResourceGroup",
-              "fullType": "spaceone.api.identity.v2.CreateRoleBindingRequest.ResourceGroup",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "workspace_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "RoleBindingInfo",
-          "longName": "RoleBindingInfo",
-          "fullName": "spaceone.api.identity.v2.RoleBindingInfo",
-          "description": "{\n \"created_at\": \"2024-11-18T04:23:18.121Z\",\n \"domain_id\": \"domain-a1b2c3d4e5f6\",\n \"resource_group\": \"WORKSPACE\",\n \"role_binding_id\": \"rb-a1b2c3d4e5f6\",\n \"role_id\": \"managed-workspace-owner\",\n \"role_type\": \"WORKSPACE_OWNER\",\n \"user_id\": \"wonny@cloudforet.io\",\n \"workspace_id\": \"workspace-a1b2c3d4e5f6\"\n}",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "role_binding_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "role_type",
-              "description": "",
-              "label": "",
-              "type": "RoleType",
-              "longType": "RoleBindingInfo.RoleType",
-              "fullType": "spaceone.api.identity.v2.RoleBindingInfo.RoleType",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "resource_group",
-              "description": "",
-              "label": "",
-              "type": "ResourceGroup",
-              "longType": "RoleBindingInfo.ResourceGroup",
-              "fullType": "spaceone.api.identity.v2.RoleBindingInfo.ResourceGroup",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -256,18 +140,6 @@
               "defaultValue": ""
             },
             {
-              "name": "workspace_group_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
               "name": "workspace_id",
               "description": "",
               "label": "",
@@ -280,7 +152,7 @@
               "defaultValue": ""
             },
             {
-              "name": "role_id",
+              "name": "project_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -292,7 +164,7 @@
               "defaultValue": ""
             },
             {
-              "name": "user_id",
+              "name": "task_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -318,34 +190,10 @@
           ]
         },
         {
-          "name": "RoleBindingRequest",
-          "longName": "RoleBindingRequest",
-          "fullName": "spaceone.api.identity.v2.RoleBindingRequest",
-          "description": "{\n \"roleBindingId\": \"rb-a1b2c3d4e5f6\",\n}",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "role_binding_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "RoleBindingSearchQuery",
-          "longName": "RoleBindingSearchQuery",
-          "fullName": "spaceone.api.identity.v2.RoleBindingSearchQuery",
-          "description": "{\n \"roleType\": \"WORKSPACE_MEMBER\",\n \"query\": {\n   \"page\": {\n     \"start\": 1,\n     \"limit\": 10\n   },\n   \"sort\": [\n     {\n       \"key\": \"created_at\",\n       \"desc\": true\n     }\n   ]\n }\n}",
+          "name": "EventSearchQuery",
+          "longName": "EventSearchQuery",
+          "fullName": "spaceone.api.opsflow.v1.EventSearchQuery",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -364,7 +212,7 @@
               "defaultValue": ""
             },
             {
-              "name": "role_binding_id",
+              "name": "task_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -376,19 +224,19 @@
               "defaultValue": ""
             },
             {
-              "name": "role_type",
+              "name": "event_type",
               "description": "+optional",
               "label": "",
-              "type": "RoleType",
-              "longType": "RoleBindingSearchQuery.RoleType",
-              "fullType": "spaceone.api.identity.v2.RoleBindingSearchQuery.RoleType",
+              "type": "EventType",
+              "longType": "EventInfo.EventType",
+              "fullType": "spaceone.api.opsflow.v1.EventInfo.EventType",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "workspace_id",
+              "name": "user_type",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -400,7 +248,7 @@
               "defaultValue": ""
             },
             {
-              "name": "role_id",
+              "name": "event_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -422,13 +270,37 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
+            },
+            {
+              "name": "workspace_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "project_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
             }
           ]
         },
         {
-          "name": "RoleBindingStatQuery",
-          "longName": "RoleBindingStatQuery",
-          "fullName": "spaceone.api.identity.v2.RoleBindingStatQuery",
+          "name": "EventStatQuery",
+          "longName": "EventStatQuery",
+          "fullName": "spaceone.api.opsflow.v1.EventStatQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -450,10 +322,10 @@
           ]
         },
         {
-          "name": "RoleBindingsInfo",
-          "longName": "RoleBindingsInfo",
-          "fullName": "spaceone.api.identity.v2.RoleBindingsInfo",
-          "description": "{\n \"results\": [\n   {\n     \"created_at\": \"2024-11-18T05:00:52.870Z\",\n     \"domain_id\": \"domain-a1b2c3d4e5f6\",\n     \"resource_group\": \"WORKSPACE\",\n     \"role_binding_id\": \"rb-a1b2c3d4e5f6\",\n     \"role_id\": \"managed-workspace-member\",\n     \"role_type\": \"WORKSPACE_MEMBER\",\n     \"user_id\": \"wonny@cloudforet.io\",\n     \"workspace_id\": \"workspace-a1b2c3d4e5f6\"\n   },\n   {\n     \"created_at\": \"2024-11-18T04:42:33.285Z\",\n     \"domain_id\": \"domain-a1b2c3d4e5f6\",\n     \"resource_group\": \"WORKSPACE\",\n     \"role_binding_id\": \"rb-g7h8i9j1k2l3\",\n     \"role_id\": \"managed-workspace-owner\",\n     \"role_type\": \"WORKSPACE_OWNER\",\n     \"user_id\": \"wonny@cloudforet.io\",\n     \"workspace_id\": \"workspace-a1b2c3d4e5f6\"\n   }\n ],\n \"total_count\": 2\n}",
+          "name": "EventsInfo",
+          "longName": "EventsInfo",
+          "fullName": "spaceone.api.opsflow.v1.EventsInfo",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -463,9 +335,9 @@
               "name": "results",
               "description": "",
               "label": "repeated",
-              "type": "RoleBindingInfo",
-              "longType": "RoleBindingInfo",
-              "fullType": "spaceone.api.identity.v2.RoleBindingInfo",
+              "type": "EventInfo",
+              "longType": "EventInfo",
+              "fullType": "spaceone.api.opsflow.v1.EventInfo",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -484,160 +356,32 @@
               "defaultValue": ""
             }
           ]
-        },
-        {
-          "name": "UpdateRoleBindingRequest",
-          "longName": "UpdateRoleBindingRequest",
-          "fullName": "spaceone.api.identity.v2.UpdateRoleBindingRequest",
-          "description": "{\n \"roleBindingId\": \"rb-a1b2c3d4e5f6\",\n \"roleId\": \"managed-workspace-owner\"\n}",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "role_binding_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "role_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
         }
       ],
       "services": [
         {
-          "name": "RoleBinding",
-          "longName": "RoleBinding",
-          "fullName": "spaceone.api.identity.v2.RoleBinding",
+          "name": "Event",
+          "longName": "Event",
+          "fullName": "spaceone.api.opsflow.v1.Event",
           "description": "",
           "methods": [
             {
-              "name": "create",
-              "description": "",
-              "requestType": "CreateRoleBindingRequest",
-              "requestLongType": "CreateRoleBindingRequest",
-              "requestFullType": "spaceone.api.identity.v2.CreateRoleBindingRequest",
-              "requestStreaming": false,
-              "responseType": "RoleBindingInfo",
-              "responseLongType": "RoleBindingInfo",
-              "responseFullType": "spaceone.api.identity.v2.RoleBindingInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v1/role-binding/create",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "update_role",
-              "description": "",
-              "requestType": "UpdateRoleBindingRequest",
-              "requestLongType": "UpdateRoleBindingRequest",
-              "requestFullType": "spaceone.api.identity.v2.UpdateRoleBindingRequest",
-              "requestStreaming": false,
-              "responseType": "RoleBindingInfo",
-              "responseLongType": "RoleBindingInfo",
-              "responseFullType": "spaceone.api.identity.v2.RoleBindingInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v1/role-binding/update-role",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "delete",
-              "description": "",
-              "requestType": "RoleBindingRequest",
-              "requestLongType": "RoleBindingRequest",
-              "requestFullType": "spaceone.api.identity.v2.RoleBindingRequest",
-              "requestStreaming": false,
-              "responseType": "Empty",
-              "responseLongType": ".google.protobuf.Empty",
-              "responseFullType": "google.protobuf.Empty",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v1/role-binding/delete",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "get",
-              "description": "",
-              "requestType": "RoleBindingRequest",
-              "requestLongType": "RoleBindingRequest",
-              "requestFullType": "spaceone.api.identity.v2.RoleBindingRequest",
-              "requestStreaming": false,
-              "responseType": "RoleBindingInfo",
-              "responseLongType": "RoleBindingInfo",
-              "responseFullType": "spaceone.api.identity.v2.RoleBindingInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v1/role-binding/get",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
               "name": "list",
               "description": "",
-              "requestType": "RoleBindingSearchQuery",
-              "requestLongType": "RoleBindingSearchQuery",
-              "requestFullType": "spaceone.api.identity.v2.RoleBindingSearchQuery",
+              "requestType": "EventSearchQuery",
+              "requestLongType": "EventSearchQuery",
+              "requestFullType": "spaceone.api.opsflow.v1.EventSearchQuery",
               "requestStreaming": false,
-              "responseType": "RoleBindingsInfo",
-              "responseLongType": "RoleBindingsInfo",
-              "responseFullType": "spaceone.api.identity.v2.RoleBindingsInfo",
+              "responseType": "EventsInfo",
+              "responseLongType": "EventsInfo",
+              "responseFullType": "spaceone.api.opsflow.v1.EventsInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v1/role-binding/list",
+                      "pattern": "/opsflow/v1/event/list",
                       "body": "*"
                     }
                   ]
@@ -647,9 +391,9 @@
             {
               "name": "stat",
               "description": "",
-              "requestType": "RoleBindingStatQuery",
-              "requestLongType": "RoleBindingStatQuery",
-              "requestFullType": "spaceone.api.identity.v2.RoleBindingStatQuery",
+              "requestType": "EventStatQuery",
+              "requestLongType": "EventStatQuery",
+              "requestFullType": "spaceone.api.opsflow.v1.EventStatQuery",
               "requestStreaming": false,
               "responseType": "Struct",
               "responseLongType": ".google.protobuf.Struct",
@@ -660,7 +404,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v1/role-binding/stat",
+                      "pattern": "/opsflow/v1/event/stat",
                       "body": "*"
                     }
                   ]
