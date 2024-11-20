@@ -30,6 +30,8 @@ bookFlatSection: true
 | [**delete**](./Workspace#delete) | [WorkspaceDeleteRequest](Workspace#workspacedeleterequest) | [Empty](Workspace#empty) |
 | [**enable**](./Workspace#enable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**disable**](./Workspace#disable) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
+| [**add_package**](./Workspace#add_package) | [WorkspacePackageRequest](Workspace#workspacepackagerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
+| [**remove_package**](./Workspace#remove_package) | [WorkspacePackageRequest](Workspace#workspacepackagerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**get**](./Workspace#get) | [WorkspaceRequest](Workspace#workspacerequest) | [WorkspaceInfo](Workspace#workspaceinfo) |
 | [**check**](./Workspace#check) | [WorkspaceCheckRequest](Workspace#workspacecheckrequest) | [Empty](Workspace#empty) |
 | [**list**](./Workspace#list) | [WorkspaceSearchQuery](Workspace#workspacesearchquery) | [WorkspacesInfo](Workspace#workspacesinfo) |
@@ -94,6 +96,8 @@ bookFlatSection: true
 * **references** (string)  `Repeated`   `Required` 
 
 * **is_managed** (bool)   `Required` 
+
+* **packages** (string)  `Repeated`   `Required` 
 
 * **is_dormant** (bool)   `Required` 
 
@@ -202,6 +206,8 @@ bookFlatSection: true
 
 * **is_managed** (bool)   `Required` 
 
+* **packages** (string)  `Repeated`   `Required` 
+
 * **is_dormant** (bool)   `Required` 
 
 * **dormant_ttl** (int32)   `Required` 
@@ -305,6 +311,8 @@ bookFlatSection: true
 * **references** (string)  `Repeated`   `Required` 
 
 * **is_managed** (bool)   `Required` 
+
+* **packages** (string)  `Repeated`   `Required` 
 
 * **is_dormant** (bool)   `Required` 
 
@@ -452,6 +460,8 @@ bookFlatSection: true
 
 * **is_managed** (bool)   `Required` 
 
+* **packages** (string)  `Repeated`   `Required` 
+
 * **is_dormant** (bool)   `Required` 
 
 * **dormant_ttl** (int32)   `Required` 
@@ -552,6 +562,220 @@ bookFlatSection: true
 
 * **is_managed** (bool)   `Required` 
 
+* **packages** (string)  `Repeated`   `Required` 
+
+* **is_dormant** (bool)   `Required` 
+
+* **dormant_ttl** (int32)   `Required` 
+
+* **service_account_count** (int32)   `Required` 
+
+* **user_count** (int32)   `Required` 
+
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+* **workspace_group_id** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+* **dormant_updated_at** (string)   `Required` 
+
+* **changed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace",
+ "state": "ENABLED",
+ "created_by": "cloudforet@cloudforet.io",
+ "dormant_ttl": -1,
+ "cost_info": {},
+ "workspace_group_id": "wg-a1b2c3d4e5f6",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "created_at": "2024-11-12T08:14:04.011Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### add_package
+
+
+
+
+
+> **POST** /identity/v2/workspace/add-package
+>
+
+
+
+
+
+ {{< tabs " add_package " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[WorkspacePackageRequest](./Workspace#workspacepackagerequest)
+
+* **workspace_id** (string)   `Required` 
+
+
+* **package_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "package_id": "package-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspaceInfo](#WORKSPACEINFO)
+* **workspace_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **references** (string)  `Repeated`   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **packages** (string)  `Repeated`   `Required` 
+
+* **is_dormant** (bool)   `Required` 
+
+* **dormant_ttl** (int32)   `Required` 
+
+* **service_account_count** (int32)   `Required` 
+
+* **user_count** (int32)   `Required` 
+
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+* **workspace_group_id** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+* **dormant_updated_at** (string)   `Required` 
+
+* **changed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace",
+ "state": "ENABLED",
+ "created_by": "cloudforet@cloudforet.io",
+ "dormant_ttl": -1,
+ "cost_info": {},
+ "workspace_group_id": "wg-a1b2c3d4e5f6",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "created_at": "2024-11-12T08:14:04.011Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### remove_package
+
+
+
+
+
+> **POST** /identity/v2/workspace/remove-package
+>
+
+
+
+
+
+ {{< tabs " remove_package " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[WorkspacePackageRequest](./Workspace#workspacepackagerequest)
+
+* **workspace_id** (string)   `Required` 
+
+
+* **package_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "package_id": "package-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspaceInfo](#WORKSPACEINFO)
+* **workspace_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **references** (string)  `Repeated`   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **packages** (string)  `Repeated`   `Required` 
+
 * **is_dormant** (bool)   `Required` 
 
 * **dormant_ttl** (int32)   `Required` 
@@ -651,6 +875,8 @@ bookFlatSection: true
 * **references** (string)  `Repeated`   `Required` 
 
 * **is_managed** (bool)   `Required` 
+
+* **packages** (string)  `Repeated`   `Required` 
 
 * **is_dormant** (bool)   `Required` 
 
@@ -923,6 +1149,9 @@ bookFlatSection: true
 * **is_managed** (bool)   `Required` 
 
     
+* **packages** (string)  `Repeated`    `Required` 
+
+    
 * **is_dormant** (bool)   `Required` 
 
     
@@ -957,6 +1186,14 @@ bookFlatSection: true
 
     
 * **changed_at** (string)   `Required` 
+
+    <br>
+
+### WorkspacePackageRequest
+* **workspace_id** (string)   `Required` 
+
+    
+* **package_id** (string)   `Required` 
 
     <br>
 
