@@ -158,6 +158,9 @@ bookFlatSection: true
 * **fields** (TaskField)  `Repeated`   
 
     
+* **assignee_pool** (string)  `Repeated`   
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -173,6 +176,9 @@ bookFlatSection: true
 
     
 * **fields** (TaskField)  `Repeated`    `Required` 
+
+    
+* **assignee_pool** (string)  `Repeated`    `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -223,6 +229,9 @@ bookFlatSection: true
 
     
 * **fields** (TaskField)  `Repeated`   
+
+    
+* **assignee_pool** (string)  `Repeated`   
 
     
 * **tags** (Struct)  

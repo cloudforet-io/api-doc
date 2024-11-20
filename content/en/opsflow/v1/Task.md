@@ -213,7 +213,7 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **status** (string)   `Required` 
+* **status_id** (string)   `Required` 
 
     
 * **status_type** (string)   `Required` 
