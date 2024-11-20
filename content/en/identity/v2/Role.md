@@ -52,6 +52,98 @@ bookFlatSection: true
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateRoleRequest](./Role#createrolerequest)
+
+* **name** (string)   `Required` 
+
+
+* **role_type** (RoleType)   `Required` 
+
+
+* **permissions** (string)  `Repeated`   
+
+
+* **page_access** (string)  `Repeated`   
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "name": "Cloudforet User",
+ "role_type": "WORKSPACE_MEMBER",
+ "page_access": [
+   "dashboards:restricted.*",
+   "project:writable.*",
+   "asset_inventory:writable.*",
+   "cost_explorer:readonly.*",
+   "alert_manager:restricted.*"
+ ]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[RoleInfo](#ROLEINFO)
+* **role_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **permissions** (string)  `Repeated`   `Required` 
+
+* **page_access** (string)  `Repeated`   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "created_at": "2024-11-14T02:44:56.211Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "Cloudforet User",
+ "page_access": [
+   "dashboards:restricted.*",
+   "project:writable.*",
+   "asset_inventory:writable.*",
+   "cost_explorer:readonly.*",
+   "alert_manager:restricted.*"
+ ],
+ "role_id": "role-5ce484d4b750",
+ "role_type": "WORKSPACE_MEMBER",
+ "state": "ENABLED",
+ "updated_at": "2024-11-14T02:44:56.211Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -68,6 +160,98 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateRoleRequest](./Role#updaterolerequest)
+
+* **role_id** (string)   `Required` 
+
+
+* **name** (string)  
+
+
+* **permissions** (ListValue)  
+
+
+* **page_access** (ListValue)  
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "name": "Cloudforet User",
+ "role_type": "WORKSPACE_MEMBER",
+ "page_access": [
+   "dashboards:restricted.*",
+   "project:writable.*",
+   "asset_inventory:writable.*",
+   "cost_explorer:readonly.*",
+   "alert_manager:restricted.*"
+ ]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[RoleInfo](#ROLEINFO)
+* **role_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **permissions** (string)  `Repeated`   `Required` 
+
+* **page_access** (string)  `Repeated`   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "created_at": "2024-11-14T02:44:56.211Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "Cloudforet User",
+ "page_access": [
+   "dashboards:restricted.*",
+   "project:writable.*",
+   "asset_inventory:writable.*",
+   "cost_explorer:readonly.*",
+   "alert_manager:restricted.*"
+ ],
+ "role_id": "role-5ce484d4b750",
+ "role_type": "WORKSPACE_MEMBER",
+ "state": "ENABLED",
+ "updated_at": "2024-11-14T02:44:56.211Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -102,11 +286,58 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
- "role_id": "role-a12335a6a4fe"
+ "role_id": "role-a1b2c3d4e5f6"
 }
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[RoleInfo](#ROLEINFO)
+* **role_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **permissions** (string)  `Repeated`   `Required` 
+
+* **page_access** (string)  `Repeated`   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "created_at": "2024-11-14T02:44:56.211Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "Cloudforet User",
+ "page_access": [
+   "dashboards:restricted.*",
+   "project:writable.*",
+   "asset_inventory:writable.*",
+   "cost_explorer:readonly.*",
+   "alert_manager:restricted.*"
+ ],
+ "role_id": "role-5ce484d4b750",
+ "role_type": "WORKSPACE_MEMBER",
+ "state": "ENABLED",
+ "updated_at": "2024-11-14T02:44:56.211Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -144,11 +375,58 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
- "role_id": "role-a12335a6a4fe"
+ "role_id": "role-a1b2c3d4e5f6"
 }
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[RoleInfo](#ROLEINFO)
+* **role_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **permissions** (string)  `Repeated`   `Required` 
+
+* **page_access** (string)  `Repeated`   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "created_at": "2024-11-14T02:44:56.211Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "Cloudforet User",
+ "page_access": [
+   "dashboards:restricted.*",
+   "project:writable.*",
+   "asset_inventory:writable.*",
+   "cost_explorer:readonly.*",
+   "alert_manager:restricted.*"
+ ],
+ "role_id": "role-5ce484d4b750",
+ "role_type": "WORKSPACE_MEMBER",
+ "state": "ENABLED",
+ "updated_at": "2024-11-14T02:44:56.211Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -186,7 +464,7 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
- "role_id": "role-a12335a6a4fe"
+ "role_id": "role-a1b2c3d4e5f6"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -228,11 +506,58 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
- "role_id": "role-a12335a6a4fe"
+ "role_id": "role-a1b2c3d4e5f6"
 }
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[RoleInfo](#ROLEINFO)
+* **role_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **permissions** (string)  `Repeated`   `Required` 
+
+* **page_access** (string)  `Repeated`   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "created_at": "2024-11-14T02:44:56.211Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "Cloudforet User",
+ "page_access": [
+   "dashboards:restricted.*",
+   "project:writable.*",
+   "asset_inventory:writable.*",
+   "cost_explorer:readonly.*",
+   "alert_manager:restricted.*"
+ ],
+ "role_id": "role-5ce484d4b750",
+ "role_type": "WORKSPACE_MEMBER",
+ "state": "ENABLED",
+ "updated_at": "2024-11-14T02:44:56.211Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -254,6 +579,163 @@ bookFlatSection: true
 
 
 
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[RoleSearchQuery](./Role#rolesearchquery)
+
+* **query** (Query)  
+
+
+* **role_id** (string)  
+
+
+* **name** (string)  
+
+
+* **role_type** (RoleType)  
+
+
+* **state** (State)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "state": "ENABLED",
+ "query": {
+   "page": {
+     "start": 1,
+     "limit": 10
+   },
+   "sort": [
+     {
+       "key": "role_type",
+       "desc": true
+     }
+   ]
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[RolesInfo](#ROLESINFO)
+* **results** (RoleInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "results": [
+   {
+     "created_at": "2024-11-12T04:46:40.902Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "is_managed": true,
+     "name": "Workspace Owner",
+     "role_id": "managed-workspace-owner",
+     "role_type": "WORKSPACE_OWNER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-12T04:46:40.902Z"
+   },
+   {
+     "created_at": "2024-11-14T02:47:08.065Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "name": "Cloudforet Onwer",
+     "page_access": [
+       "dashboards:restricted.*",
+       "project:writable.*",
+       "asset_inventory:writable.*",
+       "cost_explorer:readonly.*",
+       "alert_manager:restricted.*"
+     ],
+     "role_id": "role-93a6d387e7ed",
+     "role_type": "WORKSPACE_OWNER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-14T02:47:08.065Z"
+   },
+   {
+     "created_at": "2024-11-12T04:46:40.894Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "is_managed": true,
+     "name": "Workspace Member",
+     "role_id": "managed-workspace-member",
+     "role_type": "WORKSPACE_MEMBER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-12T04:46:40.895Z"
+   },
+   {
+     "created_at": "2024-11-14T02:44:56.211Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "name": "Cloudforet User",
+     "page_access": [
+       "dashboards:restricted.*",
+       "project:writable.*",
+       "asset_inventory:writable.*",
+       "cost_explorer:readonly.*",
+       "alert_manager:restricted.*"
+     ],
+     "role_id": "role-5ce484d4b750",
+     "role_type": "WORKSPACE_MEMBER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-14T02:44:56.211Z"
+   },
+   {
+     "created_at": "2024-11-14T02:51:23.638Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "name": "Wonny Project Member",
+     "page_access": [
+       "dashboards:restricted.*",
+       "project:writable.*",
+       "asset_inventory:writable.*"
+     ],
+     "role_id": "role-4b8283a42890",
+     "role_type": "WORKSPACE_MEMBER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-14T02:51:23.638Z"
+   },
+   {
+     "created_at": "2024-11-14T02:51:34.751Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "name": "SpaceONE Project Member",
+     "page_access": [
+       "dashboards:restricted.*",
+       "project:writable.*",
+       "asset_inventory:writable.*"
+     ],
+     "role_id": "role-3365600e3e0e",
+     "role_type": "WORKSPACE_MEMBER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-14T02:51:34.751Z"
+   },
+   {
+     "created_at": "2024-11-12T04:46:40.885Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "is_managed": true,
+     "name": "Domain Admin",
+     "role_id": "managed-domain-admin",
+     "role_type": "DOMAIN_ADMIN",
+     "state": "ENABLED",
+     "updated_at": "2024-11-12T04:46:40.885Z"
+   }
+ ],
+ "total_count": 7
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -270,6 +752,163 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " list_basic_role " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[RoleSearchQuery](./Role#rolesearchquery)
+
+* **query** (Query)  
+
+
+* **role_id** (string)  
+
+
+* **name** (string)  
+
+
+* **role_type** (RoleType)  
+
+
+* **state** (State)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "state": "ENABLED",
+ "query": {
+   "page": {
+     "start": 1,
+     "limit": 10
+   },
+   "sort": [
+     {
+       "key": "role_type",
+       "desc": true
+     }
+   ]
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[RolesInfo](#ROLESINFO)
+* **results** (RoleInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "results": [
+   {
+     "created_at": "2024-11-12T04:46:40.902Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "is_managed": true,
+     "name": "Workspace Owner",
+     "role_id": "managed-workspace-owner",
+     "role_type": "WORKSPACE_OWNER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-12T04:46:40.902Z"
+   },
+   {
+     "created_at": "2024-11-14T02:47:08.065Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "name": "Cloudforet Onwer",
+     "page_access": [
+       "dashboards:restricted.*",
+       "project:writable.*",
+       "asset_inventory:writable.*",
+       "cost_explorer:readonly.*",
+       "alert_manager:restricted.*"
+     ],
+     "role_id": "role-93a6d387e7ed",
+     "role_type": "WORKSPACE_OWNER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-14T02:47:08.065Z"
+   },
+   {
+     "created_at": "2024-11-12T04:46:40.894Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "is_managed": true,
+     "name": "Workspace Member",
+     "role_id": "managed-workspace-member",
+     "role_type": "WORKSPACE_MEMBER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-12T04:46:40.895Z"
+   },
+   {
+     "created_at": "2024-11-14T02:44:56.211Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "name": "Cloudforet User",
+     "page_access": [
+       "dashboards:restricted.*",
+       "project:writable.*",
+       "asset_inventory:writable.*",
+       "cost_explorer:readonly.*",
+       "alert_manager:restricted.*"
+     ],
+     "role_id": "role-5ce484d4b750",
+     "role_type": "WORKSPACE_MEMBER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-14T02:44:56.211Z"
+   },
+   {
+     "created_at": "2024-11-14T02:51:23.638Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "name": "Wonny Project Member",
+     "page_access": [
+       "dashboards:restricted.*",
+       "project:writable.*",
+       "asset_inventory:writable.*"
+     ],
+     "role_id": "role-4b8283a42890",
+     "role_type": "WORKSPACE_MEMBER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-14T02:51:23.638Z"
+   },
+   {
+     "created_at": "2024-11-14T02:51:34.751Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "name": "SpaceONE Project Member",
+     "page_access": [
+       "dashboards:restricted.*",
+       "project:writable.*",
+       "asset_inventory:writable.*"
+     ],
+     "role_id": "role-3365600e3e0e",
+     "role_type": "WORKSPACE_MEMBER",
+     "state": "ENABLED",
+     "updated_at": "2024-11-14T02:51:34.751Z"
+   },
+   {
+     "created_at": "2024-11-12T04:46:40.885Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "is_managed": true,
+     "name": "Domain Admin",
+     "role_id": "managed-domain-admin",
+     "role_type": "DOMAIN_ADMIN",
+     "state": "ENABLED",
+     "updated_at": "2024-11-12T04:46:40.885Z"
+   }
+ ],
+ "total_count": 7
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     

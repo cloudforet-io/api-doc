@@ -107,6 +107,54 @@ These two options are located in options field. not in plugin_info.*
 {{< /tab >}}
 
 
+ {{< tab "Response Example" >}}
+
+[ProviderInfo](#PROVIDERINFO)
+* **provider** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **alias** (string)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **color** (string)   `Required` 
+
+* **icon** (string)   `Required` 
+
+* **order** (int32)   `Required` 
+
+* **options** (Struct)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "alias": "AWS",
+ "created_at": "2024-11-15T04:47:42.393Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "icon": "https://cloudforet.io/icons/aws.svg",
+ "name": "AWS",
+ "options": {
+   "supported_trusted_account": false
+ },
+ "order": 1,
+ "provider": "aws",
+ "updated_at": "2024-11-15T04:47:42.393Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
 
 {{< /tabs >}}
 
@@ -175,11 +223,59 @@ These two options are located in options field. not in plugin_info.*
  "order": 2,
  "options": {
       "supported_trusted_account": false
- },
+ }
 }
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[ProviderInfo](#PROVIDERINFO)
+* **provider** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **alias** (string)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **color** (string)   `Required` 
+
+* **icon** (string)   `Required` 
+
+* **order** (int32)   `Required` 
+
+* **options** (Struct)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "alias": "AWS",
+ "created_at": "2024-11-15T04:47:42.393Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "icon": "https://cloudforet.io/icons/aws.svg",
+ "name": "AWS",
+ "options": {
+   "supported_trusted_account": false
+ },
+ "order": 1,
+ "provider": "aws",
+ "updated_at": "2024-11-15T04:47:42.393Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -236,6 +332,54 @@ These two options are located in options field. not in plugin_info.*
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[ProviderInfo](#PROVIDERINFO)
+* **provider** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **alias** (string)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **color** (string)   `Required` 
+
+* **icon** (string)   `Required` 
+
+* **order** (int32)   `Required` 
+
+* **options** (Struct)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "alias": "AWS",
+ "created_at": "2024-11-15T04:47:42.393Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "icon": "https://cloudforet.io/icons/aws.svg",
+ "name": "AWS",
+ "options": {
+   "supported_trusted_account": false
+ },
+ "order": 1,
+ "provider": "aws",
+ "updated_at": "2024-11-15T04:47:42.393Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -321,6 +465,54 @@ These two options are located in options field. not in plugin_info.*
 {{< /tab >}}
 
 
+ {{< tab "Response Example" >}}
+
+[ProviderInfo](#PROVIDERINFO)
+* **provider** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **alias** (string)   `Required` 
+
+* **plugin_info** (PluginInfo)   `Required` 
+
+* **color** (string)   `Required` 
+
+* **icon** (string)   `Required` 
+
+* **order** (int32)   `Required` 
+
+* **options** (Struct)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "alias": "AWS",
+ "created_at": "2024-11-15T04:47:42.393Z",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "icon": "https://cloudforet.io/icons/aws.svg",
+ "name": "AWS",
+ "options": {
+   "supported_trusted_account": false
+ },
+ "order": 1,
+ "provider": "aws",
+ "updated_at": "2024-11-15T04:47:42.393Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
 
 {{< /tabs >}}
 
@@ -340,6 +532,98 @@ These two options are located in options field. not in plugin_info.*
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProviderSearchQuery](./Provider#providersearchquery)
+
+* **query** (Query)  
+
+
+* **provider** (string)  
+
+
+* **name** (string)  
+
+
+* **alias** (string)  
+
+
+* **is_managed** (bool)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "query": {
+   "page": {
+     "start": 1,
+     "limit": 10
+   },
+   "sort": [
+     {
+       "key": "created_at",
+       "desc": true
+     }
+   ]
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProvidersInfo](#PROVIDERSINFO)
+* **results** (ProviderInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "results": [
+ {
+   "alias": "Azure",
+   "created_at": "2024-11-15T04:47:42.393Z",
+   "domain_id": "domain-a1b2c3d4e5f6",
+   "icon": "https://cloudforet.io/icons/azure.svg",
+   "name": "Azure",
+   "options": {
+     "supported_trusted_account": false
+   },
+   "order": 1,
+   "provider": "azure",
+   "updated_at": "2024-11-15T04:47:42.393Z"
+ },
+ {
+   "alias": "AWS",
+   "created_at": "2024-11-15T04:47:42.393Z",
+   "domain_id": "domain-a1b2c3d4e5f6",
+   "icon": "https://cloudforet.io/icons/aws.svg",
+   "name": "AWS",
+   "options": {
+     "supported_trusted_account": false
+   },
+   "order": 1,
+   "provider": "aws",
+   "updated_at": "2024-11-15T04:47:42.393Z"
+ }
+ ],
+ "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     

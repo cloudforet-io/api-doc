@@ -53,6 +53,92 @@ bookFlatSection: true
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateWorkSpaceRequest](./Workspace#createworkspacerequest)
+
+* **name** (string)   `Required` 
+
+
+* **tags** (Struct)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "name": "Cloudforet Workspace"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspaceInfo](#WORKSPACEINFO)
+* **workspace_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **references** (string)  `Repeated`   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **is_dormant** (bool)   `Required` 
+
+* **dormant_ttl** (int32)   `Required` 
+
+* **service_account_count** (int32)   `Required` 
+
+* **user_count** (int32)   `Required` 
+
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+* **workspace_group_id** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+* **dormant_updated_at** (string)   `Required` 
+
+* **changed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace",
+ "state": "ENABLED",
+ "created_by": "cloudforet@cloudforet.io",
+ "dormant_ttl": -1,
+ "cost_info": {},
+ "workspace_group_id": "wg-a1b2c3d4e5f6",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "created_at": "2024-11-12T08:14:04.011Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -69,6 +155,96 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateWorkSpaceRequest](./Workspace#updateworkspacerequest)
+
+* **workspace_id** (string)   `Required` 
+
+
+* **name** (string)  
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspaceInfo](#WORKSPACEINFO)
+* **workspace_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **references** (string)  `Repeated`   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **is_dormant** (bool)   `Required` 
+
+* **dormant_ttl** (int32)   `Required` 
+
+* **service_account_count** (int32)   `Required` 
+
+* **user_count** (int32)   `Required` 
+
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+* **workspace_group_id** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+* **dormant_updated_at** (string)   `Required` 
+
+* **changed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace",
+ "state": "ENABLED",
+ "created_by": "cloudforet@cloudforet.io",
+ "dormant_ttl": -1,
+ "cost_info": {},
+ "workspace_group_id": "wg-a1b2c3d4e5f6",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "created_at": "2024-11-12T08:14:04.011Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -87,6 +263,93 @@ bookFlatSection: true
 
 
 
+ {{< tabs " change_workspace_group " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ChangeWorkspaceGroupRequest](./Workspace#changeworkspacegrouprequest)
+
+* **workspace_id** (string)   `Required` 
+
+
+* **workspace_group_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "workspace_group_id": "wg-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspaceInfo](#WORKSPACEINFO)
+* **workspace_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **references** (string)  `Repeated`   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **is_dormant** (bool)   `Required` 
+
+* **dormant_ttl** (int32)   `Required` 
+
+* **service_account_count** (int32)   `Required` 
+
+* **user_count** (int32)   `Required` 
+
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+* **workspace_group_id** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+* **dormant_updated_at** (string)   `Required` 
+
+* **changed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace",
+ "state": "ENABLED",
+ "created_by": "cloudforet@cloudforet.io",
+ "dormant_ttl": -1,
+ "cost_info": {},
+ "workspace_group_id": "wg-a1b2c3d4e5f6",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "created_at": "2024-11-12T08:14:04.011Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -103,6 +366,35 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[WorkspaceDeleteRequest](./Workspace#workspacedeleterequest)
+
+* **workspace_id** (string)   `Required` 
+
+
+* **force** (bool)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "force": true
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -121,6 +413,89 @@ bookFlatSection: true
 
 
 
+ {{< tabs " enable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[WorkspaceRequest](./Workspace#workspacerequest)
+
+* **workspace_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspaceInfo](#WORKSPACEINFO)
+* **workspace_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **references** (string)  `Repeated`   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **is_dormant** (bool)   `Required` 
+
+* **dormant_ttl** (int32)   `Required` 
+
+* **service_account_count** (int32)   `Required` 
+
+* **user_count** (int32)   `Required` 
+
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+* **workspace_group_id** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+* **dormant_updated_at** (string)   `Required` 
+
+* **changed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace",
+ "state": "ENABLED",
+ "created_by": "cloudforet@cloudforet.io",
+ "dormant_ttl": -1,
+ "cost_info": {},
+ "workspace_group_id": "wg-a1b2c3d4e5f6",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "created_at": "2024-11-12T08:14:04.011Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -138,6 +513,89 @@ bookFlatSection: true
 
 
 
+ {{< tabs " disable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[WorkspaceRequest](./Workspace#workspacerequest)
+
+* **workspace_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspaceInfo](#WORKSPACEINFO)
+* **workspace_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **references** (string)  `Repeated`   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **is_dormant** (bool)   `Required` 
+
+* **dormant_ttl** (int32)   `Required` 
+
+* **service_account_count** (int32)   `Required` 
+
+* **user_count** (int32)   `Required` 
+
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+* **workspace_group_id** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+* **dormant_updated_at** (string)   `Required` 
+
+* **changed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace",
+ "state": "ENABLED",
+ "created_by": "cloudforet@cloudforet.io",
+ "dormant_ttl": -1,
+ "cost_info": {},
+ "workspace_group_id": "wg-a1b2c3d4e5f6",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "created_at": "2024-11-12T08:14:04.011Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -154,6 +612,89 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[WorkspaceRequest](./Workspace#workspacerequest)
+
+* **workspace_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspaceInfo](#WORKSPACEINFO)
+* **workspace_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **references** (string)  `Repeated`   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **is_dormant** (bool)   `Required` 
+
+* **dormant_ttl** (int32)   `Required` 
+
+* **service_account_count** (int32)   `Required` 
+
+* **user_count** (int32)   `Required` 
+
+* **cost_info** (WorkspaceCostInfo)   `Required` 
+
+* **workspace_group_id** (string)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+* **dormant_updated_at** (string)   `Required` 
+
+* **changed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "name": "Cloudforet Workspace",
+ "state": "ENABLED",
+ "created_by": "cloudforet@cloudforet.io",
+ "dormant_ttl": -1,
+ "cost_info": {},
+ "workspace_group_id": "wg-a1b2c3d4e5f6",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "created_at": "2024-11-12T08:14:04.011Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -185,6 +726,101 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[WorkspaceSearchQuery](./Workspace#workspacesearchquery)
+
+* **query** (Query)  
+
+
+* **workspace_id** (string)  
+
+
+* **name** (string)  
+
+
+* **state** (State)  
+
+
+* **created_by** (string)  
+
+
+* **is_managed** (bool)  
+
+
+* **is_dormant** (bool)  
+
+
+* **workspace_group_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "query": {
+   "page": {
+     "start": 1,
+     "limit": 10
+   }
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[WorkspacesInfo](#WORKSPACESINFO)
+* **results** (WorkspaceInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "results": [
+ {
+   "workspace_id": "workspace-a1b2c3d4e5f6",
+   "name": "Cloudforet Workspace",
+   "state": "ENABLED",
+   "created_by": "wonny@cloudforet.io",
+   "dormant_ttl": -1,
+   "service_account_count": 0,
+   "user_count": 0,
+   "cost_info": {},
+   "domain_id": "domain-a1b2c3d4e5f6",
+   "created_at": "2024-11-12T08:25:08.762Z"
+ },
+ {
+   "workspace_id": "workspace-g7h8i9j1k2l3",
+   "name": "Wonny Workspace",
+   "state": "ENABLED",
+   "created_by": "cloudforet@cloudforet.io",
+   "dormant_ttl": 0,
+   "service_account_count": 0,
+   "user_count": 0,
+   "cost_info": {},
+   "workspace_group_id": "wg-a1b2c3d4e5f6",
+   "domain_id": "domain-g7h8i9j1k2l3",
+   "created_at": "2024-11-12T08:14:04.011Z",
+   "changed_at": "2024-11-12T08:43:39.945Z"
+ }
+ ],
+ "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     

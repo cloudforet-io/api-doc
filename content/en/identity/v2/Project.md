@@ -53,6 +53,87 @@ bookFlatSection: true
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateProjectRequest](./Project#createprojectrequest)
+
+* **name** (string)   `Required` 
+
+
+* **project_type** (ProjectType)   `Required` 
+
+
+* **tags** (Struct)  
+
+
+* **project_group_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "name": "Cloudforet Project",
+ "project_type": "PUBLIC"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectInfo](#PROJECTINFO)
+* **project_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **project_type** (ProjectType)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "name": "Cloudforet Project",
+ "project_type": "PUBLIC",
+ "created_by": "wonny@cloudforet.io",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "created_at": "2024-11-13T06:35:11.877Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -69,6 +150,84 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateProjectRequest](./Project#updateprojectrequest)
+
+* **project_id** (string)   `Required` 
+
+
+* **name** (string)  
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "name": "Wonny Project"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectInfo](#PROJECTINFO)
+* **project_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **project_type** (ProjectType)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "name": "Cloudforet Project",
+ "project_type": "PUBLIC",
+ "created_by": "wonny@cloudforet.io",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "created_at": "2024-11-13T06:35:11.877Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -87,6 +246,81 @@ bookFlatSection: true
 
 
 
+ {{< tabs " update_project_type " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateProjectTypeRequest](./Project#updateprojecttyperequest)
+
+* **project_id** (string)   `Required` 
+
+
+* **project_type** (ProjectType)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "project_type": "PRIVATE"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectInfo](#PROJECTINFO)
+* **project_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **project_type** (ProjectType)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "name": "Cloudforet Project",
+ "project_type": "PUBLIC",
+ "created_by": "wonny@cloudforet.io",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "created_at": "2024-11-13T06:35:11.877Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -103,6 +337,81 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " change_project_group " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ChangeProjectGroupRequest](./Project#changeprojectgrouprequest)
+
+* **project_id** (string)   `Required` 
+
+
+* **project_group_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_group_id": "pg-a1b2c3d4e5f6",
+ "project_id": "project-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectInfo](#PROJECTINFO)
+* **project_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **project_type** (ProjectType)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "name": "Cloudforet Project",
+ "project_type": "PUBLIC",
+ "created_by": "wonny@cloudforet.io",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "created_at": "2024-11-13T06:35:11.877Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -121,6 +430,31 @@ bookFlatSection: true
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProjectRequest](./Project#projectrequest)
+
+* **project_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -137,6 +471,81 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " add_users " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UsersProjectRequest](./Project#usersprojectrequest)
+
+* **project_id** (string)   `Required` 
+
+
+* **users** (string)  `Repeated`    `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "users": ["cloudforet@cloudforet.io", "wonny@cloudforet.io"]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectInfo](#PROJECTINFO)
+* **project_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **project_type** (ProjectType)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "name": "Cloudforet Project",
+ "project_type": "PUBLIC",
+ "created_by": "wonny@cloudforet.io",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "created_at": "2024-11-13T06:35:11.877Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -155,6 +564,81 @@ bookFlatSection: true
 
 
 
+ {{< tabs " remove_users " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UsersProjectRequest](./Project#usersprojectrequest)
+
+* **project_id** (string)   `Required` 
+
+
+* **users** (string)  `Repeated`    `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "users": ["cloudforet@cloudforet.io", "wonny@cloudforet.io"]
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectInfo](#PROJECTINFO)
+* **project_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **project_type** (ProjectType)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "name": "Cloudforet Project",
+ "project_type": "PUBLIC",
+ "created_by": "wonny@cloudforet.io",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "created_at": "2024-11-13T06:35:11.877Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -172,6 +656,77 @@ bookFlatSection: true
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProjectRequest](./Project#projectrequest)
+
+* **project_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectInfo](#PROJECTINFO)
+* **project_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **project_type** (ProjectType)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **users** (string)  `Repeated`   `Required` 
+
+* **created_by** (string)   `Required` 
+
+* **reference_id** (string)   `Required` 
+
+* **is_managed** (bool)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **workspace_id** (string)   `Required` 
+
+* **project_group_id** (string)   `Required` 
+
+* **trusted_account_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_synced_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "project_id": "project-a1b2c3d4e5f6",
+ "name": "Cloudforet Project",
+ "project_type": "PUBLIC",
+ "created_by": "wonny@cloudforet.io",
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "workspace_id": "workspace-a1b2c3d4e5f6",
+ "created_at": "2024-11-13T06:35:11.877Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -188,6 +743,110 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[ProjectSearchQuery](./Project#projectsearchquery)
+
+* **query** (Query)  
+
+
+* **project_id** (string)  
+
+
+* **name** (string)  
+
+
+* **project_type** (ProjectType)  
+
+
+* **created_by** (string)  
+
+
+* **include_children** (bool)  
+
+
+* **workspace_id** (string)  
+
+
+* **project_group_id** (string)  
+
+
+* **user_id** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "project_type": "PRIVATE",
+ "query": {
+   "page": {
+     "start": 1,
+     "limit": 10
+   },
+   "sort": [{
+     "key": "created_at",
+     "desc": true
+   }]
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[ProjectsInfo](#PROJECTSINFO)
+* **results** (ProjectInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "results": [
+ {
+   "created_at": "2024-11-13T07:01:56.295Z",
+   "created_by": "wonny@cloudforet.io",
+   "domain_id": "domain-a1b2c3d4e5f6",
+   "name": "Wonny Project",
+   "project_group_id": "pg-a1b2c3d4e5f6",
+   "project_id": "project-a1b2c3d4e5f6",
+   "project_type": "PRIVATE",
+   "users": [
+     "wonny@cloudforet.io"
+   ],
+   "workspace_id": "workspace-a1b2c3d4e5f6"
+ },
+ {
+   "created_at": "2024-11-13T06:35:11.877Z",
+   "created_by": "cloudforet@cloudforet.io",
+   "domain_id": "domain-a1b2c3d4e5f6",
+   "name": "Cloudforet Project",
+   "project_group_id": "pg-a1b2c3d4e5f6",
+   "project_id": "project-g7h8i9j1k2l3",
+   "project_type": "PRIVATE",
+   "users": [
+     "cloudforet@cloudforet.io",
+     "wonny@cloudforet.io"
+   ],
+   "workspace_id": "workspace-a1b2c3d4e5f6"
+ }
+ ],
+ "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     

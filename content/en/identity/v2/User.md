@@ -108,6 +108,7 @@ External type user do not need password.
 {
  "user_id": "wonny@cloudforet.io",
  "password": "Password1234!",
+ "reset_password": false,
  "name": "Wonny",
  "email": "wonny@cloudforet.io",
  "auth_type": "LOCAL",
@@ -117,6 +118,58 @@ External type user do not need password.
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **email** (string)   `Required` 
+
+* **email_verified** (bool)   `Required` 
+
+* **auth_type** (AuthType)   `Required` 
+
+* **role_id** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **mfa** (MFA)   `Required` 
+
+* **language** (string)   `Required` 
+
+* **timezone** (string)   `Required` 
+
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
+
+* **refresh_timeout** (int32)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_accessed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -137,6 +190,111 @@ Update user info by given user_id
 
 
 
+
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateUserRequest](./User#updateuserrequest)
+
+* **user_id** (string)   `Required` 
+
+
+* **password** (string)  
+
+
+* **name** (string)  
+
+
+* **email** (string)  
+
+
+* **language** (string)  
+
+
+* **timezone** (string)  
+
+
+* **tags** (Struct)  
+
+
+* **reset_password** (bool)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!!",
+ "reset_password": false,
+ "name": "Cloudforet",
+ "email": "cloudforet@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **email** (string)   `Required` 
+
+* **email_verified** (bool)   `Required` 
+
+* **auth_type** (AuthType)   `Required` 
+
+* **role_id** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **mfa** (MFA)   `Required` 
+
+* **language** (string)   `Required` 
+
+* **timezone** (string)   `Required` 
+
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
+
+* **refresh_timeout** (int32)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_accessed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -175,7 +333,7 @@ Update user info by given user_id
 {{< highlight json >}}
 {
  "user_id": "example@cloudforet.com",
- "email": "example@cloudforet.com",
+ "email": "example@cloudforet.com"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -223,6 +381,58 @@ Disable MFA for user. If this api is called, send email to user.
 {{< /tab >}}
 
 
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **email** (string)   `Required` 
+
+* **email_verified** (bool)   `Required` 
+
+* **auth_type** (AuthType)   `Required` 
+
+* **role_id** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **mfa** (MFA)   `Required` 
+
+* **language** (string)   `Required` 
+
+* **timezone** (string)   `Required` 
+
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
+
+* **refresh_timeout** (int32)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_accessed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
 
 {{< /tabs >}}
 
@@ -269,6 +479,58 @@ Disable MFA for user. If this api is called, send email to user.
 {{< /tab >}}
 
 
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **email** (string)   `Required` 
+
+* **email_verified** (bool)   `Required` 
+
+* **auth_type** (AuthType)   `Required` 
+
+* **role_id** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **mfa** (MFA)   `Required` 
+
+* **language** (string)   `Required` 
+
+* **timezone** (string)   `Required` 
+
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
+
+* **refresh_timeout** (int32)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_accessed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
 
 {{< /tabs >}}
 
@@ -309,12 +571,64 @@ Min value is `1800` seconds and max value is `2592000` seconds
 
 {{< highlight json >}}
 {
-  "user_id": "wony@cloudforet.io"
+  "user_id": "wonny@cloudforet.io",
   "refresh_token_timout": 10800
 }
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **email** (string)   `Required` 
+
+* **email_verified** (bool)   `Required` 
+
+* **auth_type** (AuthType)   `Required` 
+
+* **role_id** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **mfa** (MFA)   `Required` 
+
+* **language** (string)   `Required` 
+
+* **timezone** (string)   `Required` 
+
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
+
+* **refresh_timeout** (int32)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_accessed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -358,6 +672,58 @@ Min value is `1800` seconds and max value is `2592000` seconds
 {{< /tab >}}
 
 
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **email** (string)   `Required` 
+
+* **email_verified** (bool)   `Required` 
+
+* **auth_type** (AuthType)   `Required` 
+
+* **role_id** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **mfa** (MFA)   `Required` 
+
+* **language** (string)   `Required` 
+
+* **timezone** (string)   `Required` 
+
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
+
+* **refresh_timeout** (int32)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_accessed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
 
 {{< /tabs >}}
 
@@ -399,6 +765,58 @@ Min value is `1800` seconds and max value is `2592000` seconds
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **email** (string)   `Required` 
+
+* **email_verified** (bool)   `Required` 
+
+* **auth_type** (AuthType)   `Required` 
+
+* **role_id** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **mfa** (MFA)   `Required` 
+
+* **language** (string)   `Required` 
+
+* **timezone** (string)   `Required` 
+
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
+
+* **refresh_timeout** (int32)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_accessed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -484,6 +902,58 @@ Min value is `1800` seconds and max value is `2592000` seconds
 {{< /tab >}}
 
 
+ {{< tab "Response Example" >}}
+
+[UserInfo](#USERINFO)
+* **user_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **email** (string)   `Required` 
+
+* **email_verified** (bool)   `Required` 
+
+* **auth_type** (AuthType)   `Required` 
+
+* **role_id** (string)   `Required` 
+
+* **role_type** (RoleType)   `Required` 
+
+* **mfa** (MFA)   `Required` 
+
+* **language** (string)   `Required` 
+
+* **timezone** (string)   `Required` 
+
+* **required_actions** (UserRequiredAction)  `Repeated`   `Required` 
+
+* **refresh_timeout** (int32)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **domain_id** (string)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **last_accessed_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "user_id": "wonny@cloudforet.io",
+ "password": "Password1234!",
+ "name": "Wonny",
+ "email": "wonny@cloudforet.io",
+ "auth_type": "LOCAL",
+ "language": "en",
+ "timezone": "UTC"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
 
 {{< /tabs >}}
 
@@ -503,6 +973,100 @@ Min value is `1800` seconds and max value is `2592000` seconds
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UserSearchQuery](./User#usersearchquery)
+
+* **query** (Query)  
+
+
+* **user_id** (string)  
+
+
+* **name** (string)  
+
+
+* **state** (State)  
+
+
+* **email** (string)  
+
+
+* **auth_type** (AuthType)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "auth_type": "LOCAL",
+ "query": {
+   "page": {
+     "start": 1,
+     "limit": 10
+   },
+   "sort": [{
+     "key": "created_at",
+     "desc": true
+   }]
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[UsersInfo](#USERSINFO)
+* **results** (UserInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "results": [
+   {
+     "auth_type": "LOCAL",
+     "created_at": "2024-11-14T01:53:19.224Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "email": "wonny@cloudforet.io",
+     "language": "en",
+     "name": "Wonny",
+     "role_type": "USER",
+     "state": "PENDING",
+     "timezone": "UTC",
+     "user_id": "wonny@cloudforet.io"
+   },
+   {
+     "auth_type": "LOCAL",
+     "created_at": "2024-11-12T04:46:41.209Z",
+     "domain_id": "domain-a1b2c3d4e5f6",
+     "email": "cloudforet@cloudforet.io",
+     "language": "ko",
+     "last_accessed_at": "2024-11-13T07:42:46.511Z",
+     "name": "Cloudforet Admin",
+     "role_id": "managed-domain-admin",
+     "role_type": "DOMAIN_ADMIN",
+     "state": "ENABLED",
+     "timezone": "UTC",
+     "user_id": "cloudforet@cloudforet.io"
+   }
+ ],
+ "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     

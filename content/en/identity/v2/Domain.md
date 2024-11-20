@@ -53,6 +53,72 @@ bookFlatSection: true
 
 
 
+ {{< tabs " create " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[CreateDomainRequest](./Domain#createdomainrequest)
+
+* **name** (string)   `Required` 
+
+
+* **admin** (Admin)   `Required` 
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "name": "wonny-dev",
+ "admin": {
+   "user_id": "wonny@cloudforet.io",
+   "name": "Wonny",
+   "password": "Password1234!",
+   "email": "wonny@cloudforet.io",
+   "language": "en",
+   "timezone": "UTC"
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DomainInfo](#DOMAININFO)
+* **domain_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **deleted_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "wonny-dev",
+ "state": "ENABLED",
+ "created_at": "2024-11-12T02:24:01.233Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -69,6 +135,65 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " update " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdateDomainRequest](./Domain#updatedomainrequest)
+
+* **domain_id** (string)   `Required` 
+
+
+* **name** (string)  
+
+
+* **tags** (Struct)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "wonny-dev"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DomainInfo](#DOMAININFO)
+* **domain_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **deleted_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "wonny-dev",
+ "state": "ENABLED",
+ "created_at": "2024-11-12T02:24:01.233Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -87,6 +212,31 @@ bookFlatSection: true
 
 
 
+ {{< tabs " delete " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[DomainRequest](./Domain#domainrequest)
+
+* **domain_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -103,6 +253,58 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " enable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[DomainRequest](./Domain#domainrequest)
+
+* **domain_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DomainInfo](#DOMAININFO)
+* **domain_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **deleted_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "wonny-dev",
+ "state": "ENABLED",
+ "created_at": "2024-11-12T02:24:01.233Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -121,6 +323,58 @@ bookFlatSection: true
 
 
 
+ {{< tabs " disable " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[DomainRequest](./Domain#domainrequest)
+
+* **domain_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DomainInfo](#DOMAININFO)
+* **domain_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **deleted_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "wonny-dev",
+ "state": "ENABLED",
+ "created_at": "2024-11-12T02:24:01.233Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -138,6 +392,58 @@ bookFlatSection: true
 
 
 
+ {{< tabs " get " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[DomainRequest](./Domain#domainrequest)
+
+* **domain_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DomainInfo](#DOMAININFO)
+* **domain_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **state** (State)   `Required` 
+
+* **tags** (Struct)   `Required` 
+
+* **created_at** (string)   `Required` 
+
+* **deleted_at** (string)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "wonny-dev",
+ "state": "ENABLED",
+ "created_at": "2024-11-12T02:24:01.233Z"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -154,6 +460,71 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " get_auth_info " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[GetDomainAuthRequest](./Domain#getdomainauthrequest)
+
+* **name** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "name": "wonny-dev"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DomainAuthInfo](#DOMAINAUTHINFO)
+* **domain_id** (string)   `Required` 
+
+* **name** (string)   `Required` 
+
+* **external_auth_state** (ExternalAuthState)   `Required` 
+
+* **metadata** (Struct)   `Required` 
+
+* **config** (Struct)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "domain_id": "domain-a1b2c3d4e5f6",
+ "name": "wonny-dev",
+ "external_auth_state": "DISABLED",
+ "metadata": {},
+ "config": {
+     "settings": {
+       "unified_cost_config": {
+         "aggregation_day": 15.0,
+         "currency": "KRW",
+         "custom_exchange_rate": {},
+         "exchange_date": 15.0,
+         "exchange_rate_mode": "AUTO",
+         "exchange_source": "Yahoo! Finance",
+         "is_exchange_last_day": false,
+         "is_last_day": false,
+         "run_hour": 0.0
+       }
+     }
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
@@ -185,6 +556,80 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[DomainSearchQuery](./Domain#domainsearchquery)
+
+* **query** (Query)  
+
+
+* **domain_id** (string)  
+
+
+* **name** (string)  
+
+
+* **state** (State)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "query": {
+   "filter": [{
+     "k": "tag.env",
+     "v": "dev",
+     "o": "eq"
+   }],
+   "sort": [{
+     "key": "created_at",
+     "desc": true
+   }]
+ }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[DomainsInfo](#DOMAINSINFO)
+* **results** (DomainInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+ "results": [
+ {
+   "domain_id": "domain-a1b2c3d4e5f6",
+   "name": "wonny-dev1",
+   "state": "ENABLED",
+   "created_at": "2024-11-12T02:24:01.233Z"
+ },
+ {
+   "domain_id": "domain-g7h8i9j1k2l3",
+   "name": "wonny-dev2",
+   "state": "ENABLED",
+   "created_at": "2024-11-01T03:34:01.233Z"
+ }
+ ],
+ "total_count": 2
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
