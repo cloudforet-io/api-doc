@@ -267,6 +267,9 @@ bookFlatSection: true
 * **fields** (TaskField)  `Repeated`   
 
     
+* **force** (bool)  
+
+    
 * **tags** (Struct)  
 
     
