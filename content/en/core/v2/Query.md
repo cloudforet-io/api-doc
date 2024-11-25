@@ -146,11 +146,6 @@ bookFlatSection: true
 
     <br>
 
-### AggregateUnwind
-* **path** (string)   `Required` 
-
-    <br>
-
 ### AnalyzeQuery
 * **group_by** (ListValue)   `Required` 
 
@@ -179,12 +174,7 @@ bookFlatSection: true
 * **keyword** (string)   `Required` 
 
     
-* **unwind** (AnalyzeUnwind)   `Required` 
-
-    <br>
-
-### AnalyzeUnwind
-* **path** (string)   `Required` 
+* **unwind** (Unwind)   `Required` 
 
     <br>
 
@@ -320,7 +310,7 @@ bookFlatSection: true
     <br>
 
 ### StatisticsAggregate
-* **unwind** (AggregateUnwind)   `Required` 
+* **unwind** (Unwind)   `Required` 
 
     
 * **group** (AggregateGroup)   `Required` 
@@ -399,7 +389,7 @@ bookFlatSection: true
 * **keyword** (string)   `Required` 
 
     
-* **unwind** (AnalyzeUnwind)   `Required` 
+* **unwind** (Unwind)   `Required` 
 
     <br>
 
