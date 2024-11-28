@@ -26,6 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./TaskType#create) | [TaskTypeCreateRequest](TaskType#tasktypecreaterequest) | [TaskTypeInfo](TaskType#tasktypeinfo) |
 | [**update**](./TaskType#update) | [TaskTypeUpdateRequest](TaskType#tasktypeupdaterequest) | [TaskTypeInfo](TaskType#tasktypeinfo) |
+| [**update_fields**](./TaskType#update_fields) | [TaskTypeUpdateFieldsRequest](TaskType#tasktypeupdatefieldsrequest) | [TaskTypeInfo](TaskType#tasktypeinfo) |
 | [**delete**](./TaskType#delete) | [TaskTypeRequest](TaskType#tasktyperequest) | [Empty](TaskType#empty) |
 | [**get**](./TaskType#get) | [TaskTypeRequest](TaskType#tasktyperequest) | [TaskTypeInfo](TaskType#tasktypeinfo) |
 | [**list**](./TaskType#list) | [TaskTypeSearchQuery](TaskType#tasktypesearchquery) | [TaskTypesInfo](TaskType#tasktypesinfo) |
@@ -60,6 +61,23 @@ bookFlatSection: true
 
 
 > **POST** /opsflow/v1/task-type/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### update_fields
+
+
+
+
+
+> **POST** /opsflow/v1/task-type/update_fields
 >
 
 
@@ -218,6 +236,17 @@ bookFlatSection: true
 
     <br>
 
+### TaskTypeUpdateFieldsRequest
+* **task_type_id** (string)   `Required` 
+
+    
+* **fields** (TaskField)  `Repeated`    `Required` 
+
+    
+* **force** (bool)   `Required` 
+
+    <br>
+
 ### TaskTypeUpdateRequest
 * **task_type_id** (string)   `Required` 
 
@@ -226,9 +255,6 @@ bookFlatSection: true
 
     
 * **description** (string)  
-
-    
-* **fields** (TaskField)  `Repeated`   
 
     
 * **assignee_pool** (string)  `Repeated`   

@@ -26,6 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./TaskCategory#create) | [TaskCategoryCreateRequest](TaskCategory#taskcategorycreaterequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
 | [**update**](./TaskCategory#update) | [TaskCategoryUpdateRequest](TaskCategory#taskcategoryupdaterequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
+| [**update_fields**](./TaskCategory#update_fields) | [TaskCategoryUpdateFieldsRequest](TaskCategory#taskcategoryupdatefieldsrequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
 | [**delete**](./TaskCategory#delete) | [TaskCategoryRequest](TaskCategory#taskcategoryrequest) | [Empty](TaskCategory#empty) |
 | [**get**](./TaskCategory#get) | [TaskCategoryRequest](TaskCategory#taskcategoryrequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
 | [**list**](./TaskCategory#list) | [TaskCategorySearchQuery](TaskCategory#taskcategorysearchquery) | [TaskCategoriesInfo](TaskCategory#taskcategoriesinfo) |
@@ -60,6 +61,23 @@ bookFlatSection: true
 
 
 > **POST** /opsflow/v1/task-category/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### update_fields
+
+
+
+
+
+> **POST** /opsflow/v1/task-category/update_fields
 >
 
 
@@ -251,6 +269,17 @@ bookFlatSection: true
 
     <br>
 
+### TaskCategoryUpdateFieldsRequest
+* **category_id** (string)   `Required` 
+
+    
+* **fields** (TaskField)  `Repeated`    `Required` 
+
+    
+* **force** (bool)   `Required` 
+
+    <br>
+
 ### TaskCategoryUpdateRequest
 * **category_id** (string)   `Required` 
 
@@ -262,9 +291,6 @@ bookFlatSection: true
 
     
 * **status_options** (StatusOptions)  
-
-    
-* **fields** (TaskField)  `Repeated`   
 
     
 * **force** (bool)  
