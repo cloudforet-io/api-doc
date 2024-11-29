@@ -1,44 +1,20 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/endpoint.proto",
+      "name": "spaceone/api/inventory_v2/v1/metric_data.proto",
       "description": "",
-      "package": "spaceone.api.identity.v2",
+      "package": "spaceone.api.inventory.v1",
       "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
-      "enums": [
-        {
-          "name": "EndpointState",
-          "longName": "EndpointInfo.EndpointState",
-          "fullName": "spaceone.api.identity.v2.EndpointInfo.EndpointState",
-          "description": "",
-          "values": [
-            {
-              "name": "NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "ACTIVE",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "INACTIVE",
-              "number": "2",
-              "description": ""
-            }
-          ]
-        }
-      ],
+      "enums": [],
       "extensions": [],
       "messages": [
         {
-          "name": "EndpointInfo",
-          "longName": "EndpointInfo",
-          "fullName": "spaceone.api.identity.v2.EndpointInfo",
+          "name": "MetricDataAnalyzeQuery",
+          "longName": "MetricDataAnalyzeQuery",
+          "fullName": "spaceone.api.inventory.v1.MetricDataAnalyzeQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -46,55 +22,19 @@
           "extensions": [],
           "fields": [
             {
-              "name": "name",
+              "name": "query",
               "description": "",
               "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "type": "TimeSeriesAnalyzeQuery",
+              "longType": "spaceone.api.core.v2.TimeSeriesAnalyzeQuery",
+              "fullType": "spaceone.api.core.v2.TimeSeriesAnalyzeQuery",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "service",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "endpoint",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "state",
-              "description": "",
-              "label": "",
-              "type": "EndpointState",
-              "longType": "EndpointInfo.EndpointState",
-              "fullType": "spaceone.api.identity.v2.EndpointInfo.EndpointState",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "version",
+              "name": "metric_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -108,10 +48,166 @@
           ]
         },
         {
-          "name": "EndpointSearchQuery",
-          "longName": "EndpointSearchQuery",
-          "fullName": "spaceone.api.identity.v2.EndpointSearchQuery",
-          "description": "{\n \"service\": \"inventory\",\n \"query\": {}\n}",
+          "name": "MetricDataInfo",
+          "longName": "MetricDataInfo",
+          "fullName": "spaceone.api.inventory.v1.MetricDataInfo",
+          "description": "{\n\n}",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "metric_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "float",
+              "longType": "float",
+              "fullType": "float",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "unit",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "labels",
+              "description": "",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "domain_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "workspace_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "project_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "service_account_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "namespace_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "created_year",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "created_month",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "created_date",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetricDataQuery",
+          "longName": "MetricDataQuery",
+          "fullName": "spaceone.api.inventory.v1.MetricDataQuery",
+          "description": "{\n\n}",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -130,7 +226,31 @@
               "defaultValue": ""
             },
             {
-              "name": "service",
+              "name": "metric_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "workspace_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "project_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -144,10 +264,46 @@
           ]
         },
         {
-          "name": "EndpointsInfo",
-          "longName": "EndpointsInfo",
-          "fullName": "spaceone.api.identity.v2.EndpointsInfo",
-          "description": "{\n   \"results\": [\n       {\n           \"name\": \"Inventory Service\",\n           \"service\": \"inventory\",\n           \"endpoint\": \"grpc://localhost:50051\",\n       }\n   ],\n   \"total_count\": 1\n}",
+          "name": "MetricDataStatQuery",
+          "longName": "MetricDataStatQuery",
+          "fullName": "spaceone.api.inventory.v1.MetricDataStatQuery",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "query",
+              "description": "",
+              "label": "",
+              "type": "StatisticsQuery",
+              "longType": "spaceone.api.core.v2.StatisticsQuery",
+              "fullType": "spaceone.api.core.v2.StatisticsQuery",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "metric_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetricDatasInfo",
+          "longName": "MetricDatasInfo",
+          "fullName": "spaceone.api.inventory.v1.MetricDatasInfo",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -157,9 +313,9 @@
               "name": "results",
               "description": "",
               "label": "repeated",
-              "type": "EndpointInfo",
-              "longType": "EndpointInfo",
-              "fullType": "spaceone.api.identity.v2.EndpointInfo",
+              "type": "MetricDataInfo",
+              "longType": "MetricDataInfo",
+              "fullType": "spaceone.api.inventory.v1.MetricDataInfo",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -182,28 +338,74 @@
       ],
       "services": [
         {
-          "name": "Endpoint",
-          "longName": "Endpoint",
-          "fullName": "spaceone.api.identity.v2.Endpoint",
+          "name": "MetricData",
+          "longName": "MetricData",
+          "fullName": "spaceone.api.inventory.v1.MetricData",
           "description": "",
           "methods": [
             {
               "name": "list",
-              "description": "Get gRPC endpoint list.\n+noauth",
-              "requestType": "EndpointSearchQuery",
-              "requestLongType": "EndpointSearchQuery",
-              "requestFullType": "spaceone.api.identity.v2.EndpointSearchQuery",
+              "description": "",
+              "requestType": "MetricDataQuery",
+              "requestLongType": "MetricDataQuery",
+              "requestFullType": "spaceone.api.inventory.v1.MetricDataQuery",
               "requestStreaming": false,
-              "responseType": "EndpointsInfo",
-              "responseLongType": "EndpointsInfo",
-              "responseFullType": "spaceone.api.identity.v2.EndpointsInfo",
+              "responseType": "MetricDatasInfo",
+              "responseLongType": "MetricDatasInfo",
+              "responseFullType": "spaceone.api.inventory.v1.MetricDatasInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/endpoint/list",
+                      "pattern": "/inventory-v2/v1/metric-data/list",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "stat",
+              "description": "",
+              "requestType": "MetricDataStatQuery",
+              "requestLongType": "MetricDataStatQuery",
+              "requestFullType": "spaceone.api.inventory.v1.MetricDataStatQuery",
+              "requestStreaming": false,
+              "responseType": "Struct",
+              "responseLongType": ".google.protobuf.Struct",
+              "responseFullType": "google.protobuf.Struct",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/inventory-v2/v1/metric-data/stat",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "analyze",
+              "description": "",
+              "requestType": "MetricDataAnalyzeQuery",
+              "requestLongType": "MetricDataAnalyzeQuery",
+              "requestFullType": "spaceone.api.inventory.v1.MetricDataAnalyzeQuery",
+              "requestStreaming": false,
+              "responseType": "Struct",
+              "responseLongType": ".google.protobuf.Struct",
+              "responseFullType": "google.protobuf.Struct",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/inventory-v2/v1/metric-data/analyze",
                       "body": "*"
                     }
                   ]

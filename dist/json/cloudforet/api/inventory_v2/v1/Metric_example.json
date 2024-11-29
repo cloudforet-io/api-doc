@@ -1,131 +1,40 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/agent.proto",
+      "name": "spaceone/api/inventory_v2/v1/metric_example.proto",
       "description": "",
-      "package": "spaceone.api.identity.v2",
+      "package": "spaceone.api.inventory_v2.v1",
       "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
-      "enums": [
-        {
-          "name": "ResourceGroup",
-          "longName": "AgentInfo.ResourceGroup",
-          "fullName": "spaceone.api.identity.v2.AgentInfo.ResourceGroup",
-          "description": "",
-          "values": [
-            {
-              "name": "GROUP_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "DOMAIN",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE",
-              "number": "2",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "RoleType",
-          "longName": "AgentInfo.RoleType",
-          "fullName": "spaceone.api.identity.v2.AgentInfo.RoleType",
-          "description": "",
-          "values": [
-            {
-              "name": "ROLE_TYPE_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "DOMAIN_ADMIN",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE_OWNER",
-              "number": "2",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "State",
-          "longName": "AgentInfo.State",
-          "fullName": "spaceone.api.identity.v2.AgentInfo.State",
-          "description": "",
-          "values": [
-            {
-              "name": "STATE_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "ENABLED",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "DISABLED",
-              "number": "2",
-              "description": ""
-            },
-            {
-              "name": "EXPIRED",
-              "number": "3",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "State",
-          "longName": "AgentSearchQuery.State",
-          "fullName": "spaceone.api.identity.v2.AgentSearchQuery.State",
-          "description": "",
-          "values": [
-            {
-              "name": "STATE_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "ENABLED",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "DISABLED",
-              "number": "2",
-              "description": ""
-            },
-            {
-              "name": "EXPIRED",
-              "number": "3",
-              "description": ""
-            }
-          ]
-        }
-      ],
+      "enums": [],
       "extensions": [],
       "messages": [
         {
-          "name": "AgentInfo",
-          "longName": "AgentInfo",
-          "fullName": "spaceone.api.identity.v2.AgentInfo",
-          "description": "{\n   \"agent_id\": \"agent-5cb52dc61c70\",\n   \"options\": {\n       \"kube_state_metrics\": false,\n       \"cluster_name\": \"k8s-prd-cluster\",\n       \"prometheus_node_exporter\": false\n   },\n   \"client_secret\": \"client_secret_from_app\",\n   \"state\": \"ENABLED\",\n   \"is_managed\": true,\n   \"role_type\": \"WORKSPACE_OWNER\",\n   \"domain_id\": \"domain-116226a1516a\",\n   \"workspace_id\": \"workspace-7a0aebcf4eb2\",\n   \"project_id\": \"project-441975c8dfd8\",\n   \"service_account_id\": \"sa-a120f6d21c4e\",\n   \"app_id\": \"app-aa7bf47c98ea\",\n   \"role_id\": \"managed-workspace-owner\",\n   \"client_id\": \"client-36e1034b3512\",\n   \"created_at\": \"2024-11-13T00:34:09.125Z\",\n   \"expired_at\": \"2025-11-13T00:34:09.000Z\"\n}",
+          "name": "CreateMetricExampleRequest",
+          "longName": "CreateMetricExampleRequest",
+          "fullName": "spaceone.api.inventory_v2.v1.CreateMetricExampleRequest",
+          "description": "{\n\n}",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "agent_id",
+              "name": "metric_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
               "description": "",
               "label": "",
               "type": "string",
@@ -149,7 +58,31 @@
               "defaultValue": ""
             },
             {
-              "name": "client_secret",
+              "name": "tags",
+              "description": "+optional",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetricExampleInfo",
+          "longName": "MetricExampleInfo",
+          "fullName": "spaceone.api.inventory_v2.v1.MetricExampleInfo",
+          "description": "{\n\n}",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "example_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -161,36 +94,36 @@
               "defaultValue": ""
             },
             {
-              "name": "state",
+              "name": "name",
               "description": "",
               "label": "",
-              "type": "State",
-              "longType": "AgentInfo.State",
-              "fullType": "spaceone.api.identity.v2.AgentInfo.State",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "is_managed",
+              "name": "options",
               "description": "",
               "label": "",
-              "type": "bool",
-              "longType": "bool",
-              "fullType": "bool",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "role_type",
+              "name": "tags",
               "description": "",
               "label": "",
-              "type": "RoleType",
-              "longType": "AgentInfo.RoleType",
-              "fullType": "spaceone.api.identity.v2.AgentInfo.RoleType",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -209,7 +142,7 @@
               "defaultValue": ""
             },
             {
-              "name": "workspace_id",
+              "name": "user_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -221,7 +154,7 @@
               "defaultValue": ""
             },
             {
-              "name": "project_id",
+              "name": "metric_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -233,43 +166,7 @@
               "defaultValue": ""
             },
             {
-              "name": "service_account_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "app_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "role_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "client_id",
+              "name": "namespace_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -293,19 +190,7 @@
               "defaultValue": ""
             },
             {
-              "name": "expired_at",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "last_accessed_at",
+              "name": "updated_at",
               "description": "",
               "label": "",
               "type": "string",
@@ -319,34 +204,10 @@
           ]
         },
         {
-          "name": "AgentRequest",
-          "longName": "AgentRequest",
-          "fullName": "spaceone.api.identity.v2.AgentRequest",
-          "description": "{\n \"service_account_id\": \"sa-a120f6d21c4e\"\n}",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "service_account_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
-          "name": "AgentSearchQuery",
-          "longName": "AgentSearchQuery",
-          "fullName": "spaceone.api.identity.v2.AgentSearchQuery",
-          "description": "{\n \"query\": {\n   \"page\": {\n     \"start\":1,\n     \"limit\": 10\n   }\n }\n}",
+          "name": "MetricExampleQuery",
+          "longName": "MetricExampleQuery",
+          "fullName": "spaceone.api.inventory_v2.v1.MetricExampleQuery",
+          "description": "{\n\n}",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -365,7 +226,7 @@
               "defaultValue": ""
             },
             {
-              "name": "agent_id",
+              "name": "example_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -377,7 +238,7 @@
               "defaultValue": ""
             },
             {
-              "name": "service_account_id",
+              "name": "name",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -389,12 +250,24 @@
               "defaultValue": ""
             },
             {
-              "name": "state",
+              "name": "metric_id",
               "description": "+optional",
               "label": "",
-              "type": "State",
-              "longType": "AgentSearchQuery.State",
-              "fullType": "spaceone.api.identity.v2.AgentSearchQuery.State",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "namespace_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -403,10 +276,58 @@
           ]
         },
         {
-          "name": "AgentsInfo",
-          "longName": "AgentsInfo",
-          "fullName": "spaceone.api.identity.v2.AgentsInfo",
-          "description": "{\n \"results\": [\n   {\n     \"agent_id\": \"agent-5cb52dc61c70\",\n     \"options\": {\n       \"kube_state_metrics\": false,\n       \"cluster_name\": \"k8s-prd-cluster\",\n       \"prometheus_node_exporter\": false\n     },\n     \"client_secret\": \"client_secret_from_app\",\n     \"state\": \"ENABLED\",\n     \"is_managed\": true,\n     \"role_type\": \"WORKSPACE_OWNER\",\n     \"domain_id\": \"domain-116226a1516a\",\n     \"workspace_id\": \"workspace-7a0aebcf4eb2\",\n     \"project_id\": \"project-441975c8dfd8\",\n     \"service_account_id\": \"sa-a120f6d21c4e\",\n     \"app_id\": \"app-aa7bf47c98ea\",\n     \"role_id\": \"managed-workspace-owner\",\n     \"client_id\": \"client-36e1034b3512\",\n     \"created_at\": \"2024-11-13T00:34:09.125Z\",\n     \"expired_at\": \"2025-11-13T00:34:09.000Z\"\n   }\n ],\n \"total_count\": 1\n}",
+          "name": "MetricExampleRequest",
+          "longName": "MetricExampleRequest",
+          "fullName": "spaceone.api.inventory_v2.v1.MetricExampleRequest",
+          "description": "{\n\n}",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "example_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetricExampleStatQuery",
+          "longName": "MetricExampleStatQuery",
+          "fullName": "spaceone.api.inventory_v2.v1.MetricExampleStatQuery",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "query",
+              "description": "",
+              "label": "",
+              "type": "StatisticsQuery",
+              "longType": "spaceone.api.core.v2.StatisticsQuery",
+              "fullType": "spaceone.api.core.v2.StatisticsQuery",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetricExamplesInfo",
+          "longName": "MetricExamplesInfo",
+          "fullName": "spaceone.api.inventory_v2.v1.MetricExamplesInfo",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -416,9 +337,9 @@
               "name": "results",
               "description": "",
               "label": "repeated",
-              "type": "AgentInfo",
-              "longType": "AgentInfo",
-              "fullType": "spaceone.api.identity.v2.AgentInfo",
+              "type": "MetricExampleInfo",
+              "longType": "MetricExampleInfo",
+              "fullType": "spaceone.api.inventory_v2.v1.MetricExampleInfo",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -439,17 +360,17 @@
           ]
         },
         {
-          "name": "CreateAgentRequest",
-          "longName": "CreateAgentRequest",
-          "fullName": "spaceone.api.identity.v2.CreateAgentRequest",
-          "description": "{\n \"service_account_id\": \"sa-a120f6d21c4e\",\n \"options\": {\n   \"cluster_name\": \"k8s-prd-cluster\",\n   \"kube_state_metrics\": \"false\",\n   \"prometheus_node_exporter\": \"false\"\n }\n}",
+          "name": "UpdateMetricExampleRequest",
+          "longName": "UpdateMetricExampleRequest",
+          "fullName": "spaceone.api.inventory_v2.v1.UpdateMetricExampleRequest",
+          "description": "{\n\n}",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "service_account_id",
+              "name": "example_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -461,8 +382,32 @@
               "defaultValue": ""
             },
             {
+              "name": "name",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
               "name": "options",
-              "description": "",
+              "description": "+optional",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "tags",
+              "description": "+optional",
               "label": "",
               "type": "Struct",
               "longType": "google.protobuf.Struct",
@@ -477,28 +422,28 @@
       ],
       "services": [
         {
-          "name": "Agent",
-          "longName": "Agent",
-          "fullName": "spaceone.api.identity.v2.Agent",
-          "description": "Create Agent with service account , Currently only Kubernetes service account is supported for OpenCost",
+          "name": "MetricExample",
+          "longName": "MetricExample",
+          "fullName": "spaceone.api.inventory_v2.v1.MetricExample",
+          "description": "",
           "methods": [
             {
               "name": "create",
               "description": "",
-              "requestType": "CreateAgentRequest",
-              "requestLongType": "CreateAgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.CreateAgentRequest",
+              "requestType": "CreateMetricExampleRequest",
+              "requestLongType": "CreateMetricExampleRequest",
+              "requestFullType": "spaceone.api.inventory_v2.v1.CreateMetricExampleRequest",
               "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
+              "responseType": "MetricExampleInfo",
+              "responseLongType": "MetricExampleInfo",
+              "responseFullType": "spaceone.api.inventory_v2.v1.MetricExampleInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/agent/create",
+                      "pattern": "/inventory-v2/v1/metric-example/create",
                       "body": "*"
                     }
                   ]
@@ -506,68 +451,22 @@
               }
             },
             {
-              "name": "enable",
+              "name": "update",
               "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
+              "requestType": "UpdateMetricExampleRequest",
+              "requestLongType": "UpdateMetricExampleRequest",
+              "requestFullType": "spaceone.api.inventory_v2.v1.UpdateMetricExampleRequest",
               "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
+              "responseType": "MetricExampleInfo",
+              "responseLongType": "MetricExampleInfo",
+              "responseFullType": "spaceone.api.inventory_v2.v1.MetricExampleInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/agent/enable",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "disable",
-              "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
-              "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/agent/disable",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "regenerate",
-              "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
-              "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/agent/regenerate",
+                      "pattern": "/inventory-v2/v1/metric-example/update",
                       "body": "*"
                     }
                   ]
@@ -577,9 +476,9 @@
             {
               "name": "delete",
               "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
+              "requestType": "MetricExampleRequest",
+              "requestLongType": "MetricExampleRequest",
+              "requestFullType": "spaceone.api.inventory_v2.v1.MetricExampleRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
@@ -590,7 +489,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/agent/delete",
+                      "pattern": "/inventory-v2/v1/metric-example/delete",
                       "body": "*"
                     }
                   ]
@@ -600,20 +499,20 @@
             {
               "name": "get",
               "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
+              "requestType": "MetricExampleRequest",
+              "requestLongType": "MetricExampleRequest",
+              "requestFullType": "spaceone.api.inventory_v2.v1.MetricExampleRequest",
               "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
+              "responseType": "MetricExampleInfo",
+              "responseLongType": "MetricExampleInfo",
+              "responseFullType": "spaceone.api.inventory_v2.v1.MetricExampleInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/agent/get",
+                      "pattern": "/inventory-v2/v1/metric-example/get",
                       "body": "*"
                     }
                   ]
@@ -623,20 +522,43 @@
             {
               "name": "list",
               "description": "",
-              "requestType": "AgentSearchQuery",
-              "requestLongType": "AgentSearchQuery",
-              "requestFullType": "spaceone.api.identity.v2.AgentSearchQuery",
+              "requestType": "MetricExampleQuery",
+              "requestLongType": "MetricExampleQuery",
+              "requestFullType": "spaceone.api.inventory_v2.v1.MetricExampleQuery",
               "requestStreaming": false,
-              "responseType": "AgentsInfo",
-              "responseLongType": "AgentsInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentsInfo",
+              "responseType": "MetricExamplesInfo",
+              "responseLongType": "MetricExamplesInfo",
+              "responseFullType": "spaceone.api.inventory_v2.v1.MetricExamplesInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/agent/list",
+                      "pattern": "/inventory-v2/v1/metric-example/list",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "stat",
+              "description": "",
+              "requestType": "MetricExampleStatQuery",
+              "requestLongType": "MetricExampleStatQuery",
+              "requestFullType": "spaceone.api.inventory_v2.v1.MetricExampleStatQuery",
+              "requestStreaming": false,
+              "responseType": "Struct",
+              "responseLongType": ".google.protobuf.Struct",
+              "responseFullType": "google.protobuf.Struct",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/inventory-v2/v1/metric-example/stat",
                       "body": "*"
                     }
                   ]

@@ -1,9 +1,9 @@
 {
   "files": [
     {
-      "name": "spaceone/api/identity/v2/agent.proto",
-      "description": "",
-      "package": "spaceone.api.identity.v2",
+      "name": "spaceone/api/inventory_v2/v1/job.proto",
+      "description": "A Job is an act of collecting external cloud resources through plugins.",
+      "package": "spaceone.api.inventory_v2.v1",
       "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
@@ -11,12 +11,12 @@
       "enums": [
         {
           "name": "ResourceGroup",
-          "longName": "AgentInfo.ResourceGroup",
-          "fullName": "spaceone.api.identity.v2.AgentInfo.ResourceGroup",
+          "longName": "JobInfo.ResourceGroup",
+          "fullName": "spaceone.api.inventory_v2.v1.JobInfo.ResourceGroup",
           "description": "",
           "values": [
             {
-              "name": "GROUP_NONE",
+              "name": "RESOURCE_GROUP_NONE",
               "number": "0",
               "description": ""
             },
@@ -33,80 +33,72 @@
           ]
         },
         {
-          "name": "RoleType",
-          "longName": "AgentInfo.RoleType",
-          "fullName": "spaceone.api.identity.v2.AgentInfo.RoleType",
+          "name": "Status",
+          "longName": "JobInfo.Status",
+          "fullName": "spaceone.api.inventory_v2.v1.JobInfo.Status",
           "description": "",
           "values": [
             {
-              "name": "ROLE_TYPE_NONE",
+              "name": "NONE",
               "number": "0",
               "description": ""
             },
             {
-              "name": "DOMAIN_ADMIN",
+              "name": "FAILURE",
               "number": "1",
               "description": ""
             },
             {
-              "name": "WORKSPACE_OWNER",
+              "name": "CANCELED",
               "number": "2",
+              "description": ""
+            },
+            {
+              "name": "IN_PROGRESS",
+              "number": "3",
+              "description": ""
+            },
+            {
+              "name": "SUCCESS",
+              "number": "4",
               "description": ""
             }
           ]
         },
         {
-          "name": "State",
-          "longName": "AgentInfo.State",
-          "fullName": "spaceone.api.identity.v2.AgentInfo.State",
+          "name": "JobStatus",
+          "longName": "JobsQuery.JobStatus",
+          "fullName": "spaceone.api.inventory_v2.v1.JobsQuery.JobStatus",
           "description": "",
           "values": [
             {
-              "name": "STATE_NONE",
+              "name": "JOB_STATE_NONE",
               "number": "0",
               "description": ""
             },
             {
-              "name": "ENABLED",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "DISABLED",
+              "name": "CANCELED",
               "number": "2",
               "description": ""
             },
             {
-              "name": "EXPIRED",
+              "name": "IN_PROGRESS",
               "number": "3",
               "description": ""
-            }
-          ]
-        },
-        {
-          "name": "State",
-          "longName": "AgentSearchQuery.State",
-          "fullName": "spaceone.api.identity.v2.AgentSearchQuery.State",
-          "description": "",
-          "values": [
+            },
             {
-              "name": "STATE_NONE",
-              "number": "0",
+              "name": "SUCCESS",
+              "number": "4",
               "description": ""
             },
             {
-              "name": "ENABLED",
-              "number": "1",
+              "name": "FAILURE",
+              "number": "5",
               "description": ""
             },
             {
-              "name": "DISABLED",
-              "number": "2",
-              "description": ""
-            },
-            {
-              "name": "EXPIRED",
-              "number": "3",
+              "name": "TIMEOUT",
+              "number": "6",
               "description": ""
             }
           ]
@@ -115,17 +107,41 @@
       "extensions": [],
       "messages": [
         {
-          "name": "AgentInfo",
-          "longName": "AgentInfo",
-          "fullName": "spaceone.api.identity.v2.AgentInfo",
-          "description": "{\n   \"agent_id\": \"agent-5cb52dc61c70\",\n   \"options\": {\n       \"kube_state_metrics\": false,\n       \"cluster_name\": \"k8s-prd-cluster\",\n       \"prometheus_node_exporter\": false\n   },\n   \"client_secret\": \"client_secret_from_app\",\n   \"state\": \"ENABLED\",\n   \"is_managed\": true,\n   \"role_type\": \"WORKSPACE_OWNER\",\n   \"domain_id\": \"domain-116226a1516a\",\n   \"workspace_id\": \"workspace-7a0aebcf4eb2\",\n   \"project_id\": \"project-441975c8dfd8\",\n   \"service_account_id\": \"sa-a120f6d21c4e\",\n   \"app_id\": \"app-aa7bf47c98ea\",\n   \"role_id\": \"managed-workspace-owner\",\n   \"client_id\": \"client-36e1034b3512\",\n   \"created_at\": \"2024-11-13T00:34:09.125Z\",\n   \"expired_at\": \"2025-11-13T00:34:09.000Z\"\n}",
+          "name": "JobAnalyzeQuery",
+          "longName": "JobAnalyzeQuery",
+          "fullName": "spaceone.api.inventory_v2.v1.JobAnalyzeQuery",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "agent_id",
+              "name": "query",
+              "description": "",
+              "label": "",
+              "type": "AnalyzeQuery",
+              "longType": "spaceone.api.core.v2.AnalyzeQuery",
+              "fullType": "spaceone.api.core.v2.AnalyzeQuery",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "JobInfo",
+          "longName": "JobInfo",
+          "fullName": "spaceone.api.inventory_v2.v1.JobInfo",
+          "description": "{\n     \"job_id\": \"job-123456789012\",\n     \"status\": \"ERROR\",\n     \"filter\": {},\n     \"total_tasks\": 2,\n     \"collector_info\": {\n         \"collector_id\": \"collector-123456789012\",\n         \"name\": \"Jenkins Collector\",\n         \"state\": \"ENABLED\",\n         \"plugin_info\": {\n             \"plugin_id\": \"plugin-jenkins-inven-collector\",\n             \"version\": \"0.1.1\"\n         },\n         \"provider\": \"jenkins\",\n         \"capability\": {},\n         \"is_public\": true\n     },\n     \"domain_id\": \"domain-123456789012\",\n     \"created_at\": \"2022-01-01T10:00:01.389Z\",\n     \"updated_at\": \"2022-01-01T10:00:01.389Z\",\n     \"finished_at\": \"2022-01-01T10:02:11.270Z\"\n}",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "job_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -137,19 +153,67 @@
               "defaultValue": ""
             },
             {
-              "name": "options",
+              "name": "status",
               "description": "",
               "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
+              "type": "Status",
+              "longType": "JobInfo.Status",
+              "fullType": "spaceone.api.inventory_v2.v1.JobInfo.Status",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "client_secret",
+              "name": "total_tasks",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "remained_tasks",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "success_tasks",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "failure_tasks",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "request_secret_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -161,36 +225,24 @@
               "defaultValue": ""
             },
             {
-              "name": "state",
+              "name": "request_workspace_id",
               "description": "",
               "label": "",
-              "type": "State",
-              "longType": "AgentInfo.State",
-              "fullType": "spaceone.api.identity.v2.AgentInfo.State",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "is_managed",
+              "name": "resource_group",
               "description": "",
               "label": "",
-              "type": "bool",
-              "longType": "bool",
-              "fullType": "bool",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "role_type",
-              "description": "",
-              "label": "",
-              "type": "RoleType",
-              "longType": "AgentInfo.RoleType",
-              "fullType": "spaceone.api.identity.v2.AgentInfo.RoleType",
+              "type": "ResourceGroup",
+              "longType": "JobInfo.ResourceGroup",
+              "fullType": "spaceone.api.inventory_v2.v1.JobInfo.ResourceGroup",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -221,7 +273,7 @@
               "defaultValue": ""
             },
             {
-              "name": "project_id",
+              "name": "collector_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -233,43 +285,7 @@
               "defaultValue": ""
             },
             {
-              "name": "service_account_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "app_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "role_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "client_id",
+              "name": "plugin_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -293,7 +309,7 @@
               "defaultValue": ""
             },
             {
-              "name": "expired_at",
+              "name": "updated_at",
               "description": "",
               "label": "",
               "type": "string",
@@ -305,7 +321,7 @@
               "defaultValue": ""
             },
             {
-              "name": "last_accessed_at",
+              "name": "finished_at",
               "description": "",
               "label": "",
               "type": "string",
@@ -319,17 +335,17 @@
           ]
         },
         {
-          "name": "AgentRequest",
-          "longName": "AgentRequest",
-          "fullName": "spaceone.api.identity.v2.AgentRequest",
-          "description": "{\n \"service_account_id\": \"sa-a120f6d21c4e\"\n}",
+          "name": "JobRequest",
+          "longName": "JobRequest",
+          "fullName": "spaceone.api.inventory_v2.v1.JobRequest",
+          "description": "{\n   \"job_id\": \"job-123456789012\",\n}",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "service_account_id",
+              "name": "job_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -343,10 +359,10 @@
           ]
         },
         {
-          "name": "AgentSearchQuery",
-          "longName": "AgentSearchQuery",
-          "fullName": "spaceone.api.identity.v2.AgentSearchQuery",
-          "description": "{\n \"query\": {\n   \"page\": {\n     \"start\":1,\n     \"limit\": 10\n   }\n }\n}",
+          "name": "JobStatQuery",
+          "longName": "JobStatQuery",
+          "fullName": "spaceone.api.inventory_v2.v1.JobStatQuery",
+          "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -354,47 +370,11 @@
           "fields": [
             {
               "name": "query",
-              "description": "+optional",
+              "description": "",
               "label": "",
-              "type": "Query",
-              "longType": "spaceone.api.core.v2.Query",
-              "fullType": "spaceone.api.core.v2.Query",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "agent_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "service_account_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "state",
-              "description": "+optional",
-              "label": "",
-              "type": "State",
-              "longType": "AgentSearchQuery.State",
-              "fullType": "spaceone.api.identity.v2.AgentSearchQuery.State",
+              "type": "StatisticsQuery",
+              "longType": "spaceone.api.core.v2.StatisticsQuery",
+              "fullType": "spaceone.api.core.v2.StatisticsQuery",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -403,10 +383,10 @@
           ]
         },
         {
-          "name": "AgentsInfo",
-          "longName": "AgentsInfo",
-          "fullName": "spaceone.api.identity.v2.AgentsInfo",
-          "description": "{\n \"results\": [\n   {\n     \"agent_id\": \"agent-5cb52dc61c70\",\n     \"options\": {\n       \"kube_state_metrics\": false,\n       \"cluster_name\": \"k8s-prd-cluster\",\n       \"prometheus_node_exporter\": false\n     },\n     \"client_secret\": \"client_secret_from_app\",\n     \"state\": \"ENABLED\",\n     \"is_managed\": true,\n     \"role_type\": \"WORKSPACE_OWNER\",\n     \"domain_id\": \"domain-116226a1516a\",\n     \"workspace_id\": \"workspace-7a0aebcf4eb2\",\n     \"project_id\": \"project-441975c8dfd8\",\n     \"service_account_id\": \"sa-a120f6d21c4e\",\n     \"app_id\": \"app-aa7bf47c98ea\",\n     \"role_id\": \"managed-workspace-owner\",\n     \"client_id\": \"client-36e1034b3512\",\n     \"created_at\": \"2024-11-13T00:34:09.125Z\",\n     \"expired_at\": \"2025-11-13T00:34:09.000Z\"\n   }\n ],\n \"total_count\": 1\n}",
+          "name": "JobsInfo",
+          "longName": "JobsInfo",
+          "fullName": "spaceone.api.inventory_v2.v1.JobsInfo",
+          "description": "{\n   \"results\": [\n       {\n           \"job_id\": \"job-3b124006c2d2\",\n           \"status\": \"SUCCESS\",\n           \"filter\": {},\n           \"total_tasks\": 2,\n           \"collector_info\": {\n               \"collector_id\": \"collector-accd02663b3d\",\n               \"name\": \"openstack-collector\",\n               \"state\": \"ENABLED\",\n               \"plugin_info\": {\n                   \"plugin_id\": \"plugin-openstack-inven-collector\",\n                   \"version\": \"0.4.2.20220616.134758\"\n               },\n               \"provider\": \"openstack\",\n               \"capability\": {\n                   \"supported_schema\": [\n                       \"openstack_credentials\"\n                   ]\n               },\n               \"is_public\": true\n           },\n           \"resource_group\": \"DOMAIN\",\n           \"domain_id\": \"domain-58010aa2e451\",\n           \"created_at\": \"2022-06-17T08:00:01.225Z\",\n           \"updated_at\": \"2022-06-17T08:00:01.225Z\",\n           \"finished_at\": \"2022-06-17T08:00:15.197Z\"\n       },\n       {\n           \"job_id\": \"job-587a3d3b4db3\",\n           \"status\": \"SUCCESS\",\n           \"filter\": {},\n           \"total_tasks\": 3,\n           \"collector_info\": {\n               \"collector_id\": \"collector-2c0847644f39\",\n               \"name\": \"AWS stat-kwon Collector\",\n               \"state\": \"ENABLED\",\n               \"plugin_info\": {\n                   \"plugin_id\": \"plugin-30d21ef75a5d\",\n                   \"version\": \"1.13.13.20220610.143142\"\n               },\n               \"provider\": \"aws\",\n               \"capability\": {\n                   \"supported_schema\": [\n                       \"aws_access_key\"\n                   ]\n               },\n               \"is_public\": true\n           },\n           \"resource_group\": \"DOMAIN\",\n           \"domain_id\": \"domain-58010aa2e451\",\n           \"created_at\": \"2022-06-17T08:00:00.407Z\",\n           \"updated_at\": \"2022-06-17T08:00:00.407Z\",\n           \"finished_at\": \"2022-06-17T08:07:32.023Z\"\n       }\n   ],\n   \"total_count\": 2\n}",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
@@ -416,9 +396,9 @@
               "name": "results",
               "description": "",
               "label": "repeated",
-              "type": "AgentInfo",
-              "longType": "AgentInfo",
-              "fullType": "spaceone.api.identity.v2.AgentInfo",
+              "type": "JobInfo",
+              "longType": "JobInfo",
+              "fullType": "spaceone.api.inventory_v2.v1.JobInfo",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -439,18 +419,30 @@
           ]
         },
         {
-          "name": "CreateAgentRequest",
-          "longName": "CreateAgentRequest",
-          "fullName": "spaceone.api.identity.v2.CreateAgentRequest",
-          "description": "{\n \"service_account_id\": \"sa-a120f6d21c4e\",\n \"options\": {\n   \"cluster_name\": \"k8s-prd-cluster\",\n   \"kube_state_metrics\": \"false\",\n   \"prometheus_node_exporter\": \"false\"\n }\n}",
+          "name": "JobsQuery",
+          "longName": "JobsQuery",
+          "fullName": "spaceone.api.inventory_v2.v1.JobsQuery",
+          "description": "{\n   \"query\": {}\n}",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
             {
-              "name": "service_account_id",
-              "description": "",
+              "name": "query",
+              "description": "+optional",
+              "label": "",
+              "type": "Query",
+              "longType": "spaceone.api.core.v2.Query",
+              "fullType": "spaceone.api.core.v2.Query",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "job_id",
+              "description": "+optional",
               "label": "",
               "type": "string",
               "longType": "string",
@@ -461,12 +453,48 @@
               "defaultValue": ""
             },
             {
-              "name": "options",
-              "description": "",
+              "name": "status",
+              "description": "+optional",
               "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
+              "type": "JobStatus",
+              "longType": "JobsQuery.JobStatus",
+              "fullType": "spaceone.api.inventory_v2.v1.JobsQuery.JobStatus",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "workspace_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "collector_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "plugin_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -477,109 +505,17 @@
       ],
       "services": [
         {
-          "name": "Agent",
-          "longName": "Agent",
-          "fullName": "spaceone.api.identity.v2.Agent",
-          "description": "Create Agent with service account , Currently only Kubernetes service account is supported for OpenCost",
+          "name": "Job",
+          "longName": "Job",
+          "fullName": "spaceone.api.inventory_v2.v1.Job",
+          "description": "",
           "methods": [
             {
-              "name": "create",
-              "description": "",
-              "requestType": "CreateAgentRequest",
-              "requestLongType": "CreateAgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.CreateAgentRequest",
-              "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/agent/create",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "enable",
-              "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
-              "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/agent/enable",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "disable",
-              "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
-              "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/agent/disable",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "regenerate",
-              "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
-              "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/identity/v2/agent/regenerate",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
-            },
-            {
               "name": "delete",
-              "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
+              "description": "Deletes a specific Job. You must specify the `job_id` of the Job to delete.",
+              "requestType": "JobRequest",
+              "requestLongType": "JobRequest",
+              "requestFullType": "spaceone.api.inventory_v2.v1.JobRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
@@ -590,7 +526,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/agent/delete",
+                      "pattern": "/inventory-v2/v1/job/delete",
                       "body": "*"
                     }
                   ]
@@ -599,21 +535,21 @@
             },
             {
               "name": "get",
-              "description": "",
-              "requestType": "AgentRequest",
-              "requestLongType": "AgentRequest",
-              "requestFullType": "spaceone.api.identity.v2.AgentRequest",
+              "description": "Gets a specific Job. Prints detailed information about the Job, including its state, total tasks, and collector info.",
+              "requestType": "JobRequest",
+              "requestLongType": "JobRequest",
+              "requestFullType": "spaceone.api.inventory_v2.v1.JobRequest",
               "requestStreaming": false,
-              "responseType": "AgentInfo",
-              "responseLongType": "AgentInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentInfo",
+              "responseType": "JobInfo",
+              "responseLongType": "JobInfo",
+              "responseFullType": "spaceone.api.inventory_v2.v1.JobInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/agent/get",
+                      "pattern": "/inventory-v2/v1/job/get",
                       "body": "*"
                     }
                   ]
@@ -622,21 +558,67 @@
             },
             {
               "name": "list",
-              "description": "",
-              "requestType": "AgentSearchQuery",
-              "requestLongType": "AgentSearchQuery",
-              "requestFullType": "spaceone.api.identity.v2.AgentSearchQuery",
+              "description": "Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.",
+              "requestType": "JobsQuery",
+              "requestLongType": "JobsQuery",
+              "requestFullType": "spaceone.api.inventory_v2.v1.JobsQuery",
               "requestStreaming": false,
-              "responseType": "AgentsInfo",
-              "responseLongType": "AgentsInfo",
-              "responseFullType": "spaceone.api.identity.v2.AgentsInfo",
+              "responseType": "JobsInfo",
+              "responseLongType": "JobsInfo",
+              "responseFullType": "spaceone.api.inventory_v2.v1.JobsInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/identity/v2/agent/list",
+                      "pattern": "/inventory-v2/v1/job/list",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "analyze",
+              "description": "",
+              "requestType": "JobAnalyzeQuery",
+              "requestLongType": "JobAnalyzeQuery",
+              "requestFullType": "spaceone.api.inventory_v2.v1.JobAnalyzeQuery",
+              "requestStreaming": false,
+              "responseType": "Struct",
+              "responseLongType": ".google.protobuf.Struct",
+              "responseFullType": "google.protobuf.Struct",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/inventory-v2/v1/job/analyze",
+                      "body": "*"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "stat",
+              "description": "",
+              "requestType": "JobStatQuery",
+              "requestLongType": "JobStatQuery",
+              "requestFullType": "spaceone.api.inventory_v2.v1.JobStatQuery",
+              "requestStreaming": false,
+              "responseType": "Struct",
+              "responseLongType": ".google.protobuf.Struct",
+              "responseFullType": "google.protobuf.Struct",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "POST",
+                      "pattern": "/inventory-v2/v1/job/stat",
                       "body": "*"
                     }
                   ]
