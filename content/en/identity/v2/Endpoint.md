@@ -33,6 +33,7 @@ bookFlatSection: true
 
 ### list
 
+Get gRPC endpoint list.
 +noauth
 
 
@@ -43,6 +44,58 @@ bookFlatSection: true
 
 
 
+
+ {{< tabs " list " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[EndpointSearchQuery](./Endpoint#endpointsearchquery)
+
+* **query** (Query)  
+
+
+* **service** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+ "service": "inventory",
+ "query": {}
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+ {{< tab "Response Example" >}}
+
+[EndpointsInfo](#ENDPOINTSINFO)
+* **results** (EndpointInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+   "results": [
+       {
+           "name": "Inventory Service",
+           "service": "inventory",
+           "endpoint": "grpc://localhost:50051",
+       }
+   ],
+   "total_count": 1
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 
     
