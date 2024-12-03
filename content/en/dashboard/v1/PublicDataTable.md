@@ -286,6 +286,23 @@ description of data table
 
     <br>
 
+### PivotOperator
+* **data_table_id** (string)   `Required` 
+
+    
+* **index** (string)  `Repeated`    `Required` 
+
+    
+* **columns** (string)  `Repeated`    `Required` 
+
+    
+* **values** (string)  `Repeated`    `Required` 
+
+    
+* **aggregation** (string)  
+
+    <br>
+
 ### PublicDataTableInfo
 * **data_table_id** (string)   `Required` 
 
@@ -411,6 +428,9 @@ description of data table
 
     
 * **EVAL** (EvaluateOperator)   `Required` 
+
+    
+* **PIVOT** (PivotOperator)   `Required` 
 
     <br>
 
