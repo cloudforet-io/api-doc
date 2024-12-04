@@ -218,6 +218,9 @@ bookFlatSection: true
 ### TaskTypeRequest
 * **task_type_id** (string)   `Required` 
 
+    
+* **include_category_fields** (bool)  
+
     <br>
 
 ### TaskTypeSearchQuery
