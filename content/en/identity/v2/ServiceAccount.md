@@ -31,6 +31,7 @@ bookFlatSection: true
 | [**delete**](./ServiceAccount#delete) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [Empty](ServiceAccount#empty) |
 | [**get**](./ServiceAccount#get) | [ServiceAccountRequest](ServiceAccount#serviceaccountrequest) | [ServiceAccountInfo](ServiceAccount#serviceaccountinfo) |
 | [**list**](./ServiceAccount#list) | [ServiceAccountSearchQuery](ServiceAccount#serviceaccountsearchquery) | [ServiceAccountsInfo](ServiceAccount#serviceaccountsinfo) |
+| [**analyze**](./ServiceAccount#analyze) | [ServiceAccountAnalyzeQuery](ServiceAccount#serviceaccountanalyzequery) | [Struct](ServiceAccount#struct) |
 | [**stat**](./ServiceAccount#stat) | [ServiceAccountStatQuery](ServiceAccount#serviceaccountstatquery) | [Struct](ServiceAccount#struct) |
 
 
@@ -777,6 +778,23 @@ bookFlatSection: true
     
 <br>
 
+### analyze
+
+
+
+
+
+> **POST** /identity/v2/service-account/analyze
+>
+
+
+
+
+
+
+    
+<br>
+
 ### stat
 
 
@@ -824,6 +842,11 @@ bookFlatSection: true
 
     
 * **trusted_account_id** (string)  
+
+    <br>
+
+### ServiceAccountAnalyzeQuery
+* **query** (AnalyzeQuery)   `Required` 
 
     <br>
 
