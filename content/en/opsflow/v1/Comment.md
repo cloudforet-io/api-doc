@@ -172,6 +172,9 @@ bookFlatSection: true
 * **mentions** (Mentions)   `Required` 
 
     
+* **created_by** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     

@@ -234,6 +234,9 @@ bookFlatSection: true
 * **assignee** (string)   `Required` 
 
     
+* **created_by** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
