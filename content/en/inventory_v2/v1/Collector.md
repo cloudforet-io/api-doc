@@ -145,6 +145,8 @@ Creates a new Collector with information of the plugin to use. Information of th
 
 * **tags** (Struct)   `Required` 
 
+* **created_by** (string)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -186,6 +188,7 @@ Creates a new Collector with information of the plugin to use. Information of th
    "tags": {
        "type": "test"
    },
+   "created_by": "wonny@cloudforet.io"
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
    "provider": "aws",
@@ -295,6 +298,8 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 
 * **tags** (Struct)   `Required` 
 
+* **created_by** (string)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -336,6 +341,7 @@ Updates a specific Collector. You can make changes in Collector settings, includ
    "tags": {
        "type": "test"
    },
+   "created_by": "wonny@cloudforet.io"
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
    "provider": "aws",
@@ -395,6 +401,8 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
 
 * **tags** (Struct)   `Required` 
 
+* **created_by** (string)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -436,6 +444,7 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
    "tags": {
        "type": "test"
    },
+   "created_by": "wonny@cloudforet.io"
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
    "provider": "aws",
@@ -572,6 +581,8 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
 
 * **tags** (Struct)   `Required` 
 
+* **created_by** (string)   `Required` 
+
 * **resource_group** (ResourceGroup)   `Required` 
 
 * **domain_id** (string)   `Required` 
@@ -613,6 +624,7 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
    "tags": {
        "type": "test"
    },
+   "created_by": "wonny@cloudforet.io"
    "created_at": "2022-06-17T06:33:27.195Z",
    "domain_id": "domain-58010aa2e451",
    "provider": "aws",
@@ -867,6 +879,9 @@ Gets a list of all Collectors. You can use a query to get a filtered list of Col
 
     
 * **tags** (Struct)   `Required` 
+
+    
+* **created_by** (string)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 
