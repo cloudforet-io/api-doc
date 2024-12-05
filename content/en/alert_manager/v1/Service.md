@@ -26,7 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./Service#create) | [ServiceCreateRequest](Service#servicecreaterequest) | [ServiceInfo](Service#serviceinfo) |
 | [**update**](./Service#update) | [ServiceUpdateRequest](Service#serviceupdaterequest) | [ServiceInfo](Service#serviceinfo) |
-| [**change_member**](./Service#change_member) | [ServiceChangeMemberRequest](Service#servicechangememberrequest) | [ServiceInfo](Service#serviceinfo) |
+| [**change_members**](./Service#change_members) | [ServiceChangeMembersRequest](Service#servicechangemembersrequest) | [ServiceInfo](Service#serviceinfo) |
 | [**delete**](./Service#delete) | [ServiceRequest](Service#servicerequest) | [Empty](Service#empty) |
 | [**get**](./Service#get) | [ServiceRequest](Service#servicerequest) | [ServiceInfo](Service#serviceinfo) |
 | [**list**](./Service#list) | [ServiceSearchQuery](Service#servicesearchquery) | [ServicesInfo](Service#servicesinfo) |
@@ -71,7 +71,7 @@ bookFlatSection: true
     
 <br>
 
-### change_member
+### change_members
 
 
 
@@ -145,7 +145,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/service/stat
+> **POST** /alert-manager/v1/service/stat
 >
 
 
@@ -182,21 +182,11 @@ bookFlatSection: true
 
     <br>
 
-### Members
-* **USER** (string)  `Repeated`    `Required` 
-
-    
-* **USER_GROUP** (string)  `Repeated`    `Required` 
-
-    <br>
-
-### Options<br>
-
-### ServiceChangeMemberRequest
+### ServiceChangeMembersRequest
 * **service_id** (string)   `Required` 
 
     
-* **members** (Members)   `Required` 
+* **members** (ServiceMembers)   `Required` 
 
     <br>
 
@@ -210,10 +200,13 @@ bookFlatSection: true
 * **description** (string)  
 
     
-* **members** (Members)  
+* **members** (ServiceMembers)  
 
     
-* **options** (Options)  
+* **options** (ServiceOptions)  
+
+    
+* **tags** (Struct)  
 
     <br>
 
@@ -230,19 +223,31 @@ bookFlatSection: true
 * **description** (string)   `Required` 
 
     
-* **members** (Members)   `Required` 
+* **members** (ServiceMembers)   `Required` 
 
     
-* **options** (Options)   `Required` 
+* **options** (ServiceOptions)   `Required` 
 
     
-* **escalation_policy_id** (string)   `Required` 
+* **channels** (string)  `Repeated`    `Required` 
+
+    
+* **webhooks** (string)  `Repeated`    `Required` 
+
+    
+* **alerts** (Alerts)   `Required` 
+
+    
+* **tags** (Struct)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **escalation_policy_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -250,14 +255,21 @@ bookFlatSection: true
     
 * **updated_at** (string)   `Required` 
 
-    
-* **channels** (Struct)  
+    <br>
+
+### ServiceMembers
+* **USER** (string)  `Repeated`    `Required` 
 
     
-* **webhooks** (Struct)  
+* **USER_GROUP** (string)  `Repeated`    `Required` 
+
+    <br>
+
+### ServiceOptions
+* **notification_urgency** (NotificationUrgency)   `Required` 
 
     
-* **alerts** (Alerts)  
+* **recovery_mode** (RecoveryMode)   `Required` 
 
     <br>
 
@@ -275,9 +287,6 @@ bookFlatSection: true
     
 * **escalation_policy_id** (string)  
 
-    
-* **include_details** (bool)  
-
     <br>
 
 ### ServiceStatQuery
@@ -289,16 +298,19 @@ bookFlatSection: true
 * **service_id** (string)   `Required` 
 
     
-* **escalation_policy_id** (string)   `Required` 
-
-    
 * **name** (string)  
 
     
 * **description** (string)  
 
     
-* **options** (Options)  
+* **options** (ServiceOptions)  
+
+    
+* **tags** (Struct)  
+
+    
+* **escalation_policy_id** (string)  
 
     <br>
 

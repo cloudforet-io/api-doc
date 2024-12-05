@@ -25,7 +25,7 @@ bookFlatSection: true
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./EventRule#create) | [EventRuleCreateRequest](EventRule#eventrulecreaterequest) | [EventRuleInfo](EventRule#eventruleinfo) |
-| [**change_order**](./EventRule#change_order) | [EventRuleChangeMemberRequest](EventRule#eventrulechangememberrequest) | [EventRuleInfo](EventRule#eventruleinfo) |
+| [**change_order**](./EventRule#change_order) | [EventRuleChangeOrderRequest](EventRule#eventrulechangeorderrequest) | [EventRuleInfo](EventRule#eventruleinfo) |
 | [**update**](./EventRule#update) | [EventRuleUpdateRequest](EventRule#eventruleupdaterequest) | [EventRuleInfo](EventRule#eventruleinfo) |
 | [**delete**](./EventRule#delete) | [EventRuleRequest](EventRule#eventrulerequest) | [Empty](EventRule#empty) |
 | [**get**](./EventRule#get) | [EventRuleRequest](EventRule#eventrulerequest) | [EventRuleInfo](EventRule#eventruleinfo) |
@@ -43,54 +43,12 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/create
+> **POST** /alert-manager/v1/event-rule/create
 >
 
 
 
 
-
- {{< tabs " create " >}}
-
- {{< tab "Request Example" >}}
-
-
-
-[EventRuleCreateRequest](./EventRule#eventrulecreaterequest)
-
-* **conditions** (Struct)  `Repeated`    `Required` 
-
-
-* **conditions_policy** (ConditionsPolicy)   `Required` 
-
-
-* **actions** (Struct)   `Required` 
-
-
-* **service_id** (string)   `Required` 
-
-
-* **name** (string)  
-
-
-* **options** (Options)  
-
-
-* **tags** (Struct)  
-
-
-
-
-
-{{< highlight json >}}
-Receive
-////////
-{{< /highlight >}}
-{{< /tab >}}
-
-
-
-{{< /tabs >}}
 
 
     
@@ -102,7 +60,7 @@ Receive
 
 
 
-> **POST** /alert-manager/v1/comment/change-order
+> **POST** /alert-manager/v1/event-rule/change-order
 >
 
 
@@ -119,7 +77,7 @@ Receive
 
 
 
-> **POST** /alert-manager/v1/comment/update
+> **POST** /alert-manager/v1/event-rule/update
 >
 
 
@@ -136,7 +94,7 @@ Receive
 
 
 
-> **POST** /alert-manager/v1/comment/delete
+> **POST** /alert-manager/v1/event-rule/delete
 >
 
 
@@ -153,7 +111,7 @@ Receive
 
 
 
-> **POST** /alert-manager/v1/comment/get
+> **POST** /alert-manager/v1/event-rule/get
 >
 
 
@@ -170,7 +128,7 @@ Receive
 
 
 
-> **POST** /alert-manager/v1/comment/list
+> **POST** /alert-manager/v1/event-rule/list
 >
 
 
@@ -187,7 +145,7 @@ Receive
 
 
 
-> **POST** /alert_manager/v1/comment/stat
+> **POST** /alert_manager/v1/event-rule/stat
 >
 
 
@@ -205,7 +163,18 @@ Receive
 
 
 
-### EventRuleChangeMemberRequest
+### Condition
+* **key** (string)   `Required` 
+
+    
+* **value** (string)   `Required` 
+
+    
+* **operator** (string)   `Required` 
+
+    <br>
+
+### EventRuleChangeOrderRequest
 * **event_rule_id** (string)   `Required` 
 
     
@@ -214,7 +183,7 @@ Receive
     <br>
 
 ### EventRuleCreateRequest
-* **conditions** (Struct)  `Repeated`    `Required` 
+* **conditions** (Condition)  `Repeated`    `Required` 
 
     
 * **conditions_policy** (ConditionsPolicy)   `Required` 
@@ -229,7 +198,7 @@ Receive
 * **name** (string)  
 
     
-* **options** (Options)  
+* **options** (EventRuleOptions)  
 
     
 * **tags** (Struct)  
@@ -246,7 +215,7 @@ Receive
 * **order** (int32)   `Required` 
 
     
-* **conditions** (Struct)  `Repeated`    `Required` 
+* **conditions** (Condition)  `Repeated`    `Required` 
 
     
 * **conditions_policy** (ConditionsPolicy)   `Required` 
@@ -255,22 +224,30 @@ Receive
 * **actions** (Struct)   `Required` 
 
     
-* **options** (Options)   `Required` 
+* **options** (EventRuleOptions)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
 
     
-* **service_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **service_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
+
+    <br>
+
+### EventRuleOptions
+* **stop_processing** (bool)   `Required` 
 
     <br>
 
@@ -287,9 +264,6 @@ Receive
 
     
 * **name** (string)  
-
-    
-* **resource_group** (string)  
 
     
 * **workspace_id** (string)  
@@ -311,7 +285,7 @@ Receive
 * **name** (string)  
 
     
-* **conditions** (Struct)  `Repeated`   
+* **conditions** (Condition)  `Repeated`   
 
     
 * **conditions_policy** (ConditionsPolicy)  
@@ -320,7 +294,7 @@ Receive
 * **actions** (Struct)  
 
     
-* **options** (Options)  
+* **options** (EventRuleOptions)  
 
     
 * **tags** (Struct)  

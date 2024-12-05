@@ -25,6 +25,7 @@ bookFlatSection: true
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./EscalationPolicy#create) | [EscalationPolicyCreateRequest](EscalationPolicy#escalationpolicycreaterequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
+| [**update**](./EscalationPolicy#update) | [EscalationPolicyUpdateRequest](EscalationPolicy#escalationpolicyupdaterequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
 | [**delete**](./EscalationPolicy#delete) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [Empty](EscalationPolicy#empty) |
 | [**get**](./EscalationPolicy#get) | [EscalationPolicyRequest](EscalationPolicy#escalationpolicyrequest) | [EscalationPolicyInfo](EscalationPolicy#escalationpolicyinfo) |
 | [**list**](./EscalationPolicy#list) | [EscalationPolicySearchQuery](EscalationPolicy#escalationpolicysearchquery) | [EscalationPoliciesInfo](EscalationPolicy#escalationpoliciesinfo) |
@@ -48,44 +49,22 @@ bookFlatSection: true
 
 
 
- {{< tabs " create " >}}
 
- {{< tab "Request Example" >}}
+    
+<br>
 
-
-
-[EscalationPolicyCreateRequest](./EscalationPolicy#escalationpolicycreaterequest)
-
-* **name** (string)   `Required` 
-
-
-* **rules** (Struct)  `Repeated`    `Required` 
-
-
-* **service_id** (string)   `Required` 
-
-
-* **repeat_count** (int32)  
-
-
-* **finish_condition** (FinishCondition)  
-
-
-* **tags** (Struct)  
+### update
 
 
 
 
 
-{{< highlight json >}}
-Receive
-////////
-{{< /highlight >}}
-{{< /tab >}}
+> **POST** /alert-manager/v1/escalation-policy/update
+>
 
 
 
-{{< /tabs >}}
+
 
 
     
@@ -148,7 +127,7 @@ Receive
 
 
 
-> **POST** /alert_manager/v1/escalation-policy/stat
+> **POST** /alert-manager/v1/escalation-policy/stat
 >
 
 
@@ -178,13 +157,13 @@ Receive
 * **name** (string)   `Required` 
 
     
-* **rules** (Struct)  `Repeated`    `Required` 
+* **rules** (EscalationRule)  `Repeated`    `Required` 
 
     
 * **service_id** (string)   `Required` 
 
     
-* **repeat_count** (int32)  
+* **repeat** (Repeat)  
 
     
 * **finish_condition** (FinishCondition)  
@@ -201,28 +180,31 @@ Receive
 * **name** (string)   `Required` 
 
     
-* **rules** (Struct)  `Repeated`    `Required` 
+* **rules** (EscalationRule)  `Repeated`    `Required` 
 
     
 * **repeat_count** (int32)   `Required` 
 
     
-* **finish_condition** (string)   `Required` 
+* **finish_condition** (FinishCondition)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
 
     
-* **service_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **service_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
 
     <br>
 
@@ -241,7 +223,7 @@ Receive
 * **name** (string)  
 
     
-* **finish_condition** (string)  
+* **finish_condition** (FinishCondition)  
 
     
 * **service_id** (string)  
@@ -250,5 +232,38 @@ Receive
 
 ### EscalationPolicyStatQuery
 * **query** (StatisticsQuery)   `Required` 
+
+    <br>
+
+### EscalationPolicyUpdateRequest
+* **escalation_policy_id** (string)   `Required` 
+
+    
+* **name** (string)  
+
+    
+* **rules** (EscalationRule)  `Repeated`   
+
+    
+* **finish_condition** (FinishCondition)  
+
+    
+* **tags** (Struct)  
+
+    <br>
+
+### EscalationRule
+* **channels** (string)  `Repeated`    `Required` 
+
+    
+* **escalate_minutes** (int32)   `Required` 
+
+    <br>
+
+### Repeat
+* **state** (RepeatState)   `Required` 
+
+    
+* **count** (int32)   `Required` 
 
     <br>

@@ -19,18 +19,20 @@ bookFlatSection: true
 
 
 
-**Service Methods:**
+**NotificationProtocol Methods:**
 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Service#create) | [CommentCreateRequest](Service#commentcreaterequest) | [ServiceInfo](Service#serviceinfo) |
-| [**update**](./Service#update) | [CommentUpdateRequest](Service#commentupdaterequest) | [ServiceInfo](Service#serviceinfo) |
-| [**change_member**](./Service#change_member) | [CommentChangeMemberRequest](Service#commentchangememberrequest) | [ServiceInfo](Service#serviceinfo) |
-| [**delete**](./Service#delete) | [CommentRequest](Service#commentrequest) | [Empty](Service#empty) |
-| [**get**](./Service#get) | [CommentRequest](Service#commentrequest) | [ServiceInfo](Service#serviceinfo) |
-| [**list**](./Service#list) | [CommentSearchQuery](Service#commentsearchquery) | [ServicesInfo](Service#servicesinfo) |
-| [**stat**](./Service#stat) | [CommentStatQuery](Service#commentstatquery) | [Struct](Service#struct) |
+| [**create**](./NotificationProtocol#create) | [NotificationProtocolCreateRequest](NotificationProtocol#notificationprotocolcreaterequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
+| [**update**](./NotificationProtocol#update) | [NotificationProtocolUpdateRequest](NotificationProtocol#notificationprotocolupdaterequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
+| [**update_plugin**](./NotificationProtocol#update_plugin) | [NotificationProtocolUpdatePluginRequest](NotificationProtocol#notificationprotocolupdatepluginrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
+| [**enable**](./NotificationProtocol#enable) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
+| [**disable**](./NotificationProtocol#disable) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
+| [**delete**](./NotificationProtocol#delete) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [Empty](NotificationProtocol#empty) |
+| [**get**](./NotificationProtocol#get) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
+| [**list**](./NotificationProtocol#list) | [NotificationProtocolSearchQuery](NotificationProtocol#notificationprotocolsearchquery) | [NotificationProtocolsInfo](NotificationProtocol#notificationprotocolsinfo) |
+| [**stat**](./NotificationProtocol#stat) | [NotificationProtocolStatQuery](NotificationProtocol#notificationprotocolstatquery) | [Struct](NotificationProtocol#struct) |
 
 
 
@@ -43,7 +45,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/create
+> **POST** /alert-manager/v1/notification-protocol/create
 >
 
 
@@ -60,7 +62,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/update
+> **POST** /alert-manager/v1/notification-protocol/update
 >
 
 
@@ -71,13 +73,47 @@ bookFlatSection: true
     
 <br>
 
-### change_member
+### update_plugin
 
 
 
 
 
-> **POST** /alert-manager/v1/comment/change-member
+> **POST** /alert-manager/v1/notification-protocol/update-plugin
+>
+
+
+
+
+
+
+    
+<br>
+
+### enable
+
+
+
+
+
+> **POST** /alert-manager/v1/notification-protocol/enable
+>
+
+
+
+
+
+
+    
+<br>
+
+### disable
+
+
+
+
+
+> **POST** /alert-manager/v1/notification-protocol/disable
 >
 
 
@@ -94,7 +130,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/delete
+> **POST** /alert-manager/v1/notification-protocol/delete
 >
 
 
@@ -111,7 +147,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/get
+> **POST** /alert-manager/v1/notification-protocol/get
 >
 
 
@@ -128,7 +164,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/list
+> **POST** /alert-manager/v1/notification-protocol/list
 >
 
 
@@ -145,7 +181,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/comment/stat
+> **POST** /alert_manager/v1/notification-protocol/stat
 >
 
 
@@ -163,205 +199,130 @@ bookFlatSection: true
 
 
 
-### AlertInfo
-* **high** (int32)   `Required` 
-
-    
-* **low** (int32)   `Required` 
-
-    <br>
-
-### Alerts
-* **TOTAL** (AlertInfo)   `Required` 
-
-    
-* **TRIGGERRED** (AlertInfo)   `Required` 
-
-    
-* **ACKNOWLEDGED** (AlertInfo)   `Required` 
-
-    <br>
-
-### Channels
-* **service_channel_info** (ServiceChannelsInfo)  `Repeated`    `Required` 
-
-    <br>
-
-### CommentChangeMemberRequest
-* **service_id** (string)   `Required` 
-
-    
-* **members** (Members)   `Required` 
-
-    <br>
-
-### CommentCreateRequest
+### NotificationProtocolCreateRequest
 * **name** (string)   `Required` 
 
     
-* **service_key** (string)   `Required` 
+* **plugin_info** (NotificationProtocolRequestPluginInfo)   `Required` 
 
     
-* **description** (string)  
-
-    
-* **members** (Struct)  
-
-    
-* **options** (Options)  
+* **tags** (Struct)  
 
     <br>
 
-### CommentRequest
-* **service_id** (string)   `Required` 
-
-    <br>
-
-### CommentSearchQuery
-* **query** (Query)  
-
-    
-* **service_id** (string)  
-
-    
-* **escalation_policy_id** (string)  
-
-    
-* **include_details** (bool)  
-
-    <br>
-
-### CommentStatQuery
-* **query** (StatisticsQuery)   `Required` 
-
-    <br>
-
-### CommentUpdateRequest
-* **service_id** (string)   `Required` 
-
-    
-* **escalation_policy_id** (string)   `Required` 
-
-    
-* **name** (string)  
-
-    
-* **description** (string)  
-
-    
-* **options** (Options)  
-
-    <br>
-
-### Members
-* **USER** (string)  `Repeated`    `Required` 
-
-    
-* **USER_GROUP** (string)  `Repeated`    `Required` 
-
-    <br>
-
-### Options<br>
-
-### ServiceChannelsInfo
-* **channel_id** (string)   `Required` 
+### NotificationProtocolInfo
+* **protocol_id** (string)   `Required` 
 
     
 * **name** (string)   `Required` 
 
     
-* **state** (string)   `Required` 
+* **state** (NotificationProtocolState)   `Required` 
 
     
-* **channel_type** (string)   `Required` 
-
-    
-* **data** (Struct)   `Required` 
-
-    
-* **schedule** (Struct)   `Required` 
+* **plugin_info** (NotificationProtocolResponsePluginInfo)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
 
     
-* **secret_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
+* **created_at** (string)   `Required` 
+
+    <br>
+
+### NotificationProtocolRequest
+* **protocol_id** (string)   `Required` 
+
+    <br>
+
+### NotificationProtocolRequestPluginInfo
+* **plugin_id** (string)   `Required` 
+
+    
+* **version** (string)   `Required` 
+
+    
+* **options** (Struct)   `Required` 
+
+    
+* **upgrade_mode** (NotificationProtocolUpgradeMode)   `Required` 
+
+    
+* **secret_data** (Struct)  
+
+    
+* **schema** (Struct)  
+
+    <br>
+
+### NotificationProtocolResponsePluginInfo
+* **plugin_id** (string)   `Required` 
+
+    
+* **version** (string)   `Required` 
+
+    
+* **options** (Struct)   `Required` 
+
+    
+* **upgrade_mode** (NotificationProtocolUpgradeMode)   `Required` 
+
+    
+* **metadata** (Struct)  
+
+    
+* **secret_id** (string)  
+
+    <br>
+
+### NotificationProtocolSearchQuery
+* **query** (Query)  
+
+    
+* **protocol_id** (string)  
+
+    
+* **name** (string)  
+
+    
+* **state** (NotificationProtocolState)  
+
+    <br>
+
+### NotificationProtocolStatQuery
+* **query** (StatisticsQuery)   `Required` 
+
+    <br>
+
+### NotificationProtocolUpdatePluginRequest
 * **protocol_id** (string)   `Required` 
 
     
-* **service_id** (string)   `Required` 
+* **version** (string)  
 
     
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
+* **options** (Struct)  
 
     <br>
 
-### ServiceInfo
-* **service_id** (string)   `Required` 
+### NotificationProtocolUpdateRequest
+* **protocol_id** (string)   `Required` 
 
     
-* **name** (string)   `Required` 
+* **name** (string)  
 
     
-* **service_key** (string)   `Required` 
-
-    
-* **description** (string)   `Required` 
-
-    
-* **members** (Struct)   `Required` 
-
-    
-* **options** (Options)   `Required` 
-
-    
-* **escalation_policy_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    
-* **updated_at** (string)   `Required` 
-
-    
-* **channels** (Struct)  
-
-    
-* **webhooks** (Struct)  
-
-    
-* **alerts** (Struct)  
+* **tags** (Struct)  
 
     <br>
 
-### ServicesInfo
-* **results** (ServiceInfo)  `Repeated`    `Required` 
+### NotificationProtocolsInfo
+* **results** (NotificationProtocolInfo)  `Repeated`    `Required` 
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### WebhookInfo
-* **webhook_id** (string)   `Required` 
-
-    <br>
-
-### Webhooks
-* **webhook_info** (WebhookInfo)  `Repeated`    `Required` 
 
     <br>

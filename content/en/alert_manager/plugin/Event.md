@@ -8,7 +8,7 @@ bookFlatSection: true
 
 
 
->  **Package : spaceone.api.alert_manager.v1**
+>  **Package : spaceone.api.alert_manager.plugin**
 
 <br>
 <br>
@@ -24,21 +24,18 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Event#create) | [EventCreateRequest](Event#eventcreaterequest) | [Empty](Event#empty) |
+| [**parse**](./Event#parse) | [ParseRequest](Event#parserequest) | [EventsInfo](Event#eventsinfo) |
 
 
 
     
 <br>
 
-### create
+### parse
 
 
 
 
-
-> **POST** /alert-manager/v1/comment/create
->
 
 
 
@@ -55,21 +52,7 @@ bookFlatSection: true
 
 
 
-### EventCreateRequest
-* **webhook_id** (string)   `Required` 
-
-    
-* **access_key** (string)   `Required` 
-
-    
-* **data** (Struct)   `Required` 
-
-    <br>
-
 ### EventInfo
-* **event_id** (string)   `Required` 
-
-    
 * **event_key** (string)   `Required` 
 
     
@@ -103,27 +86,33 @@ bookFlatSection: true
 * **additional_info** (Struct)   `Required` 
 
     
-* **raw_data** (Struct)   `Required` 
+* **occurred_at** (string)   `Required` 
+
+    <br>
+
+### EventResource
+* **resource_id** (string)  
+
+    
+* **resource_type** (string)  
+
+    
+* **name** (string)  
+
+    <br>
+
+### EventsInfo
+* **results** (EventInfo)  `Repeated`    `Required` 
+
+    <br>
+
+### ParseRequest
+* **options** (Struct)   `Required` 
+
+    
+* **data** (Struct)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **service_id** (string)   `Required` 
-
-    
-* **webhook_id** (string)   `Required` 
-
-    
-* **alert_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    
-* **occurred_at** (string)   `Required` 
 
     <br>

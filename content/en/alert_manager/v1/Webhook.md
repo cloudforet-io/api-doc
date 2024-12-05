@@ -32,7 +32,7 @@ bookFlatSection: true
 | [**disable**](./Webhook#disable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**delete**](./Webhook#delete) | [WebhookRequest](Webhook#webhookrequest) | [Empty](Webhook#empty) |
 | [**get**](./Webhook#get) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
-| [**list**](./Webhook#list) | [WebhookQuery](Webhook#webhookquery) | [WebhooksInfo](Webhook#webhooksinfo) |
+| [**list**](./Webhook#list) | [WebhookSearchQuery](Webhook#webhooksearchquery) | [WebhooksInfo](Webhook#webhooksinfo) |
 | [**stat**](./Webhook#stat) | [WebhookStatQuery](Webhook#webhookstatquery) | [Struct](Webhook#struct) |
 
 
@@ -250,19 +250,19 @@ bookFlatSection: true
 * **plugin_info** (WebhookPluginInfo)   `Required` 
 
     
-* **tags** (Struct)   `Required` 
-
-    
 * **requests** (WebhookRequests)   `Required` 
 
     
-* **service_id** (string)   `Required` 
+* **tags** (Struct)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
 
     
 * **workspace_id** (string)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
+* **service_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -273,20 +273,33 @@ bookFlatSection: true
 * **plugin_id** (string)   `Required` 
 
     
-* **version** (string)   `Required` 
-
-    
-* **options** (Struct)   `Required` 
-
-    
 * **metadata** (Struct)   `Required` 
 
     
-* **upgrade_mode** (UpgradeMode)   `Required` 
+* **version** (string)  
+
+    
+* **options** (Struct)  
+
+    
+* **upgrade_mode** (WebhookUpgradeMode)  
 
     <br>
 
-### WebhookQuery
+### WebhookRequest
+* **webhook_id** (string)   `Required` 
+
+    <br>
+
+### WebhookRequests
+* **total** (int64)   `Required` 
+
+    
+* **error** (int64)   `Required` 
+
+    <br>
+
+### WebhookSearchQuery
 * **query** (Query)  
 
     
@@ -309,19 +322,6 @@ bookFlatSection: true
 
     <br>
 
-### WebhookRequest
-* **webhook_id** (string)   `Required` 
-
-    <br>
-
-### WebhookRequests
-* **total** (int64)   `Required` 
-
-    
-* **error** (int64)   `Required` 
-
-    <br>
-
 ### WebhookStatQuery
 * **query** (StatisticsQuery)   `Required` 
 
@@ -337,7 +337,7 @@ bookFlatSection: true
 * **options** (Struct)  
 
     
-* **upgrade_mode** (UpgradeMode)  
+* **upgrade_mode** (WebhookUpgradeMode)  
 
     <br>
 

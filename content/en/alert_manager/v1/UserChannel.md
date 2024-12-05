@@ -19,18 +19,19 @@ bookFlatSection: true
 
 
 
-**Service Methods:**
+**UserChannel Methods:**
 
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Service#create) | [CommentCreateRequest](Service#commentcreaterequest) | [ServiceInfo](Service#serviceinfo) |
-| [**update**](./Service#update) | [CommentUpdateRequest](Service#commentupdaterequest) | [ServiceInfo](Service#serviceinfo) |
-| [**change_member**](./Service#change_member) | [CommentChangeMemberRequest](Service#commentchangememberrequest) | [ServiceInfo](Service#serviceinfo) |
-| [**delete**](./Service#delete) | [CommentRequest](Service#commentrequest) | [Empty](Service#empty) |
-| [**get**](./Service#get) | [CommentRequest](Service#commentrequest) | [ServiceInfo](Service#serviceinfo) |
-| [**list**](./Service#list) | [CommentSearchQuery](Service#commentsearchquery) | [ServicesInfo](Service#servicesinfo) |
-| [**stat**](./Service#stat) | [CommentStatQuery](Service#commentstatquery) | [Struct](Service#struct) |
+| [**create**](./UserChannel#create) | [UserChannelCreateRequest](UserChannel#userchannelcreaterequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**update**](./UserChannel#update) | [UserChannelUpdateRequest](UserChannel#userchannelupdaterequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**enable**](./UserChannel#enable) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**disable**](./UserChannel#disable) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**delete**](./UserChannel#delete) | [UserChannelRequest](UserChannel#userchannelrequest) | [Empty](UserChannel#empty) |
+| [**get**](./UserChannel#get) | [UserChannelRequest](UserChannel#userchannelrequest) | [UserChannelInfo](UserChannel#userchannelinfo) |
+| [**list**](./UserChannel#list) | [UserChannelSearchQuery](UserChannel#userchannelsearchquery) | [UserChannelsInfo](UserChannel#userchannelsinfo) |
+| [**stat**](./UserChannel#stat) | [UserChannelStatQuery](UserChannel#userchannelstatquery) | [Struct](UserChannel#struct) |
 
 
 
@@ -43,7 +44,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/create
+> **POST** /alert-manager/v1/user-group/create
 >
 
 
@@ -60,7 +61,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/update
+> **POST** /alert-manager/v1/user-group/update
 >
 
 
@@ -71,13 +72,30 @@ bookFlatSection: true
     
 <br>
 
-### change_member
+### enable
 
 
 
 
 
-> **POST** /alert-manager/v1/comment/change-member
+> **POST** /alert-manager/v1/user-group/enable
+>
+
+
+
+
+
+
+    
+<br>
+
+### disable
+
+
+
+
+
+> **POST** /alert-manager/v1/user-group/disable
 >
 
 
@@ -94,7 +112,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/delete
+> **POST** /alert-manager/v1/user-group/delete
 >
 
 
@@ -111,7 +129,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/get
+> **POST** /alert-manager/v1/user-group/get
 >
 
 
@@ -128,7 +146,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/comment/list
+> **POST** /alert-manager/v1/user-group/list
 >
 
 
@@ -145,7 +163,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/comment/stat
+> **POST** /alert_manager/v1/user-group/stat
 >
 
 
@@ -163,205 +181,109 @@ bookFlatSection: true
 
 
 
-### AlertInfo
-* **high** (int32)   `Required` 
+### UserChannelCreateRequest
+* **protocol_id** (string)   `Required` 
 
     
-* **low** (int32)   `Required` 
-
-    <br>
-
-### Alerts
-* **TOTAL** (AlertInfo)   `Required` 
-
-    
-* **TRIGGERRED** (AlertInfo)   `Required` 
-
-    
-* **ACKNOWLEDGED** (AlertInfo)   `Required` 
-
-    <br>
-
-### Channels
-* **service_channel_info** (ServiceChannelsInfo)  `Repeated`    `Required` 
-
-    <br>
-
-### CommentChangeMemberRequest
-* **service_id** (string)   `Required` 
-
-    
-* **members** (Members)   `Required` 
-
-    <br>
-
-### CommentCreateRequest
 * **name** (string)   `Required` 
 
     
-* **service_key** (string)   `Required` 
+* **data** (Struct)   `Required` 
 
     
-* **description** (string)  
+* **schedule** (ChannelSchedule)  
 
     
-* **members** (Struct)  
-
-    
-* **options** (Options)  
+* **tags** (Struct)  
 
     <br>
 
-### CommentRequest
-* **service_id** (string)   `Required` 
-
-    <br>
-
-### CommentSearchQuery
-* **query** (Query)  
-
-    
-* **service_id** (string)  
-
-    
-* **escalation_policy_id** (string)  
-
-    
-* **include_details** (bool)  
-
-    <br>
-
-### CommentStatQuery
-* **query** (StatisticsQuery)   `Required` 
-
-    <br>
-
-### CommentUpdateRequest
-* **service_id** (string)   `Required` 
-
-    
-* **escalation_policy_id** (string)   `Required` 
-
-    
-* **name** (string)  
-
-    
-* **description** (string)  
-
-    
-* **options** (Options)  
-
-    <br>
-
-### Members
-* **USER** (string)  `Repeated`    `Required` 
-
-    
-* **USER_GROUP** (string)  `Repeated`    `Required` 
-
-    <br>
-
-### Options<br>
-
-### ServiceChannelsInfo
+### UserChannelInfo
 * **channel_id** (string)   `Required` 
 
     
 * **name** (string)   `Required` 
 
     
-* **state** (string)   `Required` 
+* **state** (UserChannelState)   `Required` 
 
     
-* **channel_type** (string)   `Required` 
+* **schedule** (ChannelSchedule)   `Required` 
 
     
 * **data** (Struct)   `Required` 
 
     
-* **schedule** (Struct)   `Required` 
-
-    
 * **tags** (Struct)   `Required` 
 
     
-* **secret_id** (string)   `Required` 
+* **domain_id** (string)   `Required` 
 
     
 * **protocol_id** (string)   `Required` 
 
     
-* **service_id** (string)   `Required` 
+* **user_id** (string)   `Required` 
 
     
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
+* **user_secret_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
 
     <br>
 
-### ServiceInfo
-* **service_id** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **service_key** (string)   `Required` 
-
-    
-* **description** (string)   `Required` 
-
-    
-* **members** (Struct)   `Required` 
-
-    
-* **options** (Options)   `Required` 
-
-    
-* **escalation_policy_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    
-* **updated_at** (string)   `Required` 
-
-    
-* **channels** (Struct)  
-
-    
-* **webhooks** (Struct)  
-
-    
-* **alerts** (Struct)  
+### UserChannelRequest
+* **channel_id** (string)   `Required` 
 
     <br>
 
-### ServicesInfo
-* **results** (ServiceInfo)  `Repeated`    `Required` 
+### UserChannelSearchQuery
+* **query** (Query)  
+
+    
+* **channel_id** (string)  
+
+    
+* **name** (string)  
+
+    
+* **state** (UserChannelState)  
+
+    
+* **protocol_id** (string)  
+
+    
+* **user_secret_id** (string)  
+
+    <br>
+
+### UserChannelStatQuery
+* **query** (StatisticsQuery)   `Required` 
+
+    <br>
+
+### UserChannelUpdateRequest
+* **channel_id** (string)   `Required` 
+
+    
+* **name** (string)  
+
+    
+* **schedule** (ChannelSchedule)  
+
+    
+* **data** (Struct)  
+
+    
+* **tags** (Struct)  
+
+    <br>
+
+### UserChannelsInfo
+* **results** (UserChannelInfo)  `Repeated`    `Required` 
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### WebhookInfo
-* **webhook_id** (string)   `Required` 
-
-    <br>
-
-### Webhooks
-* **webhook_info** (WebhookInfo)  `Repeated`    `Required` 
 
     <br>

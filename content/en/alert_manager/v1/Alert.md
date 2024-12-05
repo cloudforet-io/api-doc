@@ -24,13 +24,13 @@ bookFlatSection: true
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./Alert#create) | [AlertCreateRequest](Alert#alertcreaterequest) | [ServiceInfo](Alert#serviceinfo) |
-| [**update**](./Alert#update) | [AlertUpdateRequest](Alert#alertupdaterequest) | [ServiceInfo](Alert#serviceinfo) |
+| [**create**](./Alert#create) | [AlertCreateRequest](Alert#alertcreaterequest) | [AlertInfo](Alert#alertinfo) |
+| [**update**](./Alert#update) | [AlertUpdateRequest](Alert#alertupdaterequest) | [AlertInfo](Alert#alertinfo) |
 | [**delete**](./Alert#delete) | [AlertRequest](Alert#alertrequest) | [Empty](Alert#empty) |
-| [**get**](./Alert#get) | [AlertRequest](Alert#alertrequest) | [ServiceInfo](Alert#serviceinfo) |
-| [**list**](./Alert#list) | [AlertSearchQuery](Alert#alertsearchquery) | [ServicesInfo](Alert#servicesinfo) |
-| [**history**](./Alert#history) | [AlertChangeMemberRequest](Alert#alertchangememberrequest) | [ServiceInfo](Alert#serviceinfo) |
-| [**analyze**](./Alert#analyze) | [AlertChangeMemberRequest](Alert#alertchangememberrequest) | [ServiceInfo](Alert#serviceinfo) |
+| [**get**](./Alert#get) | [AlertRequest](Alert#alertrequest) | [AlertInfo](Alert#alertinfo) |
+| [**list**](./Alert#list) | [AlertSearchQuery](Alert#alertsearchquery) | [AlertsInfo](Alert#alertsinfo) |
+| [**history**](./Alert#history) | [AlertRequest](Alert#alertrequest) | [AlertHistoryInfo](Alert#alerthistoryinfo) |
+| [**analyze**](./Alert#analyze) | [AlertAnalyzeQuery](Alert#alertanalyzequery) | [Struct](Alert#struct) |
 | [**stat**](./Alert#stat) | [AlertStatQuery](Alert#alertstatquery) | [Struct](Alert#struct) |
 
 
@@ -163,7 +163,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/alert/stat
+> **POST** /alert-manager/v1/alert/stat
 >
 
 
@@ -181,41 +181,152 @@ bookFlatSection: true
 
 
 
-### AlertChangeMemberRequest
-* **service_id** (string)   `Required` 
-
-    
-* **members** (Members)   `Required` 
+### AlertAnalyzeQuery
+* **query** (AnalyzeQuery)   `Required` 
 
     <br>
 
 ### AlertCreateRequest
-* **name** (string)   `Required` 
+* **title** (string)   `Required` 
 
     
-* **service_key** (string)   `Required` 
+* **service_id** (string)   `Required` 
 
     
 * **description** (string)  
 
     
-* **members** (Struct)  
+* **urgency** (AlertUrgency)  
 
     
-* **options** (Options)  
+* **severity** (EventSeverity)  
+
+    
+* **rule** (string)  
+
+    
+* **image_url** (string)  
+
+    
+* **resources** (AlertResource)  `Repeated`   
+
+    
+* **provider** (string)  
+
+    
+* **account** (string)  
+
+    
+* **additional_info** (Struct)  
+
+    <br>
+
+### AlertEventInfo
+* **alert_id** (string)   `Required` 
+
+    
+* **action** (AlertAction)   `Required` 
+
+    
+* **description** (string)   `Required` 
+
+    
+* **event_info** (EventInfo)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    
+* **created_by** (string)   `Required` 
+
+    <br>
+
+### AlertHistoryInfo
+* **results** (AlertEventInfo)  `Repeated`    `Required` 
 
     <br>
 
 ### AlertInfo
-* **high** (int32)   `Required` 
+* **alert_id** (string)   `Required` 
 
     
-* **low** (int32)   `Required` 
+* **title** (string)   `Required` 
+
+    
+* **state** (AlertState)   `Required` 
+
+    
+* **description** (string)   `Required` 
+
+    
+* **urgency** (AlertUrgency)   `Required` 
+
+    
+* **severity** (EventSeverity)   `Required` 
+
+    
+* **rule** (string)   `Required` 
+
+    
+* **image_url** (string)   `Required` 
+
+    
+* **resources** (AlertResource)  `Repeated`    `Required` 
+
+    
+* **provider** (string)   `Required` 
+
+    
+* **account** (string)   `Required` 
+
+    
+* **triggerd_by** (TriggeredBy)   `Required` 
+
+    
+* **additional_info** (Struct)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **service_id** (string)   `Required` 
+
+    
+* **webhook_id** (string)   `Required` 
+
+    
+* **escalation_policy_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
+
+    
+* **acknowledged_at** (string)   `Required` 
+
+    
+* **resolved_at** (string)   `Required` 
 
     <br>
 
 ### AlertRequest
-* **service_id** (string)   `Required` 
+* **alert_id** (string)   `Required` 
+
+    <br>
+
+### AlertResource
+* **name** (string)   `Required` 
+
+    
+* **asset_id** (string)  
+
+    
+* **asset_type** (string)  
 
     <br>
 
@@ -223,13 +334,43 @@ bookFlatSection: true
 * **query** (Query)  
 
     
+* **alert_id** (string)  
+
+    
+* **title** (string)  
+
+    
+* **state** (AlertState)  
+
+    
+* **urgency** (AlertUrgency)  
+
+    
+* **severity** (EventSeverity)  
+
+    
+* **resources** (AlertResource)  `Repeated`   
+
+    
+* **provider** (string)  
+
+    
+* **account** (string)  
+
+    
+* **triggered_by** (string)  
+
+    
+* **workspace_id** (string)  
+
+    
 * **service_id** (string)  
 
     
-* **escalation_policy_id** (string)  
+* **webhook_id** (string)  
 
     
-* **include_details** (bool)  
+* **escalation_policy_id** (string)  
 
     <br>
 
@@ -239,147 +380,26 @@ bookFlatSection: true
     <br>
 
 ### AlertUpdateRequest
-* **service_id** (string)   `Required` 
+* **alert_id** (string)   `Required` 
 
     
-* **escalation_policy_id** (string)   `Required` 
+* **title** (string)  
 
     
-* **name** (string)  
+* **state** (AlertState)  
 
     
 * **description** (string)  
 
     
-* **options** (Options)  
+* **urgency** (AlertUrgency)  
 
     <br>
 
-### Alerts
-* **TOTAL** (AlertInfo)   `Required` 
-
-    
-* **TRIGGERRED** (AlertInfo)   `Required` 
-
-    
-* **ACKNOWLEDGED** (AlertInfo)   `Required` 
-
-    <br>
-
-### Channels
-* **service_channel_info** (ServiceChannelsInfo)  `Repeated`    `Required` 
-
-    <br>
-
-### Members
-* **USER** (string)  `Repeated`    `Required` 
-
-    
-* **USER_GROUP** (string)  `Repeated`    `Required` 
-
-    <br>
-
-### Options<br>
-
-### ServiceChannelsInfo
-* **channel_id** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **state** (string)   `Required` 
-
-    
-* **channel_type** (string)   `Required` 
-
-    
-* **data** (Struct)   `Required` 
-
-    
-* **schedule** (Struct)   `Required` 
-
-    
-* **tags** (Struct)   `Required` 
-
-    
-* **secret_id** (string)   `Required` 
-
-    
-* **protocol_id** (string)   `Required` 
-
-    
-* **service_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    <br>
-
-### ServiceInfo
-* **service_id** (string)   `Required` 
-
-    
-* **name** (string)   `Required` 
-
-    
-* **service_key** (string)   `Required` 
-
-    
-* **description** (string)   `Required` 
-
-    
-* **members** (Struct)   `Required` 
-
-    
-* **options** (Options)   `Required` 
-
-    
-* **escalation_policy_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **domain_id** (string)   `Required` 
-
-    
-* **created_at** (string)   `Required` 
-
-    
-* **updated_at** (string)   `Required` 
-
-    
-* **channels** (Struct)  
-
-    
-* **webhooks** (Struct)  
-
-    
-* **alerts** (Struct)  
-
-    <br>
-
-### ServicesInfo
-* **results** (ServiceInfo)  `Repeated`    `Required` 
+### AlertsInfo
+* **results** (AlertInfo)  `Repeated`    `Required` 
 
     
 * **total_count** (int32)   `Required` 
-
-    <br>
-
-### WebhookInfo
-* **webhook_id** (string)   `Required` 
-
-    <br>
-
-### Webhooks
-* **webhook_info** (WebhookInfo)  `Repeated`    `Required` 
 
     <br>
