@@ -1,65 +1,37 @@
 {
   "files": [
     {
-      "name": "spaceone/api/alert_manager/v1/event.proto",
+      "name": "spaceone/api/alert_manager/plugin/notification.proto",
       "description": "",
-      "package": "spaceone.api.alert_manager.v1",
-      "hasEnums": true,
+      "package": "spaceone.api.alert_manager.plugin",
+      "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
       "enums": [
         {
-          "name": "EventType",
-          "longName": "EventInfo.EventType",
-          "fullName": "spaceone.api.alert_manager.v1.EventInfo.EventType",
+          "name": "NotificationType",
+          "longName": "DispatchRequest.NotificationType",
+          "fullName": "spaceone.api.alert_manager.plugin.DispatchRequest.NotificationType",
           "description": "",
           "values": [
             {
-              "name": "EVENT_TYPE_NONE",
+              "name": "NOTIFICATION_TYPE_NONE",
               "number": "0",
               "description": ""
             },
             {
-              "name": "ALERT",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "RECOVERY",
-              "number": "2",
-              "description": ""
-            },
-            {
               "name": "ERROR",
-              "number": "3",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "EventSeverity",
-          "longName": "EventSeverity",
-          "fullName": "spaceone.api.alert_manager.v1.EventSeverity",
-          "description": "",
-          "values": [
-            {
-              "name": "EVENT_SEVERITY_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "CRITICAL",
               "number": "1",
-              "description": ""
-            },
-            {
-              "name": "ERROR",
-              "number": "2",
               "description": ""
             },
             {
               "name": "WARNING",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "SUCCESS",
               "number": "3",
               "description": ""
             },
@@ -74,9 +46,9 @@
       "extensions": [],
       "messages": [
         {
-          "name": "EventCreateRequest",
-          "longName": "EventCreateRequest",
-          "fullName": "spaceone.api.alert_manager.v1.EventCreateRequest",
+          "name": "DispatchRequest",
+          "longName": "DispatchRequest",
+          "fullName": "spaceone.api.alert_manager.plugin.DispatchRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -84,7 +56,91 @@
           "extensions": [],
           "fields": [
             {
-              "name": "webhook_id",
+              "name": "options",
+              "description": "",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "secret_data",
+              "description": "",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "channel_data",
+              "description": "",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "message",
+              "description": "",
+              "label": "",
+              "type": "NotificationMessage",
+              "longType": "NotificationMessage",
+              "fullType": "spaceone.api.alert_manager.plugin.NotificationMessage",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "notification_type",
+              "description": "",
+              "label": "",
+              "type": "NotificationType",
+              "longType": "DispatchRequest.NotificationType",
+              "fullType": "spaceone.api.alert_manager.plugin.DispatchRequest.NotificationType",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "domain_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "NotificationCallback",
+          "longName": "NotificationCallback",
+          "fullName": "spaceone.api.alert_manager.plugin.NotificationCallback",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "label",
               "description": "",
               "label": "",
               "type": "string",
@@ -96,7 +152,7 @@
               "defaultValue": ""
             },
             {
-              "name": "access_key",
+              "name": "url",
               "description": "",
               "label": "",
               "type": "string",
@@ -108,7 +164,7 @@
               "defaultValue": ""
             },
             {
-              "name": "data",
+              "name": "options",
               "description": "",
               "label": "",
               "type": "Struct",
@@ -122,9 +178,9 @@
           ]
         },
         {
-          "name": "EventInfo",
-          "longName": "EventInfo",
-          "fullName": "spaceone.api.alert_manager.v1.EventInfo",
+          "name": "NotificationMessage",
+          "longName": "NotificationMessage",
+          "fullName": "spaceone.api.alert_manager.plugin.NotificationMessage",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -132,43 +188,19 @@
           "extensions": [],
           "fields": [
             {
-              "name": "event_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "event_key",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "event_type",
-              "description": "",
-              "label": "",
-              "type": "EventType",
-              "longType": "EventInfo.EventType",
-              "fullType": "spaceone.api.alert_manager.v1.EventInfo.EventType",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
               "name": "title",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "link",
               "description": "",
               "label": "",
               "type": "string",
@@ -192,30 +224,6 @@
               "defaultValue": ""
             },
             {
-              "name": "severity",
-              "description": "",
-              "label": "",
-              "type": "EventSeverity",
-              "longType": "EventSeverity",
-              "fullType": "spaceone.api.alert_manager.v1.EventSeverity",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "rule",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
               "name": "image_url",
               "description": "",
               "label": "",
@@ -228,132 +236,24 @@
               "defaultValue": ""
             },
             {
-              "name": "resources",
+              "name": "tags",
               "description": "",
               "label": "repeated",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "type": "NotificationTag",
+              "longType": "NotificationTag",
+              "fullType": "spaceone.api.alert_manager.plugin.NotificationTag",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
             },
             {
-              "name": "provider",
+              "name": "callbacks",
               "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "account",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "additional_info",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "raw_data",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "domain_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "workspace_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "service_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "webhook_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "alert_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "created_at",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
+              "label": "repeated",
+              "type": "NotificationCallback",
+              "longType": "NotificationCallback",
+              "fullType": "spaceone.api.alert_manager.plugin.NotificationCallback",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -372,37 +272,74 @@
               "defaultValue": ""
             }
           ]
+        },
+        {
+          "name": "NotificationTag",
+          "longName": "NotificationTag",
+          "fullName": "spaceone.api.alert_manager.plugin.NotificationTag",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "options",
+              "description": "",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
         }
       ],
       "services": [
         {
-          "name": "Event",
-          "longName": "Event",
-          "fullName": "spaceone.api.alert_manager.v1.Event",
+          "name": "Notification",
+          "longName": "Notification",
+          "fullName": "spaceone.api.alert_manager.plugin.Notification",
           "description": "",
           "methods": [
             {
-              "name": "create",
+              "name": "dispatch",
               "description": "",
-              "requestType": "EventCreateRequest",
-              "requestLongType": "EventCreateRequest",
-              "requestFullType": "spaceone.api.alert_manager.v1.EventCreateRequest",
+              "requestType": "DispatchRequest",
+              "requestLongType": "DispatchRequest",
+              "requestFullType": "spaceone.api.alert_manager.plugin.DispatchRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
               "responseFullType": "google.protobuf.Empty",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/alert-manager/v1/comment/create",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
+              "responseStreaming": false
             }
           ]
         }

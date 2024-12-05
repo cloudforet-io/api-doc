@@ -1,9 +1,9 @@
 {
   "files": [
     {
-      "name": "spaceone/api/alert_manager/v1/event.proto",
+      "name": "spaceone/api/alert_manager/plugin/event.proto",
       "description": "",
-      "package": "spaceone.api.alert_manager.v1",
+      "package": "spaceone.api.alert_manager.plugin",
       "hasEnums": true,
       "hasExtensions": false,
       "hasMessages": true,
@@ -11,8 +11,8 @@
       "enums": [
         {
           "name": "EventType",
-          "longName": "EventInfo.EventType",
-          "fullName": "spaceone.api.alert_manager.v1.EventInfo.EventType",
+          "longName": "EventType",
+          "fullName": "spaceone.api.alert_manager.plugin.EventType",
           "description": "",
           "values": [
             {
@@ -21,51 +21,13 @@
               "description": ""
             },
             {
-              "name": "ALERT",
-              "number": "1",
-              "description": ""
-            },
-            {
               "name": "RECOVERY",
-              "number": "2",
-              "description": ""
-            },
-            {
-              "name": "ERROR",
-              "number": "3",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "EventSeverity",
-          "longName": "EventSeverity",
-          "fullName": "spaceone.api.alert_manager.v1.EventSeverity",
-          "description": "",
-          "values": [
-            {
-              "name": "EVENT_SEVERITY_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "CRITICAL",
               "number": "1",
               "description": ""
             },
             {
-              "name": "ERROR",
+              "name": "ALERT",
               "number": "2",
-              "description": ""
-            },
-            {
-              "name": "WARNING",
-              "number": "3",
-              "description": ""
-            },
-            {
-              "name": "INFO",
-              "number": "4",
               "description": ""
             }
           ]
@@ -74,75 +36,15 @@
       "extensions": [],
       "messages": [
         {
-          "name": "EventCreateRequest",
-          "longName": "EventCreateRequest",
-          "fullName": "spaceone.api.alert_manager.v1.EventCreateRequest",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "webhook_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "access_key",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "data",
-              "description": "",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
-        },
-        {
           "name": "EventInfo",
           "longName": "EventInfo",
-          "fullName": "spaceone.api.alert_manager.v1.EventInfo",
+          "fullName": "spaceone.api.alert_manager.plugin.EventInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
           "hasOneofs": false,
           "extensions": [],
           "fields": [
-            {
-              "name": "event_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
             {
               "name": "event_key",
               "description": "",
@@ -160,8 +62,8 @@
               "description": "",
               "label": "",
               "type": "EventType",
-              "longType": "EventInfo.EventType",
-              "fullType": "spaceone.api.alert_manager.v1.EventInfo.EventType",
+              "longType": "EventType",
+              "fullType": "spaceone.api.alert_manager.plugin.EventType",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -196,7 +98,7 @@
               "description": "",
               "label": "",
               "type": "EventSeverity",
-              "longType": "EventSeverity",
+              "longType": "spaceone.api.alert_manager.v1.EventSeverity",
               "fullType": "spaceone.api.alert_manager.v1.EventSeverity",
               "ismap": false,
               "isoneof": false,
@@ -276,7 +178,115 @@
               "defaultValue": ""
             },
             {
-              "name": "raw_data",
+              "name": "occurred_at",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EventResource",
+          "longName": "EventResource",
+          "fullName": "spaceone.api.alert_manager.plugin.EventResource",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "resource_id",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "resource_type",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "+optional",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EventsInfo",
+          "longName": "EventsInfo",
+          "fullName": "spaceone.api.alert_manager.plugin.EventsInfo",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "results",
+              "description": "",
+              "label": "repeated",
+              "type": "EventInfo",
+              "longType": "EventInfo",
+              "fullType": "spaceone.api.alert_manager.plugin.EventInfo",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ParseRequest",
+          "longName": "ParseRequest",
+          "fullName": "spaceone.api.alert_manager.plugin.ParseRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "options",
+              "description": "",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
               "description": "",
               "label": "",
               "type": "Struct",
@@ -298,78 +308,6 @@
               "isoneof": false,
               "oneofdecl": "",
               "defaultValue": ""
-            },
-            {
-              "name": "workspace_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "service_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "webhook_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "alert_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "created_at",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "occurred_at",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
             }
           ]
         }
@@ -378,31 +316,20 @@
         {
           "name": "Event",
           "longName": "Event",
-          "fullName": "spaceone.api.alert_manager.v1.Event",
+          "fullName": "spaceone.api.alert_manager.plugin.Event",
           "description": "",
           "methods": [
             {
-              "name": "create",
+              "name": "parse",
               "description": "",
-              "requestType": "EventCreateRequest",
-              "requestLongType": "EventCreateRequest",
-              "requestFullType": "spaceone.api.alert_manager.v1.EventCreateRequest",
+              "requestType": "ParseRequest",
+              "requestLongType": "ParseRequest",
+              "requestFullType": "spaceone.api.alert_manager.plugin.ParseRequest",
               "requestStreaming": false,
-              "responseType": "Empty",
-              "responseLongType": ".google.protobuf.Empty",
-              "responseFullType": "google.protobuf.Empty",
-              "responseStreaming": false,
-              "options": {
-                "google.api.http": {
-                  "rules": [
-                    {
-                      "method": "POST",
-                      "pattern": "/alert-manager/v1/comment/create",
-                      "body": "*"
-                    }
-                  ]
-                }
-              }
+              "responseType": "EventsInfo",
+              "responseLongType": "EventsInfo",
+              "responseFullType": "spaceone.api.alert_manager.plugin.EventsInfo",
+              "responseStreaming": false
             }
           ]
         }
