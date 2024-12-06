@@ -183,7 +183,7 @@ bookFlatSection: true
 * **rules** (EscalationRule)  `Repeated`    `Required` 
 
     
-* **repeat_count** (int32)   `Required` 
+* **repeat** (Repeat)   `Required` 
 
     
 * **finish_condition** (FinishCondition)   `Required` 
