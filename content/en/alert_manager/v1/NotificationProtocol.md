@@ -27,6 +27,7 @@ bookFlatSection: true
 | [**create**](./NotificationProtocol#create) | [NotificationProtocolCreateRequest](NotificationProtocol#notificationprotocolcreaterequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**update**](./NotificationProtocol#update) | [NotificationProtocolUpdateRequest](NotificationProtocol#notificationprotocolupdaterequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**update_plugin**](./NotificationProtocol#update_plugin) | [NotificationProtocolUpdatePluginRequest](NotificationProtocol#notificationprotocolupdatepluginrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
+| [**verify_plugin**](./NotificationProtocol#verify_plugin) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [Empty](NotificationProtocol#empty) |
 | [**enable**](./NotificationProtocol#enable) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**disable**](./NotificationProtocol#disable) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**delete**](./NotificationProtocol#delete) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [Empty](NotificationProtocol#empty) |
@@ -80,6 +81,23 @@ bookFlatSection: true
 
 
 > **POST** /alert-manager/v1/notification-protocol/update-plugin
+>
+
+
+
+
+
+
+    
+<br>
+
+### verify_plugin
+
+
+
+
+
+> **POST** /alert-manager/v1/notification-protocol/verify-plugin
 >
 
 

@@ -332,6 +332,9 @@ bookFlatSection: true
 * **state** (ChannelState)  
 
     
+* **channel_type** (ServiceChannelType)  
+
+    
 * **workspace_id** (string)  
 
     
@@ -339,9 +342,6 @@ bookFlatSection: true
 
     
 * **protocol_id** (string)  
-
-    
-* **secret_id** (string)  
 
     <br>
 

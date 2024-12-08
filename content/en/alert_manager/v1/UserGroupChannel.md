@@ -262,9 +262,6 @@ bookFlatSection: true
     
 * **protocol_id** (string)  
 
-    
-* **secret_id** (string)  
-
     <br>
 
 ### UserGroupChannelStatQuery
