@@ -280,7 +280,10 @@ bookFlatSection: true
 * **account** (string)   `Required` 
 
     
-* **triggerd_by** (TriggeredBy)   `Required` 
+* **triggerd_type** (TriggeredType)   `Required` 
+
+    
+* **triggered_by** (string)   `Required` 
 
     
 * **additional_info** (Struct)   `Required` 
@@ -356,6 +359,9 @@ bookFlatSection: true
 
     
 * **account** (string)  
+
+    
+* **triggered_type** (string)  
 
     
 * **triggered_by** (string)  
