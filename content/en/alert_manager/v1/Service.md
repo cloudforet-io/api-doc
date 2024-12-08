@@ -163,7 +163,7 @@ bookFlatSection: true
 
 
 
-### AlertInfo
+### AlertStats
 * **high** (int32)   `Required` 
 
     
@@ -172,13 +172,13 @@ bookFlatSection: true
     <br>
 
 ### Alerts
-* **TOTAL** (AlertInfo)   `Required` 
+* **TOTAL** (AlertStats)   `Required` 
 
     
-* **TRIGGERRED** (AlertInfo)   `Required` 
+* **TRIGGERRED** (AlertStats)   `Required` 
 
     
-* **ACKNOWLEDGED** (AlertInfo)   `Required` 
+* **ACKNOWLEDGED** (AlertStats)   `Required` 
 
     <br>
 
