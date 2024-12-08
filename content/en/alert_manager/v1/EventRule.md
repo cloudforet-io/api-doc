@@ -183,9 +183,6 @@ bookFlatSection: true
     <br>
 
 ### EventRuleCreateRequest
-* **conditions** (Condition)  `Repeated`    `Required` 
-
-    
 * **conditions_policy** (ConditionsPolicy)   `Required` 
 
     
@@ -196,6 +193,9 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    
+* **conditions** (Condition)  `Repeated`   
 
     
 * **options** (EventRuleOptions)  

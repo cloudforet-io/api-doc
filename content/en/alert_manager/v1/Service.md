@@ -285,6 +285,9 @@ bookFlatSection: true
 * **service_id** (string)  
 
     
+* **name** (string)  
+
+    
 * **escalation_policy_id** (string)  
 
     <br>

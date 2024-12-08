@@ -324,6 +324,9 @@ bookFlatSection: true
     
 * **options** (Struct)  
 
+    
+* **upgrade_mode** (NotificationProtocolUpgradeMode)  
+
     <br>
 
 ### NotificationProtocolUpdateRequest

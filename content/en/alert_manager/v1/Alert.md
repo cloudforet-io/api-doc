@@ -340,9 +340,6 @@ bookFlatSection: true
 * **alert_id** (string)  
 
     
-* **title** (string)  
-
-    
 * **state** (AlertState)  
 
     
