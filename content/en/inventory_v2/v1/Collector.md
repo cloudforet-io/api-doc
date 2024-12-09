@@ -89,9 +89,9 @@ Creates a new Collector with information of the plugin to use. Information of th
 
 {{< highlight json >}}
 {
-   "name": "AWS Collector",
+   "name": "Azure Collector",
    "plugin_info": {
-       "plugin_id": "plugin-30d21ef75a5d",
+       "plugin_id": "plugin-azure-inven-collector",
        "version": "1.13.13",
        "options": {},
        "metadata": {
@@ -112,7 +112,7 @@ Creates a new Collector with information of the plugin to use. Information of th
    },
    "schedule": {
        "state": "ENABLED",
-       "hours": [0, 6, 12, 18]
+       "hours": [10, 18]
    },
    "secret_filter": {
        "state": "ENABLED",
@@ -123,6 +123,7 @@ Creates a new Collector with information of the plugin to use. Information of th
    "tags": {
        "type": "test"
    },
+   "resource_group": "DOMAIN"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -166,7 +167,7 @@ Creates a new Collector with information of the plugin to use. Information of th
    "collector_id": "collector-2c0847644f39",
    "name": "AWS Collector",
    "plugin_info": {
-       "plugin_id": "plugin-30d21ef75a5d",
+       "plugin_id": "plugin-azure-inven-collector",
        "version": "1.13.13",
        "options": {},
        "metadata": {
@@ -188,9 +189,7 @@ Creates a new Collector with information of the plugin to use. Information of th
    "tags": {
        "type": "test"
    },
-   "created_by": "wonny@cloudforet.io"
-   "created_at": "2022-06-17T06:33:27.195Z",
-   "domain_id": "domain-58010aa2e451",
+   "created_by": "wonny@cloudforet.io",
    "provider": "aws",
    "schedule": {
        "state": "ENABLED",
@@ -202,6 +201,8 @@ Creates a new Collector with information of the plugin to use. Information of th
        "service_accounts": ["sa-xxx", "sa-yyy"],
        "schemas": ["schema-xxx", "schema-yyy"]
    },
+   "domain_id": "domain-58010aa2e451",
+   "created_at": "2022-06-17T06:33:27.195Z",
    "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
@@ -256,16 +257,10 @@ Updates a specific Collector. You can make changes in Collector settings, includ
 {{< highlight json >}}
 {
    "collector_id": "collector-2c0847644f39",
-   "name": "New AWS Collector",
-   "plugin_info": {
-       "plugin_id": "plugin-30d21ef75a5d",
-       "version": "1.14.0",
-       "provider": "aws",
-       "upgrade_mode": "MANUAL"
-   },
+   "name": "New Azure Collector",
    "schedule": {
        "state": "ENABLED",
-       "hours": [0, 6, 12, 18]
+       "hours": [10,18]
    },
    "secret_filter": {
        "state": "ENABLED",
@@ -319,7 +314,7 @@ Updates a specific Collector. You can make changes in Collector settings, includ
    "collector_id": "collector-2c0847644f39",
    "name": "AWS Collector",
    "plugin_info": {
-       "plugin_id": "plugin-30d21ef75a5d",
+       "plugin_id": "plugin-azure-inven-collector",
        "version": "1.13.13",
        "options": {},
        "metadata": {
@@ -341,9 +336,7 @@ Updates a specific Collector. You can make changes in Collector settings, includ
    "tags": {
        "type": "test"
    },
-   "created_by": "wonny@cloudforet.io"
-   "created_at": "2022-06-17T06:33:27.195Z",
-   "domain_id": "domain-58010aa2e451",
+   "created_by": "wonny@cloudforet.io",
    "provider": "aws",
    "schedule": {
        "state": "ENABLED",
@@ -355,6 +348,8 @@ Updates a specific Collector. You can make changes in Collector settings, includ
        "service_accounts": ["sa-xxx", "sa-yyy"],
        "schemas": ["schema-xxx", "schema-yyy"]
    },
+   "domain_id": "domain-58010aa2e451",
+   "created_at": "2022-06-17T06:33:27.195Z",
    "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
@@ -422,7 +417,7 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
    "collector_id": "collector-2c0847644f39",
    "name": "AWS Collector",
    "plugin_info": {
-       "plugin_id": "plugin-30d21ef75a5d",
+       "plugin_id": "plugin-azure-inven-collector",
        "version": "1.13.13",
        "options": {},
        "metadata": {
@@ -444,9 +439,7 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
    "tags": {
        "type": "test"
    },
-   "created_by": "wonny@cloudforet.io"
-   "created_at": "2022-06-17T06:33:27.195Z",
-   "domain_id": "domain-58010aa2e451",
+   "created_by": "wonny@cloudforet.io",
    "provider": "aws",
    "schedule": {
        "state": "ENABLED",
@@ -458,6 +451,8 @@ Updates the plugin of a specific Collector. This method resets the plugin data i
        "service_accounts": ["sa-xxx", "sa-yyy"],
        "schemas": ["schema-xxx", "schema-yyy"]
    },
+   "domain_id": "domain-58010aa2e451",
+   "created_at": "2022-06-17T06:33:27.195Z",
    "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}
@@ -602,7 +597,7 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
    "collector_id": "collector-2c0847644f39",
    "name": "AWS Collector",
    "plugin_info": {
-       "plugin_id": "plugin-30d21ef75a5d",
+       "plugin_id": "plugin-azure-inven-collector",
        "version": "1.13.13",
        "options": {},
        "metadata": {
@@ -624,9 +619,7 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
    "tags": {
        "type": "test"
    },
-   "created_by": "wonny@cloudforet.io"
-   "created_at": "2022-06-17T06:33:27.195Z",
-   "domain_id": "domain-58010aa2e451",
+   "created_by": "wonny@cloudforet.io",
    "provider": "aws",
    "schedule": {
        "state": "ENABLED",
@@ -638,6 +631,8 @@ Gets a specific Collector. Prints detailed information about the Collector, incl
        "service_accounts": ["sa-xxx", "sa-yyy"],
        "schemas": ["schema-xxx", "schema-yyy"]
    },
+   "domain_id": "domain-58010aa2e451",
+   "created_at": "2022-06-17T06:33:27.195Z",
    "last_collected_at": "2022-06-17T06:33:27.195Z"
 }
 {{< /highlight >}}

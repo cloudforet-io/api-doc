@@ -152,21 +152,13 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 {{< highlight json >}}
 {
      "job_id": "job-123456789012",
-     "status": "ERROR",
-     "filter": {},
+     "status": "SUCCESS",
      "total_tasks": 2,
-     "collector_info": {
-         "collector_id": "collector-123456789012",
-         "name": "Jenkins Collector",
-         "state": "ENABLED",
-         "plugin_info": {
-             "plugin_id": "plugin-jenkins-inven-collector",
-             "version": "0.1.1"
-         },
-         "provider": "jenkins",
-         "capability": {},
-         "is_public": true
-     },
+     "success_tasks": 2,
+     "request_secret_id: "secret-123456789012",
+     "request_workspace_id": "workspace-123456789012",
+     "resource_group": "WORKSPACE"
+     "workspace_id": "workspace-123456789012",
      "domain_id": "domain-123456789012",
      "created_at": "2022-01-01T10:00:01.389Z",
      "updated_at": "2022-01-01T10:00:01.389Z",
@@ -247,24 +239,8 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
        {
            "job_id": "job-3b124006c2d2",
            "status": "SUCCESS",
-           "filter": {},
            "total_tasks": 2,
-           "collector_info": {
-               "collector_id": "collector-accd02663b3d",
-               "name": "openstack-collector",
-               "state": "ENABLED",
-               "plugin_info": {
-                   "plugin_id": "plugin-openstack-inven-collector",
-                   "version": "0.4.2.20220616.134758"
-               },
-               "provider": "openstack",
-               "capability": {
-                   "supported_schema": [
-                       "openstack_credentials"
-                   ]
-               },
-               "is_public": true
-           },
+           "success_tasks": 2,
            "resource_group": "DOMAIN",
            "domain_id": "domain-58010aa2e451",
            "created_at": "2022-06-17T08:00:01.225Z",
@@ -273,33 +249,31 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
        },
        {
            "job_id": "job-587a3d3b4db3",
-           "status": "SUCCESS",
-           "filter": {},
+           "status": "IN_PROGRESS",
            "total_tasks": 3,
-           "collector_info": {
-               "collector_id": "collector-2c0847644f39",
-               "name": "AWS stat-kwon Collector",
-               "state": "ENABLED",
-               "plugin_info": {
-                   "plugin_id": "plugin-30d21ef75a5d",
-                   "version": "1.13.13.20220610.143142"
-               },
-               "provider": "aws",
-               "capability": {
-                   "supported_schema": [
-                       "aws_access_key"
-                   ]
-               },
-               "is_public": true
-           },
+           "success_tasks": 1,
+           "remained_tasks": 1.
            "resource_group": "DOMAIN",
            "domain_id": "domain-58010aa2e451",
            "created_at": "2022-06-17T08:00:00.407Z",
            "updated_at": "2022-06-17T08:00:00.407Z",
            "finished_at": "2022-06-17T08:07:32.023Z"
+       },
+       {
+          "job_id": "job-587a3d3b4db3",
+          "status": "FAILURE",
+          "total_tasks": 3,
+          "success_tasks": 1,
+          "failure_tasks": 1,
+          "resource_group": "DOMAIN",
+          "domain_id": "domain-58010aa2e451",
+          "created_at": "2022-06-17T08:00:00.407Z",
+          "updated_at": "2022-06-17T08:05:00.407Z",
+          "finished_at": "2022-06-17T08:10:00.407Z"
        }
+
    ],
-   "total_count": 2
+   "total_count": 3
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -324,6 +298,50 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 
 
+ {{< tabs " analyze " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[JobAnalyzeQuery](./Job#jobanalyzequery)
+
+* **query** (AnalyzeQuery)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "query": {
+     "group_by": ["job_id", "status"],
+     "page": {
+       "start": 1, "limit": 5
+     },
+     "fields": {
+       "total_tasks_sum": {
+         "key": "total_tasks",
+         "operator": "sum"
+        },
+        "remain_tasks_sum": {
+           "key": "remain_tasks",
+           "operator": "sum"
+        },
+        "failure_tasks_sum": {
+           "key": "failure_tasks",
+           "operator": "sum"
+        }
+     }
+  }
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
+
 
     
 <br>
@@ -340,6 +358,32 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 
 
+
+ {{< tabs " stat " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[JobStatQuery](./Job#jobstatquery)
+
+* **query** (StatisticsQuery)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+ "query": {
+     "distinct": "status"
+ }
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
