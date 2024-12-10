@@ -163,6 +163,14 @@ description of data table
 
 
 
+### AddLabelsOperator
+* **data_table_id** (string)   `Required` 
+
+    
+* **labels** (Struct)   `Required` 
+
+    <br>
+
 ### AddOptions
 * **ASSET** (AssetSource)   `Required` 
 
@@ -259,6 +267,12 @@ description of data table
 * **data_tables** (string)  `Repeated`    `Required` 
 
     
+* **right_keys** (string)  `Repeated`    `Required` 
+
+    
+* **left_keys** (string)  `Repeated`    `Required` 
+
+    
 * **how** (JoinType)  
 
     <br>
@@ -286,20 +300,42 @@ description of data table
 
     <br>
 
+### PivotFieldOptions
+* **labels** (string)  `Repeated`    `Required` 
+
+    
+* **column** (string)   `Required` 
+
+    
+* **data** (string)   `Required` 
+
+    <br>
+
 ### PivotOperator
 * **data_table_id** (string)   `Required` 
 
     
-* **index** (string)  `Repeated`    `Required` 
+* **fields** (PivotFieldOptions)   `Required` 
 
     
-* **columns** (string)  `Repeated`    `Required` 
+* **function** (string)  
 
     
-* **values** (string)  `Repeated`    `Required` 
+* **select** (string)  `Repeated`   
 
     
-* **aggregation** (string)  
+* **order_by** (PivotOrderBy)  
+
+    
+* **limit** (int32)  
+
+    <br>
+
+### PivotOrderBy
+* **type** (string)   `Required` 
+
+    
+* **desc** (bool)   `Required` 
 
     <br>
 
@@ -432,6 +468,12 @@ description of data table
     
 * **PIVOT** (PivotOperator)   `Required` 
 
+    
+* **ADD_LABELS** (AddLabelsOperator)   `Required` 
+
+    
+* **VALUE_MAPPING** (ValueMappingOperator)   `Required` 
+
     <br>
 
 ### TransformPublicDataTableRequest
@@ -468,5 +510,39 @@ description of data table
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### ValueMappingCases
+* **key** (string)   `Required` 
+
+    
+* **operator** (ValueMappingOperator)   `Required` 
+
+    
+* **match** (string)   `Required` 
+
+    
+* **value** (string)   `Required` 
+
+    <br>
+
+### ValueMappingOperator
+* **data_table_id** (string)   `Required` 
+
+    
+* **name** (string)   `Required` 
+
+    
+* **field_type** (FieldType)   `Required` 
+
+    
+* **cases** (ValueMappingCases)  `Repeated`    `Required` 
+
+    
+* **else** (string)   `Required` 
+
+    
+* **condition** (string)   `Required` 
 
     <br>
