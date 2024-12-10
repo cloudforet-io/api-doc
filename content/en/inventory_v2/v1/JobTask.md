@@ -26,6 +26,7 @@ A JobTask is a unit for collecting external cloud resources. The resource belong
 | :----- | :-------- | :-------- |
 | [**delete**](./JobTask#delete) | [JobTaskRequest](JobTask#jobtaskrequest) | [Empty](JobTask#empty) |
 | [**get**](./JobTask#get) | [JobTaskRequest](JobTask#jobtaskrequest) | [JobTaskInfo](JobTask#jobtaskinfo) |
+| [**get_detail**](./JobTask#get_detail) | [JobTaskRequest](JobTask#jobtaskrequest) | [JobTaskDetailInfo](JobTask#jobtaskdetailinfo) |
 | [**list**](./JobTask#list) | [JobTaskQuery](JobTask#jobtaskquery) | [JobTasksInfo](JobTask#jobtasksinfo) |
 | [**stat**](./JobTask#stat) | [JobTaskStatQuery](JobTask#jobtaskstatquery) | [Struct](JobTask#struct) |
 
@@ -63,7 +64,7 @@ Deletes a specific JobTask. You must specify the `job_task_id` of the JobTask to
 
 {{< highlight json >}}
 {
-   "job_task_id": "job-task-123456789012",
+   "job_task_id": "job-task-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -105,7 +106,7 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 
 {{< highlight json >}}
 {
-   "job_task_id": "job-task-123456789012",
+   "job_task_id": "job-task-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -130,13 +131,13 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 
 * **disconnected_count** (int32)   `Required` 
 
-* **errors** (ErrorInfo)  `Repeated`   `Required` 
-
 * **domain_id** (string)   `Required` 
 
 * **workspace_id** (string)   `Required` 
 
 * **project_id** (string)   `Required` 
+
+* **collector_id** (string)   `Required` 
 
 * **service_account_id** (string)   `Required` 
 
@@ -147,6 +148,8 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 * **created_at** (string)   `Required` 
 
 * **started_at** (string)   `Required` 
+
+* **updated_at** (string)   `Required` 
 
 * **finished_at** (string)   `Required` 
 
@@ -176,6 +179,7 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
      "secret_id": "secret-123456789012",
      "provider": "google_cloud",
      "service_account_id": "sa-123456789012",
+     "collector_id": "collector-123456789012",
      "project_id": "project-123456789012",
      "domain_id": "domain-123456789012",
      "created_at": "2022-01-01T11:00:02.588Z",
@@ -184,6 +188,48 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 }
 {{< /highlight >}}
 {{< /tab >}}
+
+
+{{< /tabs >}}
+
+
+    
+<br>
+
+### get_detail
+
+
+
+
+
+> **POST** /inventory-v2/v1/job-task/get-detail
+>
+
+
+
+
+
+ {{< tabs " get_detail " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[JobTaskRequest](./JobTask#jobtaskrequest)
+
+* **job_task_id** (string)   `Required` 
+
+
+
+
+
+{{< highlight json >}}
+{
+   "job_task_id": "job-task-123456789012"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
 
 
 {{< /tabs >}}
@@ -245,7 +291,19 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
 
 {{< highlight json >}}
 {
-   "query": {}
+   "query": {
+       "filter": [
+           {
+               "key": "status",
+               "value": "FAILURE",
+               "operator": "eq"
+           }
+       ],
+       "page": {
+           "start": 1,
+           "limit": 5
+       }
+   }
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -271,28 +329,33 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
            "secret_id": "secret-957e407bfc15",
            "provider": "aws",
            "service_account_id": "sa-a41ff4765671",
-           "project_id": "project-77dffd3f7cd3",
+           "project_id": "project-77dfad3f7cd3",
            "domain_id": "domain-58010aa2e451",
+           "workspace_id": "workspace-78099aa2e451",
            "created_at": "2022-06-17T08:00:00.680Z",
            "started_at": "2022-06-17T08:00:00.914Z",
+           "updated_at": "2022-06-17T08:00:00.814Z",
            "finished_at": "2022-06-17T08:05:48.933Z"
        },
        {
            "job_task_id": "job_task-c5077338cf23",
            "status": "SUCCESS",
+           "created_count": 123,
            "updated_count": 1921,
            "job_id": "job-587a3d3b4db3",
            "secret_id": "secret-1cd7417c1889",
            "provider": "aws",
            "service_account_id": "sa-5e186fcc7c91",
            "project_id": "project-18655561c535",
+           "workspace_id": "workspace-1c1b7b7b7b7b",
            "domain_id": "domain-58010aa2e451",
            "created_at": "2022-06-17T08:00:00.582Z",
            "started_at": "2022-06-17T08:00:00.814Z",
+           "updated_at": "2022-06-17T08:00:00.814Z",
            "finished_at": "2022-06-17T08:07:31.995Z"
        }
    ],
-   "total_count": 4839
+   "total_count": 2
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -339,6 +402,41 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
 
     <br>
 
+### JobTaskDetailInfo
+* **job_task_id** (string)   `Required` 
+
+    
+* **created_info** (Struct)   `Required` 
+
+    
+* **updated_info** (Struct)   `Required` 
+
+    
+* **failure_info** (Struct)   `Required` 
+
+    
+* **deleted_info** (Struct)   `Required` 
+
+    
+* **disconnected_info** (Struct)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **project_id** (string)   `Required` 
+
+    
+* **job_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    <br>
+
 ### JobTaskInfo
 * **job_task_id** (string)   `Required` 
 
@@ -364,9 +462,6 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
 * **disconnected_count** (int32)   `Required` 
 
     
-* **errors** (ErrorInfo)  `Repeated`    `Required` 
-
-    
 * **domain_id** (string)   `Required` 
 
     
@@ -374,6 +469,9 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
 
     
 * **project_id** (string)   `Required` 
+
+    
+* **collector_id** (string)   `Required` 
 
     
 * **service_account_id** (string)   `Required` 
@@ -389,6 +487,9 @@ Gets a list of all JobTasks in a specific Job. You can use a query to get a filt
 
     
 * **started_at** (string)   `Required` 
+
+    
+* **updated_at** (string)   `Required` 
 
     
 * **finished_at** (string)   `Required` 

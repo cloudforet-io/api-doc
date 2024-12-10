@@ -64,7 +64,7 @@ Deletes a specific Job. You must specify the `job_id` of the Job to delete.
 
 {{< highlight json >}}
 {
-   "job_id": "job-123456789012",
+   "job_id": "job-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -106,7 +106,7 @@ Gets a specific Job. Prints detailed information about the Job, including its st
 
 {{< highlight json >}}
 {
-   "job_id": "job-123456789012",
+   "job_id": "job-123456789012"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -218,7 +218,12 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
 
 {{< highlight json >}}
 {
-   "query": {}
+   "query": {
+       "page": {
+           "start": 1,
+           "limit": 5
+       }
+   }
 }
 {{< /highlight >}}
 {{< /tab >}}
