@@ -46,7 +46,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/create
+> **POST** /alert-manager/v1/webhook/create
 >
 
 
@@ -63,7 +63,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/update
+> **POST** /alert-manager/v1/webhook/update
 >
 
 
@@ -80,7 +80,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/update-plugin
+> **POST** /alert-manager/v1/webhook/update-plugin
 >
 
 
@@ -97,7 +97,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/verify-plugin
+> **POST** /alert-manager/v1/webhook/verify-plugin
 >
 
 
@@ -114,7 +114,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/enable
+> **POST** /alert-manager/v1/webhook/enable
 >
 
 
@@ -131,7 +131,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/disable
+> **POST** /alert-manager/v1/webhook/disable
 >
 
 
@@ -148,7 +148,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/delete
+> **POST** /alert-manager/v1/webhook/delete
 >
 
 
@@ -165,7 +165,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/get
+> **POST** /alert-manager/v1/webhook/get
 >
 
 
@@ -182,7 +182,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/list
+> **POST** /alert-manager/v1/webhook/list
 >
 
 
@@ -199,7 +199,7 @@ bookFlatSection: true
 
 
 
-> **POST** /monitoring/v1/webhook/stat
+> **POST** /alert-manager/v1/webhook/stat
 >
 
 
