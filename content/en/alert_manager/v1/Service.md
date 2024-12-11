@@ -175,7 +175,7 @@ bookFlatSection: true
 * **TOTAL** (AlertStats)   `Required` 
 
     
-* **TRIGGERRED** (AlertStats)   `Required` 
+* **TRIGGERED** (AlertStats)   `Required` 
 
     
 * **ACKNOWLEDGED** (AlertStats)   `Required` 
