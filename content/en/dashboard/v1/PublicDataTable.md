@@ -193,12 +193,6 @@ description of data table
 * **filter_or** (Filter)  `Repeated`   
 
     
-* **date_format** (DateFormat)  
-
-    
-* **additional_labels** (Struct)  
-
-    
 * **timediff** (TimeDiff)  
 
     <br>
@@ -447,6 +441,9 @@ description of data table
 
     
 * **months** (int32)   `Required` 
+
+    
+* **data_name** (string)   `Required` 
 
     <br>
 
