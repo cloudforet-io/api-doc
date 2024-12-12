@@ -28,6 +28,7 @@ description of widget
 | [**update**](./PrivateWidget#update) | [UpdatePrivateWidgetRequest](PrivateWidget#updateprivatewidgetrequest) | [PrivateWidgetInfo](PrivateWidget#privatewidgetinfo) |
 | [**delete**](./PrivateWidget#delete) | [PrivateWidgetRequest](PrivateWidget#privatewidgetrequest) | [Empty](PrivateWidget#empty) |
 | [**load**](./PrivateWidget#load) | [LoadPrivateWidgetRequest](PrivateWidget#loadprivatewidgetrequest) | [Struct](PrivateWidget#struct) |
+| [**load_sum**](./PrivateWidget#load_sum) | [LoadPrivateWidgetRequest](PrivateWidget#loadprivatewidgetrequest) | [Struct](PrivateWidget#struct) |
 | [**get**](./PrivateWidget#get) | [PrivateWidgetRequest](PrivateWidget#privatewidgetrequest) | [PrivateWidgetInfo](PrivateWidget#privatewidgetinfo) |
 | [**list**](./PrivateWidget#list) | [PrivateWidgetQuery](PrivateWidget#privatewidgetquery) | [PrivateWidgetsInfo](PrivateWidget#privatewidgetsinfo) |
 
@@ -94,6 +95,23 @@ description of widget
 
 
 > **POST** /dashboard/v1/private-widget/load
+>
+
+
+
+
+
+
+    
+<br>
+
+### load_sum
+
+
+
+
+
+> **POST** /dashboard/v1/private-widget/load-sum
 >
 
 

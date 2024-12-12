@@ -28,6 +28,7 @@ description of widget
 | [**update**](./PublicWidget#update) | [UpdatePublicWidgetRequest](PublicWidget#updatepublicwidgetrequest) | [PublicWidgetInfo](PublicWidget#publicwidgetinfo) |
 | [**delete**](./PublicWidget#delete) | [PublicWidgetRequest](PublicWidget#publicwidgetrequest) | [Empty](PublicWidget#empty) |
 | [**load**](./PublicWidget#load) | [LoadPublicWidgetRequest](PublicWidget#loadpublicwidgetrequest) | [Struct](PublicWidget#struct) |
+| [**load_sum**](./PublicWidget#load_sum) | [LoadPublicWidgetRequest](PublicWidget#loadpublicwidgetrequest) | [Struct](PublicWidget#struct) |
 | [**get**](./PublicWidget#get) | [PublicWidgetRequest](PublicWidget#publicwidgetrequest) | [PublicWidgetInfo](PublicWidget#publicwidgetinfo) |
 | [**list**](./PublicWidget#list) | [PublicWidgetQuery](PublicWidget#publicwidgetquery) | [PublicWidgetsInfo](PublicWidget#publicwidgetsinfo) |
 
@@ -94,6 +95,23 @@ description of widget
 
 
 > **POST** /dashboard/v1/public-widget/load
+>
+
+
+
+
+
+
+    
+<br>
+
+### load_sum
+
+
+
+
+
+> **POST** /dashboard/v1/public-widget/load-sum
 >
 
 
