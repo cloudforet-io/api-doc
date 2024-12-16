@@ -27,7 +27,7 @@ bookFlatSection: true
 | [**create**](./TaskCategory#create) | [TaskCategoryCreateRequest](TaskCategory#taskcategorycreaterequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
 | [**update**](./TaskCategory#update) | [TaskCategoryUpdateRequest](TaskCategory#taskcategoryupdaterequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
 | [**update_fields**](./TaskCategory#update_fields) | [TaskCategoryUpdateFieldsRequest](TaskCategory#taskcategoryupdatefieldsrequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
-| [**delete**](./TaskCategory#delete) | [TaskCategoryRequest](TaskCategory#taskcategoryrequest) | [Empty](TaskCategory#empty) |
+| [**delete**](./TaskCategory#delete) | [TaskCategoryRequest](TaskCategory#taskcategoryrequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
 | [**get**](./TaskCategory#get) | [TaskCategoryRequest](TaskCategory#taskcategoryrequest) | [TaskCategoryInfo](TaskCategory#taskcategoryinfo) |
 | [**list**](./TaskCategory#list) | [TaskCategorySearchQuery](TaskCategory#taskcategorysearchquery) | [TaskCategoriesInfo](TaskCategory#taskcategoriesinfo) |
 | [**stat**](./TaskCategory#stat) | [TaskCategoryStatQuery](TaskCategory#taskcategorystatquery) | [Struct](TaskCategory#struct) |
@@ -232,6 +232,9 @@ bookFlatSection: true
 * **fields** (TaskField)  `Repeated`    `Required` 
 
     
+* **state** (string)   `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
@@ -245,6 +248,9 @@ bookFlatSection: true
 
     
 * **updated_at** (string)   `Required` 
+
+    
+* **deleted_at** (string)   `Required` 
 
     <br>
 
@@ -261,6 +267,9 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    
+* **include_deleted** (bool)  
 
     <br>
 

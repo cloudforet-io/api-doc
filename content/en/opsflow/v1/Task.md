@@ -26,6 +26,8 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./Task#create) | [TaskCreateRequest](Task#taskcreaterequest) | [TaskInfo](Task#taskinfo) |
 | [**update**](./Task#update) | [TaskUpdateRequest](Task#taskupdaterequest) | [TaskInfo](Task#taskinfo) |
+| [**update_description**](./Task#update_description) | [TaskUpdateDescriptionRequest](Task#taskupdatedescriptionrequest) | [TaskInfo](Task#taskinfo) |
+| [**change_assignee**](./Task#change_assignee) | [TaskChangeAssigneeRequest](Task#taskchangeassigneerequest) | [TaskInfo](Task#taskinfo) |
 | [**change_status**](./Task#change_status) | [TaskChangeStatusRequest](Task#taskchangestatusrequest) | [TaskInfo](Task#taskinfo) |
 | [**delete**](./Task#delete) | [TaskRequest](Task#taskrequest) | [Empty](Task#empty) |
 | [**get**](./Task#get) | [TaskRequest](Task#taskrequest) | [TaskInfo](Task#taskinfo) |
@@ -61,6 +63,40 @@ bookFlatSection: true
 
 
 > **POST** /opsflow/v1/task/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### update_description
+
+
+
+
+
+> **POST** /opsflow/v1/task/update_description
+>
+
+
+
+
+
+
+    
+<br>
+
+### change_assignee
+
+
+
+
+
+> **POST** /opsflow/v1/task/change_assignee
 >
 
 
@@ -162,6 +198,14 @@ bookFlatSection: true
 ## Message
 
 
+
+### TaskChangeAssigneeRequest
+* **task_id** (string)   `Required` 
+
+    
+* **assignee** (string)   `Required` 
+
+    <br>
 
 ### TaskChangeStatusRequest
 * **task_id** (string)   `Required` 
@@ -307,6 +351,20 @@ bookFlatSection: true
 
     <br>
 
+### TaskUpdateDescriptionRequest
+* **task_id** (string)   `Required` 
+
+    
+* **description** (string)   `Required` 
+
+    
+* **files** (string)  `Repeated`    `Required` 
+
+    
+* **mentions** (Mentions)   `Required` 
+
+    <br>
+
 ### TaskUpdateRequest
 * **task_id** (string)   `Required` 
 
@@ -315,18 +373,6 @@ bookFlatSection: true
 
     
 * **priority** (TaskPriority)  
-
-    
-* **description** (string)  
-
-    
-* **files** (string)  `Repeated`   
-
-    
-* **mentions** (Mentions)  
-
-    
-* **assignee** (string)  
 
     
 * **data** (Struct)  
