@@ -28,7 +28,7 @@ description of widget
 | [**update**](./PrivateWidget#update) | [UpdatePrivateWidgetRequest](PrivateWidget#updateprivatewidgetrequest) | [PrivateWidgetInfo](PrivateWidget#privatewidgetinfo) |
 | [**delete**](./PrivateWidget#delete) | [PrivateWidgetRequest](PrivateWidget#privatewidgetrequest) | [Empty](PrivateWidget#empty) |
 | [**load**](./PrivateWidget#load) | [LoadPrivateWidgetRequest](PrivateWidget#loadprivatewidgetrequest) | [Struct](PrivateWidget#struct) |
-| [**load_sum**](./PrivateWidget#load_sum) | [LoadPrivateWidgetRequest](PrivateWidget#loadprivatewidgetrequest) | [Struct](PrivateWidget#struct) |
+| [**load_sum**](./PrivateWidget#load_sum) | [LoadSumPrivateWidgetRequest](PrivateWidget#loadsumprivatewidgetrequest) | [Struct](PrivateWidget#struct) |
 | [**get**](./PrivateWidget#get) | [PrivateWidgetRequest](PrivateWidget#privatewidgetrequest) | [PrivateWidgetInfo](PrivateWidget#privatewidgetinfo) |
 | [**list**](./PrivateWidget#list) | [PrivateWidgetQuery](PrivateWidget#privatewidgetquery) | [PrivateWidgetsInfo](PrivateWidget#privatewidgetsinfo) |
 
@@ -199,7 +199,36 @@ description of widget
 * **widget_id** (string)   `Required` 
 
     
-* **query** (TimeSeriesAnalyzeQuery)   `Required` 
+* **granularity** (string)   `Required` 
+
+    
+* **start** (string)   `Required` 
+
+    
+* **end** (string)   `Required` 
+
+    
+* **sort** (PrivateWidgetSort)  `Repeated`   
+
+    
+* **page** (PrivateWidgetPage)  
+
+    
+* **vars** (Struct)  
+
+    <br>
+
+### LoadSumPrivateWidgetRequest
+* **widget_id** (string)   `Required` 
+
+    
+* **granularity** (string)   `Required` 
+
+    
+* **start** (string)   `Required` 
+
+    
+* **end** (string)   `Required` 
 
     
 * **vars** (Struct)  
@@ -250,6 +279,14 @@ description of widget
 
     <br>
 
+### PrivateWidgetPage
+* **start** (int32)   `Required` 
+
+    
+* **limit** (int32)   `Required` 
+
+    <br>
+
 ### PrivateWidgetQuery
 * **dashboard_id** (string)   `Required` 
 
@@ -266,6 +303,14 @@ description of widget
 
 ### PrivateWidgetRequest
 * **widget_id** (string)   `Required` 
+
+    <br>
+
+### PrivateWidgetSort
+* **key** (string)   `Required` 
+
+    
+* **desc** (bool)   `Required` 
 
     <br>
 

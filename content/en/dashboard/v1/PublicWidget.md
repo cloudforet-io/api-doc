@@ -28,7 +28,7 @@ description of widget
 | [**update**](./PublicWidget#update) | [UpdatePublicWidgetRequest](PublicWidget#updatepublicwidgetrequest) | [PublicWidgetInfo](PublicWidget#publicwidgetinfo) |
 | [**delete**](./PublicWidget#delete) | [PublicWidgetRequest](PublicWidget#publicwidgetrequest) | [Empty](PublicWidget#empty) |
 | [**load**](./PublicWidget#load) | [LoadPublicWidgetRequest](PublicWidget#loadpublicwidgetrequest) | [Struct](PublicWidget#struct) |
-| [**load_sum**](./PublicWidget#load_sum) | [LoadPublicWidgetRequest](PublicWidget#loadpublicwidgetrequest) | [Struct](PublicWidget#struct) |
+| [**load_sum**](./PublicWidget#load_sum) | [LoadSumPublicWidgetRequest](PublicWidget#loadsumpublicwidgetrequest) | [Struct](PublicWidget#struct) |
 | [**get**](./PublicWidget#get) | [PublicWidgetRequest](PublicWidget#publicwidgetrequest) | [PublicWidgetInfo](PublicWidget#publicwidgetinfo) |
 | [**list**](./PublicWidget#list) | [PublicWidgetQuery](PublicWidget#publicwidgetquery) | [PublicWidgetsInfo](PublicWidget#publicwidgetsinfo) |
 
@@ -199,7 +199,36 @@ description of widget
 * **widget_id** (string)   `Required` 
 
     
-* **query** (TimeSeriesAnalyzeQuery)   `Required` 
+* **granularity** (string)   `Required` 
+
+    
+* **start** (string)   `Required` 
+
+    
+* **end** (string)   `Required` 
+
+    
+* **sort** (PublicWidgetSort)  `Repeated`   
+
+    
+* **page** (PublicWidgetPage)  
+
+    
+* **vars** (Struct)  
+
+    <br>
+
+### LoadSumPublicWidgetRequest
+* **widget_id** (string)   `Required` 
+
+    
+* **granularity** (string)   `Required` 
+
+    
+* **start** (string)   `Required` 
+
+    
+* **end** (string)   `Required` 
 
     
 * **vars** (Struct)  
@@ -256,6 +285,14 @@ description of widget
 
     <br>
 
+### PublicWidgetPage
+* **start** (int32)   `Required` 
+
+    
+* **limit** (int32)   `Required` 
+
+    <br>
+
 ### PublicWidgetQuery
 * **dashboard_id** (string)   `Required` 
 
@@ -272,6 +309,14 @@ description of widget
 
 ### PublicWidgetRequest
 * **widget_id** (string)   `Required` 
+
+    <br>
+
+### PublicWidgetSort
+* **key** (string)   `Required` 
+
+    
+* **desc** (bool)   `Required` 
 
     <br>
 
