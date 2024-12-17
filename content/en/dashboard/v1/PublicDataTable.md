@@ -364,6 +364,9 @@ description of data table
 * **data_info** (Struct)   `Required` 
 
     
+* **sort_keys** (string)  `Repeated`    `Required` 
+
+    
 * **error_message** (string)   `Required` 
 
     
