@@ -27,7 +27,8 @@ DomainConfig API which configure environments for domain
 | [**create**](./PublicConfig#create) | [CreatePublicConfigRequest](PublicConfig#createpublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
 | [**update**](./PublicConfig#update) | [UpdatePublicConfigRequest](PublicConfig#updatepublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
 | [**delete**](./PublicConfig#delete) | [PublicConfigRequest](PublicConfig#publicconfigrequest) | [Empty](PublicConfig#empty) |
-| [**get**](./PublicConfig#get) | [PublicConfigRequest](PublicConfig#publicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
+| [**get**](./PublicConfig#get) | [PublicConfigSearchQuery](PublicConfig#publicconfigsearchquery) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
+| [**get_accessible_configs**](./PublicConfig#get_accessible_configs) | [PublicConfigSearchQuery](PublicConfig#publicconfigsearchquery) | [PublicConfigsInfo](PublicConfig#publicconfigsinfo) |
 | [**list**](./PublicConfig#list) | [PublicConfigSearchQuery](PublicConfig#publicconfigsearchquery) | [PublicConfigsInfo](PublicConfig#publicconfigsinfo) |
 | [**stat**](./PublicConfig#stat) | [PublicConfigStatQuery](PublicConfig#publicconfigstatquery) | [Struct](PublicConfig#struct) |
 
@@ -94,6 +95,23 @@ DomainConfig API which configure environments for domain
 
 
 > **POST** /config/v1/public-config/get
+>
+
+
+
+
+
+
+    
+<br>
+
+### get_accessible_configs
+
+This API for retrieving domain scoped configs that are accessible to users.
+
+
+
+> **POST** /config/v1/public-config/get-accessible-configs
 >
 
 
