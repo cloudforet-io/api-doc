@@ -145,7 +145,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/event-rule/stat
+> **POST** /alert-manager/v1/event-rule/stat
 >
 
 

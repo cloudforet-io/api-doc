@@ -199,7 +199,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/notification-protocol/stat
+> **POST** /alert-manager/v1/notification-protocol/stat
 >
 
 

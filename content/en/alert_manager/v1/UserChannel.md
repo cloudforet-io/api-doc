@@ -44,7 +44,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/user-group/create
+> **POST** /alert-manager/v1/user-channel/create
 >
 
 
@@ -61,7 +61,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/user-group/update
+> **POST** /alert-manager/v1/user-channel/update
 >
 
 
@@ -78,7 +78,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/user-group/enable
+> **POST** /alert-manager/v1/user-channel/enable
 >
 
 
@@ -95,7 +95,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/user-group/disable
+> **POST** /alert-manager/v1/user-channel/disable
 >
 
 
@@ -112,7 +112,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/user-group/delete
+> **POST** /alert-manager/v1/user-channel/delete
 >
 
 
@@ -129,7 +129,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/user-group/get
+> **POST** /alert-manager/v1/user-channel/get
 >
 
 
@@ -146,7 +146,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/user-group/list
+> **POST** /alert-manager/v1/user-channel/list
 >
 
 
@@ -163,7 +163,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/user-group/stat
+> **POST** /alert-manager/v1/user-channel/stat
 >
 
 

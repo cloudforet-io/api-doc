@@ -181,7 +181,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/service-channel/stat
+> **POST** /alert-manager/v1/service-channel/stat
 >
 
 

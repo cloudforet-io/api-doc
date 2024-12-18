@@ -127,7 +127,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/note/stat
+> **POST** /alert-manager/v1/note/stat
 >
 
 

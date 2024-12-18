@@ -163,7 +163,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert_manager/v1/user-group-channel/stat
+> **POST** /alert-manager/v1/user-group-channel/stat
 >
 
 
