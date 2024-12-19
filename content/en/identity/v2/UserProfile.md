@@ -25,6 +25,7 @@ bookFlatSection: true
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**update**](./UserProfile#update) | [UpdateUserProfileRequest](UserProfile#updateuserprofilerequest) | [UserInfo](UserProfile#userinfo) |
+| [**update_password**](./UserProfile#update_password) | [UpdatePasswordUserProfileRequest](UserProfile#updatepassworduserprofilerequest) | [UserInfo](UserProfile#userinfo) |
 | [**verify_email**](./UserProfile#verify_email) | [VerifyEmailRequest](UserProfile#verifyemailrequest) | [Empty](UserProfile#empty) |
 | [**confirm_email**](./UserProfile#confirm_email) | [ConfirmEmailRequest](UserProfile#confirmemailrequest) | [UserInfo](UserProfile#userinfo) |
 | [**reset_password**](./UserProfile#reset_password) | [UserPasswordResetRequest](UserProfile#userpasswordresetrequest) | [Empty](UserProfile#empty) |
@@ -52,6 +53,52 @@ bookFlatSection: true
 
 
 
+
+
+    
+<br>
+
+### update_password
+
+
+
+
+
+> **POST** /identity/v2/user-profile/update-password
+>
+
+
+
+
+
+ {{< tabs " update_password " >}}
+
+ {{< tab "Request Example" >}}
+
+
+
+[UpdatePasswordUserProfileRequest](./UserProfile#updatepassworduserprofilerequest)
+
+* **new_password** (string)   `Required` 
+
+
+* **current_password** (string)  
+
+
+
+
+
+{{< highlight json >}}
+{
+  "current_password": "password",
+  "new_password": "new_password"
+}
+{{< /highlight >}}
+{{< /tab >}}
+
+
+
+{{< /tabs >}}
 
 
     
@@ -469,6 +516,14 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
 
     
 * **total_count** (int32)   `Required` 
+
+    <br>
+
+### UpdatePasswordUserProfileRequest
+* **new_password** (string)   `Required` 
+
+    
+* **current_password** (string)  
 
     <br>
 
