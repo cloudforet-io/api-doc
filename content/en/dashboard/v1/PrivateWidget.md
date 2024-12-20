@@ -208,6 +208,9 @@ description of widget
 * **end** (string)   `Required` 
 
     
+* **group_by** (string)  `Repeated`   
+
+    
 * **sort** (PrivateWidgetSort)  `Repeated`   
 
     
