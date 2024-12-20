@@ -180,6 +180,9 @@ bookFlatSection: true
     
 * **ACKNOWLEDGED** (AlertStats)   `Required` 
 
+    
+* **RESOLVED** (AlertStats)   `Required` 
+
     <br>
 
 ### ServiceChangeMembersRequest
