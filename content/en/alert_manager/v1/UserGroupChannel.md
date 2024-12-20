@@ -211,6 +211,9 @@ bookFlatSection: true
 * **state** (UserGroupChannelState)   `Required` 
 
     
+* **data** (Struct)   `Required` 
+
+    
 * **schedule** (ChannelSchedule)   `Required` 
 
     
