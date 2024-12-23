@@ -248,6 +248,9 @@ bookFlatSection: true
 * **finish_condition** (FinishCondition)  
 
     
+* **repeat** (Repeat)  
+
+    
 * **tags** (Struct)  
 
     <br>
