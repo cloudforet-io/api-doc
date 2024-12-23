@@ -168,9 +168,15 @@ bookFlatSection: true
 ### PublicConfigRequest
 * **name** (string)   `Required` 
 
+    
+* **domain_id** (string)   `Required` 
+
     <br>
 
 ### PublicConfigSearchQuery
+* **domain_id** (string)   `Required` 
+
+    
 * **query** (Query)  
 
     
