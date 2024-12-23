@@ -26,11 +26,9 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./SharedConfig#create) | [CreateSharedConfigRequest](SharedConfig#createsharedconfigrequest) | [SharedConfigInfo](SharedConfig#sharedconfiginfo) |
 | [**update**](./SharedConfig#update) | [UpdateSharedConfigRequest](SharedConfig#updatesharedconfigrequest) | [SharedConfigInfo](SharedConfig#sharedconfiginfo) |
-| [**set**](./SharedConfig#set) | [SetSharedConfigRequest](SharedConfig#setsharedconfigrequest) | [SharedConfigInfo](SharedConfig#sharedconfiginfo) |
 | [**delete**](./SharedConfig#delete) | [SharedConfigRequest](SharedConfig#sharedconfigrequest) | [Empty](SharedConfig#empty) |
 | [**get**](./SharedConfig#get) | [SharedConfigSearchQuery](SharedConfig#sharedconfigsearchquery) | [SharedConfigInfo](SharedConfig#sharedconfiginfo) |
 | [**list**](./SharedConfig#list) | [SharedConfigSearchQuery](SharedConfig#sharedconfigsearchquery) | [SharedConfigsInfo](SharedConfig#sharedconfigsinfo) |
-| [**stat**](./SharedConfig#stat) | [SharedConfigStatQuery](SharedConfig#sharedconfigstatquery) | [Struct](SharedConfig#struct) |
 
 
 
@@ -61,23 +59,6 @@ bookFlatSection: true
 
 
 > **POST** /config/v1/shared-config/update
->
-
-
-
-
-
-
-    
-<br>
-
-### set
-
-
-
-
-
-> **POST** /config/v1/shared-config/set
 >
 
 
@@ -137,23 +118,6 @@ bookFlatSection: true
 
 
     
-<br>
-
-### stat
-
-
-
-
-
-> **POST** /config/v1/shared-config/stat
->
-
-
-
-
-
-
-    
 
 
 <br>
@@ -180,17 +144,6 @@ bookFlatSection: true
 
     
 * **project_id** (string)  
-
-    <br>
-
-### SetSharedConfigRequest
-* **name** (string)   `Required` 
-
-    
-* **data** (Struct)   `Required` 
-
-    
-* **tags** (Struct)  
 
     <br>
 

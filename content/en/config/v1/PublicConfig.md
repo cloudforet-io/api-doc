@@ -30,7 +30,6 @@ bookFlatSection: true
 | [**delete**](./PublicConfig#delete) | [PublicConfigRequest](PublicConfig#publicconfigrequest) | [Empty](PublicConfig#empty) |
 | [**get**](./PublicConfig#get) | [PublicConfigRequest](PublicConfig#publicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
 | [**list**](./PublicConfig#list) | [PublicConfigSearchQuery](PublicConfig#publicconfigsearchquery) | [PublicConfigsInfo](PublicConfig#publicconfigsinfo) |
-| [**stat**](./PublicConfig#stat) | [PublicConfigStatQuery](PublicConfig#publicconfigstatquery) | [Struct](PublicConfig#struct) |
 
 
 
@@ -129,23 +128,6 @@ bookFlatSection: true
 
 
 > **POST** /config/v1/public-config/list
->
-
-
-
-
-
-
-    
-<br>
-
-### stat
-
-
-
-
-
-> **POST** /config/v1/public-config/stat
 >
 
 

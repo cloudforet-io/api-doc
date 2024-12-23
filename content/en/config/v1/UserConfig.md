@@ -30,7 +30,6 @@ bookFlatSection: true
 | [**delete**](./UserConfig#delete) | [UserConfigRequest](UserConfig#userconfigrequest) | [Empty](UserConfig#empty) |
 | [**get**](./UserConfig#get) | [UserConfigRequest](UserConfig#userconfigrequest) | [UserConfigInfo](UserConfig#userconfiginfo) |
 | [**list**](./UserConfig#list) | [UserConfigQuery](UserConfig#userconfigquery) | [UserConfigsInfo](UserConfig#userconfigsinfo) |
-| [**stat**](./UserConfig#stat) | [UserConfigStatQuery](UserConfig#userconfigstatquery) | [Struct](UserConfig#struct) |
 
 
 
@@ -129,23 +128,6 @@ bookFlatSection: true
 
 
 > **POST** /config/v1/user-config/list
->
-
-
-
-
-
-
-    
-<br>
-
-### stat
-
-
-
-
-
-> **POST** /config/v1/user-config/stat
 >
 
 

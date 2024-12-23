@@ -30,7 +30,6 @@ bookFlatSection: true
 | [**delete**](./DomainConfig#delete) | [DomainConfigRequest](DomainConfig#domainconfigrequest) | [Empty](DomainConfig#empty) |
 | [**get**](./DomainConfig#get) | [DomainConfigRequest](DomainConfig#domainconfigrequest) | [DomainConfigInfo](DomainConfig#domainconfiginfo) |
 | [**list**](./DomainConfig#list) | [DomainConfigSearchQuery](DomainConfig#domainconfigsearchquery) | [DomainConfigsInfo](DomainConfig#domainconfigsinfo) |
-| [**stat**](./DomainConfig#stat) | [DomainConfigStatQuery](DomainConfig#domainconfigstatquery) | [Struct](DomainConfig#struct) |
 
 
 
@@ -129,23 +128,6 @@ bookFlatSection: true
 
 
 > **POST** /config/v1/domain-config/list
->
-
-
-
-
-
-
-    
-<br>
-
-### stat
-
-
-
-
-
-> **POST** /config/v1/domain-config/stat
 >
 
 
