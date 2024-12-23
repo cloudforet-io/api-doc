@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [DomainConfig](#DomainConfig)
-DomainConfig API which configure environments for domain
+
 
 
 >  **Package : spaceone.api.config.v1**

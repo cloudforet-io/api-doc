@@ -5,7 +5,7 @@ weight: 3
 bookFlatSection: true
 ---
 # [PublicConfig](#PublicConfig)
-DomainConfig API which configure environments for domain
+
 
 
 >  **Package : spaceone.api.config.v1**
@@ -24,11 +24,11 @@ DomainConfig API which configure environments for domain
 
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
-| [**create**](./PublicConfig#create) | [CreatePublicConfigRequest](PublicConfig#createpublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
-| [**update**](./PublicConfig#update) | [UpdatePublicConfigRequest](PublicConfig#updatepublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
+| [**create**](./PublicConfig#create) | [SetPublicConfigRequest](PublicConfig#setpublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
+| [**update**](./PublicConfig#update) | [SetPublicConfigRequest](PublicConfig#setpublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
+| [**set**](./PublicConfig#set) | [SetPublicConfigRequest](PublicConfig#setpublicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
 | [**delete**](./PublicConfig#delete) | [PublicConfigRequest](PublicConfig#publicconfigrequest) | [Empty](PublicConfig#empty) |
-| [**get**](./PublicConfig#get) | [PublicConfigSearchQuery](PublicConfig#publicconfigsearchquery) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
-| [**get_accessible_configs**](./PublicConfig#get_accessible_configs) | [PublicConfigSearchQuery](PublicConfig#publicconfigsearchquery) | [PublicConfigsInfo](PublicConfig#publicconfigsinfo) |
+| [**get**](./PublicConfig#get) | [PublicConfigRequest](PublicConfig#publicconfigrequest) | [PublicConfigInfo](PublicConfig#publicconfiginfo) |
 | [**list**](./PublicConfig#list) | [PublicConfigSearchQuery](PublicConfig#publicconfigsearchquery) | [PublicConfigsInfo](PublicConfig#publicconfigsinfo) |
 | [**stat**](./PublicConfig#stat) | [PublicConfigStatQuery](PublicConfig#publicconfigstatquery) | [Struct](PublicConfig#struct) |
 
@@ -71,6 +71,23 @@ DomainConfig API which configure environments for domain
     
 <br>
 
+### set
+
+
+
+
+
+> **POST** /config/v1/public-config/set
+>
+
+
+
+
+
+
+    
+<br>
+
 ### delete
 
 
@@ -95,23 +112,6 @@ DomainConfig API which configure environments for domain
 
 
 > **POST** /config/v1/public-config/get
->
-
-
-
-
-
-
-    
-<br>
-
-### get_accessible_configs
-
-This API for retrieving domain scoped configs that are accessible to users.
-
-
-
-> **POST** /config/v1/public-config/get-accessible-configs
 >
 
 
@@ -163,26 +163,6 @@ This API for retrieving domain scoped configs that are accessible to users.
 
 
 
-### CreatePublicConfigRequest
-* **name** (string)   `Required` 
-
-    
-* **data** (Struct)   `Required` 
-
-    
-* **resource_group** (ResourceGroup)   `Required` 
-
-    
-* **tags** (Struct)  
-
-    
-* **workspace_id** (string)  
-
-    
-* **project_id** (string)  
-
-    <br>
-
 ### PublicConfigInfo
 * **name** (string)   `Required` 
 
@@ -193,16 +173,7 @@ This API for retrieving domain scoped configs that are accessible to users.
 * **tags** (Struct)   `Required` 
 
     
-* **resource_group** (ResourceGroup)   `Required` 
-
-    
 * **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **project_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -214,12 +185,6 @@ This API for retrieving domain scoped configs that are accessible to users.
 
 ### PublicConfigRequest
 * **name** (string)   `Required` 
-
-    
-* **workspace_id** (string)  
-
-    
-* **project_id** (string)  
 
     <br>
 
@@ -244,7 +209,7 @@ This API for retrieving domain scoped configs that are accessible to users.
 
     <br>
 
-### UpdatePublicConfigRequest
+### SetPublicConfigRequest
 * **name** (string)   `Required` 
 
     
@@ -252,11 +217,5 @@ This API for retrieving domain scoped configs that are accessible to users.
 
     
 * **tags** (Struct)  
-
-    
-* **workspace_id** (string)  
-
-    
-* **project_id** (string)  
 
     <br>
