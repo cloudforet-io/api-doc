@@ -27,7 +27,7 @@ bookFlatSection: true
 | [**create**](./Service#create) | [ServiceCreateRequest](Service#servicecreaterequest) | [ServiceInfo](Service#serviceinfo) |
 | [**update**](./Service#update) | [ServiceUpdateRequest](Service#serviceupdaterequest) | [ServiceInfo](Service#serviceinfo) |
 | [**change_members**](./Service#change_members) | [ServiceChangeMembersRequest](Service#servicechangemembersrequest) | [ServiceInfo](Service#serviceinfo) |
-| [**delete**](./Service#delete) | [ServiceRequest](Service#servicerequest) | [Empty](Service#empty) |
+| [**delete**](./Service#delete) | [ServiceDeleteRequest](Service#servicedeleterequest) | [Empty](Service#empty) |
 | [**get**](./Service#get) | [ServiceRequest](Service#servicerequest) | [ServiceInfo](Service#serviceinfo) |
 | [**list**](./Service#list) | [ServiceSearchQuery](Service#servicesearchquery) | [ServicesInfo](Service#servicesinfo) |
 | [**stat**](./Service#stat) | [ServiceStatQuery](Service#servicestatquery) | [Struct](Service#struct) |
