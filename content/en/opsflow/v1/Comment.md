@@ -154,6 +154,9 @@ bookFlatSection: true
     
 * **mentions** (Mentions)  
 
+    
+* **source** (Struct)  
+
     <br>
 
 ### CommentInfo
@@ -172,7 +175,7 @@ bookFlatSection: true
 * **mentions** (Mentions)   `Required` 
 
     
-* **created_by** (string)   `Required` 
+* **source** (Struct)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
@@ -191,6 +194,9 @@ bookFlatSection: true
 
     
 * **updated_at** (string)   `Required` 
+
+    
+* **created_by** (string)   `Required` 
 
     <br>
 

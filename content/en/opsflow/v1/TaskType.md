@@ -179,6 +179,9 @@ bookFlatSection: true
 * **assignee_pool** (string)  `Repeated`   
 
     
+* **vars** (Struct)  
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -197,6 +200,9 @@ bookFlatSection: true
 
     
 * **assignee_pool** (string)  `Repeated`    `Required` 
+
+    
+* **vars** (Struct)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -261,6 +267,9 @@ bookFlatSection: true
 
     
 * **assignee_pool** (string)  `Repeated`   
+
+    
+* **vars** (Struct)  
 
     
 * **tags** (Struct)  

@@ -212,6 +212,9 @@ bookFlatSection: true
 * **fields** (TaskField)  `Repeated`   
 
     
+* **vars** (Struct)  
+
+    
 * **tags** (Struct)  
 
     <br>
@@ -233,6 +236,9 @@ bookFlatSection: true
 
     
 * **state** (string)   `Required` 
+
+    
+* **vars** (Struct)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -303,6 +309,9 @@ bookFlatSection: true
 
     
 * **force** (bool)  
+
+    
+* **vars** (Struct)  
 
     
 * **tags** (Struct)  

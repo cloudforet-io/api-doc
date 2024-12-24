@@ -92,6 +92,9 @@ bookFlatSection: true
 * **user_id** (string)   `Required` 
 
     
+* **additional_info** (Struct)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
