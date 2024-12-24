@@ -27,7 +27,7 @@ bookFlatSection: true
 | [**create**](./NotificationProtocol#create) | [NotificationProtocolCreateRequest](NotificationProtocol#notificationprotocolcreaterequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**update**](./NotificationProtocol#update) | [NotificationProtocolUpdateRequest](NotificationProtocol#notificationprotocolupdaterequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**update_plugin**](./NotificationProtocol#update_plugin) | [NotificationProtocolUpdatePluginRequest](NotificationProtocol#notificationprotocolupdatepluginrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
-| [**verify_plugin**](./NotificationProtocol#verify_plugin) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [Empty](NotificationProtocol#empty) |
+| [**update_secret_data**](./NotificationProtocol#update_secret_data) | [NotificationProtocolUpdateSecretDataRequest](NotificationProtocol#notificationprotocolupdatesecretdatarequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**enable**](./NotificationProtocol#enable) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**disable**](./NotificationProtocol#disable) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [NotificationProtocolInfo](NotificationProtocol#notificationprotocolinfo) |
 | [**delete**](./NotificationProtocol#delete) | [NotificationProtocolRequest](NotificationProtocol#notificationprotocolrequest) | [Empty](NotificationProtocol#empty) |
@@ -91,13 +91,13 @@ bookFlatSection: true
     
 <br>
 
-### verify_plugin
+### update_secret_data
 
 
 
 
 
-> **POST** /alert-manager/v1/notification-protocol/verify-plugin
+> **POST** /alert-manager/v1/notification-protocol/update-secret-data
 >
 
 
@@ -297,6 +297,14 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### NotificationProtocolUpdateSecretDataRequest
+* **protocol_id** (string)   `Required` 
+
+    
+* **secret_data** (Struct)   `Required` 
 
     <br>
 
