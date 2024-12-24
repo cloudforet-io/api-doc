@@ -221,7 +221,7 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **plugin_info** (NotificationProtocolRequestPluginInfo)   `Required` 
+* **plugin_info** (PluginRequest)   `Required` 
 
     
 * **tags** (Struct)  
@@ -238,7 +238,7 @@ bookFlatSection: true
 * **state** (NotificationProtocolState)   `Required` 
 
     
-* **plugin_info** (NotificationProtocolResponsePluginInfo)   `Required` 
+* **plugin_info** (PluginInfo)   `Required` 
 
     
 * **tags** (Struct)   `Required` 
@@ -253,46 +253,6 @@ bookFlatSection: true
 
 ### NotificationProtocolRequest
 * **protocol_id** (string)   `Required` 
-
-    <br>
-
-### NotificationProtocolRequestPluginInfo
-* **plugin_id** (string)   `Required` 
-
-    
-* **version** (string)   `Required` 
-
-    
-* **options** (Struct)   `Required` 
-
-    
-* **upgrade_mode** (NotificationProtocolUpgradeMode)   `Required` 
-
-    
-* **secret_data** (Struct)  
-
-    
-* **schema** (Struct)  
-
-    <br>
-
-### NotificationProtocolResponsePluginInfo
-* **plugin_id** (string)   `Required` 
-
-    
-* **version** (string)   `Required` 
-
-    
-* **options** (Struct)   `Required` 
-
-    
-* **upgrade_mode** (NotificationProtocolUpgradeMode)   `Required` 
-
-    
-* **metadata** (Struct)  
-
-    
-* **secret_id** (string)  
 
     <br>
 
