@@ -213,6 +213,14 @@ bookFlatSection: true
 
     <br>
 
+### ServiceDeleteRequest
+* **service_id** (string)   `Required` 
+
+    
+* **force** (bool)  
+
+    <br>
+
 ### ServiceInfo
 * **service_id** (string)   `Required` 
 
