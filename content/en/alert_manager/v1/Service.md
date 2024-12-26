@@ -77,7 +77,7 @@ bookFlatSection: true
 
 
 
-> **POST** /alert-manager/v1/service/change-member
+> **POST** /alert-manager/v1/service/change-members
 >
 
 
