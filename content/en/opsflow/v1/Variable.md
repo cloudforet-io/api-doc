@@ -155,9 +155,6 @@ bookFlatSection: true
 * **tags** (Struct)  
 
     
-* **resource_group** (ResourceGroup)  
-
-    
 * **workspace_id** (string)  
 
     <br>
@@ -170,9 +167,6 @@ bookFlatSection: true
 
     
 * **tags** (Struct)   `Required` 
-
-    
-* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
