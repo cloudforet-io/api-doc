@@ -157,6 +157,9 @@ bookFlatSection: true
     
 * **source** (Struct)  
 
+    
+* **reference_id** (string)  
+
     <br>
 
 ### CommentInfo
@@ -176,6 +179,9 @@ bookFlatSection: true
 
     
 * **source** (Struct)   `Required` 
+
+    
+* **reference_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 

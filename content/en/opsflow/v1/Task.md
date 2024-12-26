@@ -248,6 +248,9 @@ bookFlatSection: true
     
 * **data** (Struct)  
 
+    
+* **reference_id** (string)  
+
     <br>
 
 ### TaskInfo
@@ -279,6 +282,9 @@ bookFlatSection: true
 
     
 * **created_by** (string)   `Required` 
+
+    
+* **reference_id** (string)   `Required` 
 
     
 * **domain_id** (string)   `Required` 
