@@ -280,6 +280,9 @@ bookFlatSection: true
     
 * **service_id** (string)  
 
+    
+* **webhook_id** (string)  
+
     <br>
 
 ### EventRuleStatQuery
