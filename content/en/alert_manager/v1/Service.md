@@ -28,7 +28,7 @@ bookFlatSection: true
 | [**update**](./Service#update) | [ServiceUpdateRequest](Service#serviceupdaterequest) | [ServiceInfo](Service#serviceinfo) |
 | [**change_members**](./Service#change_members) | [ServiceChangeMembersRequest](Service#servicechangemembersrequest) | [ServiceInfo](Service#serviceinfo) |
 | [**delete**](./Service#delete) | [ServiceDeleteRequest](Service#servicedeleterequest) | [Empty](Service#empty) |
-| [**get**](./Service#get) | [ServiceRequest](Service#servicerequest) | [ServiceInfo](Service#serviceinfo) |
+| [**get**](./Service#get) | [ServiceGetRequest](Service#servicegetrequest) | [ServiceInfo](Service#serviceinfo) |
 | [**list**](./Service#list) | [ServiceSearchQuery](Service#servicesearchquery) | [ServicesInfo](Service#servicesinfo) |
 | [**stat**](./Service#stat) | [ServiceStatQuery](Service#servicestatquery) | [Struct](Service#struct) |
 
@@ -221,6 +221,14 @@ bookFlatSection: true
 
     <br>
 
+### ServiceGetRequest
+* **service_id** (string)   `Required` 
+
+    
+* **details** (bool)  
+
+    <br>
+
 ### ServiceInfo
 * **service_id** (string)   `Required` 
 
@@ -284,11 +292,6 @@ bookFlatSection: true
 
     <br>
 
-### ServiceRequest
-* **service_id** (string)   `Required` 
-
-    <br>
-
 ### ServiceSearchQuery
 * **query** (Query)  
 
@@ -297,6 +300,9 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    
+* **details** (bool)  
 
     
 * **escalation_policy_id** (string)  
