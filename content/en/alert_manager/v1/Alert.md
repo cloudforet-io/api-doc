@@ -289,6 +289,9 @@ bookFlatSection: true
 * **additional_info** (Struct)   `Required` 
 
     
+* **labels** (string)  `Repeated`    `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
@@ -349,7 +352,7 @@ bookFlatSection: true
 * **severity** (EventSeverity)  
 
     
-* **resources** (AlertResource)  `Repeated`   
+* **resource** (string)  
 
     
 * **provider** (string)  
