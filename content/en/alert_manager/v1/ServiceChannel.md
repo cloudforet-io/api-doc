@@ -25,7 +25,7 @@ bookFlatSection: true
 | Method | Request | Response |
 | :----- | :-------- | :-------- |
 | [**create**](./ServiceChannel#create) | [ServiceChannelCreateRequest](ServiceChannel#servicechannelcreaterequest) | [ServiceChannelInfo](ServiceChannel#servicechannelinfo) |
-| [**create_forward_channel**](./ServiceChannel#create_forward_channel) | [ServiceChannelCreateForwardChannelRequest](ServiceChannel#servicechannelcreateforwardchannelrequest) | [Empty](ServiceChannel#empty) |
+| [**create_forward_channel**](./ServiceChannel#create_forward_channel) | [ServiceChannelCreateForwardChannelRequest](ServiceChannel#servicechannelcreateforwardchannelrequest) | [ServiceChannelInfo](ServiceChannel#servicechannelinfo) |
 | [**update**](./ServiceChannel#update) | [ServiceChannelUpdateRequest](ServiceChannel#servicechannelupdaterequest) | [ServiceChannelInfo](ServiceChannel#servicechannelinfo) |
 | [**enable**](./ServiceChannel#enable) | [ServiceChannelRequest](ServiceChannel#servicechannelrequest) | [ServiceChannelInfo](ServiceChannel#servicechannelinfo) |
 | [**disable**](./ServiceChannel#disable) | [ServiceChannelRequest](ServiceChannel#servicechannelrequest) | [ServiceChannelInfo](ServiceChannel#servicechannelinfo) |
