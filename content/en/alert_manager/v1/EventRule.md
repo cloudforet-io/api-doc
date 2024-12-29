@@ -245,6 +245,9 @@ bookFlatSection: true
 * **service_id** (string)   `Required` 
 
     
+* **webhook_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     

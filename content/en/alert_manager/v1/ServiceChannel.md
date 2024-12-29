@@ -203,7 +203,7 @@ bookFlatSection: true
 * **SCHEDULE_TYPE** (ChannelScheduleType)   `Required` 
 
     
-* **SUN** (ChannelScheduleInfo)   `Required` 
+* **TIMEZONE** (string)   `Required` 
 
     
 * **MON** (ChannelScheduleInfo)   `Required` 
@@ -222,6 +222,9 @@ bookFlatSection: true
 
     
 * **SAT** (ChannelScheduleInfo)   `Required` 
+
+    
+* **SUN** (ChannelScheduleInfo)   `Required` 
 
     <br>
 
