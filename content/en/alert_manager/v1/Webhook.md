@@ -27,7 +27,6 @@ bookFlatSection: true
 | [**create**](./Webhook#create) | [WebhookCreateRequest](Webhook#webhookcreaterequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**update**](./Webhook#update) | [WebhookUpdateRequest](Webhook#webhookupdaterequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**update_plugin**](./Webhook#update_plugin) | [WebhookUpdatePluginRequest](Webhook#webhookupdatepluginrequest) | [WebhookInfo](Webhook#webhookinfo) |
-| [**verify_plugin**](./Webhook#verify_plugin) | [WebhookRequest](Webhook#webhookrequest) | [Empty](Webhook#empty) |
 | [**enable**](./Webhook#enable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**disable**](./Webhook#disable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**delete**](./Webhook#delete) | [WebhookRequest](Webhook#webhookrequest) | [Empty](Webhook#empty) |
@@ -81,23 +80,6 @@ bookFlatSection: true
 
 
 > **POST** /alert-manager/v1/webhook/update-plugin
->
-
-
-
-
-
-
-    
-<br>
-
-### verify_plugin
-
-
-
-
-
-> **POST** /alert-manager/v1/webhook/verify-plugin
 >
 
 
