@@ -253,7 +253,7 @@ bookFlatSection: true
 * **title** (string)   `Required` 
 
     
-* **state** (AlertState)   `Required` 
+* **status** (AlertStatus)   `Required` 
 
     
 * **description** (string)   `Required` 
@@ -343,7 +343,7 @@ bookFlatSection: true
 * **alert_id** (string)  
 
     
-* **state** (AlertState)  
+* **status** (AlertStatus)  
 
     
 * **urgency** (AlertUrgency)  
@@ -392,7 +392,7 @@ bookFlatSection: true
 * **title** (string)  
 
     
-* **state** (AlertState)  
+* **status** (AlertStatus)  
 
     
 * **description** (string)  
