@@ -183,6 +183,9 @@ bookFlatSection: true
     <br>
 
 ### EventRuleCreateRequest
+* **scope** (EventRuleScope)   `Required` 
+
+    
 * **conditions_policy** (ConditionsPolicy)   `Required` 
 
     
@@ -210,6 +213,9 @@ bookFlatSection: true
 
     
 * **name** (string)   `Required` 
+
+    
+* **scope** (EventRuleScope)   `Required` 
 
     
 * **order** (int32)   `Required` 
@@ -264,6 +270,9 @@ bookFlatSection: true
 
     
 * **name** (string)  
+
+    
+* **scope** (EventRuleScope)  
 
     
 * **workspace_id** (string)  
