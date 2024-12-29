@@ -164,10 +164,10 @@ bookFlatSection: true
 
 
 ### AlertStats
-* **high** (int32)   `Required` 
+* **HIGH** (int32)   `Required` 
 
     
-* **low** (int32)   `Required` 
+* **LOW** (int32)   `Required` 
 
     <br>
 
