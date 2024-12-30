@@ -77,27 +77,10 @@ bookFlatSection: true
 * **resources** (string)  `Repeated`    `Required` 
 
     
-* **provider** (string)   `Required` 
-
-    
-* **account** (string)   `Required` 
-
-    
 * **additional_info** (Struct)   `Required` 
 
     
 * **occurred_at** (string)   `Required` 
-
-    <br>
-
-### EventResource
-* **resource_id** (string)  
-
-    
-* **resource_type** (string)  
-
-    
-* **name** (string)  
 
     <br>
 

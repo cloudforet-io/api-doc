@@ -67,9 +67,6 @@ bookFlatSection: true
     <br>
 
 ### EventInfo
-* **event_id** (string)   `Required` 
-
-    
 * **event_key** (string)   `Required` 
 
     
@@ -100,19 +97,7 @@ bookFlatSection: true
 * **raw_data** (Struct)   `Required` 
 
     
-* **domain_id** (string)   `Required` 
-
-    
-* **workspace_id** (string)   `Required` 
-
-    
-* **service_id** (string)   `Required` 
-
-    
 * **webhook_id** (string)   `Required` 
-
-    
-* **alert_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
