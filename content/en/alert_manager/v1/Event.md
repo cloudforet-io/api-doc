@@ -94,12 +94,6 @@ bookFlatSection: true
 * **resources** (string)  `Repeated`    `Required` 
 
     
-* **provider** (string)   `Required` 
-
-    
-* **account** (string)   `Required` 
-
-    
 * **additional_info** (Struct)   `Required` 
 
     

@@ -211,12 +211,6 @@ bookFlatSection: true
 * **resources** (AlertResource)  `Repeated`   
 
     
-* **provider** (string)  
-
-    
-* **account** (string)  
-
-    
 * **additional_info** (Struct)  
 
     <br>
@@ -272,12 +266,6 @@ bookFlatSection: true
 
     
 * **resources** (AlertResource)  `Repeated`    `Required` 
-
-    
-* **provider** (string)   `Required` 
-
-    
-* **account** (string)   `Required` 
 
     
 * **triggered_type** (TriggeredType)   `Required` 
@@ -353,12 +341,6 @@ bookFlatSection: true
 
     
 * **resource** (string)  
-
-    
-* **provider** (string)  
-
-    
-* **account** (string)  
 
     
 * **triggered_type** (string)  
