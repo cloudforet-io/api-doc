@@ -29,7 +29,7 @@ bookFlatSection: true
 | [**delete**](./Alert#delete) | [AlertRequest](Alert#alertrequest) | [Empty](Alert#empty) |
 | [**get**](./Alert#get) | [AlertRequest](Alert#alertrequest) | [AlertInfo](Alert#alertinfo) |
 | [**list**](./Alert#list) | [AlertSearchQuery](Alert#alertsearchquery) | [AlertsInfo](Alert#alertsinfo) |
-| [**history**](./Alert#history) | [AlertRequest](Alert#alertrequest) | [AlertHistoryInfo](Alert#alerthistoryinfo) |
+| [**history**](./Alert#history) | [AlertHistoryRequest](Alert#alerthistoryrequest) | [AlertHistoryInfo](Alert#alerthistoryinfo) |
 | [**analyze**](./Alert#analyze) | [AlertAnalyzeQuery](Alert#alertanalyzequery) | [Struct](Alert#struct) |
 | [**stat**](./Alert#stat) | [AlertStatQuery](Alert#alertstatquery) | [Struct](Alert#struct) |
 
@@ -237,6 +237,23 @@ bookFlatSection: true
 
 ### AlertHistoryInfo
 * **results** (AlertEventInfo)  `Repeated`    `Required` 
+
+    
+* **total_count** (int32)   `Required` 
+
+    <br>
+
+### AlertHistoryRequest
+* **alert_id** (string)   `Required` 
+
+    
+* **action** (AlertAction)  
+
+    
+* **include_event_info** (bool)  
+
+    
+* **sort** (Sort)  `Repeated`   
 
     <br>
 
