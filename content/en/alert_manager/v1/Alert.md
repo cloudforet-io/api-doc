@@ -228,6 +228,15 @@ bookFlatSection: true
 * **event_info** (EventInfo)   `Required` 
 
     
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **service_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     
