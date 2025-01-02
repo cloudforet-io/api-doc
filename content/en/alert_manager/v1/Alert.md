@@ -300,6 +300,12 @@ bookFlatSection: true
 * **triggered_by** (string)   `Required` 
 
     
+* **acknowledged_by** (string)   `Required` 
+
+    
+* **resolved_by** (string)   `Required` 
+
+    
 * **additional_info** (Struct)   `Required` 
 
     
