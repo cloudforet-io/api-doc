@@ -86,10 +86,10 @@ bookFlatSection: true
 * **description** (string)   `Required` 
 
     
-* **user_type** (string)   `Required` 
+* **created_type** (string)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **created_by** (string)   `Required` 
 
     
 * **additional_info** (Struct)   `Required` 
@@ -124,13 +124,13 @@ bookFlatSection: true
 * **event_type** (EventType)  
 
     
-* **user_type** (string)  
+* **created_type** (string)  
 
     
 * **event_id** (string)  
 
     
-* **user_id** (string)  
+* **created_by** (string)  
 
     
 * **workspace_id** (string)  

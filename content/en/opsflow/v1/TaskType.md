@@ -27,7 +27,7 @@ bookFlatSection: true
 | [**create**](./TaskType#create) | [TaskTypeCreateRequest](TaskType#tasktypecreaterequest) | [TaskTypeInfo](TaskType#tasktypeinfo) |
 | [**update**](./TaskType#update) | [TaskTypeUpdateRequest](TaskType#tasktypeupdaterequest) | [TaskTypeInfo](TaskType#tasktypeinfo) |
 | [**update_fields**](./TaskType#update_fields) | [TaskTypeUpdateFieldsRequest](TaskType#tasktypeupdatefieldsrequest) | [TaskTypeInfo](TaskType#tasktypeinfo) |
-| [**delete**](./TaskType#delete) | [TaskTypeRequest](TaskType#tasktyperequest) | [Empty](TaskType#empty) |
+| [**delete**](./TaskType#delete) | [TaskTypeDeleteRequest](TaskType#tasktypedeleterequest) | [Empty](TaskType#empty) |
 | [**get**](./TaskType#get) | [TaskTypeRequest](TaskType#tasktyperequest) | [TaskTypeInfo](TaskType#tasktypeinfo) |
 | [**list**](./TaskType#list) | [TaskTypeSearchQuery](TaskType#tasktypesearchquery) | [TaskTypesInfo](TaskType#tasktypesinfo) |
 | [**stat**](./TaskType#stat) | [TaskTypeStatQuery](TaskType#tasktypestatquery) | [Struct](TaskType#struct) |
@@ -176,6 +176,9 @@ bookFlatSection: true
 * **fields** (TaskField)  `Repeated`   
 
     
+* **scope** (Scope)  
+
+    
 * **assignee_pool** (string)  `Repeated`   
 
     
@@ -183,6 +186,14 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### TaskTypeDeleteRequest
+* **task_type_id** (string)   `Required` 
+
+    
+* **new_task_type_id** (string)  
 
     <br>
 
@@ -197,6 +208,9 @@ bookFlatSection: true
 
     
 * **fields** (TaskField)  `Repeated`    `Required` 
+
+    
+* **scope** (Scope)   `Required` 
 
     
 * **assignee_pool** (string)  `Repeated`    `Required` 

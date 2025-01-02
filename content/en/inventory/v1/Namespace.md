@@ -38,7 +38,7 @@ bookFlatSection: true
 
 ### create
 
-
+Create a new namespace.
 
 
 
@@ -89,7 +89,19 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
-
+    "namespace_id": "ns-azure-aks-cluster",
+    "name": "AKS/Cluster",
+    "category": "ASSET",
+    "resource_type": "inventory.CloudService:azure.AKS.Cluster",
+    "group": "azure",
+    "icon": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/azure/aks.svg",
+    "tags": {},
+    "is_managed": true,
+    "resource_group": "DOMAIN",
+    "domain_id": "domain-286776a1516a",
+    "workspace_id": "*",
+    "created_at": "2024-09-27T14:40:58.290Z",
+    "updated_at": "2024-09-27T14:40:58.290Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -128,7 +140,19 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
-
+    "namespace_id": "ns-azure-aks-cluster",
+    "name": "AKS/Cluster",
+    "category": "ASSET",
+    "resource_type": "inventory.CloudService:azure.AKS.Cluster",
+    "group": "azure",
+    "icon": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/azure/aks.svg",
+    "tags": {},
+    "is_managed": true,
+    "resource_group": "DOMAIN",
+    "domain_id": "domain-286776a1516a",
+    "workspace_id": "*",
+    "created_at": "2024-09-27T14:40:58.290Z",
+    "updated_at": "2024-09-27T14:40:58.290Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -142,7 +166,7 @@ bookFlatSection: true
 
 ### update
 
-
+Update a specific namespace.
 
 
 
@@ -155,33 +179,6 @@ bookFlatSection: true
 
  {{< tabs " update " >}}
 
- {{< tab "Request Example" >}}
-
-
-
-[UpdateNamespaceRequest](./Namespace#updatenamespacerequest)
-
-* **namespace_id** (string)   `Required` 
-
-
-* **name** (string)  
-
-
-* **icon** (string)  
-
-
-* **tags** (Struct)  
-
-
-
-
-
-{{< highlight json >}}
-{
-
-}
-{{< /highlight >}}
-{{< /tab >}}
 
 
  {{< tab "Response Example" >}}
@@ -217,7 +214,19 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
-
+    "namespace_id": "ns-azure-aks-cluster",
+    "name": "AKS/Cluster",
+    "category": "ASSET",
+    "resource_type": "inventory.CloudService:azure.AKS.Cluster",
+    "group": "azure",
+    "icon": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/azure/aks.svg",
+    "tags": {},
+    "is_managed": true,
+    "resource_group": "DOMAIN",
+    "domain_id": "domain-286776a1516a",
+    "workspace_id": "*",
+    "created_at": "2024-09-27T14:40:58.290Z",
+    "updated_at": "2024-09-27T14:40:58.290Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -231,7 +240,7 @@ bookFlatSection: true
 
 ### delete
 
-
+Delete a specific namespace.
 
 
 
@@ -258,7 +267,7 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
-
+    "namespace_id": "ns-azure-aks-cluster",
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -273,7 +282,7 @@ bookFlatSection: true
 
 ### get
 
-
+Get a specific namespace.
 
 
 
@@ -300,7 +309,7 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
-
+    "namespace_id": "ns-azure-aks-cluster",
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -339,7 +348,19 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
-
+    "namespace_id": "ns-azure-aks-cluster",
+    "name": "AKS/Cluster",
+    "category": "ASSET",
+    "resource_type": "inventory.CloudService:azure.AKS.Cluster",
+    "group": "azure",
+    "icon": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/azure/aks.svg",
+    "tags": {},
+    "is_managed": true,
+    "resource_group": "DOMAIN",
+    "domain_id": "domain-286776a1516a",
+    "workspace_id": "*",
+    "created_at": "2024-09-27T14:40:58.290Z",
+    "updated_at": "2024-09-27T14:40:58.290Z"
 }
 {{< /highlight >}}
 {{< /tab >}}
@@ -353,7 +374,7 @@ bookFlatSection: true
 
 ### list
 
-
+List namespaces.
 
 
 
@@ -398,11 +419,52 @@ bookFlatSection: true
 
 {{< highlight json >}}
 {
-
+   "query": {
+       "filter": [
+           {
+               "key": "namespace_id",
+               "value": "Key",
+               "operator": "eq"
+           }
+       ]
+   }
 }
 {{< /highlight >}}
 {{< /tab >}}
 
+
+ {{< tab "Response Example" >}}
+
+[NamespacesInfo](#NAMESPACESINFO)
+* **results** (NamespaceInfo)  `Repeated`   `Required` 
+
+* **total_count** (int32)   `Required` 
+
+
+
+{{< highlight json >}}
+{
+    "results": [
+      {
+        "namespace_id": "ns-azure-aks-cluster",
+        "name": "AKS/Cluster",
+        "category": "ASSET",
+        "resource_type": "inventory.CloudService:azure.AKS.Cluster",
+        "group": "azure",
+        "icon": "https://spaceone-custom-assets.s3.ap-northeast-2.amazonaws.com/console-assets/icons/cloud-services/azure/aks.svg",
+        "tags": {},
+        "is_managed": true,
+        "resource_group": "DOMAIN",
+        "domain_id": "domain-286776a1516a",
+        "workspace_id": "*",
+        "created_at": "2024-09-27T14:40:58.290Z",
+        "updated_at": "2024-09-27T14:40:58.290Z"
+      }
+    ],
+    "total_count": 89
+}
+{{< /highlight >}}
+{{< /tab >}}
 
 
 {{< /tabs >}}
@@ -413,7 +475,7 @@ bookFlatSection: true
 
 ### stat
 
-
+Get statistics of namespaces.
 
 
 
