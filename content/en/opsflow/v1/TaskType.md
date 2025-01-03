@@ -176,13 +176,13 @@ bookFlatSection: true
 * **fields** (TaskField)  `Repeated`   
 
     
-* **scope** (Scope)  
-
-    
 * **assignee_pool** (string)  `Repeated`   
 
     
 * **vars** (Struct)  
+
+    
+* **require_project** (bool)  
 
     
 * **tags** (Struct)  
@@ -210,13 +210,13 @@ bookFlatSection: true
 * **fields** (TaskField)  `Repeated`    `Required` 
 
     
-* **scope** (Scope)   `Required` 
-
-    
 * **assignee_pool** (string)  `Repeated`    `Required` 
 
     
 * **vars** (Struct)   `Required` 
+
+    
+* **require_project** (bool)   `Required` 
 
     
 * **tags** (Struct)   `Required` 

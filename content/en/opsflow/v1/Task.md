@@ -225,7 +225,7 @@ bookFlatSection: true
 * **status_id** (string)   `Required` 
 
     
-* **resource_group** (ResourceGroup)   `Required` 
+* **project_id** (string)   `Required` 
 
     
 * **task_type_id** (string)   `Required` 
@@ -250,9 +250,6 @@ bookFlatSection: true
 
     
 * **reference_id** (string)  
-
-    
-* **project_id** (string)  
 
     <br>
 
@@ -288,9 +285,6 @@ bookFlatSection: true
 
     
 * **reference_id** (string)   `Required` 
-
-    
-* **resource_group** (ResourceGroup)   `Required` 
 
     
 * **related_assets** (string)  `Repeated`    `Required` 

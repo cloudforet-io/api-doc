@@ -511,9 +511,6 @@ description of data table
     <br>
 
 ### ValueMappingCases
-* **key** (string)   `Required` 
-
-    
 * **operator** (ValueMappingOperator)   `Required` 
 
     
@@ -529,6 +526,9 @@ description of data table
 
     
 * **name** (string)   `Required` 
+
+    
+* **key** (string)   `Required` 
 
     
 * **field_type** (FieldType)   `Required` 
