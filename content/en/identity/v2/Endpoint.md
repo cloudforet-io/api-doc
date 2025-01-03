@@ -59,12 +59,16 @@ Get gRPC endpoint list.
 * **service** (string)  
 
 
+* **endpoint_type** (EndpointType)  
+
+
 
 
 
 {{< highlight json >}}
 {
  "service": "inventory",
+ "endpoint_type": "PUBLIC",
  "query": {}
 }
 {{< /highlight >}}
@@ -118,6 +122,9 @@ Get gRPC endpoint list.
 * **endpoint** (string)   `Required` 
 
     
+* **internal_endpoint** (string)   `Required` 
+
+    
 * **state** (EndpointState)   `Required` 
 
     
@@ -130,6 +137,9 @@ Get gRPC endpoint list.
 
     
 * **service** (string)  
+
+    
+* **endpoint_type** (EndpointType)  
 
     <br>
 
