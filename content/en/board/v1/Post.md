@@ -82,6 +82,9 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 * **writer** (string)  
 
 
+* **contents_type** (string)  
+
+
 * **workspaces** (string)  `Repeated`   
 
 
@@ -115,6 +118,8 @@ Creates a new Post under a specific Board. You must specify the `board_id`, `tit
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
+
+* **contents_type** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -197,6 +202,9 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 * **contents** (string)  
 
 
+* **contents_type** (string)  
+
+
 * **category** (string)  
 
 
@@ -243,6 +251,8 @@ Updates a specific Post. You can make changes in Post settings, except `board_id
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
+
+* **contents_type** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -426,6 +436,8 @@ Gets a specific Post. You must specify the `post_id` of the Post to get, and the
 * **title** (string)   `Required` 
 
 * **contents** (string)   `Required` 
+
+* **contents_type** (string)   `Required` 
 
 * **options** (Struct)   `Required` 
 
@@ -647,6 +659,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 * **writer** (string)  
 
     
+* **contents_type** (string)  
+
+    
 * **workspaces** (string)  `Repeated`   
 
     <br>
@@ -665,6 +680,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **contents** (string)   `Required` 
+
+    
+* **contents_type** (string)   `Required` 
 
     
 * **options** (Struct)   `Required` 
@@ -753,6 +771,9 @@ Gets a list of all Posts. You can use a query to get a filtered list of Posts.
 
     
 * **contents** (string)  
+
+    
+* **contents_type** (string)  
 
     
 * **category** (string)  
