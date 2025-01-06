@@ -32,6 +32,7 @@ bookFlatSection: true
 | [**delete**](./Webhook#delete) | [WebhookRequest](Webhook#webhookrequest) | [Empty](Webhook#empty) |
 | [**get**](./Webhook#get) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**list**](./Webhook#list) | [WebhookSearchQuery](Webhook#webhooksearchquery) | [WebhooksInfo](Webhook#webhooksinfo) |
+| [**list_errors**](./Webhook#list_errors) | [WebhookErrorSearchQuery](Webhook#webhookerrorsearchquery) | [WebhookErrorsInfo](Webhook#webhookerrorsinfo) |
 | [**stat**](./Webhook#stat) | [WebhookStatQuery](Webhook#webhookstatquery) | [Struct](Webhook#struct) |
 
 
@@ -175,6 +176,23 @@ bookFlatSection: true
     
 <br>
 
+### list_errors
+
+
+
+
+
+> **POST** /alert-manager/v1/webhook/list-errors
+>
+
+
+
+
+
+
+    
+<br>
+
 ### stat
 
 
@@ -210,6 +228,48 @@ bookFlatSection: true
 
     
 * **tags** (Struct)  
+
+    <br>
+
+### WebhookErrorInfo
+* **error_id** (string)   `Required` 
+
+    
+* **message** (string)   `Required` 
+
+    
+* **raw_data** (Struct)   `Required` 
+
+    
+* **domain_id** (string)   `Required` 
+
+    
+* **workspace_id** (string)   `Required` 
+
+    
+* **service_id** (string)   `Required` 
+
+    
+* **webhook_id** (string)   `Required` 
+
+    
+* **created_at** (string)   `Required` 
+
+    <br>
+
+### WebhookErrorSearchQuery
+* **webhook_id** (string)   `Required` 
+
+    
+* **query** (Query)  
+
+    <br>
+
+### WebhookErrorsInfo
+* **results** (WebhookErrorInfo)  `Repeated`    `Required` 
+
+    
+* **total_count** (int32)   `Required` 
 
     <br>
 
