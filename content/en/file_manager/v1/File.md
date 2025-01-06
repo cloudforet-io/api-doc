@@ -145,6 +145,9 @@ bookFlatSection: true
     
 * **workspace_id** (string)  
 
+    
+* **project_id** (string)  
+
     <br>
 
 ### FileInfo
@@ -154,16 +157,13 @@ bookFlatSection: true
 * **name** (string)   `Required` 
 
     
-* **file_type** (string)   `Required` 
-
-    
 * **download_url** (string)   `Required` 
 
     
-* **tags** (Struct)   `Required` 
+* **reference** (FileReference)   `Required` 
 
     
-* **reference** (FileReference)   `Required` 
+* **tags** (Struct)   `Required` 
 
     
 * **resource_group** (ResourceGroup)   `Required` 
@@ -175,7 +175,7 @@ bookFlatSection: true
 * **workspace_id** (string)   `Required` 
 
     
-* **user_id** (string)   `Required` 
+* **project_id** (string)   `Required` 
 
     
 * **created_at** (string)   `Required` 
@@ -205,9 +205,6 @@ bookFlatSection: true
 * **name** (string)  
 
     
-* **file_type** (string)  
-
-    
 * **resource_type** (string)  
 
     
@@ -218,6 +215,9 @@ bookFlatSection: true
 
     
 * **workspace_id** (string)  
+
+    
+* **project_id** (string)  
 
     <br>
 
