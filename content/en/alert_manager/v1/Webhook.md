@@ -263,6 +263,9 @@ bookFlatSection: true
     
 * **query** (Query)  
 
+    
+* **error_id** (string)  
+
     <br>
 
 ### WebhookErrorsInfo
