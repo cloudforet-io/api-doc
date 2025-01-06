@@ -1,87 +1,20 @@
 {
   "files": [
     {
-      "name": "spaceone/api/file_manager/v1/file.proto",
+      "name": "spaceone/api/file_manager/v1/user_file.proto",
       "description": "",
       "package": "spaceone.api.file_manager.v1",
       "hasEnums": false,
       "hasExtensions": false,
       "hasMessages": true,
       "hasServices": true,
-      "enums": [
-        {
-          "name": "ResourceGroup",
-          "longName": "CreateFileRequest.ResourceGroup",
-          "fullName": "spaceone.api.file_manager.v1.CreateFileRequest.ResourceGroup",
-          "description": "",
-          "values": [
-            {
-              "name": "RESOURCE_GROUP_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "SYSTEM",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "DOMAIN",
-              "number": "2",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE",
-              "number": "3",
-              "description": ""
-            },
-            {
-              "name": "PROJECT",
-              "number": "4",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "name": "ResourceGroup",
-          "longName": "FileInfo.ResourceGroup",
-          "fullName": "spaceone.api.file_manager.v1.FileInfo.ResourceGroup",
-          "description": "",
-          "values": [
-            {
-              "name": "RESOURCE_GROUP_NONE",
-              "number": "0",
-              "description": ""
-            },
-            {
-              "name": "SYSTEM",
-              "number": "1",
-              "description": ""
-            },
-            {
-              "name": "DOMAIN",
-              "number": "2",
-              "description": ""
-            },
-            {
-              "name": "WORKSPACE",
-              "number": "3",
-              "description": ""
-            },
-            {
-              "name": "PROJECT",
-              "number": "4",
-              "description": ""
-            }
-          ]
-        }
-      ],
+      "enums": [],
       "extensions": [],
       "messages": [
         {
-          "name": "CreateFileRequest",
-          "longName": "CreateFileRequest",
-          "fullName": "spaceone.api.file_manager.v1.CreateFileRequest",
+          "name": "CreateUserFileRequest",
+          "longName": "CreateUserFileRequest",
+          "fullName": "spaceone.api.file_manager.v1.CreateUserFileRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -116,21 +49,9 @@
               "name": "reference",
               "description": "+optional",
               "label": "",
-              "type": "FileReference",
-              "longType": "FileReference",
-              "fullType": "spaceone.api.file_manager.v1.FileReference",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "resource_group",
-              "description": "",
-              "label": "",
-              "type": "ResourceGroup",
-              "longType": "CreateFileRequest.ResourceGroup",
-              "fullType": "spaceone.api.file_manager.v1.CreateFileRequest.ResourceGroup",
+              "type": "UserFileReference",
+              "longType": "UserFileReference",
+              "fullType": "spaceone.api.file_manager.v1.UserFileReference",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -149,19 +70,7 @@
               "defaultValue": ""
             },
             {
-              "name": "workspace_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "project_id",
+              "name": "user_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -175,9 +84,57 @@
           ]
         },
         {
-          "name": "FileInfo",
-          "longName": "FileInfo",
-          "fullName": "spaceone.api.file_manager.v1.FileInfo",
+          "name": "UpdateUserFileRequest",
+          "longName": "UpdateUserFileRequest",
+          "fullName": "spaceone.api.file_manager.v1.UpdateUserFileRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "file_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "tags",
+              "description": "+optional",
+              "label": "",
+              "type": "Struct",
+              "longType": "google.protobuf.Struct",
+              "fullType": "google.protobuf.Struct",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "reference",
+              "description": "+optional",
+              "label": "",
+              "type": "UserFileReference",
+              "longType": "UserFileReference",
+              "fullType": "spaceone.api.file_manager.v1.UserFileReference",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "UserFileInfo",
+          "longName": "UserFileInfo",
+          "fullName": "spaceone.api.file_manager.v1.UserFileInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -221,18 +178,6 @@
               "defaultValue": ""
             },
             {
-              "name": "reference",
-              "description": "",
-              "label": "",
-              "type": "FileReference",
-              "longType": "FileReference",
-              "fullType": "spaceone.api.file_manager.v1.FileReference",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
               "name": "tags",
               "description": "",
               "label": "",
@@ -245,12 +190,12 @@
               "defaultValue": ""
             },
             {
-              "name": "resource_group",
+              "name": "reference",
               "description": "",
               "label": "",
-              "type": "ResourceGroup",
-              "longType": "FileInfo.ResourceGroup",
-              "fullType": "spaceone.api.file_manager.v1.FileInfo.ResourceGroup",
+              "type": "UserFileReference",
+              "longType": "UserFileReference",
+              "fullType": "spaceone.api.file_manager.v1.UserFileReference",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -269,19 +214,7 @@
               "defaultValue": ""
             },
             {
-              "name": "workspace_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "project_id",
+              "name": "user_id",
               "description": "",
               "label": "",
               "type": "string",
@@ -307,9 +240,9 @@
           ]
         },
         {
-          "name": "FileReference",
-          "longName": "FileReference",
-          "fullName": "spaceone.api.file_manager.v1.FileReference",
+          "name": "UserFileReference",
+          "longName": "UserFileReference",
+          "fullName": "spaceone.api.file_manager.v1.UserFileReference",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -343,9 +276,9 @@
           ]
         },
         {
-          "name": "FileRequest",
-          "longName": "FileRequest",
-          "fullName": "spaceone.api.file_manager.v1.FileRequest",
+          "name": "UserFileRequest",
+          "longName": "UserFileRequest",
+          "fullName": "spaceone.api.file_manager.v1.UserFileRequest",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -367,9 +300,9 @@
           ]
         },
         {
-          "name": "FileSearchQuery",
-          "longName": "FileSearchQuery",
-          "fullName": "spaceone.api.file_manager.v1.FileSearchQuery",
+          "name": "UserFileSearchQuery",
+          "longName": "UserFileSearchQuery",
+          "fullName": "spaceone.api.file_manager.v1.UserFileSearchQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -449,19 +382,7 @@
               "defaultValue": ""
             },
             {
-              "name": "workspace_id",
-              "description": "+optional",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "project_id",
+              "name": "user_id",
               "description": "+optional",
               "label": "",
               "type": "string",
@@ -475,9 +396,9 @@
           ]
         },
         {
-          "name": "FileStatQuery",
-          "longName": "FileStatQuery",
-          "fullName": "spaceone.api.file_manager.v1.FileStatQuery",
+          "name": "UserFileStatQuery",
+          "longName": "UserFileStatQuery",
+          "fullName": "spaceone.api.file_manager.v1.UserFileStatQuery",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -499,9 +420,9 @@
           ]
         },
         {
-          "name": "FilesInfo",
-          "longName": "FilesInfo",
-          "fullName": "spaceone.api.file_manager.v1.FilesInfo",
+          "name": "UserFilesInfo",
+          "longName": "UserFilesInfo",
+          "fullName": "spaceone.api.file_manager.v1.UserFilesInfo",
           "description": "",
           "hasExtensions": false,
           "hasFields": true,
@@ -512,9 +433,9 @@
               "name": "results",
               "description": "",
               "label": "repeated",
-              "type": "FileInfo",
-              "longType": "FileInfo",
-              "fullType": "spaceone.api.file_manager.v1.FileInfo",
+              "type": "UserFileInfo",
+              "longType": "UserFileInfo",
+              "fullType": "spaceone.api.file_manager.v1.UserFileInfo",
               "ismap": false,
               "isoneof": false,
               "oneofdecl": "",
@@ -533,80 +454,32 @@
               "defaultValue": ""
             }
           ]
-        },
-        {
-          "name": "UpdateFileRequest",
-          "longName": "UpdateFileRequest",
-          "fullName": "spaceone.api.file_manager.v1.UpdateFileRequest",
-          "description": "",
-          "hasExtensions": false,
-          "hasFields": true,
-          "hasOneofs": false,
-          "extensions": [],
-          "fields": [
-            {
-              "name": "file_id",
-              "description": "",
-              "label": "",
-              "type": "string",
-              "longType": "string",
-              "fullType": "string",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "tags",
-              "description": "+optional",
-              "label": "",
-              "type": "Struct",
-              "longType": "google.protobuf.Struct",
-              "fullType": "google.protobuf.Struct",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            },
-            {
-              "name": "reference",
-              "description": "+optional",
-              "label": "",
-              "type": "FileReference",
-              "longType": "FileReference",
-              "fullType": "spaceone.api.file_manager.v1.FileReference",
-              "ismap": false,
-              "isoneof": false,
-              "oneofdecl": "",
-              "defaultValue": ""
-            }
-          ]
         }
       ],
       "services": [
         {
-          "name": "File",
-          "longName": "File",
-          "fullName": "spaceone.api.file_manager.v1.File",
+          "name": "UserFile",
+          "longName": "UserFile",
+          "fullName": "spaceone.api.file_manager.v1.UserFile",
           "description": "",
           "methods": [
             {
               "name": "update",
               "description": "",
-              "requestType": "UpdateFileRequest",
-              "requestLongType": "UpdateFileRequest",
-              "requestFullType": "spaceone.api.file_manager.v1.UpdateFileRequest",
+              "requestType": "UpdateUserFileRequest",
+              "requestLongType": "UpdateUserFileRequest",
+              "requestFullType": "spaceone.api.file_manager.v1.UpdateUserFileRequest",
               "requestStreaming": false,
-              "responseType": "FileInfo",
-              "responseLongType": "FileInfo",
-              "responseFullType": "spaceone.api.file_manager.v1.FileInfo",
+              "responseType": "UserFileInfo",
+              "responseLongType": "UserFileInfo",
+              "responseFullType": "spaceone.api.file_manager.v1.UserFileInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/file-manager/v1/file/update",
+                      "pattern": "/file-manager/v1/user_file/update",
                       "body": "*"
                     }
                   ]
@@ -616,9 +489,9 @@
             {
               "name": "delete",
               "description": "",
-              "requestType": "FileRequest",
-              "requestLongType": "FileRequest",
-              "requestFullType": "spaceone.api.file_manager.v1.FileRequest",
+              "requestType": "UserFileRequest",
+              "requestLongType": "UserFileRequest",
+              "requestFullType": "spaceone.api.file_manager.v1.UserFileRequest",
               "requestStreaming": false,
               "responseType": "Empty",
               "responseLongType": ".google.protobuf.Empty",
@@ -629,7 +502,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/file-manager/v1/file/delete",
+                      "pattern": "/file-manager/v1/user_file/delete",
                       "body": "*"
                     }
                   ]
@@ -639,20 +512,20 @@
             {
               "name": "get",
               "description": "",
-              "requestType": "FileRequest",
-              "requestLongType": "FileRequest",
-              "requestFullType": "spaceone.api.file_manager.v1.FileRequest",
+              "requestType": "UserFileRequest",
+              "requestLongType": "UserFileRequest",
+              "requestFullType": "spaceone.api.file_manager.v1.UserFileRequest",
               "requestStreaming": false,
-              "responseType": "FileInfo",
-              "responseLongType": "FileInfo",
-              "responseFullType": "spaceone.api.file_manager.v1.FileInfo",
+              "responseType": "UserFileInfo",
+              "responseLongType": "UserFileInfo",
+              "responseFullType": "spaceone.api.file_manager.v1.UserFileInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/file-manager/v1/file/get",
+                      "pattern": "/file-manager/v1/user_file/get",
                       "body": "*"
                     }
                   ]
@@ -662,20 +535,20 @@
             {
               "name": "list",
               "description": "",
-              "requestType": "FileSearchQuery",
-              "requestLongType": "FileSearchQuery",
-              "requestFullType": "spaceone.api.file_manager.v1.FileSearchQuery",
+              "requestType": "UserFileSearchQuery",
+              "requestLongType": "UserFileSearchQuery",
+              "requestFullType": "spaceone.api.file_manager.v1.UserFileSearchQuery",
               "requestStreaming": false,
-              "responseType": "FilesInfo",
-              "responseLongType": "FilesInfo",
-              "responseFullType": "spaceone.api.file_manager.v1.FilesInfo",
+              "responseType": "UserFilesInfo",
+              "responseLongType": "UserFilesInfo",
+              "responseFullType": "spaceone.api.file_manager.v1.UserFilesInfo",
               "responseStreaming": false,
               "options": {
                 "google.api.http": {
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/file-manager/v1/file/list",
+                      "pattern": "/file-manager/v1/user_file/list",
                       "body": "*"
                     }
                   ]
@@ -685,9 +558,9 @@
             {
               "name": "stat",
               "description": "",
-              "requestType": "FileStatQuery",
-              "requestLongType": "FileStatQuery",
-              "requestFullType": "spaceone.api.file_manager.v1.FileStatQuery",
+              "requestType": "UserFileStatQuery",
+              "requestLongType": "UserFileStatQuery",
+              "requestFullType": "spaceone.api.file_manager.v1.UserFileStatQuery",
               "requestStreaming": false,
               "responseType": "Struct",
               "responseLongType": ".google.protobuf.Struct",
@@ -698,7 +571,7 @@
                   "rules": [
                     {
                       "method": "POST",
-                      "pattern": "/file-manager/v1/file/stat",
+                      "pattern": "/file-manager/v1/user_file/stat",
                       "body": "*"
                     }
                   ]
