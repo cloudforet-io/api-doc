@@ -224,7 +224,7 @@ description of data table
 * **function** (Struct)   `Required` 
 
     
-* **group_by** (string)  
+* **group_by** (string)  `Repeated`   
 
     <br>
 
