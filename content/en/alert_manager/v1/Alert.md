@@ -262,7 +262,7 @@ bookFlatSection: true
 * **action** (AlertAction)  
 
     
-* **include_event_info** (bool)  
+* **include_details** (bool)  
 
     
 * **sort** (Sort)  `Repeated`   
