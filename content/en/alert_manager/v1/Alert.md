@@ -338,6 +338,12 @@ bookFlatSection: true
     
 * **resolved_at** (string)   `Required` 
 
+    
+* **acknowledged_duration** (int64)   `Required` 
+
+    
+* **resolved_duration** (int64)   `Required` 
+
     <br>
 
 ### AlertRequest
