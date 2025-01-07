@@ -319,6 +319,15 @@ bookFlatSection: true
     
 * **completed_at** (string)   `Required` 
 
+    
+* **started_duration** (int64)   `Required` 
+
+    
+* **in_progress_duration** (int64)   `Required` 
+
+    
+* **completed_duration** (int64)   `Required` 
+
     <br>
 
 ### TaskRequest
