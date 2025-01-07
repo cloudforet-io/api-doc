@@ -228,6 +228,9 @@ bookFlatSection: true
 * **event_info** (EventInfo)   `Required` 
 
     
+* **notification_info** (NotificationInfo)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
