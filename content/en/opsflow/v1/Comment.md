@@ -184,6 +184,9 @@ bookFlatSection: true
 * **reference_id** (string)   `Required` 
 
     
+* **contents_type** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     

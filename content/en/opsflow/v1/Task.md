@@ -290,6 +290,9 @@ bookFlatSection: true
 * **related_assets** (string)  `Repeated`    `Required` 
 
     
+* **contents_type** (string)   `Required` 
+
+    
 * **domain_id** (string)   `Required` 
 
     
