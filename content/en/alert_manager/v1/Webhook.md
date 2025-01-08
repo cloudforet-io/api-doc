@@ -26,6 +26,7 @@ bookFlatSection: true
 | :----- | :-------- | :-------- |
 | [**create**](./Webhook#create) | [WebhookCreateRequest](Webhook#webhookcreaterequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**update**](./Webhook#update) | [WebhookUpdateRequest](Webhook#webhookupdaterequest) | [WebhookInfo](Webhook#webhookinfo) |
+| [**update_message_format**](./Webhook#update_message_format) | [WebhookMessageFormatUpdateRequest](Webhook#webhookmessageformatupdaterequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**update_plugin**](./Webhook#update_plugin) | [WebhookUpdatePluginRequest](Webhook#webhookupdatepluginrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**enable**](./Webhook#enable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
 | [**disable**](./Webhook#disable) | [WebhookRequest](Webhook#webhookrequest) | [WebhookInfo](Webhook#webhookinfo) |
@@ -64,6 +65,23 @@ bookFlatSection: true
 
 
 > **POST** /alert-manager/v1/webhook/update
+>
+
+
+
+
+
+
+    
+<br>
+
+### update_message_format
+
+
+
+
+
+> **POST** /alert-manager/v1/webhook/update-message-format
 >
 
 
@@ -224,6 +242,9 @@ bookFlatSection: true
 * **plugin_info** (WebhookPluginInfo)   `Required` 
 
     
+* **message_formats** (WebhookMessageFormat)  `Repeated`    `Required` 
+
+    
 * **service_id** (string)   `Required` 
 
     
@@ -298,6 +319,9 @@ bookFlatSection: true
 * **requests** (WebhookRequests)   `Required` 
 
     
+* **message_formats** (WebhookMessageFormat)  `Repeated`    `Required` 
+
+    
 * **tags** (Struct)   `Required` 
 
     
@@ -311,6 +335,22 @@ bookFlatSection: true
 
     
 * **created_at** (string)   `Required` 
+
+    <br>
+
+### WebhookMessageFormat
+* **from** (string)   `Required` 
+
+    
+* **to** (string)   `Required` 
+
+    <br>
+
+### WebhookMessageFormatUpdateRequest
+* **webhook_id** (string)   `Required` 
+
+    
+* **message_formats** (WebhookMessageFormat)  `Repeated`    `Required` 
 
     <br>
 
