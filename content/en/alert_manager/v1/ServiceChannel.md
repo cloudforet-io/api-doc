@@ -313,6 +313,9 @@ bookFlatSection: true
 * **secret_id** (string)   `Required` 
 
     
+* **plugin_id** (string)   `Required` 
+
+    
 * **created_at** (string)   `Required` 
 
     <br>
@@ -345,6 +348,9 @@ bookFlatSection: true
 
     
 * **protocol_id** (string)  
+
+    
+* **plugin_id** (string)  
 
     <br>
 
