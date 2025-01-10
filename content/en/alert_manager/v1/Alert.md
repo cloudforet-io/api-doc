@@ -401,6 +401,9 @@ bookFlatSection: true
     
 * **escalation_policy_id** (string)  
 
+    
+* **asset_id** (string)  
+
     <br>
 
 ### AlertStatQuery
