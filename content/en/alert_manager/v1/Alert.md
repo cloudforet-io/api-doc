@@ -435,3 +435,17 @@ bookFlatSection: true
 * **total_count** (int32)   `Required` 
 
     <br>
+
+### NotificationInfo
+* **notification_id** (string)   `Required` 
+
+    
+* **service_channels** (Struct)   `Required` 
+
+    
+* **user_group_channels** (Struct)   `Required` 
+
+    
+* **user_channels** (Struct)   `Required` 
+
+    <br>
