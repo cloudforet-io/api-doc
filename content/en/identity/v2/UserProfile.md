@@ -528,9 +528,6 @@ Confirm MFA for user by given verify_code which is sent by your authentication m
     <br>
 
 ### UpdateUserProfileRequest
-* **password** (string)  
-
-    
 * **name** (string)  
 
     

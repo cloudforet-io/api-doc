@@ -167,7 +167,7 @@ bookFlatSection: true
 * **key** (string)   `Required` 
 
     
-* **value** (string)   `Required` 
+* **value** (Value)   `Required` 
 
     
 * **operator** (string)   `Required` 
