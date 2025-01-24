@@ -123,7 +123,7 @@ Cancels a specific Job. You can manually cease a Job in run with this method.
    "finished_at": "2022-04-02T09:19:47.715Z",
    "changed": [
        {
-           "start": "2021-01-01T00:00:00.000Z"
+           "start": "2021-01"
        }
    ]
 }
@@ -226,7 +226,7 @@ Gets a specific Job. Prints detailed information about the Job, including the pl
    "finished_at": "2022-04-02T09:19:47.715Z",
    "changed": [
        {
-           "start": "2021-01-01T00:00:00.000Z"
+           "start": "2021-01"
        }
    ]
 }
@@ -333,7 +333,7 @@ Gets a list of all Jobs. You can use a query to get a filtered list of Jobs.
                "finished_at": "2022-07-17T16:01:28.206Z",
                "changed": [
                    {
-                       "start": "2022-07-01T00:00:00.000Z"
+                       "start": "2022-07"
                    }
                ]
            }

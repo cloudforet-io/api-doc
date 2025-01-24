@@ -158,6 +158,9 @@ bookFlatSection: true
 ### TaskInfo
 * **task_options** (Struct)   `Required` 
 
+    
+* **task_changed** (ChangedInfo)  
+
     <br>
 
 ### TasksInfo

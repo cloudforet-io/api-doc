@@ -77,6 +77,8 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
 
 * **options** (Struct)   `Required` 
 
+* **changed** (ChangedInfo)   `Required` 
+
 * **created_count** (int32)   `Required` 
 
 * **error_code** (string)   `Required` 
@@ -110,6 +112,13 @@ Gets a specific JobTask. Prints detailed information about the JobTask, includin
    "options": {
        "month": "202207",
        "platform": "gcp"
+   },
+   "changed": {
+       "start": "2024-12",
+       "end": "2025-01",
+       "filter": {
+           "additional_info.Account ID": "3241123123"
+       }
    },
    "created_count": 1,
    "job_id": "job-85cf2c385252",
@@ -174,6 +183,7 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 
 {{< highlight json >}}
 {
+   "data_source_id": "ds-12asdsf2a",
    "query": {}
 }
 {{< /highlight >}}
@@ -269,6 +279,9 @@ Gets a list of all JobTasks. You can use a query to get a filtered list of JobTa
 
     
 * **options** (Struct)   `Required` 
+
+    
+* **changed** (ChangedInfo)   `Required` 
 
     
 * **created_count** (int32)   `Required` 
